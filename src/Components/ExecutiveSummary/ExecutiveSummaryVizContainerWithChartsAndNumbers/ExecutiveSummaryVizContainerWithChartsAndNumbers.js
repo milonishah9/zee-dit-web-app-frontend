@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import AllDaysStackedBarChartPopUpModal from "../../AllDaysStackedBarChartPopUpModal/AllDaysStackedBarChartPopUpModal";
+import StackedBarChartForAllDays from "../../AllDaysStackedBarChartPopUpModal/StackedBarChartForAllDays/StackedBarChartForAllDays";
 import AreaChart from "../../Charts/AreaChart/AreaChart";
 import AreaChartWithToolTips from "../../Charts/AreaChartWithToolTips/AreaChartWithToolTips";
 import StackedBarChart from "../../Charts/StackedBarChart/StackedBarChart";
@@ -61,7 +62,7 @@ const ExecutiveSummaryVizContainerWithChartsAndNumbers = (props) => {
           </div>
           <div className="exect-sum-right">
             {/* <StackedBarChart /> */}
-            ABC
+            {/* <StackedBarChartForAllDays/> */}
           </div>
         </div>
 

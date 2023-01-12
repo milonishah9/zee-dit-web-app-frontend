@@ -14,7 +14,7 @@ import {
     pointer,
 } from "d3";
 
-// import useResizeObserver from "../../Charts/StackedBarChart/useResizeObserver";
+import useResizeObserver from "../../Charts/StackedBarChart/useResizeObserver";
 
 import {
     data,
@@ -28,7 +28,9 @@ const StackedBarChartForAllDays = (props) => {
     const svgRef = useRef();
     const yAxisRef = useRef();
     const wrapperRef = useRef();
-    // const dimensions = useResizeObserver(wrapperRef);
+    // const {width, height} = useResizeObserver(wrapperRef);
+
+    // console.log('dimensions using resize observer', dimensions);
 
     useEffect(() => {
 
@@ -39,6 +41,7 @@ const StackedBarChartForAllDays = (props) => {
         everything.remove();
 
         const { width, height } = wrapperRef.current.getBoundingClientRect();
+        // const { width, height } = dimensions;
 
         console.log('width, height in all days stacked bar chart', width, height);
 

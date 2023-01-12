@@ -203,6 +203,7 @@
 .executive-summary-viewers {
   display: flex;
   height: 100%;
+  max-width: 50%;
 }
 
 .exect-sum-left {
@@ -213,6 +214,7 @@
 
 .exect-sum-right {
   height: 100%;
+  max-width: 50%;
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1366px) {
