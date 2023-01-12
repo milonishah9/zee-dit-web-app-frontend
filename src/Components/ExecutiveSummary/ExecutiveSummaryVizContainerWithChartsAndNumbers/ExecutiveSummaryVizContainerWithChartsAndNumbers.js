@@ -61,6 +61,7 @@ const ExecutiveSummaryVizContainerWithChartsAndNumbers = (props) => {
           </div>
           <div className="exect-sum-right">
             {/* <StackedBarChart /> */}
+            ABC
           </div>
         </div>
 

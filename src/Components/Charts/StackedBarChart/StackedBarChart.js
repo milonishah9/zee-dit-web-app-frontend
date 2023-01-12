@@ -39,8 +39,8 @@ const StackedBarChart = (props) => {
         const everything = svg.selectAll("*");
         everything.remove();
 
-        const {height } = wrapperRef.current.getBoundingClientRect();
-       let width = 300;
+        const { height } = wrapperRef.current.getBoundingClientRect();
+        let width = 300;
 
         console.log('width of bounding clientInformation', width);
 
