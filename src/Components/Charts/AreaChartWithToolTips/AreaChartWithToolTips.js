@@ -12,10 +12,11 @@ const AreaChartWithToolTips = (props) => {
 
     const [data, setData] = useState(areaChartWithToolTipsData);
 
+    
     useEffect(() => {
-
+        
         // const width = 330, height = 70;
-
+        
         const { width, height } = wrapperRef.current.getBoundingClientRect();
 
         console.log('areaChartWithToolTipsData dimensions', width, height);
