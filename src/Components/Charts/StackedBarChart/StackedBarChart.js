@@ -39,10 +39,10 @@ const StackedBarChart = (props) => {
         const everything = svg.selectAll("*");
         everything.remove();
 
-        const { width, height } = wrapperRef.current.getBoundingClientRect();
-        // let width = 300, height = 80;
+        const { height } = wrapperRef.current.getBoundingClientRect();
+        let width = 300;
 
-        // console.log('width of bounding clientInformation', width);
+        console.log('width of bounding clientInformation', width);
 
 
         let chartNumberDimensions;
@@ -235,7 +235,7 @@ const StackedBarChart = (props) => {
 
         Tooltip.selectAll("*").remove();
 
-        var mouseover = function (event, d) {
+        var mouseover1 = function (event, d) {
 
             // console.log("event in mouseover", event);
 
@@ -247,13 +247,13 @@ const StackedBarChart = (props) => {
 
         const tootTipHtml = (event) => `<div><p>Date: ${event.target.__data__.data.key}</p><p>Match 1: ${event.target.__data__.data.matchOne}</p><p>Match 2: ${event.target.__data__.data.matchTwo}</p></div>`;
 
-        var mousemove = function (event, d) {
+        var mousemove1 = function (event, d) {
             Tooltip
                 .html(tootTipHtml(event))
                 .style("top", (pointer(event)[1]) + "px")
                 .style("left", (pointer(event)[0] - 50) + "px");
         }
-        var mouseleave = function (event, d) {
+        var mouseleave1 = function (event, d) {
             Tooltip
                 .transition()
                 .duration(200)
@@ -268,9 +268,9 @@ const StackedBarChart = (props) => {
         }
 
         svg
-            .on("mousemove", mousemove)
-            .on("mouseleave", mouseleave)
-            .on("mouseover", mouseover)
+            .on("mousemove1", mousemove1)
+            .on("mouseleave1", mouseleave1)
+            .on("mouseover1", mouseover1)
 
     }, [dimensions, colors, data, keys]);
 
