@@ -8,14 +8,15 @@ import areaChartWithToolTipsData from './data';
 const AreaChartWithToolTips = (props) => {
 
     const svgRef = useRef();
+    const wrapperRef = useRef();
 
     const [data, setData] = useState(areaChartWithToolTipsData);
 
     useEffect(() => {
 
-        const width = 330, height = 70;
+        // const width = 330, height = 70;
 
-        // const { width, height } = svgRef.current.getBoundingClientRect();
+        const { width, height } = wrapperRef.current.getBoundingClientRect();
 
         console.log('areaChartWithToolTipsData dimensions', width, height);
 
@@ -25,6 +26,9 @@ const AreaChartWithToolTips = (props) => {
         const svg = d3.select(svgRef.current)
             .attr("width", width)
             .attr("height", height);
+
+        const everything = svg.selectAll("*");
+        everything.remove();
 
         const xExtent = d3.extent(data, d => d.date);
 
@@ -48,8 +52,6 @@ const AreaChartWithToolTips = (props) => {
             .attr('stroke', 'rgb(148, 94, 210)')
             .attr('stroke-width', '1px')
             .attr('fill', 'rgba(148, 94, 210, 0.1)');
-
-        // console.log(data);
 
         // const xAxis = d3.axisBottom()
         //     .scale(xScale);
@@ -77,7 +79,20 @@ const AreaChartWithToolTips = (props) => {
             .attr('width', width)
             .attr('height', height);
 
+        svg.on('mouseover', mouseOver);
         svg.on('mousemove', mouseMove);
+        svg.on('mouseout', mouseOut);
+
+        function mouseOver(event) {
+            svg.selectAll('.hoverLine')
+                .style('visibility', 'visible');
+
+            svg.selectAll('.hoverPoint')
+                .style('visibility', 'visible');
+
+            svg.selectAll('.hoverText')
+                .style('visibility', 'visible');
+        }
 
         function mouseMove(event) {
 
@@ -86,7 +101,7 @@ const AreaChartWithToolTips = (props) => {
             const mouse = d3.mouse(d3.event.target);
             const [
                 xCoord,
-                yCoord,
+                // yCoord,
             ] = mouse;
 
             const mouseDate = xScale.invert(xCoord);
@@ -128,10 +143,21 @@ const AreaChartWithToolTips = (props) => {
                 .text(d3.format('.5s')(mousePopulation));
         }
 
+        function mouseOut(event) {
+            svg.selectAll('.hoverLine')
+                .style('visibility', 'hidden');
+
+            svg.selectAll('.hoverPoint')
+                .style('visibility', 'hidden');
+
+            svg.selectAll('.hoverText')
+                .style('visibility', 'hidden');
+        }
+
     }, []);
 
     return (
-        <div className='area-chart-with-tooltips-container'>
+        <div ref={wrapperRef} className='area-chart-with-tooltips-container' >
             <svg ref={svgRef}></svg>
         </div>
     )

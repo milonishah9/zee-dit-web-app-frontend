@@ -5,8 +5,12 @@
     margin: 0;
 }
 
+.stacked-barchart-sub-div{
+    width: 100%;
+}
+
 .svg-wrap {
-    height: 100px;
+    height: 13vh;
     width: 100%;
     display: flex;
     position: relative;

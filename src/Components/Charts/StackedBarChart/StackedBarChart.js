@@ -36,7 +36,14 @@ const StackedBarChart = (props) => {
 
         const svg = select(svgRef.current);
 
-        const { width, height } = wrapperRef.current.getBoundingClientRect();
+        const everything = svg.selectAll("*");
+        everything.remove();
+
+        const {height } = wrapperRef.current.getBoundingClientRect();
+       let width = 300;
+
+        console.log('width of bounding clientInformation', width);
+
 
         let chartNumberDimensions;
 
@@ -89,12 +96,12 @@ const StackedBarChart = (props) => {
 
         const xScale = scaleBand()
             .domain(data.map(d => d.key))
-            .range([0, 300])
+            .range([0, width])
             .padding(0.27);
 
         const yScale = scaleLinear()
             .domain(extent)
-            .range([height + 50, 0]);
+            .range([height + 30, 0]);
 
         svg
             .attr("width", data.length * 10)
@@ -131,7 +138,7 @@ const StackedBarChart = (props) => {
 
         svg
             .select(".x-axis")
-            .attr("transform", `translate(0, ${height + 50})`)
+            .attr("transform", `translate(0, ${height + 30})`)
             .call(xAxis)
             .selectAll("text")
             .attr("class", "stacekd-bar-chart-ticks");
@@ -170,7 +177,7 @@ const StackedBarChart = (props) => {
 
         let x2 = scaleOrdinal()
             .domain(data.map(d => d.key))
-            .range([0, 300]);
+            .range([0, width]);
 
         const averageline = line()
             .x(function (d, i) {
@@ -241,7 +248,6 @@ const StackedBarChart = (props) => {
         const tootTipHtml = (event) => `<div><p>Date: ${event.target.__data__.data.key}</p><p>Match 1: ${event.target.__data__.data.matchOne}</p><p>Match 2: ${event.target.__data__.data.matchTwo}</p></div>`;
 
         var mousemove = function (event, d) {
-            console.log('mouse Move on tooltip', event);
             Tooltip
                 .html(tootTipHtml(event))
                 .style("top", (pointer(event)[1]) + "px")

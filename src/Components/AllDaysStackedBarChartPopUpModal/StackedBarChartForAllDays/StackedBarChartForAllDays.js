@@ -40,6 +40,8 @@ const StackedBarChartForAllDays = (props) => {
 
         const { width, height } = wrapperRef.current.getBoundingClientRect();
 
+        console.log('width, height in all days stacked bar chart', width, height);
+
         const stackGenerator = stack().keys(keys).order(stackOrderAscending);
         const layers = stackGenerator(data);
 
