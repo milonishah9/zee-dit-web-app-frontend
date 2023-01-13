@@ -222,7 +222,7 @@ const StackedBarChart = (props) => {
             // .attr("x", width + marginForRightChart)
             // .attr("y", -5)
             .attr("x", chartNumberDimensions.max)
-            .attr("y", -5)
+            .attr("y", -6)
             .text("Max")
             .on("click", () => {
                 handleActiveClassName(true);
