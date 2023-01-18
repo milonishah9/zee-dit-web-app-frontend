@@ -70,10 +70,54 @@
             },
             "children":[
               {
-                "name": "Total Ad Viewers",
+                "name": "User Type",
                 "attributes": {
                   "age": "2%"
-                }
+                }, "children":[
+                  {
+                    "name": "Guest",
+                    "attributes": {
+                      "age": "2%"
+                    }
+                  },{
+                    "name": "Registered",
+                    "attributes": {
+                      "age": "2%"
+                    }
+                  },{
+                    "name": "Premium",
+                    "attributes": {
+                      "age": "2%"
+                    }
+                  }
+                ]
+              },    {
+                "name": "Platform",
+                "attributes": {
+                  "age": "2%"
+                }, "children":[
+                  {
+                    "name": "Android",
+                    "attributes": {
+                      "age": "2%"
+                    }
+                  },{
+                    "name": "iOS",
+                    "attributes": {
+                      "age": "2%"
+                    }
+                  },{
+                    "name": "Web",
+                    "attributes": {
+                      "age": "2%"
+                    }
+                  },{
+                    "name": "Connect Device",
+                    "attributes": {
+                      "age": "2%"
+                    }
+                  }
+                ]
               }
             ]
           }, {
