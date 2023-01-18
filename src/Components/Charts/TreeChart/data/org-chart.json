@@ -67,7 +67,15 @@
             "name": "Total Ad Impressions",
             "attributes": {
               "age": "5%"
-            }
+            },
+            "children":[
+              {
+                "name": "Total Ad Viewers",
+                "attributes": {
+                  "age": "2%"
+                }
+              }
+            ]
           }, {
             "name": "Pre-roll Served",
             "attributes": {
