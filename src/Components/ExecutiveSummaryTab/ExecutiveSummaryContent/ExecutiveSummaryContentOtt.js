@@ -1,120 +1,94 @@
 import React, { useEffect } from "react";
 import BubbleChart from "../../Charts/BubbleChart/BubbleChart";
-import * as d3 from 'd3';
+import * as d3 from "d3";
 import ExecutiveSummaryContentLinearContents from "./ExecutiveSummaryContentLinearContents";
 import ExecutiveSummaryContentLinearButtonsTabs from "./ExecutiveSummaryContentLinearButtonsTabs";
 import { useState } from "react";
 
 const ExecutiveSummaryContentOtt = () => {
-    const [activeTab, setActiveTab] = useState('all-content')
-
-    useEffect(() => {
-        const defs = d3.select('bubble-img-svg').append('g')
-    }, [])
+  const [activeTab, setActiveTab] = useState("all-content");
+    
+  //   useEffect(() => {
+  //     const defs = d3.select("bubble-img-svg").append("g");
+  //   }, []);
 
     let top10files = [];
     let count = 0;
     let bottom10files = [];
 
-    const data = [
-        { id: "Mithai", value: 427.3, img: 'https://themepack.me/i/c/749x467/media/g/2137/dark-galaxy-theme-jy8.jpg' },
-        { id: "Tere Bina Jiya Jaye Na", value: 400.65, img: 'https://i.pinimg.com/736x/87/72/6d/87726d7ea80b5543672bb6f162a71034.jpg' },
-        { id: "Bhagya Lakshmi", value: 491.58, img: 'https://themepack.me/i/c/749x467/media/g/2137/dark-galaxy-theme-jy8.jpg' },
-        { id: "Kum Kum Bhagya", value: 437.68, img: 'https://i.pinimg.com/736x/87/72/6d/87726d7ea80b5543672bb6f162a71034.jpg' },
-        { id: "Kundli Bhagya", value: 589.70 },
-        { id: "Meet", value: 439.94 },
-        { id: "LinkDistance", value: 391 },
-        { id: "MaxFlowMinCut", value: 391 },
-        { id: "ShortestPaths", value: 437 },
-        { id: " SpanningTree", value: 1000 },
-        { id: "flare.analytics.optimization", value: 1 },
-        { id: "AspectRatioBanker", value: 500 },
-        { id: "animate", value: 20 },
-        { id: "Easing", value: 100 },
-        { id: "FunctionSequence", value: 200 },
-        { id: "interpolate", value: 300 },
-        { id: "interpolate", value: 300 },
-        { id: "interpolate", value: 300 },
-    ]
+    var json = [
+        { Name: "Accounting Services", Count: 7 },
+        { Name: "Architectural Consulting Services", Count: 1 },
+        { Name: "Commercial/Industrial Real Estate Brokerage Services", Count: 2 },
+        { Name: "Commercial/Industrial Real Estate Brokerage Services", Count: 2 },
+        { Name: "Construction/Engineering Consulting Services", Count: 2 },
+        { Name: "Coworking Space", Count: 1 },
+        { Name: "Customs Brokerage Services", Count: 3 },
+        { Name: "Customs Brokerage Services", Count: 3 },
+        { Name: "Energy Audit or Consulting Services", Count: 4 },
+        { Name: "E", Count: 4 },
+        {
+          Name: "Human Resources and/or Executive Talent Search Services",
+          Count: 4,
+        },
+        { Name: "Insurance Brokerage Services", Count: 4 },
+        { Name: "Legal Services", Count: 11 },
+        { Name: "Legal Services", Count: 10 },
+        { Name: "Legal Services", Count: 9 },
+        { Name: "Managed IT Services", Count: 4 },
+        { Name: "Managed IT Services", Count: 4 },
+        { Name: "Marketing and Communications Services", Count: 6 },
+        { Name: "Marketing and Communications Services", Count: 6 },
+        { Name: "Relocation Specialists", Count: 1 },
+      ];
 
-    let sortedFiles = data.sort((r1, r2) => (r1.value > r2.value) ? 1 : (r1.value < r2.value) ? -1 : 0);
+    let sortedFiles = json.sort((r1, r2) =>
+      r1.value > r2.value ? 1 : r1.value < r2.value ? -1 : 0
+    );
 
     for (let i = 0; i < sortedFiles.length; i++) {
-        if (i < 10) {
-            bottom10files.push(sortedFiles[i])
-        }
+      if (i < 10) {
+        bottom10files.push(sortedFiles[i]);
+      }
     }
     for (let i = sortedFiles.length - 1; i > 0; i--) {
-        count += 1;
-        if (count <= 10) {
-            top10files.push(sortedFiles[i])
-        }
+      count += 1;
+      if (count <= 10) {
+        top10files.push(sortedFiles[i]);
+      }
     }
 
-    const getData = (value) => {
-        setActiveTab(value)
-    }
+  const getData = (value) => {
+    setActiveTab(value);
+  };
 
-   
-    return (
-        <div id="chart">
-            <div className="executive-summary-content-linear-tabs">
-                <ExecutiveSummaryContentLinearButtonsTabs TabValue={getData} />
-            </div>
-            <div>
-                {activeTab === 'all-content' && <div className="executive-summary-content-linear-filter">
-                    <BubbleChart files={sortedFiles} />
-                    <ExecutiveSummaryContentLinearContents />
-                </div>
-
-                }
-                {activeTab === 'top-10' && <div className="executive-summary-content-linear-filter">
-                    <BubbleChart files={top10files} />
-                    <ExecutiveSummaryContentLinearContents />
-                </div>
-                }
-                {activeTab === 'bottom-10' && <div className="executive-summary-content-linear-filter">
-                    <BubbleChart files={bottom10files} />
-                    <ExecutiveSummaryContentLinearContents />
-                </div>
-                }
-            </div>
-
-
-            {/* <svg className='bubble-img-svg' height={500} width={800}>
-                <defs>
-                    <marker id='arrw' viewBox="0 -5 10 10" refX='0' refY='0' markerWidth='12' markerHeight='12' orient='auto'>
-                        <path d="M0,-5L10,0"></path>
-                    </marker>
-                    <linearGradient>
-                        <stop offset='0%' stopColor="#F433FF" stopOpacity='1'></stop>
-                        <stop offset='100%' stopColor="#3DFF33" stopOpacity='1'></stop>
-                    </linearGradient>
-
-                    <radialGradient id='circleGradient'>
-                        <stop offset='0%' stopColor="#F433FF" stopOpacity='1'></stop>
-                        <stop offset='100%' stopColor="#3DFF33" stopOpacity='1'></stop>
-                    </radialGradient>
-
-                    <linearGradient id='divergingGradient' x1='0%' y1='0%' x2='100%' y2='0%'>
-                        <stop offset='0%' stopColor='#d73027' stopOpacity='1'></stop>
-                        <stop offset='30%' stopColor='#ffffbf' stopOpacity='1'></stop>
-                        <stop offset='70%' stopColor='#ffffbf' stopOpacity='1'></stop>
-                        <stop offset='100%' stopColor='#1a9850' stopOpacity='1'></stop>
-                    </linearGradient>
-
-                    <pattern id='jon-snow' height='100%' width='100%' patternContentUnits='objectBoundingBox'>
-                        <image id='image-chart' height='500' width='500' preserveAspectRatio='none' xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="https://html.com/wp-content/uploads/very-large-flamingo.jpg"></image>
-                    </pattern>
-                </defs> 
-                <circle cx='100' cy='100' r='40' fill='red'></circle>
-                <circle cx='300' cy='100' r='40' fill='url(yellow)'></circle>
-                <rect x='200' y='200' width='100' height='100' fill='url(https://themepack.me/i/c/749x467/media/g/2137/dark-galaxy-theme-jy8.jpg)'></rect>
-                <circle cx='400' cy='100' r='50' fill='url(https://themepack.me/i/c/749x467/media/g/2137/dark-galaxy-theme-jy8.jpg)'></circle>
-                <circle cx='500' cy='100' r='30' fill='url(https://themepack.me/i/c/749x467/media/g/2137/dark-galaxy-theme-jy8.jpg)'></circle>
-            </svg> */}
-        </div>
-    )
-}
+  return (
+    <div>
+      <div className="executive-summary-content-linear-tabs">
+        <ExecutiveSummaryContentLinearButtonsTabs TabValue={getData} />
+      </div>
+      <div>
+        {activeTab === "all-content" && (
+          <div className="executive-summary-content-linear-filter">
+            <BubbleChart files={json} />
+            <ExecutiveSummaryContentLinearContents />
+          </div>
+        )}
+        {activeTab === "top-10" && (
+          <div className="executive-summary-content-linear-filter">
+            <BubbleChart files={top10files} />
+            <ExecutiveSummaryContentLinearContents />
+          </div>
+        )}
+        {activeTab === "bottom-10" && (
+          <div className="executive-summary-content-linear-filter">
+            <BubbleChart files={bottom10files} />
+            <ExecutiveSummaryContentLinearContents />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default ExecutiveSummaryContentOtt;
