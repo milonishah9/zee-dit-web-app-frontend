@@ -17,7 +17,11 @@ const useStyles = makeStyles(
     button: {
     },
     name: {
-      fontSize: "20px"
+      fontFamily:"GothamBold",
+      fontSize: "12px",
+      fontWeight:500,
+      lineHeight:"12px",
+      color:" #333333"
     },
     edit: {
       position: "absolute",
@@ -71,7 +75,7 @@ const renderForeignObjectNode = ({
 export default function App() {
   const classes = useStyles();
   const [translate, containerRef] = useCenteredTree();
-  const nodeSize = { x: 300, y: 250 };
+  const nodeSize = { x: 200, y: 250 };
   const separation = { siblings: 1, nonSiblings: 1 };
   const foreignObjectProps = { width: nodeSize.x, height: nodeSize.y, x: -125 };
   const draggable = false;
@@ -81,11 +85,11 @@ export default function App() {
     <div>
 
     <div>
-      <label>
+      {/* <label>
             <input type="checkbox"  />
             <span />
             <strong>fg</strong>
-      </label>
+      </label> */}
     </div>
 
     <div style={containerStyles} ref={containerRef}>

@@ -59,9 +59,24 @@
         },
         "children": [
           {
-            "name": "FullAWSAccess",
+            "name": "Total Ad Viewers",
             "attributes": {
               "age": "2%"
+            }
+          }, {
+            "name": "Total Ad Impressions",
+            "attributes": {
+              "age": "5%"
+            }
+          }, {
+            "name": "Pre-roll Served",
+            "attributes": {
+              "age": "7%"
+            }
+          }, {
+            "name": "Mid-roll Served",
+            "attributes": {
+              "age": "7%"
             }
           }
         ]
