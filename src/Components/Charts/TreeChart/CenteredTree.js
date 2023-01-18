@@ -18,9 +18,9 @@ const useStyles = makeStyles(
     },
     name: {
       fontFamily:"GothamBold",
-      fontSize: "12px",
+      fontSize: "15px",
       fontWeight:500,
-      lineHeight:"12px",
+     
       color:" #333333"
     },
     edit: {
