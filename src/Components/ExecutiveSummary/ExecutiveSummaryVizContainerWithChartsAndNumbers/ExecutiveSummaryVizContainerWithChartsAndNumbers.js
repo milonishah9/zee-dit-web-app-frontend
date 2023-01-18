@@ -27,8 +27,9 @@ const ExecutiveSummaryVizContainerWithChartsAndNumbers = (props) => {
           <div className="digital-viewers">
             <div class="viewer-numbers">
               <div className="exact-summary-viz-number">
+              
                 <p className="exact-summary-viz-number-entity">{digitalData.viewers.title}</p>
-                <h2 className="exact-summary-viz-number-value">{digitalData.viewers.totalViewers}</h2>
+                <h2 className="exact-summary-viz-number-value">{(Math.round(digitalData.viewers.totalViewers)) / 1000000 + 'M'}</h2>
               </div>
               <div className="exact-summary-viz-average">
                 <p className="exact-summary-viz-number-entity">
@@ -79,7 +80,7 @@ const ExecutiveSummaryVizContainerWithChartsAndNumbers = (props) => {
               <div className="viewer-numbers">
                 <div className="exact-summary-viz-number">
                   <p className="exact-summary-viz-number-entity">{digitalData.watchTime.title}</p>
-                  <h2 className="exact-summary-viz-number-value">{digitalData.watchTime.totalWatchTime}</h2>
+                  <h2 className="exact-summary-viz-number-value">{(Math.round(digitalData.watchTime.totalWatchTime)) / 1000000 + 'M'}</h2>
                 </div>
                 <div className="exact-summary-viz-average">
                   <p className="exact-summary-viz-number-entity">

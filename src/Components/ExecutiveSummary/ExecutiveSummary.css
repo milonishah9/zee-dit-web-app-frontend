@@ -139,8 +139,6 @@ h2.Digital {
 }
 
 /*tooltip CSS*/
-
-
 .tooltip-stacked-bar-chart div::after{
   content: "";
   position: absolute;
