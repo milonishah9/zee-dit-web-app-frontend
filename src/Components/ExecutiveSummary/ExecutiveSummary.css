@@ -138,6 +138,19 @@ h2.Digital {
   color: gray;
 }
 
+/*tooltip CSS*/
+
+
+.tooltip-stacked-bar-chart div::after{
+  content: "";
+  position: absolute;
+  bottom: 80%;margin-left: -5px;
+  /* left: 10%; */
+  border-width: 6px;
+  border-style: solid;
+  border-color: #222 transparent transparent transparent;
+}
+
 .d-block {
   display: block;
 }

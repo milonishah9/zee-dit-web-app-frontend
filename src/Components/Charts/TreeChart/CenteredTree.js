@@ -49,7 +49,6 @@ const renderForeignObjectNode = ({
   <>
     {/* `foreignObject` requires width & height to be explicitly set. */}
     <foreignObject {...foreignObjectProps}>
-      
       <Button
         className={classes.button}
         variant="contained"
