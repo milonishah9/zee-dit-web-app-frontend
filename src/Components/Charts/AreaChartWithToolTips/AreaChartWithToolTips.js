@@ -144,7 +144,9 @@ const AreaChartWithToolTips = (props) => {
 
             const bisectDate = d3.bisector(d => d.date).right;
             const xIndex = bisectDate(data, mouseDateSnap, 1);
-            const mousePopulation = Math.abs(data[xIndex].population) / 1000 ;
+            
+            
+            const mousePopulation = data[xIndex].population ;
 
             svg.selectAll('.hoverLine')
                 .attr('x1', xScale(mouseDateSnap))
@@ -174,7 +176,7 @@ const AreaChartWithToolTips = (props) => {
             //     .text(`${d3.format('.5s')(mousePopulation)} on ${d3.timeFormat("%d/%m/%Y")(mouseDateSnap)}`);
                 
             tooltip
-                .html(`<p>Date: ${d3.timeFormat("%b %d, %Y")(mouseDateSnap)}</p><p>${isViewers ? "Viewers: " : "Watch Time: "}${d3.format("s")(mousePopulation) }</p>`)
+                .html(`<p>Date: ${d3.timeFormat("%b %d, %Y")(mouseDateSnap)}</p><p>${isViewers ? "Viewers: " : "Watch Time: "}${d3.format("s")((Math.abs(mousePopulation)/1000).toFixed(1))}</p>`)
                 // .style("left", (d3.mouse(this)[0] - 20) + "px") 
                 // .style("top", (d3.mouse(this)[1] + 280) + "px");
                 .style("left", d3.event.pageX + 20 + "px")
