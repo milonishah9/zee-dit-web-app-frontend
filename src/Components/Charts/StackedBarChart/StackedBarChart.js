@@ -298,7 +298,7 @@ const StackedBarChart = (props) => {
             // .attr
             // .attr("y", 0)
             // .attr("dy", ".75em")
-            .text(marginForRightChart ? "Watch Time in Min." : "Viewers in Min.");
+            .text(marginForRightChart ? "Watch Time in Min." : "Viewers in Mn.");
 
         svg.selectAll(".x-label-7days").remove();
         svg.selectAll(".x-label-max").remove();
