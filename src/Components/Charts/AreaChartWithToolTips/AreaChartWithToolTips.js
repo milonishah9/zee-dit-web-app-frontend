@@ -144,7 +144,7 @@ const AreaChartWithToolTips = (props) => {
 
             const bisectDate = d3.bisector(d => d.date).right;
             const xIndex = bisectDate(data, mouseDateSnap, 1);
-            const mousePopulation = (Math.abs(data[xIndex].population)) / 1000 ;
+            const mousePopulation = Math.abs(data[xIndex].population) / 1000 ;
 
             svg.selectAll('.hoverLine')
                 .attr('x1', xScale(mouseDateSnap))
