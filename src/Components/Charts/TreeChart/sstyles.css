@@ -1,12 +1,19 @@
 .node__root>foreignObject>button {
-  
+
   color: black !important;
   background: rgb(255, 255, 255) !important;
   border-radius: 100px !important;
   border: 3px solid #5a3e89 !important;
   padding: 25px !important;
-  width: 90% !important;
+  width: 100% !important;
+}
 
+.arrow{
+  color: rgb(1, 255, 1);
+}
+
+.node__root>foreignObject{
+  width: 25% !important;
 }
 
 svg .rd3t-g{
