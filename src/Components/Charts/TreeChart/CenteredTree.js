@@ -23,24 +23,26 @@ const useStyles = makeStyles(
       color:" #333333"
     },
 
-    edit: {
+    num: {
+      fontSize: "15px",
       position: "absolute",
-      top: "0px",
-      right: "0px",
-      color: "#4BA083"
+      right: "90px",
+      bottom: "5px",
+      color: "black"
     },
+    
     UpAttributes: {
       fontSize: "15px",
       position: "absolute",
       bottom: "5px",
-      right: "80px",
+      right: "30px",
       color: "#4BA083"
     },
     DownAttributes: {
       fontSize: "15px",
       position: "absolute",
       bottom: "5px",
-      right: "80px",
+      right: "30px",
       color: "#f37b92"
     }
   })
@@ -75,11 +77,12 @@ const renderForeignObjectNode = ({
         <div className={classes.name}>{nodeDatum.name}</div>
           {
             nodeDatum.attributes.per && 
-              <div className={classes.DownAttributes}>
+            <div className={classes.DownAttributes}>
                 {nodeDatum.attributes.per + '% ↓'}           
                 {/* <svg width="18" className="arrow"  height="18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg> */}
               </div>
           }
+          <div className={classes.num}>{nodeDatum.attributes.num }</div>
       </Button>
     }
 
@@ -93,6 +96,7 @@ const renderForeignObjectNode = ({
                 {/* <svg width="18" className="arrow"  height="18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg> */}
               </div>
           }
+          <div className={classes.num}>{nodeDatum.attributes.num }</div>
       </Button>
     }
 

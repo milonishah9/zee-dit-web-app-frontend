@@ -17,6 +17,8 @@ foreignObject .DownButton{
   width: 90% !important;
 }
 
+
+
 .arrow{
   color: rgb(1, 255, 1);
 }
@@ -40,18 +42,6 @@ svg .rd3t-g{
     transform: translate(300px, 30px) scale(0.25);
   }
 }
-
-
-
-/* rd3t-svg{
-  height: 60% !important;
-} */
-
-/* .node__root>foreignObject{
-  width: 500 !important;
-  height: 250 !important;
-  x: -220 !important;
-} */
 
 
 foreignObject .UpButton {
