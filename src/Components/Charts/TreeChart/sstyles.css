@@ -1,5 +1,4 @@
 .node__root>foreignObject>button {
-
   color: black !important;
   background: rgb(255, 255, 255) !important;
   border-radius: 100px !important;
@@ -24,7 +23,7 @@ foreignObject .DownButton{
 }
 
 .node__root>foreignObject{
-  width: 25% !important;
+  /* width: 25% !important; */
 }
 
 svg .rd3t-g{
@@ -42,6 +41,17 @@ svg .rd3t-g{
     transform: translate(300px, 30px) scale(0.25);
   }
 }
+
+@media screen and (max-width: 375px) {
+  svg .rd3t-g{
+    transform: translate(200px, 30px) scale(0.09);
+  }
+
+  .node__root>foreignObject{
+    width: 80% !important;
+  }
+}
+
 
 
 foreignObject .UpButton {

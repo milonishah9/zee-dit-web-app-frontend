@@ -18,7 +18,7 @@ const useStyles = makeStyles(
     },
     name: {
       fontFamily:"GothamBold",
-      fontSize: "15px",
+      fontSize: "18px",
       fontWeight:500,
       color:" #333333"
     },
@@ -109,7 +109,7 @@ const renderForeignObjectNode = ({
 export default function App() {
   const classes = useStyles();
   const [translate, containerRef] = useCenteredTree();
-  const nodeSize = { x: 200, y: 250 };
+  const nodeSize = { x: 300, y: 250 };
   const separation = { siblings: 1, nonSiblings: 1 };
   const foreignObjectProps = { width: nodeSize.x, height: nodeSize.y, x: -125 };
   const draggable = false;
