@@ -18,7 +18,7 @@
     overflow-y: auto !important;
     overflow-x: hidden !important;
     z-index: 1000 !important;
-    padding: 1.2rem !important;
+    /* padding: 1.2rem !important; */
 }
 
 .svg-wrap {
