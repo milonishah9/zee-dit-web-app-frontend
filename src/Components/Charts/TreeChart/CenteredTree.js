@@ -22,18 +22,26 @@ const useStyles = makeStyles(
       fontWeight:500,
       color:" #333333"
     },
+
     edit: {
       position: "absolute",
       top: "0px",
       right: "0px",
       color: "#4BA083"
     },
-    attributes: {
+    UpAttributes: {
       fontSize: "15px",
       position: "absolute",
       bottom: "5px",
       right: "80px",
       color: "#4BA083"
+    },
+    DownAttributes: {
+      fontSize: "15px",
+      position: "absolute",
+      bottom: "5px",
+      right: "80px",
+      color: "#f37b92"
     }
   })
 );
@@ -67,7 +75,7 @@ const renderForeignObjectNode = ({
         <div className={classes.name}>{nodeDatum.name}</div>
           {
             nodeDatum.attributes.per && 
-              <div className={classes.attributes}>
+              <div className={classes.DownAttributes}>
                 {nodeDatum.attributes.per + '% ↓'}           
                 {/* <svg width="18" className="arrow"  height="18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg> */}
               </div>
@@ -80,7 +88,7 @@ const renderForeignObjectNode = ({
         <div className={classes.name}>{nodeDatum.name}</div>
           {
             nodeDatum.attributes.per && 
-              <div className={classes.attributes}>
+              <div className={classes.UpAttributes}>
                 {nodeDatum.attributes.per + '% ↑'}           
                 {/* <svg width="18" className="arrow"  height="18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg> */}
               </div>
