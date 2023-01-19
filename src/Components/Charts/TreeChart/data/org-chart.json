@@ -11,31 +11,40 @@
           {
             "name": "Total Sessions",
             "attributes": {
-              "per": "-2"
+              "per": "-2",
+              "num" : "1486"
+
             }
           },
           {
             "name": "DAU",
             "attributes": {
-              "per": "2"
+              "per": "2",
+              "num" : "14586"
+
             }
           },
           {
             "name": "MAU",
             "attributes": {
-              "per": "2"
+              "per": "2",
+              "num" : "1486"
+
             }
           },
           {
             "name": "Paid User",
             "attributes": {
-              "per": "2"
+              "per": "2",
+              "num" : "186"
+
             }
           },
           {
             "name": "Organic User",
             "attributes": {
-              "per": "-2"
+              "per": "-2",
+              "num" : "123456"
             }
           }
         ]
@@ -48,7 +57,9 @@
           {
             "name": "FullAWSAccess",
             "attributes": {
-              "per": "2"
+              "per": "2",
+              "num" : "1456"
+
             }
           }
         ]
@@ -61,60 +72,82 @@
           {
             "name": "Total Ad Viewers",
             "attributes": {
-              "per": "2"
+              "per": "2",
+              "num" : "1236"
+
             }
           }, {
             "name": "Total Ad Impressions",
             "attributes": {
-              "per": "5"
+              "per": "5",
+              "num" : "156"
+
             },
             "children":[
               {
                 "name": "User Type",
                 "attributes": {
-                  "per": "2"
+                  "per": "2",
+                  "num" : "12356"
+    
                 }, "children":[
                   {
                     "name": "Guest",
                     "attributes": {
-                      "per": "-2"
+                      "per": "-2",
+                      "num" : "123456"
+        
                     }
                   },{
                     "name": "Registered",
                     "attributes": {
-                      "per": "2"
+                      "per": "2",
+                      "num" : "1236"
+        
                     }
                   },{
                     "name": "Premium",
                     "attributes": {
-                      "per": "2"
+                      "per": "2",
+                      "num" : "1456"
+        
                     }
                   }
                 ]
               },    {
                 "name": "Platform",
                 "attributes": {
-                  "per": "2"
+                  "per": "2",
+                  "num" : "123456"
+    
                 }, "children":[
                   {
                     "name": "Android",
                     "attributes": {
-                      "per": "2"
+                      "per": "2",
+                      "num" : "99556"
+        
                     }
                   },{
                     "name": "iOS",
                     "attributes": {
-                      "per": "2"
+                      "per": "2",
+                      "num" : "123456"
+        
                     }
                   },{
                     "name": "Web",
                     "attributes": {
-                      "per": "2"
+                      "per": "2",
+                      "num" : "126"
+        
                     }
                   },{
                     "name": "Connect Device",
                     "attributes": {
-                      "per": "2"
+                      "per": "2",
+                      "num" : "1456"
+        
                     }
                   }
                 ]
@@ -123,12 +156,16 @@
           }, {
             "name": "Pre-roll Served",
             "attributes": {
-              "per": "7"
+              "per": "7",
+              "num" : "9456"
+
             }
           }, {
             "name": "Mid-roll Served",
             "attributes": {
-              "per": "-7"
+              "per": "-7",
+              "num" : "1256"
+
             }
           }
         ]
@@ -141,7 +178,9 @@
           {
             "name": "FullAWSAccess",
             "attributes": {
-              "per": "2"
+              "per": "2",
+              "num" : "13556"
+
             }
           }
         ]
@@ -155,7 +194,9 @@
           {
             "name": "FullAWSAccess",
             "attributes": {
-              "per": "2"
+              "per": "2",
+              "num" : "123456"
+
             }
           }
         ]
