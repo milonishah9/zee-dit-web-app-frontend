@@ -5,6 +5,7 @@ import BubbleChart from "../../Charts/BubbleChart/BubbleChart";
 import TreeChart from "../../Charts/TreeChart/CenteredTree";
 import ExecutiveSummaryContentOtt from "./ExecutiveSummaryContentOtt";
 import CenteredTree from '../../Charts/TreeChart/CenteredTree';
+import ProductQualityOfExperience from "./ProductQualityOfExperience";
 
 // import LinearBarchart from "../../Charts/LinearBarchart/LinearBarchart";
 
@@ -19,8 +20,8 @@ const ExecutiveSummaryContent = () => {
             </div>
 
             <div>
-                {/* {activeTab === 'linear' &&  <LinearBarchart/> } */}
                 {activeTab === 'linear' && <CenteredTree /> }
+                {activeTab === 'ott' &&  <ProductQualityOfExperience/> }
 
             </div>
         </div>

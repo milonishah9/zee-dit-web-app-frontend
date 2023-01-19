@@ -35,7 +35,7 @@ const BubbleChart = (props) => {
         .select("#chart")
         .append("svg")
         .attr("preserveAspectRatio", "xMinYMin meet")
-        .attr("viewBox", "0 0 850 200")
+        .attr("viewBox", "0 -20 850 250")
         .classed("svg-content", true)
         .append("g");
 
