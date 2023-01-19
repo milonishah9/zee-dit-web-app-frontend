@@ -29,6 +29,7 @@ const useStyles = makeStyles(
       color: "#4BA083"
     },
     attributes: {
+      fontSize: "15px",
       position: "absolute",
       bottom: "5px",
       right: "80px",
@@ -52,22 +53,41 @@ const renderForeignObjectNode = ({
   <>
     {/* `foreignObject` requires width & height to be explicitly set. */}
     <foreignObject {...foreignObjectProps}>
-      <Button
-        className={classes.button}
-        variant="contained"
-        onClick={toggleNode}
-        style={{ color: "black", background: "#aaeddb", "border-radius": "100px", "border": "3px solid #18ca96", "padding": "25px", "width": "90%"  }}
-      >
+
+
+
+    {!nodeDatum.attributes.per  && 
+      <Button className="withoutPer" variant="contained" onClick={toggleNode}>
         <div className={classes.name}>{nodeDatum.name}</div>
-  
-        {nodeDatum.attributes.age && 
-          <div className={classes.attributes}>
-          {nodeDatum.attributes.age }           
-          <i class="fa-solid fa-arrow-up"></i>
-          <svg width="18" className="arrow"  height="18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
-        </div>
-        }
       </Button>
+    }
+
+    {nodeDatum.attributes.per < 0 && 
+      <Button className="DownButton" variant="contained" onClick={toggleNode}>
+        <div className={classes.name}>{nodeDatum.name}</div>
+          {
+            nodeDatum.attributes.per && 
+              <div className={classes.attributes}>
+                {nodeDatum.attributes.per + '% ↓'}           
+                {/* <svg width="18" className="arrow"  height="18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg> */}
+              </div>
+          }
+      </Button>
+    }
+
+    {nodeDatum.attributes.per > 0 && 
+    <Button className="UpButton" variant="contained" onClick={toggleNode}>
+        <div className={classes.name}>{nodeDatum.name}</div>
+          {
+            nodeDatum.attributes.per && 
+              <div className={classes.attributes}>
+                {nodeDatum.attributes.per + '% ↑'}           
+                {/* <svg width="18" className="arrow"  height="18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg> */}
+              </div>
+          }
+      </Button>
+    }
+
     </foreignObject>
   </>
 );
