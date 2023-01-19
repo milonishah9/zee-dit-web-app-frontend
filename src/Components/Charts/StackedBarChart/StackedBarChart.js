@@ -29,7 +29,9 @@ const StackedBarChart = (props) => {
     const yAxisRef = useRef();
     const wrapperRef = useRef();
 
-    const width1366 = useMediaQuery('(max-width: 1366px)')
+    const width1366 = useMediaQuery('(max-width: 1366px)');
+    const width1230 = useMediaQuery('(max-width: 1230px)');
+    const width1024 = useMediaQuery('(max-width: 1024px)');
     console.log(width1366);
 
     var width = 300;
@@ -37,6 +39,12 @@ const StackedBarChart = (props) => {
 
     if (width1366) {
         width = 250;
+    }
+    if(width1230){
+        width = 200;
+    }
+    if(width1024){
+        width = 300;
     }
 
     useEffect(() => {
@@ -379,7 +387,7 @@ const StackedBarChart = (props) => {
 
         <div>
             <div className="stacked-barchart-sub-div">
-                <div ref={wrapperRef} className="svg-wrap">
+                <div ref={wrapperRef} className="svg-wrap w-100">
                     <div>
                         <svg ref={yAxisRef} className="y-axis-svg" width="10">
                             <g className="y-axis" />
