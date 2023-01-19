@@ -44,7 +44,7 @@
         margin-left: -33px;
     
     }
-    .bdr {border-top: 2px dashed #dcdcdc;    padding-top: 10px;border-left: none;}
+    /* .bdr {border-top: 2px dashed #dcdcdc;    padding-top: 10px;border-left: none;} */
 }
 @media only screen and (max-width: 1247px) and (min-width: 1024px){
     .digital-viewers, .digital-watchtime{ width: 52%;}
@@ -54,7 +54,7 @@
         padding-bottom: 10px!important;
     }
     .digital-watchtime-stackedchart{padding-left: 1rem!important;    padding-top:15px!important;}
-    .bdr {border-top: 2px dashed #dcdcdc;    padding-top: 10px;border-left: none;}
+    /* .bdr {border-top: 2px dashed #dcdcdc;    padding-top: 10px;border-left: none;} */
 }
 @media only screen and (max-width: 767px) {
     
