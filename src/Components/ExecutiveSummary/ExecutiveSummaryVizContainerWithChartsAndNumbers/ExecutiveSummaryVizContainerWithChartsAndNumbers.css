@@ -316,6 +316,10 @@
   .exact-summary-viz-number-info {
     width: 125px;
   }
+
+  .exact-summary-viz-average {
+    margin-left: 20px;
+  }
 }
 
 

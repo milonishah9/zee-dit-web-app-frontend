@@ -32,7 +32,7 @@
   }
   .viewership-performance-indicators {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .executive-summary-main-container {
     margin: 10px !important;

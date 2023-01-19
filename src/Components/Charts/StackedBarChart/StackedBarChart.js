@@ -56,7 +56,7 @@ const StackedBarChart = (props) => {
         width = 250
     }
     if(width920){
-        width = 270
+        width = 240
     }
 
     useEffect(() => {

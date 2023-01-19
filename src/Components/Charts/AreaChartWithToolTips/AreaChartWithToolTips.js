@@ -40,7 +40,7 @@ const AreaChartWithToolTips = (props) => {
         width = 250
     }
     if(width920){
-        width = 270
+        width = 258
     }
     
     useEffect(() => {

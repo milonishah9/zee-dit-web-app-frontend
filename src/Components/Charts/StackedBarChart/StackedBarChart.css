@@ -183,6 +183,13 @@ text.chart-label {
 @media only screen and (max-width: 1366px) {
     .svg-wrap {
         position: relative;
-        left: 10px;
+        left: 0px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .svg-wrap {
+        position: relative;
+        left: 39px;
     }
 }
