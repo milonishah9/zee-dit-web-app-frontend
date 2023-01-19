@@ -36,7 +36,7 @@ const ExecutiveSummary = (props) => {
         </div>
       </div>
       
-      <div className='executive-summary-main-container'>
+      {/* <div className='executive-summary-main-container'>
         <div className='exect-summary-main-1'>
           <h2 className='Digital'>Linear</h2>
         </div>
@@ -52,7 +52,7 @@ const ExecutiveSummary = (props) => {
         <div className='exect-summary-main-2'>
           <ExecutiveSummaryVizContainerWithChartsAndNumbersCombined digitalData = {digitalData}/>
         </div>
-      </div>
+      </div> */}
       </>
 }
 
