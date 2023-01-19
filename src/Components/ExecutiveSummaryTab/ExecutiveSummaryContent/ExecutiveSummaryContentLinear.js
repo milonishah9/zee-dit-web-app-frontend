@@ -9,10 +9,14 @@ import { useEffect } from "react";
 const ExecutiveSummaryContentLinear = () => {
   const [activeTab, setActiveTab] = useState("all-content");
 
+  const [selectedBubbleIndex, setSelectedBubbleIndex] = useState(null);
+
+  const handleOnBubbleClick = (index) => setSelectedBubbleIndex(index);
+
   var hoverData = '';
   const [myData, setMyData] = useState('')
   useEffect(() => {
-   
+
   }, [hoverData])
 
   let top10files = [];
@@ -77,8 +81,8 @@ const ExecutiveSummaryContentLinear = () => {
       <div>
         {activeTab === "all-content" && (
           <div className="executive-summary-content-linear-filter">
-            <BubbleChart files={json} onClick={onClickFunction}/>
-            <ExecutiveSummaryContentLinearContents hoverData = {hoverData}/>
+            <BubbleChart files={json} onClick={onClickFunction} />
+            <ExecutiveSummaryContentLinearContents hoverData={hoverData} />
           </div>
         )}
         {activeTab === "top-10" && (

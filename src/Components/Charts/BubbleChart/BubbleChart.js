@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 const BubbleChart = (props) => {
   const json = props.files;
-//   console.log(dataForHighlight);
+  //   console.log(dataForHighlight);
   useEffect(() => {
     // d3 colour scheme for bubbles
     // var color = d3.scaleOrdinal().range(["rgb(148, 94, 210, 0.1)"]);
@@ -72,8 +72,12 @@ const BubbleChart = (props) => {
       .attr("fill", "rgb(148, 94, 210, 0.1)")
       .attr("class", "artist")
       .attr("fill", "rgb(148, 94, 210, 0.1)")
+      .attr("cursor", "pointer")
       .attr("r", function (d) {
         return d.Count * 7;
+      })
+      .on("click", (event) => {
+        console.log('event on bubble click', event);
       })
       //   .style("fill", function (d, i) {
       //     var bubbleColor = color(d.Name);
@@ -102,10 +106,10 @@ const BubbleChart = (props) => {
       .on("mouseover", function (d) {
         //tooltips
         tooltip.text(d.Name + ": " + d.Count);
-        props.onClick(d.Name+d.Count)
+        props.onClick(d.Name + d.Count)
         tooltip.style("visibility", "visible");
       })
-      
+
       .on("mousemove", function () {
         return tooltip
           .style("top", d3.event.pageY - 35 + "px")
@@ -115,7 +119,7 @@ const BubbleChart = (props) => {
         props.onClick('')
         tooltip.style("visibility", "hidden");
       });
-      
+
     function wrap(text, width) {
       text.each(function () {
         var text = d3.select(this),
