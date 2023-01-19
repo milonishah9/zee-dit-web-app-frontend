@@ -6,6 +6,7 @@ import * as d3 from 'd3v4';
 
 import './AreaChartWithToolTips.css';
 import areaChartWithToolTipsData from './data';
+import { useMediaQuery } from '@material-ui/core';
 
 const AreaChartWithToolTips = (props) => {
 
@@ -14,10 +15,25 @@ const AreaChartWithToolTips = (props) => {
     const [data, setData] = useState(areaChartWithToolTipsData);
 
     const { isViewers = true } = props;
+    var width = 280, height = 70;
+    const width1366 = useMediaQuery('(max-width: 1366px)');
+    const width1230 = useMediaQuery('(max-width: 1230px)');
+    const width1029 = useMediaQuery('(max-width: 1029px)');
+    // console.log(width1366);
 
+    if (width1366) {
+        width = 250;
+    }
+    if(width1230){
+        width = 240;
+    }
+    if(width1029){
+        width = 400;
+    }
+    
     useEffect(() => {
 
-        const width = 280, height = 70;
+        console.log(width);  
 
         // const { width, height } = svgRef.current.getBoundingClientRect();
 
@@ -198,7 +214,7 @@ const AreaChartWithToolTips = (props) => {
                 .style('visibility', 'hidden');
         }
 
-    }, []);
+    }, [width, height]);
 
     return (
         <div className='area-chart-with-tooltips-container'>

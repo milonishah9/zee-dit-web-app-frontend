@@ -31,7 +31,7 @@ const StackedBarChart = (props) => {
 
     const width1366 = useMediaQuery('(max-width: 1366px)');
     const width1230 = useMediaQuery('(max-width: 1230px)');
-    const width1024 = useMediaQuery('(max-width: 1024px)');
+    const width1029 = useMediaQuery('(max-width: 1029px)');
     console.log(width1366);
 
     var width = 300;
@@ -43,8 +43,8 @@ const StackedBarChart = (props) => {
     if(width1230){
         width = 200;
     }
-    if(width1024){
-        width = 300;
+    if(width1029){
+        width = 400;
     }
 
     useEffect(() => {
