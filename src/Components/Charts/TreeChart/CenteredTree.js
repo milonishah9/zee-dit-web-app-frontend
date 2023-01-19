@@ -26,7 +26,7 @@ const useStyles = makeStyles(
     num: {
       fontSize: "15px",
       position: "absolute",
-      right: "90px",
+      right: "180px",
       bottom: "5px",
       color: "black"
     },
