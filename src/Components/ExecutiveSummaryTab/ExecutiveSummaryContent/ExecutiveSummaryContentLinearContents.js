@@ -7,6 +7,7 @@ const ExecutiveSummaryContentLinearContents = () => {
     const total = 500;
     return (
         <div className="executive-summary-content-linear-contents">
+            {console.log('table reacalled')}
             <div className="executive-summary-content-linear-contents-headers">
                 <h6 className="executive-summary-content-linear-contents-header">Reach & Ratings</h6>
                 <h6 className="executive-summary-content-linear-contents-header">Impact on Consumer Journey</h6>

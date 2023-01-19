@@ -4,6 +4,7 @@ import * as d3 from "d3v4";
 import { useEffect } from "react";
 
 const BubbleChart = (props) => {
+  const { bubbleClickHandler } = props;
   const json = props.files;
   //   console.log(dataForHighlight);
   useEffect(() => {
@@ -78,6 +79,7 @@ const BubbleChart = (props) => {
       })
       .on("click", (event) => {
         console.log('event on bubble click', event);
+        bubbleClickHandler(event.index);
       })
       //   .style("fill", function (d, i) {
       //     var bubbleColor = color(d.Name);

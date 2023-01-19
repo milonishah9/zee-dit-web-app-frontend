@@ -5,13 +5,18 @@ import FrontBar from "../../Charts/BubbleChart/LinearBarchart/FrontBar";
 import ExecutiveSummaryContentLinearContents from "./ExecutiveSummaryContentLinearContents";
 import ExecutiveSummaryContentLinearButtonsTabs from "./ExecutiveSummaryContentLinearButtonsTabs";
 import { useEffect } from "react";
+import { useCallback } from "react";
+import { memo } from "react";
 
 const ExecutiveSummaryContentLinear = () => {
   const [activeTab, setActiveTab] = useState("all-content");
 
   const [selectedBubbleIndex, setSelectedBubbleIndex] = useState(null);
 
-  const handleOnBubbleClick = (index) => setSelectedBubbleIndex(index);
+  const handleOnBubbleClick = useCallback((index) => {
+    setSelectedBubbleIndex(index);
+    console.log('selectedBubbleIndex', selectedBubbleIndex);
+  }, [selectedBubbleIndex])
 
   var hoverData = '';
   const [myData, setMyData] = useState('')
@@ -81,7 +86,10 @@ const ExecutiveSummaryContentLinear = () => {
       <div>
         {activeTab === "all-content" && (
           <div className="executive-summary-content-linear-filter">
-            <BubbleChart files={json} onClick={onClickFunction} />
+            <BubbleChart files={json} onClick={onClickFunction}
+              // handleOnBubbleClick={(event, index) => { setSelectedBubbleIndex(index); console.log(index); }} 
+              bubbleClickHandler={handleOnBubbleClick}
+            />
             <ExecutiveSummaryContentLinearContents hoverData={hoverData} />
           </div>
         )}
@@ -102,4 +110,4 @@ const ExecutiveSummaryContentLinear = () => {
   );
 };
 
-export default ExecutiveSummaryContentLinear;
+export default memo(ExecutiveSummaryContentLinear);
