@@ -19,6 +19,9 @@ const AreaChartWithToolTips = (props) => {
     const width1366 = useMediaQuery('(max-width: 1366px)');
     const width1230 = useMediaQuery('(max-width: 1230px)');
     const width1029 = useMediaQuery('(max-width: 1029px)');
+    const width920 = useMediaQuery('(max-width: 920px)');
+    const width767 = useMediaQuery('(max-width: 767px)');
+    const width363 = useMediaQuery('(max-width: 363px)');
     // console.log(width1366);
 
     if (width1366) {
@@ -29,6 +32,15 @@ const AreaChartWithToolTips = (props) => {
     }
     if(width1029){
         width = 400;
+    }
+    if(width767){
+        width = 300
+    }
+    if(width363){
+        width = 250
+    }
+    if(width920){
+        width = 230
     }
     
     useEffect(() => {
