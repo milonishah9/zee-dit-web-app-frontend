@@ -8,6 +8,11 @@
   width: 100%;
 }
 
+.all-days-stkd-bar-chart-pop-up-mdl-cnt-vsbl{
+  position: absolute;
+  /* height: 100vh; */
+}
+
 .exact-summary-viz-average {
   /* margin-left: -10px!important; */
   margin-left: 40px;
