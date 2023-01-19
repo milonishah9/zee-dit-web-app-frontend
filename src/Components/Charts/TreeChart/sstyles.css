@@ -20,6 +20,20 @@ svg .rd3t-g{
   transform: translate(780px, 30px) scale(0.5);
 }
 
+@media screen and (max-width: 1124px) {
+  svg .rd3t-g{
+    transform: translate(450px, 30px) scale(0.20);
+  }
+}
+
+@media screen and (max-width: 593px) {
+  svg .rd3t-g{
+    transform: translate(300px, 30px) scale(0.25);
+  }
+}
+
+
+
 /* rd3t-svg{
   height: 60% !important;
 } */
