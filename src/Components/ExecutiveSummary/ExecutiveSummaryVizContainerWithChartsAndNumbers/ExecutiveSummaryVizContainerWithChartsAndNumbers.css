@@ -211,6 +211,14 @@
   }
 }
 
+@media only screen and (min-width: 1248px) and (max-width: 1366px) {
+  .svg-wrap {
+    position: relative;
+    left: 65px;
+}
+
+}
+
 @media only screen and (min-width: 1200px) and (max-width: 1370px) {
   .exact-summary-viz-updateinfo-container p{
     width: 250%;
