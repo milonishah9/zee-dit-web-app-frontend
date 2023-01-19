@@ -43,8 +43,8 @@
 }
 
 .svg-wrap-all-days-stacked-bar-chart {
-    height: 100%;
-    width: 97%;
+    height: 80%;
+    width: 90%;
     display: flex;
     position: relative;
     left: 40px;

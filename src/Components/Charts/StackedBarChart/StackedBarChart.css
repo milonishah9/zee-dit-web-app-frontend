@@ -8,7 +8,7 @@
 .all-days-stkd-bar-chart-pop-up-mdl-cnt-vsbl {
 
     background: rgba(0, 0, 0, 0.75) !important;
-    display: flex !important;
+    /* display: flex !important;
     align-items: flex-start !important;
     position: fixed !important;
     top: 0 !important;
@@ -17,7 +17,7 @@
     bottom: 0 !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;
-    z-index: 1000 !important;
+    z-index: 1000 !important; */
     /* padding: 1.2rem !important; */
 }
 
