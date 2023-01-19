@@ -362,8 +362,10 @@ const StackedBarChart = (props) => {
                 .html(tootTipHtml(event))
                 // .style("top", (pointer(event)[1]) + "px")
                 // .style("left", (pointer(event)[0] - 50) + "px");
-                .style("left", event.pageX - 600 + tooltipDimensions.pageX + "px")
-                .style("top", event.pageY - 200 + tooltipDimensions.pageY + "px");
+                // .style("left", event.pageX - 600 + tooltipDimensions.pageX + "px")
+                // .style("top", event.pageY - 200 + tooltipDimensions.pageY + "px")
+                .style("left", event.pageX + 20 + "px")
+                .style("top", event.pageY + 15 + "px");
         }
         var mouseleave = function (event, d) {
             Tooltip
