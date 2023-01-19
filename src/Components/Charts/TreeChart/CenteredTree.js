@@ -20,7 +20,6 @@ const useStyles = makeStyles(
       fontFamily:"GothamBold",
       fontSize: "15px",
       fontWeight:500,
-     
       color:" #333333"
     },
     edit: {
@@ -61,10 +60,13 @@ const renderForeignObjectNode = ({
       >
         <div className={classes.name}>{nodeDatum.name}</div>
   
-        <div className={classes.attributes}>
-          
-          {nodeDatum.attributes.age} <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+        {nodeDatum.attributes.age && 
+          <div className={classes.attributes}>
+          {nodeDatum.attributes.age }           
+          <i class="fa-solid fa-arrow-up"></i>
+          <svg width="18" className="arrow"  height="18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
         </div>
+        }
       </Button>
     </foreignObject>
   </>
