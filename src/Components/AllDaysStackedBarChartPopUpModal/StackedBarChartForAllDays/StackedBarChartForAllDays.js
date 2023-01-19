@@ -58,7 +58,7 @@ const StackedBarChartForAllDays = (props) => {
             .range([height - 70, 0]);
 
         svg
-            .attr("width", data.length * 10)
+            .attr("width", data.length)
             .attr("height", height)
             .selectAll(".layer")
             .data(layers)
