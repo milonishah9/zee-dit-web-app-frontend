@@ -1,4 +1,6 @@
 import ExecutiveSummaryVizContainerWithChartsAndNumbers from './ExecutiveSummaryVizContainerWithChartsAndNumbers/ExecutiveSummaryVizContainerWithChartsAndNumbers';
+import ExecutiveSummaryVizContainerWithChartsAndNumbersLinear from './ExecutiveSummaryVizContainerWithChartsAndNumbers/ExecutiveSummaryVizContainerWithChartsAndNumbersLinear';
+import ExecutiveSummaryVizContainerWithChartsAndNumbersCombined from './ExecutiveSummaryVizContainerWithChartsAndNumbers/ExecutiveSummaryVizContainerWithChartsAndNumbersCombined';
 import './ExecutiveSummary.css';
 import { useEffect, useState } from 'react';
 import ExecutiveSummaryServices from '../../Services/ILTTwentySummaryServices/ExecutiveSummaryServices';
@@ -39,7 +41,7 @@ const ExecutiveSummary = (props) => {
           <h2 className='Digital'>Linear</h2>
         </div>
         <div className='exect-summary-main-2'>
-          <ExecutiveSummaryVizContainerWithChartsAndNumbers digitalData = {digitalData}/>
+          <ExecutiveSummaryVizContainerWithChartsAndNumbersLinear digitalData = {digitalData}/>
         </div>
       </div>
 
@@ -48,7 +50,7 @@ const ExecutiveSummary = (props) => {
           <h2 className='Digital'>Combined</h2>
         </div>
         <div className='exect-summary-main-2'>
-          <ExecutiveSummaryVizContainerWithChartsAndNumbers digitalData = {digitalData}/>
+          <ExecutiveSummaryVizContainerWithChartsAndNumbersCombined digitalData = {digitalData}/>
         </div>
       </div>
       </>

@@ -1,43 +1,41 @@
 {
     "name": "Consumer Journey Charters",
     "attributes": {
-      "age": "67"
     },
     "children": [
       {
         "name": "Acquisition",
         "attributes": {
-          "age": "34"
         },
         "children": [
           {
             "name": "Total Sessions",
             "attributes": {
-              "age": "34"
+              "age": "2%"
             }
           },
           {
             "name": "DAU",
             "attributes": {
-              "age": "25"
+              "age": "2%"
             }
           },
           {
             "name": "MAU",
             "attributes": {
-              "age": "21"
+              "age": "2%"
             }
           },
           {
             "name": "Paid User",
             "attributes": {
-              "age": "21"
+              "age": "2%"
             }
           },
           {
             "name": "Organic User",
             "attributes": {
-              "age": "21"
+              "age": "2%"
             }
           }
         ]
@@ -45,38 +43,120 @@
       {
         "name": "Discovery",
         "attributes": {
-          "age": "25"
         },
         "children": [
           {
-            "name": "FullAWSAccess"
+            "name": "FullAWSAccess",
+            "attributes": {
+              "age": "2%"
+            }
           }
         ]
       },
       {
         "name": "Advertisement",
         "attributes": {
-          "age": "21"
         },
         "children": [
           {
-            "name": "FullAWSAccess"
+            "name": "Total Ad Viewers",
+            "attributes": {
+              "age": "2%"
+            }
+          }, {
+            "name": "Total Ad Impressions",
+            "attributes": {
+              "age": "5%"
+            },
+            "children":[
+              {
+                "name": "User Type",
+                "attributes": {
+                  "age": "2%"
+                }, "children":[
+                  {
+                    "name": "Guest",
+                    "attributes": {
+                      "age": "2%"
+                    }
+                  },{
+                    "name": "Registered",
+                    "attributes": {
+                      "age": "2%"
+                    }
+                  },{
+                    "name": "Premium",
+                    "attributes": {
+                      "age": "2%"
+                    }
+                  }
+                ]
+              },    {
+                "name": "Platform",
+                "attributes": {
+                  "age": "2%"
+                }, "children":[
+                  {
+                    "name": "Android",
+                    "attributes": {
+                      "age": "2%"
+                    }
+                  },{
+                    "name": "iOS",
+                    "attributes": {
+                      "age": "2%"
+                    }
+                  },{
+                    "name": "Web",
+                    "attributes": {
+                      "age": "2%"
+                    }
+                  },{
+                    "name": "Connect Device",
+                    "attributes": {
+                      "age": "2%"
+                    }
+                  }
+                ]
+              }
+            ]
+          }, {
+            "name": "Pre-roll Served",
+            "attributes": {
+              "age": "7%"
+            }
+          }, {
+            "name": "Mid-roll Served",
+            "attributes": {
+              "age": "7%"
+            }
           }
         ]
       },
       {
         "name": "Subscription",
+        "attributes": {
+        },
         "children": [
           {
-            "name": "FullAWSAccess"
+            "name": "FullAWSAccess",
+            "attributes": {
+              "age": "2%"
+            }
           }
         ]
       },
       {
+
         "name": "Engagement",
+        "attributes": {
+        },
         "children": [
           {
-            "name": "FullAWSAccess"
+            "name": "FullAWSAccess",
+            "attributes": {
+              "age": "2%"
+            }
           }
         ]
       }

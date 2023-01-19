@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import AllDaysStackedBarChartPopUpModal from "../../AllDaysStackedBarChartPopUpModal/AllDaysStackedBarChartPopUpModal";
+import AllDaysStackedBarChartPopUpModal from "../../AllDaysStackedBarChartPopUpModal/AllDaysStackedBarChartPopUpModalLinear";
 import AreaChart from "../../Charts/AreaChart/AreaChart";
 import AreaChartWithToolTips from "../../Charts/AreaChartWithToolTips/AreaChartWithToolTips";
 import StackedBarChart from "../../Charts/StackedBarChart/StackedBarChart";
@@ -27,13 +27,13 @@ const ExecutiveSummaryVizContainerWithChartsAndNumbers = (props) => {
           <div className="digital-viewers">
             <div class="viewer-numbers">
               <div className="exact-summary-viz-number">
-              
                 <p className="exact-summary-viz-number-entity">{digitalData.viewers.title}</p>
+
                 <h2 className="exact-summary-viz-number-value">{(((digitalData.viewers.totalViewers)) / 1000000).toFixed(2) + 'M'}</h2>
               </div>
               <div className="exact-summary-viz-average">
                 <p className="exact-summary-viz-number-entity">
-                  Rolling 7 days avg.
+                  Last 7 days avg.
                 </p>
                 <h4 className="exact-summary-viz-number-avg-value">1.2 M</h4>
                 <p className="exact-summary-viz-number-info">
@@ -60,7 +60,7 @@ const ExecutiveSummaryVizContainerWithChartsAndNumbers = (props) => {
 
             </div>
             <div className="exact-summary-viz-updateinfo-container">
-              <p>Updated as on 13/01/23.<br /> Next update expected by 14/01/23.</p>
+              <p>Updated as on 13/01/23 Next update expected by 14/01/23</p>
             </div>
           </div>
           <div className="digital-viewers-stackbarchart">
@@ -80,11 +80,12 @@ const ExecutiveSummaryVizContainerWithChartsAndNumbers = (props) => {
               <div className="viewer-numbers">
                 <div className="exact-summary-viz-number">
                   <p className="exact-summary-viz-number-entity">{digitalData.watchTime.title}</p>
+
                   <h2 className="exact-summary-viz-number-value">{(((digitalData.viewers.totalViewers)) / 1000000).toFixed(2) + 'M'}</h2>
                 </div>
                 <div className="exact-summary-viz-average">
                   <p className="exact-summary-viz-number-entity">
-                    Rolling 7 days avg.
+                    Last 7 days avg.
                   </p>
                   <h4 className="exact-summary-viz-number-avg-value">1.2 M</h4>
                   <p className="exact-summary-viz-number-info">

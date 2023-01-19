@@ -171,7 +171,7 @@ const RealTimeMatchUpdate = (props) => {
               <p>Viewers</p>
             </div>
             <div className="real-time-match-update-info-value">
-              <p>0.3M</p>
+              <p>0x.3M</p>
             </div>
             <div className="real-time-match-update-info-chart">
               {/* <LineChart /> */}
