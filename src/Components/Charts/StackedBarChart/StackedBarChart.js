@@ -121,7 +121,6 @@ const StackedBarChart = (props) => {
                     divider: width - 27,
                     max: width
                 }
-
             // chartNumberDimensions = {
             //     sevenDays: width - 10 + marginForRightChart,
             //     divider: width - 27 + marginForRightChart,
