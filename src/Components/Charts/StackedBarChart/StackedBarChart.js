@@ -332,9 +332,7 @@ const StackedBarChart = (props) => {
         var Tooltip = select(".stacked-barchart-sub-div")
             .append("div")
             .style("visibility", 'hidden')
-            // .attr("class", marginForRightChart ? "tooltip-stacked-bar-chart-right" : "tooltip-stacked-bar-chart")
-            .classed(marginForRightChart ? "tooltip-stacked-bar-chart-right" : "tooltip-stacked-bar-chart", true);
-
+            .attr("class", marginForRightChart ? "tooltip-stacked-bar-chart-right" : "tooltip-stacked-bar-chart");
 
         Tooltip.selectAll("*").remove();
 
@@ -350,7 +348,6 @@ const StackedBarChart = (props) => {
 
         var mousemove = function (event, d) {
 
-            // d3v4.event.preventDefault();
             // console.log('event', event);
 
             Tooltip
@@ -358,10 +355,8 @@ const StackedBarChart = (props) => {
                 // .style("top", (pointer(event)[1]) + "px")
                 // .style("left", (pointer(event)[0] - 50) + "px");
                 // .style("left", event.pageX - 600 + tooltipDimensions.pageX + "px")
-                // .style("top", event.pageY - 200 + tooltipDimensions.pageY + "px");
-                // .style("left", (d3v4.mouse(this)[0]+70) + "px")
-                // .style("top", (d3v4.mouse(this)[1]) + "px")
-                .style("left", event.pageX - 140 + "px")
+                // .style("top", event.pageY - 200 + tooltipDimensions.pageY + "px")
+                .style("left", event.pageX + 20 + "px")
                 .style("top", event.pageY + 15 + "px");
         }
         var mouseleave = function (event, d) {

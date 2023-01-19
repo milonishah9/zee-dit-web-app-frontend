@@ -35,8 +35,8 @@ const StackedBarChartForAllDays = (props) => {
         const svg = select(svgRef.current);
         const yAxisSvg = select(yAxisRef.current);
 
-        // const everything = svg.selectAll("*");
-        // everything.remove();
+        const everything = svg.selectAll("*");
+        everything.remove();
 
         const { width, height } = wrapperRef.current.getBoundingClientRect();
 
@@ -90,7 +90,7 @@ const StackedBarChartForAllDays = (props) => {
 
         svg
             .select(".x-axis")
-            .attr("transform", `translate(0, ${height-70})`)
+            .attr("transform", `translate(0, ${height})`)
             .call(xAxis)
             .selectAll("text")
             .attr("class", "stacekd-bar-chart-ticks");
@@ -168,7 +168,7 @@ const StackedBarChartForAllDays = (props) => {
             Tooltip
                 .html(tootTipHtml(event))
                 .style("top", event.pageY - 180 + "px")
-                .style("left", event.pageX - 530 + "px")
+                .style("left", event.pageX - 400 + "px")
         }
         var mouseleave = function (d) {
             Tooltip

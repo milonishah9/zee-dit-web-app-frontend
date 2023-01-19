@@ -141,11 +141,11 @@
     position: absolute; */
 
     z-index: 100;
-    width: 7%;
+    width: 6%;
     background: #FFFFFF;
     border: 1px solid #D8E3FF;
     border-radius: 5px;
-    padding: 5px;
+    padding: 5px 2px !important;
     position: absolute;
     height: 9%;
 }
