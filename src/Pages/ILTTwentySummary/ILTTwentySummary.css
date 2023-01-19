@@ -1,134 +1,136 @@
 .ilt20-summary-container {
-    margin: 0;
-    /* background: linear-gradient(165.96deg, #FFFFFF 0%, #F2F4FB 100%); */
-    font-family: 'GothamMedium';
+  margin: 0;
+  /* background: linear-gradient(165.96deg, #FFFFFF 0%, #F2F4FB 100%); */
+  font-family: "GothamMedium";
 }
 
-
 .digital-watchtime {
-    padding-left: 56px;
-
+  padding-left: 56px;
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1366px) {
-    .digital-watchtime {
-        padding-left: 80px;
-    }
+  .digital-watchtime {
+    padding-left: 80px;
+  }
 }
 
 @media only screen and (min-width: 1030px) and (max-width: 1366px) {
-    .digital-watchtime {
-        padding-left: 0px;
-    }
-    
+  .digital-watchtime {
+    padding-left: 0px;
+  }
 }
 
-@media only screen and (max-width: 1023px) and (min-width: 768px){
-    .digital-watchtime {
-        position: relative;
-        right: 47px;
-    }
-    .viewer-numbers {
-        width: 70%!important;
-        display: flex;
-        padding-top: 0px;
-    }
-    .viewership-performance-indicators {
-        display: flex;
-        justify-content: space-around;
-    }
-    .executive-summary-main-container{
-        margin: 10px!important;
-    }
-    .digital-watchtime-stackedchart {
-        margin-left: -33px;
-    
-    }
-    /* .bdr {border-top: 2px dashed #dcdcdc;    padding-top: 10px;border-left: none;} */
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .digital-watchtime {
+    position: relative;
+    right: 47px;
+  }
+  .viewer-numbers {
+    width: 70% !important;
+    display: flex;
+    padding-top: 0px;
+  }
+  .viewership-performance-indicators {
+    display: flex;
+    justify-content: space-between;
+  }
+  .executive-summary-main-container {
+    margin: 10px !important;
+  }
+  .digital-watchtime-stackedchart {
+    /* margin-left: -33px; */
+    padding-left: 1rem !important;
+    padding-top: 15px !important;
+  }
+  /* .bdr {border-top: 2px dashed #dcdcdc;    padding-top: 10px;border-left: none;} */
 }
-@media only screen and (max-width: 1247px) and (min-width: 1024px){
-    .digital-viewers, .digital-watchtime{ width: 52%;}
-    .digital-watchtime {
-        padding-left: 0px;
-        padding-top: 12px;
-        padding-bottom: 10px!important;
-    }
-    .digital-watchtime-stackedchart{padding-left: 1rem!important;    padding-top:15px!important;}
-    /* .bdr {border-top: 2px dashed #dcdcdc;    padding-top: 10px;border-left: none;} */
+@media only screen and (max-width: 1247px) and (min-width: 1024px) {
+  .digital-viewers,
+  .digital-watchtime {
+    width: 52%;
+  }
+  .digital-watchtime {
+    padding-left: 0px;
+    padding-top: 12px;
+    padding-bottom: 10px !important;
+  }
+  .digital-watchtime-stackedchart {
+    padding-left: 1rem !important;
+    padding-top: 15px !important;
+  }
+  /* .bdr {border-top: 2px dashed #dcdcdc;    padding-top: 10px;border-left: none;} */
 }
 @media only screen and (max-width: 767px) {
-    
-   
-    .ilttwenty-navigation-tabs-container {
-        padding-top: 30px !important;
-    }
+  .ilttwenty-navigation-tabs-container {
+    padding-top: 30px !important;
+  }
 
-    .ilt20-header-subcontainer {
-        display: block;
-    }
+  .ilt20-header-subcontainer {
+    display: block;
+  }
 
-    .ilt20-header-div-middle {
-        padding: 0px;
-    }
+  .ilt20-header-div-middle {
+    padding: 0px;
+  }
 
-    .ilt20-header-div-right {
-        float: right;
-        padding-bottom: 20px;
-        position: absolute;
-        right: 10px;
-        /* margin-top: -22px; */
-    }
+  .ilt20-header-div-right {
+    float: right;
+    padding-bottom: 20px;
+    position: absolute;
+    right: 10px;
+    /* margin-top: -22px; */
+  }
 
-    .ilt20-header-div-middle {
-        padding-top: 17px;
-    }
+  .ilt20-header-div-middle {
+    padding-top: 17px;
+  }
 
-    .ilt20-header-ilt20-text-3 h1 {
-        font-family: 'GothamMedium';
-        font-size: 12px;
-    }
+  .ilt20-header-ilt20-text-3 h1 {
+    font-family: "GothamMedium";
+    font-size: 12px;
+  }
 
-    .ilt20-header-div-middle {
-        display: block;
-    }
+  .ilt20-header-div-middle {
+    display: block;
+  }
 
-    .executive-summary-container,
-    .digital-daywise-and-cumulative {
-        display: inline-block;
-    }
+  .executive-summary-container,
+  .digital-daywise-and-cumulative {
+    display: inline-block;
+  }
 
-    .digital-viewers-stackbarchart,
-    .digital-watchtime {
-        margin-top: 40px;
-        margin-left: -33px;
-    }
+  .digital-viewers-stackbarchart,
+  .digital-watchtime {
+    margin-top: 40px;
+    margin-left: -33px;
+  }
 
-    .exect-summary-main-2 {
-        display: inline;
-    }
+  .exect-summary-main-2 {
+    display: inline;
+  }
 
-    .digital-watchtime {
-        margin-top: 88px;
-        position: relative;
-        right: 12px;
-    }
+  .digital-watchtime {
+    margin-top: 88px;
+    position: relative;
+    right: 12px;
+  }
 
-    .digital-watchtime-stackedchart {
-        margin-top: 40px;
-        margin-left: -120px;
-    }
+  .digital-watchtime-stackedchart {
+    margin-top: 40px;
+    margin-left: -120px;
+  }
 
-    .executive-summary-main-container {
-        height: 54rem !important;
-    }
+  .executive-summary-main-container {
+    height: 54rem !important;
+  }
 
-    .digital-viewers,
-    .digital-viewers-stackbarchart,
-    .digital-watchtime,
-    .digital-watchtime-stackedchart {
-        float: unset;
-        width: 50%;
-    }
+  .digital-viewers,
+  .digital-viewers-stackbarchart,
+  .digital-watchtime,
+  .digital-watchtime-stackedchart {
+    float: unset;
+    width: 50%;
+  }
 }
 /* @media only screen and (max-width: 1365px) and (min-width: 1030px){
     .digital-viewers, .digital-watchtime{
@@ -150,15 +152,15 @@
         width: 30%!important;
     }
 } */
-@media only screen and (max-width: 1366px) and (min-width: 1248px){
-    /* .digital-viewers-stackbarchart, .digital-watchtime-stackedchart{
+@media only screen and (max-width: 1366px) and (min-width: 1248px) {
+  /* .digital-viewers-stackbarchart, .digital-watchtime-stackedchart{
         width: 30%!important;
     }  */
-    .viewer-numbers {
-        display: -webkit-inline-box!important;
-      justify-content: space-around!important;
-    }
-    .digital-viewers-stackbarchart {
-        margin-left: 5rem;
-    }
+  .viewer-numbers {
+    display: -webkit-inline-box !important;
+    justify-content: space-around !important;
+  }
+  .digital-viewers-stackbarchart {
+    margin-left: 5rem;
+  }
 }

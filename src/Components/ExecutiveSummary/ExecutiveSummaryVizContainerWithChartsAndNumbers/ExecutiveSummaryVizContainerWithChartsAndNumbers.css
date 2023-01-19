@@ -8,6 +8,11 @@
   width: 100%;
 }
 
+.all-days-stkd-bar-chart-pop-up-mdl-cnt-vsbl{
+  position: absolute;
+  /* height: 100vh; */
+}
+
 .exact-summary-viz-average {
   /* margin-left: -10px!important; */
   margin-left: 40px;
@@ -172,6 +177,12 @@
   }
 }
 
+@media only screen and (min-width: 1030px) and (max-width: 1231px) {
+  .exact-summary-viz-average{
+    margin-left: 25px;
+  }
+}
+
 @media only screen and (min-width: 1030px) and (max-width: 1366px) {
   .executive-summary-digital-viewers {
     /* display: flex; */
@@ -211,6 +222,14 @@
   }
 }
 
+@media only screen and (min-width: 1248px) and (max-width: 1366px) {
+  .svg-wrap {
+    position: relative;
+    left: 65px;
+}
+
+}
+
 @media only screen and (min-width: 1200px) and (max-width: 1370px) {
   .exact-summary-viz-updateinfo-container p{
     width: 250%;
@@ -229,7 +248,31 @@
 
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
 
-  .digital-viewers,
+  .exact-summary-viz-average{
+      margin-left: 100px;
+  }
+
+  .main-excutive-summary{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bdr {
+    border: none;
+    padding-left: 0px;
+  }
+
+  .svg-wrap {
+    position: relative;
+    left: 227px;
+}
+
+/* .digital-watchtime-stackedchart {
+  padding-left: 1rem!important;
+  padding-top: 15px!important;
+} */
+
+  /* .digital-viewers,
   .digital-watchtime {
     width: auto !important;
   }
@@ -250,8 +293,7 @@
   .bdr {
     border: none;
     padding-left: 0px;
-  }
-
+  } */
   /* .exact-summary-viz-container-right{
   position: relative;
   right: 37px;
@@ -274,10 +316,14 @@
   .exact-summary-viz-number-info {
     width: 125px;
   }
+
+  .exact-summary-viz-average {
+    margin-left: 20px;
+  }
 }
 
 
-@media only screen and (max-device-width: 845px) and (min-device-width: 390px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+/* @media only screen and (max-device-width: 845px) and (min-device-width: 390px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .digital-watchtime {
     position: relative !important;
     right: 25rem !important;
@@ -290,4 +336,4 @@
     left: 23rem !important;
     margin-left: 0px !important;
   }
-}
+} */

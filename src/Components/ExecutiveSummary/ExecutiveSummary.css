@@ -8,6 +8,7 @@
 
 .executive-summary-main-container {
   margin-bottom: 10px;
+  padding-bottom: 10px;
   padding-left: 10px;
   flex-direction: column;
   justify-content: space-between;
@@ -186,6 +187,10 @@ img.executive-summary-linear-image {
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
+
+  .executive-summary-main-container {
+    padding-bottom: 25px;
+  }
   .executive-summary-linear-subtitle p {
     font-size: 10px;
   }
