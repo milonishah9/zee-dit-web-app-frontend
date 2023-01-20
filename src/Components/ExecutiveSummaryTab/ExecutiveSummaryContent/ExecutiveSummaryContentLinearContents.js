@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './ExecutiveSummaryContentLinearContents.css'
 import FrontBar from "../../Charts/BubbleChart/LinearBarchart/FrontBar";
+import { useSelector } from "react-redux";
+import { selectCount } from "../../../features/HoverValues";
 
 const ExecutiveSummaryContentLinearContents = (props) => {
     const {chartData, buttonTab} = props;
-    // const data = 300;
+    const hoverValue = useSelector(selectCount);
+    let myHoverClass = 'executive-summary-content-linear-contents-t-body-rows'
+
+    console.log(hoverValue);
+
     const total = 500;
     return (
         <div className="executive-summary-content-linear-contents">
@@ -43,8 +49,13 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                 </thead>
                 <tbody className="executive-summary-content-linear-contents-t-body">
                     {chartData.map((element, index) => {
+                        if(hoverValue === element.Name){
+                            myHoverClass = 'my-row-bubble-hover'
+                        }else{
+                            myHoverClass = 'executive-summary-content-linear-contents-t-body-rows'
+                        }
                         return(
-                            <tr key={index} className="executive-summary-content-linear-contents-t-body-rows">
+                            <tr key={index} className={myHoverClass}>
                                 <td>{element.Name}</td>
                                 {element.arr.map((data, index) => {
                                     return <td key={index}><FrontBar data={data} total={total} /></td>

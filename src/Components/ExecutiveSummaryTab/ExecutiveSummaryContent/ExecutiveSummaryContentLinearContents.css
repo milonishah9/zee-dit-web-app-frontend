@@ -118,6 +118,10 @@
   margin: 10px 0px;
 }
 
+.my-row-bubble-hover{
+  background-color: #43bcff;
+}
+
 .exe-sum-lin-con-h-lbr {
   padding-top: 2px;
   display: block;
