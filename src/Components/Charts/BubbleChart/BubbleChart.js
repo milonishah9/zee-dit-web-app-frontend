@@ -119,6 +119,7 @@ const BubbleChart = (props) => {
         d3.select(this).attr("stroke-width", 3);
       });
 
+      
       // circles
       // .append("svg:image")
       // .attr("transform", d => "translate(" + d.x + "," + d.y + ")")
