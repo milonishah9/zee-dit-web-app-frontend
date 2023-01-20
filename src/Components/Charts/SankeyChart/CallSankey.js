@@ -1,4 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
+import * as d3 from "d3-sankey";
+import * as d33 from "d3";
+
 
 const size = {
   width: 700,
@@ -29,7 +32,7 @@ const Rect = ({ index, x0, x1, y0, y1, name, value, length, colors }) => {
         x={x0 < size.width / 2 ? x1 + 6 : x0 - 6}
         y={(y1 + y0) / 2}
         style={{
-          fill: d3.rgb(colors(index / length)).darker(),
+          fill: d33.rgb(colors(index / length)).darker(),
           alignmentBaseline: "middle",
           fontSize: 9,
           textAnchor: x0 < size.width / 2 ? "start" : "end",
@@ -70,12 +73,13 @@ const Link = ({ data, width, length, colors }) => {
   );
 };
 
-const Sankey = props => {
+const CallSankey = props => {
+  
   const dragElement = useRef(null);
   const graph = useRef(null);
   const offset = useRef(null);
 
-  const colors = props.edit ? d3.interpolateWarm : d3.interpolateCool;
+  const colors = props.edit ? d33.interpolateWarm : d33.interpolateCool;
   const sankey = d3
     .sankey()
     .nodeAlign(d3.sankeyJustify)
@@ -150,6 +154,7 @@ const Sankey = props => {
   }
 
   return <div>Loading</div>;
-};
 
-export default Sankey;
+}
+
+export default CallSankey;

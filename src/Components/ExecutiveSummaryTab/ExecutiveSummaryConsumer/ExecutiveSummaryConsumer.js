@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import Sankey from "./Sankey";
+import Sankey from "../../Charts/SankeyChart/CallSankey";
 
 
-function App() {
+const ExecutiveSummaryConsumer = (props) => {
+
   const [data, setData] = useState(null);
   const [editMode, setEditMode] = useState(false);
 
@@ -23,5 +24,8 @@ function App() {
   );
 }
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+export default ExecutiveSummaryConsumer;
+
+
+// const rootElement = document.getElementById("root");
+// ReactDOM.render(<App />, rootElement);
