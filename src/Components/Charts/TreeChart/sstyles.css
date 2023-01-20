@@ -3,8 +3,11 @@
   background: rgb(255, 255, 255) !important;
   border-radius: 100px !important;
   border: 3px solid #5a3e89 !important;
-  padding: 25px !important;
-  width: 100% !important;
+  width: 90% !important;
+  padding: 30px 0 !important;
+  text-transform: none;
+  font-Size: 17px !important;
+
 }
 
 foreignObject .DownButton{
@@ -14,6 +17,36 @@ foreignObject .DownButton{
   border: 3px solid #f37b92 !important;
   padding: 25px !important;
   width: 90% !important;
+  text-transform: none;
+  font-Size: 19px !important;
+
+}
+
+
+
+foreignObject .UpButton {
+  color: black !important;
+  background: rgb(201 255 241) !important;
+  border-radius: 100px !important;
+  border: 3px solid #1fcb9a !important;
+  padding: 25px !important;
+  width: 90% !important;
+  text-transform: none;
+  font-Size: 19px !important;
+
+}
+
+foreignObject .withoutPer {
+  color: black !important;
+  background: rgb(201 255 241) !important;
+  border-radius: 100px !important;
+  border: 3px solid #1fcb9a !important;
+  padding: 25px !important;
+  width: 90% !important;
+  text-transform: none;
+  font-Size: 19px !important;
+
+
 }
 
 
@@ -23,11 +56,11 @@ foreignObject .DownButton{
 }
 
 .node__root>foreignObject{
-  width: 25% !important;
+  width: 19% !important;
 }
 
 svg .rd3t-g{
-  transform: translate(930px, 30px) scale(0.4);
+  transform: translate(920px, 30px) scale(0.4);
 }
 
 @media screen and (max-width: 1603px) {
@@ -62,7 +95,7 @@ svg .rd3t-g{
   }
 
   .node__root>foreignObject{
-    width: 80% !important;
+    width: 30% !important;
   }
 }
 
@@ -79,22 +112,3 @@ svg .rd3t-g{
 }
 
 
-
-
-foreignObject .UpButton {
-  color: black !important;
-  background: rgb(201 255 241) !important;
-  border-radius: 100px !important;
-  border: 3px solid #1fcb9a !important;
-  padding: 25px !important;
-  width: 90% !important;
-}
-
-foreignObject .withoutPer {
-  color: black !important;
-  background: rgb(201 255 241) !important;
-  border-radius: 100px !important;
-  border: 3px solid #1fcb9a !important;
-  padding: 25px !important;
-  width: 90% !important;
-}
