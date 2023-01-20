@@ -117,6 +117,7 @@ const BubbleChart = (props) => {
           .style("top", d3.event.pageY - 35 + "px")
           .style("left", d3.event.pageX + 0 + "px");
       })
+      
       .on("mouseout", function () {
         // props.onClick("");
         dispatch(setHoverValue(''))
