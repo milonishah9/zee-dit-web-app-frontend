@@ -33,6 +33,7 @@
   .viewership-performance-indicators {
     display: flex;
     justify-content: space-between;
+    padding: 0 1%;
   }
   .executive-summary-main-container {
     margin: 10px !important;
