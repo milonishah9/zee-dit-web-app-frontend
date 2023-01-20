@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 const BubbleChart = (props) => {
   const json = props.files;
-//   console.log(dataForHighlight);
+  //   console.log(dataForHighlight);
   useEffect(() => {
     // d3 colour scheme for bubbles
     // var color = d3.scaleOrdinal().range(["rgb(148, 94, 210, 0.1)"]);
@@ -58,7 +58,7 @@ const BubbleChart = (props) => {
           .forceCollide(function (d) {
             return d.Count * 7 + 3;
           })
-          .iterations(10)
+          .iterations(100)
       );
 
     var circles = svg
@@ -102,20 +102,33 @@ const BubbleChart = (props) => {
       .on("mouseover", function (d) {
         //tooltips
         tooltip.text(d.Name + ": " + d.Count);
-        props.onClick(d.Name+d.Count)
+        // props.onClick(d.Name + d.Count);
         tooltip.style("visibility", "visible");
       })
-      
+
       .on("mousemove", function () {
         return tooltip
           .style("top", d3.event.pageY - 35 + "px")
-          .style("left", d3.event.pageX + 0 + "px")
+          .style("left", d3.event.pageX + 0 + "px");
       })
       .on("mouseout", function () {
-        props.onClick('')
+        // props.onClick("");
         tooltip.style("visibility", "hidden");
+      })
+      .on("click", function (d, i) {
+        d3.select(this).attr("stroke-width", 3);
       });
       
+      // circles
+      // .append("svg:image")
+      // .attr("transform", d => "translate(" + d.x + "," + d.y + ")")
+      // .attr("xlink:href", function(d) {
+      //   console.log(d.img) ;
+      // })
+      // .attr("x", 0)
+      // .attr("y", 0)
+      // .attr("width", d => d.r / 1.5);
+
     function wrap(text, width) {
       text.each(function () {
         var text = d3.select(this),
