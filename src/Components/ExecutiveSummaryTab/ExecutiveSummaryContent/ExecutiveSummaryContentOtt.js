@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import BubbleChart from "../../Charts/BubbleChart/BubbleChart";
 import * as d3 from "d3";
-import ExecutiveSummaryContentLinearContents from "./ExecutiveSummaryContentLinearContents";
+import ExecutiveSummaryContentOTTContents from "./ExecutiveSummaryContentOTTContents";
 import ExecutiveSummaryContentLinearButtonsTabs from "./ExecutiveSummaryContentLinearButtonsTabs";
 import { useState } from "react";
 
@@ -71,19 +71,19 @@ const ExecutiveSummaryContentOtt = () => {
         {activeTab === "all-content" && (
           <div className="executive-summary-content-linear-filter">
             <BubbleChart files={json} />
-            <ExecutiveSummaryContentLinearContents />
+            <ExecutiveSummaryContentOTTContents />
           </div>
         )}
         {activeTab === "top-10" && (
           <div className="executive-summary-content-linear-filter">
             <BubbleChart files={top10files} />
-            <ExecutiveSummaryContentLinearContents />
+            <ExecutiveSummaryContentOTTContents />
           </div>
         )}
         {activeTab === "bottom-10" && (
           <div className="executive-summary-content-linear-filter">
             <BubbleChart files={bottom10files} />
-            <ExecutiveSummaryContentLinearContents />
+            <ExecutiveSummaryContentOTTContents />
           </div>
         )}
       </div>
