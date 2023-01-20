@@ -6,7 +6,7 @@ import ExecutiveSummaryContentLinearContents from "./ExecutiveSummaryContentLine
 import ExecutiveSummaryContentLinearButtonsTabs from "./ExecutiveSummaryContentLinearButtonsTabs";
 import { useEffect } from "react";
 
-const ExecutiveSummaryContentLinear = () => {
+const ExecutiveSummaryContentLinear = (props) => {
   const [activeTab, setActiveTab] = useState("all-content");
 
   var hoverData = "";
@@ -22,101 +22,115 @@ const ExecutiveSummaryContentLinear = () => {
       Name: "Kundli Bhagya",
       Count: 7,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [320, 230, 100, 330, 410],
     },
     {
       Name: "Bhagya Lakshmi",
       Count: 1,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [120, 430, 209, 330, 300],
     },
     {
       Name: "Kumkum Bhagya",
       Count: 2,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [223, 140, 170, 330, 400],
     },
     {
       Name: "Meet",
       Count: 2,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [120, 430, 209, 330, 300],
     },
     {
       Name: "Radha Mohan",
       Count: 2,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [120, 140, 170, 330, 400],
     },
     {
       Name: "Mithai",
       Count: 1,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [320, 230, 100, 330, 400],
     },
     {
-      Name: "Customs Brokerage Services",
+      Name: "Brokerage Services",
       Count: 3,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [120, 230, 100, 330, 300],
     },
     {
-      Name: "Customs Brokerage Services",
+      Name: "Customs Services",
       Count: 3,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [120, 230, 100, 330, 410],
     },
     {
-      Name: "Energy Audit or Consulting Services",
+      Name: "Consulting Services",
       Count: 4,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [120, 230, 100, 330, 400],
     },
     {
-      Name: "E",
+      Name: "Eas",
       Count: 4,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [120, 230, 100, 330, 400],
     },
     {
-      Name: "Human Resources and/or Executive Talent Search Services",
+      Name: "Human Resources",
       Count: 4,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [130, 230, 209, 330, 410],
     },
     {
-      Name: "Insurance Brokerage Services",
+      Name: "Insurance Services",
       Count: 4,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [130, 140, 170, 330, 300],
     },
     {
       Name: "Legal Services",
       Count: 11,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [120, 230, 209, 330, 410],
     },
     {
-      Name: "Legal Services",
-      Count: 10,
-      img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-    },
-    {
-      Name: "Legal Services",
+      Name: "Services",
       Count: 9,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [120, 140, 170, 330, 400],
     },
     {
-      Name: "Managed IT Services",
+      Name: "IT Services",
       Count: 4,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [130, 230, 100, 330, 400],
     },
     {
-      Name: "Managed IT Services",
+      Name: "Managed Services",
       Count: 4,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [120, 230, 209, 330, 400],
     },
     {
-      Name: "Marketing and Communications Services",
+      Name: "Marketing",
       Count: 6,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [120, 230, 209, 330, 400],
     },
     {
-      Name: "Marketing and Communications Services",
+      Name: "Market",
       Count: 6,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [130, 230, 100, 330, 410],
     },
     {
       Name: "Relocation Specialists",
       Count: 1,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      arr: [123, 430, 100, 330, 400],
     },
   ];
 
@@ -139,11 +153,7 @@ const ExecutiveSummaryContentLinear = () => {
   const getData = (value) => {
     setActiveTab(value);
   };
-
-  const onClickFunction = (res) => {
-    hoverData = res;
-  };
-
+  
   return (
     <div>
       <div className="executive-summary-content-linear-tabs">
@@ -152,20 +162,29 @@ const ExecutiveSummaryContentLinear = () => {
       <div>
         {activeTab === "all-content" && (
           <div className="executive-summary-content-linear-filter">
-            <BubbleChart files={json} onClick={onClickFunction} />
-            <ExecutiveSummaryContentLinearContents hoverData={hoverData} />
+            <BubbleChart files={json} />
+            <ExecutiveSummaryContentLinearContents
+              chartData={json}
+              buttonTab={"linear"}
+            />
           </div>
         )}
         {activeTab === "top-10" && (
           <div className="executive-summary-content-linear-filter">
             <BubbleChart files={top10files} />
-            <ExecutiveSummaryContentLinearContents />
+            <ExecutiveSummaryContentLinearContents
+              chartData={top10files}
+              buttonTab={"linear"}
+            />
           </div>
         )}
         {activeTab === "bottom-10" && (
           <div className="executive-summary-content-linear-filter">
             <BubbleChart files={bottom10files} />
-            <ExecutiveSummaryContentLinearContents />
+            <ExecutiveSummaryContentLinearContents
+              chartData={bottom10files}
+              buttonTab={"linear"}
+            />
           </div>
         )}
       </div>
