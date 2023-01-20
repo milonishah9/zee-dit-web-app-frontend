@@ -18,8 +18,8 @@ const ExecutiveSummaryContentOTTContents = () => {
                         <th className="executive-summary-content-linear-contents-t-shows-header">Web Series</th>
                         <th className="executive-summary-content-linear-contents-t-header"># Viewers</th>
                         <th className="executive-summary-content-linear-contents-t-header">%Completion</th>
-                        <th className="executive-summary-content-linear-contents-t-header"># SAWF Subscriptions<span className="exe-sum-lin-con-h-lbr">(Acquisition)</span></th>
-                        <th className="executive-summary-content-linear-contents-t-header">Watch Duration<span className="exe-sum-lin-con-h-lbr">(M min.) (Engagement)</span></th>
+                        <th className="executive-summary-content-linear-contents-t-header"># SAWF Subscriptions<span className="exe-sum-lin-con-h-lbr"></span></th>
+                        <th className="executive-summary-content-linear-contents-t-header">Watch Duration<span className="exe-sum-lin-con-h-lbr"></span></th>
                         <th className="executive-summary-content-linear-contents-t-header">Ad Impressions</th>
                     </tr>
                 </thead>
