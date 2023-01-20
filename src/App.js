@@ -23,7 +23,7 @@ function App() {
           <Route path='/executive-summary-content' element={<ExecutiveSummaryContent />} />
           <Route path='/area-chart-with-tooltips' element={<AreaChartWithToolTips />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter>  
     </div>
   );
 }
