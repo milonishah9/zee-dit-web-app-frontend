@@ -14,6 +14,19 @@
     bottom: 5px;
     
 }
+
+.executive-summ-content-ott-indicators{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.executive-summ-content-ott-indicators p{
+    margin: 10px;
+}
+
+.executive-summ-content-ott-indicator{
+    margin: 10px;
+}
 @media only screen and (max-width: 1366px) {
     .executive-summary-content-linear-contents{
         Overflow-x:scroll;
