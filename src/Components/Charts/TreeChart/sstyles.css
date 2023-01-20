@@ -1,5 +1,4 @@
 .node__root>foreignObject>button {
-
   color: black !important;
   background: rgb(255, 255, 255) !important;
   border-radius: 100px !important;
@@ -7,6 +6,17 @@
   padding: 25px !important;
   width: 100% !important;
 }
+
+foreignObject .DownButton{
+  color: black !important;
+  background: #f3e4ec !important;
+  border-radius: 100px !important;
+  border: 3px solid #f37b92 !important;
+  padding: 25px !important;
+  width: 90% !important;
+}
+
+
 
 .arrow{
   color: rgb(1, 255, 1);
@@ -17,31 +27,70 @@
 }
 
 svg .rd3t-g{
-  transform: translate(780px, 30px) scale(0.5);
+  transform: translate(930px, 30px) scale(0.4);
 }
 
-/* rd3t-svg{
-  height: 60% !important;
-} */
+@media screen and (max-width: 1603px) {
+  svg .rd3t-g{
+    transform: translate(700px, 30px) scale(0.30);
+  }
+  .node__root>foreignObject{
+    width: 30% !important;
+  }
+}
 
-/* .node__root>foreignObject{
-  width: 500 !important;
-  height: 250 !important;
-  x: -220 !important;
-} */
+@media screen and (max-width: 1191px) {
+  svg .rd3t-g{
+    transform: translate(600px, 30px) scale(0.25);
+  }
+}
+
+@media screen and (max-width: 1009px) {
+  svg .rd3t-g{
+    transform: translate(500px, 30px) scale(0.15);
+  }
+
+  .node__root>foreignObject{
+    width: 80% !important;
+  }
+}
+
+
+@media screen and (max-width: 1009px) {
+  svg .rd3t-g{
+    transform: translate(500px, 30px) scale(0.15);
+  }
+
+  .node__root>foreignObject{
+    width: 80% !important;
+  }
+}
 
 
 
-.node__branch>foreignObject>button {
+@media screen and (max-width: 375px) {
+  svg .rd3t-g{
+    transform: translate(200px, 30px) scale(0.08);
+  }
+
+  .node__root>foreignObject{
+    width: 100% !important;
+  }
+}
+
+
+
+
+foreignObject .UpButton {
   color: black !important;
-  background: #f3e4ec !important;
+  background: rgb(201 255 241) !important;
   border-radius: 100px !important;
-  border: 3px solid #f37b92 !important;
+  border: 3px solid #1fcb9a !important;
   padding: 25px !important;
   width: 90% !important;
 }
 
-.node__leaf>foreignObject>button {
+foreignObject .withoutPer {
   color: black !important;
   background: rgb(201 255 241) !important;
   border-radius: 100px !important;

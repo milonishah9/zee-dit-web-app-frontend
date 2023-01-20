@@ -8,17 +8,19 @@
 .all-days-stkd-bar-chart-pop-up-mdl-cnt-vsbl {
 
     background: rgba(0, 0, 0, 0.75) !important;
-    display: flex !important;
-    align-items: flex-start !important;
     position: fixed !important;
+    display: flex !important;
+    /* display: flex !important;
+    align-items: flex-start !important;
+    
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;
-    z-index: 1000 !important;
-    padding: 1.2rem !important;
+    z-index: 1000 !important; */
+    /* padding: 1.2rem !important; */
 }
 
 .svg-wrap {
@@ -141,13 +143,13 @@
     position: absolute; */
 
     z-index: 100;
-    width: 6%;
+    width: auto;
     background: #FFFFFF;
     border: 1px solid #D8E3FF;
     border-radius: 5px;
     padding: 5px 2px !important;
     position: absolute;
-    height: 9%;
+    height: auto;
 }
 
 .tooltip-stacked-bar-chart p,
@@ -176,7 +178,6 @@ text.chart-label {
     line-height: 11px;
     font-family: GothamLight;
     /* cursor: pointer; */
-
 }
 
 .stacked-barchart-sub-div {}
@@ -184,6 +185,13 @@ text.chart-label {
 @media only screen and (max-width: 1366px) {
     .svg-wrap {
         position: relative;
-        left: 70px;
+        left: 0px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .svg-wrap {
+        position: relative;
+        left: 39px;
     }
 }

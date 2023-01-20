@@ -18,21 +18,32 @@ const useStyles = makeStyles(
     },
     name: {
       fontFamily:"GothamBold",
-      fontSize: "15px",
+      fontSize: "18px",
       fontWeight:500,
       color:" #333333"
     },
-    edit: {
+
+    num: {
+      fontSize: "15px",
       position: "absolute",
-      top: "0px",
-      right: "0px",
-      color: "#4BA083"
+      right: "180px",
+      bottom: "5px",
+      color: "black"
     },
-    attributes: {
+    
+    UpAttributes: {
+      fontSize: "15px",
       position: "absolute",
       bottom: "5px",
-      right: "80px",
+      right: "30px",
       color: "#4BA083"
+    },
+    DownAttributes: {
+      fontSize: "15px",
+      position: "absolute",
+      bottom: "5px",
+      right: "30px",
+      color: "#f37b92"
     }
   })
 );
@@ -52,22 +63,43 @@ const renderForeignObjectNode = ({
   <>
     {/* `foreignObject` requires width & height to be explicitly set. */}
     <foreignObject {...foreignObjectProps}>
-      <Button
-        className={classes.button}
-        variant="contained"
-        onClick={toggleNode}
-        style={{ color: "black", background: "#aaeddb", "border-radius": "100px", "border": "3px solid #18ca96", "padding": "25px", "width": "90%"  }}
-      >
+
+
+
+    {!nodeDatum.attributes.per  && 
+      <Button className="withoutPer" variant="contained" onClick={toggleNode}>
         <div className={classes.name}>{nodeDatum.name}</div>
-  
-        {nodeDatum.attributes.age && 
-          <div className={classes.attributes}>
-          {nodeDatum.attributes.age }           
-          <i class="fa-solid fa-arrow-up"></i>
-          <svg width="18" className="arrow"  height="18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
-        </div>
-        }
       </Button>
+    }
+
+    {nodeDatum.attributes.per < 0 && 
+      <Button className="DownButton" variant="contained" onClick={toggleNode}>
+        <div className={classes.name}>{nodeDatum.name}</div>
+          {
+            nodeDatum.attributes.per && 
+            <div className={classes.DownAttributes}>
+                {nodeDatum.attributes.per + '% ↓'}           
+                {/* <svg width="18" className="arrow"  height="18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg> */}
+              </div>
+          }
+          <div className={classes.num}>{nodeDatum.attributes.num }</div>
+      </Button>
+    }
+
+    {nodeDatum.attributes.per > 0 && 
+    <Button className="UpButton" variant="contained" onClick={toggleNode}>
+        <div className={classes.name}>{nodeDatum.name}</div>
+          {
+            nodeDatum.attributes.per && 
+              <div className={classes.UpAttributes}>
+                {nodeDatum.attributes.per + '% ↑'}           
+                {/* <svg width="18" className="arrow"  height="18" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg> */}
+              </div>
+          }
+          <div className={classes.num}>{nodeDatum.attributes.num }</div>
+      </Button>
+    }
+
     </foreignObject>
   </>
 );
@@ -77,7 +109,7 @@ const renderForeignObjectNode = ({
 export default function App() {
   const classes = useStyles();
   const [translate, containerRef] = useCenteredTree();
-  const nodeSize = { x: 200, y: 250 };
+  const nodeSize = { x: 300, y: 250 };
   const separation = { siblings: 1, nonSiblings: 1 };
   const foreignObjectProps = { width: nodeSize.x, height: nodeSize.y, x: -125 };
   const draggable = false;
