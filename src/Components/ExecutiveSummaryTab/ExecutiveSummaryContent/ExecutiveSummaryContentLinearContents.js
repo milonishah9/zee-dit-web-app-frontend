@@ -4,16 +4,15 @@ import FrontBar from "../../Charts/BubbleChart/LinearBarchart/FrontBar";
 
 const ExecutiveSummaryContentLinearContents = (props) => {
     const {chartData, buttonTab} = props;
-    console.log(buttonTab);
     // const data = 300;
     const total = 500;
     return (
         <div className="executive-summary-content-linear-contents">
-            <div className="executive-summ-content-ott-indicators">
-                <p><span className="executive-summ-content-ott-indicator"/>SAWF Viewers</p>
-                <p><span className="executive-summ-content-ott-indicator"/>Returning Viewers</p>
-                <p><span className="executive-summ-content-ott-indicator"/>Remaining Viewers</p>
-            </div>
+            {buttonTab !== 'linear' &&<div className="executive-summ-content-ott-indicators">
+                <p><label className="executive-summ-content-ott-blue-indicator"/>SAWF Viewers</p>
+                <p><label className="executive-summ-content-ott-yellow-indicator"/>Returning Viewers</p>
+                <p><label className="executive-summ-content-ott-darkblue-indicator"/>Remaining Viewers</p>
+            </div>}
             <div className="executive-summary-content-linear-contents-headers">
             {buttonTab === 'linear' ? (<h6 className="executive-summary-content-linear-contents-header">Reach & Ratings</h6>):(<h6 className="executive-summary-content-linear-contents-header">Viewers and Completion</h6>)}
                 <h6 className="executive-summary-content-linear-contents-header">Impact on Consumer Journey</h6>

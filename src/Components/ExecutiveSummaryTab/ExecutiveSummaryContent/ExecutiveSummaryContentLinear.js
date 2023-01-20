@@ -7,7 +7,6 @@ import ExecutiveSummaryContentLinearButtonsTabs from "./ExecutiveSummaryContentL
 import { useEffect } from "react";
 
 const ExecutiveSummaryContentLinear = (props) => {
-
   const [activeTab, setActiveTab] = useState("all-content");
 
   var hoverData = "";
@@ -154,7 +153,7 @@ const ExecutiveSummaryContentLinear = (props) => {
   const getData = (value) => {
     setActiveTab(value);
   };
-
+  
   return (
     <div>
       <div className="executive-summary-content-linear-tabs">
@@ -164,19 +163,28 @@ const ExecutiveSummaryContentLinear = (props) => {
         {activeTab === "all-content" && (
           <div className="executive-summary-content-linear-filter">
             <BubbleChart files={json} />
-            <ExecutiveSummaryContentLinearContents chartData={json} buttonTab = {'linear'}/>
+            <ExecutiveSummaryContentLinearContents
+              chartData={json}
+              buttonTab={"linear"}
+            />
           </div>
         )}
         {activeTab === "top-10" && (
           <div className="executive-summary-content-linear-filter">
             <BubbleChart files={top10files} />
-            <ExecutiveSummaryContentLinearContents chartData={top10files} buttonTab = {'linear'}/>
+            <ExecutiveSummaryContentLinearContents
+              chartData={top10files}
+              buttonTab={"linear"}
+            />
           </div>
         )}
         {activeTab === "bottom-10" && (
           <div className="executive-summary-content-linear-filter">
             <BubbleChart files={bottom10files} />
-            <ExecutiveSummaryContentLinearContents chartData={bottom10files} buttonTab = {'linear'}/>
+            <ExecutiveSummaryContentLinearContents
+              chartData={bottom10files}
+              buttonTab={"linear"}
+            />
           </div>
         )}
       </div>

@@ -5,7 +5,6 @@ import { useEffect } from "react";
 
 const BubbleChart = (props) => {
   const json = props.files;
-  //   console.log(dataForHighlight);
   useEffect(() => {
     // d3 colour scheme for bubbles
     // var color = d3.scaleOrdinal().range(["rgb(148, 94, 210, 0.1)"]);
@@ -66,7 +65,7 @@ const BubbleChart = (props) => {
       .data(json)
       .enter()
       .append("circle")
-      .classed('back-img', true)
+      // .classed('back-img', true)
       .attr("stroke", "#945ED2")
       .attr("stroke-width", 1)
       .attr("stroke-opacity", 2)
@@ -239,6 +238,7 @@ const BubbleChart = (props) => {
     //     }
     //   });
     // }
+    
   }, [json]);
 
   return (
