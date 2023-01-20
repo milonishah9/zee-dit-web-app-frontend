@@ -6,7 +6,8 @@ import ExecutiveSummaryContentLinearContents from "./ExecutiveSummaryContentLine
 import ExecutiveSummaryContentLinearButtonsTabs from "./ExecutiveSummaryContentLinearButtonsTabs";
 import { useEffect } from "react";
 
-const ExecutiveSummaryContentLinear = () => {
+const ExecutiveSummaryContentLinear = (props) => {
+
   const [activeTab, setActiveTab] = useState("all-content");
 
   var hoverData = "";
@@ -22,7 +23,7 @@ const ExecutiveSummaryContentLinear = () => {
       Name: "Kundli Bhagya",
       Count: 7,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-      arr: [120, 230, 100, 330, 410],
+      arr: [320, 230, 100, 330, 410],
     },
     {
       Name: "Bhagya Lakshmi",
@@ -34,7 +35,7 @@ const ExecutiveSummaryContentLinear = () => {
       Name: "Kumkum Bhagya",
       Count: 2,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-      arr: [120, 140, 170, 330, 400],
+      arr: [223, 140, 170, 330, 400],
     },
     {
       Name: "Meet",
@@ -52,7 +53,7 @@ const ExecutiveSummaryContentLinear = () => {
       Name: "Mithai",
       Count: 1,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-      arr: [120, 230, 100, 330, 400],
+      arr: [320, 230, 100, 330, 400],
     },
     {
       Name: "Brokerage Services",
@@ -82,13 +83,13 @@ const ExecutiveSummaryContentLinear = () => {
       Name: "Human Resources",
       Count: 4,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-      arr: [120, 230, 209, 330, 410],
+      arr: [130, 230, 209, 330, 410],
     },
     {
       Name: "Insurance Services",
       Count: 4,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-      arr: [120, 140, 170, 330, 300],
+      arr: [130, 140, 170, 330, 300],
     },
     {
       Name: "Legal Services",
@@ -106,7 +107,7 @@ const ExecutiveSummaryContentLinear = () => {
       Name: "IT Services",
       Count: 4,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-      arr: [120, 230, 100, 330, 400],
+      arr: [130, 230, 100, 330, 400],
     },
     {
       Name: "Managed Services",
@@ -124,13 +125,13 @@ const ExecutiveSummaryContentLinear = () => {
       Name: "Market",
       Count: 6,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-      arr: [120, 230, 100, 330, 410],
+      arr: [130, 230, 100, 330, 410],
     },
     {
       Name: "Relocation Specialists",
       Count: 1,
       img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-      arr: [120, 430, 100, 330, 400],
+      arr: [123, 430, 100, 330, 400],
     },
   ];
 
@@ -163,19 +164,19 @@ const ExecutiveSummaryContentLinear = () => {
         {activeTab === "all-content" && (
           <div className="executive-summary-content-linear-filter">
             <BubbleChart files={json} />
-            <ExecutiveSummaryContentLinearContents chartData={json} />
+            <ExecutiveSummaryContentLinearContents chartData={json} buttonTab = {'linear'}/>
           </div>
         )}
         {activeTab === "top-10" && (
           <div className="executive-summary-content-linear-filter">
             <BubbleChart files={top10files} />
-            <ExecutiveSummaryContentLinearContents />
+            <ExecutiveSummaryContentLinearContents chartData={top10files} buttonTab = {'linear'}/>
           </div>
         )}
         {activeTab === "bottom-10" && (
           <div className="executive-summary-content-linear-filter">
             <BubbleChart files={bottom10files} />
-            <ExecutiveSummaryContentLinearContents />
+            <ExecutiveSummaryContentLinearContents chartData={bottom10files} buttonTab = {'linear'}/>
           </div>
         )}
       </div>
