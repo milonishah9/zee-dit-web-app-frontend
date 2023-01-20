@@ -1,0 +1,102 @@
+.product-qual-experience-cont {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    margin: 1.25rem;
+    /* margin: auto;
+    margin-top: 10px; */
+
+}
+
+.product-qual-experience-subdiv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    /* width: 100%; */
+}
+
+.product-qual-experience-subdiv-h5 {
+    color: #402177;
+    font-family: 'GothamBold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.product-qual-experience-subdiv-tile-cont {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-qual-experience-subdiv-tile {
+    background: #FFFFFF;
+    border: 1px solid #D8E3FF;
+    box-shadow: 0px 2px 5px #D6DEF8;
+    border-radius: 4px;
+    justify-content: space-around;
+    width: 25%;
+    min-width: 20%;
+}
+
+.product-qual-experience-subdiv-tile-title {
+    font-family: 'GothamBold';
+    margin: 0.7rem 0.6rem 0;
+    font-size: 12px;
+    line-height: 12px;
+    color: #333333;
+}
+
+.product-qual-experience-subdiv-tile-value {
+    font-family: 'GothamLight';
+    margin: 0.2rem 0.6rem 0;
+    font-size: 28px;
+    line-height: 30px;
+    color: #333333;
+    font-weight: 700;
+}
+
+.product-qual-experience-subdiv-tile-chart-value {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0.6rem 0.6rem 0;
+}
+
+.product-qual-experience-subdiv-tile-chart-value-lhs {}
+
+.product-qual-experience-subdiv-tile-chart-value-valdiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.product-qual-experience-subdiv-tile-chart-value-date {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 11px;
+    color: #808080;
+    margin-bottom: 0.45rem;
+}
+
+.product-qual-experience-subdiv-tile-chart-value-status-pos {
+    font-size: 10px;
+    line-height: 11px;
+    color: #00C48C;
+    margin-bottom: 0;
+}
+
+.product-qual-experience-subdiv-tile-chart-value-status-neg {
+    font-size: 10px;
+    line-height: 11px;
+    color: #FF647C;
+    margin-bottom: 0;
+}
+
+.product-qual-experience-subdiv-tile-chart-value-status-neg svg,
+.product-qual-experience-subdiv-tile-chart-value-status-pos svg {
+    margin: 0 4px;
+}

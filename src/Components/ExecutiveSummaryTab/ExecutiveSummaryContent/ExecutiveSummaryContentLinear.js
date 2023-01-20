@@ -80,6 +80,7 @@ const ExecutiveSummaryContentLinear = () => {
 
   return (
     <div>
+      {console.log('contnet')}
       <div className="executive-summary-content-linear-tabs">
         <ExecutiveSummaryContentLinearButtonsTabs TabValue={getData} />
       </div>
