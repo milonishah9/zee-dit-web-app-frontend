@@ -54,9 +54,9 @@ const BubbleChart = (props) => {
 
     var simulation = d3
       .forceSimulation()
-      .velocityDecay(0.2)
-      .force("x", d3.forceX(width / 1.4).strength(0.005))
-      .force("y", d3.forceY(height / 4.6).strength(0.09))
+      .velocityDecay(0.1)
+      .force("x", d3.forceX(width / 2).strength(0.005))
+      .force("y", d3.forceY(height / 3.6).strength(0.09))
       .force(
         "collide",
         d3
@@ -126,7 +126,7 @@ const BubbleChart = (props) => {
       })
       .on("click", function (d, i) {
         dispatch(setHoverValue(d.Name));
-        d3.select(this).attr("stroke-width", 2);
+        // d3.select(this).attr("stroke-width", 2);
       });
 
     // circles
