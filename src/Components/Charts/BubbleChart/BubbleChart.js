@@ -106,7 +106,7 @@ const BubbleChart = (props) => {
       )
       .on("mouseover", function (d) {
         //tooltips
-        dispatch(setHoverValue(d.Name));
+        
         tooltip.text(d.Name + ": " + d.Count);
         // props.onClick(d.Name + d.Count);
         tooltip.style("visibility", "visible");
@@ -117,13 +117,15 @@ const BubbleChart = (props) => {
           .style("top", d3.event.pageY - 35 + "px")
           .style("left", d3.event.pageX + 0 + "px");
       })
-      
+
       .on("mouseout", function () {
         // props.onClick("");
-        dispatch(setHoverValue(''))
+        // dispatch(setHoverValue(''))
+        
         tooltip.style("visibility", "hidden");
       })
       .on("click", function (d, i) {
+        dispatch(setHoverValue(d.Name));
         d3.select(this).attr("stroke-width", 2);
       });
 
