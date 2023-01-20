@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import BubbleChart from "../../Charts/BubbleChart/BubbleChart";
 import * as d3 from "d3";
-import ExecutiveSummaryContentLinearContents from "./ExecutiveSummaryContentLinearContents";
+import ExecutiveSummaryContentOTTContents from "./ExecutiveSummaryContentOTTContents";
 import ExecutiveSummaryContentLinearButtonsTabs from "./ExecutiveSummaryContentLinearButtonsTabs";
 import { useState } from "react";
+import ExecutiveSummaryContentLinearContents from "./ExecutiveSummaryContentLinearContents";
 
 const ExecutiveSummaryContentOtt = (props) => {
 
