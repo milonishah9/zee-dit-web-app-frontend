@@ -119,6 +119,7 @@ const BubbleChart = (props) => {
       })
       .on("mouseout", function () {
         // props.onClick("");
+        dispatch(setHoverValue(''))
         tooltip.style("visibility", "hidden");
       })
       .on("click", function (d, i) {
