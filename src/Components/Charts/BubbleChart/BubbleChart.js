@@ -49,14 +49,14 @@ const BubbleChart = (props) => {
 
     var simulation = d3
       .forceSimulation()
-      .velocityDecay(0.1)
-      .force("x", d3.forceX(width / 2).strength(0.005))
-      .force("y", d3.forceY(height / 3.5).strength(0.09))
+      .velocityDecay(0.2)
+      .force("x", d3.forceX(width / 1.4).strength(0.005))
+      .force("y", d3.forceY(height / 4.6).strength(0.09))
       .force(
         "collide",
         d3
           .forceCollide(function (d) {
-            return d.Count * 7 + 3;
+            return d.Count * 5.3 ;
           })
           .iterations(100)
       );
@@ -66,14 +66,14 @@ const BubbleChart = (props) => {
       .data(json)
       .enter()
       .append("circle")
+      .classed('back-img', true)
       .attr("stroke", "#945ED2")
       .attr("stroke-width", 1)
       .attr("stroke-opacity", 2)
-      .attr("fill", "rgb(148, 94, 210, 0.1)")
       .attr("class", "artist")
       .attr("fill", "rgb(148, 94, 210, 0.1)")
       .attr("r", function (d) {
-        return d.Count * 7;
+        return d.Count * 5;
       })
       //   .style("fill", function (d, i) {
       //     var bubbleColor = color(d.Name);
@@ -116,18 +116,18 @@ const BubbleChart = (props) => {
         tooltip.style("visibility", "hidden");
       })
       .on("click", function (d, i) {
-        d3.select(this).attr("stroke-width", 3);
+        d3.select(this).attr("stroke-width", 2);
       });
       
       // circles
       // .append("svg:image")
       // .attr("transform", d => "translate(" + d.x + "," + d.y + ")")
       // .attr("xlink:href", function(d) {
-      //   console.log(d.img) ;
+      //   return d.img ;
       // })
       // .attr("x", 0)
       // .attr("y", 0)
-      // .attr("width", d => d.r / 1.5);
+      // .attr("width", d => d.Count / 1.5);
 
     function wrap(text, width) {
       text.each(function () {
@@ -226,19 +226,19 @@ const BubbleChart = (props) => {
       d.fy = null;
     }
 
-    function myFunction() {
-      // $("#btn1").on("click", function() {
-      //   if ($("#bubble-legend-container").css("display") == "none") {
-      //     //$("#bubble-legend").css("display","block");
-      //     $("#bubble-legend-container").slideDown("slow");
-      //     $("#btn1").text("Hide Legend");
-      //   } else {
-      //     $("#bubble-legend-container").slideUp("slow");
-      //     // $("#bubble-legend").css("display","none");
-      //     $("#btn1").text("Show Legend");
-      //   }
-      // });
-    }
+    // function myFunction() {
+    //   d3.select("#btn1").on("click", function() {
+    //     if (d3.select("#bubble-legend-container").css("display") == "none") {
+    //       //$("#bubble-legend").css("display","block");
+    //       d3.select("#bubble-legend-container").slideDown("slow");
+    //       d3.select("#btn1").text("Hide Legend");
+    //     } else {
+    //       d3.select("#bubble-legend-container").slideUp("slow");
+    //       // $("#bubble-legend").css("display","none");
+    //       d3.select("#btn1").text("Show Legend");
+    //     }
+    //   });
+    // }
   }, [json]);
 
   return (
