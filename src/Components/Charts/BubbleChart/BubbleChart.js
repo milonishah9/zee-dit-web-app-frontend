@@ -73,7 +73,7 @@ const BubbleChart = (props) => {
       .attr("class", "artist")
       .attr("fill", "rgb(148, 94, 210, 0.1)")
       .attr("r", function (d) {
-        return d.Count * 6;
+        return d.Count * 7;
       })
       //   .style("fill", function (d, i) {
       //     var bubbleColor = color(d.Name);
@@ -96,7 +96,7 @@ const BubbleChart = (props) => {
         d3
           .drag()
           .on("start", dragstarted)
-          // .on("drag", dragged)
+          .on("drag", dragged)
           .on("end", dragended)
       )
       .on("mouseover", function (d) {
@@ -118,7 +118,6 @@ const BubbleChart = (props) => {
       .on("click", function (d, i) {
         d3.select(this).attr("stroke-width", 3);
       });
-
       
       // circles
       // .append("svg:image")
