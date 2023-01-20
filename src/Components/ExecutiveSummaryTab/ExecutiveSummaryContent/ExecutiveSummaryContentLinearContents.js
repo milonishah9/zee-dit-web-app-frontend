@@ -2,7 +2,9 @@ import React from "react";
 import './ExecutiveSummaryContentLinearContents.css'
 import FrontBar from "../../Charts/BubbleChart/LinearBarchart/FrontBar";
 
-const ExecutiveSummaryContentLinearContents = () => {
+const ExecutiveSummaryContentLinearContents = (props) => {
+    const {chartData} = props;
+    console.log(chartData);
     const data = 300;
     const total = 500;
     return (
@@ -66,6 +68,14 @@ const ExecutiveSummaryContentLinearContents = () => {
                     </tr>
                     <tr className="executive-summary-content-linear-contents-t-body-rows">
                         <td>Mithai</td>
+                        <td><FrontBar data={100} total={total} /></td>
+                        <td><FrontBar data={300} total={total} /></td>
+                        <td><FrontBar data={200} total={total} /></td>
+                        <td><FrontBar data={300} total={total} /></td>
+                        <td><FrontBar data={420} total={total} /></td>
+                    </tr>
+                    <tr className="executive-summary-content-linear-contents-t-body-rows">
+                        <td>Brokerage Services</td>
                         <td><FrontBar data={100} total={total} /></td>
                         <td><FrontBar data={300} total={total} /></td>
                         <td><FrontBar data={200} total={total} /></td>
