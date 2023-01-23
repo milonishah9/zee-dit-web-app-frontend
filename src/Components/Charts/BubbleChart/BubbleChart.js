@@ -39,8 +39,6 @@ const BubbleChart = (props) => {
       height = 350,
       svg = d3.select("#chart").append("svg");
 
-    var defs = svg.append("svg:defs");
-
     svg
       .attr("preserveAspectRatio", "xMinYMin meet")
       .attr("viewBox", "0 -20 850 250")
@@ -70,13 +68,34 @@ const BubbleChart = (props) => {
           .iterations(100)
       );
 
+    var defs = svg.append("svg:defs");
+
+    // defs
+    //   .append("svg:pattern")
+    //   .data(json)
+    //   .attr("id", "grump_avatar")
+    //   .attr("width", 1)
+    //   .attr("height", 1)
+    //   .append("svg:image")
+    //   .attr("xlink:href", function (d) {
+    //     return d.img;
+    //   })
+    //   .attr("width", 50)
+    //   .attr("height", 50)
+    //   .attr("x", 0)
+    //   .attr("y", 0);
+
     defs
-      .append("svg:pattern")
-      .attr("id", "grump_avatar")
+      .selectAll(".img-defs")
       .data(json)
+      .enter()
+      .append("pattern")
+      .attr("class", "bubble-img")
+      .attr("id", function(d){
+        return d.Name.toLowerCase().replace(/ /g, '-')
+      })
       .attr("width", 1)
       .attr("height", 1)
-      // .attr("patternUnits", "userSpaceOnUse")
       .append("svg:image")
       .attr("xlink:href", function (d) {
         return d.img;
@@ -85,7 +104,7 @@ const BubbleChart = (props) => {
       .attr("height", 50)
       .attr("x", 0)
       .attr("y", 0);
-
+      
     var circles = svg
       .selectAll(".artist")
       .data(json)
@@ -96,7 +115,9 @@ const BubbleChart = (props) => {
       .attr("stroke-width", 1)
       .attr("stroke-opacity", 2)
       .attr("class", "artist")
-      .attr("fill", "url(#grump_avatar)")
+      .attr("fill", function(d){
+        return "url(#" + d.Name.toLowerCase().replace(/ /g, '-') + ")"
+      })
       .attr("r", function (d) {
         return d.Count / 17;
       })

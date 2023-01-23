@@ -93,13 +93,13 @@ const ExecutiveSummaryContentLinear = (props) => {
     {
       Name: "Nagiin",
       Count: 344.20,
-      img: "https://akamaividz2.zee5.com/image/upload/w_321,h_482,c_scale,f_webp,q_auto:eco/resources/0-0-1z5259649/portrait/1920x770f426ce27b91e474083e9131fe0128994.jpg",
+      img: "https://akamaividz2.zee5.com/image/upload/w_321,h_482,c_scale,f_webp,q_auto:eco/resources/0-0-1z5285324/portrait/1920X770804e247898724218bcc119707affccd0.jpg",
       arr: [120, 230, 209, 330, 410],
     },
     {
       Name: "Ghar Ek Mandir",
       Count: 338.18,
-      img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      img: "https://akamaividz2.zee5.com/image/upload/w_321,h_482,c_scale,f_webp,q_auto:eco/resources/0-0-1z5145092/portrait/1920x770608a7a1599494ac09035813d2e50c3d9.jpg",
       arr: [120, 140, 170, 330, 400],
     },
     // {
@@ -145,10 +145,10 @@ const ExecutiveSummaryContentLinear = (props) => {
         {activeTab === "all-content" && (
           <div className="executive-summary-content-linear-filter">
             <BubbleChart files={json} />
-            {/* <ExecutiveSummaryContentLinearContents
+            <ExecutiveSummaryContentLinearContents
               chartData={json}
               buttonTab={"linear"}
-            /> */}
+            />
           </div>
         )}
         {activeTab === "top-10" && (
