@@ -1,0 +1,7 @@
+.mybar-fill {
+    z-index: -100;
+}
+
+.mybar {
+    z-index: 100;
+}
