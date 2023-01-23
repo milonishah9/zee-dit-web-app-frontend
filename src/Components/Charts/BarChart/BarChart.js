@@ -48,7 +48,7 @@ const BarChart = (props) => {
             // .attr('preserveAspectRatio','xMinYMin')
             .append("g")
             .attr("transform",
-                "translate(" + 0 + "," + 105 + ")");
+                "translate(" + 0 + "," + 155 + ")");
 
         // Add Y axis
         var x = d3.scaleBand()

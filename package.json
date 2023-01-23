@@ -15,6 +15,7 @@
     "d3v4": "^4.2.2",
     "font-awesome": "^4.7.0",
     "react": "^18.2.0",
+    "react-d3-speedometer": "^1.1.0",
     "react-d3-tree": "^3.5.0",
     "react-dom": "^18.2.0",
     "react-horizontal-stacked-bar-chart": "^8.15.2",
@@ -24,7 +25,6 @@
     "resize-observer-polyfill": "^1.5.1",
     "web-vitals": "^2.1.4"
   },
-  
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -60,5 +60,5 @@
   "devDependencies": {
     "html-loader": "^4.2.0"
   },
-  "proxy": "http://localhost:5000/"
+  "proxy": "http://backend:5000/"
 }
