@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import Sankey from "../../Charts/SankeyChart/CallSankey";
+import Sankey from "../../Charts/SankeyChart/RND";
 import "./ExecutiveSummaryConsumer.css"
 
 
