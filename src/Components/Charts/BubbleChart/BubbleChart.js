@@ -61,7 +61,7 @@ const BubbleChart = (props) => {
         "collide",
         d3
           .forceCollide(function (d) {
-            return d.Count * 5.3;
+            return d.Count / 15;
           })
           .iterations(100)
       );
@@ -78,7 +78,7 @@ const BubbleChart = (props) => {
       .attr("class", "artist")
       .attr("fill", "rgb(148, 94, 210, 0.1)")
       .attr("r", function (d) {
-        return d.Count * 5;
+        return d.Count / 17;
       })
       //   .style("fill", function (d, i) {
       //     var bubbleColor = color(d.Name);
@@ -126,9 +126,9 @@ const BubbleChart = (props) => {
       })
       .on("click", function (d, i) {
         dispatch(setHoverValue(d.Name));
-        d3.select(this).attr("stroke-width", 2);
+        d3.select(this).attr("stroke-width", 2)
       });
-
+      
     // circles
     // .append("svg:image")
     // .attr("transform", d => "translate(" + d.x + "," + d.y + ")")
@@ -138,7 +138,7 @@ const BubbleChart = (props) => {
     // .attr("x", 0)
     // .attr("y", 0)
     // .attr("width", d => d.Count / 1.5);
-
+    
     function wrap(text, width) {
       text.each(function () {
         var text = d3.select(this),
