@@ -14,6 +14,11 @@
 }
 
 @font-face {
+  font-family: GothamBlack;
+  src: url('/public/static/fonts/Gotham-Black.otf');
+}
+
+@font-face {
   font-family: GraphikRegular;
   src: url('/public/static/fonts/GraphikRegular.otf');
 }
