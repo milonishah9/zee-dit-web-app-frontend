@@ -18,9 +18,9 @@ const useStyles = makeStyles(
     },
     name: {
       fontFamily:"GothamBold",
-      fontSize: "18px",
+      // fontSize: "18px",
       fontWeight:500,
-      color:" #333333"
+      color:" #333333",
     },
 
     num: {
@@ -35,14 +35,14 @@ const useStyles = makeStyles(
       fontSize: "15px",
       position: "absolute",
       bottom: "5px",
-      right: "30px",
+      right: "130px",
       color: "#4BA083"
     },
     DownAttributes: {
       fontSize: "15px",
       position: "absolute",
       bottom: "5px",
-      right: "30px",
+      right: "130px",
       color: "#f37b92"
     }
   })
