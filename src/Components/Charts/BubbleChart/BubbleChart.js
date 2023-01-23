@@ -65,7 +65,7 @@ const BubbleChart = (props) => {
           })
           .iterations(100)
       );
-
+      
     var circles = svg
       .selectAll(".artist")
       .data(json)
