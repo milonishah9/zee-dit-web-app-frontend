@@ -19,7 +19,9 @@ const ExecutiveSummaryConsumer = (props) => {
       <div>
         <button onClick={() => setEditMode(!editMode)}>Edit Mode</button>
       </div>
-      <Sankey data={data} edit={editMode} />
+      <div className="sankey">
+        <Sankey data={data} edit={editMode} />
+      </div>
     </div>
   );
 }
