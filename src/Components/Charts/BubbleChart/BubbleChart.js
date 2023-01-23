@@ -2,10 +2,15 @@ import React, { useState } from "react";
 import "./BubbleChart.css";
 import * as d3 from "d3v4";
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { selectCount, setHoverValue } from "../../../features/HoverValues";
 
 const BubbleChart = (props) => {
   const json = props.files;
-  //   console.log(dataForHighlight);
+
+  const dispatch = useDispatch();
+  
+
   useEffect(() => {
     // d3 colour scheme for bubbles
     // var color = d3.scaleOrdinal().range(["rgb(148, 94, 210, 0.1)"]);
@@ -49,14 +54,14 @@ const BubbleChart = (props) => {
 
     var simulation = d3
       .forceSimulation()
-      .velocityDecay(0.2)
-      .force("x", d3.forceX(width / 1.4).strength(0.005))
-      .force("y", d3.forceY(height / 4.6).strength(0.09))
+      .velocityDecay(0.1)
+      .force("x", d3.forceX(width / 2).strength(0.005))
+      .force("y", d3.forceY(height / 3.6).strength(0.09))
       .force(
         "collide",
         d3
           .forceCollide(function (d) {
-            return d.Count * 5.3 ;
+            return d.Count * 5.3;
           })
           .iterations(100)
       );
@@ -66,7 +71,7 @@ const BubbleChart = (props) => {
       .data(json)
       .enter()
       .append("circle")
-      .classed('back-img', true)
+      // .classed('back-img', true)
       .attr("stroke", "#945ED2")
       .attr("stroke-width", 1)
       .attr("stroke-opacity", 2)
@@ -101,6 +106,7 @@ const BubbleChart = (props) => {
       )
       .on("mouseover", function (d) {
         //tooltips
+        
         tooltip.text(d.Name + ": " + d.Count);
         // props.onClick(d.Name + d.Count);
         tooltip.style("visibility", "visible");
@@ -111,23 +117,27 @@ const BubbleChart = (props) => {
           .style("top", d3.event.pageY - 35 + "px")
           .style("left", d3.event.pageX + 0 + "px");
       })
+
       .on("mouseout", function () {
         // props.onClick("");
+        // dispatch(setHoverValue(''))
+        
         tooltip.style("visibility", "hidden");
       })
       .on("click", function (d, i) {
+        dispatch(setHoverValue(d.Name));
         d3.select(this).attr("stroke-width", 2);
       });
-      
-      // circles
-      // .append("svg:image")
-      // .attr("transform", d => "translate(" + d.x + "," + d.y + ")")
-      // .attr("xlink:href", function(d) {
-      //   return d.img ;
-      // })
-      // .attr("x", 0)
-      // .attr("y", 0)
-      // .attr("width", d => d.Count / 1.5);
+
+    // circles
+    // .append("svg:image")
+    // .attr("transform", d => "translate(" + d.x + "," + d.y + ")")
+    // .attr("xlink:href", function(d) {
+    //   return d.img ;
+    // })
+    // .attr("x", 0)
+    // .attr("y", 0)
+    // .attr("width", d => d.Count / 1.5);
 
     function wrap(text, width) {
       text.each(function () {

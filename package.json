@@ -23,6 +23,7 @@
     "react-d3-tree": "^3.5.0",
     "react-dom": "^18.2.0",
     "react-horizontal-stacked-bar-chart": "^8.15.2",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "react-wordcloud": "^1.2.7",
