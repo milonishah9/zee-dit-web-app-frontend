@@ -1,4 +1,5 @@
 import React from "react";
+import './FrontBar.css'
 import { useEffect } from "react";
 import { useRef } from "react";
 import * as d3 from 'd3';
@@ -45,7 +46,7 @@ const FrontBar = (props) => {
             .attr('width', xScale(data))
             .attr('fill', '#C996EB')
             .attr('height', 20);
-
+            // 
         d3.select(node)
             .append('text')
             .attr('class', 'amount')
@@ -74,12 +75,11 @@ const FrontBar = (props) => {
                 id={data}
                 width={width}
                 height='20'
-                style={{ verticalAlign: 'top' }}
-                // className='mx-3'
+                className="prograss-svg"
             >
                 <g >
                     <g className="budget-bar-group">
-                        <rect x="0" y="0" width={width} height={barHeight} rx="0" ry="0" opacity="0.2" />
+                        <rect x="0" y="0" width={width} height={barHeight} rx="0" ry="0" opacity="0.2" fill="#5d6dff" />
                         <text x={width} y="32" dy="-18" dx="-30">
                             {total}
                         </text>

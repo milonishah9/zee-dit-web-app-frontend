@@ -11,7 +11,7 @@
   box-shadow: 0px 2px 5px #d6def8;
   border-radius: 4px;
   position: relative;
-  bottom: 5px;
+  bottom: 60px;
 }
 
 .executive-summ-content-ott-indicators {
@@ -121,6 +121,13 @@
 .my-row-bubble-hover{
   background-color: #3E1F76;
   color: white;
+  font-family: GothamMedium;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.my-row-bubble-hover td svg {
+  fill: white;
 }
 
 .exe-sum-lin-con-h-lbr {
