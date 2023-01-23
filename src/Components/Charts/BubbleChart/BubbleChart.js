@@ -126,7 +126,7 @@ const BubbleChart = (props) => {
       })
       .on("click", function (d, i) {
         dispatch(setHoverValue(d.Name));
-        // d3.select(this).attr("stroke-width", 2);
+        d3.select(this).attr("stroke-width", 2);
       });
 
     // circles
