@@ -1,6 +1,7 @@
 // import React from "react";
 
 import BarChart from '../../Charts/BarChart/BarChart';
+import GuageChart from '../../Charts/GuageChart/GuageChart';
 import './ProductQualityOfExperience.css';
 
 const ProductQualityOfExperience = () => {
@@ -32,11 +33,12 @@ const ProductQualityOfExperience = () => {
                                 </div>
                                 <div className='product-qual-experience-subdiv-tile-chart-value-barchart'>
                                     {/* Bar Chart */}
-                                    <BarChart/>
+                                    <BarChart />
                                 </div>
                             </div>
                             <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
                                 {/* Guage Chart */}
+                                <GuageChart />
                             </div>
                         </div>
                     </div>

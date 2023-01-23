@@ -29,6 +29,7 @@
 .product-qual-experience-subdiv-tile-cont {
     display: flex;
     flex-wrap: wrap;
+    height: 25vh;
 }
 
 .product-qual-experience-subdiv-tile {
@@ -44,16 +45,18 @@
 .product-qual-experience-subdiv-tile-title {
     font-family: 'GothamBold';
     margin: 0.7rem 0.6rem 0;
-    font-size: 12px;
-    line-height: 12px;
+    /* font-size: 14px;
+    line-height: 14px; */
+    font-size: 0.9rem;
+    line-height: 0.9rem;
     color: #333333;
 }
 
 .product-qual-experience-subdiv-tile-value {
     font-family: 'GothamLight';
     margin: 0.2rem 0.6rem 0;
-    font-size: 28px;
-    line-height: 30px;
+    font-size: 2rem;
+    line-height: 2rem;
     color: #333333;
     font-weight: 700;
 }
@@ -66,7 +69,10 @@
     margin: 0.6rem 0.6rem 0;
 }
 
-.product-qual-experience-subdiv-tile-chart-value-lhs {}
+.product-qual-experience-subdiv-tile-chart-value-lhs {
+    width: 35%;
+    min-width: 35%;
+}
 
 .product-qual-experience-subdiv-tile-chart-value-valdiv {
     display: flex;
@@ -76,22 +82,29 @@
 
 .product-qual-experience-subdiv-tile-chart-value-date {
     font-weight: 400;
-    font-size: 10px;
-    line-height: 11px;
+    /* font-size: 10px;
+    line-height: 11px; */
+    font-size: 0.7rem;
+    line-height: 0.8rem;
     color: #808080;
     margin-bottom: 0.45rem;
+    letter-spacing: 0.1px;
 }
 
 .product-qual-experience-subdiv-tile-chart-value-status-pos {
-    font-size: 10px;
-    line-height: 11px;
+    /* font-size: 10px;
+    line-height: 11px; */
+    font-size: 0.7rem;
+    line-height: 0.8rem;
     color: #00C48C;
     margin-bottom: 0;
 }
 
 .product-qual-experience-subdiv-tile-chart-value-status-neg {
-    font-size: 10px;
-    line-height: 11px;
+    /* font-size: 10px;
+    line-height: 11px; */
+    font-size: 0.7rem;
+    line-height: 0.8rem;
     color: #FF647C;
     margin-bottom: 0;
 }

@@ -38,13 +38,14 @@ const BarChart = (props) => {
     useLayoutEffect(() => {
 
         var margin = { top: 30, right: 30, bottom: 70, left: 60 },
-            width = 460 - margin.left - margin.right,
+            width = 840 - margin.left - margin.right,
             height = 400 - margin.top - margin.bottom;
 
         const svg = d3
             .select(svgRef.current)
             .classed("barchart-svg-container", true)
-            .attr("viewBox", "0 0 460 400")
+            .attr("viewBox", "0 0 750 405")
+            // .attr('preserveAspectRatio','xMinYMin')
             .append("g")
             .attr("transform",
                 "translate(" + 0 + "," + 105 + ")");
@@ -55,10 +56,10 @@ const BarChart = (props) => {
             .domain(data.map(function (d) { return d.Country; }))
             .padding(0.35);
 
-        let xAixs = d3.axisBottom(x)
+        // let xAixs = d3.axisBottom(x)
         // .tickSize(-height)
-        svg.append("g")
-            .attr("transform", "translate(0," + height + ")")
+        // svg.append("g")
+        //     .attr("transform", "translate(0," + height + ")")
         // .call(xAixs)
 
         // .selectAll("text")
@@ -82,7 +83,25 @@ const BarChart = (props) => {
             .attr("width", x.bandwidth())
             .attr("height", function (d) { return height - y(d.Value); })
             .attr("fill", '#00C48C')
-            .attr("stroke", "none");
+            .attr("stroke", "none")
+            // .style("padding-right", "3p")
+            // .style('z-index', '100')
+            ;
+
+        svg.selectAll("mybar-fill")
+            .data(data)
+            .enter()
+            .append("rect")
+            .attr("x", function (d) { return x(d.Country); })
+            .attr("y", function (d) { return y(13000) })
+            // .attr("y0", function (d) { return y(13000) - y(d.Value); })
+            .attr("width", x.bandwidth())
+            .attr("height", y(height))
+            .attr("fill", '#E5E5E5')
+            .attr("stroke", "none")
+            // .style('z-index', '-100')
+            .attr('opacity', '0.5')
+        // .attr("transform", "translate(0," + -100 + ")")
 
     }, [data]);
 
