@@ -70,23 +70,21 @@ const BubbleChart = (props) => {
           .iterations(100)
       );
 
-    let newdef = defs
+    defs
       .append("svg:pattern")
       .attr("id", "grump_avatar")
-      
-      newdef.data(json)
+      .data(json)
       .attr("width", 1)
       .attr("height", 1)
       // .attr("patternUnits", "userSpaceOnUse")
       .append("svg:image")
       .attr("xlink:href", function (d) {
-        return console.log(d.img);
+        return d.img;
       })
       .attr("width", 50)
       .attr("height", 50)
       .attr("x", 0)
       .attr("y", 0);
-    
 
     var circles = svg
       .selectAll(".artist")
