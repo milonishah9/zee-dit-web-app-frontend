@@ -1,4 +1,5 @@
 import React from "react";
+import './FrontBar.css'
 import { useEffect } from "react";
 import { useRef } from "react";
 import * as d3 from 'd3';
@@ -74,8 +75,7 @@ const FrontBar = (props) => {
                 id={data}
                 width={width}
                 height='20'
-                style={{ verticalAlign: 'top' }}
-                // className='mx-3'
+                className="prograss-svg"
             >
                 <g >
                     <g className="budget-bar-group">
