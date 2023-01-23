@@ -98,11 +98,7 @@ const BubbleChart = (props) => {
       .attr("class", "artist")
       .attr("fill", "url(#grump_avatar)")
       .attr("r", function (d) {
-<<<<<<< Updated upstream
         return d.Count / 17;
-=======
-        return d.Count / 15;
->>>>>>> Stashed changes
       })
       // .style("fill", function (d, i) {
       //   var bubbleColor = d3.color(d.Name);
