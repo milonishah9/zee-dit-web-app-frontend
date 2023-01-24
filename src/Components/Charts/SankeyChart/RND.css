@@ -8,3 +8,59 @@ map area{
 }
 
 
+
+.org{
+  position: absolute;
+  top: 280px;
+  left: 290px;
+  color: #ffd025;
+  font-weight: 600;
+}
+
+.ret{
+  position: absolute;
+  top: 318px;
+  left: 490px;
+  color: #ffd025;
+  font-weight: 600;
+}
+
+.paid{
+  position: absolute;
+  top: 258px;
+  left: -210px;
+  color: #ffd025;
+  font-weight: 600;
+}
+
+.new{
+  position: absolute;
+  top: 561px;
+  left: 490px;
+  color: #ffd025;
+  font-weight: 600;
+}
+
+
+
+
+
+.box1{
+  margin: 20px;
+  border-radius: 6px;
+  background-color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 13%;
+  padding: 9px;
+  border: 1px solid #e4e4ff;
+  box-shadow: 0px 2px 5px 0px #d6d6ff
+}
+
+
+.num{
+  font-weight: 600;
+}
+
+
