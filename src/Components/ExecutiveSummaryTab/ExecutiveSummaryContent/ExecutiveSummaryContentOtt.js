@@ -204,7 +204,7 @@ const ExecutiveSummaryContentOtt = (props) => {
   return (
     <div>
       <div className="executive-summary-content-linear-tabs">
-        <ExecutiveSummaryContentLinearButtonsTabs TabValue={getData} />
+        <ExecutiveSummaryContentLinearButtonsTabs TabValue={getData} tab={'ott'}/>
       </div>
       <div>
         {activeTab === "all-content" && (

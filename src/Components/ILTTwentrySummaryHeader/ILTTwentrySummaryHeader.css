@@ -87,7 +87,7 @@ ul {
   font-weight: 600;
   font-size: 18px;
   line-height: 20px;
-  /* letter-spacing: 0.5px; */
+  text-align: center;
 }
 
 .ilt20-header-ilt20-logo-2 {
@@ -95,15 +95,27 @@ ul {
 }
 
 @media only screen and (max-width: 767px) {
-  .ilt20-header-ilt20-text-3 h1 {
+  /* .International-League-T20 {
     font-size: 25px;
     position: absolute;
-    left: 8px;
-  }
+    left: 136px;
+    top: 60px;
+  }*/
 
-  .ilt20-header-ilt20-text-3 {
-    
+  .Executive-Summary{
+    font-size: 25px;
+    position: absolute;
+    left: 142px;
+    top: 62px;
+  } 
+
+  .ilt20-header-div-left{
+    display: flex;
+    justify-content: start;
   }
+  /* position: relative;
+  left: 104px;
+  top: 20px; */
 
   .ilt20-filterbar-navigation {
     width: 0.5rem !important;
