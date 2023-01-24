@@ -100,10 +100,10 @@ const BubbleChart = (props) => {
       .attr("xlink:href", function (d) {
         return d.img;
       })
-      .attr("width",  d => d.Count/6)
-      .attr("height", d => d.Count/15)
-      // .attr("x", -15)
-      // .attr("y", 10)
+      .attr("width",  d => d.Count/5)
+      .attr("height", d => d.Count/7)
+      .attr("x", -17)
+      .attr("y", -5)
      .attr("cx", function (d) {
         return d.x;
       })
@@ -221,7 +221,7 @@ const BubbleChart = (props) => {
       .style("text-anchor", "middle")
       .attr("dy", "1.5em")
       .text(function (d) {
-        return d.Count > 999 ? d.Name : " ";
+        return d.Count > 351 ? d.Name : " ";
       })
       .call(wrap, 60);
 
@@ -232,7 +232,7 @@ const BubbleChart = (props) => {
       .enter()
       .append("text")
       .text(function (d) {
-        return d.Count > 999 ? d.Count : "";
+        return d.Count > 351 ? d.Count : "";
       })
       .attr("dy", "0.1em")
       .style("text-anchor", "middle")
