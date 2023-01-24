@@ -1,34 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import HSBar from "react-horizontal-stacked-bar-chart";
+import "./HSbar.css";
 
-import "./styles.css";
 
-
-export class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: ""
-    };
-  }
-  render() {
+const HSbar = (props) => {
+  const {data} = props;
+  
     return (
-      <div className="App">
-
+      <div className="hs-bar">
         <HSBar
           showTextIn
-          data={[
-            { value: 10000, description: "10.000" },
-            { value: 5000, description: "5.000" },
-            { value: 3000, description: "3.000" }
-          ]}
+          data={data}
         />
       </div>
     );
   }
-}
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+export default HSbar;
 

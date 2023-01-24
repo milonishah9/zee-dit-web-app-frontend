@@ -63,7 +63,7 @@ const BubbleChart = (props) => {
         "collide",
         d3
           .forceCollide(function (d) {
-            return d.Count / 15;
+            return d.Count / 17;
           })
           .iterations(100)
       );
