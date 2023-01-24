@@ -8,12 +8,13 @@ const HSbar = (props) => {
   const {data} = props;
   
     return (
-      <div className="hs-bar">
+      // <div className="hs-bar">
         <HSBar
           showTextIn
           data={data}
+          className="hs-bar"
         />
-      </div>
+      // </div>
     );
   }
 
