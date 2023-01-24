@@ -23,12 +23,23 @@ const ExecutiveSummaryContentOtt = (props) => {
         Name: "TVF Pictures",
         Count: 589.17,
         img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-        arr: [320, 230, 100, [
+        arr: [[
           { value: 10, description: "10", color:'#43bcff' },
           { value: 5, description: "5", color:'#ffcf5c' },
-          { value: 3, description: "3", color:'#768cff' },
           { value: 3, description: "3", color:'rgb(215 209 255)' },
-        ], 410],
+        ], [
+          { value: 10, description: "10", color:'#43bcff' },
+          { value: 5, description: "5", color:'#ffcf5c' },
+          { value: 3, description: "3", color:'rgb(215 209 255)' },
+        ], [
+          { value: 10, description: "10", color:'#43bcff' },
+          { value: 5, description: "5", color:'#ffcf5c' },
+          { value: 3, description: "3", color:'rgb(215 209 255)' },
+        ], [
+          { value: 10, description: "10", color:'#43bcff' },
+          { value: 5, description: "5", color:'#ffcf5c' },
+          { value: 3, description: "3", color:'rgb(215 209 255)' },
+        ], 240],
       },
       {
         Name: "Mukhbir",
