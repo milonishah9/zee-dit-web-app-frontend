@@ -63,7 +63,7 @@ const BubbleChart = (props) => {
         "collide",
         d3
           .forceCollide(function (d) {
-            return d.Count / 15;
+            return d.Count / 17;
           })
           .iterations(100)
       );
@@ -94,16 +94,22 @@ const BubbleChart = (props) => {
       .attr("id", function(d){
         return d.Name.toLowerCase().replace(/ /g, '-')
       })
-      .attr("width", 1)
-      .attr("height", 1)
+      .attr("width", '100%')
+      .attr("height", '100%')
       .append("svg:image")
       .attr("xlink:href", function (d) {
         return d.img;
       })
-      .attr("width", 50)
-      .attr("height", 50)
-      .attr("x", 0)
-      .attr("y", 0);
+      .attr("width",  d => d.Count/5)
+      .attr("height", d => d.Count/7)
+      .attr("x", -17)
+      .attr("y", -5)
+     .attr("cx", function (d) {
+        return d.x;
+      })
+      .attr("cy", function (d) {
+        return d.y;
+      });
       
     var circles = svg
       .selectAll(".artist")
@@ -242,6 +248,7 @@ const BubbleChart = (props) => {
         .attr("cy", function (d) {
           return d.y;
         });
+        
       textName
         .attr("x", function (d) {
           return d.x;

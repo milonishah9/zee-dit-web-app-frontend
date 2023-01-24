@@ -9,6 +9,7 @@ import Product from './Pages/ProductPage/Product';
 import ExecutiveSummaryContent from './Components/ExecutiveSummaryTab/ExecutiveSummaryContent/ExecutiveSummaryContent';
 import ExecutiveSummaryTab from './Components/ExecutiveSummaryTab/ExecutiveSummaryTab';
 import AreaChartWithToolTips from './Components/Charts/AreaChartWithToolTips/AreaChartWithToolTips';
+import HSbar from './Components/Charts/HSbar/HSbar';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/executive-summary' element={<ExecutiveSummaryTab />} />
           <Route path='/executive-summary-content' element={<ExecutiveSummaryContent />} />
           <Route path='/area-chart-with-tooltips' element={<AreaChartWithToolTips />} />
+          <Route path='/hs-bar' element={<HSbar />} />
         </Routes>
       </BrowserRouter>  
     </div>

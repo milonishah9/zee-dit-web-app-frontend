@@ -3,6 +3,7 @@ import './ExecutiveSummaryContentLinearContents.css'
 import FrontBar from "../../Charts/BubbleChart/LinearBarchart/FrontBar";
 import { useSelector } from "react-redux";
 import { selectCount } from "../../../features/HoverValues";
+import HSbar from "../../Charts/HSbar/HSbar";
 
 const ExecutiveSummaryContentLinearContents = (props) => {
     const {chartData, buttonTab} = props;
@@ -58,7 +59,12 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                             <tr key={index} className={myHoverClass}>
                                 <td>{element.Name}</td>
                                 {element.arr.map((data, index) => {
-                                    return <td key={index}><FrontBar data={data} total={total} /></td>
+                                    if(typeof(data) === 'number'){
+                                        return <td key={index}><FrontBar data={data} total={total} /></td>
+                                    }else{
+                                        return <td key={index}><HSbar data={data}/></td>
+                                    }
+                                    
                                 })}
                                 {/* <td><FrontBar data={100} total={total} /></td>
                                 <td><FrontBar data={300} total={total} /></td>

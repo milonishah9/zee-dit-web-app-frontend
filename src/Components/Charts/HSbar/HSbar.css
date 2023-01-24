@@ -1,0 +1,14 @@
+.hs-bar svg {
+    width: 64%;
+    height: 20px;
+    font-size: 11px;
+    color: black;
+    font-family: "GothamLight";
+}
+
+#hsbar g text{
+    /* font-size: 0.4em !important; */
+    font-family: "GothamLight"!important;
+    fill: black !important;
+    /* font-weight: 100 !important; */
+}
