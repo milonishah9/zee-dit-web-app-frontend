@@ -33,7 +33,7 @@ const StackedBarChart = (props) => {
   const width920 = useMediaQuery("(max-width: 920px)");
   const width767 = useMediaQuery("(max-width: 767px)");
   const width363 = useMediaQuery("(max-width: 363px)");
-  console.log(width1366);
+  // console.log(width1366);
 
   var width = 300;
   var height = 100;
@@ -99,7 +99,7 @@ const StackedBarChart = (props) => {
       pageY: 0,
     };
 
-    console.log("window.innerWidth", window.innerWidth);
+    // console.log("window.innerWidth", window.innerWidth);
 
     if (window.innerWidth >= 1366) {
       if (marginForRightChart)

@@ -4,7 +4,7 @@ import { useState } from "react";
 const ExecutiveSummaryContentLinearButtonsTabs = (props) => {
     const [activeTab, setActiveTab] = useState('all-content')
     let {tab} = props;
-    console.log(tab);
+    // console.log(tab);
     return (
         <div className={tab === 'ott' ? ("executive-summary-content-linear-tabs"):('nonee')}>
             <span>
@@ -13,17 +13,17 @@ const ExecutiveSummaryContentLinearButtonsTabs = (props) => {
                     props.TabValue('all-content')
                 }}>All Content</button>
                 {tab === 'ott' && <span>
-                    <button className={activeTab === 'Originals' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear")} onClick={() => {
-                        setActiveTab('Originals')
-                        props.TabValue('Originals')
+                    <button className={activeTab === 'originals' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear")} onClick={() => {
+                        setActiveTab('originals')
+                        props.TabValue('originals')
                     }}>Originals</button>
-                    <button className={activeTab === 'Movies' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear")} onClick={() => {
-                        setActiveTab('Movies')
-                        props.TabValue('Movies')
+                    <button className={activeTab === 'movies' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear")} onClick={() => {
+                        setActiveTab('movies')
+                        props.TabValue('movies')
                     }}>Movies</button>
-                    <button className={activeTab === 'TV shows' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear")} onClick={() => {
-                        setActiveTab('TV shows')
-                        props.TabValue('TV shows')
+                    <button className={activeTab === 'tv-shows' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear")} onClick={() => {
+                        setActiveTab('tv-shows')
+                        props.TabValue('tv-shows')
                     }}>TV shows</button>
                 </span>}
             </span>
