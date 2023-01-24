@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 0.5rem;
+    margin-bottom: 2rem;
     /* width: 100%; */
 }
 
@@ -29,7 +30,7 @@
 .product-qual-experience-subdiv-tile-cont {
     display: flex;
     flex-wrap: wrap;
-    height: 25vh;
+    height: 24vh;
 }
 
 .product-qual-experience-subdiv-tile {
