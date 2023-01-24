@@ -94,16 +94,22 @@ const BubbleChart = (props) => {
       .attr("id", function(d){
         return d.Name.toLowerCase().replace(/ /g, '-')
       })
-      .attr("width", 1)
-      .attr("height", 1)
+      .attr("width", '100%')
+      .attr("height", '100%')
       .append("svg:image")
       .attr("xlink:href", function (d) {
         return d.img;
       })
-      .attr("width", 50)
-      .attr("height", 50)
-      .attr("x", 0)
-      .attr("y", 0);
+      .attr("width",  d => d.Count/6)
+      .attr("height", d => d.Count/15)
+      // .attr("x", -15)
+      // .attr("y", 10)
+     .attr("cx", function (d) {
+        return d.x;
+      })
+      .attr("cy", function (d) {
+        return d.y;
+      });
       
     var circles = svg
       .selectAll(".artist")
@@ -215,7 +221,7 @@ const BubbleChart = (props) => {
       .style("text-anchor", "middle")
       .attr("dy", "1.5em")
       .text(function (d) {
-        return d.Count > 351 ? d.Name : " ";
+        return d.Count > 999 ? d.Name : " ";
       })
       .call(wrap, 60);
 
@@ -226,7 +232,7 @@ const BubbleChart = (props) => {
       .enter()
       .append("text")
       .text(function (d) {
-        return d.Count > 351 ? d.Count : "";
+        return d.Count > 999 ? d.Count : "";
       })
       .attr("dy", "0.1em")
       .style("text-anchor", "middle")
@@ -242,6 +248,7 @@ const BubbleChart = (props) => {
         .attr("cy", function (d) {
           return d.y;
         });
+        
       textName
         .attr("x", function (d) {
           return d.x;
