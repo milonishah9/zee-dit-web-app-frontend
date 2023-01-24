@@ -124,3 +124,13 @@ map area{
 }
 
 
+@media screen and (max-width: 369px){
+  .text{
+    position: absolute;
+    color: #ffd025;
+    font-weight: 600;
+    font-size: 5px;
+  }
+}
+
+
