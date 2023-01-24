@@ -9,8 +9,9 @@ const BubbleChart = (props) => {
   const json = props.files;
 
   const dispatch = useDispatch();
-  
 
+  let dataURL =
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSDBNxYoYHix886AjlohpJuB-vB9NNrsQ_A0rAO1g&s";
   useEffect(() => {
     // d3 colour scheme for bubbles
     // var color = d3.scaleOrdinal().range(["rgb(148, 94, 210, 0.1)"]);
@@ -36,13 +37,14 @@ const BubbleChart = (props) => {
     var margin = { left: 10, right: 10, top: 10, bottom: 10 },
       width = 920,
       height = 350,
-      svg = d3
-        .select("#chart")
-        .append("svg")
-        .attr("preserveAspectRatio", "xMinYMin meet")
-        .attr("viewBox", "0 -20 850 250")
-        .classed("svg-content", true)
-        .append("g");
+      svg = d3.select("#chart").append("svg");
+
+    svg
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .attr("viewBox", "0 -20 850 250")
+      .classed("svg-content", true)
+      .append("g");
+    const image = d3;
 
     // var button = d3
     //   .select("#chart")
@@ -61,11 +63,54 @@ const BubbleChart = (props) => {
         "collide",
         d3
           .forceCollide(function (d) {
-            return d.Count * 5.3;
+            return d.Count / 15;
           })
           .iterations(100)
       );
 
+    var defs = svg.append("svg:defs");
+
+    // defs
+    //   .append("svg:pattern")
+    //   .data(json)
+    //   .attr("id", "grump_avatar")
+    //   .attr("width", 1)
+    //   .attr("height", 1)
+    //   .append("svg:image")
+    //   .attr("xlink:href", function (d) {
+    //     return d.img;
+    //   })
+    //   .attr("width", 50)
+    //   .attr("height", 50)
+    //   .attr("x", 0)
+    //   .attr("y", 0);
+
+    defs
+      .selectAll(".img-defs")
+      .data(json)
+      .enter()
+      .append("pattern")
+      .attr("class", "bubble-img")
+      .attr("id", function(d){
+        return d.Name.toLowerCase().replace(/ /g, '-')
+      })
+      .attr("width", '100%')
+      .attr("height", '100%')
+      .append("svg:image")
+      .attr("xlink:href", function (d) {
+        return d.img;
+      })
+      .attr("width",  d => d.Count/5)
+      .attr("height", d => d.Count/7)
+      .attr("x", -17)
+      .attr("y", -5)
+     .attr("cx", function (d) {
+        return d.x;
+      })
+      .attr("cy", function (d) {
+        return d.y;
+      });
+      
     var circles = svg
       .selectAll(".artist")
       .data(json)
@@ -76,27 +121,29 @@ const BubbleChart = (props) => {
       .attr("stroke-width", 1)
       .attr("stroke-opacity", 2)
       .attr("class", "artist")
-      .attr("fill", "rgb(148, 94, 210, 0.1)")
-      .attr("r", function (d) {
-        return d.Count * 5;
+      .attr("fill", function(d){
+        return "url(#" + d.Name.toLowerCase().replace(/ /g, '-') + ")"
       })
-      //   .style("fill", function (d, i) {
-      //     var bubbleColor = color(d.Name);
-      //       select("#bubble-legend").append(
-      //         '<li><span class="bubble-legend-box" style="background:' +
-      //           bubbleColor +
-      //           '"></span><span class="accessible">' +
-      //           d.Count +
-      //           '</span><span class="bubble-legend-label" >' +
-      //           d.Name +
-      //           "</span></li>"
-      //       );
-      //     return bubbleColor;
-      //   })
+      .attr("r", function (d) {
+        return d.Count / 17;
+      })
+      // .style("fill", function (d, i) {
+      //   var bubbleColor = d3.color(d.Name);
+      //     d3.select("#bubble-legend").append(
+      //       '<li><span class="bubble-legend-box" style="background:' +
+      //         bubbleColor +
+      //         '"></span><span class="accessible">' +
+      //         d.Count +
+      //         '</span><span class="bubble-legend-label" >' +
+      //         d.Name +
+      //         "</span></li>"
+      //     );
+      //   return bubbleColor;
+      // })
 
-      //   .attr("color", function (d) {
-      //     return d3.select(this).style("fill");
-      //   })
+      // .attr("color", function (d) {
+      //   return d3.select(this).style("fill");
+      // })
       .call(
         d3
           .drag()
@@ -106,7 +153,7 @@ const BubbleChart = (props) => {
       )
       .on("mouseover", function (d) {
         //tooltips
-        
+
         tooltip.text(d.Name + ": " + d.Count);
         // props.onClick(d.Name + d.Count);
         tooltip.style("visibility", "visible");
@@ -121,7 +168,7 @@ const BubbleChart = (props) => {
       .on("mouseout", function () {
         // props.onClick("");
         // dispatch(setHoverValue(''))
-        
+
         tooltip.style("visibility", "hidden");
       })
       .on("click", function (d, i) {
@@ -131,13 +178,11 @@ const BubbleChart = (props) => {
 
     // circles
     // .append("svg:image")
-    // .attr("transform", d => "translate(" + d.x + "," + d.y + ")")
-    // .attr("xlink:href", function(d) {
-    //   return d.img ;
-    // })
-    // .attr("x", 0)
-    // .attr("y", 0)
-    // .attr("width", d => d.Count / 1.5);
+    // // .attr("transform", d => "translate(" + d.x + "," + d.y + ")")
+    // .attr("xlink:href", dataURL)
+    // // .attr("x", 0)
+    // // .attr("y", 0)
+    // // .attr("width", d => d.Count / 1.5);
 
     function wrap(text, width) {
       text.each(function () {
@@ -176,9 +221,9 @@ const BubbleChart = (props) => {
       .style("text-anchor", "middle")
       .attr("dy", "1.5em")
       .text(function (d) {
-        return d.Count > 4 ? d.Name : " ";
+        return d.Count > 351 ? d.Name : " ";
       })
-      .call(wrap, 80);
+      .call(wrap, 60);
 
     //text for count in bubble
     var textCount = svg
@@ -187,7 +232,7 @@ const BubbleChart = (props) => {
       .enter()
       .append("text")
       .text(function (d) {
-        return d.Count > 4 ? d.Count : "";
+        return d.Count > 351 ? d.Count : "";
       })
       .attr("dy", "0.1em")
       .style("text-anchor", "middle")
@@ -203,19 +248,20 @@ const BubbleChart = (props) => {
         .attr("cy", function (d) {
           return d.y;
         });
+        
       textName
         .attr("x", function (d) {
           return d.x;
         })
         .attr("y", function (d) {
-          return d.y;
+          return d.y - 3;
         });
       textCount
         .attr("x", function (d) {
           return d.x;
         })
         .attr("y", function (d) {
-          return d.y;
+          return d.y - 3;
         });
     }
 
