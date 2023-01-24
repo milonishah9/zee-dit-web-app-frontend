@@ -20,119 +20,89 @@ const ExecutiveSummaryContentOtt = (props) => {
 
     var json = [
       {
-        Name: "Kundli Bhagya",
-        Count: 7,
+        Name: "TVF Pictures",
+        Count: 589.17,
         img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
         arr: [320, 230, 100, 330, 410],
       },
       {
-        Name: "Bhagya Lakshmi",
-        Count: 1,
+        Name: "Mukhbir",
+        Count: 491.58,
         img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
         arr: [120, 430, 209, 330, 300],
       },
       {
-        Name: "Kumkum Bhagya",
-        Count: 2,
+        Name: "Aha Naa Pellanta",
+        Count: 469.60,
         img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
         arr: [223, 140, 170, 330, 400],
       },
       {
-        Name: "Meet",
-        Count: 2,
+        Name: "Abhay",
+        Count: 439.94,
         img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
         arr: [120, 430, 209, 330, 300],
       },
       {
-        Name: "Radha Mohan",
-        Count: 2,
+        Name: "Rangbaaz",
+        Count: 437.68,
         img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
         arr: [120, 140, 170, 330, 400],
       },
       {
-        Name: "Mithai",
-        Count: 1,
+        Name: "Duranga",
+        Count: 427.30,
         img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
         arr: [320, 230, 100, 330, 400],
       },
       {
-        Name: "Brokerage Services",
-        Count: 3,
+        Name: "Triplling",
+        Count: 400.64,
         img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
         arr: [120, 230, 100, 330, 300],
       },
       {
-        Name: "Customs Services",
-        Count: 3,
+        Name: "Lalbazaar",
+        Count: 391.60,
         img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
         arr: [120, 230, 100, 330, 410],
       },
       {
-        Name: "Consulting Services",
-        Count: 4,
+        Name: "Country Mafia",
+        Count: 351.28,
         img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
         arr: [120, 230, 100, 330, 400],
       },
       {
-        Name: "Eas",
-        Count: 4,
+        Name: "Hello Word",
+        Count: 350.70,
         img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
         arr: [120, 230, 100, 330, 400],
       },
       {
-        Name: "Human Resources",
-        Count: 4,
+        Name: "Broken",
+        Count: 349.80,
         img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
         arr: [130, 230, 209, 330, 410],
       },
       {
-        Name: "Insurance Services",
-        Count: 4,
+        Name: "Love Bites",
+        Count: 349.70,
         img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
         arr: [130, 140, 170, 330, 300],
       },
       {
-        Name: "Legal Services",
-        Count: 11,
+        Name: "Qubool Hai ",
+        Count: 348.15,
         img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
         arr: [120, 230, 209, 330, 410],
       },
-      {
-        Name: "Services",
-        Count: 9,
-        img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-        arr: [120, 140, 170, 330, 400],
-      },
-      {
-        Name: "IT Services",
-        Count: 4,
-        img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-        arr: [130, 230, 100, 330, 400],
-      },
-      {
-        Name: "Managed Services",
-        Count: 4,
-        img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-        arr: [120, 230, 209, 330, 400],
-      },
-      {
-        Name: "Marketing",
-        Count: 6,
-        img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-        arr: [120, 230, 209, 330, 400],
-      },
-      {
-        Name: "Market",
-        Count: 6,
-        img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-        arr: [130, 230, 100, 330, 410],
-      },
-      {
-        Name: "Relocation Specialists",
-        Count: 1,
-        img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
-        arr: [123, 430, 100, 330, 400],
-      },
+      // {
+      //   Name: "Ghar Ek Mandir",
+      //   Count: 338.18,
+      //   img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      //   arr: [120, 140, 170, 330, 400],
+      // },
     ];
 
     let sortedFiles = json.sort((r1, r2) =>
@@ -141,13 +111,13 @@ const ExecutiveSummaryContentOtt = (props) => {
 
     for (let i = 0; i < sortedFiles.length; i++) {
       if (i < 10) {
-        bottom10files.push(sortedFiles[i]);
+        top10files.push(sortedFiles[i]);
       }
     }
     for (let i = sortedFiles.length - 1; i > 0; i--) {
       count += 1;
       if (count <= 10) {
-        top10files.push(sortedFiles[i]);
+        bottom10files.push(sortedFiles[i]);
       }
     }
 

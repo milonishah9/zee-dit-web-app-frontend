@@ -1,3 +1,17 @@
-svg{
-/* fill: transparen; */
+svg {
+    /* fill: transparen; */
+}
+
+.speedometer {
+    /* background-color: aqua; */
+}
+
+/* .arc,
+.speedo-segment {
+    background-color: aqua;
+} */
+
+.innerarc {
+    z-index: -10;
+    transform: translate(120, 120);
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import Sankey from "../../Charts/SankeyChart/CallSankey";
+import Sankey from "../../Charts/SankeyChart/RND";
+import "./ExecutiveSummaryConsumer.css"
 
 
 const ExecutiveSummaryConsumer = (props) => {
@@ -17,7 +18,7 @@ const ExecutiveSummaryConsumer = (props) => {
   return (
     <div className="App">
       <div>
-        <button onClick={() => setEditMode(!editMode)}>Edit Mode</button>
+        {/* <button onClick={() => setEditMode(!editMode)}>Edit Mode</button> */}
       </div>
       <div className="sankey">
         <Sankey data={data} edit={editMode} />

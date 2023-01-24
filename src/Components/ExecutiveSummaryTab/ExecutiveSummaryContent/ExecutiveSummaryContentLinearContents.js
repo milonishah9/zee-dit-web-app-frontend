@@ -9,7 +9,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
     const hoverValue = useSelector(selectCount);
     let myHoverClass = 'executive-summary-content-linear-contents-t-body-rows'
 
-    console.log(hoverValue);
+    // console.log(hoverValue);
 
     const total = 500;
     return (
@@ -20,7 +20,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                 <p><label className="executive-summ-content-ott-darkblue-indicator"/>Remaining Viewers</p>
             </div>}
             <div className="executive-summary-content-linear-contents-headers">
-            {buttonTab === 'linear' ? (<h6 className="executive-summary-content-linear-contents-header">Reach & Ratings</h6>):(<h6 className="executive-summary-content-linear-contents-header">Viewers and Completion</h6>)}
+            {buttonTab === 'linear' ? (<h6 className="executive-summary-content-linear-contents-header">Reach & Ratings</h6>):(<h6 className="executive-summary-content-linear-contents-header">Viewers & %Completion</h6>)}
                 <h6 className="executive-summary-content-linear-contents-header">Impact on Consumer Journey</h6>
                 <h6 className="executive-summary-content-linear-contents-header">Impact on Monetization</h6>
             </div>
@@ -39,11 +39,11 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                     ):(
                         <tr>
                         <th className="executive-summary-content-linear-contents-t-shows-header">Web Series</th>
-                        <th className="executive-summary-content-linear-contents-t-header"># Viewers</th>
-                        <th className="executive-summary-content-linear-contents-t-header">% Completion</th>
-                        <th className="executive-summary-content-linear-contents-t-header"># SAWF Subscriptions</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Watch Duration<span className="exe-sum-lin-con-h-lbr">(M min.)</span></th>
-                        <th className="executive-summary-content-linear-contents-t-header">Ad Impressions</th>
+                        <th className="executive-summary-content-linear-contents-t-header">Viewers</th>
+                        <th className="executive-summary-content-linear-contents-t-header">Viewers(>1 min watched)</th>
+                        <th className="executive-summary-content-linear-contents-t-header">Viewers(>75% min watched)</th>
+                        <th className="executive-summary-content-linear-contents-t-header">Watch Duration(M min.)</th>
+                        <th className="executive-summary-content-linear-contents-t-header">#SAWF Subscriptions</th>
                     </tr>
                     )}
                 </thead>

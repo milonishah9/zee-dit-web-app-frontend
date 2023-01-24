@@ -4,7 +4,7 @@ import * as d33 from "d3";
 
 
 const size = {
-  width: 1500,
+  width: 1300,
   height: 600
 };
 
