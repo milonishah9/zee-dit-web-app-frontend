@@ -133,6 +133,8 @@ ul.viewership-navigationtab-ul {
 }
 .indicators {
   text-align: initial;
+  position: relative;
+  top: 1px;
 }
 }
 

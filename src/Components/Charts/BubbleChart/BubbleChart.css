@@ -70,7 +70,6 @@ text.lessthan300 {
 text {
     font-size: 0.4em;
     font-family: "GothamLight";
-    /* text-align: center; */
   }
   
   .bubble-legend-box {
@@ -106,10 +105,7 @@ text {
     clip: rect(1px 1px 1px 1px);
     clip: rect(1px, 1px, 1px, 1px);
   }
-  
-  /* ol, ul {
-    list-style: none;
-  } */
+ 
   .chart-div {
       width: 2100px;
   }

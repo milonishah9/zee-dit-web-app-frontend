@@ -14,12 +14,14 @@
     line-height: 15px;
     text-align: center;
     color: #333333;
-    border: none;
-    background: #E9EFFF;
- 
+    /* border: none; */
+    /* background: #E9EFFF; */
+    background: white;
     width: 100px;
     height: 30px;
-    border-right: 1px solid #B4C8FF;
+    /* border-right: 1px solid #B4C8FF; */
+    margin: 3px;
+    border-radius: 6px;
 }
 
 .executive-summary-content-linear-actve-tab {
@@ -31,19 +33,21 @@
     text-align: center;
     border: none;
     background: none;
-    background: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%);
+    background:RED;
     color: white;
     width: 100px;
     height: 30px;
+    margin: 3px;
+    border-radius: 6px;
 }
 
-.executive-summary-content-linear-actve-tab:nth-child(3){
+/* .executive-summary-content-linear-actve-tab:nth-child(3){
     border-right: 1px solid white;
-}
+} */
 
-.bdr-none{
+/* .bdr-none{
     border: none;
-}
+} */
 
 .executive-summary-content-linear-filter{
     display: grid;
