@@ -162,12 +162,12 @@ input[type="checkbox"] {
   height: 15px;
   -webkit-appearance: none;
   appearance: none;
-  background: gray;
+  background: #c7c5c5;;
   outline: none;
   border-radius: 2rem;
   cursor: pointer;
   margin: 0 12px;
-  box-shadow: inset 0 0 5px rgb(0 0 0 / 50%);
+  /* box-shadow: inset 0 0 5px rgb(0 0 0 / 50%); */
 }
 
 input[type="checkbox"]::before {
