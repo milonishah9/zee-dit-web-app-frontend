@@ -52,7 +52,7 @@ const FrontBar = (props) => {
             .attr('class', 'amount')
             .attr('y', 14)
             .attr('x', 10)
-            .text(toggleValue === true ? (((data/total)*100).toFixed(2)) : (data));
+            .text(toggleValue === true ? (data + '%') : (data));
 
         // // .attr('y', barHeight)
         // .attr('dx', -10)

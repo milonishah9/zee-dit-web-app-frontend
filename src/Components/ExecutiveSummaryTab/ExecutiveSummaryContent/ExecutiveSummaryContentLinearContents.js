@@ -18,7 +18,8 @@ const ExecutiveSummaryContentLinearContents = (props) => {
         setToggleValue(e.target.checked)
     }
 
-    const total = 500;
+    var total = 500;
+    let myTotal = total 
     return (
         <div className="executive-summary-content-linear-contents">
             {buttonTab !== 'linear' &&<div> 
@@ -75,11 +76,14 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                 <td>{element.Name}</td>
                                 {element.arr.map((data, index) => {
                                     if(typeof(data) === 'number'){
-                                        // if(toggleValue === true){
-                                        //     data = (data/total)*100
-                                        //     console.log(data);
-                                        // }
-                                        return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
+                                        if(toggleValue === true){
+                                            data = ((data/myTotal)*100).toFixed(0)
+                                            total = 100
+                                            return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
+                                        }else{
+                                            return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
+                                        }
+                                        
                                     }else{
                                         return <td key={index}><HSbar data={data}/></td>
                                     }
