@@ -7,11 +7,12 @@ import "./RND.css"
 const RND = props => {
   
   const [data, setData] = useState(null);
+  const baseURL = 'http://20.219.91.228:5000/';
 
   
   useEffect(() => {
 
-    fetch("http://localhost:5000/organic-data-api")
+    fetch(baseURL + 'organic-data-api')
       .then(res => res.json())
       .then(data => setData(data));
       
