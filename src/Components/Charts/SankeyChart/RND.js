@@ -11,7 +11,7 @@ const RND = props => {
   
   useEffect(() => {
 
-    fetch("http://localhost:5000/organic-data-api")
+    fetch("/organic-data-api")
       .then(res => res.json())
       .then(data => setData(data));
       
