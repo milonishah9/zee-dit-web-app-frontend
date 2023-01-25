@@ -282,61 +282,76 @@ const ExecutiveSummaryContentOtt = (props) => {
   };
 
   const [chartData, setChartData] = useState(json);
-
+  var myTvShowData;
   useEffect(() => {
-    // if (activeTab === "all-content") {
-    //   setChartData(json);
-    // }
+    if (activeTab === "all-content") {
+      myTvShowData = json
+      setChartData(myTvShowData);
+      if (filterActiveTab === "top-10" || filterActiveTab === "bottom-10") {
+        getShortData(myTvShowData);
+      }
+    }
 
     if (activeTab === "original") {
-      setChartData(
-        json.filter((data) => {
-          return data.category === "original";
-        })
-      );
+      myTvShowData = json.filter((data) => data.category === "original");
+      setChartData(myTvShowData);
+
+      if (filterActiveTab === "top-10" || filterActiveTab === "bottom-10") {
+        getShortData(myTvShowData);
+      }
     }
 
     if (activeTab === "movies") {
-      setChartData(json.filter((data) => data.type === "movie"));
+      myTvShowData = json.filter((data) => data.type === "movie");
+      setChartData(myTvShowData);
+
+      if (filterActiveTab === "top-10" || filterActiveTab === "bottom-10") {
+        getShortData(myTvShowData);
+      }
+
     }
 
     if (activeTab === "tv-shows") {
-      let myTvShowData = json.filter((data) => data.type === "tv show");
+      myTvShowData = json.filter((data) => data.type === "tv show");
+      setChartData(myTvShowData);
 
-      setChartData(myTvShowData)
       if (filterActiveTab === "top-10" || filterActiveTab === "bottom-10") {
-            let sortedFiles = chartData.sort((r1, r2) =>
-              r1.value > r2.value ? 1 : r1.value < r2.value ? -1 : 0
-            );
-
-            if (filterActiveTab === "top-10") {
-        let top10Data = [];
-        for (let i = 0; i < myTvShowData.length; i++) {
-          if (i < 3) {
-            top10Data.push(myTvShowData[i]);
-          }
-        }
-        setChartData(top10Data);
+        getShortData(myTvShowData);
       }
 
-      if (filterActiveTab === "bottom-10") {
-              console.log(filterActiveTab);
-              let bottom10Data = [];
-              let count = 0;
-              for (let i = myTvShowData.length - 1; i > 0; i--) {
-                count += 1;
-                if (count <= 3) {
-                  bottom10Data.push(myTvShowData[i]);
-                }
-              }
-              console.log('bottom10Data',bottom10Data);
-              setChartData(bottom10Data);
-            }
-      }
-      
     }
+
   }, [activeTab, filterActiveTab]);
 
+  const getShortData = (myTvShowData) => {
+    let sortedFiles = myTvShowData.sort((r1, r2) =>
+      r1.value > r2.value ? 1 : r1.value < r2.value ? -1 : 0
+    );
+
+    if (filterActiveTab === "top-10") {
+      let top10Data = [];
+      for (let i = 0; i < sortedFiles.length; i++) {
+        if (i < 10) {
+          top10Data.push(sortedFiles[i]);
+        }
+      }
+      setChartData(top10Data);
+    }
+
+    if (filterActiveTab === "bottom-10") {
+      console.log(filterActiveTab);
+      let bottom10Data = [];
+      let count = 0;
+      for (let i = sortedFiles.length - 1; i > 0; i--) {
+        count += 1;
+        if (count <= 10) {
+          bottom10Data.push(sortedFiles[i]);
+        }
+      }
+      console.log("bottom10Data", bottom10Data);
+      setChartData(bottom10Data);
+    }
+  };
   // useEffect(() => {
   //   if (filterActiveTab === "top-10" || filterActiveTab === "bottom-10") {
   //     let sortedFiles = chartData.sort((r1, r2) =>

@@ -7,7 +7,7 @@ import { selectCount, setHoverValue } from "../../../features/HoverValues";
 
 const BubbleChart = (props) => {
   const json = props.files;
-  console.log(json);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -63,7 +63,7 @@ const BubbleChart = (props) => {
           .forceCollide(function (d) {
             return d.Count / 17;
           })
-          // .iterations(100 * 15)
+          .iterations(100 * 40)
       );
 
     var defs = svg.append("svg:defs");
