@@ -85,7 +85,14 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                         }
                                         
                                     }else{
-                                        return <td key={index}><HSbar data={data} toggleValue={toggleValue}/></td>
+                                        // let total = 0 
+                                        // let totalValueArr = [];
+                                        // for(let i=0; i<data.length; i++){
+                                        //     total += data[i].value
+                                        // }
+                                        // totalValueArr.push(total)
+                                        // console.log(totalValueArr)
+                                        return <td key={index}><HSbar data={data}  toggleValue={toggleValue}/></td>
                                     }
                                     
                                 })}
