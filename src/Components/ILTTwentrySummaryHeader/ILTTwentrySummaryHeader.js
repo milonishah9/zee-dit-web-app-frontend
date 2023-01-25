@@ -30,7 +30,7 @@ const ILTTwentrySummaryHeader = (props) => {
                     {/* <div className='ilt20-header-div-middle col'> */}
                     {/* ilt20-header-div-middle */}
                     <div className='ilt20-header-ilt20-text-3'>
-                        <h1>{header}</h1>
+                        <h1 className={header.replace(/ /g, '-')}>{header}</h1>
                     </div>
                 </div>
 

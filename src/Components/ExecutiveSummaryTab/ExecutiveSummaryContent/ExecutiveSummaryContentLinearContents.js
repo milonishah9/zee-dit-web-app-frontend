@@ -3,6 +3,7 @@ import './ExecutiveSummaryContentLinearContents.css'
 import FrontBar from "../../Charts/BubbleChart/LinearBarchart/FrontBar";
 import { useSelector } from "react-redux";
 import { selectCount } from "../../../features/HoverValues";
+import HSbar from "../../Charts/HSbar/HSbar";
 
 const ExecutiveSummaryContentLinearContents = (props) => {
     const {chartData, buttonTab} = props;
@@ -14,11 +15,20 @@ const ExecutiveSummaryContentLinearContents = (props) => {
     const total = 500;
     return (
         <div className="executive-summary-content-linear-contents">
-            {buttonTab !== 'linear' &&<div className="executive-summ-content-ott-indicators">
-                <p><label className="executive-summ-content-ott-blue-indicator"/>SAWF Viewers</p>
-                <p><label className="executive-summ-content-ott-yellow-indicator"/>Returning Viewers</p>
-                <p><label className="executive-summ-content-ott-darkblue-indicator"/>Remaining Viewers</p>
-            </div>}
+            {buttonTab !== 'linear' &&<div> 
+                <div className="executive-summ-content-ott-indicators">
+                    <p><label className="executive-summ-content-ott-blue-indicator"/>SAWF Viewers</p>
+                    <p><label className="executive-summ-content-ott-yellow-indicator"/>Returning Viewers</p>
+                    <p><label className="executive-summ-content-ott-darkblue-indicator"/>Remaining Viewers</p>
+                </div>
+                <div className="ott-toggle">
+                    <p>Sort by</p>
+                    <label>Absolute Value</label>
+                    <input type="checkbox"></input>
+                    <label>% Change</label>
+                </div>
+            </div>
+            }
             <div className="executive-summary-content-linear-contents-headers">
             {buttonTab === 'linear' ? (<h6 className="executive-summary-content-linear-contents-header">Reach & Ratings</h6>):(<h6 className="executive-summary-content-linear-contents-header">Viewers & %Completion</h6>)}
                 <h6 className="executive-summary-content-linear-contents-header">Impact on Consumer Journey</h6>
@@ -58,7 +68,12 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                             <tr key={index} className={myHoverClass}>
                                 <td>{element.Name}</td>
                                 {element.arr.map((data, index) => {
-                                    return <td key={index}><FrontBar data={data} total={total} /></td>
+                                    if(typeof(data) === 'number'){
+                                        return <td key={index}><FrontBar data={data} total={total} /></td>
+                                    }else{
+                                        return <td key={index}><HSbar data={data}/></td>
+                                    }
+                                    
                                 })}
                                 {/* <td><FrontBar data={100} total={total} /></td>
                                 <td><FrontBar data={300} total={total} /></td>

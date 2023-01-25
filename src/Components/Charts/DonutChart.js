@@ -4,7 +4,7 @@ import "./DonutChart.css";
 
 const DonutChart = (props) => {
   const { donutChart } = props;
-  console.log("donut chart data :", donutChart);
+  // console.log("donut chart data :", donutChart);
   useEffect(() => {
     // set the dimensions and margins of the graph
     var width = 250,

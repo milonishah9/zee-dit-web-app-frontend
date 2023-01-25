@@ -10,8 +10,6 @@ const BubbleChart = (props) => {
 
   const dispatch = useDispatch();
 
-  let dataURL =
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSDBNxYoYHix886AjlohpJuB-vB9NNrsQ_A0rAO1g&s";
   useEffect(() => {
     // d3 colour scheme for bubbles
     // var color = d3.scaleOrdinal().range(["rgb(148, 94, 210, 0.1)"]);
@@ -44,7 +42,7 @@ const BubbleChart = (props) => {
       .attr("viewBox", "0 -20 850 250")
       .classed("svg-content", true)
       .append("g");
-    const image = d3;
+    // const image = d3;
 
     // var button = d3
     //   .select("#chart")
@@ -55,10 +53,9 @@ const BubbleChart = (props) => {
     //   .on("click", myFunction());
 
     var simulation = d3
-      .forceSimulation()
-      .velocityDecay(0.115)
-      // .force(d3.forc)
-      .force("x", d3.forceX(width /2).strength(0.005))
+      .forceSimulation(9)
+      .velocityDecay(0.09999)
+      .force("x", d3.forceX(width / 2).strength(0.005))
       .force("y", d3.forceY(height / 3.6).strength(0.09))
       // .force("x", d3.forceX(width / 2).strength(0.01))
       // .force("y", d3.forceY(height / 4).strength(0.06))
@@ -75,9 +72,9 @@ const BubbleChart = (props) => {
         "collide",
         d3
           .forceCollide(function (d) {
-            return d.Count / 18;
+            return d.Count / 17;
           })
-          .iterations(300)
+          // .iterations(100 * 90)
       );
 
     var defs = svg.append("svg:defs");
@@ -104,16 +101,16 @@ const BubbleChart = (props) => {
       .append("pattern")
       .attr("class", "bubble-img")
       .attr("id", function (d) {
-        return d.Name.toLowerCase().replace(/ /g, '-')
+        return d.Name.toLowerCase().replace(/ /g, "-");
       })
-      .attr("width", '100%')
-      .attr("height", '100%')
+      .attr("width", "100%")
+      .attr("height", "100%")
       .append("svg:image")
       .attr("xlink:href", function (d) {
         return d.img;
       })
-      .attr("width", d => d.Count / 5)
-      .attr("height", d => d.Count / 7)
+      .attr("width", (d) => d.Count / 5)
+      .attr("height", (d) => d.Count / 7)
       .attr("x", -17)
       .attr("y", -5)
       .attr("cx", function (d) {
@@ -134,7 +131,7 @@ const BubbleChart = (props) => {
       .attr("stroke-opacity", 2)
       .attr("class", "artist")
       .attr("fill", function (d) {
-        return "url(#" + d.Name.toLowerCase().replace(/ /g, '-') + ")"
+        return "url(#" + d.Name.toLowerCase().replace(/ /g, "-") + ")";
       })
       .attr("r", function (d) {
         return d.Count / 17;

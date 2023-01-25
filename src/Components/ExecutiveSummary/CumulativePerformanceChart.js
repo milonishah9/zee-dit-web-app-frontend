@@ -9,7 +9,7 @@ const CumulativePerformanceChart = (props) => {
   }, []);
 
   const drowLineChart = (LineData) => {
-    console.log("LineData", LineData);
+    // console.log("LineData", LineData);
     // setting up svg
     const w = 500;
     const h = 130;
