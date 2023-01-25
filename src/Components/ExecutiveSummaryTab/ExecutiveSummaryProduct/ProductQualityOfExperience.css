@@ -5,8 +5,7 @@
     margin: 1.25rem;
 }
 
-.product-qual-experience-subdiv-first,
-.product-qual-experience-subdiv-second{
+.product-qual-experience-subdiv {
     display: flex;
     flex-direction: column;
     margin-top: 0.5rem;
@@ -35,11 +34,17 @@
     box-shadow: 0px 2px 5px #D6DEF8;
     border-radius: 4px;
     justify-content: space-around;
-    width: 24.3%;
+    width: 49.6%;
     /* min-width: 15%; */
     margin-right: 10px;
     /* height: 25vh; */
     min-height: 195px;
+}
+
+.product-qual-experience-subdiv-tile-left-grp,
+.product-qual-experience-subdiv-tile-right-grp {
+    display: flex;
+    width: 50%;
 }
 
 .product-qual-experience-subdiv-tile-title {
@@ -182,7 +187,6 @@
     }
 
     .product-qual-experience-subdiv-tile-chart-value-date {
-
         width: 120%;
     }
 
@@ -190,22 +194,112 @@
         min-height: 160px;
 
     }
-
 }
 
-@media only screen and (max-width: 1063px) and (min-width: 768px) {}
+/* Tablets and medium screens */
+
+@media only screen and (max-width: 1063px) and (min-width: 768px) {
+
+    .product-qual-experience-subdiv-tile-cont {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .product-qual-experience-subdiv-tile-left-grp,
+    .product-qual-experience-subdiv-tile-right-grp {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-qual-experience-subdiv {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 500px) {
+    .product-qual-experience-subdiv-tile-cont {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .product-qual-experience-subdiv-tile-left-grp,
+    .product-qual-experience-subdiv-tile-right-grp {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-qual-experience-subdiv {
+        margin-bottom: 0.5rem;
+    }
+
+    .product-qual-experience-subdiv-tile-chart-value-status-pos,
+    .product-qual-experience-subdiv-tile-chart-value-status-neg,
+    .product-qual-experience-subdiv-tile-chart-value-date {
+        width: 150%;
+    }
+}
 
 
+/* Mobile and smaller screens */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) and (min-width: 371px) {
     .product-qual-experience-subdiv-tile-cont {
         display: flex;
         flex-direction: column;
         width: 100%;
+        height: auto;
     }
 
-    .product-qual-experience-subdiv-tile{
+    .product-qual-experience-subdiv-tile {
         width: 100%;
         margin-bottom: 0.7rem;
+    }
+
+    .product-qual-experience-subdiv {
+        margin-bottom: 0.5rem;
+    }
+
+    .product-qual-experience-subdiv-tile-left-grp,
+    .product-qual-experience-subdiv-tile-right-grp {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 371px) {
+    .product-qual-experience-subdiv-tile-cont {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .product-qual-experience-subdiv-tile {
+        width: 100%;
+        margin-bottom: 0.7rem;
+    }
+
+    .product-qual-experience-subdiv-tile-title {
+        margin: 0.7rem 0rem 0 0.6rem;
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+    }
+
+    .product-qual-experience-subdiv-tile-chart-value-date,
+    .product-qual-experience-subdiv-tile-chart-value-status-pos,
+    .product-qual-experience-subdiv-tile-chart-value-status-neg {
+        width: 120%;
+    }
+
+    .product-qual-experience-subdiv {
+        margin-bottom: 0.5rem;
+    }
+
+    .product-qual-experience-subdiv-tile-left-grp,
+    .product-qual-experience-subdiv-tile-right-grp {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        flex-direction: column;
     }
 }
