@@ -10,6 +10,7 @@ import ExecutiveSummaryContent from './Components/ExecutiveSummaryTab/ExecutiveS
 import ExecutiveSummaryTab from './Components/ExecutiveSummaryTab/ExecutiveSummaryTab';
 import AreaChartWithToolTips from './Components/Charts/AreaChartWithToolTips/AreaChartWithToolTips';
 import HSbar from './Components/Charts/HSbar/HSbar';
+import NewSankey from './Components/Charts/SankeyChart/NewSankey/NewSankey';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/executive-summary-content' element={<ExecutiveSummaryContent />} />
           <Route path='/area-chart-with-tooltips' element={<AreaChartWithToolTips />} />
           <Route path='/hs-bar' element={<HSbar />} />
+          {/* <Route path='/new-sankey' element={<NewSankey />} /> */}
         </Routes>
       </BrowserRouter>  
     </div>
