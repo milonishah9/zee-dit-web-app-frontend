@@ -9,8 +9,6 @@ import './ProductQualityOfExperience.css';
 import * as d3 from 'd3';
 
 const ProductQualityOfExperience = () => {
-    const wrapperRef = useRef();
-
     // let { width, height } = wrapperRef.current.getBoundingClientRect();
     return (
         <div className='product-qual-experience-cont'>
@@ -43,10 +41,10 @@ const ProductQualityOfExperience = () => {
                                     <BarChart />
                                 </div>
                             </div>
-                            <div className='product-qual-experience-subdiv-tile-chart-value-rhs' ref={wrapperRef}>
-                                {/* Guage Chart */}
-                                {/* <GuageChart /> */}
-                                <ReactSpeedometer
+                            {/* <GuageChart/> */}
+                            <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
+                                <GuageChart />
+                                {/* <ReactSpeedometer
                                     maxValue={100}
                                     value={12}
                                     needleColor="black"
@@ -64,8 +62,7 @@ const ProductQualityOfExperience = () => {
                                     ringWidth={15}
                                     // valueTextFontSize={0}
                                     labelFontSize={0}
-                                />
-                                {/* <FaceEmoji/> */}
+                                /> */}
                             </div>
                         </div>
                     </div>
@@ -100,9 +97,8 @@ const ProductQualityOfExperience = () => {
                                 </div>
                             </div>
                             <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
-                                {/* Guage Chart */}
-                                {/* <GuageChart /> */}
-                                <ReactSpeedometer
+                                <GuageChart />
+                                {/* <ReactSpeedometer
                                     maxValue={100}
                                     value={12}
                                     needleColor="black"
@@ -121,7 +117,7 @@ const ProductQualityOfExperience = () => {
                                     // valueTextFontSize={0}
                                     labelFontSize={0}
 
-                                />
+                                /> */}
                             </div>
                         </div>
                     </div>
@@ -152,9 +148,8 @@ const ProductQualityOfExperience = () => {
                                 </div>
                             </div>
                             <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
-                                {/* Guage Chart */}
-                                {/* <GuageChart /> */}
-                                <ReactSpeedometer
+                                <GuageChart />
+                                {/* <ReactSpeedometer
                                     maxValue={100}
                                     value={12}
                                     needleColor="black"
@@ -173,7 +168,7 @@ const ProductQualityOfExperience = () => {
                                     // valueTextFontSize={0}
                                     labelFontSize={0}
 
-                                />
+                                /> */}
                             </div>
                         </div>
                     </div>
@@ -198,9 +193,8 @@ const ProductQualityOfExperience = () => {
                                 </div>
                             </div>
                             <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
-                                {/* Guage Chart */}
-                                {/* <GuageChart /> */}
-                                <ReactSpeedometer
+                                <GuageChart />
+                                {/* <ReactSpeedometer
                                     maxValue={100}
                                     value={12}
                                     needleColor="black"
@@ -219,7 +213,7 @@ const ProductQualityOfExperience = () => {
                                     // valueTextFontSize={0}
                                     labelFontSize={0}
 
-                                />
+                                /> */}
                             </div>
                         </div>
                     </div>
@@ -255,10 +249,9 @@ const ProductQualityOfExperience = () => {
                                     <BarChart />
                                 </div>
                             </div>
-                            <div className='product-qual-experience-subdiv-tile-chart-value-rhs' ref={wrapperRef}>
-                                {/* Guage Chart */}
-                                {/* <GuageChart /> */}
-                                <ReactSpeedometer
+                            <div className='product-qual-experience-subdiv-tile-chart-value-rhs'    >
+                                <GuageChart />
+                                {/* <ReactSpeedometer
                                     maxValue={100}
                                     value={12}
                                     needleColor="black"
@@ -276,8 +269,7 @@ const ProductQualityOfExperience = () => {
                                     ringWidth={15}
                                     // valueTextFontSize={0}
                                     labelFontSize={0}
-                                />
-                                {/* <FaceEmoji/> */}
+                                /> */}
                             </div>
                         </div>
                     </div>
@@ -312,9 +304,8 @@ const ProductQualityOfExperience = () => {
                                 </div>
                             </div>
                             <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
-                                {/* Guage Chart */}
-                                {/* <GuageChart /> */}
-                                <ReactSpeedometer
+                                <GuageChart />
+                                {/* <ReactSpeedometer
                                     maxValue={100}
                                     value={12}
                                     needleColor="black"
@@ -333,7 +324,7 @@ const ProductQualityOfExperience = () => {
                                     // valueTextFontSize={0}
                                     labelFontSize={0}
 
-                                />
+                                /> */}
                             </div>
                         </div>
                     </div>
@@ -364,9 +355,8 @@ const ProductQualityOfExperience = () => {
                                 </div>
                             </div>
                             <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
-                                {/* Guage Chart */}
-                                {/* <GuageChart /> */}
-                                <ReactSpeedometer
+                                <GuageChart />
+                                {/* <ReactSpeedometer
                                     maxValue={100}
                                     value={12}
                                     needleColor="black"
@@ -385,7 +375,7 @@ const ProductQualityOfExperience = () => {
                                     // valueTextFontSize={0}
                                     labelFontSize={0}
 
-                                />
+                                /> */}
                             </div>
                         </div>
                     </div>
@@ -410,9 +400,8 @@ const ProductQualityOfExperience = () => {
                                 </div>
                             </div>
                             <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
-                                {/* Guage Chart */}
-                                {/* <GuageChart /> */}
-                                <ReactSpeedometer
+                                <GuageChart />
+                                {/* <ReactSpeedometer
                                     maxValue={100}
                                     value={12}
                                     needleColor="black"
@@ -431,143 +420,13 @@ const ProductQualityOfExperience = () => {
                                     // valueTextFontSize={0}
                                     labelFontSize={0}
 
-                                />
+                                /> */}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            {/* <BarChart/> */}
         </div>
-    )
-}
-
-const FaceEmoji = (props) => {
-
-    // useLayoutEffect(()=>{
-
-    // }, [])
-
-    const width = 250, height = 150;
-    const centerX = width / 2, centerY = height / 2;
-    const mouthRadious = 65;
-    const mouthWidth = 10;
-    const xOffset = 50;
-    const yOffset = 35;
-    // const eyeRadious = 40;
-    // const eyeOffSet = 100;
-    let angle = 80;
-
-    const mouthArcLeft = d3.arc()
-        .innerRadius(mouthRadious + 10)
-        .outerRadius(mouthRadious + mouthWidth + 10)
-        .startAngle(-Math.PI / 2)
-        .endAngle(-Math.PI / 6);
-
-    const mouthArcMiddle = d3.arc()
-        .innerRadius(mouthRadious + 10)
-        .outerRadius(mouthRadious + mouthWidth + 10)
-        .startAngle(-Math.PI / 6)
-        .endAngle(Math.PI / 6);
-
-    const mouthArcRight = d3.arc()
-        .innerRadius(mouthRadious + 10)
-        .outerRadius(mouthRadious + mouthWidth + 10)
-        .startAngle(Math.PI / 6)
-        .endAngle(Math.PI / 2);
-
-    const mouthArcInnerOne = d3.arc()
-        .innerRadius(0)
-        .outerRadius(mouthRadious + 10)
-        .startAngle(-Math.PI / 2)
-        .endAngle(Math.PI / 2);
-
-    const mouthArcInnerTwo = d3.arc()
-        .innerRadius(mouthRadious - 9)
-        .outerRadius(mouthRadious - 10)
-        .startAngle(-Math.PI / 2)
-        .endAngle(Math.PI / 2);
-
-    let scale = d3.scaleLinear()
-        .range([-90, 90])
-        // .domain([config.minValue, config.maxValue]);
-        .domain([1, 100]);
-
-    const needleAngle = scale(angle);
-
-    var pointerLine = d3.line().curve(d3.curveLinear);
-
-    let innerArc = d3.select('.innerArc');
-
-
-    const needle = innerArc.append('path')
-        .classed('gaugeChart-needle', true)
-        .attr('stroke-width', 10)
-        .attr('d', `M ${centerX - 10 / 2} ${centerX}
-                L ${centerX} ${0}
-                L ${centerX + 10 / 2} ${centerX} Z`)
-        .attr('transform', `rotate(${needleAngle} ${centerX} ${centerX})`)
-
-    let cssNamedColorsCSV = [];
-
-    d3.csv('./Datasets/CSS Named Colors.csv')
-        .then(data => console.log('data', data));
-
-    const innerArcText = d3.select('.innerArc')
-        .append("text")
-        .text('ab')
-
-    // var lineData = [[config.pointerWidth / 2, 0],
-    // [0, -pointerHeadLength],
-    // [-(config.pointerWidth / 2), 0],
-    // [0, config.pointerTailLength],
-    // [config.pointerWidth / 2, 0]];
-
-    var lineData = [[1, 0],
-    [0, -110],
-    [-(10 / 2), 0],
-    [0, -3],
-    [2, 0]];
-    var pointerLine = d3.line().curve(d3.curveLinear)
-    var pg = d3.select('svg')
-
-        .append('g').data([lineData])
-        .attr('class', 'pointer')
-        .attr('transform', `translate(${centerX}, ${centerY})`);
-
-    let pointer = pg.append('path')
-        .attr('d', pointerLine/*function(d) { return pointerLine(d) +'Z';}*/)
-        .attr('transform', 'rotate(' + -40 + ')');
-    // console.log(cssNamedColorsCSV);
-
-    return (
-        <svg width={width} height={height}>
-            <g transform={`translate(${centerX}, ${centerY})`} className="innerArc">
-                {/* <circle
-                    r={100}
-                    // cx={width / 2}
-                    // cy={height / 2}
-                    fill={"yellow"}
-                    stroke={"black"}
-                    strokeWidth={5}
-                />
-                <circle
-                    r={25}
-                    cx={-xOffset}
-                    cy={-yOffset}
-                />
-                <circle
-                    r={25}
-                    cx={xOffset}
-                    cy={-yOffset}
-                /> */}
-                <path d={mouthArcLeft()} fill={"#FF647C"} />
-                <path d={mouthArcMiddle()} fill={"#FFC656"} />
-                <path d={mouthArcRight()} fill={"#00C48C"} />
-                <path d={mouthArcInnerOne()} fill={"#F1F1F1"} style={{ "zIndex": "100" }} />
-                <path d={mouthArcInnerTwo()} fill={"#D8D8D8"} style={{ "zIndex": "100" }} />
-            </g>
-        </svg>
     )
 }
 

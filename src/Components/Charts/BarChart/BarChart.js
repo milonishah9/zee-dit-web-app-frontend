@@ -82,7 +82,11 @@ const BarChart = (props) => {
             .attr("y", function (d) { return y(d.Value); })
             .attr("width", x.bandwidth())
             .attr("height", function (d) { return height - y(d.Value); })
-            .attr("fill", '#00C48C')
+            // .attr("fill", '#00C48C')
+            .attr("fill", function (d) {
+                if (d.Value > 10000) return "#00C48C"
+                else return "#FF647C"
+            })
             .attr("stroke", "none")
             // .style("padding-right", "3p")
             // .style('z-index', '100')

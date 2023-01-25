@@ -1,17 +1,5 @@
-svg {
-    /* fill: transparen; */
-}
 
-.speedometer {
-    /* background-color: aqua; */
-}
-
-/* .arc,
-.speedo-segment {
-    background-color: aqua;
-} */
-
-.innerarc {
-    z-index: -10;
-    transform: translate(120, 120);
+.guage-chart-svg-container{
+    z-index: 100;
+    position: relative;
 }

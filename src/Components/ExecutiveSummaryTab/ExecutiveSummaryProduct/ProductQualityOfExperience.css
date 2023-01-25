@@ -76,6 +76,14 @@
     min-width: 35%;
 }
 
+.product-qual-experience-subdiv-tile-chart-value-rhs {
+    width: 65%;
+    /* min-width: 35%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .product-qual-experience-subdiv-tile-chart-value-valdiv {
     display: flex;
     flex-direction: column;
@@ -114,4 +122,12 @@
 .product-qual-experience-subdiv-tile-chart-value-status-neg svg,
 .product-qual-experience-subdiv-tile-chart-value-status-pos svg {
     margin: 0 4px;
+}
+
+.guage-chart-value{
+    font-size: 4.5rem;
+    line-height: 5rem;
+    /* font-family: 'GothamBold'; */
+    font-family: 'GothamLight';
+    font-weight: 700;
 }

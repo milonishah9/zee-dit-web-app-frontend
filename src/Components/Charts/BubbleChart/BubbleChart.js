@@ -56,16 +56,28 @@ const BubbleChart = (props) => {
 
     var simulation = d3
       .forceSimulation()
-      .velocityDecay(0.1)
-      .force("x", d3.forceX(width / 2).strength(0.005))
+      .velocityDecay(0.115)
+      // .force(d3.forc)
+      .force("x", d3.forceX(width /2).strength(0.005))
       .force("y", d3.forceY(height / 3.6).strength(0.09))
+      // .force("x", d3.forceX(width / 2).strength(0.01))
+      // .force("y", d3.forceY(height / 4).strength(0.06))
+      // .force('')
+      // .force(
+      //   "collide",
+      //   d3
+      //     .forceCollide(function (d) {
+      //       return d.Count / 15;
+      //     })
+      //     .iterations(100)
+      // );
       .force(
         "collide",
         d3
           .forceCollide(function (d) {
-            return d.Count / 15;
+            return d.Count / 18;
           })
-          .iterations(100)
+          .iterations(300)
       );
 
     var defs = svg.append("svg:defs");
@@ -91,7 +103,7 @@ const BubbleChart = (props) => {
       .enter()
       .append("pattern")
       .attr("class", "bubble-img")
-      .attr("id", function(d){
+      .attr("id", function (d) {
         return d.Name.toLowerCase().replace(/ /g, '-')
       })
       .attr("width", '100%')
@@ -100,17 +112,17 @@ const BubbleChart = (props) => {
       .attr("xlink:href", function (d) {
         return d.img;
       })
-      .attr("width",  d => d.Count/5)
-      .attr("height", d => d.Count/7)
+      .attr("width", d => d.Count / 5)
+      .attr("height", d => d.Count / 7)
       .attr("x", -17)
       .attr("y", -5)
-     .attr("cx", function (d) {
+      .attr("cx", function (d) {
         return d.x;
       })
       .attr("cy", function (d) {
         return d.y;
       });
-      
+
     var circles = svg
       .selectAll(".artist")
       .data(json)
@@ -121,7 +133,7 @@ const BubbleChart = (props) => {
       .attr("stroke-width", 1)
       .attr("stroke-opacity", 2)
       .attr("class", "artist")
-      .attr("fill", function(d){
+      .attr("fill", function (d) {
         return "url(#" + d.Name.toLowerCase().replace(/ /g, '-') + ")"
       })
       .attr("r", function (d) {
@@ -248,7 +260,7 @@ const BubbleChart = (props) => {
         .attr("cy", function (d) {
           return d.y;
         });
-        
+
       textName
         .attr("x", function (d) {
           return d.x;
