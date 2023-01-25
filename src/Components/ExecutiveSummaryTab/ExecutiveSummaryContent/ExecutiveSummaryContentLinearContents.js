@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import './ExecutiveSummaryContentLinearContents.css'
 import FrontBar from "../../Charts/BubbleChart/LinearBarchart/FrontBar";
 import { useSelector } from "react-redux";
@@ -8,9 +8,15 @@ import HSbar from "../../Charts/HSbar/HSbar";
 const ExecutiveSummaryContentLinearContents = (props) => {
     const {chartData, buttonTab} = props;
     const hoverValue = useSelector(selectCount);
-    let myHoverClass = 'executive-summary-content-linear-contents-t-body-rows'
+    const [toggleValue, setToggleValue] = useState();
 
+    let myHoverClass = 'executive-summary-content-linear-contents-t-body-rows'
     // console.log(hoverValue);
+
+    const handleToggleButton = (e) => {
+        // console.log(e.target.checked);
+        setToggleValue(e.target.checked)
+    }
 
     const total = 500;
     return (
@@ -24,7 +30,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                 <div className="ott-toggle">
                     <p>Sort by</p>
                     <label>Absolute Value</label>
-                    <input type="checkbox"></input>
+                    <input type="checkbox" onClick={handleToggleButton}></input>
                     <label>% Change</label>
                 </div>
             </div>
@@ -69,7 +75,11 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                 <td>{element.Name}</td>
                                 {element.arr.map((data, index) => {
                                     if(typeof(data) === 'number'){
-                                        return <td key={index}><FrontBar data={data} total={total} /></td>
+                                        // if(toggleValue === true){
+                                        //     data = (data/total)*100
+                                        //     console.log(data);
+                                        // }
+                                        return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
                                     }else{
                                         return <td key={index}><HSbar data={data}/></td>
                                     }
