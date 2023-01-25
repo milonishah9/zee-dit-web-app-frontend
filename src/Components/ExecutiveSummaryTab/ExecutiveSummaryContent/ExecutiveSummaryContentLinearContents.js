@@ -15,11 +15,20 @@ const ExecutiveSummaryContentLinearContents = (props) => {
     const total = 500;
     return (
         <div className="executive-summary-content-linear-contents">
-            {buttonTab !== 'linear' &&<div className="executive-summ-content-ott-indicators">
-                <p><label className="executive-summ-content-ott-blue-indicator"/>SAWF Viewers</p>
-                <p><label className="executive-summ-content-ott-yellow-indicator"/>Returning Viewers</p>
-                <p><label className="executive-summ-content-ott-darkblue-indicator"/>Remaining Viewers</p>
-            </div>}
+            {buttonTab !== 'linear' &&<div> 
+                <div className="executive-summ-content-ott-indicators">
+                    <p><label className="executive-summ-content-ott-blue-indicator"/>SAWF Viewers</p>
+                    <p><label className="executive-summ-content-ott-yellow-indicator"/>Returning Viewers</p>
+                    <p><label className="executive-summ-content-ott-darkblue-indicator"/>Remaining Viewers</p>
+                </div>
+                <div className="ott-toggle">
+                    <p>Sort by</p>
+                    <label>Absolute Value</label>
+                    <input type="checkbox"></input>
+                    <label>% Change</label>
+                </div>
+            </div>
+            }
             <div className="executive-summary-content-linear-contents-headers">
             {buttonTab === 'linear' ? (<h6 className="executive-summary-content-linear-contents-header">Reach & Ratings</h6>):(<h6 className="executive-summary-content-linear-contents-header">Viewers & %Completion</h6>)}
                 <h6 className="executive-summary-content-linear-contents-header">Impact on Consumer Journey</h6>

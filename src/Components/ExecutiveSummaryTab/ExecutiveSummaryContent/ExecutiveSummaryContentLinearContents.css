@@ -156,6 +156,54 @@ table {
   justify-content: space-between;
 }
 
+input[type="checkbox"] {
+  position: relative;
+  width: 30px;
+  height: 15px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: gray;
+  outline: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin: 0 12px;
+  box-shadow: inset 0 0 5px rgb(0 0 0 / 50%);
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  /* top: 0; */
+  left: 0;
+  /* bottom: -1px; */
+  transition: 0.5s;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translateX(100%);
+  /* background: #fff; */
+}
+
+input[type="checkbox"]:checked {
+  /* background: black; */
+}
+
+.ott-toggle{
+  text-align: end;
+  font-size: 12px;
+  margin-bottom: 10px;
+  font-family: GothamLight;
+}
+
+.ott-toggle p{
+  margin-bottom: 3px !important;
+  margin-right: 65px;
+}
+
 @media only screen and (max-width: 1440px) and (min-width: 1366px) {
   .executive-summary-content-linear-contents-header:nth-last-child(1) {
     width: 15.8%;
