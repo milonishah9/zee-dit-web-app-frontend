@@ -13,8 +13,8 @@ const NewSankey = () => {
             bottom: 10,
             left: 10
         },
-        width = 640 - margin.left - margin.right,
-        height = 250 - margin.top - margin.bottom;
+        width = 840 - margin.left - margin.right,
+        height = 450 - margin.top - margin.bottom;
     
     var formatNumber = d3.format(",.0f"), // zero decimal places
         format = function (d) {
@@ -62,8 +62,8 @@ const NewSankey = () => {
         .attr("class", "link")
         .attr("d", path)
         .style("fill", "none")
-        .style("stroke", "tan")
-        .style("stroke-opacity", ".33")
+        .style("stroke", "#768CFF")
+        // .style("stroke-opacity", ".33")
         .on("mouseover", function() { d3.select(this).style("stroke-opacity", ".5") } )
         .on("mouseout", function() { d3.select(this).style("stroke-opacity", ".2") } )
         .style("stroke-width", function (d) {
@@ -127,6 +127,7 @@ const NewSankey = () => {
             return d.dy / 2;
         })
         .attr("dy", ".35em")
+        .style("font-size","15px")
         .attr("text-anchor", "end")
         .attr("text-shadow", "0 1px 0 #fff")
         .attr("transform", null)
@@ -157,23 +158,23 @@ const NewSankey = () => {
         return {
             "nodes": [{
             "node": 0,
-            "name": "node0",
-            "value" : "30%"
+            "name": "Paid",
+            "Color" : "red"
         }, {
             "node": 1,
-            "name": "node1"
+            "name": "Oragnic"
         }, {
             "node": 2,
-            "name": "node2"
+            "name": "Guest"
         }, {
             "node": 3,
-            "name": "node3"
+            "name": "Signup"
         }, {
             "node": 4,
-            "name": "node4"
+            "name": "Exit"
         }, {
             "node": 5,
-            "name": "node5"
+            "name": "Search"
         }],
             "links": [{
             "source": 0,
