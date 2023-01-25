@@ -10,7 +10,7 @@ const FrontBar = (props) => {
 
     const { data, total, toggleValue } = props
     const ref = useRef();
-    console.log(toggleValue);
+    // console.log(toggleValue);
     const width = 215;
 
     const margin = {
@@ -46,7 +46,7 @@ const FrontBar = (props) => {
             .attr('width', xScale(data))
             .attr('fill', '#C996EB')
             .attr('height', 20);
-            // 
+            
         d3.select(node)
             .append('text')
             .attr('class', 'amount')

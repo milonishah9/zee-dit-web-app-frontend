@@ -85,7 +85,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                         }
                                         
                                     }else{
-                                        return <td key={index}><HSbar data={data}/></td>
+                                        return <td key={index}><HSbar data={data} toggleValue={toggleValue}/></td>
                                     }
                                     
                                 })}
