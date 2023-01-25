@@ -9,7 +9,10 @@ const GuageChart = (props) => {
 
     const svgRef = useRef();
 
-    const width = 900, height = 500;
+    // console.log(svgRef.current.getBoundingClientRect())
+    const width = 900,
+        height = 0.56 * width;
+    // height = 500;
     const centerX = width / 2, centerY = height / 2;
     const mouthRadious = 235;
     const mouthWidth = 45;
@@ -34,8 +37,9 @@ const GuageChart = (props) => {
         let svg = d3
             .select(svgRef.current)
             .classed("guage-chart-svg-container", true)
-            .attr("viewBox", "90 -130 750 405")
+            .attr("viewBox", "90 -119 750 405")
             // .attr("viewBox", "90 -130 900 405")
+            .attr('preserveAspectRatio', 'xMinYMin')
             .append("g")
             .attr("transform",
                 `translate(${centerX}, ${centerY})`);

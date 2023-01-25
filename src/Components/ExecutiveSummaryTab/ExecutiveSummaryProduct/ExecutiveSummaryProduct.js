@@ -19,10 +19,9 @@ const ExecutiveSummaryContent = () => {
                 <div onClick={() => setActiveTab('ott')} className={activeTab === 'ott' ? ("executive-summary-content-active-tab") : ("executive-summary-content-tab")}>Quality of Experience</div>
             </div>
 
-            <div>
-                {activeTab === 'linear' && <CenteredTree /> }
-                {activeTab === 'ott' &&  <ProductQualityOfExperience/> }
-
+            <div className="executive-summary-content-container">
+                {activeTab === 'linear' && <CenteredTree />}
+                {activeTab === 'ott' && <ProductQualityOfExperience />}
             </div>
         </div>
     )

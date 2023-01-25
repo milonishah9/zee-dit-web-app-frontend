@@ -1,18 +1,15 @@
-// import React from "react";
 
-// import { width } from '@mui/system';
-import { useRef } from 'react';
-import ReactSpeedometer from 'react-d3-speedometer';
+// import ReactSpeedometer from 'react-d3-speedometer';
 import BarChart from '../../Charts/BarChart/BarChart';
 import GuageChart from '../../Charts/GuageChart/GuageChart';
+
 import './ProductQualityOfExperience.css';
-import * as d3 from 'd3';
 
 const ProductQualityOfExperience = () => {
     // let { width, height } = wrapperRef.current.getBoundingClientRect();
     return (
         <div className='product-qual-experience-cont'>
-            <div className='product-qual-experience-subdiv'>
+            <div className='product-qual-experience-subdiv-first'>
                 <h5 className='product-qual-experience-subdiv-h5'>Start -up Experience</h5>
                 <div className='product-qual-experience-subdiv-tile-cont'>
                     <div className='product-qual-experience-subdiv-tile'>
@@ -220,7 +217,7 @@ const ProductQualityOfExperience = () => {
                 </div>
             </div>
 
-            <div className='product-qual-experience-subdiv'>
+            <div className='product-qual-experience-subdiv-second'>
                 <h5 className='product-qual-experience-subdiv-h5'>Player Experience</h5>
                 <div className='product-qual-experience-subdiv-tile-cont'>
                     <div className='product-qual-experience-subdiv-tile'>
