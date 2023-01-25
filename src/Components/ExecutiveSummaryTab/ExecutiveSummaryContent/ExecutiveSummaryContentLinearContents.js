@@ -78,7 +78,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                     if(typeof(data) === 'number'){
                                         if(toggleValue === true){
                                             data = ((data/myTotal)*100).toFixed(0)
-                                            total = 100
+                                            total = 100 
                                             return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
                                         }else{
                                             return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
@@ -89,63 +89,11 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                     }
                                     
                                 })}
-                                {/* <td><FrontBar data={100} total={total} /></td>
-                                <td><FrontBar data={300} total={total} /></td>
-                                <td><FrontBar data={200} total={total} /></td>
-                                <td><FrontBar data={300} total={total} /></td>
-                                <td><FrontBar data={420} total={total} /></td> */}
                             </tr>
                         )
                         
                     })}
-                    {/* <tr className="executive-summary-content-linear-contents-t-body-rows">
-                        <td>Bhagya Lakshmi</td>
-                        <td><FrontBar data={220} total={total} /></td>
-                        <td><FrontBar data={340} total={total} /></td>
-                        <td><FrontBar data={290} total={total} /></td>
-                        <td><FrontBar data={320} total={total} /></td>
-                        <td><FrontBar data={320} total={total} /></td>
-                    </tr>
-                    <tr className="executive-summary-content-linear-contents-t-body-rows">
-                        <td>Kumkum Bhagya</td>
-                        <td><FrontBar data={100} total={total} /></td>
-                        <td><FrontBar data={300} total={total} /></td>
-                        <td><FrontBar data={200} total={total} /></td>
-                        <td><FrontBar data={300} total={total} /></td>
-                        <td><FrontBar data={420} total={total} /></td>
-                    </tr>
-                    <tr className="executive-summary-content-linear-contents-t-body-rows">
-                        <td>Meet</td>
-                        <td><FrontBar data={100} total={total} /></td>
-                        <td><FrontBar data={300} total={total} /></td>
-                        <td><FrontBar data={200} total={total} /></td>
-                        <td><FrontBar data={300} total={total} /></td>
-                        <td><FrontBar data={420} total={total} /></td>
-                    </tr>
-                    <tr className="executive-summary-content-linear-contents-t-body-rows">
-                        <td>Radha Mohan</td>
-                        <td><FrontBar data={100} total={total} /></td>
-                        <td><FrontBar data={300} total={total} /></td>
-                        <td><FrontBar data={200} total={total} /></td>
-                        <td><FrontBar data={300} total={total} /></td>
-                        <td><FrontBar data={420} total={total} /></td>
-                    </tr>
-                    <tr className="executive-summary-content-linear-contents-t-body-rows">
-                        <td>Mithai</td>
-                        <td><FrontBar data={100} total={total} /></td>
-                        <td><FrontBar data={300} total={total} /></td>
-                        <td><FrontBar data={200} total={total} /></td>
-                        <td><FrontBar data={300} total={total} /></td>
-                        <td><FrontBar data={420} total={total} /></td>
-                    </tr>
-                    <tr className="executive-summary-content-linear-contents-t-body-rows">
-                        <td>Brokerage Services</td>
-                        <td><FrontBar data={100} total={total} /></td>
-                        <td><FrontBar data={300} total={total} /></td>
-                        <td><FrontBar data={200} total={total} /></td>
-                        <td><FrontBar data={300} total={total} /></td>
-                        <td><FrontBar data={420} total={total} /></td>
-                    </tr> */}
+                    
                 </tbody>
             </table>
         </div>

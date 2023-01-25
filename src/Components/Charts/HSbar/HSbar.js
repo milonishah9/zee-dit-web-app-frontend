@@ -6,11 +6,11 @@ import "./HSbar.css";
 
 const HSbar = (props) => {
   var {data} = props;
-  let total = 0;
-  data.map((element, index) => {
-    total += element.value
-  })
-  console.log(data);
+  // let total = 0;
+  // data.map((element, index) => {
+  //   total += element.value
+  // })
+  // console.log(data);
   
     return (
       // <div className="hs-bar">
