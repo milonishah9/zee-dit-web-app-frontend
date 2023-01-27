@@ -99,14 +99,11 @@ const BubbleChart = (props) => {
       .data(json)
       .enter()
       .append("circle")
-      // .classed('back-img', true)
       .attr("stroke", "#945ED2")
       .attr("stroke-width", 1)
       .attr("stroke-opacity", 2)
       .attr("class", "artist")
-      .attr("fill", function (d) {
-        return "url(#" + d.Name.toLowerCase().replace(/ /g, "-") + ")";
-      })
+      .attr("fill", d => d.type === 'movie' ? ('rgb(201, 150, 235)'):('rgb(118, 140, 255)'))
       .attr("r", function (d) {
         return d.Count / 17;
       })
@@ -149,9 +146,7 @@ const BubbleChart = (props) => {
       })
 
       .on("mouseout", function () {
-        // props.onClick("");
-        // dispatch(setHoverValue(''))
-
+        d3.select(this).attr("stroke-width", 1)
         tooltip.style("visibility", "hidden");
       })
       .on("click", function (d, i) {
