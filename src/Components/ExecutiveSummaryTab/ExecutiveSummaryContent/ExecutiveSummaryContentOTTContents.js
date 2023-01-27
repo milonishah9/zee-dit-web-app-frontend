@@ -15,7 +15,8 @@ const ExecutiveSummaryContentOTTContents = () => {
             <table className="executive-summary-content-linear-contents-table">
                 <thead className="executive-summary-content-linear-contents-t-headers">
                     <tr>
-                        <th className="executive-summary-content-linear-contents-t-shows-header">Web Series</th>
+                        {/* <th className="executive-summary-content-linear-contents-t-shows-header">Web Series</th> */}
+                        <th className="executive-summary-content-linear-contents-t-shows-header">Content name</th>
                         <th className="executive-summary-content-linear-contents-t-header"># Viewers</th>
                         <th className="executive-summary-content-linear-contents-t-header">%Completion</th>
                         <th className="executive-summary-content-linear-contents-t-header"># SAWF Subscriptions<span className="exe-sum-lin-con-h-lbr"></span></th>

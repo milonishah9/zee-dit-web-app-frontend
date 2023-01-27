@@ -41,10 +41,10 @@ const ExecutiveSummaryContentLinearButtonsTabs = (props) => {
                     setFiltersActiveTab('top-10')
                     props.FilterTabValue('top-10')
                 }}>Top 10</button>
-                <button className={FiltersActiveTab === 'bottom-10' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear bdr-none")} onClick={() => {
+                {/* <button className={FiltersActiveTab === 'bottom-10' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear bdr-none")} onClick={() => {
                     setFiltersActiveTab('bottom-10')
                     props.FilterTabValue('bottom-10')
-                }}>Bottom 10</button>
+                }}>Bottom 10</button> */}
             </span>
         </div>
     )
