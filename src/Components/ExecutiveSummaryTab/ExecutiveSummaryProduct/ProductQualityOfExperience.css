@@ -25,7 +25,8 @@
 .product-qual-experience-subdiv-tile-cont {
     display: flex;
     /* flex-wrap: nowrap; */
-    height: 24vh;
+    /* height: 24vh; */
+    height: auto;
 }
 
 .product-qual-experience-subdiv-tile {
@@ -216,7 +217,7 @@
     }
 }
 
-@media only screen and (max-width: 768px) and (min-width: 500px) {
+@media only screen and (max-width: 768px) and (min-width: 540px) {
     .product-qual-experience-subdiv-tile-cont {
         flex-direction: column;
         height: auto;
@@ -242,7 +243,7 @@
 
 /* Mobile and smaller screens */
 
-@media only screen and (max-width: 500px) and (min-width: 371px) {
+@media only screen and (max-width: 540px) and (min-width: 371px) {
     .product-qual-experience-subdiv-tile-cont {
         display: flex;
         flex-direction: column;

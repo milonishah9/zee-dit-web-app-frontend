@@ -1,6 +1,5 @@
-
-.guage-chart-svg-container{
+.guage-chart-svg-container {
     /* z-index: 100;
     position: relative; */
-
+    height: auto;
 }

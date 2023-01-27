@@ -44,6 +44,18 @@ const GuageChart = (props) => {
             .attr("transform",
                 `translate(${centerX}, ${centerY})`);
 
+        const scale = d3
+            .scaleLinear()
+            .range([0, 1])
+            .domain([1, 100]);
+
+        const ticks = scale.ticks(4)
+
+        const tickData = d3.range(4).map((d, index) => (index * 33) + 1);
+
+        console.log('tickData', tickData);
+        console.log('ticks', ticks);
+
         svg
             .append('path')
             .attr("d", createArc(mouthRadious + 10, mouthRadious + mouthWidth + 10, -Math.PI / 2, -Math.PI / 6))
@@ -101,6 +113,24 @@ const GuageChart = (props) => {
             .text("50%")
             .attr("transform", `translate(-60, -50)`)
             .classed('guage-chart-value', true);
+
+        // let lg = svg
+        //     .selectAll("text")
+        //     .data(ticks)
+        //     .enter()
+        //     .append('text')
+        //     .attr('transform', function (d) {
+        //         console.log('d', d);
+        //         var ratio = scale(d);
+
+        //         console.log("ratio", ratio);
+
+        //         var newAngle = 180 - ((1 - ratio) * 100);
+        //         return 'rotate(' + newAngle + ') translate(0,' + (mouthRadious + mouthWidth + 50) + ')';
+        //     })
+        //     .text(d3.format('d'))
+        //     .style("font-size", "30px")
+        //     .style("font-weight", "600")
 
     }, []);
 
