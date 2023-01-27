@@ -10,7 +10,7 @@ const FrontBar = (props) => {
 
     const { data, total, toggleValue } = props
     const ref = useRef();
-    console.log(toggleValue);
+    // console.log(toggleValue);
     const width = 215;
 
     const margin = {
@@ -46,13 +46,13 @@ const FrontBar = (props) => {
             .attr('width', xScale(data))
             .attr('fill', '#C996EB')
             .attr('height', 20);
-            // 
+
         d3.select(node)
             .append('text')
             .attr('class', 'amount')
             .attr('y', 14)
             .attr('x', 10)
-            .text(toggleValue === true ? (((data/total)*100).toFixed(2)) : (data));
+            .text((data));
 
         // // .attr('y', barHeight)
         // .attr('dx', -10)
@@ -81,7 +81,7 @@ const FrontBar = (props) => {
                     <g className="budget-bar-group">
                         <rect x="0" y="0" width={width} height={barHeight} rx="0" ry="0" opacity="0.2" fill="#5d6dff" />
                         <text x={width} y="32" dy="-18" dx="-30">
-                            {total}
+                            { toggleValue ===true ? (total + '%') : (total) }
                         </text>
                     </g>
                     {/* <FrontBar

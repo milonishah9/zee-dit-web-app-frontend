@@ -30,6 +30,12 @@ const RND = props => {
     } 
 
     return (
+
+
+      
+
+
+
         <div className="App">
           <div className="sankeys">
             <img className="image" src={RNDIMAGE} useMap="#planetmap" />
