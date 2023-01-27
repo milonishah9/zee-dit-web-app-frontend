@@ -74,7 +74,7 @@ const BubbleChart = (props) => {
           .forceCollide(function (d) {
             return d.Count / 17;
           })
-          .iterations(100 * 40)
+          .iterations(100 * 23)
       );
 
     var defs = svg.append("svg:defs");
