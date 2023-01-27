@@ -3,3 +3,13 @@
     font-size: 25px;
 }
 /* style={{ verticalAlign: 'top' ,    fontSize: '25px'}} */
+
+.percent-green{
+    fill: rgb(2, 207, 2);
+    font-size: 13.5px;
+}
+
+.percent-red {
+    fill: red;
+    font-size: 13.5px;
+}
