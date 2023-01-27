@@ -19,7 +19,7 @@ const ExecutiveSummaryContentOtt = (props) => {
       type: "movie",
       category: "original",
       Count: 589.17,
-      img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         [
           { value: 10, color: "#43bcff" },
@@ -51,7 +51,7 @@ const ExecutiveSummaryContentOtt = (props) => {
       type: "tv show",
       category: "original",
       Count: 491.58,
-      img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         120,
         430,
@@ -70,7 +70,7 @@ const ExecutiveSummaryContentOtt = (props) => {
       type: "movie",
       category: "original",
       Count: 469.6,
-      img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         223,
         140,
@@ -88,7 +88,7 @@ const ExecutiveSummaryContentOtt = (props) => {
       Name: "Abhay",
       type: "tv show",
       Count: 439.94,
-      img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         120,
         430,
@@ -106,7 +106,7 @@ const ExecutiveSummaryContentOtt = (props) => {
       Name: "Rangbaaz",
       type: "movie",
       Count: 437.68,
-      img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         120,
         140,
@@ -125,7 +125,7 @@ const ExecutiveSummaryContentOtt = (props) => {
       type: "tv show",
       category: "original",
       Count: 427.3,
-      img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         320,
         230,
@@ -143,7 +143,7 @@ const ExecutiveSummaryContentOtt = (props) => {
       Name: "Triplling",
       type: "tv show",
       Count: 400.64,
-      img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         120,
         230,
@@ -162,7 +162,7 @@ const ExecutiveSummaryContentOtt = (props) => {
       type: "movie",
       category: "original",
       Count: 391.6,
-      img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         120,
         230,
@@ -180,7 +180,7 @@ const ExecutiveSummaryContentOtt = (props) => {
       Name: "Country Mafia",
       type: "tv show",
       Count: 351.28,
-      img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         120,
         230,
@@ -199,7 +199,7 @@ const ExecutiveSummaryContentOtt = (props) => {
       type: "movie",
       category: "original",
       Count: 350.7,
-      img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         120,
         230,
@@ -217,7 +217,7 @@ const ExecutiveSummaryContentOtt = (props) => {
       Name: "Broken",
       type: "tv show",
       Count: 349.8,
-      img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         130,
         230,
@@ -236,7 +236,7 @@ const ExecutiveSummaryContentOtt = (props) => {
       type: "movie",
       category: "original",
       Count: 349.7,
-      img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         130,
         140,
@@ -255,7 +255,7 @@ const ExecutiveSummaryContentOtt = (props) => {
       type: "tv show",
       category: "original",
       Count: 348.15,
-      img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
+      // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         120,
         230,
