@@ -81,7 +81,7 @@ const FrontBar = (props) => {
                     <g className="budget-bar-group">
                         <rect x="0" y="0" width={width} height={barHeight} rx="0" ry="0" opacity="0.2" fill="#5d6dff" />
                         <text x={width} y="32" dy="-18" dx="-30">
-                            { toggleValue ===true ? (total + '%') : (total) }
+                            { toggleValue === true ? (total-data + '%') : (total - data) }
                         </text>
                     </g>
                     {/* <FrontBar
