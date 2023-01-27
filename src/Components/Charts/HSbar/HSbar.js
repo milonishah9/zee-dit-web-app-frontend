@@ -5,9 +5,10 @@ import "./HSbar.css";
 
 
 const HSbar = (props) => {
-  var {data} = props;
+  var {data,totalValueArr} = props;
   let total = 0;
   let totalValue = []
+  console.log(totalValueArr);
   // totalValue.push(data.map(element => {
     
   //   return total += element.value;
@@ -20,13 +21,14 @@ const HSbar = (props) => {
   // console.log(totalValue);
   // console.log(data);
     return (
-      // <div className="hs-bar">
+      <div className="hs-bar">
         <HSBar
           showTextIn
           data={data}
           className="hs-bar"
         />
-      // </div>
+        <span>{totalValueArr}</span>
+      </div>
     );
   }
 
