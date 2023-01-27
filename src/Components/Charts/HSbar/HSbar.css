@@ -12,3 +12,11 @@
     fill: black !important;
     /* font-weight: 100 !important; */
 }
+
+.ttlval{
+    font-size: 11px;
+    margin-top: 2px;
+    margin-left: -21px;
+    position: absolute;
+}
+

@@ -27,7 +27,7 @@ const HSbar = (props) => {
           data={data}
           className="hs-bar"
         />
-        <span>{totalValueArr}</span>
+        <span className="ttlval">{totalValueArr}</span>
       </div>
     );
   }
