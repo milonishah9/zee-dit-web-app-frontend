@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 // import Sankey from "../../Charts/SankeyChart/RND";
-import Sankey from "../../Charts/SankeyChart/NewSankey/NewSankey";
+// import Sankey from "../../Charts/SankeyChart/NewSankey/NewSankey";
 import "./ExecutiveSummaryConsumer.css"
 
 
@@ -22,7 +22,7 @@ const ExecutiveSummaryConsumer = (props) => {
         {/* <button onClick={() => setEditMode(!editMode)}>Edit Mode</button> */}
       </div>
       <div className="sankey">
-        <Sankey />
+        {/* <Sankey /> */}
       </div>
     </div>
   );

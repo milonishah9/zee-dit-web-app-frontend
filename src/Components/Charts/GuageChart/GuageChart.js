@@ -44,17 +44,17 @@ const GuageChart = (props) => {
             .attr("transform",
                 `translate(${centerX}, ${centerY})`);
 
-        const scale = d3
-            .scaleLinear()
-            .range([0, 1])
-            .domain([1, 100]);
+        // const scale = d3
+        //     .scaleLinear()
+        //     .range([0, 1])
+        //     .domain([1, 100]);
 
-        const ticks = scale.ticks(4)
+        // const ticks = scale.ticks(4)
 
-        const tickData = d3.range(4).map((d, index) => (index * 33) + 1);
+        // const tickData = d3.range(4).map((d, index) => (index * 33) + 1);
 
-        console.log('tickData', tickData);
-        console.log('ticks', ticks);
+        // console.log('tickData', tickData);
+        // console.log('ticks', ticks);
 
         svg
             .append('path')
