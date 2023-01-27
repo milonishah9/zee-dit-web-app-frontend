@@ -9,7 +9,10 @@ const GuageChart = (props) => {
 
     const svgRef = useRef();
 
-    const width = 900, height = 500;
+    // console.log(svgRef.current.getBoundingClientRect())
+    const width = 900,
+        height = 0.56 * width;
+    // height = 500;
     const centerX = width / 2, centerY = height / 2;
     const mouthRadious = 235;
     const mouthWidth = 45;
@@ -34,11 +37,24 @@ const GuageChart = (props) => {
         let svg = d3
             .select(svgRef.current)
             .classed("guage-chart-svg-container", true)
-            .attr("viewBox", "90 -130 750 405")
+            .attr("viewBox", "90 -119 750 405")
             // .attr("viewBox", "90 -130 900 405")
+            .attr('preserveAspectRatio', 'xMinYMin')
             .append("g")
             .attr("transform",
                 `translate(${centerX}, ${centerY})`);
+
+        const scale = d3
+            .scaleLinear()
+            .range([0, 1])
+            .domain([1, 100]);
+
+        const ticks = scale.ticks(4)
+
+        const tickData = d3.range(4).map((d, index) => (index * 33) + 1);
+
+        console.log('tickData', tickData);
+        console.log('ticks', ticks);
 
         svg
             .append('path')
@@ -97,6 +113,24 @@ const GuageChart = (props) => {
             .text("50%")
             .attr("transform", `translate(-60, -50)`)
             .classed('guage-chart-value', true);
+
+        // let lg = svg
+        //     .selectAll("text")
+        //     .data(ticks)
+        //     .enter()
+        //     .append('text')
+        //     .attr('transform', function (d) {
+        //         console.log('d', d);
+        //         var ratio = scale(d);
+
+        //         console.log("ratio", ratio);
+
+        //         var newAngle = 180 - ((1 - ratio) * 100);
+        //         return 'rotate(' + newAngle + ') translate(0,' + (mouthRadious + mouthWidth + 50) + ')';
+        //     })
+        //     .text(d3.format('d'))
+        //     .style("font-size", "30px")
+        //     .style("font-weight", "600")
 
     }, []);
 
