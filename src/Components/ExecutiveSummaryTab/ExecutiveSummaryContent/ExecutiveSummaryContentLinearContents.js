@@ -48,7 +48,8 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                 <h6 className="executive-summary-content-linear-contents-header">Impact on Monetization</h6>
             </div> */}
 
-            {buttonTab === 'linear' ? <div className="executive-summary-content-linear-contents-headers">
+            {
+                buttonTab === 'linear' ? <div className="executive-summary-content-linear-contents-headers">
                 {<h6 className="executive-summary-content-linear-contents-header">Reach & Ratings</h6>}
                 <h6 className="executive-summary-content-linear-contents-header">Impact on Consumer Journey</h6>
                 <h6 className="executive-summary-content-linear-contents-header">Impact on Monetization</h6>
