@@ -146,12 +146,12 @@ const BubbleChart = (props) => {
       })
 
       .on("mouseout", function () {
-        d3.select(this).attr("stroke-width", 1)
-        dispatch(setHoverValue(''));
+        // d3.select(this).attr("stroke-width", 1)
         tooltip.style("visibility", "hidden");
       })
       .on("click", function (d, i) {
         dispatch(setHoverValue(d.Name));
+        d3.selectAll('.artist').attr("stroke-width", 1)
         d3.select(this).attr("stroke-width", 2);
       });
 
