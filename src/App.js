@@ -15,7 +15,6 @@ import DivergingSB from './Components/Charts/DivergingSB/DivergingSB';
 
 
 
-
 function App() {
   return (
     <div className="App">
