@@ -57,7 +57,7 @@ const ExecutiveSummaryContentLinear = () => {
             <div>
                 {activeTab === 'all-content' && <BubbleChart files={sortedFiles} />}
                 {activeTab === 'top-10' && <BubbleChart files={top10files} />}
-                {activeTab === 'bottom-10' && <BubbleChart files={bottom10files} />}
+                {/* {activeTab === 'bottom-10' && <BubbleChart files={bottom10files} />} */}
             </div>
             
         </div>

@@ -223,3 +223,10 @@ input[type="checkbox"]:checked {
     width: 37.5%;
   }
 }
+b.text {
+  font-family: GothamMedium;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 10px;
+  font-weight: bold;
+}
