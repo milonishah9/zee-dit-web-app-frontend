@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
+import SankeyChartForConsumer from "../../Charts/SankeyChart/SankeyChartForConsumer/SankeyChartForConsumer";
 // import Sankey from "../../Charts/SankeyChart/RND";
 // import Sankey from "../../Charts/SankeyChart/NewSankey/NewSankey";
 import "./ExecutiveSummaryConsumer.css"
@@ -23,6 +24,7 @@ const ExecutiveSummaryConsumer = (props) => {
       </div>
       <div className="sankey">
         {/* <Sankey /> */}
+        <SankeyChartForConsumer />
       </div>
     </div>
   );

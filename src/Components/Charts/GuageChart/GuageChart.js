@@ -114,6 +114,30 @@ const GuageChart = (props) => {
             .attr("transform", `translate(-60, -50)`)
             .classed('guage-chart-value', true);
 
+        svg
+            .append("text")
+            .text("0")
+            .attr("transform", `translate(-325, 0)`)
+            .classed('guage-chart-ticks', true);
+
+        svg
+            .append("text")
+            .text("40")
+            .attr("transform", `translate(-180, -270)`)
+            .classed('guage-chart-ticks', true);
+
+        svg
+            .append("text")
+            .text("60")
+            .attr("transform", `translate(130, -270)`)
+            .classed('guage-chart-ticks', true)
+
+        svg
+            .append("text")
+            .text("100")
+            .attr("transform", `translate(300, 0)`)
+            .classed('guage-chart-ticks', true);
+
         // let lg = svg
         //     .selectAll("text")
         //     .data(ticks)

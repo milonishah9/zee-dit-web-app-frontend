@@ -3,3 +3,7 @@
     position: relative; */
     height: auto;
 }
+
+.guage-chart-ticks{
+    font-size: 1.8rem;
+}
