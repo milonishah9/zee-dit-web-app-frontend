@@ -1,0 +1,11 @@
+.sankey-chart-for-consumer-container {
+    margin-top: 10rem;
+}
+
+.node-title {
+    font-size: 0.7rem;
+}
+
+.link{
+    /* stroke-width: 7px; */
+}

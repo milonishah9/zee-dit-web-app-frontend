@@ -10,13 +10,13 @@ const DivergingSB = () => {
         width = 800 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
 
-        var y = d3.scale.ordinal()
+        var y = d3.scaleOrdinal()
         .rangeRoundBands([0, height], .3);
 
-        var x = d3.scale.linear()
+        var x = d3.scaleLinear()
         .rangeRound([0, width]);
 
-        var color = d3.scale.ordinal()
+        var color = d3.scaleOrdinal()
         .range(["#c7001e", "#f6a580", "#cccccc", "#92c6db", "#086fad"]);
 
         var xAxis = d3.svg.axis()

@@ -2,12 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 98%;
-    /* justify-content: space-around; */
-    /* align-items: center; */
     margin: 1.25rem;
-    /* margin: auto;
-    margin-top: 10px; */
-
 }
 
 .product-qual-experience-subdiv {
@@ -15,7 +10,6 @@
     flex-direction: column;
     margin-top: 0.5rem;
     margin-bottom: 2rem;
-    /* width: 100%; */
 }
 
 .product-qual-experience-subdiv-h5 {
@@ -25,12 +19,14 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 15px;
+    margin-top: 10px;
 }
 
 .product-qual-experience-subdiv-tile-cont {
     display: flex;
-    flex-wrap: wrap;
-    height: 24vh;
+    /* flex-wrap: nowrap; */
+    /* height: 24vh; */
+    height: auto;
 }
 
 .product-qual-experience-subdiv-tile {
@@ -39,9 +35,17 @@
     box-shadow: 0px 2px 5px #D6DEF8;
     border-radius: 4px;
     justify-content: space-around;
-    width: 24.3%;
-    min-width: 20%;
+    width: 49.6%;
+    /* min-width: 15%; */
     margin-right: 10px;
+    /* height: 25vh; */
+    min-height: 195px;
+}
+
+.product-qual-experience-subdiv-tile-left-grp,
+.product-qual-experience-subdiv-tile-right-grp {
+    display: flex;
+    width: 50%;
 }
 
 .product-qual-experience-subdiv-tile-title {
@@ -56,7 +60,7 @@
 
 .product-qual-experience-subdiv-tile-value {
     font-family: 'GothamLight';
-    margin: 0.2rem 0.6rem 0;
+    margin: 0.4rem 0.6rem 0;
     font-size: 2rem;
     line-height: 2rem;
     color: #333333;
@@ -68,12 +72,25 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin: 0.6rem 0.6rem 0;
+    margin: 0.2rem 0.6rem 0;
 }
 
 .product-qual-experience-subdiv-tile-chart-value-lhs {
     width: 35%;
     min-width: 35%;
+}
+
+.product-qual-experience-subdiv-tile-chart-value-barchart {
+    top: 50px;
+}
+
+.product-qual-experience-subdiv-tile-chart-value-rhs {
+    width: 65%;
+    /* min-width: 35%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: static; */
 }
 
 .product-qual-experience-subdiv-tile-chart-value-valdiv {
@@ -114,4 +131,176 @@
 .product-qual-experience-subdiv-tile-chart-value-status-neg svg,
 .product-qual-experience-subdiv-tile-chart-value-status-pos svg {
     margin: 0 4px;
+}
+
+.guage-chart-value {
+    font-size: 4.5rem;
+    line-height: 5rem;
+    /* font-family: 'GothamBold'; */
+    font-family: 'GothamLight';
+    font-weight: 700;
+}
+
+
+/* Desktop */
+@media only screen and (min-width: 1561px) {}
+
+/* Laptop and bigger screens */
+@media only screen and (max-width: 1560px) and (min-width: 1421px) {}
+
+@media only screen and (max-width: 1420px) and (min-width: 1317px) {
+
+    .product-qual-experience-subdiv-tile-chart-value-status-pos,
+    .product-qual-experience-subdiv-tile-chart-value-status-neg {
+        width: 110%;
+    }
+
+    .product-qual-experience-subdiv-tile-title {
+        margin: 0.7rem 0rem 0 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 1317px) and (min-width: 1280px) {
+
+    .product-qual-experience-subdiv-tile-chart-value-status-pos,
+    .product-qual-experience-subdiv-tile-chart-value-status-neg {
+        width: 120%;
+    }
+
+    .product-qual-experience-subdiv-tile-title {
+        margin: 0.7rem 0rem 0 0.6rem;
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 1063px) {
+
+    .product-qual-experience-subdiv-tile-chart-value-status-pos,
+    .product-qual-experience-subdiv-tile-chart-value-status-neg {
+        width: 150%;
+    }
+
+    .product-qual-experience-subdiv-tile-title {
+        margin: 0.7rem 0rem 0 0.6rem;
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+    }
+
+    .product-qual-experience-subdiv-tile-chart-value-date {
+        width: 120%;
+    }
+
+    .product-qual-experience-subdiv-tile {
+        min-height: 160px;
+
+    }
+}
+
+/* Tablets and medium screens */
+
+@media only screen and (max-width: 1063px) and (min-width: 768px) {
+
+    .product-qual-experience-subdiv-tile-cont {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .product-qual-experience-subdiv-tile-left-grp,
+    .product-qual-experience-subdiv-tile-right-grp {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-qual-experience-subdiv {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 540px) {
+    .product-qual-experience-subdiv-tile-cont {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .product-qual-experience-subdiv-tile-left-grp,
+    .product-qual-experience-subdiv-tile-right-grp {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-qual-experience-subdiv {
+        margin-bottom: 0.5rem;
+    }
+
+    .product-qual-experience-subdiv-tile-chart-value-status-pos,
+    .product-qual-experience-subdiv-tile-chart-value-status-neg,
+    .product-qual-experience-subdiv-tile-chart-value-date {
+        width: 150%;
+    }
+}
+
+
+/* Mobile and smaller screens */
+
+@media only screen and (max-width: 540px) and (min-width: 371px) {
+    .product-qual-experience-subdiv-tile-cont {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .product-qual-experience-subdiv-tile {
+        width: 100%;
+        margin-bottom: 0.7rem;
+    }
+
+    .product-qual-experience-subdiv {
+        margin-bottom: 0.5rem;
+    }
+
+    .product-qual-experience-subdiv-tile-left-grp,
+    .product-qual-experience-subdiv-tile-right-grp {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 371px) {
+    .product-qual-experience-subdiv-tile-cont {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .product-qual-experience-subdiv-tile {
+        width: 100%;
+        margin-bottom: 0.7rem;
+    }
+
+    .product-qual-experience-subdiv-tile-title {
+        margin: 0.7rem 0rem 0 0.6rem;
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+    }
+
+    .product-qual-experience-subdiv-tile-chart-value-date,
+    .product-qual-experience-subdiv-tile-chart-value-status-pos,
+    .product-qual-experience-subdiv-tile-chart-value-status-neg {
+        width: 120%;
+    }
+
+    .product-qual-experience-subdiv {
+        margin-bottom: 0.5rem;
+    }
+
+    .product-qual-experience-subdiv-tile-left-grp,
+    .product-qual-experience-subdiv-tile-right-grp {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        flex-direction: column;
+    }
 }
