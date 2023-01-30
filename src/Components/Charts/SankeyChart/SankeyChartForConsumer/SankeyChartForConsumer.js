@@ -13,24 +13,20 @@ const SankeyChartForConsumer = (props) => {
     useLayoutEffect(() => {
 
         var nodeData = [
-            {id: "D3",       x: 100, y: 25},
-            {id: "Scales",   x: 25, y: 175},
-            {id: "Shapes",   x: 175, y: 175}];
-            // { id: "Organic", x: 25, y: 25 },
-            // { id: "Paid", x: 175, y: 25 },
-            // { id: "Guest", x: 25, y: 225 },
-            // { id: "Sign-up", x: 175, y: 225 },
-            // { id: "Explore", x: 25, y: 425 },
-            // { id: "Search", x: 175, y: 425 },
-        
+            // { id: "D3", x: 100, y: 25 },
+            { id: "Organic", x: 25, y: 25 },
+            { id: "Paid", x: 175, y: 25 },
+            { id: "Guest", x: 25, y: 225 },
+            { id: "Sign-up", x: 175, y: 225 },
+            { id: "Explore", x: 25, y: 425 },
+            { id: "Search", x: 175, y: 425 },
+        ];
 
         var linkData = [
-            {source: [80,25], target: [175,175]},   // D3 -> Shapes
-            {source: [80,25], target: [25,175]} // D3 -> Scales
-            // { source: [25, 35], target: [175, 215], fill: "#74CDFF" },   // D3 -> Shapes
-            // { source: [175, 35], target: [25, 215], fill: "#768CFF" },
-            // { source: [20, 235], target: [25, 415], fill: "#FFB78E" },
-            // { source: [25, 235], target: [175, 415], fill: "#40BCBC" },
+            { source: [25, 35], target: [175, 215], fill: "#74CDFF" },   // D3 -> Shapes
+            { source: [175, 35], target: [25, 215], fill: "#768CFF" },
+            { source: [20, 235], target: [25, 415], fill: "#FFB78E" },
+            { source: [25, 235], target: [175, 415], fill: "#40BCBC" },
         ]; // D3 -> Scales
 
         // Begin making the horizontal link diagram
