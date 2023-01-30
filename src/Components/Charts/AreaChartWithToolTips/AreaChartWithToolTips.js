@@ -133,6 +133,7 @@ const AreaChartWithToolTips = (props) => {
             .style('visibility', 'hidden')
             .classed('hoverText', true);
 
+            
         tooltip.selectAll("*").remove();
 
         svg.on('mouseover', mouseOver);
