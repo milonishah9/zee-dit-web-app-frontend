@@ -14,19 +14,23 @@ const SankeyChartForConsumer = (props) => {
 
         var nodeData = [
             // { id: "D3", x: 100, y: 25 },
-            { id: "Organic", x: 25, y: 25 },
-            { id: "Paid", x: 175, y: 25 },
-            { id: "Guest", x: 25, y: 225 },
-            { id: "Sign-up", x: 175, y: 225 },
-            { id: "Explore", x: 25, y: 425 },
-            { id: "Search", x: 175, y: 425 },
+            { id: "Organic", x: 25, y: 25, value: 70.38 },
+            { id: "Paid", x: 175, y: 25, value: 79.9 },
+            { id: "Guest", x: 25, y: 225, value: 122.9 },
+            { id: "Sign-up", x: 175, y: 225, value: 27.4 },
+            { id: "Explore", x: 25, y: 425, value: 86.71 },
+            { id: "Search", x: 175, y: 425, value: 33.21 },
+            // { id: "Exit", x: 0, y: 425 },
+            { id: "Exit", x: 250, y: 425, value: 5.5 },
         ];
 
         var linkData = [
             { source: [25, 35], target: [175, 215], fill: "#74CDFF" },   // D3 -> Shapes
             { source: [175, 35], target: [25, 215], fill: "#768CFF" },
             { source: [20, 235], target: [25, 415], fill: "#FFB78E" },
-            { source: [25, 235], target: [175, 415], fill: "#40BCBC" },
+            { source: [25, 235], target: [175, 415], fill: "#FFB78E" },
+            { source: [175, 235], target: [25, 415], fill: "#40BCBC" },
+            { source: [175, 235], target: [250, 415], fill: "#40BCBC" },
         ]; // D3 -> Scales
 
         // Begin making the horizontal link diagram
@@ -51,6 +55,7 @@ const SankeyChartForConsumer = (props) => {
             .attr("cx", d => d.y)
             .attr("cy", d => d.x)
             .attr("fill", "#3E1F76")
+            // .attr("opacity", "0.5")
             .classed("circle", true);
 
         d3.select(svgRef.current) //Adding the link paths
@@ -58,7 +63,10 @@ const SankeyChartForConsumer = (props) => {
             .data(linkData)
             .join("path")
             .attr("d", link)
-            .attr("fill", function (d) { return d.fill })
+            .attr("fill", "none")
+            .attr("stroke", d => d.fill)
+            .attr("stroke-width", "8px")
+            .attr("opacity", "0.5")
             .classed("link", true);
 
         d3.select(svgRef.current) //Adding the text labels
@@ -71,6 +79,17 @@ const SankeyChartForConsumer = (props) => {
             .attr("y", d => d.x + 20)
             .classed("node-title", true)
             .text(d => d.id);
+
+        // d3.select(svgRef.current) //Adding the text labels
+        //     .selectAll("text")
+        //     .data(nodeData)
+        //     .join("text")
+        //     .attr("font-size", "12px")
+        //     .attr("text-anchor", "middle")
+        //     .attr("x", d => d.y)
+        //     .attr("y", d => d.x + 40)
+        //     .classed("node-title", true)
+        //     .attr(d => d.value);
 
         //Begin making the vertical link diagram
         // var link = d3.linkVertical();
@@ -142,7 +161,7 @@ const SankeyChartForConsumer = (props) => {
 
     return (
         <div className='sankey-chart-for-consumer-container'>
-            <svg ref={svgRef} width="500" height="300"></svg>
+            <svg ref={svgRef} width="500" height="500"></svg>
             {/* <svg id='quickDemoR' width="200" height="200"></svg> */}
         </div>
     )
