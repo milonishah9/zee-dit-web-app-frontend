@@ -147,6 +147,7 @@ const BubbleChart = (props) => {
 
       .on("mouseout", function () {
         d3.select(this).attr("stroke-width", 1)
+        dispatch(setHoverValue(''));
         tooltip.style("visibility", "hidden");
       })
       .on("click", function (d, i) {
