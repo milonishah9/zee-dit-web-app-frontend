@@ -5,7 +5,7 @@
 }
 
 .node-title {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
     letter-spacing: 0.3px;
     /* font-weight: 600; */
     color: #333333;
@@ -13,11 +13,47 @@
     opacity: 0.75;
 }
 
-.link{
+.node-value {
+    font-size: 0.65rem;
+    letter-spacing: 0.3px;
+    /* font-weight: 600; */
+    color: #333333;
+    font-family: 'GothamBold';
+    opacity: 0.75;
+}
+
+.node-percentage {
+    font-size: 0.5rem;
+    letter-spacing: 0.3px;
+    font-weight: 800;
+    color: #808080;
+    font-family: 'Gothamlight';
+    opacity: 0.75;
+}
+
+.node-percentage-change-pos {
+    color: #00C48C;
+    font-size: 0.45rem;
+    letter-spacing: 0.3px;
+    font-weight: 800;
+    font-family: 'Gothamlight';
+    opacity: 0.75;
+}
+
+.node-percentage-change-neg {
+    color: #FF647C;
+    font-size: 0.45rem;
+    letter-spacing: 0.3px;
+    font-weight: 800;
+    font-family: 'Gothamlight';
+    opacity: 0.75;
+}
+
+.link {
     /* stroke-width: 7px; */
     /* transform: matrix(1, 0, 0, -1, 0, 0); */
 }
 
-.circle{
+.circle {
     /* stroke: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%); */
 }

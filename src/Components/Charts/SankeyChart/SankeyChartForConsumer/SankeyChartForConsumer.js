@@ -13,23 +13,23 @@ const SankeyChartForConsumer = (props) => {
         //   const width = 1000, height = 300;
 
         var nodeData = [
-            { id: "Organic", x: 25, y: 25, value: 70.38, name: "Organic" },
-            { id: "Paid", x: 250, y: 25, value: 79.9, name: "Paid" },
-            { id: "Returning", x: 70, y: 225, value: 122.9, name: "Returning" },
-            { id: "New", x: 195, y: 225, value: 122.9, name: "New" },
-            { id: "Anonymous", x: 45, y: 425, value: 86.71, name: "Anonymous" },
-            { id: "Sign up", x: 220, y: 425, value: 33.21, name: "Sign Up" },
-            { id: "Explore", x: 90, y: 625, value: 86.71, name: "Explore" },
-            { id: "Search", x: 180, y: 625, value: 33.21, name: "Search" },
-            { id: "Exit-signup", x: 250, y: 625, value: 5.5, name: "Exit" },
-            { id: "Exit-anonymous", x: 25, y: 625, value: 5.5, name: "Exit" },
-            { id: "Subscribed", x: 100, y: 825, value: 86.71, name: "Subscribed" },
-            { id: "Watched Ads", x: 170, y: 825, value: 33.21, name: "Watched Ads" },
-            { id: "Exit-Search", x: 230, y: 825, value: 33.21, name: "Exit" },
-            { id: "Exit-Explore", x: 40, y: 825, value: 33.21, name: "Exit" },
-            { id: "Watch Premium Content", x: 110, y: 925, value: 86.71, name: "Watch Premium Content" },
-            { id: "Watch Free Content", x: 160, y: 925, value: 86.71, name: "Watch Free Content" },
-            { id: "Exit - Watch Ads", x: 225, y: 925, value: 86.71, name: "Exit" },
+            { id: "Organic", x: 25, y: 25, value: 70.38, name: "Organic", absoluteValue: 66.3, percentageValue: 46, percentageChage: -2 },
+            { id: "Paid", x: 250, y: 25, value: 79.9, name: "Paid", absoluteValue: 77.9, percentageValue: 54, percentageChage: 6 },
+            { id: "Returning", x: 70, y: 225, value: 122.9, name: "Returning", absoluteValue: 15, percentageValue: 25, percentageChage: 10 },
+            { id: "New", x: 195, y: 225, value: 122.9, name: "New", absoluteValue: 51, percentageValue: 75, percentageChage: -3 },
+            { id: "Anonymous", x: 45, y: 425, value: 86.71, name: "Anonymous", absoluteValue: 31, percentageValue: 82, percentageChage: -12 },
+            { id: "Sign up", x: 220, y: 425, value: 33.21, name: "Sign Up", absoluteValue: 66.3, percentageValue: 18, percentageChage: 7 },
+            { id: "Explore", x: 90, y: 625, value: 86.71, name: "Explore", absoluteValue: 66.3, percentageValue: 50, percentageChage: 5 },
+            { id: "Search", x: 180, y: 625, value: 33.21, name: "Search", absoluteValue: 66.3, percentageValue: 20, percentageChage: -20 },
+            { id: "Exit-signup", x: 250, y: 625, value: 5.5, name: "Exit", absoluteValue: 66.3, percentageValue: 27, percentageChage: 13 },
+            { id: "Exit-anonymous", x: 25, y: 625, value: 5.5, name: "Exit", absoluteValue: 66.3, percentageValue: 3, percentageChage: -0 },
+            { id: "Subscribed", x: 100, y: 825, value: 86.71, name: "Subscribed", absoluteValue: 54, percentageValue: 7, percentageChage: -2 },
+            { id: "Watched Ads", x: 170, y: 825, value: 33.21, name: "Watched Ads", absoluteValue: 66.3, percentageValue: 30, percentageChage: -2 },
+            { id: "Exit-Search", x: 230, y: 825, value: 33.21, name: "Exit", absoluteValue: 66.3, percentageValue: 12, percentageChage: -2 },
+            { id: "Exit-Explore", x: 40, y: 825, value: 33.21, name: "Exit", absoluteValue: 66.3, percentageValue: 51, percentageChage: -2 },
+            { id: "Watch Premium Content", x: 110, y: 925, value: 86.71, name: "Watch Premium Content", absoluteValue: 66.3, percentageValue: 3, percentageChage: -2 },
+            { id: "Watch Free Content", x: 160, y: 925, value: 86.71, name: "Watch Free Content", absoluteValue: 66.3, percentageValue: 54, percentageChage: -2 },
+            { id: "Exit - Watch Ads", x: 225, y: 925, value: 86.71, name: "Exit", absoluteValue: 66.3, percentageValue: 43, percentageChage: -2 },
         ];
 
         var linkData = [
@@ -84,7 +84,7 @@ const SankeyChartForConsumer = (props) => {
             .attr("d", link)
             .attr("fill", "none")
             .attr("stroke", d => d.fill)
-            .attr("stroke-width", "10px")
+            .attr("stroke-width", "4px")
             .attr("opacity", "0.5")
             .classed("link", true);
 
@@ -108,20 +108,59 @@ const SankeyChartForConsumer = (props) => {
             .attr("font-size", "12px")
             .attr("text-anchor", "middle")
             .attr("x", d => d.y)
-            .attr("y", d => d.x + 20)
+            .attr("y", d => d.x + 15)
             .classed("node-title", true)
             .text(d => d.name.toUpperCase());
 
+        svg
+            .selectAll("p")
+            .data(nodeData)
+            .join("text")
+            .attr("text-anchor", "middle")
+            .attr("x", d => d.y)
+            .attr("y", d => d.x + 28)
+            .classed("node-value", true)
+            .text(d => d.value);
+
+        svg
+            .selectAll("p")
+            .data(nodeData)
+            .join("text")
+            .attr("text-anchor", "middle")
+            .attr("x", d => d.y)
+            .attr("y", d => d.x + 38)
+            .classed("node-percentage", true)
+            .text(d => `(${d.percentageValue}%)`);
+
+        svg
+            .selectAll("p")
+            .data(nodeData)
+            .join("text")
+            .attr("text-anchor", "middle")
+            .attr("x", d => d.y+24)
+            .attr("y", d => d.x + 26)
+            .attr("class", d => d.percentageChage >= 0 ? "node-percentage-change-pos" : "node-percentage-change-neg")
+            // .classed("node-percentage-change", true)
+            .text(d => `${Math.abs(d.percentageChage)}%`);
+
         // svg
-        //     .append("p")
-        //     .data(nodeData)
-        //     .join("p")
-        //     .attr("font-size", "12px")
-        //     .attr("text-anchor", "middle")
-        //     .attr("x", d => d.y)
-        //     .attr("y", d => d.x + 40)
-        //     // .classed("node-title", true)
-        //     .text(d => d.id.toUpperCase());
+        // .append("p")
+        // // .selectAll("p")
+        // .data(nodeData)
+        // .join("text")
+        // .attr("x", d => d.y)
+        // .attr("y", d => d.x + 30)
+        // // .classed("node-title", true)
+        // .text(d => d.name.toUpperCase());
+
+        // svg
+        //     .append("text")
+        //     // .data(nodeData)
+        //     .attr("x", 25)
+        //     .attr("y", 50)
+        //     .text("abc")
+
+
 
     }, []);
 
