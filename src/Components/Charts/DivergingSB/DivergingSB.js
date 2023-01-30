@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import * as d3 from 'd3'
-import anychart from 'anychart-react';
 import csv from './raw_data.csv'
 import './SB.css'
 

@@ -14,6 +14,8 @@ const HSbar = (props) => {
   //   return total += element.value;
   //   // totalValue.push(total)
   // }));
+  var {data} = props;
+  
   // let total = 0;
   // data.map((element, index) => {
   //   total += element.value
