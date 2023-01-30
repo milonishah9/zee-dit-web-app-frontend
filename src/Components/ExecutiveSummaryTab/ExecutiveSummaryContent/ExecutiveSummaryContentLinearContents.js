@@ -13,6 +13,12 @@ const ExecutiveSummaryContentLinearContents = (props) => {
     let myHoverClass = 'executive-summary-content-linear-contents-t-body-rows'
     // console.log(hoverValue);
 
+      let sortedFiles = chartData.sort((r1, r2) =>
+            r1.value > r2.value ? 1 : r1.value < r2.value ? -1 : 0
+        );
+
+        console.log('sdf',sortedFiles)
+
     const handleToggleButton = (e) => {
         // console.log(e.target.checked);
         setToggleValue(e.target.checked)
@@ -23,24 +29,36 @@ const ExecutiveSummaryContentLinearContents = (props) => {
     return (
         <div className="executive-summary-content-linear-contents">
             {buttonTab !== 'linear' &&<div> 
-                <div className="executive-summ-content-ott-indicators">
+                {/* <div className="executive-summ-content-ott-indicators">
                     <p><label className="executive-summ-content-ott-blue-indicator"/>SAWF Viewers</p>
                     <p><label className="executive-summ-content-ott-yellow-indicator"/>Returning Viewers</p>
                     <p><label className="executive-summ-content-ott-darkblue-indicator"/>Remaining Viewers</p>
-                </div>
+                </div> */}
                 <div className="ott-toggle">
-                    <p>Sort by</p>
-                    <label>Absolute Value</label>
+                    <label> <b> Absolute Value</b></label>
                     <input type="checkbox" onClick={handleToggleButton}></input>
-                    <label>% Change</label>
+                    <label> <b> % Change</b></label>
                 </div>
             </div>
             }
-            <div className="executive-summary-content-linear-contents-headers">
-            {buttonTab === 'linear' ? (<h6 className="executive-summary-content-linear-contents-header">Reach & Ratings</h6>):(<h6 className="executive-summary-content-linear-contents-header">Viewers & %Completion</h6>)}
+
+            {/* <div className="executive-summary-content-linear-contents-headers">
+                {buttonTab === 'linear' ? (<h6 className="executive-summary-content-linear-contents-header">Reach & Ratings</h6>):(<h6 className="executive-summary-content-linear-contents-header">Viewers & %Completion</h6>)}
                 <h6 className="executive-summary-content-linear-contents-header">Impact on Consumer Journey</h6>
                 <h6 className="executive-summary-content-linear-contents-header">Impact on Monetization</h6>
-            </div>
+            </div> */}
+
+            {
+                buttonTab === 'linear' ? <div className="executive-summary-content-linear-contents-headers">
+                {<h6 className="executive-summary-content-linear-contents-header">Reach & Ratings</h6>}
+                <h6 className="executive-summary-content-linear-contents-header">Impact on Consumer Journey</h6>
+                <h6 className="executive-summary-content-linear-contents-header">Impact on Monetization</h6>
+                </div>:''
+            }
+
+
+            
+            
             <table className="executive-summary-content-linear-contents-table">
                 <thead className="executive-summary-content-linear-contents-t-headers">
                     
@@ -55,7 +73,8 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                     </tr>
                     ):(
                         <tr>
-                        <th className="executive-summary-content-linear-contents-t-shows-header">Web Series</th>
+                        {/* <th className="executive-summary-content-linear-contents-t-shows-header">Web Series</th> */}
+                        <th className="executive-summary-content-linear-contents-t-shows-header">Content name</th>
                         <th className="executive-summary-content-linear-contents-t-header">Viewers</th>
                         <th className="executive-summary-content-linear-contents-t-header">Viewers(>1 min watched)</th>
                         <th className="executive-summary-content-linear-contents-t-header">Viewers(>75% min watched)</th>
@@ -65,7 +84,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                     )}
                 </thead>
                 <tbody className="executive-summary-content-linear-contents-t-body">
-                    {chartData.map((element, index) => {
+                    {sortedFiles.map((element, index) => {
                         if(hoverValue === element.Name){
                             myHoverClass = 'my-row-bubble-hover'
                         }else{
@@ -81,7 +100,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                             total = 100
                                             return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
                                         }else{
-                                            return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
+                                            return <td key={index}><FrontBar percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
                                         }
                                         
                                     }else{

@@ -53,46 +53,20 @@ const BubbleChart = (props) => {
     //   .on("click", myFunction());
 
     var simulation = d3
-      .forceSimulation(9)
-      .velocityDecay(0.09999)
-      .force("x", d3.forceX(width / 2).strength(0.005))
-      .force("y", d3.forceY(height / 3.6).strength(0.09))
-      // .force("x", d3.forceX(width / 2).strength(0.01))
-      // .force("y", d3.forceY(height / 4).strength(0.06))
-      // .force('')
-      // .force(
-      //   "collide",
-      //   d3
-      //     .forceCollide(function (d) {
-      //       return d.Count / 15;
-      //     })
-      //     .iterations(100)
-      // );
+      .forceSimulation()
+      .velocityDecay(0.9)
+      .force("x", d3.forceX(width / 9).strength(0.05))
+      .force("y", d3.forceY(height / 9.5).strength(1.00099))
       .force(
         "collide",
         d3
           .forceCollide(function (d) {
             return d.Count / 17;
           })
-          .iterations(100 * 23)
+          // .iterations(100 * 23)
       );
 
     var defs = svg.append("svg:defs");
-
-    // defs
-    //   .append("svg:pattern")
-    //   .data(json)
-    //   .attr("id", "grump_avatar")
-    //   .attr("width", 1)
-    //   .attr("height", 1)
-    //   .append("svg:image")
-    //   .attr("xlink:href", function (d) {
-    //     return d.img;
-    //   })
-    //   .attr("width", 50)
-    //   .attr("height", 50)
-    //   .attr("x", 0)
-    //   .attr("y", 0);
 
     defs
       .selectAll(".img-defs")
@@ -119,20 +93,17 @@ const BubbleChart = (props) => {
       .attr("cy", function (d) {
         return d.y;
       });
-
+      
     var circles = svg
       .selectAll(".artist")
       .data(json)
       .enter()
       .append("circle")
-      // .classed('back-img', true)
       .attr("stroke", "#945ED2")
       .attr("stroke-width", 1)
       .attr("stroke-opacity", 2)
       .attr("class", "artist")
-      .attr("fill", function (d) {
-        return "url(#" + d.Name.toLowerCase().replace(/ /g, "-") + ")";
-      })
+      .attr("fill", d => d.type === 'movie' ? ('rgb(201, 150, 235)'):('rgb(118, 140, 255)'))
       .attr("r", function (d) {
         return d.Count / 17;
       })
@@ -156,9 +127,9 @@ const BubbleChart = (props) => {
       .call(
         d3
           .drag()
-          .on("start", dragstarted)
-          .on("drag", dragged)
-          .on("end", dragended)
+          // .on("start", dragstarted)
+          // .on("drag", dragged)
+          // .on("end", dragended)
       )
       .on("mouseover", function (d) {
         //tooltips
@@ -175,9 +146,7 @@ const BubbleChart = (props) => {
       })
 
       .on("mouseout", function () {
-        // props.onClick("");
-        // dispatch(setHoverValue(''))
-
+        d3.select(this).attr("stroke-width", 1)
         tooltip.style("visibility", "hidden");
       })
       .on("click", function (d, i) {
@@ -234,6 +203,34 @@ const BubbleChart = (props) => {
       })
       .call(wrap, 60);
 
+
+      // const V = d3.map(json);
+      // const I = d3.range(V.length).filter(i => V[i] > 0);
+      // const root = d3.pack()
+      // .size([width, height])
+      // .padding(2)
+      // (d3.hierarchy({ children: I })
+      //     .sum(i => V[i]));
+
+      // const leaf = svg.selectAll("a")
+      //       .data(root.leaves())
+      //       .join("a")
+      //       // .attr("xlink:href", link == null ? null : (d, i) => link(D[d.data], i, data))
+      //       // .attr("target", link == null ? null : linkTarget)
+
+        
+
+            // textCount
+            // .attr("transform", 'translate(270, 10)')
+        // .attr("transform", d => `translate(${d.x}, 200)`)
+
+        // textCount.transition()
+        //     .duration(500)
+        //     .attr("transform", d => `translate(${d.x},${d.y})`)
+
+
+
+
     //text for count in bubble
     var textCount = svg
       .selectAll(null)
@@ -249,6 +246,28 @@ const BubbleChart = (props) => {
 
     simulation.nodes(json).on("tick", ticked);
 
+    circles
+        .attr("transform", 'translate(70, 110)')
+        .attr("transform", d => `translate(390, 50)`)
+
+    // circles.transition()
+    //     .duration(1000)
+        // .attr("transform", d => `translate(${d.x},${d.y})`);
+
+    textName.attr("transform", 'translate(270, 110)')
+    .attr("transform", d => `translate(390, 50)`)
+    // textName.transition()
+    // .duration(1000)
+    // .attr("transform", d => `translate(${d.x},${d.y})`);
+
+
+    textCount.attr("transform", 'translate(270, 110)')
+    .attr("transform", d => `translate(390, 50)`)
+    // textCount.transition()
+    // .duration(1000)
+    // .attr("transform", d => `translate(${d.x},${d.y})`);
+
+
     function ticked() {
       circles
         .attr("cx", function (d) {
@@ -256,8 +275,8 @@ const BubbleChart = (props) => {
         })
         .attr("cy", function (d) {
           return d.y;
-        });
-
+        })
+    
       textName
         .attr("x", function (d) {
           return d.x;
@@ -307,7 +326,7 @@ const BubbleChart = (props) => {
   }, [json]);
 
   return (
-    <div className=" col-12">
+    <div className="col-12">
       <div className="" style={{ paddingLeft: "2%", paddingRight: "2%" }}>
         Bubble size represents Reach
         <div className="indicators">

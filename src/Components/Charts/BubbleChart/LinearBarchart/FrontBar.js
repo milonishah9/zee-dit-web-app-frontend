@@ -8,7 +8,7 @@ import { scaleLinear } from 'd3-scale';
 
 const FrontBar = (props) => {
 
-    const { data, total, toggleValue } = props
+    const { data, total, toggleValue, percent } = props
     const ref = useRef();
     // console.log(toggleValue);
     const width = 215;
@@ -31,6 +31,7 @@ const FrontBar = (props) => {
 
 
     useEffect(() => {
+        
         const xScale = scaleLinear()
             .domain([0, total])
             .range([0, width])
@@ -53,6 +54,16 @@ const FrontBar = (props) => {
             .attr('y', 14)
             .attr('x', 10)
             .text((data));
+        
+        d3.select(node)
+            .selectAll(".remaining-amount").remove()
+            
+        d3.select(node)
+            .append('text')
+            .attr('class', 'remaining-amount')
+            .attr('y', 14)
+            .attr('x', 184)
+            .text(percent ?(total-data) : (total-data + '%'));
 
         // // .attr('y', barHeight)
         // .attr('dx', -10)
@@ -80,10 +91,8 @@ const FrontBar = (props) => {
                 <g >
                     <g className="budget-bar-group">
                         <rect x="0" y="0" width={width} height={barHeight} rx="0" ry="0" opacity="0.2" fill="#5d6dff" />
-                        <text x={width} y="32" dy="-18" dx="-35">
-                            
-                            { toggleValue === true ? (<>{data > 50 ? (<tspan className="percent-green">↑</tspan>):(<tspan className="percent-red">↓</tspan>)}
-                             <tspan> {total-data}%</tspan></>) : (total - data) }
+                        <text className="remaining-amount" x={width} y="32" dy="-18" dx="-30">
+                            {/* { toggleValue ===true ? (total + '%') : (total) } */}
                         </text>
                     </g>
                     {/* <FrontBar
