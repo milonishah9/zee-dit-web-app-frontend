@@ -11,6 +11,14 @@ const ExecutiveSummaryContentLinearContents = (props) => {
     const hoverValue = useSelector(selectCount);
     const [toggleValue, setToggleValue] = useState();
 
+    var data = [{
+        category: " ",
+        negative1: -13,
+        negative2: -23,
+        positive1: 49,
+        positive2: 25
+    }];
+
     let myHoverClass = 'executive-summary-content-linear-contents-t-body-rows'
     // console.log(hoverValue);
 
@@ -29,6 +37,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
     let myTotal = total 
     return (
         <div className="executive-summary-content-linear-contents">
+            
             {buttonTab !== 'linear' &&<div> 
                 {/* <div className="executive-summ-content-ott-indicators">
                     <p><label className="executive-summ-content-ott-blue-indicator"/>SAWF Viewers</p>
@@ -85,45 +94,48 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                     )}
                 </thead>
                 <tbody className="executive-summary-content-linear-contents-t-body">
-                    {sortedFiles.map((element, index) => {
+                    <tr>
+                        <td>helllo</td>
+                        <td><DivergingSB /></td>
+                   
+                        
+                        
+                    </tr>
+                    {/* {sortedFiles.map((element, index) => {
                         if(hoverValue === element.Name){
                             myHoverClass = 'my-row-bubble-hover'
                         }else{
                             myHoverClass = 'executive-summary-content-linear-contents-t-body-rows'
                         }
                         return(
-                            <DivergingSB  /> 
-
-                            // <tr key={index} className={myHoverClass}>
-                            //     <td>{element.Name}</td>
+                            <tr key={index} className={myHoverClass}>
+                                <td>{element.Name}</td>
                                 
-                            //     {element.arr.map((data, index) => {
-                            //         if(typeof(data) === 'number'){
-                            //             if(toggleValue === true){
-                            //                 // data = ((data/myTotal)*100).toFixed(0)
-                            //                 // total = 100
-                            //                 // return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
-
-                            //                 // return <td> <DivergingSB  /> </td>
-                            //             }else{
-                            //                 return <td key={index}><FrontBar percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
-                            //             }
+                                {element.arr.map((data, index) => {
+                                    if(typeof(data) === 'number'){
+                                        if(toggleValue === true){
+                                            data = ((data/myTotal)*100).toFixed(0)
+                                            total = 100
+                                            return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
+                                        }else{
+                                            return <td key={index}><FrontBar percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
+                                        }
                                         
-                            //         }else{
-                            //             let total = 0 
-                            //             let totalValueArr = [];
-                            //             for(let i=0; i<data.length-1; i++){
-                            //                 total += data[i].value
-                            //             }
-                            //             totalValueArr.push(total)
-                            //             return <td key={index}><HSbar data={data} totalValueArr={totalValueArr}  toggleValue={toggleValue}/></td>
-                            //         }
+                                    }else{
+                                        let total = 0 
+                                        let totalValueArr = [];
+                                        for(let i=0; i<data.length-1; i++){
+                                            total += data[i].value
+                                        }
+                                        totalValueArr.push(total)
+                                        return <td key={index}><HSbar data={data} totalValueArr={totalValueArr}  toggleValue={toggleValue}/></td>
+                                    }
                                     
-                            //     })}
-                            // </tr>
+                                })}
+                            </tr>
                         )
                         
-                    })}
+                    })} */}
                     
                 </tbody>
             </table>
