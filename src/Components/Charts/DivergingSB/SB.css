@@ -1,11 +1,12 @@
 
-#chartdiv {
+/* #chartdiv {
   width: 800px;
   height: 100px;
-}
+} */
 
-#chartdiv canvas:nth-child(2){
+.chartdiv rect(1){
   display: none;
+  fill: 'red'
 }
 
 

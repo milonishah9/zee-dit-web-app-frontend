@@ -1,159 +1,172 @@
 import React, { useEffect } from "react";
 import './SB.css'
-
+import * as d3 from 'd3'
 import * as am5 from "@amcharts/amcharts5";
 import * as am5xy from "@amcharts/amcharts5/xy";
+import { async } from "q";
+import { useRef } from "react";
 
 
 
 const DivergingSB = () => {
-    // const {data} = props
-    var data = [{
-        category: " ",
-        negative1: -13,
-        negative2: -23,
-        positive1: 49,
-        positive2: 25
-    }];
+    const svgRef = useRef();
+
+    const politifact =  [
+        {speaker: "Donald Trump", ruling: "Pants on fire!", count: -20, proportion: -0.15503875968992248},
+    
+        {speaker: "Donald Trump", ruling: "Mostly false", count: -27, proportion: 0.20930232558139536},
+       ]
+    
 
     useEffect  (() => {
 
-        var root = am5.Root.new("chartdiv");
+        const chart = StackedBarChart(politifact, {
+            x: d => d.proportion,
+            y: d => d.speaker,
+            z: d => d.ruling,
+            xFormat: "+%",
+            // xLabel: "← more lies · Truthiness · more truths →",
+            yDomain: d3.groupSort(politifact, D => d3.sum(D, d => -Math.min(0, d.proportion)), d => d.speaker),
+            zDomain: politifact.rulings,
+            colors: 'red',
+            marginLeft: 70
+          })
 
-        var chart = root.container.children.push(
-        am5xy.XYChart.new(root, {
-            panX: false,
-            panY: false,
-            // wheelX: "panX",
-            // wheelY: "zoomX",
-            layout: root.horizontalLayout,
-            arrangeTooltips: false
-        })
-        );
+          function StackedBarChart(data, {
+            x = d => d, // given d in data, returns the (quantitative) x-value
+            y = (d, i) => i, // given d in data, returns the (ordinal) y-value
+            z = () => 1, // given d in data, returns the (categorical) z-value
+            title, // given d in data, returns the title text
+            marginTop = 15, // top margin, in pixels
+            marginRight = 0, // right margin, in pixels
+            marginBottom = 0, // bottom margin, in pixels
+            marginLeft = 10, // left margin, in pixels
+            width = 200, // outer width, in pixels
+            height, // outer height, in pixels
+            xType = d3.scaleLinear, // type of x-scale
+            xDomain, // [xmin, xmax]
+            xRange = [marginLeft, width - marginRight], // [left, right]
+            yDomain, // array of y-values
+            yRange, // [bottom, top]
+            yPadding = 0.1, // amount of y-range to reserve to separate bars
+            zDomain, // array of z-values
+            offset = d3.stackOffsetDiverging, // stack offset method
+            order = (series) => { // stack order method; try also d3.stackOffsetNone
+              return [ // by default, stack negative series in reverse order
+                ...series.map((S, i) => S.some(([, y]) => y < 0) ? i : null).reverse(),
+                ...series.map((S, i) => S.some(([, y]) => y < 0) ? null : i)
+              ].filter(i => i !== null);
+            },
+            xFormat, // a format specifier string for the x-axis
+            xLabel, // a label for the x-axis
+            colors = d3.schemeTableau10, // array of colors
+          } = {}) {
+            // Compute values.
+            const X = d3.map(data, x);
+            const Y = d3.map(data, y);
+            const Z = d3.map(data, z);
+          
+            // Compute default y- and z-domains, and unique them.
+            if (yDomain === undefined) yDomain = Y;
+            if (zDomain === undefined) zDomain = Z;
+            yDomain = new d3.InternSet(yDomain);
+            zDomain = new d3.InternSet(zDomain);
+          
+            // Omit any data not present in the y- and z-domains.
+            const I = d3.range(X.length).filter(i => yDomain.has(Y[i]) && zDomain.has(Z[i]));
+          
+            // If the height is not specified, derive it from the y-domain.
+            if (height === undefined) height = yDomain.size * 25 + marginTop + marginBottom;
+            if (yRange === undefined) yRange = [height - marginBottom, marginTop];
+          
+            // Compute a nested array of series where each series is [[x1, x2], [x1, x2],
+            // [x1, x2], …] representing the x-extent of each stacked rect. In addition,
+            // each tuple has an i (index) property so that we can refer back to the
+            // original data point (data[i]). This code assumes that there is only one
+            // data point for a given unique y- and z-value.
+            const series = d3.stack()
+                .keys(zDomain)
+                .value(([, I], z) => X[I.get(z)])
+                .order(order)
+                .offset(offset)
+              (d3.rollup(I, ([i]) => i, i => Y[i], i => Z[i]))
+              .map(s => s.map(d => Object.assign(d, {i: d.data[1].get(s.key)})));
+          
+            // Compute the default y-domain. Note: diverging stacks can be negative.
+            if (xDomain === undefined) xDomain = d3.extent(series.flat(2));
+          
+            // Construct scales, axes, and formats.
+            const xScale = xType(xDomain, xRange);
+            const yScale = d3.scaleBand(yDomain, yRange).paddingInner(yPadding);
+            const color = d3.scaleOrdinal(zDomain, colors);
+            const xAxis = d3.axisTop(xScale).ticks(width / 80, xFormat);
+            const yAxis = d3.axisLeft(yScale).tickSize(0);
+          
+            // Compute titles.
+            if (title === undefined) {
+              const formatValue = xScale.tickFormat(100, xFormat);
+              title = i => `${Y[i]}\n${Z[i]}\n${formatValue(X[i])}`;
+            } else {
+              const O = d3.map(data, d => d);
+              const T = title;
+              title = i => T(O[i], i, data);
+            }
+          
+            const svg = d3.select(svgRef.current)
+                .attr("width", width)
+                .attr("height", height)
+                .attr("viewBox", [0, 0, width, height])
+                .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+          
+            svg.append("g")
+                .attr("transform", `translate(0,${marginTop})`)
+                .call(xAxis)
+                .call(g => g.select(".domain").remove())
+                .call(g => g.selectAll(".tick line").clone()
+                    .attr("y2", height - marginTop - marginBottom)
+                    .attr("stroke-opacity", 0.1))
+                .call(g => g.append("text")
+                    .attr("x", xScale(0))
+                    .attr("y", -22)
+                    .attr("fill", "currentColor")
+                    .attr("text-anchor", "middle")
+                    .text(xLabel));
+          
+            const bar = svg.append("g")
+              .selectAll("g")
+              .data(series)
+              .join("g")
+                .attr("fill", ([{i}]) => color(Z[i]))
+              .selectAll("rect")
+              .data(d => d)
+              .join("rect")
+                .attr("x", ([x1, x2]) => Math.min(xScale(x1), xScale(x2)))
+                .attr("y", ({i}) => yScale(Y[i]))
+                .attr("width", ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)))
+                .attr("height", yScale.bandwidth());
+          
+            if (title) bar.append("title")
+                .text(({i}) => title(i));
+          
+            // svg.append("g")
+            //     .attr("transform", `translate(${xScale(0)},0)`)
+            //     .call(yAxis)
+                // .call(g => g.selectAll(".tick text")
+                //     .attr("dx", -3)
+                //     .attr("x", y => { // Find the minimum x-value for the corresponding y-value.
+                //       const x = d3.min(series, S => S.find(d => Y[d.i] === y)?.[0]);
+                //       return xScale(x) - xScale(0);
+                //     }));
+          
+            // return Object.assign(svg.node(), {scales: {color}});
+          }
 
-        // Use only absolute numbers
-        root.numberFormatter.set("numberFormat", "#.#s'%");
-
-        // Add legend
-        // https://www.amcharts.com/docs/v5/charts/xy-chart/legend-xy-series/
-        var legend = chart.children.push(
-        am5.Legend.new(root, {
-            centerX: am5.p50,
-            x: am5.p50
-        })
-        );
-
-        // Data
-        
-
-        // Create axes
-        // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
-        var yAxis = chart.yAxes.push(
-        am5xy.CategoryAxis.new(root, {
-            categoryField: "category",
-            renderer: am5xy.AxisRendererY.new(root, {
-            inversed: true,
-            cellStartLocation: 0.1,
-            cellEndLocation: 0.9
-            })
-        })
-        );
-
-        yAxis.data.setAll(data);
-
-        var xAxis = chart.xAxes.push(
-        am5xy.ValueAxis.new(root, {
-            calculateTotals: true,
-            min: -100,
-            max: 100,
-            renderer: am5xy.AxisRendererX.new(root, {
-            minGridDistance: 50
-            })
-        })
-        );
-
-        var xRenderer = yAxis.get("renderer");
-        xRenderer.axisFills.template.setAll({
-        fill: am5.color(0x000000),
-        fillOpacity: 0.05,
-        visible: true
-        });
-
-        // Add series
-        // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
-        function createSeries(field, name, color) {
-        var series = chart.series.push(
-            am5xy.ColumnSeries.new(root, {
-            xAxis: xAxis,
-            yAxis: yAxis,
-            name: name,
-            valueXField: field,
-            valueXShow: "valueXTotalPercent",
-            categoryYField: "category",
-            sequencedInterpolation: true,
-            stacked: true,
-            fill: color,
-            stroke: color,
-            calculateAggregates: true
-            })
-        );
-
-        series.columns.template.setAll({
-            height: am5.p100
-        });
-
-        series.bullets.push(function(root, series) {
-            return am5.Bullet.new(root, {
-            locationX: 0.5,
-            locationY: 0.5,
-            sprite: am5.Label.new(root, {
-                fill: am5.color(0xffffff),
-                centerX: am5.p50,
-                centerY: am5.p50,
-                text: "{valueX}",
-                populateText: true,
-                oversizedBehavior: "hide"
-            })
-            });
-        });
-
-        series.data.setAll(data);
-        series.appear();
-
-        return series;
-        }
-
-        var positiveColor = root.interfaceColors.get("positive");
-        var negativeColor = root.interfaceColors.get("negative");
-
-        createSeries("negative2", "Unlikely", am5.Color.lighten(negativeColor, 0.5));
-        createSeries("negative1", "Never", negativeColor);
-        createSeries("positive1", "Sometimes", am5.Color.lighten(positiveColor, 0.5));
-        createSeries("positive2", "Very often", positiveColor);
-
-        // Add legend
-        // https://www.amcharts.com/docs/v5/charts/xy-chart/legend-xy-series/
-        var legend = chart.children.push(
-        am5.Legend.new(root, {
-            centerY: am5.p50,
-            y: am5.p50,
-            layout: root.verticalLayout,
-            marginLeft: 50
-        })
-        );
-
-        legend.data.setAll(chart.series.values);
-
-        // Make stuff animate on load
-        // https://www.amcharts.com/docs/v5/concepts/animations/
-        chart.appear(1000, 100);  
-
-    },[] )
+    },[politifact] )
 
    
     return(
         // <div id="figure"> </div>
-        <div id="chartdiv"></div>
+        <svg ref={svgRef} id="chartdiv"></svg>
     );
 
 }

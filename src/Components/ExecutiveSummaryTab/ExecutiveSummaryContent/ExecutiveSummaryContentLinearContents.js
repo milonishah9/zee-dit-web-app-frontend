@@ -94,14 +94,21 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                     )}
                 </thead>
                 <tbody className="executive-summary-content-linear-contents-t-body">
-                    <tr>
+                    {/* <tr>
                         <td>helllo</td>
+                        <td><DivergingSB /></td>
+                        <td><DivergingSB /></td>
+                        <td><DivergingSB /></td>
+                        <td><DivergingSB /></td>
+                        <td><DivergingSB /></td>
+                        <td><DivergingSB /></td>
+                        <td><DivergingSB /></td>
                         <td><DivergingSB /></td>
                    
                         
                         
-                    </tr>
-                    {/* {sortedFiles.map((element, index) => {
+                    </tr> */}
+                    {sortedFiles.map((element, index) => {
                         if(hoverValue === element.Name){
                             myHoverClass = 'my-row-bubble-hover'
                         }else{
@@ -116,8 +123,11 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                         if(toggleValue === true){
                                             data = ((data/myTotal)*100).toFixed(0)
                                             total = 100
-                                            return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
+                                        return <td key={index}><DivergingSB /></td>
+
+                                            // return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
                                         }else{
+                                            
                                             return <td key={index}><FrontBar percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
                                         }
                                         
@@ -128,14 +138,16 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                             total += data[i].value
                                         }
                                         totalValueArr.push(total)
-                                        return <td key={index}><HSbar data={data} totalValueArr={totalValueArr}  toggleValue={toggleValue}/></td>
+                                        return <td key={index}><DivergingSB /></td>
+
+                                        // return <td key={index}><HSbar data={data} totalValueArr={totalValueArr}  toggleValue={toggleValue}/></td>
                                     }
                                     
                                 })}
                             </tr>
                         )
                         
-                    })} */}
+                    })}
                     
                 </tbody>
             </table>
