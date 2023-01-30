@@ -4,6 +4,7 @@ import FrontBar from "../../Charts/BubbleChart/LinearBarchart/FrontBar";
 import { useSelector } from "react-redux";
 import { selectCount } from "../../../features/HoverValues";
 import HSbar from "../../Charts/HSbar/HSbar";
+import DivergingSB from "../../Charts/DivergingSB/DivergingSB";
 
 const ExecutiveSummaryContentLinearContents = (props) => {
     const {chartData, buttonTab} = props;
@@ -91,30 +92,35 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                             myHoverClass = 'executive-summary-content-linear-contents-t-body-rows'
                         }
                         return(
-                            <tr key={index} className={myHoverClass}>
-                                <td>{element.Name}</td>
-                                {element.arr.map((data, index) => {
-                                    if(typeof(data) === 'number'){
-                                        if(toggleValue === true){
-                                            data = ((data/myTotal)*100).toFixed(0)
-                                            total = 100
-                                            return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
-                                        }else{
-                                            return <td key={index}><FrontBar percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
-                                        }
+                            <DivergingSB  /> 
+
+                            // <tr key={index} className={myHoverClass}>
+                            //     <td>{element.Name}</td>
+                                
+                            //     {element.arr.map((data, index) => {
+                            //         if(typeof(data) === 'number'){
+                            //             if(toggleValue === true){
+                            //                 // data = ((data/myTotal)*100).toFixed(0)
+                            //                 // total = 100
+                            //                 // return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
+
+                            //                 // return <td> <DivergingSB  /> </td>
+                            //             }else{
+                            //                 return <td key={index}><FrontBar percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
+                            //             }
                                         
-                                    }else{
-                                        let total = 0 
-                                        let totalValueArr = [];
-                                        for(let i=0; i<data.length-1; i++){
-                                            total += data[i].value
-                                        }
-                                        totalValueArr.push(total)
-                                        return <td key={index}><HSbar data={data} totalValueArr={totalValueArr}  toggleValue={toggleValue}/></td>
-                                    }
+                            //         }else{
+                            //             let total = 0 
+                            //             let totalValueArr = [];
+                            //             for(let i=0; i<data.length-1; i++){
+                            //                 total += data[i].value
+                            //             }
+                            //             totalValueArr.push(total)
+                            //             return <td key={index}><HSbar data={data} totalValueArr={totalValueArr}  toggleValue={toggleValue}/></td>
+                            //         }
                                     
-                                })}
-                            </tr>
+                            //     })}
+                            // </tr>
                         )
                         
                     })}

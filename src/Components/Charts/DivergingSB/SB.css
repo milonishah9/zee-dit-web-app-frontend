@@ -1,11 +1,12 @@
-
 body {
-  font: 10px sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
+#chartdiv {
+  width: 28%;
+  height: 90px;
+}
+
+#chartdiv canvas:nth-child(2){
+  display: none;
 }

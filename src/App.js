@@ -13,7 +13,15 @@ import HSbar from './Components/Charts/HSbar/HSbar';
 import DivergingSB from './Components/Charts/DivergingSB/DivergingSB';
 
 function App() {
+  var data = [{
+    category: " ",
+    negative1: -13,
+    negative2: -23,
+    positive1: 49,
+    positive2: 25
+}];
   return (
+
     <div className="App">
       <BrowserRouter>
         <Routes>

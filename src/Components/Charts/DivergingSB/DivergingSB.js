@@ -1,159 +1,159 @@
 import React, { useEffect } from "react";
-import * as d3 from 'd3'
-import csv from './raw_data.csv'
 import './SB.css'
 
+import * as am5 from "@amcharts/amcharts5";
+import * as am5xy from "@amcharts/amcharts5/xy";
+
+
+
 const DivergingSB = () => {
+    // const {data} = props
+    var data = [{
+        category: " ",
+        negative1: -13,
+        negative2: -23,
+        positive1: 49,
+        positive2: 25
+    }];
 
+    useEffect  (() => {
+
+        var root = am5.Root.new("chartdiv");
+
+        var chart = root.container.children.push(
+        am5xy.XYChart.new(root, {
+            panX: false,
+            panY: false,
+            // wheelX: "panX",
+            // wheelY: "zoomX",
+            layout: root.horizontalLayout,
+            arrangeTooltips: false
+        })
+        );
+
+        // Use only absolute numbers
+        root.numberFormatter.set("numberFormat", "#.#s'%");
+
+        // Add legend
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/legend-xy-series/
+        var legend = chart.children.push(
+        am5.Legend.new(root, {
+            centerX: am5.p50,
+            x: am5.p50
+        })
+        );
+
+        // Data
         
-        var margin = {top: 50, right: 20, bottom: 10, left: 65},
-        width = 800 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
 
-        var y = d3.scale.ordinal()
-        .rangeRoundBands([0, height], .3);
+        // Create axes
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
+        var yAxis = chart.yAxes.push(
+        am5xy.CategoryAxis.new(root, {
+            categoryField: "category",
+            renderer: am5xy.AxisRendererY.new(root, {
+            inversed: true,
+            cellStartLocation: 0.1,
+            cellEndLocation: 0.9
+            })
+        })
+        );
 
-        var x = d3.scale.linear()
-        .rangeRound([0, width]);
+        yAxis.data.setAll(data);
 
-        var color = d3.scale.ordinal()
-        .range(["#c7001e", "#f6a580", "#cccccc", "#92c6db", "#086fad"]);
+        var xAxis = chart.xAxes.push(
+        am5xy.ValueAxis.new(root, {
+            calculateTotals: true,
+            min: -100,
+            max: 100,
+            renderer: am5xy.AxisRendererX.new(root, {
+            minGridDistance: 50
+            })
+        })
+        );
 
-        var xAxis = d3.svg.axis()
-        .scale(x)
-        .orient("top");
-
-        var yAxis = d3.svg.axis()
-        .scale(y)
-        .orient("left")
-
-        var svg = d3.select("#figure").append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .attr("id", "d3-plot")
-        .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-        color.domain(["Strongly disagree", "Disagree", "Neither agree nor disagree", "Agree", "Strongly agree"]);
-
-        d3.csv(csv, function(error, data) {
-
-        data.forEach(function(d) {
-        // calc percentages
-        d["Strongly disagree"] = +d[1]*100/d.N;
-        d["Disagree"] = +d[2]*100/d.N;
-        d["Neither agree nor disagree"] = +d[3]*100/d.N;
-        d["Agree"] = +d[4]*100/d.N;
-        d["Strongly agree"] = +d[5]*100/d.N;
-        var x0 = -1*(d["Neither agree nor disagree"]/2+d["Disagree"]+d["Strongly disagree"]);
-        var idx = 0;
-        d.boxes = color.domain().map(function(name) { return {name: name, x0: x0, x1: x0 += +d[name], N: +d.N, n: +d[idx += 1]}; });
+        var xRenderer = yAxis.get("renderer");
+        xRenderer.axisFills.template.setAll({
+        fill: am5.color(0x000000),
+        fillOpacity: 0.05,
+        visible: true
         });
 
-        var min_val = d3.min(data, function(d) {
-            return d.boxes["0"].x0;
+        // Add series
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
+        function createSeries(field, name, color) {
+        var series = chart.series.push(
+            am5xy.ColumnSeries.new(root, {
+            xAxis: xAxis,
+            yAxis: yAxis,
+            name: name,
+            valueXField: field,
+            valueXShow: "valueXTotalPercent",
+            categoryYField: "category",
+            sequencedInterpolation: true,
+            stacked: true,
+            fill: color,
+            stroke: color,
+            calculateAggregates: true
+            })
+        );
+
+        series.columns.template.setAll({
+            height: am5.p100
+        });
+
+        series.bullets.push(function(root, series) {
+            return am5.Bullet.new(root, {
+            locationX: 0.5,
+            locationY: 0.5,
+            sprite: am5.Label.new(root, {
+                fill: am5.color(0xffffff),
+                centerX: am5.p50,
+                centerY: am5.p50,
+                text: "{valueX}",
+                populateText: true,
+                oversizedBehavior: "hide"
+            })
             });
+        });
 
-        var max_val = d3.max(data, function(d) {
-            return d.boxes["4"].x1;
-            });
+        series.data.setAll(data);
+        series.appear();
 
-        x.domain([min_val, max_val]).nice();
-        y.domain(data.map(function(d) { return d.Question; }));
+        return series;
+        }
 
-        svg.append("g")
-        .attr("class", "x axis")
-        .call(xAxis);
+        var positiveColor = root.interfaceColors.get("positive");
+        var negativeColor = root.interfaceColors.get("negative");
 
-        svg.append("g")
-        .attr("class", "y axis")
-        .call(yAxis)
+        createSeries("negative2", "Unlikely", am5.Color.lighten(negativeColor, 0.5));
+        createSeries("negative1", "Never", negativeColor);
+        createSeries("positive1", "Sometimes", am5.Color.lighten(positiveColor, 0.5));
+        createSeries("positive2", "Very often", positiveColor);
 
-        var vakken = svg.selectAll(".question")
-        .data(data)
-        .enter().append("g")
-        .attr("class", "bar")
-        .attr("transform", function(d) { return "translate(0," + y(d.Question) + ")"; });
+        // Add legend
+        // https://www.amcharts.com/docs/v5/charts/xy-chart/legend-xy-series/
+        var legend = chart.children.push(
+        am5.Legend.new(root, {
+            centerY: am5.p50,
+            y: am5.p50,
+            layout: root.verticalLayout,
+            marginLeft: 50
+        })
+        );
 
-        var bars = vakken.selectAll("rect")
-        .data(function(d) { return d.boxes; })
-        .enter().append("g").attr("class", "subbar");
+        legend.data.setAll(chart.series.values);
 
-        bars.append("rect")
-        .attr("height", y.rangeBand())
-        .attr("x", function(d) { return x(d.x0); })
-        .attr("width", function(d) { return x(d.x1) - x(d.x0); })
-        .style("fill", function(d) { return color(d.name); });
+        // Make stuff animate on load
+        // https://www.amcharts.com/docs/v5/concepts/animations/
+        chart.appear(1000, 100);  
 
-        bars.append("text")
-        .attr("x", function(d) { return x(d.x0); })
-        .attr("y", y.rangeBand()/2)
-        .attr("dy", "0.5em")
-        .attr("dx", "0.5em")
-        .style("font" ,"10px sans-serif")
-        .style("text-anchor", "begin")
-        .text(function(d) { return d.n !== 0 && (d.x1-d.x0)>3 ? d.n : "" });
+    },[] )
 
-        vakken.insert("rect",":first-child")
-        .attr("height", y.rangeBand())
-        .attr("x", "1")
-        .attr("width", width)
-        .attr("fill-opacity", "0.5")
-        .style("fill", "#F5F5F5")
-        .attr("class", function(d,index) { return index%2==0 ? "even" : "uneven"; });
-
-        svg.append("g")
-        .attr("class", "y axis")
-        .append("line")
-        .attr("x1", x(0))
-        .attr("x2", x(0))
-        .attr("y2", height);
-
-        var startp = svg.append("g").attr("class", "legendbox").attr("id", "mylegendbox");
-        // this is not nice, we should calculate the bounding box and use that
-        var legend_tabs = [0, 120, 200, 375, 450];
-        var legend = startp.selectAll(".legend")
-        .data(color.domain().slice())
-        .enter().append("g")
-        .attr("class", "legend")
-        .attr("transform", function(d, i) { return "translate(" + legend_tabs[i] + ",-45)"; });
-
-        legend.append("rect")
-        .attr("x", 0)
-        .attr("width", 18)
-        .attr("height", 18)
-        .style("fill", color);
-
-        legend.append("text")
-        .attr("x", 22)
-        .attr("y", 9)
-        .attr("dy", ".35em")
-        .style("text-anchor", "begin")
-        .style("font" ,"10px sans-serif")
-        .text(function(d) { return d; });
-
-        d3.selectAll(".axis path")
-        .style("fill", "none")
-        .style("stroke", "#000")
-        .style("shape-rendering", "crispEdges")
-
-        d3.selectAll(".axis line")
-        .style("fill", "none")
-        .style("stroke", "#000")
-        .style("shape-rendering", "crispEdges")
-
-        var movesize = width/2 - startp.node().getBBox().width/2;
-        d3.selectAll(".legendbox").attr("transform", "translate(" + movesize  + ",0)");
-
-
-    });
-
-    
-      
-
+   
     return(
-        <div id="figure"> </div>
-
+        // <div id="figure"> </div>
+        <div id="chartdiv"></div>
     );
 
 }
