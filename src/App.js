@@ -11,6 +11,10 @@ import ExecutiveSummaryTab from './Components/ExecutiveSummaryTab/ExecutiveSumma
 import AreaChartWithToolTips from './Components/Charts/AreaChartWithToolTips/AreaChartWithToolTips';
 import HSbar from './Components/Charts/HSbar/HSbar';
 import DivergingSB from './Components/Charts/DivergingSB/DivergingSB';
+import Links from './Components/Charts/Links/Links';
+
+
+
 
 function App() {
   var data = [{
@@ -34,6 +38,7 @@ function App() {
           <Route path='/area-chart-with-tooltips' element={<AreaChartWithToolTips />} />
           <Route path='/hs-bar' element={<HSbar />} />
           <Route path='/new' element={<DivergingSB />} />
+          <Route path='/links' element={<Links />} />
         </Routes>
       </BrowserRouter>  
     </div>

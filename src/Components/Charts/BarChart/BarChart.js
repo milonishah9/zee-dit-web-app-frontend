@@ -74,19 +74,6 @@ const BarChart = (props) => {
         //     .call(d3.axisLeft(y));
 
         // Bars
-        svg.selectAll("mybar")
-            .data(data)
-            .enter()
-            .append("rect")
-            .attr("x", function (d) { return x(d.Country); })
-            .attr("y", function (d) { return y(d.Value); })
-            .attr("width", x.bandwidth())
-            .attr("height", function (d) { return height - y(d.Value); })
-            .attr("fill", '#00C48C')
-            .attr("stroke", "none")
-            // .style("padding-right", "3p")
-            // .style('z-index', '100')
-            ;
 
         svg.selectAll("mybar-fill")
             .data(data)
@@ -103,9 +90,61 @@ const BarChart = (props) => {
             .attr('opacity', '0.5')
         // .attr("transform", "translate(0," + -100 + ")")
 
+        svg.selectAll("mybar")
+            .data(data)
+            .enter()
+            .append("rect")
+            .classed("mybar", true)
+            .attr("x", function (d) { return x(d.Country); })
+            .attr("y", function (d) { return y(d.Value); })
+            .attr("width", x.bandwidth())
+            .attr("height", function (d) { return height - y(d.Value); })
+            // .attr("fill", '#00C48C')
+            .attr("fill", function (d) {
+                if (d.Value > 10000) return "#00C48C"
+                else return "#FF647C"
+            })
+            .attr("stroke", "none")
+            // .style("padding-right", "3p")
+            // .style('z-index', '100')
+            ;
+
+        const tooltip = d3
+            .select(".barchart-container")
+            .append("div")
+            .style("visibility", "hidden")
+            .classed("barchart-tooltip", true);
+
+        tooltip.selectAll("*").remove();
+
+        const onMouseOver = (event, d) => {
+            tooltip
+                .style("visibility", "visible");
+        }
+
+        const onMouseMove = (event, d) => {
+            tooltip.html(`<p>Play Percentage: ${Math.round(((d3.event.target.__data__.Value * 100) / 13000))}% </p>`)
+                .style("left", d3.event.pageX + 20 + "px")
+                .style("top", d3.event.pageY + 15 + "px");
+        }
+
+        const onMouseLeave = (event, d) => {
+            tooltip.style("visibility", "hidden");
+        }
+
+        svg
+            .selectAll(".mybar")
+            .on("mousemove", onMouseMove)
+            .on("mouseleave", onMouseLeave)
+            .on("mouseover", onMouseOver);
+
     }, [data]);
 
-    return <svg ref={svgRef}></svg>
+    return (
+        <div className='barchart-container'>
+            <svg ref={svgRef}></svg>
+        </div>
+    );
 }
 
 export default BarChart

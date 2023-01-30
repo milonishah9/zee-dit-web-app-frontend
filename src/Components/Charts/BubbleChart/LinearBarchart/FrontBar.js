@@ -78,6 +78,8 @@ const FrontBar = (props) => {
             .transition(t)
         // .attr('x', xScale(30))
 
+        d3.selectAll('.remaining-portion').attr('fill', '#5d6dff')
+
     }, [toggleValue])
     // ↓↓
     return (
@@ -90,7 +92,7 @@ const FrontBar = (props) => {
             >
                 <g >
                     <g className="budget-bar-group">
-                        <rect x="0" y="0" width={width} height={barHeight} rx="0" ry="0" opacity="0.2" fill="#5d6dff" />
+                        <rect className="remaining-portion" x="0" y="0" width={width} height={barHeight} rx="0" ry="0" opacity="0.2"  />
                         <text className="remaining-amount" x={width} y="32" dy="-18" dx="-30">
                             {/* { toggleValue ===true ? (total + '%') : (total) } */}
                         </text>

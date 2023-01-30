@@ -46,31 +46,14 @@ const DivergingSB = () => {
         // Data
         
 
-        // Create axes
-        // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
-        var yAxis = chart.yAxes.push(
-        am5xy.CategoryAxis.new(root, {
-            categoryField: "category",
-            renderer: am5xy.AxisRendererY.new(root, {
-            inversed: true,
-            cellStartLocation: 0.1,
-            cellEndLocation: 0.9
-            })
-        })
-        );
+        var y = d3.scale.ordinal()
+        .rangeRoundBands([0, height], .3);
 
-        yAxis.data.setAll(data);
+        var x = d3.scale.linear()
+        .rangeRound([0, width]);
 
-        var xAxis = chart.xAxes.push(
-        am5xy.ValueAxis.new(root, {
-            calculateTotals: true,
-            min: -100,
-            max: 100,
-            renderer: am5xy.AxisRendererX.new(root, {
-            minGridDistance: 50
-            })
-        })
-        );
+        var color = d3.scale.ordinal()
+        .range(["#c7001e", "#f6a580", "#cccccc", "#92c6db", "#086fad"]);
 
         var xRenderer = yAxis.get("renderer");
         xRenderer.axisFills.template.setAll({

@@ -29,23 +29,23 @@ const ExecutiveSummaryContentOtt = (props) => {
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         [
-          { value: 10, color: "rgb(0 164 255)" },
-          { value: 10, color: "rgb(99 199 255)" },
+          { value: 10, color: "rgb(6 152 233 / 96%)" },
+          { value: 10, color: "rgb(6 152 233 / 55%)" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
 
         [
-          { value: 10, color: "rgb(0 164 255)" },
-          { value: 5, color: "rgb(99 199 255)" },
+          { value: 10, color: "rgb(255 177 43 / 98%)" },
+          { value: 5, color: "rgb(255 177 43 / 55%)" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
         [
-          { value: 10, color: "rgb(0 164 255)" },
-          { value: 5, color: "#ffcf5c" },
+          { value: 10, color: "rgb(104 104 249 / 97%)" },
+          { value: 5, color: "rgb(104 104 249 / 55%)" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
         [
-          { value: 10, color: "rgb(0 164 255)" },
+          { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
@@ -71,7 +71,7 @@ const ExecutiveSummaryContentOtt = (props) => {
         430,
         209,
         [
-          { value: 10, color: "rgb(0 164 255)" },
+          { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
@@ -97,7 +97,7 @@ const ExecutiveSummaryContentOtt = (props) => {
         140,
         170,
         [
-          { value: 10, color: "rgb(0 164 255)" },
+          { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
@@ -122,7 +122,7 @@ const ExecutiveSummaryContentOtt = (props) => {
         430,
         209,
         [
-          { value: 10, color: "rgb(0 164 255)" },
+          { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
@@ -147,7 +147,7 @@ const ExecutiveSummaryContentOtt = (props) => {
         140,
         170,
         [
-          { value: 10, color: "rgb(0 164 255)" },
+          { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
@@ -173,7 +173,7 @@ const ExecutiveSummaryContentOtt = (props) => {
         230,
         100,
         [
-          { value: 10, color: "rgb(0 164 255)" },
+          { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
@@ -198,7 +198,7 @@ const ExecutiveSummaryContentOtt = (props) => {
         230,
         100,
         [
-          { value: 10, color: "rgb(0 164 255)" },
+          { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
@@ -224,7 +224,7 @@ const ExecutiveSummaryContentOtt = (props) => {
         230,
         100,
         [
-          { value: 10, color: "rgb(0 164 255)" },
+          { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
@@ -249,7 +249,7 @@ const ExecutiveSummaryContentOtt = (props) => {
         230,
         100,
         [
-          { value: 10, color: "rgb(0 164 255)" },
+          { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },

@@ -67,6 +67,10 @@ text.lessthan300 {
   font-size: 0.8em !important;
 } */
 
+.selected-bubble{
+  stroke-width: 2;
+}
+
 text {
     font-size: 0.4em;
     font-family: "GothamLight";

@@ -36,9 +36,9 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                     <p><label className="executive-summ-content-ott-darkblue-indicator"/>Remaining Viewers</p>
                 </div> */}
                 <div className="ott-toggle">
-                    <label> <b> Absolute Value</b></label>
+                    <label> <b className="text"> Absolute Value</b></label>
                     <input type="checkbox" onClick={handleToggleButton}></input>
-                    <label> <b> % Change</b></label>
+                    <label> <b className="text"> % Change</b></label>
                 </div>
             </div>
             }
