@@ -352,65 +352,6 @@ const ExecutiveSummaryContentOtt = (props) => {
       setChartData(bottom10Data);
     }
   };
-  // useEffect(() => {
-  //   if (filterActiveTab === "top-10" || filterActiveTab === "bottom-10") {
-  //     let sortedFiles = chartData.sort((r1, r2) =>
-  //       r1.value > r2.value ? 1 : r1.value < r2.value ? -1 : 0
-  //     );
-
-  //     if (filterActiveTab === "top-10") {
-
-  //       let top10Data = [];
-  //       for (let i = 0; i < sortedFiles.length; i++) {
-  //         if (i < 10) {
-  //           top10Data.push(sortedFiles[i]);
-  //         }
-  //       }
-  //       console.log('top10Data',top10Data);
-  //       setChartData(top10Data);
-  //     }
-
-  //     if (filterActiveTab === "bottom-10") {
-  //       console.log(filterActiveTab);
-  //       let bottom10Data = [];
-  //       let count = 0;
-  //       for (let i = sortedFiles.length - 1; i > 0; i--) {
-  //         count += 1;
-  //         if (count <= 10) {
-  //           bottom10Data.push(sortedFiles[i]);
-  //         }
-  //       }
-  //       console.log('bottom10Data',bottom10Data);
-  //       setChartData(bottom10Data);
-  //     }
-  //   }
-  // }, [filterActiveTab]);
-
-  // let sortedFiles = json.sort((r1, r2) =>
-  //   r1.value > r2.value ? 1 : r1.value < r2.value ? -1 : 0
-  // );
-
-  // for (let i = 0; i < sortedFiles.length; i++) {
-  //   if (i < 10) {
-  //     top10files.push(sortedFiles[i]);
-  //   }
-  // if (sortedFiles[i].type === "movie") {
-  //   moviesData.push(sortedFiles[i]);
-  // }
-  // if (sortedFiles[i].type === "tv show") {
-  //   tvShowsData.push(sortedFiles[i]);
-  // }
-  // if (sortedFiles[i].category === "original") {
-  //   originalData.push(sortedFiles[i]);
-  // }
-  // }
-
-  // for (let i = sortedFiles.length - 1; i > 0; i--) {
-  //   count += 1;
-  //   if (count <= 10) {
-  //     bottom10files.push(sortedFiles[i]);
-  //   }
-  // }
 
   return (
     <div>
