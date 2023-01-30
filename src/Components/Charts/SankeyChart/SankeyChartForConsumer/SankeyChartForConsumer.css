@@ -1,11 +1,23 @@
 .sankey-chart-for-consumer-container {
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
+    /* margin: auto; */
+    margin-top: 5rem;
 }
 
 .node-title {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
+    letter-spacing: 0.3px;
+    /* font-weight: 600; */
+    color: #333333;
+    font-family: 'GothamBold';
+    opacity: 0.75;
 }
 
 .link{
     /* stroke-width: 7px; */
+    /* transform: matrix(1, 0, 0, -1, 0, 0); */
+}
+
+.circle{
+    /* stroke: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%); */
 }
