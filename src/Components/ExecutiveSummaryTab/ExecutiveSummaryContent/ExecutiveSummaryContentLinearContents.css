@@ -70,8 +70,8 @@
 
 .executive-summary-content-linear-contents-header {
   font-family: GothamMedium;
-  width: 31.7%;
-  margin-left: 1.5%;
+  width: 28.7%;
+  margin-left: 4.7%;
   height: 24px;
   text-align: center;
   background-color: #e5e7fa;
@@ -84,7 +84,7 @@
 }
 
 .executive-summary-content-linear-contents-header:nth-last-child(1) {
-  width: 15%;
+  width: 12%;
 }
 
 .executive-summary-content-linear-contents-table {
@@ -216,10 +216,10 @@ input[type="checkbox"]:checked {
 
 @media only screen and (max-width: 1366px) {
   .executive-summary-content-linear-contents-header:nth-last-child(1) {
-    width: 18.5%;
+    width: 18.7%;
   }
   .executive-summary-content-linear-contents-header {
-    margin-left: 0.7%;
+    margin-left: 0.24%;
     width: 37.5%;
   }
 }
