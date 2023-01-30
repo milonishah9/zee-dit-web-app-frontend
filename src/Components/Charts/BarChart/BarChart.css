@@ -5,3 +5,24 @@
 .mybar {
     z-index: 100;
 }
+
+.barchart-tooltip {
+    z-index: 100;
+    width: auto;
+    background: #FFFFFF;
+    border: 1px solid #D8E3FF;
+    border-radius: 5px;
+    padding: 5px 2px !important;
+    position: absolute;
+    height: auto;
+}
+
+.barchart-tooltip p {
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #333333;
+    margin: 0 !important;
+    padding: 2px;
+    font-family: 'GothamLight';
+    font-size: 12px;
+}

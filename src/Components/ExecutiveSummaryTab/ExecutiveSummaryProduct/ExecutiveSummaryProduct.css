@@ -38,3 +38,8 @@ div.executive-summary-content-active-tab {
     width: 50%;
     cursor: pointer;
 }
+
+.executive-summary-content-container{
+    display: flex;
+    width: 100%;
+}

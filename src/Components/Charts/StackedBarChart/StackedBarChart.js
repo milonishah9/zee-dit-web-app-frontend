@@ -351,8 +351,8 @@ const StackedBarChart = (props) => {
           ? "tooltip-stacked-bar-chart-right"
           : "tooltip-stacked-bar-chart"
       )
-      .style("left",  20 + "px")
-      .style("top",  15 + "px");
+      .style("left", 20 + "px")
+      .style("top", 15 + "px");
 
     Tooltip.selectAll("*").remove();
 
@@ -361,6 +361,7 @@ const StackedBarChart = (props) => {
         // .transition()
         // .duration(200)
         .style("visibility", "visible");
+      console.log("event in stacked bar chart", event);
     };
 
     const tootTipHtml = (event) =>
