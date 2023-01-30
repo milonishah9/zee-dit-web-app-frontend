@@ -30,7 +30,7 @@ const SankeyChartForConsumer = (props) => {
         ]; // D3 -> Scales
 
         // Begin making the horizontal link diagram
-        
+
         var link = d3.linkHorizontal()
             .source(function (d) {
                 return [d.source[1], d.source[0]];
@@ -73,68 +73,68 @@ const SankeyChartForConsumer = (props) => {
             .text(d => d.id);
 
         //Begin making the vertical link diagram
-        var link = d3.linkVertical();
+        // var link = d3.linkVertical();
 
-        d3.select("#quickDemoV") //Adding the circle nodes
-            .selectAll("circle")
-            .data(nodeData)
-            .join("circle")
-            .attr("cx", d => d.x)
-            .attr("cy", d => d.y)
-            .classed("circle", true);
+        // d3.select("#quickDemoV") //Adding the circle nodes
+        //     .selectAll("circle")
+        //     .data(nodeData)
+        //     .join("circle")
+        //     .attr("cx", d => d.x)
+        //     .attr("cy", d => d.y)
+        //     .classed("circle", true);
 
-        d3.select("#quickDemoV") //Adding the link paths
-            .selectAll("path")
-            .data(linkData)
-            .join("path")
-            .attr("d", link)
-            .classed("link", true);
+        // d3.select("#quickDemoV") //Adding the link paths
+        //     .selectAll("path")
+        //     .data(linkData)
+        //     .join("path")
+        //     .attr("d", link)
+        //     .classed("link", true);
 
-        d3.select("#quickDemoV") //Adding the text label
-            .selectAll("text")
-            .data(nodeData)
-            .join("text")
-            .attr("font-size", "12px")
-            .attr("text-anchor", "middle")
-            .attr("x", d => d.id === "D3" ? d.x + 15 : d.x) //If the node is the D3 node, move it over some so it fits right, otherwise d.x
-            .attr("y", d => d.y + 20)
-            .text(n => n.id);
+        // d3.select("#quickDemoV") //Adding the text label
+        //     .selectAll("text")
+        //     .data(nodeData)
+        //     .join("text")
+        //     .attr("font-size", "12px")
+        //     .attr("text-anchor", "middle")
+        //     .attr("x", d => d.id === "D3" ? d.x + 15 : d.x) //If the node is the D3 node, move it over some so it fits right, otherwise d.x
+        //     .attr("y", d => d.y + 20)
+        //     .text(n => n.id);
 
-        //Begin making radial link diagram
-        var link = d3.linkRadial()
-            .angle(d => xAngleScale(d[0]))
-            .radius(d => yRadiusScale(d[1]));
+        // //Begin making radial link diagram
+        // var link = d3.linkRadial()
+        //     .angle(d => xAngleScale(d[0]))
+        //     .radius(d => yRadiusScale(d[1]));
 
-        var xAngleScale = d3.scaleLinear().domain([25, 175]).range([Math.PI, Math.PI * 2]);
-        var yRadiusScale = d3.scaleLinear().domain([25, 175]).range([0, 80]);
+        // var xAngleScale = d3.scaleLinear().domain([25, 175]).range([Math.PI, Math.PI * 2]);
+        // var yRadiusScale = d3.scaleLinear().domain([25, 175]).range([0, 80]);
 
-        d3.select("#quickDemoR") //Adding the circle nodes
-            .selectAll("circle")
-            .data(nodeData)
-            .join("circle")
-            .attr("cx", d => d3.pointRadial(xAngleScale(d.x), yRadiusScale(d.y))[0])
-            .attr("cy", d => d3.pointRadial(xAngleScale(d.x), yRadiusScale(d.y))[1])
-            .classed("circle", true)
-            .attr("transform", "translate(100,100)");
+        // d3.select("#quickDemoR") //Adding the circle nodes
+        //     .selectAll("circle")
+        //     .data(nodeData)
+        //     .join("circle")
+        //     .attr("cx", d => d3.pointRadial(xAngleScale(d.x), yRadiusScale(d.y))[0])
+        //     .attr("cy", d => d3.pointRadial(xAngleScale(d.x), yRadiusScale(d.y))[1])
+        //     .classed("circle", true)
+        //     .attr("transform", "translate(100,100)");
 
-        d3.select("#quickDemoR") //Adding the link paths
-            .selectAll("path")
-            .data(linkData)
-            .join("path")
-            .attr("d", link)
-            .classed("link", true)
-            .attr("transform", "translate(100,100)");
+        // d3.select("#quickDemoR") //Adding the link paths
+        //     .selectAll("path")
+        //     .data(linkData)
+        //     .join("path")
+        //     .attr("d", link)
+        //     .classed("link", true)
+        //     .attr("transform", "translate(100,100)");
 
-        d3.select("#quickDemoR") //Adding the text label
-            .selectAll("text")
-            .data(nodeData)
-            .join("text")
-            .attr("font-size", "12px")
-            .attr("text-anchor", "left")
-            .attr("x", d => d3.pointRadial(xAngleScale(d.x), yRadiusScale(d.y))[0] + 10)
-            .attr("y", d => d3.pointRadial(xAngleScale(d.x), yRadiusScale(d.y))[1])
-            .text(n => n.id)
-            .attr("transform", "translate(100,100)");
+        // d3.select("#quickDemoR") //Adding the text label
+        //     .selectAll("text")
+        //     .data(nodeData)
+        //     .join("text")
+        //     .attr("font-size", "12px")
+        //     .attr("text-anchor", "left")
+        //     .attr("x", d => d3.pointRadial(xAngleScale(d.x), yRadiusScale(d.y))[0] + 10)
+        //     .attr("y", d => d3.pointRadial(xAngleScale(d.x), yRadiusScale(d.y))[1])
+        //     .text(n => n.id)
+        //     .attr("transform", "translate(100,100)");
 
     }, []);
 
