@@ -10,12 +10,7 @@ import ExecutiveSummaryContent from './Components/ExecutiveSummaryTab/ExecutiveS
 import ExecutiveSummaryTab from './Components/ExecutiveSummaryTab/ExecutiveSummaryTab';
 import AreaChartWithToolTips from './Components/Charts/AreaChartWithToolTips/AreaChartWithToolTips';
 import HSbar from './Components/Charts/HSbar/HSbar';
-<<<<<<< Updated upstream
-import NewSankey from './Components/Charts/SankeyChart/NewSankey/NewSankey';
 import DivergingSB from './Components/Charts/DivergingSB/DivergingSB';
-=======
-import FrontBar from './Components/Charts/BubbleChart/LinearBarchart/FrontBar';
->>>>>>> Stashed changes
 
 function App() {
   return (

@@ -91,15 +91,8 @@ const FrontBar = (props) => {
                 <g >
                     <g className="budget-bar-group">
                         <rect x="0" y="0" width={width} height={barHeight} rx="0" ry="0" opacity="0.2" fill="#5d6dff" />
-<<<<<<< Updated upstream
-                        <text x={width} y="32" dy="-18" dx="-35">
-                            
-                            { toggleValue === true ? (<>{data > 50 ? (<tspan className="percent-green">↑</tspan>):(<tspan className="percent-red">↓</tspan>)}
-                             <tspan> {total-data}%</tspan></>) : (total - data) }
-=======
                         <text className="remaining-amount" x={width} y="32" dy="-18" dx="-30">
                             {/* { toggleValue ===true ? (total + '%') : (total) } */}
->>>>>>> Stashed changes
                         </text>
                     </g>
                     {/* <FrontBar
