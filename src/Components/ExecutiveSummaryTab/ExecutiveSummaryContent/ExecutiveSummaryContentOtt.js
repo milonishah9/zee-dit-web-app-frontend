@@ -18,6 +18,13 @@ const ExecutiveSummaryContentOtt = (props) => {
       Name: "TVF Pictures",
       type: "movie",
       category: "original",
+      data :[ {
+        category: " ",
+        negative1: -13,
+        negative2: -23,
+        positive1: 49,
+        positive2: 25
+      }],
       Count: 589.17,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
@@ -50,6 +57,13 @@ const ExecutiveSummaryContentOtt = (props) => {
       Name: "Mukhbir",
       type: "tv show",
       category: "original",
+      data :[ {
+        category: " ",
+        negative1: -13,
+        negative2: -23,
+        positive1: 49,
+        positive2: 25
+      }],
       Count: 491.58,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
@@ -69,6 +83,13 @@ const ExecutiveSummaryContentOtt = (props) => {
       Name: "Aha Naa Pellanta",
       type: "movie",
       category: "original",
+      data :[ {
+        category: " ",
+        negative1: -13,
+        negative2: -23,
+        positive1: 49,
+        positive2: 25
+      }],
       Count: 469.6,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
@@ -88,6 +109,13 @@ const ExecutiveSummaryContentOtt = (props) => {
       Name: "Abhay",
       type: "tv show",
       Count: 439.94,
+      data :[ {
+        category: " ",
+        negative1: -13,
+        negative2: -23,
+        positive1: 49,
+        positive2: 25
+      }],
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         120,
@@ -106,6 +134,13 @@ const ExecutiveSummaryContentOtt = (props) => {
       Name: "Rangbaaz",
       type: "movie",
       Count: 437.68,
+      data :[ {
+        category: " ",
+        negative1: -13,
+        negative2: -23,
+        positive1: 49,
+        positive2: 25
+      }],
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         120,
@@ -124,6 +159,13 @@ const ExecutiveSummaryContentOtt = (props) => {
       Name: "Duranga",
       type: "tv show",
       category: "original",
+      data :[ {
+        category: " ",
+        negative1: -13,
+        negative2: -23,
+        positive1: 49,
+        positive2: 25
+      }],
       Count: 427.3,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
@@ -142,6 +184,13 @@ const ExecutiveSummaryContentOtt = (props) => {
     {
       Name: "Triplling",
       type: "tv show",
+      data :[ {
+        category: " ",
+        negative1: -13,
+        negative2: -23,
+        positive1: 49,
+        positive2: 25
+      }],
       Count: 400.64,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
@@ -161,6 +210,13 @@ const ExecutiveSummaryContentOtt = (props) => {
       Name: "Lalbazaar",
       type: "movie",
       category: "original",
+      data :[ {
+        category: " ",
+        negative1: -13,
+        negative2: -23,
+        positive1: 49,
+        positive2: 25
+      }],
       Count: 391.6,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
@@ -180,6 +236,13 @@ const ExecutiveSummaryContentOtt = (props) => {
       Name: "Country Mafia",
       type: "tv show",
       Count: 351.28,
+      data :[ {
+        category: " ",
+        negative1: -13,
+        negative2: -23,
+        positive1: 49,
+        positive2: 25
+      }],
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         120,
@@ -199,6 +262,13 @@ const ExecutiveSummaryContentOtt = (props) => {
       type: "movie",
       category: "original",
       Count: 350.7,
+      data :[ {
+        category: " ",
+        negative1: -13,
+        negative2: -23,
+        positive1: 49,
+        positive2: 25
+      }],
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         120,
@@ -217,6 +287,13 @@ const ExecutiveSummaryContentOtt = (props) => {
       Name: "Broken",
       type: "tv show",
       Count: 349.8,
+      data :[ {
+        category: " ",
+        negative1: -13,
+        negative2: -23,
+        positive1: 49,
+        positive2: 25
+      }],
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         130,
@@ -236,6 +313,13 @@ const ExecutiveSummaryContentOtt = (props) => {
       type: "movie",
       category: "original",
       Count: 349.7,
+      data :[ {
+        category: " ",
+        negative1: -13,
+        negative2: -23,
+        positive1: 49,
+        positive2: 25
+      }],
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         130,
@@ -255,6 +339,13 @@ const ExecutiveSummaryContentOtt = (props) => {
       type: "tv show",
       category: "original",
       Count: 348.15,
+      data :[ {
+        category: " ",
+        negative1: -13,
+        negative2: -23,
+        positive1: 49,
+        positive2: 25
+      }],
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
         120,

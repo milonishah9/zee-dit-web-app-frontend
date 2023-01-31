@@ -63,7 +63,7 @@ const BubbleChart = (props) => {
           .forceCollide(function (d) {
             return d.Count / 17;
           })
-          // .iterations(100 * 23)
+          .iterations(100 * 63)
       );
 
     var defs = svg.append("svg:defs");
@@ -146,11 +146,12 @@ const BubbleChart = (props) => {
       })
 
       .on("mouseout", function () {
-        d3.select(this).attr("stroke-width", 1)
+        // d3.select(this).attr("stroke-width", 1)
         tooltip.style("visibility", "hidden");
       })
       .on("click", function (d, i) {
         dispatch(setHoverValue(d.Name));
+        d3.selectAll('.artist').attr("stroke-width", 1)
         d3.select(this).attr("stroke-width", 2);
       });
 
@@ -251,20 +252,22 @@ const BubbleChart = (props) => {
         .attr("transform", d => `translate(390, 50)`)
 
     // circles.transition()
-    //     .duration(1000)
+    //     .duration(3000)
         // .attr("transform", d => `translate(${d.x},${d.y})`);
 
-    textName.attr("transform", 'translate(270, 110)')
+    textName
+    .attr("transform", 'translate(270, 110)')
     .attr("transform", d => `translate(390, 50)`)
     // textName.transition()
-    // .duration(1000)
+    // .duration(3000)
     // .attr("transform", d => `translate(${d.x},${d.y})`);
 
 
-    textCount.attr("transform", 'translate(270, 110)')
+    textCount
+    .attr("transform", 'translate(270, 110)')
     .attr("transform", d => `translate(390, 50)`)
     // textCount.transition()
-    // .duration(1000)
+    // .duration(3000)
     // .attr("transform", d => `translate(${d.x},${d.y})`);
 
 

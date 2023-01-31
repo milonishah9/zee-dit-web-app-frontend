@@ -1,11 +1,18 @@
 
-body {
-  font: 10px sans-serif;
+/* #chartdiv {
+  width: 800px;
+  height: 100px;
+} */
+
+.chartdiv rect(1){
+  display: none;
+  fill: 'red'
 }
 
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
+
+#chartdiv canvas:nth-child(1){
+
+  width: 151px !important;
+  height: 40px !important;
+
 }
