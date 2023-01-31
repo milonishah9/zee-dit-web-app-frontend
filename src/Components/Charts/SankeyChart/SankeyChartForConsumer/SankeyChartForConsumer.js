@@ -70,11 +70,18 @@ const SankeyChartForConsumer = (props) => {
                 return [d.target[1], d.target[0]];
             });
 
+        let line = d3.line().curve(d3.curveBasis)
+
+
         const svg = d3
             .select(svgRef.current)
             .attr("viewBox", "0 0 1000 300")
             // .attr('preserveAspectRatio', 'xMinYMin')
             .classed("sankey-chart-for-consumer-svg", true);
+
+        // svg.append("path")
+        //     .classed("custom-link", true)
+        //     .attr("d", line([[25, 35], [195, 215]]))
 
         //Adding the link paths
         svg
@@ -84,7 +91,7 @@ const SankeyChartForConsumer = (props) => {
             .attr("d", link)
             .attr("fill", "none")
             .attr("stroke", d => d.fill)
-            .attr("stroke-width", "4px")
+            .attr("stroke-width", "6px")
             .attr("opacity", "0.5")
             .classed("link", true);
 
@@ -137,9 +144,10 @@ const SankeyChartForConsumer = (props) => {
             .data(nodeData)
             .join("text")
             .attr("text-anchor", "middle")
-            .attr("x", d => d.y+24)
+            .attr("x", d => d.y + 24)
             .attr("y", d => d.x + 26)
-            .attr("class", d => d.percentageChage >= 0 ? "node-percentage-change-pos" : "node-percentage-change-neg")
+            .attr("color", "red")
+            // .attr("class", d => d.percentageChage >= 0 ? "node-percentage-change-pos" : "node-percentage-change-neg")
             // .classed("node-percentage-change", true)
             .text(d => `${Math.abs(d.percentageChage)}%`);
 
