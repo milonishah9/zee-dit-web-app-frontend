@@ -13,8 +13,8 @@ const ProductUserJourney = (props) => {
 
   return (
     <div className="product-userjourney-card">
-      <p>{data}</p>
-      <p>1000 <span className="values">60%</span></p>
+      <p>{data[0]}</p>
+      <p className={data[1] > 0 ? ('pluse-value'):('minuse-value') }>{data[1] > 0 ? (data[1]+'% ↑'):(data[1]+'% ↓')}</p>
       <div className={classed}>
         <div className="product-icons">
           <svg

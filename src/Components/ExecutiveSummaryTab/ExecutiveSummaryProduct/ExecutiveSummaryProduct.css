@@ -88,3 +88,11 @@ div.executive-summary-content-active-tab {
       display: flex;
       justify-content: space-around;
   }
+
+  .pluse-value{
+    color: #04c704;
+  }
+
+  .minuse-value{
+    color: red;
+  }

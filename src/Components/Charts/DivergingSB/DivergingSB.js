@@ -41,12 +41,12 @@ const DivergingSB = (props) => {
       y = (d, i) => i, // given d in data, returns the (ordinal) y-value
       z = () => 1, // given d in data, returns the (categorical) z-value
       title, // given d in data, returns the title text
-      marginTop = 20, // top margin, in pixels
+      marginTop = 15, // top margin, in pixels
       marginRight = 30, // right margin, in pixels
       marginBottom = 0, // bottom margin, in pixels
       marginLeft = 10, // left margin, in pixels
       width = 200, // outer width, in pixels
-      height, // outer height, in pixels
+      height = 20, // outer height, in pixels
       xType = d3.scaleLinear, // type of x-scale
       xDomain = [-1 , 1], // [xmin, xmax]
       xRange = [marginLeft, width - marginRight], // [left, right]

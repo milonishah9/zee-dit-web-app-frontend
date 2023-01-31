@@ -5,8 +5,6 @@ import ProductUserJourney from "./ProductUserJourney";
 
 const ExecutiveSummaryContent = () => {
   const [activeTab, setActiveTab] = useState("linear");
-  
-
 
   return (
     <div className="executive-summary-product">
@@ -44,8 +42,8 @@ const ExecutiveSummaryContent = () => {
           </div>
         )} */}
 
-          <ProductUserJourney data={'Total Sessions'} />
-          <ProductUserJourney data={'DAU'} />
+          <ProductUserJourney data={['Total Sessions', 20]} />
+          <ProductUserJourney data={['DAU', -10]} />
 
       </div>
     </div>
