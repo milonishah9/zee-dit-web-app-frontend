@@ -4,7 +4,7 @@ import "./Product.css";
 const Product = () => {
   const [classed, setClassed] = useState("my-minuse-button");
   const handlePluseButtonClick = () => {
-    setClassed('')
+    setClassed('my-minuse-button')
   };
   const handleMinuseButtonClick = () => {
     setClassed('my-pluse-button')
@@ -62,11 +62,11 @@ const Product = () => {
                   <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
                 </svg>}
               </div>
-              <div className="product-engagement-card">
+              {/* <div className="product-engagement-card">
                 <p>Watch Time per Unique Viewer</p>
                 <h2>42.8 Minutes</h2>
                 <p>40% from last period</p>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="">
