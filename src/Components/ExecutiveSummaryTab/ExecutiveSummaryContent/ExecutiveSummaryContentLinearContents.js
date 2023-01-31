@@ -126,28 +126,28 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                             }else{
 
                                 
-                                                                    if(typeof(data) === 'number'){
-                                                                        if(toggleValue === true){
-                                                                            data = ((data/myTotal)*100).toFixed(0)
-                                                                            total = 100
-                                
-                                                                            return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
-                                                                        }else{
-                                                                            
-                                                                            return <td key={index}><FrontBar percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
-                                                                        }
-                                                                        
-                                                                    }else{
-                                                                        let total = 0 
-                                                                        let totalValueArr = [];
-                                                                        for(let i=0; i<data.length-1; i++){
-                                                                            total += data[i].value
-                                                                        }
-                                                                        totalValueArr.push(total)
-                                                                        // return <td key={index}><DivergingSB /></td>
-                                
-                                                                        return <td key={index}><HSbar data={data} totalValueArr={totalValueArr}  toggleValue={toggleValue}/></td>
-                                                                    }
+                                if(typeof(data) === 'number'){
+                                    if(toggleValue === true){
+                                        data = ((data/myTotal)*100).toFixed(0)
+                                        total = 100
+
+                                        return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
+                                    }else{
+                                        
+                                        return <td key={index}><FrontBar percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
+                                    }
+                                    
+                                }else{
+                                    let total = 0 
+                                    let totalValueArr = [];
+                                    for(let i=0; i<data.length-1; i++){
+                                        total += data[i].value
+                                    }
+                                    totalValueArr.push(total)
+                                    // return <td key={index}><DivergingSB /></td>
+
+                                    return <td key={index}><HSbar data={data} totalValueArr={totalValueArr}  toggleValue={toggleValue}/></td>
+                                }
                             }
 
                                     

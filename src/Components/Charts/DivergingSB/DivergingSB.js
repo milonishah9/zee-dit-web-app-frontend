@@ -39,10 +39,10 @@ const DivergingSB = () => {
       y = (d, i) => i, // given d in data, returns the (ordinal) y-value
       z = () => 1, // given d in data, returns the (categorical) z-value
       title, // given d in data, returns the title text
-      marginTop = 15, // top margin, in pixels
+      marginTop = 0, // top margin, in pixels
       marginRight = 0, // right margin, in pixels
       marginBottom = 0, // bottom margin, in pixels
-      marginLeft = 10, // left margin, in pixels
+      marginLeft = 0, // left margin, in pixels
       width = 200, // outer width, in pixels
       height, // outer height, in pixels
       xType = d3.scaleLinear, // type of x-scale
@@ -120,19 +120,19 @@ const DivergingSB = () => {
           .attr("viewBox", [0, 0, width, height])
           // .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
     
-      svg.append("g")
-          .attr("transform", `translate(0,${marginTop})`)
-          .call(xAxis)
-          .call(g => g.select(".domain").remove())
-          .call(g => g.selectAll(".tick line").clone()
-              .attr("y2", height - marginTop - marginBottom)
-              .attr("stroke-opacity", 0.1))
-          .call(g => g.append("text")
-              .attr("x", xScale(0))
-              .attr("y", -22)
-              .attr("fill", "currentColor")
-              .attr("text-anchor", "middle")
-              .text(xLabel));
+      // svg.append("g")
+      //     .attr("transform", `translate(0,${marginTop})`)
+      //     .call(xAxis)
+      //     .call(g => g.select(".domain").remove())
+      //     .call(g => g.selectAll(".tick line").clone()
+      //         .attr("y2", height - marginTop - marginBottom)
+      //         .attr("stroke-opacity", 0.1))
+      //     .call(g => g.append("text")
+      //         .attr("x", xScale(0))
+      //         .attr("y", -22)
+      //         .attr("fill", "currentColor")
+      //         .attr("text-anchor", "middle")
+      //         .text(xLabel));
     
       const bar = svg.append("g")
         .selectAll("g")
