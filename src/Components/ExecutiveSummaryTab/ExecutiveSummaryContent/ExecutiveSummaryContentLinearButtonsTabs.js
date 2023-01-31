@@ -71,7 +71,7 @@ const ExecutiveSummaryContentLinearButtonsTabs = (props) => {
                             // props.FilterTabValue('');
                             // setFiltersActiveTab('');
                         }}>GEC</button>
-                        <button className={activeTab === 'tv-shows' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear")} onClick={() => {
+                        <button className={activeTab === 'Movies' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear")} onClick={() => {
                             // setActiveTab('tv-shows')
                             // props.TabValue('tv-shows')
                             // props.FilterTabValue('');
@@ -79,13 +79,13 @@ const ExecutiveSummaryContentLinearButtonsTabs = (props) => {
                         }}>Movies</button>
                     </span>
                     <span>
-                        <button className={activeTab === 'tv-shows' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear")} onClick={() => {
+                        <button className={activeTab === 'Paid' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear")} onClick={() => {
                             // setActiveTab('tv-shows')
                             // props.TabValue('tv-shows')
                             // props.FilterTabValue('');
                             // setFiltersActiveTab('');
                         }}>Paid</button>
-                        <button className={activeTab === 'tv-shows' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear")} onClick={() => {
+                        <button className={activeTab === 'FTA' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear")} onClick={() => {
                             // setActiveTab('tv-shows')
                             // props.TabValue('tv-shows')
                             // props.FilterTabValue('');
