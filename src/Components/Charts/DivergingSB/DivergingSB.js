@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import './SB.css'
 import * as d3 from 'd3'
 import * as am5 from "@amcharts/amcharts5";
@@ -10,9 +10,15 @@ import { useRef } from "react";
 
 const DivergingSB = (props) => {
 
-  // const politifact = (props)=> {
+  const { data, total, toggleValue, percent } = props
 
-  // };
+  // const [useData, setUseData] =useState();
+
+  // setUseData(data);
+
+  console.log('PassedProp', data)
+
+
     const svgRef = useRef();
 
     const politifact =  [

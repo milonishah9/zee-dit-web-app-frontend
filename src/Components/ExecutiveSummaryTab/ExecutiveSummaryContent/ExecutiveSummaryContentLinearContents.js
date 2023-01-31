@@ -121,7 +121,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                 {element.arr.map((data, index) => {
 
                             if(toggleValue === true){
-                                        return <td key={index}><DivergingSB /></td>
+                                        return <td key={index}><DivergingSB data={data} total={total} toggleValue={toggleValue}/></td>
                                 
                             }else{
 
