@@ -32,7 +32,7 @@ const DivergingSB = () => {
             marginLeft: 70
           })
 
-    },[politifact] )
+    },[politifact])
     
     function StackedBarChart(data, {
       x = d => d, // given d in data, returns the (quantitative) x-value

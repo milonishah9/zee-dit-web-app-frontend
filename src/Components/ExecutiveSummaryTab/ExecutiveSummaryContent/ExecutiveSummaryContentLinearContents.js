@@ -123,9 +123,9 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                         if(toggleValue === true){
                                             data = ((data/myTotal)*100).toFixed(0)
                                             total = 100
-                                        return <td key={index}><DivergingSB /></td>
+                                        // return <td key={index}><DivergingSB /></td>
 
-                                            // return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
+                                            return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
                                         }else{
                                             
                                             return <td key={index}><FrontBar percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
