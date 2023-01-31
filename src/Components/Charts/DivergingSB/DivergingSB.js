@@ -8,7 +8,11 @@ import { useRef } from "react";
 
 
 
-const DivergingSB = () => {
+const DivergingSB = (props) => {
+
+  // const politifact = (props)=> {
+
+  // };
     const svgRef = useRef();
 
     const politifact =  [
@@ -43,7 +47,7 @@ const DivergingSB = () => {
       marginRight = 0, // right margin, in pixels
       marginBottom = 0, // bottom margin, in pixels
       marginLeft = 0, // left margin, in pixels
-      width = 200, // outer width, in pixels
+      width = 300, // outer width, in pixels
       height, // outer height, in pixels
       xType = d3.scaleLinear, // type of x-scale
       xDomain, // [xmin, xmax]
@@ -113,11 +117,12 @@ const DivergingSB = () => {
         const T = title;
         title = i => T(O[i], i, data);
       }
+      console.log('sdfsdf', width)
     
       const svg = d3.select(svgRef.current)
           .attr("width", width)
           .attr("height", height)
-          .attr("viewBox", [0, 0, width, height])
+          .attr("viewBox", [70, 0, width, height])
           // .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
     
       // svg.append("g")
@@ -150,15 +155,15 @@ const DivergingSB = () => {
       if (title) bar.append("title")
           .text(({i}) => title(i));
     
-      // svg.append("g")
-      //     .attr("transform", `translate(${xScale(0)},0)`)
-      //     .call(yAxis)
-          // .call(g => g.selectAll(".tick text")
-          //     .attr("dx", -3)
-          //     .attr("x", y => { // Find the minimum x-value for the corresponding y-value.
-          //       const x = d3.min(series, S => S.find(d => Y[d.i] === y)?.[0]);
-          //       return xScale(x) - xScale(0);
-          //     }));
+      svg.append("g")
+          .attr("transform", `translate(${xScale(0)},0)`)
+          .call(yAxis)
+          .call(g => g.selectAll(".tick text")
+              .attr("dx", -3)
+              .attr("x", y => { // Find the minimum x-value for the corresponding y-value.
+                const x = d3.min(series, S => S.find(d => Y[d.i] === y)?.[0]);
+                return xScale(x) - xScale(0);
+              }));
     
       // return Object.assign(svg.node(), {scales: {color}});
     }
