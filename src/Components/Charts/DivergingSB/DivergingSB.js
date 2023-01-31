@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import './SB.css'
 import * as d3 from 'd3'
 import * as am5 from "@amcharts/amcharts5";
@@ -9,23 +9,15 @@ import { useRef } from "react";
 
 
 const DivergingSB = (props) => {
-
-  const { data, total, toggleValue, percent } = props
-
-  // const [useData, setUseData] =useState();
-
-  // setUseData(data);
-
-  console.log('PassedProp', data)
+  const svgRef = useRef();
+  
+  
+  const {politifact} = props
 
 
-    const svgRef = useRef();
-
-    const politifact =  [
-        {speaker: "Donald Trump", ruling: "Pants on fire!", proportion: -0.15503875968992248},
-    
-        {speaker: "Donald Trump", ruling: "Mostly false", proportion: 0.20930232558139536},
-       ]
+    // const politifact =  [
+    //     {speaker: "Donald Trump", ruling: "Mostly false", count: -27, proportion: 0.10930232558139536},
+    //    ]
     
 
     useEffect  (() => {
@@ -39,26 +31,26 @@ const DivergingSB = (props) => {
             yDomain: d3.groupSort(politifact, D => d3.sum(D, d => -Math.min(0, d.proportion)), d => d.speaker),
             zDomain: politifact.rulings,
             colors: 'red',
-            marginLeft: 70
+            marginLeft: 1
           })
 
-    },[politifact])
+    },[politifact] )
     
     function StackedBarChart(data, {
       x = d => d, // given d in data, returns the (quantitative) x-value
       y = (d, i) => i, // given d in data, returns the (ordinal) y-value
       z = () => 1, // given d in data, returns the (categorical) z-value
       title, // given d in data, returns the title text
-      marginTop = 0, // top margin, in pixels
-      marginRight = 0, // right margin, in pixels
+      marginTop = 20, // top margin, in pixels
+      marginRight = 30, // right margin, in pixels
       marginBottom = 0, // bottom margin, in pixels
-      marginLeft = 0, // left margin, in pixels
-      width = 300, // outer width, in pixels
+      marginLeft = 10, // left margin, in pixels
+      width = 200, // outer width, in pixels
       height, // outer height, in pixels
       xType = d3.scaleLinear, // type of x-scale
-      xDomain, // [xmin, xmax]
+      xDomain = [-1 , 1], // [xmin, xmax]
       xRange = [marginLeft, width - marginRight], // [left, right]
-      yDomain, // array of y-values
+      yDomain , // array of y-values
       yRange, // [bottom, top]
       yPadding = 0.1, // amount of y-range to reserve to separate bars
       zDomain, // array of z-values
@@ -123,27 +115,28 @@ const DivergingSB = (props) => {
         const T = title;
         title = i => T(O[i], i, data);
       }
-      console.log('sdfsdf', width)
     
       const svg = d3.select(svgRef.current)
           .attr("width", width)
           .attr("height", height)
-          .attr("viewBox", [70, 0, width, height])
+          .attr("viewBox", [-15, 0, width, height])
           // .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
     
-      // svg.append("g")
-      //     .attr("transform", `translate(0,${marginTop})`)
-      //     .call(xAxis)
-      //     .call(g => g.select(".domain").remove())
-      //     .call(g => g.selectAll(".tick line").clone()
-      //         .attr("y2", height - marginTop - marginBottom)
-      //         .attr("stroke-opacity", 0.1))
-      //     .call(g => g.append("text")
-      //         .attr("x", xScale(0))
-      //         .attr("y", -22)
-      //         .attr("fill", "currentColor")
-      //         .attr("text-anchor", "middle")
-      //         .text(xLabel));
+      svg.append("g")
+      .attr("font-size", "20px")
+
+          .attr("transform", `translate(0,${marginTop})`)
+          .call(xAxis)
+          .call(g => g.select(".domain").remove())
+          .call(g => g.selectAll(".tick line").clone()
+              .attr("y2", height - marginTop - marginBottom)
+              .attr("stroke-opacity", 0.1))
+          .call(g => g.append("text")
+              .attr("x", xScale(0))
+              .attr("y", -22)
+              .attr("fill", "currentColor")
+              .attr("text-anchor", "middle")
+              .text(xLabel));
     
       const bar = svg.append("g")
         .selectAll("g")
@@ -161,15 +154,15 @@ const DivergingSB = (props) => {
       if (title) bar.append("title")
           .text(({i}) => title(i));
     
-      svg.append("g")
-          .attr("transform", `translate(${xScale(0)},0)`)
-          .call(yAxis)
-          .call(g => g.selectAll(".tick text")
-              .attr("dx", -3)
-              .attr("x", y => { // Find the minimum x-value for the corresponding y-value.
-                const x = d3.min(series, S => S.find(d => Y[d.i] === y)?.[0]);
-                return xScale(x) - xScale(0);
-              }));
+      // svg.append("g")
+      //     .attr("transform", `translate(${xScale(0)},0)`)
+      //     .call(yAxis)
+          // .call(g => g.selectAll(".tick text")
+          //     .attr("dx", -3)
+          //     .attr("x", y => { // Find the minimum x-value for the corresponding y-value.
+          //       const x = d3.min(series, S => S.find(d => Y[d.i] === y)?.[0]);
+          //       return xScale(x) - xScale(0);
+          //     }));
     
       // return Object.assign(svg.node(), {scales: {color}});
     }

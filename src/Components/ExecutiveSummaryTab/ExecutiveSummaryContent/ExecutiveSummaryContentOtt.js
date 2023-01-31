@@ -16,6 +16,28 @@ const ExecutiveSummaryContentOtt = (props) => {
   var json = [
     {
       Name: "TVF Pictures",
+      politifact :  [
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0.69503875968992248},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0 },
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0},
+          {speaker: "data", ruling: "Mostly false", proportion: 0.89503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.59503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.49503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.39503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+       ],
       type: "movie",
       category: "original",
       data :[ {
@@ -53,8 +75,31 @@ const ExecutiveSummaryContentOtt = (props) => {
         240,
       ],
     },
+    
     {
       Name: "Mukhbir",
+      politifact :  [
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0.29503875968992248},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0 },
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.29503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.49503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.49503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.29503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+       ],
       type: "tv show",
       category: "original",
       Count: 491.58,
@@ -74,6 +119,28 @@ const ExecutiveSummaryContentOtt = (props) => {
     },
     {
       Name: "Aha Naa Pellanta",
+      politifact :  [
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.99503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0},
+          {speaker: "data", ruling: "Mostly false", proportion: 0.59503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.49503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.49503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.29503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+       ],
       type: "movie",
       category: "original",
       Count: 469.6,
@@ -93,6 +160,28 @@ const ExecutiveSummaryContentOtt = (props) => {
     },
     {
       Name: "Abhay",
+      politifact :  [
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0.59503875968992248},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0 },
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0},
+          {speaker: "data", ruling: "Mostly false", proportion: 0.69503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.49503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.49503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0},
+          {speaker: "data", ruling: "Mostly false", proportion: 0.29503875968992248},
+        ],
+       ],
       type: "tv show",
       Count: 439.94,
       data :[ {
@@ -118,6 +207,28 @@ const ExecutiveSummaryContentOtt = (props) => {
     },
     {
       Name: "Rangbaaz",
+      politifact :  [
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.59503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.89503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0.29503875968992248},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0 },
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.39503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.89503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+       ],
       type: "movie",
       Count: 437.68,
       data :[ {
@@ -143,6 +254,28 @@ const ExecutiveSummaryContentOtt = (props) => {
     },
     {
       Name: "Duranga",
+      politifact :  [
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0.49503875968992248},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0 },
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0},
+          {speaker: "data", ruling: "Mostly false", proportion: 0.59503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.69503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0.29503875968992248},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0 },
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0},
+          {speaker: "data", ruling: "Mostly false", proportion: 0.29503875968992248},
+        ],
+       ],
       type: "tv show",
       category: "original",
       Count: 427.3,
@@ -162,6 +295,28 @@ const ExecutiveSummaryContentOtt = (props) => {
     },
     {
       Name: "Triplling",
+      politifact :  [
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.59503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.59503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.89503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.69503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.89503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+       ],
       type: "tv show",
       Count: 400.64,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
@@ -180,6 +335,28 @@ const ExecutiveSummaryContentOtt = (props) => {
     },
     {
       Name: "Lalbazaar",
+      politifact :  [
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0.29503875968992248},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0 },
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0},
+          {speaker: "data", ruling: "Mostly false", proportion: 0.89503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0.59503875968992248},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0 },
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.99503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.29503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+       ],
       type: "movie",
       category: "original",
       Count: 391.6,
@@ -199,6 +376,28 @@ const ExecutiveSummaryContentOtt = (props) => {
     },
     {
       Name: "Country Mafia",
+      politifact :  [
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.69503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.89503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.49503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.59503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.29503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+       ],
       type: "tv show",
       Count: 351.28,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
@@ -217,6 +416,28 @@ const ExecutiveSummaryContentOtt = (props) => {
     },
     {
       Name: "Hello Word",
+      politifact :  [
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.89503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.39503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0.69503875968992248},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0 },
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.19503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.29503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+       ],
       type: "movie",
       category: "original",
       Count: 350.7,
@@ -236,6 +457,28 @@ const ExecutiveSummaryContentOtt = (props) => {
     },
     {
       Name: "Broken",
+      politifact :  [
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.99503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.49503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.39503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0.29503875968992248},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0 },
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.29503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+       ],
       type: "tv show",
       Count: 349.8,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
@@ -254,6 +497,28 @@ const ExecutiveSummaryContentOtt = (props) => {
     },
     {
       Name: "Love Bites",
+      politifact :  [
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.99503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0.59503875968992248},
+          {speaker: "data", ruling: "Mostly false", proportion: 0},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.49503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0.59503875968992248},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0 },
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0},
+          {speaker: "data", ruling: "Mostly false", proportion: 0.29503875968992248},
+        ],
+       ],
       type: "movie",
       category: "original",
       Count: 349.7,
@@ -273,6 +538,28 @@ const ExecutiveSummaryContentOtt = (props) => {
     },
     {
       Name: "Qubool Hai ",
+      politifact :  [
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0.69503875968992248},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0 },
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0.69503875968992248},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0 },
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0.69503875968992248},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0 },
+        ],
+        [
+          {speaker: "data", ruling: "Mostly false", proportion: -0},
+          {speaker: "data", ruling: "Pants on fire!", proportion: 0.49503875968992248},
+        ],
+        [
+          {speaker: "data", ruling: "Pants on fire!", proportion: -0},
+          {speaker: "data", ruling: "Mostly false", proportion: 0.29503875968992248},
+        ],
+       ],
       type: "tv show",
       category: "original",
       Count: 348.15,

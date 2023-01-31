@@ -117,15 +117,14 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                         return(
                             <tr key={index} className={myHoverClass}>
                                 <td>{element.Name}</td>
-                                
-                                {element.arr.map((data, index) => {
 
-                            if(toggleValue === true){
-                                        return <td key={index}><DivergingSB data={data} total={total} toggleValue={toggleValue}/></td>
-                                
-                            }else{
+                                {toggleValue === true && 
+                                    element.politifact.map((data, index) => <td key={index}><DivergingSB politifact={data}/></td>)
+                                }
 
-                                
+                                {toggleValue !== true && 
+                                element.arr.map((data, index) => {
+                                    
                                 if(typeof(data) === 'number'){
                                     if(toggleValue === true){
                                         data = ((data/myTotal)*100).toFixed(0)
@@ -148,7 +147,6 @@ const ExecutiveSummaryContentLinearContents = (props) => {
 
                                     return <td key={index}><HSbar data={data} totalValueArr={totalValueArr}  toggleValue={toggleValue}/></td>
                                 }
-                            }
 
                                     
                                 })}
