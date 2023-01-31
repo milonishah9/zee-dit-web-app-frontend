@@ -51,11 +51,11 @@ div.executive-summary-content-active-tab {
 }
 
 .product-engagement-card {
-    background: #ffffff;
-    border: 1px solid #d8e3ff;
-    box-shadow: 0px 2px 5px #d6def8;
-    border-radius: 4px;
-  }
+  background: #ffffff;
+  border: 1px solid #d8e3ff;
+  box-shadow: 0px 2px 5px #d6def8;
+  border-radius: 4px;
+}
 
 .my-minuse-button {
     display: none;

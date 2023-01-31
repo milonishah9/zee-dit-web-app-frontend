@@ -8,15 +8,9 @@ import { useEffect } from "react";
 
 const ExecutiveSummaryContentLinear = (props) => {
   const [activeTab, setActiveTab] = useState("all-content");
-
-  var hoverData = "";
-  const [myData, setMyData] = useState("");
-  useEffect(() => {}, [hoverData]);
-
   let top10files = [];
   let count = 0;
   let bottom10files = [];
-
 
   var json = [
     {

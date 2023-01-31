@@ -1,13 +1,6 @@
 import React from "react";
 import "./ExecutiveSummaryProduct.css";
 import { useState } from "react";
-import BubbleChart from "../../Charts/BubbleChart/BubbleChart";
-import TreeChart from "../../Charts/TreeChart/CenteredTree";
-import ExecutiveSummaryContentOtt from "./ExecutiveSummaryContentOtt";
-import CenteredTree from "../../Charts/TreeChart/CenteredTree";
-import ProductQualityOfExperience from "./ProductQualityOfExperience";
-
-// import LinearBarchart from "../../Charts/LinearBarchart/LinearBarchart";
 
 const ExecutiveSummaryContent = () => {
   const [activeTab, setActiveTab] = useState("linear");
@@ -20,9 +13,6 @@ const ExecutiveSummaryContent = () => {
     setClassed("my-minuse-button");
   };
 
-  const handleOpt3Click = () => {
-    setActiveTab("opt3");
-  };
 
   return (
     <div className="executive-summary-product">
@@ -50,7 +40,7 @@ const ExecutiveSummaryContent = () => {
       </div>
 
       <div className="executive-summary-content-container">
-        {activeTab === "linear" && (
+        {/* {activeTab === "linear" && (
           <div>
             <CenteredTree />
             <div className="product-user-journey-options">
@@ -58,9 +48,8 @@ const ExecutiveSummaryContent = () => {
               <div onClick={handleOpt3Click}>opt3</div>
             </div>
           </div>
-        )}
+        )} */}
 
-        {activeTab === "opt3" && (
           <div>
             <div className="product-engagement-card">
               <p>Watch Time</p>
@@ -139,9 +128,7 @@ const ExecutiveSummaryContent = () => {
               <div>opt2</div>
             </div>
           </div>
-        )}
 
-        {activeTab === "ott" && <ProductQualityOfExperience />}
       </div>
     </div>
   );
