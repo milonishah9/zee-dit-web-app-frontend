@@ -56,4 +56,5 @@
 
 .circle {
     /* stroke: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%); */
+    cursor: pointer;
 }

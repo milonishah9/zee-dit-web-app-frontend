@@ -105,7 +105,8 @@ const SankeyChartForConsumer = (props) => {
             .attr("cy", d => d.x)
             .attr("fill", "#3E1F76")
             .attr("opacity", "0.8")
-            .classed("circle", true);
+            .classed("circle", true)
+            .on("click", () => { console.log('Clicked')})
 
         //Adding the text labels
         svg
