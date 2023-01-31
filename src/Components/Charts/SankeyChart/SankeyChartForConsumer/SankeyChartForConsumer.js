@@ -154,8 +154,8 @@ const SankeyChartForConsumer = (props) => {
             // .attr("y", d => d.x + 26)
             .attr("x", d => d.name === "Exit" ? d.y + 25 : d.y + 24)
             .attr("y", d => d.name === "Exit" ? d.x + 12 : d.x + 26)
-            .attr("color", "red")
-            // .attr("class", d => d.percentageChage >= 0 ? "node-percentage-change-pos" : "node-percentage-change-neg")
+            // .attr("color", "red")
+            .attr("class", d => d.percentageChage >= 0 ? "node-percentage-change-pos" : "node-percentage-change-neg")
             // .classed("node-percentage-change", true)
             .text(d => `${Math.abs(d.percentageChage)}%`);
 
