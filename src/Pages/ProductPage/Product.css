@@ -57,3 +57,7 @@ a.product-engagement-anchor {
   /* margin-bottom: 1px; */
 }
 
+.product-icons{
+    display: flex;
+    justify-content: space-around;
+}
