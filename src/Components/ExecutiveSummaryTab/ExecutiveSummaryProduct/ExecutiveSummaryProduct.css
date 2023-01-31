@@ -39,7 +39,52 @@ div.executive-summary-content-active-tab {
     cursor: pointer;
 }
 
-.executive-summary-content-container{
-    display: flex;
-    width: 100%;
+.executive-summary-product-container{
+    /* display: flex; */
+    width: 10%;
+    margin: auto;
 }
+
+.product-userjourney-card {
+  background: #ffffff;
+  border: 1px solid #d8e3ff;
+  box-shadow: 0px 2px 5px #d6def8;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.product-userjourney-card p{
+    margin: 10px !important;
+}
+
+.my-minuse-button {
+    display: none;
+  }
+  
+  .my-minuse-button {
+    visibility: visible;
+  }
+  
+  .my-pluse-minus-buttons {
+    position: relative;
+    top: 11px;
+    width: 26px;
+    height: 26px;
+    margin: auto;
+    background: white;
+    border-radius: 50%;
+    -moz-box-shadow: 0 5px 5px #d6def8;
+    -webkit-box-shadow: 0 5px 5px #d6def8;
+    box-shadow: 0 5px 5px #d6def8;
+  }
+  
+  .my-button {
+    background-color: #ffffff;
+    margin-left: 5px;
+    /* margin-bottom: 1px; */
+  }
+  
+  .product-icons{
+      display: flex;
+      justify-content: space-around;
+  }
