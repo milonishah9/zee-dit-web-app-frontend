@@ -14,7 +14,7 @@ const ProductUserJourney = (props) => {
   return (
     <div className="product-userjourney-card">
       <p>{data}</p>
-      <p>6 % from last period</p>
+      <p>1000 <span className="values">60%</span></p>
       <div className={classed}>
         <div className="product-icons">
           <svg
