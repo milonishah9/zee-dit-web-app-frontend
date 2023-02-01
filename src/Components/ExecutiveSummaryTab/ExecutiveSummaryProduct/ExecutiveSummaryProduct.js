@@ -2,6 +2,7 @@ import React from "react";
 import "./ExecutiveSummaryProduct.css";
 import { useState } from "react";
 import ProductUserJourney from "./ProductUserJourney";
+import ProductQualityOfExperience from "./ProductQualityOfExperience";
 
 const ExecutiveSummaryContent = () => {
   const [activeTab, setActiveTab] = useState("linear");
@@ -12,7 +13,7 @@ const ExecutiveSummaryContent = () => {
         <div    
           onClick={() => setActiveTab("linear")}
           className={
-            activeTab === "linear" || "opt3" || "opt2"
+            activeTab === "linear" 
               ? "executive-summary-content-active-tab"
               : "executive-summary-content-tab"
           }
@@ -32,20 +33,18 @@ const ExecutiveSummaryContent = () => {
       </div>
 
       <div className="executive-summary-product-container">
-        {/* {activeTab === "linear" && (
+        {activeTab === "linear" && (
           <div>
-            <CenteredTree />
-            <div className="product-user-journey-options">
-              <div>opt2</div>
-              <div onClick={handleOpt3Click}>opt3</div>
-            </div>
+            {/* <CenteredTree /> */}
+            <ProductUserJourney data={['Total Sessions', 2000, 40]} />
+            <ProductUserJourney data={['DAU', 1000, -50]} />
           </div>
-        )} */}
+        )}
 
-          <ProductUserJourney data={['Total Sessions', 2000, 40]} />
-          <ProductUserJourney data={['DAU', 1000, -50]} />
+         
 
       </div>
+      {activeTab === "ott" && <ProductQualityOfExperience />}
     </div>
   );
 };

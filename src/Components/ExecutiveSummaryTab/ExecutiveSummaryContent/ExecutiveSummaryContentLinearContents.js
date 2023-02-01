@@ -85,7 +85,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                         <tr>
                         {/* <th className="executive-summary-content-linear-contents-t-shows-header">Web Series</th> */}
                         <th className="executive-summary-content-linear-contents-t-shows-header">Content name</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Viewers</th>
+                        <th className="executive-summary-content-linear-contents-t-header">Viewers{toggleValue === true && <><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></>}</th>
                         <th className="executive-summary-content-linear-contents-t-header">Viewers(>1 min watched)</th>
                         <th className="executive-summary-content-linear-contents-t-header">Viewers(>75% min watched)</th>
                         <th className="executive-summary-content-linear-contents-t-header">Watch Duration(M min.)</th>
@@ -117,8 +117,8 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                         return(
                             <tr key={index} className={myHoverClass}>
                                 <td>{element.Name}</td>
-
                                 {toggleValue === true && 
+                                
                                     element.politifact.map((data, index) => <td key={index}><DivergingSB politifact={data}/></td>)
                                 }
 
