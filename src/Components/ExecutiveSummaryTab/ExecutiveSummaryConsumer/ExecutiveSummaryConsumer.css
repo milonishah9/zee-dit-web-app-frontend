@@ -1,4 +1,82 @@
-.sankey{
+.sankey {
     margin: 0 auto;
     width: 1300px;
+}
+
+.kpi-cards-container {
+    margin-top: 1.5rem;
+}
+
+.kpi-cards-buttons {
+    display: flex;
+}
+
+.kpi-card-button-active {
+    background: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%);
+    border-radius: 4px;
+    color: #FFFFFF;
+    width: 10%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    margin: 0 1rem;
+}
+
+.kpi-card-button {
+    border: none;
+    color: #212529;
+    background: #E9EFFF;
+    border-radius: 4px;
+    width: 10%;
+    height: 30px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 15px;
+    cursor: pointer;
+    margin: 0 1rem;
+}
+
+.kpi-cards-values {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.kpi-card {
+    width: 15%;
+    margin: 0.5rem 1rem;
+    background: #FFFFFF;
+    border: 1px solid #D8E3FF;
+    box-shadow: 0px 2px 5px #D6DEF8;
+    border-radius: 4px;
+}
+
+.kpi-card-title {
+    padding: 0.5rem 1rem 0;
+    font-family: "Gothamlight";
+    font-weight: 800;
+    margin: 0 !important;
+}
+
+.kpi-card-value-main {
+    font-size: 1.4rem;
+    padding: 0 0.25rem 0 1rem;
+    font-family: "Gothambold";
+    font-weight: 600;
+    margin: 0 !important;
+}
+
+.kpi-card-value {
+    display: flex;
+}
+
+.kpi-card-perdiff-pos {
+    margin: 0 !important;
+    font-size: 0.9rem;
+    color: #00C48C;
+}
+
+.kpi-card-perdiff-pos svg {
+    margin: 0 0 5px 3px;
 }
