@@ -1,33 +1,27 @@
-.sankey {
-    margin: 0 auto;
-    width: 1300px;
-}
-
-.kpi-cards-container {
-    margin-top: 1.5rem;
-}
-
-.kpi-cards-buttons {
+.consumer-journey-filters {
+    width: 40%;
+    margin: 1.5rem 0 0 1.25rem;
+    justify-content: space-between;
     display: flex;
 }
 
-.kpi-card-button-active {
+.consumer-journey-button-active {
     background: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%);
     border-radius: 4px;
     color: #FFFFFF;
-    width: 10%;
+    width: 30%;
     height: 30px;
     border: none;
     cursor: pointer;
-    margin: 0 1rem;
+    /* margin:0 1rem; */
 }
 
-.kpi-card-button {
+.consumer-journey-button {
     border: none;
     color: #212529;
     background: #E9EFFF;
     border-radius: 4px;
-    width: 10%;
+    width: 30%;
     height: 30px;
     font-size: 14px;
     font-style: normal;
@@ -35,7 +29,46 @@
     font-size: 14px;
     line-height: 15px;
     cursor: pointer;
-    margin: 0 1rem;
+    /* margin:0 1rem; */
+}
+
+.kpi-cards-container {
+    margin-top: 3rem;
+}
+
+.kpi-cards-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 98%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.kpi-card-button-active {
+    background: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%);
+    border-radius: 4px;
+    color: #FFFFFF;
+    width: 24%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+/* margin: 0 1rem; */
+
+.kpi-card-button {
+    border: none;
+    color: #212529;
+    background: #E9EFFF;
+    border-radius: 4px;
+    width: 24.4%;
+    height: 30px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 15px;
+    cursor: pointer;
 }
 
 .kpi-cards-values {
@@ -57,13 +90,15 @@
     font-family: "Gothamlight";
     font-weight: 800;
     margin: 0 !important;
+    font-size: 0.85rem;
 }
 
 .kpi-card-value-main {
     font-size: 1.4rem;
     padding: 0 0.25rem 0 1rem;
-    font-family: "Gothambold";
-    font-weight: 600;
+    font-family: "GothamBold";
+    font-weight: 800;
+    letter-spacing: 0.5px;
     margin: 0 !important;
 }
 
@@ -73,10 +108,80 @@
 
 .kpi-card-perdiff-pos {
     margin: 0 !important;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #00C48C;
 }
 
-.kpi-card-perdiff-pos svg {
+.kpi-card-perdiff-neg {
+    margin: 0 !important;
+    font-size: 0.8rem;
+    color: #FF647C;
+}
+
+.kpi-card-perdiff-pos svg,
+.kpi-card-perdiff-neg svg {
     margin: 0 0 5px 3px;
 }
+
+/* Desktop */
+@media only screen and (min-width: 1561px) {}
+
+/* Laptop and bigger screens */
+@media only screen and (max-width: 1560px) and (min-width: 1421px) {
+    .sankey-chart-for-consumer-container {
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1420px) and (min-width: 1317px) {
+
+    .sankey-chart-for-consumer-container {
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1317px) and (min-width: 1280px) {
+    .sankey-chart-for-consumer-container {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 1063px) {
+
+    .sankey-chart-for-consumer-container {
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
+
+/* Tablets and medium screens */
+
+@media only screen and (max-width: 1063px) and (min-width: 768px) {
+
+    .sankey-chart-for-consumer-container {
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 540px) {
+    .sankey-chart-for-consumer-container {
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
+
+/* Mobile and smaller screens */
+
+@media only screen and (max-width: 540px) and (min-width: 371px) {
+    .sankey-chart-for-consumer-container {
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 371px) {}

@@ -12,6 +12,8 @@ const SankeyChartForConsumer = (props) => {
 
         const xPosition = 125, yPosition = 400;
 
+        // const point = [[35,25], [125,25], [205,25]]
+
         var nodeData = [
             { id: "Organic", x: xPosition - 100, y: yPosition - 375, value: 70.38, name: "Organic", absoluteValue: 66.3, percentageValue: 46, percentageChage: -2 },
             { id: "Paid", x: xPosition + 125, y: yPosition - 375, value: 79.9, name: "Paid", absoluteValue: 77.9, percentageValue: 54, percentageChage: 6 },
@@ -35,7 +37,7 @@ const SankeyChartForConsumer = (props) => {
         var linkData = [
             { source: [xPosition - 100, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#74CDFF" }, //Organic - New
             { source: [xPosition - 100, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#74CDFF" }, //Orgainc - Returning
-            // { source: [xPosition + 125, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#768CFF" }, //Paid - Returning
+            { source: [xPosition + 125, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#768CFF" }, //Paid - Returning
             { source: [xPosition + 125, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#768CFF" }, //Paid - New
             { source: [xPosition - 100, yPosition - 185], target: [xPosition - 100, yPosition - 25], fill: "#FFB78E" },  //Returning - Anonymous
             { source: [xPosition - 100, yPosition - 185], target: [xPosition + 125, yPosition - 25], fill: "#FFB78E" }, //Returning - Sign up
@@ -73,7 +75,7 @@ const SankeyChartForConsumer = (props) => {
 
         const curve = d3
             .line()
-            .curve(d3.curveNatural);
+            .curve(d3.curveNatural)
 
         const points = [[35, 250], [110, 200], [130, 90], [190, 30], [178, 35], [120, 80], [90, 200], [35, 250]]
 

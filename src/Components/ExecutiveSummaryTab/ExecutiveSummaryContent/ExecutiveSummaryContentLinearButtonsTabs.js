@@ -10,7 +10,7 @@ const ExecutiveSummaryContentLinearButtonsTabs = (props) => {
     let {tab} = props;
     
     return (
-        <div className={tab === 'ott' ? ("executive-summary-content-linear-tabs"):('executive-summary-content-linear-tabs-subdiv')}>
+        <div className={tab === 'ott' ? ("executive-summary-content-linear-tabs"):('executive-summary-content-linear-tabs-sub-div')}>
             <span>
                 <button className={activeTab === 'all-content' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear")} onClick={() => {
                     setActiveTab('all-content')
