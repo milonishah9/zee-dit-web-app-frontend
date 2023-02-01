@@ -26,7 +26,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
             r1.value > r2.value ? 1 : r1.value < r2.value ? -1 : 0
         );
 
-        console.log('sdf',sortedFiles)
+        // console.log('sdf',sortedFiles)
 
     const handleToggleButton = (e) => {
         // console.log(e.target.checked);
@@ -126,15 +126,22 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                 element.arr.map((data, index) => {
                                     
                                 if(typeof(data) === 'number'){
-                                    if(toggleValue === true){
-                                        data = ((data/myTotal)*100).toFixed(0)
-                                        total = 100
-
-                                        return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
-                                    }else{
+                                    // if(toggleValue === true){
+                                    //     data = ((data/myTotal)*100).toFixed(0)
+                                    //     total = 100
+                                    //     const colors = ['rgba(6, 152, 233, 0.96)', 'rgba(255, 177, 43, 0.98)', 'rgba(104, 104, 249, 0.97)', 'rgb(67, 188, 255)',]
+                                    //     console.log(colors);
+                                    //     colors.map((elems) => {
+                                            
+                                    //         return (
+                                    //             <td key={index}><FrontBar color = {elems} data={data} total={total} toggleValue={toggleValue}/></td>
+                                    //         )
+                                    //     })
+                                    //     // return 
+                                    // }else{
                                         
                                         return <td key={index}><FrontBar percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
-                                    }
+                                    // }
                                     
                                 }else{
                                     let total = 0 
@@ -147,7 +154,6 @@ const ExecutiveSummaryContentLinearContents = (props) => {
 
                                     return <td key={index}><HSbar data={data} totalValueArr={totalValueArr}  toggleValue={toggleValue}/></td>
                                 }
-
                                     
                                 })}
                             </tr>
