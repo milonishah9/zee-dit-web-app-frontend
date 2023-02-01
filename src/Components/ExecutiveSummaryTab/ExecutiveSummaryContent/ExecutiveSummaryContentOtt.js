@@ -673,7 +673,7 @@ const ExecutiveSummaryContentOtt = (props) => {
       <div>
         <div className="executive-summary-content-linear-filter">
           <BubbleChart files={chartData} />
-          <ExecutiveSummaryContentLinearContents chartData={chartData} />
+          <ExecutiveSummaryContentLinearContents tab={"ott"} chartData={chartData} />
         </div>
         {/* {activeTab === "top-10" && (
           <div className="executive-summary-content-linear-filter">
