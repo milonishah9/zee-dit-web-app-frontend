@@ -49,7 +49,10 @@
     font-family: 'Gothamlight';
     opacity: 0.75;
 }
-
+.sankey {
+    margin: 0 auto;
+    width: 1300px;
+}
 .link {
     /* stroke-width: 7px; */
     /* transform: matrix(1, 0, 0, -1, 0, 0); */
@@ -100,7 +103,10 @@
 /* Tablets and medium screens */
 
 @media only screen and (max-width: 1063px) and (min-width: 768px) {
-
+    .sankey {
+        margin: 0 auto;
+        width: auto!important;
+    }
     .sankey-chart-for-consumer-container {
         margin-top: 2rem;
         width: 60%;
