@@ -32,8 +32,6 @@
     /* margin:0 1rem; */
 }
 
-
-
 .kpi-cards-container {
     margin-top: 3rem;
 }
@@ -140,14 +138,14 @@
 
     .sankey-chart-for-consumer-container {
         margin-top: 2rem;
-        width: 150%;
+        width: 100%;
     }
 }
 
 @media only screen and (max-width: 1317px) and (min-width: 1280px) {
     .sankey-chart-for-consumer-container {
         margin-top: 2rem;
-        width: 80%;
+        width: 100%;
     }
 
 }
@@ -156,7 +154,7 @@
 
     .sankey-chart-for-consumer-container {
         margin-top: 2rem;
-        width: 80%;
+        width: 100%;
     }
 }
 
@@ -166,24 +164,23 @@
 
     .sankey-chart-for-consumer-container {
         margin-top: 2rem;
-        width: 60%;
+        width: 100%;
     }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 540px) {
     .sankey-chart-for-consumer-container {
         margin-top: 2rem;
-        width: 40%;
+        width: 100%;
     }
 }
-
 
 /* Mobile and smaller screens */
 
 @media only screen and (max-width: 540px) and (min-width: 371px) {
     .sankey-chart-for-consumer-container {
         margin-top: 2rem;
-        width: 30%;
+        width: 100%;
     }
 }
 

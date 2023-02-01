@@ -49,10 +49,12 @@
     font-family: 'Gothamlight';
     opacity: 0.75;
 }
+
 .sankey {
     margin: 0 auto;
     width: 1300px;
 }
+
 .link {
     /* stroke-width: 7px; */
     /* transform: matrix(1, 0, 0, -1, 0, 0); */
@@ -105,19 +107,25 @@
 @media only screen and (max-width: 1063px) and (min-width: 768px) {
     .sankey {
         margin: 0 auto;
-        width: auto!important;
+        width: auto !important;
     }
+
     .sankey-chart-for-consumer-container {
         margin-top: 2rem;
-        width: 60%;
+        /* width: 100%; */
         overflow: hidden;
     }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 540px) {
+    .sankey {
+        margin: 0 auto;
+        width: auto !important;
+    }
+
     .sankey-chart-for-consumer-container {
         margin-top: 2rem;
-        width: 40%;
+        /* width: 100%; */
         overflow: hidden;
     }
 }
