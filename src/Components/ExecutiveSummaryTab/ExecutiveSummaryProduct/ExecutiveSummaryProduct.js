@@ -43,6 +43,8 @@ const ExecutiveSummaryContent = () => {
             <div className="data-product">
             <div className="data-product1"><ProductUserJourney data={['Total Sessions', 2000, 40]} /></div>
             <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['VTUR', 2000, 40]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['Search Engagement', 1000, -50]} /></div>
             <div className="data-product1"><ProductUserJourney data={['Total Sessions', 2000, 40]} /></div>
             <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
             </div>
