@@ -204,6 +204,43 @@ input[type="checkbox"]:checked {
   margin-right: 65px;
 }
 
+.chart-scale-indicator-number{
+  position: relative;
+  top: 24px;
+  left: 52px;
+}
+
+.chart-scale-indicator-minuse{
+  position: relative;
+  top: 24px;
+  right: 42px;
+}
+.chart-scale-indicator-pluse{
+  position: relative;
+  top: 24px;
+  left: 142px;
+}
+
+.chart-scale-indicators-morethan1{
+  position: relative;
+  right: 104px;
+}
+
+.chart-scale-indicators-morethan75{
+  position: relative;
+  right: 124px;
+}
+
+.chart-scale-indicators-watch-dur{
+  position: relative;
+  right: 101px;
+}
+
+.chart-scale-indicators-sub{
+  position: relative;
+  right: 89px;
+}
+
 @media only screen and (max-width: 1440px) and (min-width: 1366px) {
   .executive-summary-content-linear-contents-header:nth-last-child(1) {
     width: 15.8%;

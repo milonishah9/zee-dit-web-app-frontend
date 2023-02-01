@@ -26,7 +26,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
             r1.value > r2.value ? 1 : r1.value < r2.value ? -1 : 0
         );
 
-        console.log('sdf',sortedFiles)
+        // console.log('sdf',sortedFiles)
 
     const handleToggleButton = (e) => {
         // console.log(e.target.checked);
@@ -85,11 +85,11 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                         <tr>
                         {/* <th className="executive-summary-content-linear-contents-t-shows-header">Web Series</th> */}
                         <th className="executive-summary-content-linear-contents-t-shows-header">Content name</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Viewers</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Viewers(>1 min watched)</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Viewers(>75% min watched)</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Watch Duration(M min.)</th>
-                        <th className="executive-summary-content-linear-contents-t-header">#SAWF Subscriptions</th>
+                        <th className="executive-summary-content-linear-contents-t-header">Viewers{toggleValue === true && <span><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0%</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
+                        <th className="executive-summary-content-linear-contents-t-header">Viewers(>1 min watched){toggleValue === true && <span className="chart-scale-indicators-morethan1"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0%</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
+                        <th className="executive-summary-content-linear-contents-t-header">Viewers(>75% min watched){toggleValue === true && <span className="chart-scale-indicators-morethan75"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0%</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
+                        <th className="executive-summary-content-linear-contents-t-header">Watch Duration(M min.) {toggleValue === true && <span className="chart-scale-indicators-watch-dur"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0%</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
+                        <th className="executive-summary-content-linear-contents-t-header">#SAWF Subscriptions {toggleValue === true && <span className="chart-scale-indicators-sub"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">05</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
                     </tr>
                     )}
                 </thead>
@@ -104,8 +104,8 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                         return(
                             <tr key={index} className={myHoverClass}>
                                 <td>{element.Name}</td>
-
                                 {toggleValue === true && 
+                                
                                     element.politifact.map((data, index) => <td key={index}><DivergingSB politifact={data}/></td>)
                                 }
 
@@ -113,15 +113,22 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                 element.arr.map((data, index) => {
                                     
                                 if(typeof(data) === 'number'){
-                                    if(toggleValue === true){
-                                        data = ((data/myTotal)*100).toFixed(0)
-                                        total = 100
-
-                                        return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
-                                    }else{
+                                    // if(toggleValue === true){
+                                    //     data = ((data/myTotal)*100).toFixed(0)
+                                    //     total = 100
+                                    //     const colors = ['rgba(6, 152, 233, 0.96)', 'rgba(255, 177, 43, 0.98)', 'rgba(104, 104, 249, 0.97)', 'rgb(67, 188, 255)',]
+                                    //     console.log(colors);
+                                    //     colors.map((elems) => {
+                                            
+                                    //         return (
+                                    //             <td key={index}><FrontBar color = {elems} data={data} total={total} toggleValue={toggleValue}/></td>
+                                    //         )
+                                    //     })
+                                    //     // return 
+                                    // }else{
                                         
                                         return <td key={index}><FrontBar percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
-                                    }
+                                    // }
                                     
                                 }else{
                                     let total = 0 
@@ -134,7 +141,6 @@ const ExecutiveSummaryContentLinearContents = (props) => {
 
                                     return <td key={index}><HSbar data={data} totalValueArr={totalValueArr}  toggleValue={toggleValue}/></td>
                                 }
-
                                     
                                 })}
                             </tr>
