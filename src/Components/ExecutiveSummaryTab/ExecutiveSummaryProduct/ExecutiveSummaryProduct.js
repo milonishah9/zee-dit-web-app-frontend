@@ -40,11 +40,11 @@ const ExecutiveSummaryContent = () => {
             {/* <div>
               <Links />
             </div> */}
-            <div className="data">
-            <ProductUserJourney data={['Total Sessions', 2000, 40]} />
-            <ProductUserJourney data={['DAU', 1000, -50]} />
-            <ProductUserJourney data={['Total Sessions', 2000, 40]} />
-            <ProductUserJourney data={['DAU', 1000, -50]} />
+            <div className="data-product">
+            <div className="data-product1"><ProductUserJourney data={['Total Sessions', 2000, 40]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['Total Sessions', 2000, 40]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
             </div>
           </div>
         )}
