@@ -45,9 +45,9 @@ const FrontBar = (props) => {
             // .attr('rx', 4)
             // .attr('ry', 4)
             .attr('width', xScale(data))
-            .attr('fill', '#C996EB')
+            .attr('fill', 'rgba(152, 148, 252, 0.98)')
             .attr('height', 20);
-
+            // #C996EB
         d3.select(node)
             .append('text')
             .attr('class', 'amount')

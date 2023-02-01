@@ -7,7 +7,7 @@ import HSbar from "../../Charts/HSbar/HSbar";
 import DivergingSB from "../../Charts/DivergingSB/DivergingSB";
 
 const ExecutiveSummaryContentLinearContents = (props) => {
-    const {chartData, buttonTab} = props;
+    const {chartData, buttonTab, tab} = props;
     const hoverValue = useSelector(selectCount);
     const [toggleValue, setToggleValue] = useState();
 
@@ -83,7 +83,6 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                     </tr>
                     ):(
                         <tr>
-                        {/* <th className="executive-summary-content-linear-contents-t-shows-header">Web Series</th>  */}
                         <th className="executive-summary-content-linear-contents-t-shows-header">Content name</th>
                         <th className="executive-summary-content-linear-contents-t-header">Viewers{toggleValue === true && <span><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
                         <th className="executive-summary-content-linear-contents-t-header">Viewers(>1 min watched){toggleValue === true && <span className="chart-scale-indicators-morethan1"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
@@ -126,15 +125,15 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                 element.arr.map((data, index) => {
                                     
                                 if(typeof(data) === 'number'){
-                                    if(toggleValue === true){
-                                        data = ((data/myTotal)*100).toFixed(0)
-                                        total = 100
+                                    // if(toggleValue === true){
+                                    //     data = ((data/myTotal)*100).toFixed(0)
+                                    //     total = 100
 
-                                        return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
-                                    }else{
+                                    //     return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
+                                    // }else{
                                         
                                         return <td key={index}><FrontBar percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
-                                    }
+                                    // }
                                     
                                 }else{
                                     let total = 0 
