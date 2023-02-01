@@ -99,7 +99,7 @@ const BubbleChart = (props) => {
       .data(json)
       .enter()
       .append("circle")
-      .attr("stroke", "#945ED2")
+      .attr("stroke", d => d.type === 'movie' ? ('#945ED2'):('rgb(0 113 179)'))
       .attr("stroke-width", 1)
       .attr("stroke-opacity", 2)
       .attr("class", "artist")
