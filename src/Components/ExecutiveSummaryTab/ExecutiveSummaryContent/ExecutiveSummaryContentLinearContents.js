@@ -110,7 +110,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                     {sortedFiles.map((element, index) => {
                         var arrayLastIndexVal = element.arr[4];
                         console.log('arrayLegnth', arrayLastIndexVal);
-
+                        
 
                         if(hoverValue === element.Name){
                             myHoverClass = 'my-row-bubble-hover'
@@ -118,7 +118,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                             myHoverClass = 'executive-summary-content-linear-contents-t-body-rows'
                         }
                         return(
-                            <tr key={index} className={myHoverClass}>
+                            <tr key={index} id={tab === 'ott'? ('exe-sum-cont-table-row') : ('')} className={myHoverClass}>
                                 <td>{element.Name}</td>
                                 
                                 {toggleValue === true && 
