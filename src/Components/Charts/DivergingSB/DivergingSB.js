@@ -158,7 +158,7 @@ const DivergingSB = (props) => {
       .selectAll("g")
       .data(series)
       .join("g")
-      .attr("fill", ([{ i }]) => (color(Z[i]) === "r" ? "red" : "green"))
+      .attr("fill", ([{ i }]) => (color(Z[i]) === "r" ? "#FF647C" : "#00C48C"))
       .selectAll("rect")
       .data((d) => d)
       .join("rect")
