@@ -83,13 +83,13 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                     </tr>
                     ):(
                         <tr>
-                        {/* <th className="executive-summary-content-linear-contents-t-shows-header">Web Series</th> */}
+                        {/* <th className="executive-summary-content-linear-contents-t-shows-header">Web Series</th>  */}
                         <th className="executive-summary-content-linear-contents-t-shows-header">Content name</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Viewers</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Viewers(>1 min watched)</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Viewers(>75% min watched)</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Watch Duration(M min.)</th>
-                        <th className="executive-summary-content-linear-contents-t-header">#SAWF Subscriptions</th>
+                        <th className="executive-summary-content-linear-contents-t-header">Viewers{toggleValue === true && <span><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
+                        <th className="executive-summary-content-linear-contents-t-header">Viewers(>1 min watched){toggleValue === true && <span className="chart-scale-indicators-morethan1"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
+                        <th className="executive-summary-content-linear-contents-t-header">Viewers(>75% min watched){toggleValue === true && <span className="chart-scale-indicators-morethan75"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
+                        <th className="executive-summary-content-linear-contents-t-header">Watch Duration(M min.) {toggleValue === true && <span className="chart-scale-indicators-watch-dur"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
+                        <th className="executive-summary-content-linear-contents-t-header">#SAWF Subscriptions {toggleValue === true && <span className="chart-scale-indicators-sub"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
                     </tr>
                     )}
                 </thead>
@@ -117,8 +117,8 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                         return(
                             <tr key={index} className={myHoverClass}>
                                 <td>{element.Name}</td>
-
                                 {toggleValue === true && 
+                                
                                     element.politifact.map((data, index) => <td key={index}><DivergingSB politifact={data}/></td>)
                                 }
 
