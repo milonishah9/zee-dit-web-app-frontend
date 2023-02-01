@@ -124,3 +124,7 @@ div.executive-summary-content-active-tab {
   align-items: center;
   display: inline;
 }
+
+.product-icons-logo p{
+  margin-left: 9px;
+}

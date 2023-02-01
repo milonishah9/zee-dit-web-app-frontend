@@ -86,7 +86,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                         {/* <th className="executive-summary-content-linear-contents-t-shows-header">Web Series</th> */}
                         <th className="executive-summary-content-linear-contents-t-shows-header">Content name</th>
                         <th className="executive-summary-content-linear-contents-t-header">Viewers{toggleValue === true && <><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></>}</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Viewers(>1 min watched)</th>
+                        <th className="executive-summary-content-linear-contents-t-header">Viewers(>1 min watched){toggleValue === true && <><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></>}</th>
                         <th className="executive-summary-content-linear-contents-t-header">Viewers(>75% min watched)</th>
                         <th className="executive-summary-content-linear-contents-t-header">Watch Duration(M min.)</th>
                         <th className="executive-summary-content-linear-contents-t-header">#SAWF Subscriptions</th>

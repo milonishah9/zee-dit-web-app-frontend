@@ -207,7 +207,7 @@ input[type="checkbox"]:checked {
 .chart-scale-indicator-number{
   position: relative;
   top: 24px;
-  left: 46px;
+  left: 52px;
 }
 
 .chart-scale-indicator-minuse{
@@ -218,7 +218,7 @@ input[type="checkbox"]:checked {
 .chart-scale-indicator-pluse{
   position: relative;
   top: 24px;
-  left: 126px;
+  left: 142px;
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1366px) {
