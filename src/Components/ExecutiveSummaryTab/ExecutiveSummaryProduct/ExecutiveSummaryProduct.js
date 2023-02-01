@@ -37,10 +37,12 @@ const ExecutiveSummaryContent = () => {
         {activeTab === "linear" && (
           <div>
             {/* <CenteredTree /> */}
-            <div>
+            {/* <div>
               <Links />
-            </div>
-            <div>
+            </div> */}
+            <div className="data">
+            <ProductUserJourney data={['Total Sessions', 2000, 40]} />
+            <ProductUserJourney data={['DAU', 1000, -50]} />
             <ProductUserJourney data={['Total Sessions', 2000, 40]} />
             <ProductUserJourney data={['DAU', 1000, -50]} />
             </div>
