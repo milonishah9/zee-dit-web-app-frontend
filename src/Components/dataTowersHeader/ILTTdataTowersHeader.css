@@ -53,9 +53,11 @@ img.datatower-image {
     color: #fff;
 }
 @media only screen and (max-width: 767px) {
+    img.datatower-image{height: 15vh!important;}
     img.datatower-image{width: 90%;}
     .Executive-Summary-tile{width: 90%!important;}
     .data-towers{display: block!important;}
-    .Data-towers{top: 0rem!important;}
+    .Data-towers{top:0rem!important;}
     .data-tower-head{padding: 3px!important;}
+    .executive-summary-content-linear-tabs{display: grid!important;}
 }
