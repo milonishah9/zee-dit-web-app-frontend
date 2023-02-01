@@ -8,7 +8,7 @@ import { scaleLinear } from 'd3-scale';
 
 const FrontBar = (props) => {
 
-    const { data, total, toggleValue, percent } = props
+    const { data, total, toggleValue, percent, color } = props
     const ref = useRef();
     // console.log(toggleValue);
     const width = 215;
@@ -45,7 +45,7 @@ const FrontBar = (props) => {
             // .attr('rx', 4)
             // .attr('ry', 4)
             .attr('width', xScale(data))
-            .attr('fill', 'rgba(152, 148, 252, 0.98)')
+            .attr('fill', color)
             .attr('height', 20);
             // #C996EB
         d3.select(node)

@@ -108,6 +108,10 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                         
                     </tr> */}
                     {sortedFiles.map((element, index) => {
+                        var arrayLastIndexVal = element.arr[4];
+                        console.log('arrayLegnth', arrayLastIndexVal);
+
+
                         if(hoverValue === element.Name){
                             myHoverClass = 'my-row-bubble-hover'
                         }else{
@@ -116,8 +120,8 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                         return(
                             <tr key={index} className={myHoverClass}>
                                 <td>{element.Name}</td>
-                                {toggleValue === true && 
                                 
+                                {toggleValue === true && 
                                     element.politifact.map((data, index) => <td key={index}><DivergingSB politifact={data}/></td>)
                                 }
 
@@ -125,14 +129,20 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                 element.arr.map((data, index) => {
                                     
                                 if(typeof(data) === 'number'){
+
                                     // if(toggleValue === true){
                                     //     data = ((data/myTotal)*100).toFixed(0)
                                     //     total = 100
 
                                     //     return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
                                     // }else{
+                                        var color = 'rgba(152, 148, 252, 0.98)';
+                                         
+                                        if(arrayLastIndexVal === data ){
+                                            color = 'rgba(201, 150, 235, 0.99)';
+                                        } 
                                         
-                                        return <td key={index}><FrontBar percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
+                                        return <td key={index}><FrontBar color = {color} percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
                                     // }
                                     
                                 }else{
