@@ -94,20 +94,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                     )}
                 </thead>
                 <tbody className="executive-summary-content-linear-contents-t-body">
-                    {/* <tr>
-                        <td>helllo</td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                   
-                        
-                        
-                    </tr> */}
+ 
                     {sortedFiles.map((element, index) => {
                         if(hoverValue === element.Name){
                             myHoverClass = 'my-row-bubble-hover'

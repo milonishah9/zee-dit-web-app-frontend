@@ -105,16 +105,16 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 491.58,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        430,
-        209,
+        [120, 'rgba(6, 152, 233, 0.55)'],
+        [430, 'rgba(255, 177, 43, 0.98)'],
+        [209, 'rgba(104, 104, 249, 0.97)'],
         [
           { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
-        300,
+        [300,'rgb(201, 150, 235)']
       ],
     },
     {
@@ -146,16 +146,16 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 469.6,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        223,
-        140,
-        170,
+        [120, 'rgba(6, 152, 233, 0.55)'],
+        [430, 'rgba(255, 177, 43, 0.98)'],
+        [209, 'rgba(104, 104, 249, 0.97)'],
         [
           { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
-        400,
+        [300,'rgb(201, 150, 235)']
       ],
     },
     {
@@ -193,16 +193,16 @@ const ExecutiveSummaryContentOtt = (props) => {
       }],
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        430,
-        209,
+        [120, 'rgba(6, 152, 233, 0.55)'],
+        [430, 'rgba(255, 177, 43, 0.98)'],
+        [209, 'rgba(104, 104, 249, 0.97)'],
         [
           { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
-        300,
+        [300,'rgb(201, 150, 235)']
       ],
     },
     {
@@ -240,16 +240,16 @@ const ExecutiveSummaryContentOtt = (props) => {
       }],
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        140,
-        170,
+        [120, 'rgba(6, 152, 233, 0.55)'],
+        [430, 'rgba(255, 177, 43, 0.98)'],
+        [209, 'rgba(104, 104, 249, 0.97)'],
         [
           { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
-        400,
+        [300,'rgb(201, 150, 235)']
       ],
     },
     {
@@ -281,16 +281,16 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 427.3,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        320,
-        230,
-        100,
+        [120, 'rgba(6, 152, 233, 0.55)'],
+        [430, 'rgba(255, 177, 43, 0.98)'],
+        [209, 'rgba(104, 104, 249, 0.97)'],
         [
           { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
-        400,
+        [300,'rgb(201, 150, 235)']
       ],
     },
     {
@@ -321,16 +321,16 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 400.64,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        230,
-        100,
+        [120, 'rgba(6, 152, 233, 0.55)'],
+        [430, 'rgba(255, 177, 43, 0.98)'],
+        [209, 'rgba(104, 104, 249, 0.97)'],
         [
           { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
-        300,
+        [300,'rgb(201, 150, 235)']
       ],
     },
     {
@@ -362,16 +362,16 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 391.6,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        230,
-        100,
+        [120, 'rgba(6, 152, 233, 0.55)'],
+        [430, 'rgba(255, 177, 43, 0.98)'],
+        [209, 'rgba(104, 104, 249, 0.97)'],
         [
           { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
-        410,
+        [300,'rgb(201, 150, 235)']
       ],
     },
     {
@@ -402,16 +402,16 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 351.28,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        230,
-        100,
+        [120, 'rgba(6, 152, 233, 0.55)'],
+        [430, 'rgba(255, 177, 43, 0.98)'],
+        [209, 'rgba(104, 104, 249, 0.97)'],
         [
           { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
-        400,
+        [300,'rgb(201, 150, 235)']
       ],
     },
     {
@@ -443,16 +443,16 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 350.7,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        230,
-        100,
+        [120, 'rgba(6, 152, 233, 0.55)'],
+        [430, 'rgba(255, 177, 43, 0.98)'],
+        [209, 'rgba(104, 104, 249, 0.97)'],
         [
           { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
-        400,
+        [300,'rgb(201, 150, 235)']
       ],
     },
     {
@@ -483,16 +483,16 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 349.8,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        130,
-        230,
-        209,
+        [120, 'rgba(6, 152, 233, 0.55)'],
+        [430, 'rgba(255, 177, 43, 0.98)'],
+        [209, 'rgba(104, 104, 249, 0.97)'],
         [
           { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
-        410,
+        [300,'rgb(201, 150, 235)']
       ],
     },
     {
@@ -524,16 +524,16 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 349.7,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        130,
-        140,
-        170,
+        [120, 'rgba(6, 152, 233, 0.55)'],
+        [430, 'rgba(255, 177, 43, 0.98)'],
+        [209, 'rgba(104, 104, 249, 0.97)'],
         [
           { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
-        300,
+        [300,'rgb(201, 150, 235)']
       ],
     },
     {
@@ -565,16 +565,16 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 348.15,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        230,
-        209,
+        [120, 'rgba(6, 152, 233, 0.55)'],
+        [430, 'rgba(255, 177, 43, 0.98)'],
+        [209, 'rgba(104, 104, 249, 0.97)'],
         [
           { value: 10, color: "#43bcff" },
           { value: 5, color: "#ffcf5c" },
           { value: 3, color: "#768cff" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
-        410,
+        [300,'rgb(201, 150, 235)']
       ],
     },
   ];
