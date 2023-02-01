@@ -1,7 +1,8 @@
 .sankey-chart-for-consumer-container {
     /* margin-top: 10rem; */
     /* margin: auto; */
-    margin-top: 5rem;
+    margin-top: 2rem;
+    width: 100%;
 }
 
 .node-title {
@@ -58,3 +59,71 @@
     /* stroke: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%); */
     cursor: pointer;
 }
+
+/* Desktop */
+@media only screen and (min-width: 1561px) {}
+
+/* Laptop and bigger screens */
+@media only screen and (max-width: 1560px) and (min-width: 1421px) {
+    .sankey-chart-for-consumer-container {
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1420px) and (min-width: 1317px) {
+
+    .sankey-chart-for-consumer-container {
+        margin-top: 2rem;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1317px) and (min-width: 1280px) {
+    .sankey-chart-for-consumer-container {
+        margin-top: 2rem;
+        width: 80%;
+        overflow: hidden;
+    }
+
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 1063px) {
+
+    .sankey-chart-for-consumer-container {
+        margin-top: 2rem;
+        width: 80%;
+        overflow: hidden;
+    }
+}
+
+/* Tablets and medium screens */
+
+@media only screen and (max-width: 1063px) and (min-width: 768px) {
+
+    .sankey-chart-for-consumer-container {
+        margin-top: 2rem;
+        width: 60%;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 540px) {
+    .sankey-chart-for-consumer-container {
+        margin-top: 2rem;
+        width: 40%;
+        overflow: hidden;
+    }
+}
+
+
+/* Mobile and smaller screens */
+
+@media only screen and (max-width: 540px) and (min-width: 371px) {
+    .sankey-chart-for-consumer-container {
+        margin-top: 2rem;
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 371px) {}
