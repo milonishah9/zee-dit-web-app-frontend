@@ -246,7 +246,7 @@ input[type="checkbox"]:checked {
   display: none;
 } */
 
-#exe-sum-cont-table-row td:nth-child(6) text{
+#exe-sum-cont-table-row td:nth-child(6) text.amount{
   display: none;
 }
 
