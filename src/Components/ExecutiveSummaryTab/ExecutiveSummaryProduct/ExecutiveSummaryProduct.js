@@ -18,7 +18,7 @@ const ExecutiveSummaryContent = () => {
               : "executive-summary-content-tab"
           }
         >
-          User Journey
+          Product Journey
         </div>
         <div
           onClick={() => setActiveTab("ott")}
