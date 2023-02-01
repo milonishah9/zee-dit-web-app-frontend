@@ -42,8 +42,8 @@ const ExecutiveSummaryContent = () => {
           </div>
         )} */}
 
-          <ProductUserJourney data={['Total Sessions', 20]} />
-          <ProductUserJourney data={['DAU', -10]} />
+          <ProductUserJourney data={['Total Sessions', 2000, 40]} />
+          <ProductUserJourney data={['DAU', 1000, -50]} />
 
       </div>
     </div>

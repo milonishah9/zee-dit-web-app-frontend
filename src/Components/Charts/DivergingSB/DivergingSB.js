@@ -122,21 +122,21 @@ const DivergingSB = (props) => {
           .attr("viewBox", [-15, 0, width, height])
           // .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
     
-      svg.append("g")
-      .attr("font-size", "20px")
+      // svg.append("g")
+      // .attr("font-size", "20px")
 
-          .attr("transform", `translate(0,${marginTop})`)
-          .call(xAxis)
-          .call(g => g.select(".domain").remove())
-          .call(g => g.selectAll(".tick line").clone()
-              .attr("y2", height - marginTop - marginBottom)
-              .attr("stroke-opacity", 0.1))
-          .call(g => g.append("text")
-              .attr("x", xScale(0))
-              .attr("y", -22)
-              .attr("fill", "currentColor")
-              .attr("text-anchor", "middle")
-              .text(xLabel));
+      //     .attr("transform", `translate(0,${marginTop})`)
+      //     .call(xAxis)
+      //     .call(g => g.select(".domain").remove())
+      //     .call(g => g.selectAll(".tick line").clone()
+      //         .attr("y2", height - marginTop - marginBottom)
+      //         .attr("stroke-opacity", 0.1))
+      //     .call(g => g.append("text")
+      //         .attr("x", xScale(0))
+      //         .attr("y", -22)
+      //         .attr("fill", "currentColor")
+      //         .attr("text-anchor", "middle")
+      //         .text(xLabel));
     
       const bar = svg.append("g")
         .selectAll("g")
