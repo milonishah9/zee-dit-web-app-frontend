@@ -7,7 +7,7 @@ import HSbar from "../../Charts/HSbar/HSbar";
 import DivergingSB from "../../Charts/DivergingSB/DivergingSB";
 
 const ExecutiveSummaryContentLinearContents = (props) => {
-    const {chartData, buttonTab} = props;
+    const {chartData, buttonTab, tab} = props;
     const hoverValue = useSelector(selectCount);
     const [toggleValue, setToggleValue] = useState();
 
@@ -83,7 +83,6 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                     </tr>
                     ):(
                         <tr>
-                        {/* <th className="executive-summary-content-linear-contents-t-shows-header">Web Series</th> */}
                         <th className="executive-summary-content-linear-contents-t-shows-header">Content name</th>
                         <th className="executive-summary-content-linear-contents-t-header">Viewers{toggleValue === true && <span><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
                         <th className="executive-summary-content-linear-contents-t-header">Viewers(>1 min watched){toggleValue === true && <span className="chart-scale-indicators-morethan1"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
@@ -109,16 +108,17 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                         
                     </tr> */}
                     {sortedFiles.map((element, index) => {
+                        var arrayLastIndexVal = (element.arr).length-1;
                         if(hoverValue === element.Name){
                             myHoverClass = 'my-row-bubble-hover'
                         }else{
                             myHoverClass = 'executive-summary-content-linear-contents-t-body-rows'
                         }
                         return(
-                            <tr key={index} className={myHoverClass}>
+                            <tr key={index} id={tab === 'ott'? ('exe-sum-cont-table-row') : ('')} className={myHoverClass}>
                                 <td>{element.Name}</td>
-                                {toggleValue === true && 
                                 
+                                {toggleValue === true && 
                                     element.politifact.map((data, index) => <td key={index}><DivergingSB politifact={data}/></td>)
                                 }
 
@@ -126,15 +126,26 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                 element.arr.map((data, index) => {
                                     
                                 if(typeof(data) === 'number'){
-                                    if(toggleValue === true){
-                                        data = ((data/myTotal)*100).toFixed(0)
-                                        total = 100
 
-                                        return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
-                                    }else{
-                                        
-                                        return <td key={index}><FrontBar percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
-                                    }
+                                    // if(toggleValue === true){
+                                    //     data = ((data/myTotal)*100).toFixed(0)
+                                    //     total = 100
+
+                                    //     return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
+                                    // }else{
+                                        if(tab === 'ott'){
+                                            var color = 'rgba(152, 148, 252, 0.98)';
+                                         
+                                            if(index === arrayLastIndexVal ){
+                                                color = 'rgba(201, 150, 235, 0.99)';
+                                            } 
+                                            
+                                            return <td key={index}><FrontBar color = {color} percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
+                                        }
+                                        if(tab !== 'ott'){
+                                            return <td key={index}><FrontBar color={'rgba(201, 150, 235, 0.99)'} percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
+                                        }
+                                    // }
                                     
                                 }else{
                                     let total = 0 

@@ -3,6 +3,7 @@ import "./ExecutiveSummaryProduct.css";
 import { useState } from "react";
 import ProductUserJourney from "./ProductUserJourney";
 import ProductQualityOfExperience from "./ProductQualityOfExperience";
+import Links from "../../Charts/Links/Links";
 
 const ExecutiveSummaryContent = () => {
   const [activeTab, setActiveTab] = useState("linear");
@@ -18,7 +19,7 @@ const ExecutiveSummaryContent = () => {
               : "executive-summary-content-tab"
           }
         >
-          User Journey
+          Product Journey
         </div>
         <div
           onClick={() => setActiveTab("ott")}
@@ -36,8 +37,23 @@ const ExecutiveSummaryContent = () => {
         {activeTab === "linear" && (
           <div>
             {/* <CenteredTree /> */}
-            <ProductUserJourney data={['Total Sessions', 2000, 40]} />
-            <ProductUserJourney data={['DAU', 1000, -50]} />
+            {/* <div>
+              <Links />
+            </div> */}
+            <div className="data-product">
+            <div className="data-product1"><ProductUserJourney data={['Total Sessions', 2000, 40]} /></div>
+             <div className="data-product1"><ProductUserJourney data={['VTUR', 2000, 40]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['Total Ad Viewers', 1000, -50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['No. of Subscribers', 2000, 40]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['DAV', 1000, -50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['% of Returning Users', 1000, -50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
+            </div>
           </div>
         )}
 
