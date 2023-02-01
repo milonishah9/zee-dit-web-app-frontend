@@ -1,0 +1,24 @@
+.line-chart-with-animation{
+    margin-top: 100px;
+    text-align: center;
+}
+
+.line-chart-all-dots div{
+    display: inline-block;
+    width: auto;
+}
+
+.line-chart-dots{
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.line-chart-acquisitions{
+    position: relative;
+    /* top: 15px; */
+    right: 473px;
+    margin-left: 50px;
+}

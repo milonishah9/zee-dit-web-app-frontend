@@ -8,7 +8,7 @@ const HSbar = (props) => {
   var {data,totalValueArr} = props;
   let total = 0;
   let totalValue = []
-  console.log(totalValueArr);
+  // console.log(totalValueArr);
   // totalValue.push(data.map(element => {
     
   //   return total += element.value;
