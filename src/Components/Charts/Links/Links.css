@@ -3,6 +3,11 @@
     text-align: center;
 }
 
+.line-chart-all-dots{
+    width: 1000px;
+    margin: auto;
+}
+
 .line-chart-all-dots div{
     display: inline-block;
     width: auto;
@@ -17,8 +22,7 @@
 }
 
 .line-chart-acquisitions{
-    position: relative;
-    /* top: 15px; */
-    right: 473px;
+    /* position: relative;
+    right: 473px; */
     margin-left: 50px;
 }

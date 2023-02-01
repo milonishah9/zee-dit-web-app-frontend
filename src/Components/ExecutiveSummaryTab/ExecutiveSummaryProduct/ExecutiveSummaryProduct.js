@@ -3,6 +3,7 @@ import "./ExecutiveSummaryProduct.css";
 import { useState } from "react";
 import ProductUserJourney from "./ProductUserJourney";
 import ProductQualityOfExperience from "./ProductQualityOfExperience";
+import Links from "../../Charts/Links/Links";
 
 const ExecutiveSummaryContent = () => {
   const [activeTab, setActiveTab] = useState("linear");
@@ -36,8 +37,13 @@ const ExecutiveSummaryContent = () => {
         {activeTab === "linear" && (
           <div>
             {/* <CenteredTree /> */}
+            <div>
+              <Links />
+            </div>
+            <div>
             <ProductUserJourney data={['Total Sessions', 2000, 40]} />
             <ProductUserJourney data={['DAU', 1000, -50]} />
+            </div>
           </div>
         )}
 
