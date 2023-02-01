@@ -241,6 +241,15 @@ input[type="checkbox"]:checked {
   right: 89px;
 }
 
+/* .my-row-bubble-hover td:nth-child(6) text,
+.executive-summary-content-linear-contents-t-body-rows td:nth-child(6) text{
+  display: none;
+} */
+
+#exe-sum-cont-table-row td:nth-child(6) text{
+  display: none;
+}
+
 @media only screen and (max-width: 1440px) and (min-width: 1366px) {
   .executive-summary-content-linear-contents-header:nth-last-child(1) {
     width: 15.8%;
