@@ -241,11 +241,6 @@ input[type="checkbox"]:checked {
   right: 89px;
 }
 
-/* .my-row-bubble-hover td:nth-child(6) text,
-.executive-summary-content-linear-contents-t-body-rows td:nth-child(6) text{
-  display: none;
-} */
-
 #exe-sum-cont-table-row td:nth-child(6) text.amount{
   display: none;
 }

@@ -52,18 +52,18 @@ const ExecutiveSummaryContentOtt = (props) => {
       arr: [
         [
           { value: 10, color: "rgb(152 148 252 / 98%)" },
-          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 5, color: "rgb(152 148 252 / 50%)" },
           { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
         ],
 
         [
-          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 6, color: "rgb(152 148 252 / 98%)" },
           { value: 5, color: "rgb(152 148 252 / 50%)" },
           { value: 3,  description:' ', color: "rgb(215 209 255)" },
         ],
         [
           { value: 10, color: "rgb(152 148 252 / 98%)" },
-          { value: 5, color: "rgb(152 148 252 / 50%)" },
+          { value: 2, color: "rgb(152 148 252 / 50%)" },
           { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
         ],
         [
@@ -105,13 +105,25 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 491.58,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        430,
-        209,
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 6, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 4, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
         [
           { value: 10, color: "rgb(201 150 235 / 99%)" },
           { value: 5, color: "rgb(201 150 235 / 70%)" },
-          { value: 3, color: "rgb(201 150 235 / 45%)" },
+          { value: 5, color: "rgb(201 150 235 / 45%)" },
           { value: 3,  description:' ', color: "rgb(201 150 235 / 25%)" },
         ],
         300,
@@ -146,12 +158,24 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 469.6,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        223,
-        140,
-        170,
+        [
+          { value: 7, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 5, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
         [
           { value: 10, color: "rgb(201 150 235 / 99%)" },
-          { value: 5, color: "rgb(201 150 235 / 70%)" },
+          { value: 4, color: "rgb(201 150 235 / 70%)" },
           { value: 3, color: "rgb(201 150 235 / 45%)" },
           { value: 3,  description:' ', color: "rgb(201 150 235 / 25%)" },
         ],
@@ -193,13 +217,25 @@ const ExecutiveSummaryContentOtt = (props) => {
       }],
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        430,
-        209,
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 3, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 5, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
         [
           { value: 10, color: "rgb(201 150 235 / 99%)" },
           { value: 5, color: "rgb(201 150 235 / 70%)" },
-          { value: 3, color: "rgb(201 150 235 / 45%)" },
+          { value: 5, color: "rgb(201 150 235 / 45%)" },
           { value: 3,  description:' ', color: "rgb(201 150 235 / 25%)" },
         ],
         300,
@@ -240,12 +276,24 @@ const ExecutiveSummaryContentOtt = (props) => {
       }],
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        140,
-        170,
         [
-          { value: 10, color: "rgb(201 150 235 / 99%)" },
-          { value: 5, color: "rgb(201 150 235 / 70%)" },
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 6, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 2, color: "rgb(201 150 235 / 99%)" },
+          { value: 3, color: "rgb(201 150 235 / 70%)" },
           { value: 3, color: "rgb(201 150 235 / 45%)" },
           { value: 3,  description:' ', color: "rgb(201 150 235 / 25%)" },
         ],
@@ -281,13 +329,25 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 427.3,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        320,
-        230,
-        100,
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 7, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
         [
           { value: 10, color: "rgb(201 150 235 / 99%)" },
           { value: 5, color: "rgb(201 150 235 / 70%)" },
-          { value: 3, color: "rgb(201 150 235 / 45%)" },
+          { value: 2, color: "rgb(201 150 235 / 45%)" },
           { value: 3,  description:' ', color: "rgb(201 150 235 / 25%)" },
         ],
         400,
@@ -321,12 +381,24 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 400.64,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        230,
-        100,
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 8, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 9, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
         [
           { value: 10, color: "rgb(201 150 235 / 99%)" },
-          { value: 5, color: "rgb(201 150 235 / 70%)" },
+          { value: 1, color: "rgb(201 150 235 / 70%)" },
           { value: 3, color: "rgb(201 150 235 / 45%)" },
           { value: 3,  description:' ', color: "rgb(201 150 235 / 25%)" },
         ],
@@ -362,9 +434,21 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 391.6,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        230,
-        100,
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 2, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 3, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
         [
           { value: 10, color: "rgb(201 150 235 / 99%)" },
           { value: 5, color: "rgb(201 150 235 / 70%)" },
@@ -402,13 +486,25 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 351.28,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        230,
-        100,
         [
-          { value: 10, color: "rgb(201 150 235 / 99%)" },
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 5, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 6, color: "rgb(152 148 252 / 98%)" },
+          { value: 2, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 6, color: "rgb(201 150 235 / 99%)" },
           { value: 5, color: "rgb(201 150 235 / 70%)" },
-          { value: 3, color: "rgb(201 150 235 / 45%)" },
+          { value: 4, color: "rgb(201 150 235 / 45%)" },
           { value: 3,  description:' ', color: "rgb(201 150 235 / 25%)" },
         ],
         400,
@@ -443,12 +539,24 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 350.7,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        230,
-        100,
         [
-          { value: 10, color: "rgb(201 150 235 / 99%)" },
-          { value: 5, color: "rgb(201 150 235 / 70%)" },
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 3, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 2, color: "rgb(201 150 235 / 99%)" },
+          { value: 6, color: "rgb(201 150 235 / 70%)" },
           { value: 3, color: "rgb(201 150 235 / 45%)" },
           { value: 3,  description:' ', color: "rgb(201 150 235 / 25%)" },
         ],
@@ -483,9 +591,21 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 349.8,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        130,
-        230,
-        209,
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 1, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
         [
           { value: 10, color: "rgb(201 150 235 / 99%)" },
           { value: 5, color: "rgb(201 150 235 / 70%)" },
@@ -524,9 +644,21 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 349.7,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        130,
-        140,
-        170,
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 1, color: "rgb(152 148 252 / 98%)" },
+          { value: 1, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
         [
           { value: 10, color: "rgb(201 150 235 / 99%)" },
           { value: 5, color: "rgb(201 150 235 / 70%)" },
@@ -565,9 +697,21 @@ const ExecutiveSummaryContentOtt = (props) => {
       Count: 348.15,
       // img: "https://akamaividz2.zee5.com/image/upload/w_504,h_756,c_scale,f_webp,q_auto:eco/resources/0-0-2526/portrait/1920x77049703fab8b734b45943d96ac300f0699.jpg",
       arr: [
-        120,
-        230,
-        209,
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
+        [
+          { value: 10, color: "rgb(152 148 252 / 98%)" },
+          { value: 10, color: "rgb(152 148 252 / 50%)" },
+          { value: 3,  description:' ', color: "rgb(152 148 252 / 25%)" },
+        ],
         [
           { value: 10, color: "rgb(201 150 235 / 99%)" },
           { value: 5, color: "rgb(201 150 235 / 70%)" },

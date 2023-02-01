@@ -108,10 +108,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                         
                     </tr> */}
                     {sortedFiles.map((element, index) => {
-                        var arrayLastIndexVal = element.arr[4];
-                        console.log('arrayLegnth', arrayLastIndexVal);
-                        
-
+                        var arrayLastIndexVal = (element.arr).length-1;
                         if(hoverValue === element.Name){
                             myHoverClass = 'my-row-bubble-hover'
                         }else{
@@ -139,7 +136,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                         if(tab === 'ott'){
                                             var color = 'rgba(152, 148, 252, 0.98)';
                                          
-                                            if(arrayLastIndexVal === data ){
+                                            if(index === arrayLastIndexVal ){
                                                 color = 'rgba(201, 150, 235, 0.99)';
                                             } 
                                             
