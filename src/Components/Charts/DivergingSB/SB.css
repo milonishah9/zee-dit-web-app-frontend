@@ -16,3 +16,13 @@
   height: 40px !important;
 
 }
+
+#chartdiv{
+  background-color: rgb(236, 232, 255);
+}
+
+#chartdiv text {
+  font-size: 8px;
+  font-family: "GothamLight";
+  margin-bottom: 13px !important;
+}
