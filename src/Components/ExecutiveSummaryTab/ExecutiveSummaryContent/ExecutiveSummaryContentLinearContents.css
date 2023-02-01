@@ -156,6 +156,12 @@ table {
   justify-content: space-between;
 }
 
+.executive-summary-content-linear-tabs-subdiv{
+  width: 98.7%;
+  display: flex;
+  justify-content: space-between;
+}
+
 input[type="checkbox"] {
   position: relative;
   width: 30px;
