@@ -9,6 +9,7 @@ import { scaleLinear } from 'd3-scale';
 const FrontBar = (props) => {
 
     const { data, total, toggleValue, percent } = props
+    console.log('color', data);
     const ref = useRef();
     // console.log(toggleValue);
     const width = 215;
@@ -44,7 +45,7 @@ const FrontBar = (props) => {
             // .attr('y', 0)
             // .attr('rx', 4)
             // .attr('ry', 4)
-            .attr('width', xScale(data))
+            .attr('width', xScale(data[0]))
             .attr('fill', '#C996EB')
             .attr('height', 20);
 
@@ -53,7 +54,7 @@ const FrontBar = (props) => {
             .attr('class', 'amount')
             .attr('y', 14)
             .attr('x', 10)
-            .text((data));
+            .text((data[0]));
         
         d3.select(node)
             .selectAll(".remaining-amount").remove()
@@ -63,16 +64,16 @@ const FrontBar = (props) => {
             .attr('class', 'remaining-amount')
             .attr('y', 14)
             .attr('x', 184)
-            .text(percent ?(total-data) : (total-data + '%'));
+            .text(percent ?(total-data[0]) : (total-data[0] + '%'));
 
         // // .attr('y', barHeight)
         // .attr('dx', -10)
         // .attr('dy', 2)
-        //   const { data, xScale } = props;
+        //   const { data[0], xScale } = props;
         const t = transition().duration(100);
 
         // d3.select('.bar')
-        //     .transition(t).attr('width', xScale(data));
+        //     .transition(t).attr('width', xScale(data[0]));
 
         d3.select('.amount')
             .transition(t)
@@ -85,7 +86,7 @@ const FrontBar = (props) => {
     return (
         <>
             <svg
-                id={data}
+                id={data[0]}
                 width={width}
                 height='20'
                 className="prograss-svg"
@@ -101,7 +102,7 @@ const FrontBar = (props) => {
                                 // {...{
                                 //     xScale,
                                 //     barHeight,
-                                //     data,
+                                //     data[0],
                                 // }}
                             /> */}
                     <g
