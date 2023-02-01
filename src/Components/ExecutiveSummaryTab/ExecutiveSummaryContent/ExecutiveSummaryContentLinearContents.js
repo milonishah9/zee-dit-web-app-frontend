@@ -136,13 +136,18 @@ const ExecutiveSummaryContentLinearContents = (props) => {
 
                                     //     return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
                                     // }else{
-                                        var color = 'rgba(152, 148, 252, 0.98)';
+                                        if(tab === 'ott'){
+                                            var color = 'rgba(152, 148, 252, 0.98)';
                                          
-                                        if(arrayLastIndexVal === data ){
-                                            color = 'rgba(201, 150, 235, 0.99)';
-                                        } 
-                                        
-                                        return <td key={index}><FrontBar color = {color} percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
+                                            if(arrayLastIndexVal === data ){
+                                                color = 'rgba(201, 150, 235, 0.99)';
+                                            } 
+                                            
+                                            return <td key={index}><FrontBar color = {color} percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
+                                        }
+                                        if(tab !== 'ott'){
+                                            return <td key={index}><FrontBar color={'rgba(201, 150, 235, 0.99)'} percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
+                                        }
                                     // }
                                     
                                 }else{
