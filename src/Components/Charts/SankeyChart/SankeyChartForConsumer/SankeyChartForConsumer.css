@@ -1,12 +1,12 @@
 .sankey-chart-for-consumer-container {
     /* margin-top: 10rem; */
     /* margin: auto; */
-    margin-top: 2rem;
-    width: 100%;
+    margin: 0.65rem 0 0 1rem;
+    width: 90%;
 }
 
 .node-title {
-    font-size: 0.4rem;
+    font-size: 0.5rem;
     letter-spacing: 0.3px;
     /* font-weight: 600; */
     color: #333333;
@@ -15,7 +15,7 @@
 }
 
 .node-value {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     letter-spacing: 0.3px;
     /* font-weight: 600; */
     color: #333333;
@@ -24,7 +24,7 @@
 }
 
 .node-percentage {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     letter-spacing: 0.3px;
     font-weight: 800;
     color: #808080;
@@ -34,7 +34,7 @@
 
 .node-percentage-change-pos {
     color: #00C48C;
-    font-size: 0.45rem;
+    font-size: 0.5rem;
     letter-spacing: 0.3px;
     font-weight: 800;
     font-family: 'Gothamlight';
@@ -43,7 +43,7 @@
 
 .node-percentage-change-neg {
     color: #FF647C;
-    font-size: 0.45rem;
+    font-size: 0.5rem;
     letter-spacing: 0.3px;
     font-weight: 800;
     font-family: 'Gothamlight';
@@ -71,23 +71,23 @@
 /* Laptop and bigger screens */
 @media only screen and (max-width: 1560px) and (min-width: 1421px) {
     .sankey-chart-for-consumer-container {
-        margin-top: 2rem;
-        width: 100%;
+        /* margin-top: 2rem; */
+        width: 90%;
     }
 }
 
 @media only screen and (max-width: 1420px) and (min-width: 1317px) {
 
     .sankey-chart-for-consumer-container {
-        margin-top: 2rem;
-        width: 100%;
+        /* margin-top: 2rem; */
+        width: 90%;
     }
 }
 
 @media only screen and (max-width: 1317px) and (min-width: 1280px) {
     .sankey-chart-for-consumer-container {
-        margin-top: 2rem;
-        width: 80%;
+        /* margin-top: 2rem; */
+        width: 90%;
         overflow: hidden;
     }
 
@@ -96,8 +96,8 @@
 @media only screen and (max-width: 1279px) and (min-width: 1063px) {
 
     .sankey-chart-for-consumer-container {
-        margin-top: 2rem;
-        width: 80%;
+        /* margin-top: 2rem; */
+        /* width: 80%; */
         overflow: hidden;
     }
 }
@@ -111,7 +111,7 @@
     }
 
     .sankey-chart-for-consumer-container {
-        margin-top: 2rem;
+        /* margin-top: 2rem; */
         /* width: 100%; */
         overflow: hidden;
     }
@@ -124,7 +124,7 @@
     }
 
     .sankey-chart-for-consumer-container {
-        margin-top: 2rem;
+        /* margin-top: 2rem; */
         /* width: 100%; */
         overflow: hidden;
     }
@@ -135,8 +135,8 @@
 
 @media only screen and (max-width: 540px) and (min-width: 371px) {
     .sankey-chart-for-consumer-container {
-        margin-top: 2rem;
-        width: 30%;
+        /* margin-top: 2rem; */
+        /* width: 30%; */
     }
 }
 
