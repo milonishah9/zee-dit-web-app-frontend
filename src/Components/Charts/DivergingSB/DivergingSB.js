@@ -167,7 +167,8 @@ const DivergingSB = (props) => {
       .attr("width", ([x1, x2]) => Math.abs(xScale(x1) - xScale(x2)))
       .attr("height", yScale.bandwidth());
 
-    if (title) bar.append("title").text(({ i }) => title(i));
+    if (title) bar.append("div").text(({ i }) => title(i));
+
 
     // svg.append("g")
     //     .attr("transform", `translate(${xScale(0)},0)`)

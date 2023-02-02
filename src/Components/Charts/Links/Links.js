@@ -5,7 +5,9 @@ import { useEffect } from "react";
 
 const Links = (props) => {
 
-  const handleBubbleClick = () => {
+  const handleBubbleClick = (e) => {
+    // if(e.target.id === 'yes')
+    // e.target.id = 'noo'
     props.onClick('click')
   }
 
@@ -139,7 +141,7 @@ const Links = (props) => {
       <div className="line-chart-all-dots">
         <div className="line-chart-acquisitions">
           <p>Acquisitions</p>
-          <label className="line-chart-dots line-chart-dot-odd" onClick={handleBubbleClick}></label>
+          <label id="yeas" className="line-chart-dots line-chart-dot-odd" onClick={handleBubbleClick}></label>
         </div>
         <div className="line-chart-discovery">
           <p>Discovery</p>
