@@ -55,7 +55,7 @@
     margin: 0.7rem 0.6rem 0;
     /* font-size: 14px;
     line-height: 14px; */
-    font-size: 0.9rem;
+    font-size: 15px;
     line-height: 0.9rem;
     color: #333333;
 }
@@ -96,7 +96,7 @@
 }
 
 .product-qual-experience-subdiv-tile-chart-value-valdiv {
-    padding-top: 40px;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     width: 100%;
