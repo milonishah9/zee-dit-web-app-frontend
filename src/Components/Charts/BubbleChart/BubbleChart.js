@@ -10,13 +10,13 @@ const BubbleChart = (props) => {
   const json = props.files;
   var bubbleSize = 17;
   var translatAxis = 50 ;
-  var toolTipSize = '12px';
+  var toolTipSize = '12px GothamLight';
 
   const isMobile = useMediaQuery('(max-width:768px)')
   if(isMobile){
     bubbleSize = 8;
     translatAxis = 150;
-    toolTipSize = '19px';
+    toolTipSize = '20px GothamLight';
 
   }
   const dispatch = useDispatch();
@@ -36,7 +36,7 @@ const BubbleChart = (props) => {
       .style("padding", "8px")
       .style("background-color", "white")
       .style("border-radius", "4px")
-      .style("font", toolTipSize + "GothamLight")
+      .style("font", toolTipSize )
       .text("tooltip");
 
     //on filter remove other svg
@@ -370,7 +370,7 @@ const BubbleChart = (props) => {
           xxk
         </div>
       </div>
-      <div id="chart" className=""></div>
+      <div id="chart" className="chart3"></div>
     </div>
   );
 };
