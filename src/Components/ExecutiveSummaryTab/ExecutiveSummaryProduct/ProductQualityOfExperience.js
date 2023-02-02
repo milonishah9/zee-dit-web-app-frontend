@@ -10,13 +10,14 @@ const ProductQualityOfExperience = () => {
     // let { width, height } = wrapperRef.current.getBoundingClientRect();
     const [classed, setClassed] = useState("my-minuse-button");
 
-  const handlePluseButtonClick = () => {
-    setClassed("my-pluse-button");
-  };
-  const handleMinuseButtonClick = () => {
-    setClassed("my-minuse-button");
-  };
-  
+    const handlePluseButtonClick = () => {
+        setClassed("my-pluse-button");
+    };
+    
+    const handleMinuseButtonClick = () => {
+        setClassed("my-minuse-button");
+    };
+
     return (
         <div className='product-qual-experience-cont'>
             <div className='product-qual-experience-subdiv'>
