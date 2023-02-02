@@ -20,6 +20,8 @@ const SankeyChartForConsumer = (props) => {
 
         const xPosition = 125, yPosition = 400;
 
+        // const point = [[35,25], [125,25], [205,25]]
+
         var nodeData = [
             { id: "Organic", x: xPosition - 100, y: yPosition - 375, value: 70.38, name: "Organic", absoluteValue: 66.3, percentageValue: 46, percentageChage: -2 },
             { id: "Paid", x: xPosition + 125, y: yPosition - 375, value: 79.9, name: "Paid", absoluteValue: 77.9, percentageValue: 54, percentageChage: 6 },
@@ -61,7 +63,7 @@ const SankeyChartForConsumer = (props) => {
         var linkData = [
             { source: [xPosition - 100, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#74CDFF" }, //Organic - New
             { source: [xPosition - 100, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#74CDFF" }, //Orgainc - Returning
-            // { source: [xPosition + 125, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#768CFF" }, //Paid - Returning
+            { source: [xPosition + 125, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#768CFF" }, //Paid - Returning
             { source: [xPosition + 125, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#768CFF" }, //Paid - New
             { source: [xPosition - 100, yPosition - 185], target: [xPosition - 100, yPosition - 25], fill: "#FFB78E" },  //Returning - Anonymous
             { source: [xPosition - 100, yPosition - 185], target: [xPosition + 125, yPosition - 25], fill: "#FFB78E" }, //Returning - Sign up
@@ -127,16 +129,15 @@ const SankeyChartForConsumer = (props) => {
 
         const curve = d3
             .line()
-            .curve(d3.curveNatural);
+            .curve(d3.curveNatural)
 
         // const points = [[250, 35], [200, 50], [150, 90], [200, 75], [200, 75], [150, 80], [100, 125], [250,35]];
         // const points = [[xPosition + 125, yPosition - 365], [xPosition - 100, yPosition - 205]];
-        const points = [[35, 250], [110, 200], [130, 90], [190, 30],[178, 35], [120, 80], [90,200], [35,250]]
-
+        // [[35, 250], [110, 200], [130, 90], [190, 30], [178, 35], [120, 80], [90, 200], [35, 250]]
         const svg = d3
             .select(svgRef.current)
             .attr("viewBox", "0 0 1030 300")
-            .attr('preserveAspectRatio', 'xMinYMin')
+            // .attr('preserveAspectRatio', 'xMinYMin')
             // .attr("overflow", "scroll")
             // .attr("width", "100%")
             // .attr("height", "300")
@@ -227,15 +228,16 @@ const SankeyChartForConsumer = (props) => {
             // .classed("node-percentage-change", true)
             .text(d => `${Math.abs(d.percentageChage)}%`);
 
-        svg
-            .append('path')
-            .attr('d', curve(points))
-            // .attr('stroke', 'black')
-            .attr("opacity", "0.5")
-            // with multiple points defined, if you leave out fill:none,
-            // the overlapping space defined by the points is filled with
-            // the default value of 'black'
-            .attr('fill', '#768CFF');
+        // svg
+        //     .append('path')
+        //     // .data(coOrdinates)
+        //     .attr('d', curve(point))
+        //         // .attr('stroke', 'black')
+        //         .attr("opacity", "0.5")
+        //         // with multiple points defined, if you leave out fill:none,
+        //         // the overlapping space defined by the points is filled with
+        //         // the default value of 'black'
+        //         .attr('fill', '#768CFF');
 
         // svg
         // .append("p")
