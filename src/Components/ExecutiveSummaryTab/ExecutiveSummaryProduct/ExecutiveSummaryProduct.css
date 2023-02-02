@@ -131,8 +131,18 @@ div.executive-summary-content-active-tab {
   margin-left: 9px;
 }
 .data-product{
-  margin-top: 5rem;
+  margin-top: 15rem;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
   grid-gap: 10px;
 }
+@media only screen and (max-width: 1023px) and (min-width: 768px){ 
+  .data-product{
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-columns: auto auto auto auto ;
+  }
+  .product-userjourney-card{
+    width: 40%!important;
+  }
+ }
