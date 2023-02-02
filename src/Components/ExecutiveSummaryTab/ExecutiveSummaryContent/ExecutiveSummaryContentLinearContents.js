@@ -20,7 +20,6 @@ const ExecutiveSummaryContentLinearContents = (props) => {
     }];
 
     let myHoverClass = 'executive-summary-content-linear-contents-t-body-rows'
-    // console.log(hoverValue);
 
       let sortedFiles = chartData.sort((r1, r2) =>
             r1.value > r2.value ? 1 : r1.value < r2.value ? -1 : 0
@@ -29,7 +28,6 @@ const ExecutiveSummaryContentLinearContents = (props) => {
         console.log('sdf',sortedFiles)
 
     const handleToggleButton = (e) => {
-        // console.log(e.target.checked);
         setToggleValue(e.target.checked)
     }
 
@@ -93,20 +91,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                     )}
                 </thead>
                 <tbody className="executive-summary-content-linear-contents-t-body">
-                    {/* <tr>
-                        <td>helllo</td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                   
-                        
-                        
-                    </tr> */}
+                    
                     {sortedFiles.map((element, index) => {
                         var arrayLastIndexVal = (element.arr).length-1;
                         if(hoverValue === element.Name){
@@ -127,12 +112,6 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                     
                                 if(typeof(data) === 'number'){
 
-                                    // if(toggleValue === true){
-                                    //     data = ((data/myTotal)*100).toFixed(0)
-                                    //     total = 100
-
-                                    //     return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
-                                    // }else{
                                         if(tab === 'ott'){
                                             var color = 'rgba(152, 148, 252, 0.98)';
                                          
@@ -145,7 +124,6 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                         if(tab !== 'ott'){
                                             return <td key={index}><FrontBar color={'rgba(201, 150, 235, 0.99)'} percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
                                         }
-                                    // }
                                     
                                 }else{
                                     let total = 0 
@@ -154,7 +132,6 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                         total += data[i].value
                                     }
                                     totalValueArr.push(total)
-                                    // return <td key={index}><DivergingSB /></td>
 
                                     return <td key={index}><HSbar data={data} totalValueArr={totalValueArr}  toggleValue={toggleValue}/></td>
                                 }
