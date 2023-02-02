@@ -58,8 +58,20 @@
 
 @media only screen and (max-width: 767px) {
     .executive-summary-content-linear-tabs{
-        text-align: center;
+        /* text-align: center; */
+        /* width: 98%;
+        padding: 0 8px; */
         margin-top: 15px;
         margin-left: 0px;
+        justify-content: normal !important;
     }
+
+    .executive-summary-content-linear{
+        padding: 0 5px;
+    }
+
+    .executive-summary-content-linear-actve-tab{
+        padding: 0 5px;
+    }
+   
 }
