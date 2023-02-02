@@ -1,5 +1,6 @@
 
 // import ReactSpeedometer from 'react-d3-speedometer';
+import { useState } from 'react';
 import BarChart from '../../Charts/BarChart/BarChart';
 import GuageChart from '../../Charts/GuageChart/GuageChart';
 
@@ -7,6 +8,14 @@ import './ProductQualityOfExperience.css';
 
 const ProductQualityOfExperience = () => {
     // let { width, height } = wrapperRef.current.getBoundingClientRect();
+    const [classed, setClassed] = useState("my-minuse-button");
+
+  const handlePluseButtonClick = () => {
+    setClassed("my-pluse-button");
+  };
+  const handleMinuseButtonClick = () => {
+    setClassed("my-minuse-button");
+  };
     return (
         <div className='product-qual-experience-cont'>
             <div className='product-qual-experience-subdiv'>
@@ -38,7 +47,35 @@ const ProductQualityOfExperience = () => {
                             </div>
                             </div>
                             {/* <p className='product-qual-experience-subdiv-tile-value'>80%</p> */}
-                          
+                                <div>
+                                {classed === "my-minuse-button" ? (
+                                    <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-dash-circle  my-button"
+                                    viewBox="0 0 16 16"
+                                    onClick={handlePluseButtonClick}
+                                  >
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                  </svg>
+                                ):(
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-plus-circle  my-button"
+                                    viewBox="0 0 16 16"
+                                    onClick={handleMinuseButtonClick}
+                                >
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                </svg>
+                                )}
+                            </div>
                         </div>
                         <div className='product-qual-experience-subdiv-tile'>
                             <p className='product-qual-experience-subdiv-tile-title'>Exit before Video Start %</p>
