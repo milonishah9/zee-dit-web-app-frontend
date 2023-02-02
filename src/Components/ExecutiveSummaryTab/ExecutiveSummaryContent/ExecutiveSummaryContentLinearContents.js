@@ -7,7 +7,7 @@ import HSbar from "../../Charts/HSbar/HSbar";
 import DivergingSB from "../../Charts/DivergingSB/DivergingSB";
 
 const ExecutiveSummaryContentLinearContents = (props) => {
-    const {chartData, buttonTab} = props;
+    const {chartData, buttonTab, tab} = props;
     const hoverValue = useSelector(selectCount);
     const [toggleValue, setToggleValue] = useState();
 
@@ -20,7 +20,6 @@ const ExecutiveSummaryContentLinearContents = (props) => {
     }];
 
     let myHoverClass = 'executive-summary-content-linear-contents-t-body-rows'
-    // console.log(hoverValue);
 
       let sortedFiles = chartData.sort((r1, r2) =>
             r1.value > r2.value ? 1 : r1.value < r2.value ? -1 : 0
@@ -29,7 +28,6 @@ const ExecutiveSummaryContentLinearContents = (props) => {
         console.log('sdf',sortedFiles)
 
     const handleToggleButton = (e) => {
-        // console.log(e.target.checked);
         setToggleValue(e.target.checked)
     }
 
@@ -83,7 +81,6 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                     </tr>
                     ):(
                         <tr>
-                        {/* <th className="executive-summary-content-linear-contents-t-shows-header">Web Series</th> */}
                         <th className="executive-summary-content-linear-contents-t-shows-header">Content name</th>
                         <th className="executive-summary-content-linear-contents-t-header">Viewers{toggleValue === true && <span><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
                         <th className="executive-summary-content-linear-contents-t-header">Viewers(>1 min watched){toggleValue === true && <span className="chart-scale-indicators-morethan1"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
@@ -94,31 +91,19 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                     )}
                 </thead>
                 <tbody className="executive-summary-content-linear-contents-t-body">
-                    {/* <tr>
-                        <td>helllo</td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                        <td><DivergingSB /></td>
-                   
-                        
-                        
-                    </tr> */}
+                    
                     {sortedFiles.map((element, index) => {
+                        var arrayLastIndexVal = (element.arr).length-1;
                         if(hoverValue === element.Name){
                             myHoverClass = 'my-row-bubble-hover'
                         }else{
                             myHoverClass = 'executive-summary-content-linear-contents-t-body-rows'
                         }
                         return(
-                            <tr key={index} className={myHoverClass}>
+                            <tr key={index} id={tab === 'ott'? ('exe-sum-cont-table-row') : ('')} className={myHoverClass}>
                                 <td>{element.Name}</td>
-                                {toggleValue === true && 
                                 
+                                {toggleValue === true && 
                                     element.politifact.map((data, index) => <td key={index}><DivergingSB politifact={data}/></td>)
                                 }
 
@@ -126,15 +111,19 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                 element.arr.map((data, index) => {
                                     
                                 if(typeof(data) === 'number'){
-                                    if(toggleValue === true){
-                                        data = ((data/myTotal)*100).toFixed(0)
-                                        total = 100
 
-                                        return <td key={index}><FrontBar data={data} total={total} toggleValue={toggleValue}/></td>
-                                    }else{
-                                        
-                                        return <td key={index}><FrontBar percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
-                                    }
+                                        if(tab === 'ott'){
+                                            var color = 'rgba(152, 148, 252, 0.98)';
+                                         
+                                            if(index === arrayLastIndexVal ){
+                                                color = 'rgba(201, 150, 235, 0.99)';
+                                            } 
+                                            
+                                            return <td key={index}><FrontBar color = {color} percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
+                                        }
+                                        if(tab !== 'ott'){
+                                            return <td key={index}><FrontBar color={'rgba(201, 150, 235, 0.99)'} percent={'no'} data={data} total={total} toggleValue={toggleValue}/></td>
+                                        }
                                     
                                 }else{
                                     let total = 0 
@@ -143,7 +132,6 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                         total += data[i].value
                                     }
                                     totalValueArr.push(total)
-                                    // return <td key={index}><DivergingSB /></td>
 
                                     return <td key={index}><HSbar data={data} totalValueArr={totalValueArr}  toggleValue={toggleValue}/></td>
                                 }
