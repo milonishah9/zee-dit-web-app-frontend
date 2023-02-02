@@ -135,9 +135,9 @@ const ExecutiveSummaryContentLinear = (props) => {
   
   return (
     <div>
-      <div className="executive-summary-content-linear-tabs">
+      
         <ExecutiveSummaryContentLinearButtonsTabs TabValue={getData} FilterTabValue= {getData}/>
-      </div>
+  
       <div>
         {activeTab === "all-content" && (
           <div className="executive-summary-content-linear-filter">
