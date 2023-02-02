@@ -137,6 +137,7 @@
     .sankey {
         margin: 0 auto;
         width: auto !important;
+        /* height: 100vh; */
     }
 }
 
@@ -144,6 +145,7 @@
     .sankey {
         margin: 0 auto;
         width: auto !important;
+        /* height: 100vh; */
     }
 }
 
@@ -258,9 +260,16 @@
 }
 
 @media only screen and (max-width: 540px) and (min-width: 371px) {
-    .sankey {
+    /* .sankey {
         margin: 0 auto;
         width: auto !important;
+    } */
+
+    .sankey {
+        /* margin: 0 auto;
+        width: auto !important; */
+        /* width: 100%; */
+        overflow-x: scroll !important;
     }
 
     .consumer-journey-filters {
@@ -306,8 +315,9 @@
 
 @media only screen and (max-width: 371px) {
     .sankey {
-        margin: 0 auto;
-        width: auto !important;
+        /* margin: 0 auto;
+        width: auto !important; */
+        overflow-x: scroll;
     }
 
     .consumer-journey-filters {

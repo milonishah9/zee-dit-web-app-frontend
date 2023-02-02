@@ -1,14 +1,42 @@
 import { useRef, useLayoutEffect } from 'react';
 
 import * as d3 from 'd3';
+import * as d3v4 from 'd3v4';
 
 import './SankeyChartForConsumer.css';
+import { useEffect } from 'react';
 
 const SankeyChartForConsumer = (props) => {
 
     const svgRef = useRef();
 
+    // useEffect(() => {
+    //     console.log("width changed");
+    // }, [window.innerWidth])
+
+    const createLineCoOrdinates = (source, target, distance) => {
+
+        // const points = [[35, 25], [65, 11], [115, 4], [165, 11], [195, 25], [170, 18], [115, 11], [65, 18], [35, 25]];
+        let xDifference = target[0] - source[0], yDifference = target[1] - source[1];
+        let calculatedPoints = [
+            source,
+            [source[0] + 30, source[1] - 2 * distance],
+            [source[0] + xDifference / 2, source[1] - 3 * distance],
+            [target[0] - 30, source[1] - 2 * distance],
+            target,
+            [target[0] - 25, source[1] - distance],
+            [target[0] - xDifference / 2, source[1] - 2 * distance],
+            [source[0] + 30, source[1] - distance],
+            source
+        ]
+
+        return calculatedPoints;
+
+    }
+
     useLayoutEffect(() => {
+
+        //   const width = 1000, height = 300;
 
         const xPosition = 125, yPosition = 400;
 
@@ -53,14 +81,18 @@ const SankeyChartForConsumer = (props) => {
         ];
 
         var linkData = [
-            { source: [xPosition - 100, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#74CDFF" }, //Organic - New
-            { source: [xPosition - 100, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#74CDFF" }, //Orgainc - Returning
+            // { source: [xPosition - 100, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#74CDFF" }, //Organic - New
+            // [35,25] 
+            // { source: [xPosition - 100, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#74CDFF" }, //Orgainc - Returning
+
             // { source: [xPosition + 125, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#768CFF" }, //Paid - Returning
-            { source: [xPosition + 125, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#768CFF" }, //Paid - New
-            { source: [xPosition - 100, yPosition - 185], target: [xPosition - 100, yPosition - 25], fill: "#FFB78E" },  //Returning - Anonymous
-            { source: [xPosition - 100, yPosition - 185], target: [xPosition + 125, yPosition - 25], fill: "#FFB78E" }, //Returning - Sign up
-            { source: [xPosition + 125, yPosition - 185], target: [xPosition - 100, yPosition - 25], fill: "#74CDFF" },  //New - Anonymous
-            { source: [xPosition + 125, yPosition - 185], target: [xPosition + 125, yPosition - 25], fill: "#74CDFF" }, //New - Sign up
+            // { source: [xPosition + 125, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#768CFF" }, //Paid - New
+            // { source: [xPosition - 100, yPosition - 185], target: [xPosition - 100, yPosition - 25], fill: "#FFB78E" },  //Returning - Anonymous
+
+            // { source: [xPosition - 100, yPosition - 185], target: [xPosition + 125, yPosition - 25], fill: "#FFB78E" }, //Returning - Sign up
+            // { source: [xPosition + 125, yPosition - 185], target: [xPosition - 100, yPosition - 25], fill: "#74CDFF" },  //New - Anonymous
+            // { source: [xPosition + 125, yPosition - 185], target: [xPosition + 125, yPosition - 25], fill: "#74CDFF" }, //New - Sign up
+            // [215,250][375,250]
             { source: [xPosition - 100, yPosition - 5], target: [xPosition - 35, yPosition + 195], fill: "#768CFF" }, //Anonymous - Explore
             { source: [xPosition - 100, yPosition - 5], target: [xPosition + 55, yPosition + 195], fill: "#768CFF" }, //Anonymous - Search
             { source: [xPosition - 100, yPosition - 5], target: [xPosition - 100, yPosition + 195], fill: "#CAB6B6" }, //Anonymous - Exit
@@ -69,6 +101,7 @@ const SankeyChartForConsumer = (props) => {
             { source: [xPosition + 125, yPosition - 5], target: [xPosition + 55, yPosition + 195], fill: "#74CDFF" }, //Sign up - Search
             // { source: [xPosition + 125, yPosition - 5], target: [xPosition + 125, yPosition + 195], fill: "#D60F0F" }, //Sign up - Exit
             { source: [xPosition + 125, yPosition - 5], target: [xPosition + 125, yPosition + 195], fill: "#CAB6B6" }, //Sign up - Exit
+            // [395, 250] [595,250]
             { source: [xPosition - 35, yPosition + 215], target: [xPosition - 25, yPosition + 395], fill: "#768CFF" }, //Explore - Subscribed
             { source: [xPosition - 35, yPosition + 215], target: [xPosition + 50, yPosition + 395], fill: "#768CFF" }, //Explore - WatchAds
             { source: [xPosition - 35, yPosition + 215], target: [xPosition - 100, yPosition + 395], fill: "#CAB6B6" }, //Explore - Exit
@@ -117,20 +150,120 @@ const SankeyChartForConsumer = (props) => {
                 return [d.target[1], d.target[0]];
             });
 
+        // let line = d3.line().curve(d3.curveBasis)
+
         const curve = d3
             .line()
             .curve(d3.curveNatural)
 
         // const points = [[250, 35], [200, 50], [150, 90], [200, 75], [200, 75], [150, 80], [100, 125], [250,35]];
         // const points = [[xPosition + 125, yPosition - 365], [xPosition - 100, yPosition - 205]];
-        const points = [[35, 250], [110, 200], [130, 90], [190, 30], [178, 35], [120, 80], [90, 200], [35, 250]]
+        // const points = [[35, 25], [65, 11], [115, 4], [165, 11], [195, 25], [170, 18], [115, 11], [65, 18], [35, 25]];
+        // const points = [[35, 25], [85, 100], [135, 175], [185, 250], [135, 175], [100, 150], [65, 50], [35, 25]]
+
+        // const points = [[35, 250], [110, 200], [130, 90], [195, 30], [178, 35], [120, 80], [90, 200], [35, 250]];
+        // const points = [[35, 250], [40, 250], [50, 220], [75, 112], [180, -5], [190, 20], [195, 25],
+        // [190, 30], [180, -5], [85, 112], [50, 230], [40, 225]];
+        // const points = [[35, 250], [40, 240], [50, 220], [75, 112], [180, 55], [190, 35], [195, 25],
+        // [190, 45], [180, 65], [85, 112], [50, 230], [40, 250], [35, 250]];
+
+        // const points = createLineCoOrdinates([395, 250], [595, 250], -7);
+
+        // { source: [xPosition - 100, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#74CDFF" }, //Organic - New
+        // // [35,25] [195,225]
+        // { source: [xPosition - 100, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#74CDFF" }, //Orgainc - Returning
+        // { source: [xPosition + 125, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#768CFF" }, //Paid - Returning
+        // { source: [xPosition + 125, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#768CFF" }, //Paid - New
+        // { source: [xPosition - 100, yPosition - 185], target: [xPosition - 100, yPosition - 25], fill: "#FFB78E" },  //Returning - Anonymous
+        // { source: [xPosition - 100, yPosition - 185], target: [xPosition + 125, yPosition - 25], fill: "#FFB78E" }, //Returning - Sign up
+
+        // { source: [xPosition + 125, yPosition - 185], target: [xPosition - 100, yPosition - 25], fill: "#74CDFF" },  //New - Anonymous
+        // { source: [xPosition + 125, yPosition - 185], target: [xPosition + 125, yPosition - 25], fill: "#74CDFF" }, //New - Sign up
+        // { source: [xPosition - 100, yPosition - 5], target: [xPosition - 35, yPosition + 195], fill: "#768CFF" }, //Anonymous - Explore
+        // { source: [xPosition - 100, yPosition - 5], target: [xPosition + 55, yPosition + 195], fill: "#768CFF" }, //Anonymous - Search
+        // { source: [xPosition - 100, yPosition - 5], target: [xPosition - 100, yPosition + 195], fill: "#CAB6B6" }, //Anonymous - Exit
+        // { source: [xPosition - 100, yPosition - 5], target: [xPosition - 25, yPosition + 395], fill: "#768CFF" }, //Anonymous - Subscribed
+        // { source: [xPosition + 125, yPosition - 5], target: [xPosition - 35, yPosition + 195], fill: "#74CDFF" }, //Sign up - Explore
+        // { source: [xPosition + 125, yPosition - 5], target: [xPosition + 55, yPosition + 195], fill: "#74CDFF" }, //Sign up - Search
+        // // { source: [xPosition + 125, yPosition - 5], target: [xPosition + 125, yPosition + 195], fill: "#D60F0F" }, //Sign up - Exit
+        // { source: [xPosition + 125, yPosition - 5], target: [xPosition + 125, yPosition + 195], fill: "#CAB6B6" }, //Sign up - Exit
+        // // [395, 250] [595,250]
+        // { source: [xPosition - 35, yPosition + 215], target: [xPosition - 25, yPosition + 395], fill: "#768CFF" }, //Explore - Subscribed
+        // { source: [xPosition - 35, yPosition + 215], target: [xPosition + 50, yPosition + 395], fill: "#768CFF" }, //Explore - WatchAds
+        // { source: [xPosition - 35, yPosition + 215], target: [xPosition - 100, yPosition + 395], fill: "#CAB6B6" }, //Explore - Exit
+        // { source: [xPosition + 55, yPosition + 215], target: [xPosition - 25, yPosition + 395], fill: "#FFB78E" }, //Search - Subscribed
+        // { source: [xPosition + 55, yPosition + 215], target: [xPosition + 50, yPosition + 395], fill: "#FFB78E" }, //Search - WatchAds
+        // { source: [xPosition + 55, yPosition + 215], target: [xPosition + 125, yPosition + 395], fill: "#CAB6B6" }, //Explore - WatchAds
+        // { source: [xPosition - 25, yPosition + 415], target: [xPosition - 25, yPosition + 565], fill: "#FFB78E" }, //Subscribed - Watch Premium Content
+        // { source: [xPosition - 25, yPosition + 415], target: [xPosition + 50, yPosition + 565,], fill: "#FFB78E" }, //Subscribed - Watch Free Content
+        // { source: [xPosition + 50, yPosition + 415], target: [xPosition + 50, yPosition + 565,], fill: "#768CFF" }, //Explore - WatchAds
+        // { source: [xPosition + 50, yPosition + 415], target: [xPosition + 125, yPosition + 565], fill: "#CAB6B6" }, //Explore - Exit Watch Ads
+
+        const coOrdinates = [
+            // Organinc - New
+            {
+                point: [[35, 25], [110, 75], [135, 160], [200, 240], [160, 215], [120, 170], [90, 75], [35, 25]],
+                fill: "#74CDFF",
+            },
+            // Organic - Returning
+            {
+                point: createLineCoOrdinates([35, 25], [195, 25], 8),
+                fill: "#74CDFF"
+            },
+            // Paid - Returning
+            {
+                point: [[35, 250], [110, 200], [130, 90], [195, 30], [178, 35], [120, 80], [90, 200], [35, 250]],
+                fill: "#768CFF",
+            },
+            // Paid - New
+            {
+                point: createLineCoOrdinates([35, 250], [195, 250], -8),
+                fill: "#768CFF",
+            },
+            // Returning - Sign Up  [215, 25][375, 250]
+            {
+                point: [[215, 25], [290, 75], [315, 160], [380, 240], [335, 215], [300, 170], [265, 75], [215, 25]],
+                fill: "#FFB78E",
+            },
+            // New - Anonymous  [215, 250][375, 25]
+            {
+                point: [[215, 250], [270, 200], [305, 90], [375, 30], [358, 35], [290, 80], [250, 200], [215, 250]],
+                fill: "#768CFF",
+            },
+            //Returning - Anonymous
+            {
+                point: createLineCoOrdinates([215, 25], [375, 25], 8),
+                fill: "#FFB78E"
+            },
+            //New - Sign Up
+            {
+                point: createLineCoOrdinates([215, 25], [375, 25], 8),
+                fill: "#FFB78E"
+            },
+            //New - Sign Up
+            {
+                point: createLineCoOrdinates([215, 250], [375, 250], -8),
+                fill: "#74CDFF"
+            }
+
+        ]
         const svg = d3
             .select(svgRef.current)
             .attr("viewBox", "0 0 1030 300")
-            .attr('preserveAspectRatio', 'xMinYMin')
+            // .attr('preserveAspectRatio', 'xMinYMin')
+            // .attr("overflow", "scroll")
+            // .attr("width", "100%")
+            // .attr("height", "300")
             .classed("sankey-chart-for-consumer-svg", true);
 
+
+
+        // svg.append("path")
+        //     .classed("custom-link", true)
+        //     .attr("d", line([[25, 35], [195, 215]]))
+
         //Adding the link paths
+
 
         svg
             .selectAll("path")
@@ -205,34 +338,46 @@ const SankeyChartForConsumer = (props) => {
             .attr("y", d => d.name === "Exit" ? d.x + 16 : d.x + 30)
             // .attr("color", "red")
             .attr("class", d => d.percentageChage >= 0 ? "node-percentage-change-pos" : "node-percentage-change-neg")
+            // .classed("node-percentage-change", true)
             .text(d => `${Math.abs(d.percentageChage)}%`);
 
         svg
-            .append('path')
-            // .data(coOrdinates)
-            .attr('d', curve(points))
-                // .attr('stroke', 'black')
-                .attr("opacity", "0.5")
-                // with multiple points defined, if you leave out fill:none,
-                // the overlapping space defined by the points is filled with
-                // the default value of 'black'
-                .attr('fill', '#768CFF');
+            .selectAll('.link-to-node')
+            .data(coOrdinates)
+            .join('path')
+            .attr('d', d => curve(d.point))
+            // .attr('stroke', 'black')
+            .attr("opacity", "0.5")
+            // with multiple points defined, if you leave out fill:none,
+            // the overlapping space defined by the points is filled with
+            // the default value of 'black'
+            .attr('fill', d => d.fill);
 
-        svg
-            .append("p")
-            // .selectAll("p")
-            .data(nodeData)
-            .join("text")
-            .attr("x", d => d.y)
-            .attr("y", d => d.x + 30)
-            // .classed("node-title", true)
-            .text(d => d.name.toUpperCase());
+        // svg
+        // .append("p")
+        // // .selectAll("p")
+        // .data(nodeData)
+        // .join("text")
+        // .attr("x", d => d.y)
+        // .attr("y", d => d.x + 30)
+        // // .classed("node-title", true)
+        // .text(d => d.name.toUpperCase());
+
+        // svg
+        //     .append("text")
+        //     // .data(nodeData)
+        //     .attr("x", 25)
+        //     .attr("y", 50)
+        //     .text("abc")
+
+
 
     }, []);
 
     return (
         <div className='sankey-chart-for-consumer-container'>
             <svg ref={svgRef}></svg>
+            {/* <svg className='curve'></svg> */}
         </div>
     )
 }

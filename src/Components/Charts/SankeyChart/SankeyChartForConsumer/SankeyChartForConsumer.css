@@ -3,6 +3,8 @@
     /* margin: auto; */
     margin: 0.65rem 0 0 1rem;
     width: 90%;
+    /* height: 50%; */
+    /* overflow-x: scroll !important; */
 }
 
 .node-title {
@@ -73,6 +75,7 @@
     .sankey-chart-for-consumer-container {
         /* margin-top: 2rem; */
         width: 90%;
+        /* height: 100%; */
     }
 }
 
@@ -81,6 +84,7 @@
     .sankey-chart-for-consumer-container {
         /* margin-top: 2rem; */
         width: 90%;
+        /* height: 100vh;; */
     }
 }
 
@@ -137,6 +141,8 @@
     .sankey-chart-for-consumer-container {
         /* margin-top: 2rem; */
         /* width: 30%; */
+        /* width: 100%; */
+        overflow-x: scroll;
     }
 }
 
