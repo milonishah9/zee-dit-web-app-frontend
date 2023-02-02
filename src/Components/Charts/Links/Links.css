@@ -1,5 +1,5 @@
-/* .line-chart-with-animation{
-    margin-top: 100px;
+.line-chart-with-animation{
+    margin-top: 65px;
     text-align: center;
 }
 
@@ -17,45 +17,61 @@
     text-align: center;
     width: 20px;
     height: 20px;
-    background-color: green;
+    background-color: #00C48C;
     border-radius: 50%;
 }
 
 .line-chart-acquisitions{
-  
-    margin-left: 50px;
-} */
-
-
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
+    position: relative;
+    right: 268px;
 }
 
-.line {
-  fill: none;
-  stroke: #3498db;
-  stroke-width: 2px;
+.line-chart-dot-odd{
+    position: relative;
+    top: 14px;
 }
 
-.area{
-  opacity:.25;
-  fill: #3498db;
+.line-chart-dot-even{
+    position: relative;
+    top: 81px;
 }
-.circle{
-  stroke: #3498db;
-  fill: #fff;
-  stroke-width: 2px;
+
+.line-chart-discovery{
+    position: relative;
+    right: 155px;
 }
-.circle.active{
-  stroke-width: 3px;
+.line-chart-discovery label{
+    background-color: #FF647C;
 }
-.bubble rect{
-  stroke: #3498db;
-  fill: #fff;
+
+.line-chart-advertisement{
+    position: relative;
+    right: 48px;
 }
-.bubble text{
-  font-size: 12px;
+.line-chart-advertisement label{
+    background-color: #FFC656;
+}
+
+.line-chart-subscriptions{
+    position: relative;
+    left: 41px;
+}
+.line-chart-subscriptions label{
+    background-color: #00C48C;
+}
+
+.line-chart-engagement{
+    position: relative;
+    left: 143px;
+}
+.line-chart-engagement label{
+    background-color: #FFC656;
+}
+
+.line-chart-loyalty{
+    position: relative;
+    left: 259px;
+}
+.line-chart-loyalty label{
+    background-color: #FF647C;
 }

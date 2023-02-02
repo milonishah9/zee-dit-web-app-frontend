@@ -370,7 +370,7 @@ const BubbleChart = (props) => {
           xxk
         </div>
       </div>
-      <div id="chart" className=""></div>
+      <div id="chart" className="chart3"></div>
     </div>
   );
 };
