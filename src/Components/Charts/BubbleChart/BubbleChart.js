@@ -11,7 +11,6 @@ const BubbleChart = (props) => {
   var bubbleSize = 17;
   var translatAxis = 50 
   const isMobile = useMediaQuery('(max-width:768px)')
-  console.log(isMobile);
   if(isMobile){
     bubbleSize = 8;
     translatAxis = 150;

@@ -248,7 +248,8 @@ input[type="checkbox"]:checked {
   right: 89px;
 }
 
-#exe-sum-cont-table-row td:nth-child(6) text.amount{
+/* #exe-sum-cont-table-row  */
+td:nth-child(6) text.amount{
   display: none;
 }
 
