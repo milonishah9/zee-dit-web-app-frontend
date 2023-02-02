@@ -119,3 +119,11 @@ text {
   .chart-div {
       width: 2100px;
   }
+
+
+/* @media  screen and (max-width:768px) { */
+  svg text {
+    font-size: 12px !important;
+    font-family: "GothamLight" !important;
+/* } */
+}
