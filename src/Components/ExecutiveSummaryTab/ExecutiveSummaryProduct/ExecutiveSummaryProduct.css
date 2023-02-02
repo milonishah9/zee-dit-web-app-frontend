@@ -133,7 +133,7 @@ div.executive-summary-content-active-tab {
   /* margin-left: 9px; */
 }
 .data-product{
-  margin-top: 15rem;
+  /* margin-top: 15rem; */
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
   grid-gap: 10px;

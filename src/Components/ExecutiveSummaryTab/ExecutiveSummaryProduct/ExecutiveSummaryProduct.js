@@ -7,7 +7,10 @@ import Links from "../../Charts/Links/Links";
 
 const ExecutiveSummaryContent = () => {
   const [activeTab, setActiveTab] = useState("linear");
-
+  const [bubbleClickValue, setBubbleClickValue] = useState('');
+  const getData = (value) => {
+    setBubbleClickValue(value)
+  }
   return (
     <div className="executive-summary-product">
       <div className="executive-summary-content-tabs">
@@ -40,8 +43,8 @@ const ExecutiveSummaryContent = () => {
             {/* <div>
               <Links />
             </div> */}
-            <Links />
-            <div className="data-product">
+            <Links onClick={getData}/>
+            {bubbleClickValue === 'click' && <div className="data-product">
             <div className="data-product1"><ProductUserJourney data={['Total Sessions', 2000, 40]} /></div>
              <div className="data-product1"><ProductUserJourney data={['VTUR', 2000, -40]} /></div>
             <div className="data-product1"><ProductUserJourney data={['Total Ad Viewers', 1000, 70]} /></div>
@@ -56,7 +59,7 @@ const ExecutiveSummaryContent = () => {
             <div className="data-product1"><ProductUserJourney data={['MAV', 1000, 50]} /></div>
             <div className="data-product1"><ProductUserJourney data={['% of Sessions from Returning Users', 1000, -50]} /></div>
 
-            </div>
+            </div>}
           </div>
         )}
 

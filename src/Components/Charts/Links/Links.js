@@ -3,7 +3,12 @@ import "./Links.css";
 import * as d3 from "d3";
 import { useEffect } from "react";
 
-const Links = () => {
+const Links = (props) => {
+
+  const handleBubbleClick = () => {
+    props.onClick('click')
+  }
+
   var data = [
     {
       year: 2000,
@@ -132,10 +137,9 @@ const Links = () => {
   return (
     <div className="line-chart-with-animation">
       <div className="line-chart-all-dots">
-        {/* <button>Update Chart</button> */}
         <div className="line-chart-acquisitions">
           <p>Acquisitions</p>
-          <label className="line-chart-dots line-chart-dot-odd"></label>
+          <label className="line-chart-dots line-chart-dot-odd" onClick={handleBubbleClick}></label>
         </div>
         <div className="line-chart-discovery">
           <p>Discovery</p>
@@ -157,7 +161,6 @@ const Links = () => {
           <p>Loyalty</p>
           <label className="line-chart-dots line-chart-dot-even"></label>
         </div>
-        
       </div>
       <div id="chart"></div>
     </div>
