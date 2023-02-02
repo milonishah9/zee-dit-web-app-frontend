@@ -6,16 +6,14 @@ import "./HSbar.css";
 
 const HSbar = (props) => {
   var {data,totalValueArr} = props;
-  let total = 0;
-  let totalValue = []
-  console.log(totalValueArr);
+  // let total = 0;
+  // let totalValue = []
+  // console.log(totalValueArr);
   // totalValue.push(data.map(element => {
     
   //   return total += element.value;
   //   // totalValue.push(total)
   // }));
-  var {data} = props;
-  
   // let total = 0;
   // data.map((element, index) => {
   //   total += element.value
@@ -27,7 +25,7 @@ const HSbar = (props) => {
         <HSBar
           showTextIn
           data={data}
-          className="hs-bar"
+          // className="hs-bar"
         />
         <span className="ttlval">{totalValueArr}</span>
       </div>

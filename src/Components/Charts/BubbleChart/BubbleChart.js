@@ -99,11 +99,11 @@ const BubbleChart = (props) => {
       .data(json)
       .enter()
       .append("circle")
-      .attr("stroke", "#945ED2")
+      .attr("stroke", d => d.type === 'movie' ? ('#945ED2'):('rgb(0 113 179)'))
       .attr("stroke-width", 1)
       .attr("stroke-opacity", 2)
       .attr("class", "artist")
-      .attr("fill", d => d.type === 'movie' ? ('rgb(201, 150, 235)'):('rgb(118, 140, 255)'))
+      .attr("fill", d => d.type === 'movie' ? ('rgba(148, 94, 210, 0.3)'):('rgba(13, 167, 254, 0.3)'))
       .attr("r", function (d) {
         return d.Count / 17;
       })
