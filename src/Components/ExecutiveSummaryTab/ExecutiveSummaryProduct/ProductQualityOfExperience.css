@@ -21,7 +21,9 @@
     line-height: 15px;
     margin-top: 10px;
 }
-
+.product-data {
+    display: flex;
+}
 .product-qual-experience-subdiv-tile-cont {
     display: flex;
     /* flex-wrap: nowrap; */
@@ -39,7 +41,7 @@
     /* min-width: 15%; */
     margin-right: 10px;
     /* height: 25vh; */
-    min-height: 195px;
+    min-height: 100px;
 }
 
 .product-qual-experience-subdiv-tile-left-grp,
@@ -94,6 +96,7 @@
 }
 
 .product-qual-experience-subdiv-tile-chart-value-valdiv {
+    padding-top: 40px;
     display: flex;
     flex-direction: column;
     width: 100%;
