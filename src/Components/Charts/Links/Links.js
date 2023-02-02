@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Links.css";
 import * as d3 from "d3v3";
 import * as dv3 from "d3v3";
@@ -6,6 +6,7 @@ import * as dv4 from "d3v4";
 import { useEffect } from "react";
 
 const Links = () => {
+   const svgRef = useRef();
   var data1 = [
     {
       date: "2006-02-22",
@@ -101,15 +102,15 @@ const Links = () => {
       init();
       render();
 
-      d3.select("#toggleData").on("click", function () {
-        if (currentData == "data1") {
-          updateData(data2);
-          currentData = "data2";
-        } else if (currentData == "data2") {
-          updateData(data1);
-          currentData = "data1";
-        }
-      });
+      // d3.select("#toggleData").on("click", function () {
+      //   if (currentData == "data1") {
+      //     updateData(data2);
+      //     currentData = "data2";
+      //   } else if (currentData == "data2") {
+      //     updateData(data1);
+      //     currentData = "data1";
+      //   }
+      // });
 
       d3.select(window).on("resize", function () {
         resize();
@@ -128,7 +129,7 @@ const Links = () => {
     var line;
     var area;
     var startData;
-    var currentData = data1;
+    var currentData = 'data1';
 
     var margin = { top: 20, right: 30, bottom: 30, left: 40 };
     var maxWidth = 800 - margin.left - margin.right;
@@ -138,7 +139,7 @@ const Links = () => {
     var detailMargin = 15;
 
     function init() {
-      chartContainer = d3.select(".chart-container");
+      chartContainer = d3.select(svgRef);
       svg = chartContainer.append("svg");
       marginContainer = svg.append("g").attr("class", "margin-container");
     }
@@ -431,13 +432,13 @@ const Links = () => {
         };
       });
 
-      marginContainer
-        .select(".x.axis")
-        .transition()
-        .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
+      // marginContainer
+      //   .select(".x.axis")
+      //   .transition()
+      //   .attr("transform", "translate(0," + height + ")")
+      //   .call(xAxis);
 
-      marginContainer.select(".y.axis").transition().call(yAxis);
+      // marginContainer.select(".y.axis").transition().call(yAxis);
 
       marginContainer.select(".circles").remove();
 
@@ -473,7 +474,7 @@ const Links = () => {
 
     function getDimensions() {
       var containerWidth = parseInt(
-        d3.select(".chart-container").style("width")
+        d3.select(svgRef).style("width")
       );
       margin.top = 20;
       margin.right = 30;
@@ -493,7 +494,7 @@ const Links = () => {
   }, []);
 
   return (
-    <div className="line-chart-with-animation">
+    <div >
       {/* <div className="line-chart-all-dots">
         <div className="line-chart-acquisitions">
           <p>Acquisitions</p>
@@ -523,7 +524,7 @@ const Links = () => {
       </div> */}
       {/* <div id="chart"></div> */}
       <div class="chart-container"></div>
-      <button href="#" id="toggleData">
+      <button href="#" id="toggleData" ref={svgRef}>
         Toggle Data
       </button>
     </div>
