@@ -42,17 +42,19 @@ const ExecutiveSummaryContent = () => {
             </div> */}
             <div className="data-product">
             <div className="data-product1"><ProductUserJourney data={['Total Sessions', 2000, 40]} /></div>
-             <div className="data-product1"><ProductUserJourney data={['VTUR', 2000, 40]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['Total Ad Viewers', 1000, -50]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['No. of Subscribers', 2000, 40]} /></div>
+             <div className="data-product1"><ProductUserJourney data={['VTUR', 2000, -40]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['Total Ad Viewers', 1000, 70]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['No. of Subscribers', 1000, 90]} /></div>
             <div className="data-product1"><ProductUserJourney data={['DAV', 1000, -50]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['% of Returning Users', 1000, -50]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, -50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['% of Returning Users', 1000, 50]} /></div>
+
+            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, 50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['Search Engagement', 1000, -50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['Total Ad Impressions', 1000, -50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['No. of Subscribers', 1000, 50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['MAV', 1000, 50]} /></div>
+            <div className="data-product1"><ProductUserJourney data={['% of Sessions from Returning Users', 1000, -50]} /></div>
+
             </div>
           </div>
         )}
