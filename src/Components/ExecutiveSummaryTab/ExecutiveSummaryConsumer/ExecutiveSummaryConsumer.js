@@ -201,12 +201,6 @@ const ExecutiveSummaryConsumer = (props) => {
                   return d;
                 }
               })
-
-              // .map((item, index) => <KPICard
-              //   title={item.title}
-              //   mainValue={item.mainValue}
-              //   difference={item.difference}
-              // />)
             )}
           {
             kpiCharters.filter((item, index) => item.id === activeKPICharter)[0].kpiCards
