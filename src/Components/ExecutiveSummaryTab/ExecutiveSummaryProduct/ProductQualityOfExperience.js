@@ -128,7 +128,7 @@ const ProductQualityOfExperience = () => {
                                     width="16"
                                     height="16"
                                     fill="currentColor"
-                                    class="bi bi-dash-circle  my-button"
+                                    class="bi bi-dash-circle  my-button2"
                                     viewBox="0 0 16 16"
                                     onClick={handlePluseButtonClick}
                                   >
@@ -141,7 +141,7 @@ const ProductQualityOfExperience = () => {
                                     width="16"
                                     height="16"
                                     fill="currentColor"
-                                    class="bi bi-plus-circle  my-button"
+                                    class="bi bi-plus-circle  my-button2"
                                     viewBox="0 0 16 16"
                                     onClick={handleMinuseButtonClick}
                                 >

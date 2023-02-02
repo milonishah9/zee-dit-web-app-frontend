@@ -12,6 +12,16 @@
     margin-bottom: 2rem;
 }
 
+svg.bi.bi-dash-circle.my-button2 {
+    display: block;
+    margin: 0px auto;
+}
+
+svg.bi.bi-plus-circle.my-button2 {
+    display: block;
+    margin: 0px auto;
+}
+
 .product-qual-experience-subdiv-h5 {
     color: #402177;
     font-family: 'GothamBold';
