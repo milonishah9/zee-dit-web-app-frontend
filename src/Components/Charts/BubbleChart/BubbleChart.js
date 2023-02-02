@@ -9,11 +9,15 @@ import { useMediaQuery } from "@material-ui/core";
 const BubbleChart = (props) => {
   const json = props.files;
   var bubbleSize = 17;
-  var translatAxis = 50 
+  var translatAxis = 50 ;
+  var toolTipSize = '12px';
+
   const isMobile = useMediaQuery('(max-width:768px)')
   if(isMobile){
     bubbleSize = 8;
     translatAxis = 150;
+    toolTipSize = '19px';
+
   }
   const dispatch = useDispatch();
 
@@ -32,7 +36,7 @@ const BubbleChart = (props) => {
       .style("padding", "8px")
       .style("background-color", "white")
       .style("border-radius", "4px")
-      .style("font", "12px GothamLight")
+      .style("font", toolTipSize + "GothamLight")
       .text("tooltip");
 
     //on filter remove other svg

@@ -30,6 +30,12 @@ text.lessthan300 {
     .bubble-indicators{
         margin-top: 20px;
     }
+    text{
+      font-size: 12px!important;
+    }
+    .executive-summary-product-container{
+      width: auto!important;
+    }
 }
 
 
