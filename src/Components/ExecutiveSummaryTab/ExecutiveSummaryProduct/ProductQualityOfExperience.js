@@ -20,7 +20,7 @@ const ProductQualityOfExperience = () => {
                     
                    
                     <div className='tglCard'>
-                        <ProductQualityExperienceCard mydata = {['play %', '80%', '12%', 'up']}/>
+                        <ProductQualityExperienceCard mydata = {['Play %', 'Month - 1 to 30, Jun', '12%', 'up']}/>
                         <ProductQualityExperienceCard mydata = {['Exit Before Video Start %', '12%', '32%', 'down']}/>
                         <ProductQualityExperienceCard mydata = {['Video Start Failure - Tech %', '08%', '12%', 'down']}/>
                         <ProductQualityExperienceCard mydata = {['Video Start Time %', '2.34 Sec', '12%', 'up']}/>
