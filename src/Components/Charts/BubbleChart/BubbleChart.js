@@ -251,7 +251,7 @@ const BubbleChart = (props) => {
 
     circles
         .attr("transform", 'translate(70, 110)')
-        .attr("transform", d => `translate(390, 50)`)
+        .attr("transform", d => `translate(400, 100)`)
 
     // circles.transition()
     //     .duration(3000)
@@ -259,7 +259,7 @@ const BubbleChart = (props) => {
 
     textName
     .attr("transform", 'translate(270, 110)')
-    .attr("transform", d => `translate(390, 50)`)
+    .attr("transform", d => `translate(400, 100)`)
     // textName.transition()
     // .duration(3000)
     // .attr("transform", d => `translate(${d.x},${d.y})`);
@@ -267,7 +267,7 @@ const BubbleChart = (props) => {
 
     textCount
     .attr("transform", 'translate(270, 110)')
-    .attr("transform", d => `translate(390, 50)`)
+    .attr("transform", d => `translate(400, 100)`)
     // textCount.transition()
     // .duration(3000)
     // .attr("transform", d => `translate(${d.x},${d.y})`);
