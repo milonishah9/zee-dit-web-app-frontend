@@ -140,6 +140,7 @@ const ProductQualityOfExperience = () => {
 
                 </div>
 
+<br />
 
                 <h5 className='product-qual-experience-subdiv-h5'>Player Experience</h5>
 
