@@ -2,12 +2,73 @@ import React from "react";
 import "./Links.css";
 import * as d3 from "d3";
 import { useEffect } from "react";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const Links = (props) => {
-
+  const [bubbleClickValue, setBubbleClickValue] = useState({
+    Acquisitions: false,
+    Discovery:false,
+    Advertisement: false,
+    Subscriptions: false,
+    Engagement: false,
+    Loyalty: false
+  });
+  
   const handleBubbleClick = (value) => {
-    // if(e.target.id === 'yes')
-    // e.target.id = 'noo'
+    // console.log(value);
+      // if(value === 'Acquisitions'){
+      //   // if(bubbleClickValue.Acquisitions === false){
+      //     bubbleClickValue.Acquisitions = true;
+      //   // }
+      //   // if(bubbleClickValue.Acquisitions === true){
+      //   //   bubbleClickValue.Acquisitions = false
+      //   // }
+      // }
+      // if(value === 'Discovery'){
+      //   bubbleClickValue.Discovery = true;
+      // }
+      // if(value === "Advertisement"){
+      //   bubbleClickValue.Advertisement = true;
+      // }
+      // case 'Discovery':
+      //   if(bubbleClickValue.Discovery === false){
+      //     bubbleClickValue.Discovery = true;
+      //   }else{
+      //     bubbleClickValue.Discovery = false
+      //   }
+      //   break;
+      // case 'Advertisement':
+      //   if(bubbleClickValue.Advertisement === false){
+      //     bubbleClickValue.Advertisement = true;
+      //   }else{
+      //     bubbleClickValue.Advertisement = false
+      //   }
+      //   break;
+      // case 'Subscriptions':
+      //   if(bubbleClickValue.Subscriptions === false){
+      //     bubbleClickValue.Subscriptions = true;
+      //   }else{
+      //     bubbleClickValue.Subscriptions = false
+      //   }
+      //   break;
+      // case 'Engagement':
+      //   if(bubbleClickValue.Engagement === false){
+      //     bubbleClickValue.Engagement = true;
+      //   }else{
+      //     bubbleClickValue.Engagement = false
+      //   }
+      //   break;
+
+      // case 'Loyalty':
+      //   if(bubbleClickValue.Engagement === false){
+      //     bubbleClickValue.Engagement = true;
+      //   }else{
+      //     bubbleClickValue.Engagement = false
+      //   }
+      //   break;
+      // }
+    
     props.onClick(value)
   }
 
