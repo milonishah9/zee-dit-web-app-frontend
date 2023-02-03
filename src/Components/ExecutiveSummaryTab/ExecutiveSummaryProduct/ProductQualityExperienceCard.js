@@ -11,7 +11,7 @@ const ProductQualityExperienceCard = (props) => {
                             <div className="product-data">
                             <p className='product-qual-experience-subdiv-tile-title'>{mydata[0] }
                             <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
-                                        <p className='product-qual-experience-subdiv-tile-chart-value-date'></p>
+                                        <p className='product-qual-experience-subdiv-tile-chart-value-date'>{mydata[1] }</p>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-status-neg'>
                                             12%
                                             <svg
