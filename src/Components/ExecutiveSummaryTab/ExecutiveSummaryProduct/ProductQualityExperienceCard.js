@@ -3,14 +3,15 @@ import './ProductQualityExperienceCard.css';
 import GuageChart from "../../Charts/GuageChart/GuageChart";
 import ProductQualityExperienceToggle from "./ProductQualityExperienceToggle";
 
-const ProductQualityExperienceCard = () => {
+const ProductQualityExperienceCard = (props) => {
+    const {mydata} = props
     return(
         <div className='product-qual-experience-subdiv-tile-left-grp'>
         <div className='product-qual-experience-subdiv-tile'>
                             <div className="product-data">
-                            <p className='product-qual-experience-subdiv-tile-title'>Play %
+                            <p className='product-qual-experience-subdiv-tile-title'>{mydata[0] }
                             <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
-                                        <p className='product-qual-experience-subdiv-tile-chart-value-date'>Month - 1 to 30, Jun</p>
+                                        <p className='product-qual-experience-subdiv-tile-chart-value-date'></p>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-status-neg'>
                                             12%
                                             <svg
