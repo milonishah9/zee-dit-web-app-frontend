@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './ExecutiveSummaryContentLinearContents.css'
 import FrontBar from "../../Charts/BubbleChart/LinearBarchart/FrontBar";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectCount } from "../../../features/HoverValues";
 import HSbar from "../../Charts/HSbar/HSbar";
 import DivergingSB from "../../Charts/DivergingSB/DivergingSB";
@@ -9,6 +9,7 @@ import DivergingSB from "../../Charts/DivergingSB/DivergingSB";
 const ExecutiveSummaryContentLinearContents = (props) => {
     const {chartData, buttonTab, tab} = props;
     const hoverValue = useSelector(selectCount);
+
     const [toggleValue, setToggleValue] = useState();
 
     var data = [{

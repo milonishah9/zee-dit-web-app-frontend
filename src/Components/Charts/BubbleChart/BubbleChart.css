@@ -30,8 +30,15 @@ text.lessthan300 {
     .bubble-indicators{
         margin-top: 20px;
     }
+ 
+    .executive-summary-product-container{
+      width: auto!important;
+    }
 }
 
+.bubble-chart{
+  overflow: auto;
+}
 
 /* h2 {
 	font-family: "Lato";
@@ -113,3 +120,16 @@ text {
   .chart-div {
       width: 2100px;
   }
+
+
+@media screen and (max-width:768px ) {
+  .chart3 svg text {
+    font-size: 20px !important;
+    font-family: "GothamLight" !important;
+}
+}
+@media only screen and (max-width: 767px) {
+  div#chart svg {
+    margin-left: -26rem;
+}
+}
