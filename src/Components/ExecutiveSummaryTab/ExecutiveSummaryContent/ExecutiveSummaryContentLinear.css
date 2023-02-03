@@ -72,11 +72,11 @@
     }
 
     .executive-summary-content-linear-bubblechart-parent {
-        /* overflow-x: scroll; */
+        overflow-x: scroll;
     }
 
     .executive-summary-content-linear-bubblechart-child{
-        /* width: 1300px; */
+        width: 1300px;
     }
 
 }
