@@ -15,6 +15,22 @@
     min-height: 100px;
 }
 
+.product-qual-experience-subdiv-tile-chart-value-date{
+    /* font-size: 20px; */
+}
+
+.up-line{
+    color: rgb(35, 217, 35)
+}
+
+.title2{
+    height: 12px;
+}
+
+.down-line{
+    color: red
+}
+
 .product-data {
     display: flex;
 }
