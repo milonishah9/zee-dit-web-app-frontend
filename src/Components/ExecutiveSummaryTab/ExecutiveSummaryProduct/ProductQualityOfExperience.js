@@ -18,14 +18,25 @@ const ProductQualityOfExperience = () => {
                 <h5 className='product-qual-experience-subdiv-h5'>Start -up Experience</h5>
                 <div className='product-qual-experience-subdiv-tile-cont'>
                     
+                    <div>
+                        Start-up Experience
+                    </div>
+                    <div>
                         <ProductQualityExperienceCard mydata = {['play %', '80%', 999]}/>
                         <ProductQualityExperienceCard mydata = {['Exit Before Video Start %', '12%', 999]}/>
                         <ProductQualityExperienceCard mydata = {['Video Start Failure - Tech %', '08%', 999]}/>
                         <ProductQualityExperienceCard mydata = {['Video Start Time %', '2.34 Sec', 999]}/>
+                    </div>
+
+                    <div>
+                        Player Experience
+                    </div>
+                    <div>
                         <ProductQualityExperienceCard mydata = {['Rebuffering Ratio %', '14%', 999]}/>
                         <ProductQualityExperienceCard mydata = {['Connection Induced Rebuffering Ratio %', '07%', 999]}/>
                         <ProductQualityExperienceCard mydata = {['SPI %', '0.8', 999]}/>
                         <ProductQualityExperienceCard mydata = {['Video Start Failure - Tech %', '18', 999]}/>
+                    </div>
 
                         {/* <ProductQualityExperienceCard mydata = 'jgvjjbi'/> */}
                         {/* <ProductQualityExperienceCard />
