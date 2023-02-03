@@ -21,9 +21,9 @@ const ProductQualityOfExperience = () => {
                    
                     <div className='tglCard'>
                         <ProductQualityExperienceCard mydata = {['Play %', 'Month - 1 to 30, Jun', '12%', 'up']}/>
-                        <ProductQualityExperienceCard mydata = {['Exit Before Video Start %', '12%', '32%', 'down']}/>
-                        <ProductQualityExperienceCard mydata = {['Video Start Failure - Tech %', '08%', '12%', 'down']}/>
-                        <ProductQualityExperienceCard mydata = {['Video Start Time %', '2.34 Sec', '12%', 'up']}/>
+                        <ProductQualityExperienceCard mydata = {['Exit Before Video Start %', 'Month - 1 to 30, Jun', '32%', 'down']}/>
+                        <ProductQualityExperienceCard mydata = {['Video Start Failure - Tech %', 'Month - 1 to 30, Jun', '12%', 'down']}/>
+                        <ProductQualityExperienceCard mydata = {['Video Start Time %', 'Month - 1 to 30, Jun', '12%', 'up']}/>
                     </div>
 
                 
@@ -145,10 +145,10 @@ const ProductQualityOfExperience = () => {
 
                 <div className='product-qual-experience-subdiv-tile-cont'> 
                     <div className='tglCard'>
-                        <ProductQualityExperienceCard mydata = {['Rebuffering Ratio %', '14%', '12%', 'down']}/>
-                        <ProductQualityExperienceCard mydata = {['Connection Induced Rebuffering Ratio %', '07%', '12%', 'down' ]}/>
-                        <ProductQualityExperienceCard mydata = {['SPI %', '0.8%', '12%', 'up' ]}/>
-                        <ProductQualityExperienceCard mydata = {['Video Start Failure - Tech %', '18%', '12%', 'down']}/>
+                        <ProductQualityExperienceCard mydata = {['Rebuffering Ratio %', 'Month - 1 to 30, Jun', '12%', 'down']}/>
+                        <ProductQualityExperienceCard mydata = {['Connection Induced Rebuffering Ratio %', 'Month - 1 to 30, Jun', '12%', 'down' ]}/>
+                        <ProductQualityExperienceCard mydata = {['SPI %', 'Month - 1 to 30, Jun', '12%', 'up' ]}/>
+                        <ProductQualityExperienceCard mydata = {['Video Start Failure - Tech %', 'Month - 1 to 30, Jun', '12%', 'down']}/>
                     </div>
                 </div>
 
