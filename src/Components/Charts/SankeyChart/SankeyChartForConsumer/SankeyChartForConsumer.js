@@ -86,12 +86,12 @@ const SankeyChartForConsumer = (props) => {
             // { source: [xPosition - 100, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#74CDFF" }, //Orgainc - Returning
 
             // { source: [xPosition + 125, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#768CFF" }, //Paid - Returning
-            // { source: [xPosition + 125, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#768CFF" }, //Paid - New
+            { source: [xPosition + 125, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#768CFF" }, //Paid - New
             // { source: [xPosition - 100, yPosition - 185], target: [xPosition - 100, yPosition - 25], fill: "#FFB78E" },  //Returning - Anonymous
 
             // { source: [xPosition - 100, yPosition - 185], target: [xPosition + 125, yPosition - 25], fill: "#FFB78E" }, //Returning - Sign up
             // { source: [xPosition + 125, yPosition - 185], target: [xPosition - 100, yPosition - 25], fill: "#74CDFF" },  //New - Anonymous
-            // { source: [xPosition + 125, yPosition - 185], target: [xPosition + 125, yPosition - 25], fill: "#74CDFF" }, //New - Sign up
+            { source: [xPosition + 125, yPosition - 185], target: [xPosition + 125, yPosition - 25], fill: "#74CDFF" }, //New - Sign up
             // [215,250][375,250]
             { source: [xPosition - 100, yPosition - 5], target: [xPosition - 35, yPosition + 195], fill: "#768CFF" }, //Anonymous - Explore
             { source: [xPosition - 100, yPosition - 5], target: [xPosition + 55, yPosition + 195], fill: "#768CFF" }, //Anonymous - Search
@@ -216,10 +216,10 @@ const SankeyChartForConsumer = (props) => {
                 fill: "#768CFF",
             },
             // Paid - New
-            {
-                point: createLineCoOrdinates([35, 250], [195, 250], -8),
-                fill: "#768CFF",
-            },
+            // {
+            //     point: createLineCoOrdinates([35, 250], [195, 250], -8),
+            //     fill: "#768CFF",
+            // },
             // Returning - Sign Up  [215, 25][375, 250]
             {
                 point: [[215, 25], [290, 75], [315, 160], [380, 240], [335, 215], [300, 170], [265, 75], [215, 25]],
@@ -235,16 +235,16 @@ const SankeyChartForConsumer = (props) => {
                 point: createLineCoOrdinates([215, 25], [375, 25], 8),
                 fill: "#FFB78E"
             },
+                // //New - Sign Up
+                // {
+                //     point: createLineCoOrdinates([215, 25], [375, 25], 8),
+                //     fill: "#FFB78E"
+                // },
             //New - Sign Up
-            {
-                point: createLineCoOrdinates([215, 25], [375, 25], 8),
-                fill: "#FFB78E"
-            },
-            //New - Sign Up
-            {
-                point: createLineCoOrdinates([215, 250], [375, 250], -8),
-                fill: "#74CDFF"
-            }
+            // {
+            //     point: createLineCoOrdinates([215, 250], [375, 250], -8),
+            //     fill: "#74CDFF"
+            // }
 
         ]
         const svg = d3
