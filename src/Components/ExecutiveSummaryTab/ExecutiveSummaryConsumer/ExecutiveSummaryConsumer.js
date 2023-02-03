@@ -138,7 +138,7 @@ const ExecutiveSummaryConsumer = (props) => {
   }, []);
 
   return (
-    <div className="App">
+    <div className="executive-summary-consumer-journey-container">
       <div className="consumer-journey-filters">
         <button
           className={activeConsumerJourneyFilter === "overall" ? "consumer-journey-button-active" : "consumer-journey-button"}
@@ -159,9 +159,10 @@ const ExecutiveSummaryConsumer = (props) => {
           SVOD
         </button>
       </div>
-      <div className="sankey">
-        {/* <Sankey /> */}
-        <SankeyChartForConsumer />
+      <div className="sankey-chart-parent-container">
+        <div className="sankey">
+          <SankeyChartForConsumer />
+        </div>
       </div>
       <div className="kpi-cards-container">
         <div className="kpi-cards-buttons">

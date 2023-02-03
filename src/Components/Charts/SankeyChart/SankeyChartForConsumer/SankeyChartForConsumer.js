@@ -250,6 +250,7 @@ const SankeyChartForConsumer = (props) => {
         const svg = d3
             .select(svgRef.current)
             .attr("viewBox", "0 0 1030 300")
+            // .attr("overflow-x", "scroll")
             // .attr('preserveAspectRatio', 'xMinYMin')
             // .attr("overflow", "scroll")
             // .attr("width", "100%")

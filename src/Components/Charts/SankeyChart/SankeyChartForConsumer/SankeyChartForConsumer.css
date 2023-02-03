@@ -109,7 +109,7 @@
 /* Tablets and medium screens */
 
 @media only screen and (max-width: 1063px) and (min-width: 768px) {
-    .sankey {
+    .sankey{
         margin: 0 auto;
         width: auto !important;
     }
@@ -122,7 +122,7 @@
 }
 
 @media only screen and (max-width: 768px) and (min-width: 540px) {
-    .sankey {
+    .sankey{
         margin: 0 auto;
         width: auto !important;
     }
@@ -130,7 +130,7 @@
     .sankey-chart-for-consumer-container {
         /* margin-top: 2rem; */
         /* width: 100%; */
-        overflow: hidden;
+        overflow-x: scroll;
     }
 }
 
@@ -140,9 +140,13 @@
 @media only screen and (max-width: 540px) and (min-width: 371px) {
     .sankey-chart-for-consumer-container {
         /* margin-top: 2rem; */
-        /* width: 30%; */
+        /* width: 200%; */
         /* width: 100%; */
         overflow-x: scroll;
+    }
+
+    .sankey-chart-for-consumer-svg{
+        /* overflow-x: scroll; */
     }
 }
 

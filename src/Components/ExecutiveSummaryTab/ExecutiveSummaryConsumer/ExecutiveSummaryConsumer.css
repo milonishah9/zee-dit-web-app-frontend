@@ -243,7 +243,7 @@
         margin: 0.7rem 0.5rem 0;
     }
 
-    .kpi-cards-values{
+    .kpi-cards-values {
         flex-wrap: wrap;
     }
 
@@ -265,11 +265,16 @@
         width: auto !important;
     } */
 
+    .executive-summary-consumer-journey-container {
+        /* overflow-x: scroll; */
+    }
+
+    .sankey-chart-parent-container {
+        overflow-x: scroll;
+    }
+
     .sankey {
-        /* margin: 0 auto;
-        width: auto !important; */
-        /* width: 100%; */
-        overflow-x: scroll !important;
+        padding-bottom: 15px;
     }
 
     .consumer-journey-filters {
@@ -296,7 +301,7 @@
         margin: 0.7rem 0.5rem 0;
     }
 
-    .kpi-cards-values{
+    .kpi-cards-values {
         flex-wrap: wrap;
     }
 
@@ -314,6 +319,11 @@
 }
 
 @media only screen and (max-width: 371px) {
+
+    .sankey-chart-parent-container {
+        overflow-x: scroll;
+    }
+
     .sankey {
         /* margin: 0 auto;
         width: auto !important; */
@@ -344,7 +354,7 @@
         margin: 0.7rem 0.5rem 0;
     }
 
-    .kpi-cards-values{
+    .kpi-cards-values {
         flex-wrap: wrap;
     }
 
