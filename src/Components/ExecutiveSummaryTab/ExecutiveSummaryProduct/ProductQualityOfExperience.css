@@ -12,16 +12,6 @@
     margin-bottom: 2rem;
 }
 
-svg.bi.bi-dash-circle.my-button2 {
-    display: block;
-    margin: 0px auto;
-}
-
-svg.bi.bi-plus-circle.my-button2 {
-    display: block;
-    margin: 0px auto;
-}
-
 .product-qual-experience-subdiv-h5 {
     color: #402177;
     font-family: 'GothamBold';
@@ -31,9 +21,7 @@ svg.bi.bi-plus-circle.my-button2 {
     line-height: 15px;
     margin-top: 10px;
 }
-.product-data {
-    display: flex;
-}
+
 .product-qual-experience-subdiv-tile-cont {
     display: flex;
     /* flex-wrap: nowrap; */
@@ -51,7 +39,7 @@ svg.bi.bi-plus-circle.my-button2 {
     /* min-width: 15%; */
     margin-right: 10px;
     /* height: 25vh; */
-    min-height: 100px;
+    min-height: 195px;
 }
 
 .product-qual-experience-subdiv-tile-left-grp,
@@ -61,12 +49,11 @@ svg.bi.bi-plus-circle.my-button2 {
 }
 
 .product-qual-experience-subdiv-tile-title {
-    width: 50%;
     font-family: 'GothamBold';
     margin: 0.7rem 0.6rem 0;
     /* font-size: 14px;
     line-height: 14px; */
-    font-size: 15px;
+    font-size: 0.9rem;
     line-height: 0.9rem;
     color: #333333;
 }
@@ -98,7 +85,7 @@ svg.bi.bi-plus-circle.my-button2 {
 }
 
 .product-qual-experience-subdiv-tile-chart-value-rhs {
-    width: 50%;
+    width: 65%;
     /* min-width: 35%; */
     display: flex;
     align-items: center;
@@ -107,7 +94,6 @@ svg.bi.bi-plus-circle.my-button2 {
 }
 
 .product-qual-experience-subdiv-tile-chart-value-valdiv {
-    padding-top: 20px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -154,16 +140,8 @@ svg.bi.bi-plus-circle.my-button2 {
     font-family: 'GothamLight';
     font-weight: 700;
 }
-.toggle-button{
-    position: relative;
-    top:15px;
-    width: 26px;
-    height: 26px;
-    margin: auto;
-    background: white;
-    border-radius: 50%;
-    box-shadow: 0 5px 5px #d6def8;
-}
+
+
 /* Desktop */
 @media only screen and (min-width: 1561px) {}
 

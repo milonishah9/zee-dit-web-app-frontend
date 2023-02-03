@@ -716,7 +716,7 @@ const ExecutiveSummaryContentOtt = (props) => {
           { value: 10, color: "rgb(201 150 235 / 99%)" },
           { value: 5, color: "rgb(201 150 235 / 70%)" },
           { value: 3, color: "rgb(201 150 235 / 45%)" },
-          { value: 3, description:' ', color: "rgb(201 150 235 / 25%)" },
+          { value: 3,  description:' ', color: "rgb(201 150 235 / 25%)" },
         ],
         410,
       ],

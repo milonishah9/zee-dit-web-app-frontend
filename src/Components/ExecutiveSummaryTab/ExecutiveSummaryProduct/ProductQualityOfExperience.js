@@ -1,16 +1,12 @@
 
 // import ReactSpeedometer from 'react-d3-speedometer';
-import { useState } from 'react';
 import BarChart from '../../Charts/BarChart/BarChart';
 import GuageChart from '../../Charts/GuageChart/GuageChart';
-import ProductUserJourney from "./ProductUserJourney";
+
 import './ProductQualityOfExperience.css';
-import ProductQualityExperienceToggle from './ProductQualityExperienceToggle';
 
 const ProductQualityOfExperience = () => {
     // let { width, height } = wrapperRef.current.getBoundingClientRect();
-
-
     return (
         <div className='product-qual-experience-cont'>
             <div className='product-qual-experience-subdiv'>
@@ -18,9 +14,11 @@ const ProductQualityOfExperience = () => {
                 <div className='product-qual-experience-subdiv-tile-cont'>
                     <div className='product-qual-experience-subdiv-tile-left-grp'>
                         <div className='product-qual-experience-subdiv-tile'>
-                            <div className="product-data">
-                            <p className='product-qual-experience-subdiv-tile-title'>Play %
-                            <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
+                            <p className='product-qual-experience-subdiv-tile-title'>Play %</p>
+                            <p className='product-qual-experience-subdiv-tile-value'>80%</p>
+                            <div className='product-qual-experience-subdiv-tile-chart-value'>
+                                <div className='product-qual-experience-subdiv-tile-chart-value-lhs'>
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-date'>Month - 1 to 30, Jun</p>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-status-neg'>
                                             12%
@@ -35,19 +33,43 @@ const ProductQualityOfExperience = () => {
                                             </svg>
                                             from last month
                                         </p>
-                            </div>
-                            </p>
-                            <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
+                                    </div>
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-barchart'>
+                                        {/* Bar Chart */}
+                                        <BarChart />
+                                    </div>
+                                </div>
+                                {/* <GuageChart/> */}
+                                <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
                                     <GuageChart />
+                                    {/* <ReactSpeedometer
+                                    maxValue={100}
+                                    value={12}
+                                    needleColor="black"
+                                    // startColor="#FF647C"
+                                    segments={3}
+                                    // endColor="blue"
+                                    segmentColors={[
+                                        "#FF647C",
+                                        "#FFC656",
+                                        "#00C48C"
+                                    ]}
+                                    // fluidWidth={true}
+                                    width={240}
+                                    height={125}
+                                    ringWidth={15}
+                                    // valueTextFontSize={0}
+                                    labelFontSize={0}
+                                /> */}
+                                </div>
                             </div>
-                            
-                            </div>
-                         <ProductQualityExperienceToggle/>
-                         </div>
+                        </div>
                         <div className='product-qual-experience-subdiv-tile'>
-                        <div className="product-data">
-                            <p className='product-qual-experience-subdiv-tile-title'>Exit before Video Start %
-                             <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
+                            <p className='product-qual-experience-subdiv-tile-title'>Exit before Video Start %</p>
+                            <p className='product-qual-experience-subdiv-tile-value'>12%</p>
+                            <div className='product-qual-experience-subdiv-tile-chart-value'>
+                                <div className='product-qual-experience-subdiv-tile-chart-value-lhs'>
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-date'>Month - 1 to 30, Jun</p>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-status-pos'>
                                             23%
@@ -66,21 +88,45 @@ const ProductQualityOfExperience = () => {
 
                                             from last month
                                         </p>
-                             </div>
-                       
-                        </p>
-                            <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
+                                    </div>
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-barchart'>
+                                        {/* Bar Chart */}
+                                        <BarChart />
+                                    </div>
+                                </div>
+                                <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
                                     <GuageChart />
+                                    {/* <ReactSpeedometer
+                                    maxValue={100}
+                                    value={12}
+                                    needleColor="black"
+                                    // startColor="#FF647C"
+                                    segments={3}
+                                    // endColor="blue"
+                                    segmentColors={[
+                                        "#FF647C",
+                                        "#FFC656",
+                                        "#00C48C"
+                                    ]}
+                                    // fluidWidth={true}
+                                    width={240}
+                                    height={125}
+                                    ringWidth={15}
+                                    // valueTextFontSize={0}
+                                    labelFontSize={0}
+
+                                /> */}
+                                </div>
                             </div>
                         </div>
-                       <ProductQualityExperienceToggle />
-                    </div>
                     </div>
                     <div className='product-qual-experience-subdiv-tile-right-grp'>
                         <div className='product-qual-experience-subdiv-tile'>
-                            <div className='product-data'>
-                            <p className='product-qual-experience-subdiv-tile-title'>Video Start Failure – Tech %
-                             <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
+                            <p className='product-qual-experience-subdiv-tile-title'>Video Start Failure – Tech %</p>
+                            <p className='product-qual-experience-subdiv-tile-value'>08%</p>
+                            <div className='product-qual-experience-subdiv-tile-chart-value'>
+                                <div className='product-qual-experience-subdiv-tile-chart-value-lhs'>
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-date'>Month - 1 to 30, Jun</p>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-status-neg'>
                                             12%
@@ -96,21 +142,42 @@ const ProductQualityOfExperience = () => {
                                             from last month
                                         </p>
                                     </div>
-                              
-                             
-                                
-                            
-                            </p>
-                            <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
-                            <GuageChart />
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-barchart'>
+                                        {/* Bar Chart */}
+                                        <BarChart />
+                                    </div>
+                                </div>
+                                <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
+                                    <GuageChart />
+                                    {/* <ReactSpeedometer
+                                    maxValue={100}
+                                    value={12}
+                                    needleColor="black"
+                                    // startColor="#FF647C"
+                                    segments={3}
+                                    // endColor="blue"
+                                    segmentColors={[
+                                        "#FF647C",
+                                        "#FFC656",
+                                        "#00C48C"
+                                    ]}
+                                    // fluidWidth={true}
+                                    width={240}
+                                    height={125}
+                                    ringWidth={15}
+                                    // valueTextFontSize={0}
+                                    labelFontSize={0}
+
+                                /> */}
+                                </div>
                             </div>
-                            </div>
-                            <ProductQualityExperienceToggle />
                         </div>
                         <div className='product-qual-experience-subdiv-tile'>
-                            <div className='product-data'>
-                            <p className='product-qual-experience-subdiv-tile-title'>Video Start Time
-                                <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
+                            <p className='product-qual-experience-subdiv-tile-title'>Video Start Time</p>
+                            <p className='product-qual-experience-subdiv-tile-value'>2.34</p>
+                            <div className='product-qual-experience-subdiv-tile-chart-value'>
+                                <div className='product-qual-experience-subdiv-tile-chart-value-lhs'>
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-date'>Month - 1 to 30, Jun</p>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-status-pos'>
                                             34%
@@ -119,16 +186,41 @@ const ProductQualityOfExperience = () => {
                                             </svg>
                                             from last month
                                         </p>
+                                    </div>
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-barchart'>
+                                        {/* Bar Chart */}
+                                        <BarChart />
+                                    </div>
+                                </div>
+                                <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
+                                    <GuageChart />
+                                    {/* <ReactSpeedometer
+                                    maxValue={100}
+                                    value={12}
+                                    needleColor="black"
+                                    // startColor="#FF647C"
+                                    segments={3}
+                                    // endColor="blue"
+                                    segmentColors={[
+                                        "#FF647C",
+                                        "#FFC656",
+                                        "#00C48C"
+                                    ]}
+                                    // fluidWidth={true}
+                                    width={240}
+                                    height={125}
+                                    ringWidth={15}
+                                    // valueTextFontSize={0}
+                                    labelFontSize={0}
+
+                                /> */}
+                                </div>
                             </div>
-                            </p>
-                            <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
-                            <GuageChart />
-                            </div>
-                            </div>
-                            <ProductQualityExperienceToggle />
                         </div>
                     </div>
-                    </div>
+
+
+                </div>
             </div>
 
             <div className='product-qual-experience-subdiv'>
@@ -136,9 +228,11 @@ const ProductQualityOfExperience = () => {
                 <div className='product-qual-experience-subdiv-tile-cont'>
                     <div className='product-qual-experience-subdiv-tile-left-grp'>
                         <div className='product-qual-experience-subdiv-tile'>
-                            <div className='product-data'>
-                            <p className='product-qual-experience-subdiv-tile-title'>Rebuffering Ratio %
-                            <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
+                            <p className='product-qual-experience-subdiv-tile-title'>Rebuffering Ratio %</p>
+                            <p className='product-qual-experience-subdiv-tile-value'>14%</p>
+                            <div className='product-qual-experience-subdiv-tile-chart-value'>
+                                <div className='product-qual-experience-subdiv-tile-chart-value-lhs'>
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-date'>Month - 1 to 30, Jun</p>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-status-neg'>
                                             12%
@@ -154,19 +248,43 @@ const ProductQualityOfExperience = () => {
                                             from last month
                                         </p>
                                     </div>
-                            </p>
-                            <div className='product-qual-experience-subdiv-tile-chart-value-rhs'    >
-                            <GuageChart />
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-barchart'>
+                                        {/* Bar Chart */}
+                                        <BarChart />
+                                    </div>
+                                </div>
+                                <div className='product-qual-experience-subdiv-tile-chart-value-rhs'    >
+                                    <GuageChart />
+                                    {/* <ReactSpeedometer
+                                    maxValue={100}
+                                    value={12}
+                                    needleColor="black"
+                                    // startColor="#FF647C"
+                                    segments={3}
+                                    // endColor="blue"
+                                    segmentColors={[
+                                        "#FF647C",
+                                        "#FFC656",
+                                        "#00C48C"
+                                    ]}
+                                    // fluidWidth={true}
+                                    width={240}
+                                    height={125}
+                                    ringWidth={15}
+                                    // valueTextFontSize={0}
+                                    labelFontSize={0}
+                                /> */}
+                                </div>
                             </div>
-                            </div>
-                            <ProductQualityExperienceToggle />
                         </div>
                         <div className='product-qual-experience-subdiv-tile'>
-                            <div className='product-data'>
-                            <p className='product-qual-experience-subdiv-tile-title'>Connection Induced Rebuffering Ratio %
-                            <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
-                                <p className='product-qual-experience-subdiv-tile-chart-value-date'>Month - 1 to 30, Jun</p>
-                                    <p className='product-qual-experience-subdiv-tile-chart-value-status-pos'>
+                            <p className='product-qual-experience-subdiv-tile-title'>Connection Induced Rebuffering Ratio %</p>
+                            <p className='product-qual-experience-subdiv-tile-value'>07%</p>
+                            <div className='product-qual-experience-subdiv-tile-chart-value'>
+                                <div className='product-qual-experience-subdiv-tile-chart-value-lhs'>
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
+                                        <p className='product-qual-experience-subdiv-tile-chart-value-date'>Month - 1 to 30, Jun</p>
+                                        <p className='product-qual-experience-subdiv-tile-chart-value-status-pos'>
                                             23%
                                             {/* <svg
                                             width="8"
@@ -183,20 +301,45 @@ const ProductQualityOfExperience = () => {
 
                                             from last month
                                         </p>
+                                    </div>
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-barchart'>
+                                        {/* Bar Chart */}
+                                        <BarChart />
+                                    </div>
+                                </div>
+                                <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
+                                    <GuageChart />
+                                    {/* <ReactSpeedometer
+                                    maxValue={100}
+                                    value={12}
+                                    needleColor="black"
+                                    // startColor="#FF647C"
+                                    segments={3}
+                                    // endColor="blue"
+                                    segmentColors={[
+                                        "#FF647C",
+                                        "#FFC656",
+                                        "#00C48C"
+                                    ]}
+                                    // fluidWidth={true}
+                                    width={240}
+                                    height={125}
+                                    ringWidth={15}
+                                    // valueTextFontSize={0}
+                                    labelFontSize={0}
+
+                                /> */}
+                                </div>
                             </div>
-                            </p>
-                            <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
-                            <GuageChart />
-                            </div>
-                            </div>
-                            <ProductQualityExperienceToggle />
                         </div>
                     </div>
                     <div className='product-qual-experience-subdiv-tile-right-grp'>
                         <div className='product-qual-experience-subdiv-tile'>
-                            <div className='product-data'>
-                            <p className='product-qual-experience-subdiv-tile-title'>SPI
-                            <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
+                            <p className='product-qual-experience-subdiv-tile-title'>SPI</p>
+                            <p className='product-qual-experience-subdiv-tile-value'>0.8%</p>
+                            <div className='product-qual-experience-subdiv-tile-chart-value'>
+                                <div className='product-qual-experience-subdiv-tile-chart-value-lhs'>
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-date'>Month - 1 to 30, Jun</p>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-status-neg'>
                                             12%
@@ -212,21 +355,42 @@ const ProductQualityOfExperience = () => {
                                             from last month
                                         </p>
                                     </div>
-                                
-                                
-                               
-                       
-                            </p>
-                            <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-barchart'>
+                                        {/* Bar Chart */}
+                                        <BarChart />
+                                    </div>
+                                </div>
+                                <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
                                     <GuageChart />
+                                    {/* <ReactSpeedometer
+                                    maxValue={100}
+                                    value={12}
+                                    needleColor="black"
+                                    // startColor="#FF647C"
+                                    segments={3}
+                                    // endColor="blue"
+                                    segmentColors={[
+                                        "#FF647C",
+                                        "#FFC656",
+                                        "#00C48C"
+                                    ]}
+                                    // fluidWidth={true}
+                                    width={240}
+                                    height={125}
+                                    ringWidth={15}
+                                    // valueTextFontSize={0}
+                                    labelFontSize={0}
+
+                                /> */}
+                                </div>
                             </div>
-                            </div>
-                            <ProductQualityExperienceToggle />
                         </div>
                         <div className='product-qual-experience-subdiv-tile'>
-                            <div className='product-data'> 
-                            <p className='product-qual-experience-subdiv-tile-title'>Video Playback Failure- Tech %
-                            <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
+                            <p className='product-qual-experience-subdiv-tile-title'>Video Playback Failure- Tech %</p>
+                            <p className='product-qual-experience-subdiv-tile-value'>18%</p>
+                            <div className='product-qual-experience-subdiv-tile-chart-value'>
+                                <div className='product-qual-experience-subdiv-tile-chart-value-lhs'>
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-date'>Month - 1 to 30, Jun</p>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-status-pos'>
                                             34%
@@ -235,13 +399,36 @@ const ProductQualityOfExperience = () => {
                                             </svg>
                                             from last month
                                         </p>
+                                    </div>
+                                    <div className='product-qual-experience-subdiv-tile-chart-value-barchart'>
+                                        {/* Bar Chart */}
+                                        <BarChart />
+                                    </div>
+                                </div>
+                                <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
+                                    <GuageChart />
+                                    {/* <ReactSpeedometer
+                                    maxValue={100}
+                                    value={12}
+                                    needleColor="black"
+                                    // startColor="#FF647C"
+                                    segments={3}
+                                    // endColor="blue"
+                                    segmentColors={[
+                                        "#FF647C",
+                                        "#FFC656",
+                                        "#00C48C"
+                                    ]}
+                                    // fluidWidth={true}
+                                    width={240}
+                                    height={125}
+                                    ringWidth={15}
+                                    // valueTextFontSize={0}
+                                    labelFontSize={0}
+
+                                /> */}
+                                </div>
                             </div>
-                            </p>
-                            <div className='product-qual-experience-subdiv-tile-chart-value-rhs'>
-                            <GuageChart />
-                            </div>
-                            </div>
-                           <ProductQualityExperienceToggle />
                         </div>
                     </div>
                 </div>

@@ -1,16 +1,9 @@
 import React from "react";
-import "./Links.css";
+// import "./Links.css";
 import * as d3 from "d3";
 import { useEffect } from "react";
 
-const Links = (props) => {
-
-  const handleBubbleClick = (value) => {
-    // if(e.target.id === 'yes')
-    // e.target.id = 'noo'
-    props.onClick(value)
-  }
-
+const Links = () => {
   var data = [
     {
       year: 2000,
@@ -35,6 +28,10 @@ const Links = (props) => {
     {
       year: 2005,
       popularity: 50,
+    },
+    {
+      year: 2006,
+      popularity: 80,
     },
   ];
 
@@ -139,30 +136,32 @@ const Links = (props) => {
   return (
     <div className="line-chart-with-animation">
       <div className="line-chart-all-dots">
+        {/* <button>Update Chart</button> */}
         <div className="line-chart-acquisitions">
           <p>Acquisitions</p>
-          <label id="yeas" className="line-chart-dots line-chart-dot-odd" onClick={() =>handleBubbleClick('Acquisitions')}></label>
+          <label className="line-chart-dots"></label>
         </div>
-        <div className="line-chart-discovery">
+        <div className="line-chart-acquisitions">
           <p>Discovery</p>
-          <label className="line-chart-dots line-chart-dot-even" onClick={() =>handleBubbleClick('Discovery')}></label>
+          <label className="line-chart-dots"></label>
         </div>
-        <div className="line-chart-advertisement">
-          <p>Advertisement</p>
-          <label className="line-chart-dots line-chart-dot-odd" onClick={() =>handleBubbleClick('Advertisement')}></label>
+        <div className="line-chart-acquisitions">
+          <p>Advertisement​</p>
+          <label className="line-chart-dots"></label>
         </div>
-        <div className="line-chart-subscriptions">
+        <div className="line-chart-acquisitions">
           <p>Subscriptions</p>
-          <label className="line-chart-dots line-chart-dot-even" onClick={() =>handleBubbleClick('Subscriptions')}></label>
+          <label className="line-chart-dots"></label>
         </div>
-        <div className="line-chart-engagement">
+        <div className="line-chart-acquisitions">
           <p>Engagement</p>
-          <label className="line-chart-dots line-chart-dot-odd" onClick={() =>handleBubbleClick('Engagement')}></label>
+          <label className="line-chart-dots"></label>
         </div>
-        <div className="line-chart-loyalty">
+        <div className="line-chart-acquisitions">
           <p>Loyalty</p>
-          <label className="line-chart-dots line-chart-dot-even" onClick={() =>handleBubbleClick('Loyalty')}></label>
+          <label className="line-chart-dots"></label>
         </div>
+        
       </div>
       <div id="chart"></div>
     </div>

@@ -52,7 +52,7 @@ const FrontBar = (props) => {
             .append('text')
             .attr('class', 'amount')
             .attr('y', 14)
-            .attr('x', 6)
+            .attr('x', 10)
             .text((data));
         
         d3.select(node)
@@ -62,7 +62,7 @@ const FrontBar = (props) => {
             .append('text')
             .attr('class', 'remaining-amount')
             .attr('y', 14)
-            .attr('x', 189)
+            .attr('x', 184)
             .text(percent ?(total-data) : (total-data + '%'));
 
         // // .attr('y', barHeight)
