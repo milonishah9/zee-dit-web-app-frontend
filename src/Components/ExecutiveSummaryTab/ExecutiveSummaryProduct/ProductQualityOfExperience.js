@@ -19,11 +19,14 @@ const ProductQualityOfExperience = () => {
                 <div className='product-qual-experience-subdiv-tile-cont'>
                     
                         <ProductQualityExperienceCard mydata = {['play %', 566, 999]}/>
-                        <ProductQualityExperienceCard mydata = {['vdjav %', 566, 999]}/>
-                        <ProductQualityExperienceCard mydata = {['play %', 566, 999]}/>
-                        <ProductQualityExperienceCard mydata = {['play %', 566, 999]}/>
-                        <ProductQualityExperienceCard mydata = {['play %', 566, 999]}/>
-                        <ProductQualityExperienceCard mydata = {['play %', 566, 999]}/>
+                        <ProductQualityExperienceCard mydata = {['Exit Before Video Start %', 566, 999]}/>
+                        <ProductQualityExperienceCard mydata = {['Video Start Failure - Tech %', 566, 999]}/>
+                        <ProductQualityExperienceCard mydata = {['Video Start Time %', 566, 999]}/>
+                        <ProductQualityExperienceCard mydata = {['Rebuffering Ratio %', 566, 999]}/>
+                        <ProductQualityExperienceCard mydata = {['Connection Induced Rebuffering Ratio %', 566, 999]}/>
+                        <ProductQualityExperienceCard mydata = {['SPI %', 566, 999]}/>
+                        <ProductQualityExperienceCard mydata = {['Video Start Failure - Tech %', 566, 999]}/>
+                        
                         {/* <ProductQualityExperienceCard mydata = 'jgvjjbi'/> */}
                         {/* <ProductQualityExperienceCard />
                         <ProductQualityExperienceCard /> */}
