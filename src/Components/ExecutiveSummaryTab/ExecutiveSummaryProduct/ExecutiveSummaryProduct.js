@@ -66,7 +66,7 @@ const ExecutiveSummaryContent = () => {
       </div>
 
       <div className="executive-summary-product-container">
-        {/* {activeTab === "linear" && (
+        {activeTab === "linear" && (
           <div>
             <Links onClick={getData}/>
             <div className="data-product">
@@ -91,7 +91,7 @@ const ExecutiveSummaryContent = () => {
 
             </div>
           </div>
-        )} */}
+        )}
 
          
 
