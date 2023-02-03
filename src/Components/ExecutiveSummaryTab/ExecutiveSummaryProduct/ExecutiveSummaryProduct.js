@@ -7,30 +7,39 @@ import Links from "../../Charts/Links/Links";
 
 const ExecutiveSummaryContent = () => {
   const [activeTab, setActiveTab] = useState("linear");
-  const [bubbleClickValue, setBubbleClickValue] = useState([]);
+  const [discovery, setDiscovery] = useState();
+  const [acquisitions, setAcquisitions] = useState();
+  const [advertisement, setAdvertisement] = useState();
+  const [subscriptions, setSubscriptions] = useState();
+  const [engagement, setEngagement] = useState();
+  const [loyalty, setLoyalty] = useState();
 
   const getData = (value) => {
     console.log(value);
-    setBubbleClickValue([...bubbleClickValue, value])
-    
-    // if(value === 'Acquisitions'){
-    //   // if(bubbleClickValue.Acquisitions === false){
-    //     bubbleClickValue.Acquisitions = true;
-    //     console.log(bubbleClickValue);
-    //   // }
-    //   // if(bubbleClickValue.Acquisitions === true){
-    //   //   bubbleClickValue.Acquisitions = false
-    //   // }
-    // }
-    // if(value === 'Discovery'){
-    //   bubbleClickValue.Discovery = true;
-    // }
-    // if(value === "Advertisement"){
-    //   bubbleClickValue.Advertisement = true;
-    // }
-    // // setBubbleClickValue(value)
+    if(value === 'Acquisitions'){
+        setAcquisitions('Acquisitions');
+    }
+
+    if(value === 'Discovery'){
+      setDiscovery('Discovery');
+    }
+
+    if(value === "Advertisement"){
+      setAdvertisement('Advertisement')
+    }
+
+    if(value === "Subscriptions"){
+      setSubscriptions('Subscriptions')
+    }
+
+    if(value === "Engagement"){
+      setEngagement('Engagement')
+    }
+
+    if(value === "Loyalty"){
+      setLoyalty('Loyalty')
+    }
   }
-  console.log(bubbleClickValue);
   return (
     <div className="executive-summary-product">
       <div className="executive-summary-content-tabs">
@@ -65,23 +74,24 @@ const ExecutiveSummaryContent = () => {
             </div> */}
             <Links onClick={getData}/>
             <div className="data-product">
-              {bubbleClickValue.map((data) => (data === 'Acquisitions')) && <div><div className="data-product1"><ProductUserJourney data={['Total Sessions', 2000, 40]} /></div>
+              
+              {acquisitions === 'Acquisitions' && <div><div className="data-product1"><ProductUserJourney data={['Total Sessions', 2000, 40]} /></div>
               <div className="data-product1"><ProductUserJourney data={['VTUR', 2000, -40]} /></div></div>}
 
-              {bubbleClickValue.Discovery === true && <div><div className="data-product1"><ProductUserJourney data={['Total Ad Viewers', 1000, 70]} /></div>
+              {discovery === 'Discovery' && <div><div className="data-product1"><ProductUserJourney data={['Total Ad Viewers', 1000, 70]} /></div>
               <div className="data-product1"><ProductUserJourney data={['No. of Subscribers', 1000, 90]} /></div></div>}
 
-              {bubbleClickValue === 'Advertisement' && <><div className="data-product1"><ProductUserJourney data={['DAV', 1000, -50]} /></div>
-              <div className="data-product1"><ProductUserJourney data={['% of Returning Users', 1000, 50]} /></div></>}
+              {advertisement === 'Advertisement' && <div><div className="data-product1"><ProductUserJourney data={['DAV', 1000, -50]} /></div>
+              <div className="data-product1"><ProductUserJourney data={['% of Returning Users', 1000, 50]} /></div></div>}
 
-              {bubbleClickValue === 'Subscriptions' && <><div className="data-product1"><ProductUserJourney data={['DAU', 1000, 50]} /></div>
-              <div className="data-product1"><ProductUserJourney data={['Search Engagement', 1000, -50]} /></div></>}
+              {subscriptions === 'Subscriptions' && <div><div className="data-product1"><ProductUserJourney data={['DAU', 1000, 50]} /></div>
+              <div className="data-product1"><ProductUserJourney data={['Search Engagement', 1000, -50]} /></div></div>}
 
-              {bubbleClickValue === 'Engagement' && <><div className="data-product1"><ProductUserJourney data={['Total Ad Impressions', 1000, -50]} /></div>
-              <div className="data-product1"><ProductUserJourney data={['No. of Subscribers', 1000, 50]} /></div></>}
+              {engagement === 'Engagement' && <div><div className="data-product1"><ProductUserJourney data={['Total Ad Impressions', 1000, -50]} /></div>
+              <div className="data-product1"><ProductUserJourney data={['No. of Subscribers', 1000, 50]} /></div></div>}
               
-              {bubbleClickValue ==='Loyalty' && <><div className="data-product1"><ProductUserJourney data={['MAV', 1000, 50]} /></div>
-              <div className="data-product1"><ProductUserJourney data={['% of Sessions from Returning Users', 1000, -50]} /></div></>}
+              {loyalty ==='Loyalty' && <div><div className="data-product1"><ProductUserJourney data={['MAV', 1000, 50]} /></div>
+              <div className="data-product1"><ProductUserJourney data={['% of Sessions from Returning Users', 1000, -50]} /></div></div>}
 
             </div>
           </div>
