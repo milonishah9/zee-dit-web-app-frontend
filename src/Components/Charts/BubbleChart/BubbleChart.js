@@ -331,7 +331,7 @@ const BubbleChart = (props) => {
   }, [json]);
 
   return (
-    <div className="col-12">
+    <div className="col-12 bubble-chart">
       <div className="" style={{ paddingLeft: "2%", paddingRight: "2%" }}>
         Bubble size represents Reach
         <div className="indicators">

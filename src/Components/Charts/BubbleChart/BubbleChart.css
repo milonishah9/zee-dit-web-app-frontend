@@ -36,6 +36,9 @@ text.lessthan300 {
     }
 }
 
+.bubble-chart{
+  overflow: auto;
+}
 
 /* h2 {
 	font-family: "Lato";
