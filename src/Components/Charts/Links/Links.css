@@ -75,7 +75,11 @@
 .line-chart-loyalty label{
     background-color: #FF647C;
 }
-
-.chart {
+/* 
+#linkChart {
     overflow-x: scroll;
+} */
+
+.line-chart-with-animation{
+    overflow: auto;
 }

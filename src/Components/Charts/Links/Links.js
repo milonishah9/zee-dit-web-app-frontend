@@ -102,7 +102,7 @@ const Links = (props) => {
   useEffect(() => {
     // Create SVG and padding for the chart
     const svg = d3
-      .select("#chart")
+      .select("#linkChart")
       .append("svg")
       .attr("height", 200)
       .attr("width", 1000);
@@ -225,7 +225,7 @@ const Links = (props) => {
           <label className="line-chart-dots line-chart-dot-even" onClick={() =>handleBubbleClick('Loyalty')}></label>
         </div>
       </div>
-      <div id="chart"></div>
+      <div id="linkChart"></div>
     </div>
   );
 };
