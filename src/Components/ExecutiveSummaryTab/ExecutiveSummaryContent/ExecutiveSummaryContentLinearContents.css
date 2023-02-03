@@ -60,6 +60,13 @@
   }
 }
 
+@media only screen and (min-width: 767px) {
+  .executive-summary-content-linear-contents {
+    position: relative;
+    bottom: 385px;
+  }
+}
+
 .executive-summary-content-linear-contents-headers {
   display: flex;
   justify-content: flex-end;
@@ -241,7 +248,8 @@ input[type="checkbox"]:checked {
   right: 89px;
 }
 
-#exe-sum-cont-table-row td:nth-child(6) text.amount{
+/* #exe-sum-cont-table-row  */
+td:nth-child(6) text.amount{
   display: none;
 }
 
