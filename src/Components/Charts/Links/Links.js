@@ -4,32 +4,71 @@ import * as d3 from "d3";
 import { useEffect } from "react";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { useMediaQuery } from "@material-ui/core";
 
 const Links = (props) => {
-  var linksWidth = 1300;
-  const isTablet = useMediaQuery('(min-width:1024px)')
-  const isIpda = useMediaQuery('(min-width:768px)')
-  console.log(isTablet);
-
-//   switch(expression) {
-//   case x:
-//     // code block
-//     break;
-//   case y:
-//     // code block
-//     break;
-//   default:
-//     // code block
-// }
-
-  if(isTablet){
-    linksWidth = 950;
-  }
-  // if(isIpda){
-  //   linksWidth = 700;
-  // }
+  const [bubbleClickValue, setBubbleClickValue] = useState({
+    Acquisitions: false,
+    Discovery:false,
+    Advertisement: false,
+    Subscriptions: false,
+    Engagement: false,
+    Loyalty: false
+  });
+  
   const handleBubbleClick = (value) => {
+    // console.log(value);
+      // if(value === 'Acquisitions'){
+      //   // if(bubbleClickValue.Acquisitions === false){
+      //     bubbleClickValue.Acquisitions = true;
+      //   // }
+      //   // if(bubbleClickValue.Acquisitions === true){
+      //   //   bubbleClickValue.Acquisitions = false
+      //   // }
+      // }
+      // if(value === 'Discovery'){
+      //   bubbleClickValue.Discovery = true;
+      // }
+      // if(value === "Advertisement"){
+      //   bubbleClickValue.Advertisement = true;
+      // }
+      // case 'Discovery':
+      //   if(bubbleClickValue.Discovery === false){
+      //     bubbleClickValue.Discovery = true;
+      //   }else{
+      //     bubbleClickValue.Discovery = false
+      //   }
+      //   break;
+      // case 'Advertisement':
+      //   if(bubbleClickValue.Advertisement === false){
+      //     bubbleClickValue.Advertisement = true;
+      //   }else{
+      //     bubbleClickValue.Advertisement = false
+      //   }
+      //   break;
+      // case 'Subscriptions':
+      //   if(bubbleClickValue.Subscriptions === false){
+      //     bubbleClickValue.Subscriptions = true;
+      //   }else{
+      //     bubbleClickValue.Subscriptions = false
+      //   }
+      //   break;
+      // case 'Engagement':
+      //   if(bubbleClickValue.Engagement === false){
+      //     bubbleClickValue.Engagement = true;
+      //   }else{
+      //     bubbleClickValue.Engagement = false
+      //   }
+      //   break;
+
+      // case 'Loyalty':
+      //   if(bubbleClickValue.Engagement === false){
+      //     bubbleClickValue.Engagement = true;
+      //   }else{
+      //     bubbleClickValue.Engagement = false
+      //   }
+      //   break;
+      // }
+    
     props.onClick(value)
   }
 
@@ -66,7 +105,7 @@ const Links = (props) => {
       .select("#linkChart")
       .append("svg")
       .attr("height", 200)
-      .attr("width", linksWidth);
+      .attr("width", 1000);
     const margin = { top: 0, bottom: 20, left: 30, right: 20 };
     const chart = svg
       .append("g")
@@ -156,7 +195,7 @@ const Links = (props) => {
       });
       updateChart(newData);
     });
-  }, [linksWidth]);
+  }, []);
 
   return (
     <div className="line-chart-with-animation">
