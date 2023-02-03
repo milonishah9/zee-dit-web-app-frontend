@@ -17,15 +17,7 @@ import Links from './Components/Charts/Links/Links';
 
 
 function App() {
-  var data = [{
-    category: " ",
-    negative1: -13,
-    negative2: -23,
-    positive1: 49,
-    positive2: 25
-}];
   return (
-
     <div className="App">
       <BrowserRouter>
         <Routes>

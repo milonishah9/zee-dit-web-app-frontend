@@ -4,10 +4,21 @@ import * as d3 from "d3v4";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCount, setHoverValue } from "../../../features/HoverValues";
+import { useMediaQuery } from "@material-ui/core";
 
 const BubbleChart = (props) => {
   const json = props.files;
+  var bubbleSize = 17;
+  var translatAxis = 50 ;
+  var toolTipSize = '12px GothamLight';
 
+  const isMobile = useMediaQuery('(max-width:768px)')
+  if(isMobile){
+    bubbleSize = 8;
+    translatAxis = 150;
+    toolTipSize = '20px GothamLight';
+
+  }
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -25,7 +36,7 @@ const BubbleChart = (props) => {
       .style("padding", "8px")
       .style("background-color", "white")
       .style("border-radius", "4px")
-      .style("font", "12px GothamLight")
+      .style("font", toolTipSize )
       .text("tooltip");
 
     //on filter remove other svg
@@ -39,7 +50,7 @@ const BubbleChart = (props) => {
 
     svg
       .attr("preserveAspectRatio", "xMinYMin meet")
-      .attr("viewBox", "0 -20 850 250")
+      .attr("viewBox", "0 -20 850 400")
       .classed("svg-content", true)
       .append("g");
     // const image = d3;
@@ -61,7 +72,7 @@ const BubbleChart = (props) => {
         "collide",
         d3
           .forceCollide(function (d) {
-            return d.Count / 17;
+            return d.Count / bubbleSize;
           })
           .iterations(100 * 63)
       );
@@ -105,7 +116,7 @@ const BubbleChart = (props) => {
       .attr("class", "artist")
       .attr("fill", d => d.type === 'movie' ? ('rgba(148, 94, 210, 0.3)'):('rgba(13, 167, 254, 0.3)'))
       .attr("r", function (d) {
-        return d.Count / 17;
+        return d.Count / bubbleSize;
       })
       // .style("fill", function (d, i) {
       //   var bubbleColor = d3.color(d.Name);
@@ -248,8 +259,8 @@ const BubbleChart = (props) => {
     simulation.nodes(json).on("tick", ticked);
 
     circles
-        .attr("transform", 'translate(70, 110)')
-        .attr("transform", d => `translate(390, 50)`)
+        .attr("transform", 'translate(170, 110)')
+        .attr("transform", d => `translate(390, ${translatAxis})`)
 
     // circles.transition()
     //     .duration(3000)
@@ -257,7 +268,7 @@ const BubbleChart = (props) => {
 
     textName
     .attr("transform", 'translate(270, 110)')
-    .attr("transform", d => `translate(390, 50)`)
+    .attr("transform", d => `translate(390, ${translatAxis})`)
     // textName.transition()
     // .duration(3000)
     // .attr("transform", d => `translate(${d.x},${d.y})`);
@@ -265,7 +276,7 @@ const BubbleChart = (props) => {
 
     textCount
     .attr("transform", 'translate(270, 110)')
-    .attr("transform", d => `translate(390, 50)`)
+    .attr("transform", d => `translate(390, ${translatAxis})`)
     // textCount.transition()
     // .duration(3000)
     // .attr("transform", d => `translate(${d.x},${d.y})`);
@@ -326,7 +337,7 @@ const BubbleChart = (props) => {
     //     }
     //   });
     // }
-  }, [json]);
+  }, [json, bubbleSize]);
 
   return (
     <div className="col-12">
@@ -359,7 +370,7 @@ const BubbleChart = (props) => {
           xxk
         </div>
       </div>
-      <div id="chart" className=""></div>
+      <div id="chart" className="chart3"></div>
     </div>
   );
 };
