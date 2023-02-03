@@ -31,9 +31,7 @@ svg.bi.bi-plus-circle.my-button2 {
     line-height: 15px;
     margin-top: 10px;
 }
-.product-data {
-    display: flex;
-}
+
 .product-qual-experience-subdiv-tile-cont {
     display: flex;
     /* flex-wrap: nowrap; */
@@ -41,20 +39,6 @@ svg.bi.bi-plus-circle.my-button2 {
     height: auto;
 }
 
-.product-qual-experience-subdiv-tile {
-    background: #FFFFFF;
-    border: 1px solid #D8E3FF;
-    box-shadow: 0px 2px 5px #D6DEF8;
-    border-radius: 4px;
-    justify-content: space-around;
-    width: 49.6%;
-    /* min-width: 15%; */
-    margin-right: 10px;
-    /* height: 25vh; */
-    min-height: 100px;
-}
-
-.product-qual-experience-subdiv-tile-left-grp,
 .product-qual-experience-subdiv-tile-right-grp {
     display: flex;
     width: 50%;
@@ -156,13 +140,18 @@ svg.bi.bi-plus-circle.my-button2 {
 }
 .toggle-button{
     position: relative;
-    top:15px;
+    top:10px;
     width: 26px;
     height: 26px;
     margin: auto;
     background: white;
     border-radius: 50%;
     box-shadow: 0 5px 5px #d6def8;
+}
+
+.my-button2{
+    position: relative;
+    top: 6px;
 }
 /* Desktop */
 @media only screen and (min-width: 1561px) {}
