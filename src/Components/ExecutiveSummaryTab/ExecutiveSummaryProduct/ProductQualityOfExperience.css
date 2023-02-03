@@ -147,6 +147,14 @@ svg.bi.bi-plus-circle.my-button2 {
     box-shadow: 0 5px 5px #d6def8;
 }
 
+.tglCard{
+    display: contents;
+}
+
+.product-qual-experience-subdiv-tile-left-grp {
+    width: 100%;
+}
+
 .my-button2{
     position: relative;
     top: 6px;

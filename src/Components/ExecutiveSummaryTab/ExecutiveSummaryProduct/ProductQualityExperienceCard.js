@@ -5,6 +5,8 @@ import ProductQualityExperienceToggle from "./ProductQualityExperienceToggle";
 
 const ProductQualityExperienceCard = (props) => {
     const {mydata} = props
+
+    console.log(mydata[3])
     return(
         <div className='product-qual-experience-subdiv-tile-left-grp'>
         <div className='product-qual-experience-subdiv-tile'>
@@ -13,17 +15,15 @@ const ProductQualityExperienceCard = (props) => {
                             <div className='product-qual-experience-subdiv-tile-chart-value-valdiv'>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-date'>{mydata[1] }</p>
                                         <p className='product-qual-experience-subdiv-tile-chart-value-status-neg'>
-                                            12%
-                                            <svg
-                                                width="8"
-                                                height="8"
-                                                viewBox="0 0 8 8"
-                                                fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3.64645 7.60617C3.84171 7.80143 4.15829 7.80144 4.35355 7.60617L7.53553 4.42419C7.7308 4.22893 7.7308 3.91235 7.53553 3.71709C7.34027 3.52182 7.02369 3.52182 6.82843 3.71709L4 6.54551L1.17157 3.71709C0.976311 3.52182 0.659728 3.52182 0.464466 3.71709C0.269204 3.91235 0.269204 4.22893 0.464466 4.42419L3.64645 7.60617ZM3.5 0.0488281L3.5 7.25262L4.5 7.25262L4.5 0.0488281L3.5 0.0488281Z"
-                                                    fill="#FF647C" />
-                                            </svg>
-                                            from last month
+
+
+                                            {mydata[3] === 'up' ?(
+                                                <p className="up-line">{mydata[2]} ↑ from last month</p> 
+                                            ):(
+                                                <p className="down-line">{mydata[2]} ↓ from last month </p> 
+                                            )}
+
+
                                         </p>
                             </div>
                             </p>
