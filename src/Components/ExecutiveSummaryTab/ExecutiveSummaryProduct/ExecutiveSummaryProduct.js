@@ -4,6 +4,7 @@ import { useState } from "react";
 import ProductUserJourney from "./ProductUserJourney";
 import ProductQualityOfExperience from "./ProductQualityOfExperience";
 import Links from "../../Charts/Links/Links";
+import ProductQualityExperienceToggle from "./ProductQualityExperienceToggle";
 
 const ExecutiveSummaryContent = () => {
   const [activeTab, setActiveTab] = useState("linear");
