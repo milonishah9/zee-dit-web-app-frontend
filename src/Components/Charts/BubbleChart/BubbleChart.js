@@ -39,7 +39,9 @@ const BubbleChart = (props) => {
 
     svg
       .attr("preserveAspectRatio", "xMinYMin meet")
-      .attr("viewBox", "0 -20 850 250")
+      // .attr("viewBox", "0 -20 850 250")
+      .attr('width', width)
+      .attr('height', height)
       .classed("svg-content", true)
       .append("g");
     // const image = d3;
