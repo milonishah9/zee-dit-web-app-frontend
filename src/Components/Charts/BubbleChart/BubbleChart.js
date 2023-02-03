@@ -33,7 +33,7 @@ const BubbleChart = (props) => {
 
     // fit bubble chart to the user's window
     var margin = { left: 10, right: 10, top: 10, bottom: 10 },
-      width = 920,
+      width = 1500,
       height = 350,
       svg = d3.select("#chart").append("svg");
 
@@ -63,7 +63,7 @@ const BubbleChart = (props) => {
         "collide",
         d3
           .forceCollide(function (d) {
-            return d.Count / 17;
+            return d.Count / 10;
           })
           .iterations(100 * 63)
       );
@@ -107,7 +107,7 @@ const BubbleChart = (props) => {
       .attr("class", "artist")
       .attr("fill", d => d.type === 'movie' ? ('rgba(148, 94, 210, 0.3)'):('rgba(13, 167, 254, 0.3)'))
       .attr("r", function (d) {
-        return d.Count / 17;
+        return d.Count / 10;
       })
       // .style("fill", function (d, i) {
       //   var bubbleColor = d3.color(d.Name);
