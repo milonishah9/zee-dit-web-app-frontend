@@ -79,7 +79,8 @@ text.lessthan300 {
 }
 
 text {
-    font-size: 0.4em;
+  font-weight: bold;
+    font-size: 08px;
     font-family: "GothamLight";
   }
   
