@@ -56,11 +56,12 @@ const Links = (props) => {
 
   useEffect(() => {
     // Create SVG and padding for the chart
+    console.log(window.innerWidth);
     const svg = d3
       .select("#linkChart")
       .append("svg")
       .attr("height", 200)
-      .attr("width", 1650);
+      .attr("width", window.innerWidth-50);
     const margin = { top: 0, bottom: 20, left: 30, right: 20 };
     const chart = svg
       .append("g")
