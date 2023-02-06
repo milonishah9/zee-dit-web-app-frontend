@@ -92,7 +92,8 @@
     font-size: 16px;
     font-style: normal;
     line-height: 18px;
-    /* font-family: ; */
+    cursor: pointer;
+    font-family: GothamLight;
     border: 1px solid black;
     padding: 3px;
     background: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%);
