@@ -128,3 +128,8 @@ text {
     font-family: "GothamLight" !important;
 }
 }
+@media only screen and (max-width: 767px) {
+  div#chart svg {
+    margin-left: -26rem;
+}
+}

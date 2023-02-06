@@ -161,6 +161,6 @@ div.executive-summary-content-active-tab {
  } 
 
  @media only screen and (max-width: 767px) {
-  .data-product{margin-top: 10rem;grid-template-columns:auto!important;}
+  .data-product{margin-top: 0rem;grid-template-columns:auto!important;}
   .product-userjourney-card{margin-left: 20px;margin-right: 20px;}
  }

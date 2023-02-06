@@ -38,10 +38,11 @@ const BubbleChart = (props) => {
       svg = d3.select("#chart").append("svg");
 
     svg
-      .attr("preserveAspectRatio", "xMinYMin meet")
-      // .attr("viewBox", "0 -20 850 250")
+      // .attr("preserveAspectRatio", "xMinYMin meet")
+      .attr("viewBox", "0 0 850 295")
       .attr('width', width)
       .attr('height', height)
+      // .attr("margin","500px")
       .classed("svg-content", true)
       .append("g");
     // const image = d3;
@@ -251,7 +252,7 @@ const BubbleChart = (props) => {
 
     circles
         .attr("transform", 'translate(70, 110)')
-        .attr("transform", d => `translate(390, 50)`)
+        .attr("transform", d => `translate(400, 100)`)
 
     // circles.transition()
     //     .duration(3000)
@@ -259,7 +260,7 @@ const BubbleChart = (props) => {
 
     textName
     .attr("transform", 'translate(270, 110)')
-    .attr("transform", d => `translate(390, 50)`)
+    .attr("transform", d => `translate(400, 100)`)
     // textName.transition()
     // .duration(3000)
     // .attr("transform", d => `translate(${d.x},${d.y})`);
@@ -267,7 +268,7 @@ const BubbleChart = (props) => {
 
     textCount
     .attr("transform", 'translate(270, 110)')
-    .attr("transform", d => `translate(390, 50)`)
+    .attr("transform", d => `translate(400, 100)`)
     // textCount.transition()
     // .duration(3000)
     // .attr("transform", d => `translate(${d.x},${d.y})`);
