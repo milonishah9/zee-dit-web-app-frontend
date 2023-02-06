@@ -90,7 +90,7 @@
 }
 
 .prod-jour-chart-heading{
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     line-height: 18px;
     cursor: pointer;
@@ -146,7 +146,7 @@
     
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 768px){
+@media only screen and (max-width: 1023px) and (min-width: 768px){
     .line-chart-acquisitions {
         position: relative;
         right: 15px;
@@ -178,6 +178,6 @@
     }
 
     .prod-jour-chart-heading {
-        /* padding: 3px 5px; */
+        padding: 3px 5px;
     }
 }
