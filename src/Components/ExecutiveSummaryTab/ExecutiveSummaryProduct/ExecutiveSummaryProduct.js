@@ -4,11 +4,42 @@ import { useState } from "react";
 import ProductUserJourney from "./ProductUserJourney";
 import ProductQualityOfExperience from "./ProductQualityOfExperience";
 import Links from "../../Charts/Links/Links";
-// import ProductQualityExperienceToggle from "./ProductQualityExperienceToggle";
 
 const ExecutiveSummaryContent = () => {
   const [activeTab, setActiveTab] = useState("linear");
+  const [discovery, setDiscovery] = useState();
+  const [acquisitions, setAcquisitions] = useState();
+  const [advertisement, setAdvertisement] = useState();
+  const [subscriptions, setSubscriptions] = useState();
+  const [engagement, setEngagement] = useState();
+  const [loyalty, setLoyalty] = useState();
 
+  const getData = (value) => {
+    console.log(value);
+    if(value === 'Acquisitions'){
+        setAcquisitions('Acquisitions');
+    }
+
+    if(value === 'Discovery'){
+      setDiscovery('Discovery');
+    }
+
+    if(value === "Advertisement"){
+      setAdvertisement('Advertisement')
+    }
+
+    if(value === "Subscriptions"){
+      setSubscriptions('Subscriptions')
+    }
+
+    if(value === "Engagement"){
+      setEngagement('Engagement')
+    }
+
+    if(value === "Loyalty"){
+      setLoyalty('Loyalty')
+    }
+  }
   return (
     <div className="executive-summary-product">
       <div className="executive-summary-content-tabs">
@@ -37,24 +68,26 @@ const ExecutiveSummaryContent = () => {
       <div className="executive-summary-product-container">
         {activeTab === "linear" && (
           <div>
-            {/* <CenteredTree /> */}
-            {/* <div>
-              <Links />
-            </div> */}
+            <Links onClick={getData}/>
             <div className="data-product">
-            <div className="data-product1"><ProductUserJourney data={['Total Sessions', 2000, 40]} /></div>
-             <div className="data-product1"><ProductUserJourney data={['VTUR', 2000, -40]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['Total Ad Viewers', 1000, 70]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['No. of Subscribers', 1000, 90]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['DAV', 1000, -50]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['% of Returning Users', 1000, 50]} /></div>
+              
+              {acquisitions === 'Acquisitions' && <div><div className="data-product1"><ProductUserJourney data={['Total Sessions', 2000, 40]} /></div>
+              <div className="data-product1"><ProductUserJourney data={['VTUR', 2000, -40]} /></div></div>}
 
-            <div className="data-product1"><ProductUserJourney data={['DAU', 1000, 50]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['Search Engagement', 1000, -50]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['Total Ad Impressions', 1000, -50]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['No. of Subscribers', 1000, 50]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['MAV', 1000, 50]} /></div>
-            <div className="data-product1"><ProductUserJourney data={['% of Sessions from Returning Users', 1000, -50]} /></div>
+              {discovery === 'Discovery' && <div><div className="data-product1"><ProductUserJourney data={['Total Ad Viewers', 1000, 70]} /></div>
+              <div className="data-product1"><ProductUserJourney data={['No. of Subscribers', 1000, 90]} /></div></div>}
+
+              {advertisement === 'Advertisement' && <div><div className="data-product1"><ProductUserJourney data={['DAV', 1000, -50]} /></div>
+              <div className="data-product1"><ProductUserJourney data={['% of Returning Users', 1000, 50]} /></div></div>}
+
+              {subscriptions === 'Subscriptions' && <div><div className="data-product1"><ProductUserJourney data={['DAU', 1000, 50]} /></div>
+              <div className="data-product1"><ProductUserJourney data={['Search Engagement', 1000, -50]} /></div></div>}
+
+              {engagement === 'Engagement' && <div><div className="data-product1"><ProductUserJourney data={['Total Ad Impressions', 1000, -50]} /></div>
+              <div className="data-product1"><ProductUserJourney data={['No. of Subscribers', 1000, 50]} /></div></div>}
+              
+              {loyalty ==='Loyalty' && <div><div className="data-product1"><ProductUserJourney data={['MAV', 1000, 50]} /></div>
+              <div className="data-product1"><ProductUserJourney data={['% of Sessions from Returning Users', 1000, -50]} /></div></div>}
 
             </div>
           </div>
