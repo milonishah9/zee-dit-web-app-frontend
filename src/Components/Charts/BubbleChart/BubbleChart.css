@@ -32,11 +32,18 @@ text.lessthan300 {
 }
 
 @media only screen and (max-width: 767px) {
-  .bubble-indicators {
-    margin-top: 20px;
-  }
+    .bubble-indicators{
+        margin-top: 20px;
+    }
+ 
+    .executive-summary-product-container{
+      width: auto!important;
+    }
 }
 
+.bubble-chart{
+  overflow: auto;
+}
 
 /* h2 {
 	font-family: "Lato";
@@ -77,52 +84,58 @@ text.lessthan300 {
 }
 
 text {
-  font-size: 0.4em;
-  font-family: "GothamLight";
-}
-
-.bubble-legend-box {
-  width: 1em;
-  height: 1em;
-  display: inline-block;
-}
-
-.bubble-legend-label {
-  font-family: "Lato";
-  color: #532c6c;
-  padding-left: 1em;
-}
-
-#bubble-legend-container {
-  display: none;
-}
-
-#bubble-legend {
-  columns: 2;
-  padding-top: 3em;
-}
-
-#bubble-legend li {
-  padding-bottom: 1em;
-}
-
-.accessible {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-.chart-div {
-  width: 2100px;
-}
-
-
-@media only screen and (max-width: 540px) {
-  .bubble-chart-container {
-    /* width: 1200px; */
-    /* overflow-x: scroll; */
+  font-weight: bold;
+    font-size: 08px;
+    font-family: "GothamLight";
   }
+  
+  .bubble-legend-box {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+  }
+  
+  .bubble-legend-label {
+    font-family: "Lato";
+    color: #532c6c;
+    padding-left: 1em;
+  }
+  
+  #bubble-legend-container {
+    display: none;
+  }
+  
+  #bubble-legend {
+    columns: 2;
+    padding-top: 3em;
+  }
+  
+  #bubble-legend li {
+    padding-bottom: 1em;
+  }
+  
+  .accessible {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+ 
+  .chart-div {
+      width: 2100px;
+  }
+
+
+@media screen and (max-width:768px ) {
+  .chart3 svg text {
+    font-size: 20px !important;
+    font-family: "GothamLight" !important;
+}
+}
+@media only screen and (max-width: 767px) {
+  div#chart svg {
+    margin-left: -26rem;
+}
 }

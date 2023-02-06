@@ -12,6 +12,7 @@
   border-radius: 4px;
   position: relative;
   bottom: 60px;
+  margin-top: 30px;
 }
 
 .executive-summ-content-ott-indicators {
@@ -56,9 +57,10 @@
 @media only screen and (max-width: 767px) {
   .executive-summary-content-linear-contents {
     position: relative;
-    bottom:0px;
+    top:0px;
   }
 }
+
 
 .executive-summary-content-linear-contents-headers {
   display: flex;
@@ -156,12 +158,6 @@ table {
   justify-content: space-between;
 }
 
-.executive-summary-content-linear-tabs-subdiv{
-  width: 98.7%;
-  display: flex;
-  justify-content: space-between;
-}
-
 input[type="checkbox"] {
   position: relative;
   width: 30px;
@@ -247,7 +243,8 @@ input[type="checkbox"]:checked {
   right: 89px;
 }
 
-#exe-sum-cont-table-row td:nth-child(6) text.amount{
+/* #exe-sum-cont-table-row  */
+td:nth-child(6) text.amount{
   display: none;
 }
 

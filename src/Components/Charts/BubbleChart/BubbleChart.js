@@ -33,13 +33,16 @@ const BubbleChart = (props) => {
 
     // fit bubble chart to the user's window
     var margin = { left: 10, right: 10, top: 10, bottom: 10 },
-      width = 920,
+      width = 1500,
       height = 350,
       svg = d3.select("#chart").append("svg");
 
     svg
-      .attr("preserveAspectRatio", "xMinYMin meet")
-      .attr("viewBox", "0 -20 850 250")
+      // .attr("preserveAspectRatio", "xMinYMin meet")
+      .attr("viewBox", "0 0 850 295")
+      .attr('width', width)
+      .attr('height', height)
+      // .attr("margin","500px")
       .classed("svg-content", true)
       .append("g");
     // const image = d3;
@@ -61,7 +64,7 @@ const BubbleChart = (props) => {
         "collide",
         d3
           .forceCollide(function (d) {
-            return d.Count / 17;
+            return d.Count / 10;
           })
           .iterations(100 * 63)
       );
@@ -105,7 +108,7 @@ const BubbleChart = (props) => {
       .attr("class", "artist")
       .attr("fill", d => d.type === 'movie' ? ('rgba(148, 94, 210, 0.3)'):('rgba(13, 167, 254, 0.3)'))
       .attr("r", function (d) {
-        return d.Count / 17;
+        return d.Count / 10;
       })
       // .style("fill", function (d, i) {
       //   var bubbleColor = d3.color(d.Name);
@@ -249,7 +252,7 @@ const BubbleChart = (props) => {
 
     circles
         .attr("transform", 'translate(70, 110)')
-        .attr("transform", d => `translate(390, 50)`)
+        .attr("transform", d => `translate(400, 100)`)
 
     // circles.transition()
     //     .duration(3000)
@@ -257,7 +260,7 @@ const BubbleChart = (props) => {
 
     textName
     .attr("transform", 'translate(270, 110)')
-    .attr("transform", d => `translate(390, 50)`)
+    .attr("transform", d => `translate(400, 100)`)
     // textName.transition()
     // .duration(3000)
     // .attr("transform", d => `translate(${d.x},${d.y})`);
@@ -265,7 +268,7 @@ const BubbleChart = (props) => {
 
     textCount
     .attr("transform", 'translate(270, 110)')
-    .attr("transform", d => `translate(390, 50)`)
+    .attr("transform", d => `translate(400, 100)`)
     // textCount.transition()
     // .duration(3000)
     // .attr("transform", d => `translate(${d.x},${d.y})`);
@@ -329,7 +332,7 @@ const BubbleChart = (props) => {
   }, [json]);
 
   return (
-    <div className="col-12 bubble-chart-container">
+    <div className="col-12 bubble-chart">
       <div className="" style={{ paddingLeft: "2%", paddingRight: "2%" }}>
         Bubble size represents Reach
         <div className="indicators">

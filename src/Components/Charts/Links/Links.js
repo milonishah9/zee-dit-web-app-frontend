@@ -1,9 +1,77 @@
 import React from "react";
-// import "./Links.css";
+import "./Links.css";
 import * as d3 from "d3";
 import { useEffect } from "react";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
-const Links = () => {
+const Links = (props) => {
+  const [bubbleClickValue, setBubbleClickValue] = useState({
+    Acquisitions: false,
+    Discovery:false,
+    Advertisement: false,
+    Subscriptions: false,
+    Engagement: false,
+    Loyalty: false
+  });
+  
+  const handleBubbleClick = (value) => {
+    // console.log(value);
+      // if(value === 'Acquisitions'){
+      //   // if(bubbleClickValue.Acquisitions === false){
+      //     bubbleClickValue.Acquisitions = true;
+      //   // }
+      //   // if(bubbleClickValue.Acquisitions === true){
+      //   //   bubbleClickValue.Acquisitions = false
+      //   // }
+      // }
+      // if(value === 'Discovery'){
+      //   bubbleClickValue.Discovery = true;
+      // }
+      // if(value === "Advertisement"){
+      //   bubbleClickValue.Advertisement = true;
+      // }
+      // case 'Discovery':
+      //   if(bubbleClickValue.Discovery === false){
+      //     bubbleClickValue.Discovery = true;
+      //   }else{
+      //     bubbleClickValue.Discovery = false
+      //   }
+      //   break;
+      // case 'Advertisement':
+      //   if(bubbleClickValue.Advertisement === false){
+      //     bubbleClickValue.Advertisement = true;
+      //   }else{
+      //     bubbleClickValue.Advertisement = false
+      //   }
+      //   break;
+      // case 'Subscriptions':
+      //   if(bubbleClickValue.Subscriptions === false){
+      //     bubbleClickValue.Subscriptions = true;
+      //   }else{
+      //     bubbleClickValue.Subscriptions = false
+      //   }
+      //   break;
+      // case 'Engagement':
+      //   if(bubbleClickValue.Engagement === false){
+      //     bubbleClickValue.Engagement = true;
+      //   }else{
+      //     bubbleClickValue.Engagement = false
+      //   }
+      //   break;
+
+      // case 'Loyalty':
+      //   if(bubbleClickValue.Engagement === false){
+      //     bubbleClickValue.Engagement = true;
+      //   }else{
+      //     bubbleClickValue.Engagement = false
+      //   }
+      //   break;
+      // }
+    
+    props.onClick(value)
+  }
+
   var data = [
     {
       year: 2000,
@@ -29,16 +97,12 @@ const Links = () => {
       year: 2005,
       popularity: 50,
     },
-    {
-      year: 2006,
-      popularity: 80,
-    },
   ];
 
   useEffect(() => {
     // Create SVG and padding for the chart
     const svg = d3
-      .select("#chart")
+      .select("#linkChart")
       .append("svg")
       .attr("height", 200)
       .attr("width", 1000);
@@ -136,34 +200,32 @@ const Links = () => {
   return (
     <div className="line-chart-with-animation">
       <div className="line-chart-all-dots">
-        {/* <button>Update Chart</button> */}
         <div className="line-chart-acquisitions">
           <p>Acquisitions</p>
-          <label className="line-chart-dots"></label>
+          <label id="yeas" className="line-chart-dots line-chart-dot-odd" onClick={() =>handleBubbleClick('Acquisitions')}></label>
         </div>
-        <div className="line-chart-acquisitions">
+        <div className="line-chart-discovery">
           <p>Discovery</p>
-          <label className="line-chart-dots"></label>
+          <label className="line-chart-dots line-chart-dot-even" onClick={() =>handleBubbleClick('Discovery')}></label>
         </div>
-        <div className="line-chart-acquisitions">
-          <p>Advertisement​</p>
-          <label className="line-chart-dots"></label>
+        <div className="line-chart-advertisement">
+          <p>Advertisement</p>
+          <label className="line-chart-dots line-chart-dot-odd" onClick={() =>handleBubbleClick('Advertisement')}></label>
         </div>
-        <div className="line-chart-acquisitions">
+        <div className="line-chart-subscriptions">
           <p>Subscriptions</p>
-          <label className="line-chart-dots"></label>
+          <label className="line-chart-dots line-chart-dot-even" onClick={() =>handleBubbleClick('Subscriptions')}></label>
         </div>
-        <div className="line-chart-acquisitions">
+        <div className="line-chart-engagement">
           <p>Engagement</p>
-          <label className="line-chart-dots"></label>
+          <label className="line-chart-dots line-chart-dot-odd" onClick={() =>handleBubbleClick('Engagement')}></label>
         </div>
-        <div className="line-chart-acquisitions">
+        <div className="line-chart-loyalty">
           <p>Loyalty</p>
-          <label className="line-chart-dots"></label>
+          <label className="line-chart-dots line-chart-dot-even" onClick={() =>handleBubbleClick('Loyalty')}></label>
         </div>
-        
       </div>
-      <div id="chart"></div>
+      <div id="linkChart"></div>
     </div>
   );
 };
