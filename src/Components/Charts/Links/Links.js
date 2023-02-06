@@ -61,7 +61,7 @@ const Links = (props) => {
       .select("#linkChart")
       .append("svg")
       .attr("height", 200)
-      .attr("width", window.innerWidth-50);
+      .attr("width", window.innerWidth-100);
     const margin = { top: 0, bottom: 20, left: 30, right: 20 };
     const chart = svg
       .append("g")
