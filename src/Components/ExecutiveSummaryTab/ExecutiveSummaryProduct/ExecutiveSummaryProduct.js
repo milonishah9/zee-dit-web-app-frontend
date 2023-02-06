@@ -14,32 +14,34 @@ const ExecutiveSummaryContent = () => {
   const [engagement, setEngagement] = useState();
   const [loyalty, setLoyalty] = useState();
 
-  const getData = (value) => {
-    console.log(value);
+  const getData = (value, toggle) => {
+    console.log(toggle, value);
     if(value === 'Acquisitions'){
-        setAcquisitions('Acquisitions');
+      toggle === 'show' ? (setAcquisitions('Acquisitions')) : (setAcquisitions(''));
     }
 
     if(value === 'Discovery'){
-      setDiscovery('Discovery');
+      toggle === 'show' ? (setDiscovery('Discovery')) : (setDiscovery(''));
     }
 
     if(value === "Advertisement"){
-      setAdvertisement('Advertisement')
+      toggle === 'show' ? (setAdvertisement('Advertisement')) : (setAdvertisement(''));
     }
 
     if(value === "Subscriptions"){
-      setSubscriptions('Subscriptions')
+      toggle === 'show' ? (setSubscriptions('Subscriptions')) : (setSubscriptions(''));
     }
 
     if(value === "Engagement"){
-      setEngagement('Engagement')
+      toggle === 'show' ? (setEngagement('Engagement')) : (setEngagement(''));
     }
 
     if(value === "Loyalty"){
-      setLoyalty('Loyalty')
+      toggle === 'show' ? (setLoyalty('Loyalty')) : (setLoyalty(''));
     }
+
   }
+  
   return (
     <div className="executive-summary-product">
       <div className="executive-summary-content-tabs">

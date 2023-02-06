@@ -15,61 +15,16 @@ const Links = (props) => {
     Loyalty: false
   });
   
-  const handleBubbleClick = (value) => {
-    // console.log(value);
-      // if(value === 'Acquisitions'){
-      //   // if(bubbleClickValue.Acquisitions === false){
-      //     bubbleClickValue.Acquisitions = true;
-      //   // }
-      //   // if(bubbleClickValue.Acquisitions === true){
-      //   //   bubbleClickValue.Acquisitions = false
-      //   // }
-      // }
-      // if(value === 'Discovery'){
-      //   bubbleClickValue.Discovery = true;
-      // }
-      // if(value === "Advertisement"){
-      //   bubbleClickValue.Advertisement = true;
-      // }
-      // case 'Discovery':
-      //   if(bubbleClickValue.Discovery === false){
-      //     bubbleClickValue.Discovery = true;
-      //   }else{
-      //     bubbleClickValue.Discovery = false
-      //   }
-      //   break;
-      // case 'Advertisement':
-      //   if(bubbleClickValue.Advertisement === false){
-      //     bubbleClickValue.Advertisement = true;
-      //   }else{
-      //     bubbleClickValue.Advertisement = false
-      //   }
-      //   break;
-      // case 'Subscriptions':
-      //   if(bubbleClickValue.Subscriptions === false){
-      //     bubbleClickValue.Subscriptions = true;
-      //   }else{
-      //     bubbleClickValue.Subscriptions = false
-      //   }
-      //   break;
-      // case 'Engagement':
-      //   if(bubbleClickValue.Engagement === false){
-      //     bubbleClickValue.Engagement = true;
-      //   }else{
-      //     bubbleClickValue.Engagement = false
-      //   }
-      //   break;
-
-      // case 'Loyalty':
-      //   if(bubbleClickValue.Engagement === false){
-      //     bubbleClickValue.Engagement = true;
-      //   }else{
-      //     bubbleClickValue.Engagement = false
-      //   }
-      //   break;
-      // }
+  const handleBubbleClick = (event, value) => {
+    console.log(event.target.id);
+    let id =  event.target.id;
+    if(id === 'show'){
+      event.target.id = 'hide';
+    }else{
+      event.target.id = 'show';
+    }
     
-    props.onClick(value)
+    props.onClick(value, id)
   }
 
   var data = [
@@ -201,28 +156,28 @@ const Links = (props) => {
     <div className="line-chart-with-animation">
       <div className="line-chart-all-dots">
         <div className="line-chart-acquisitions">
-          <p>Acquisitions</p>
-          <label id="yeas" className="line-chart-dots line-chart-dot-odd" onClick={() =>handleBubbleClick('Acquisitions')}></label>
+          <p className="prod-jour-chart-heading">Acquisitions</p>
+          <label id="show" className="line-chart-dots line-chart-dot-odd" onClick={(event) =>handleBubbleClick(event, 'Acquisitions')}></label>
         </div>
         <div className="line-chart-discovery">
-          <p>Discovery</p>
-          <label className="line-chart-dots line-chart-dot-even" onClick={() =>handleBubbleClick('Discovery')}></label>
+          <p className="prod-jour-chart-heading">Discovery</p>
+          <label id="show" className="line-chart-dots line-chart-dot-even" onClick={(event) =>handleBubbleClick(event, 'Discovery')}></label>
         </div>
         <div className="line-chart-advertisement">
-          <p>Advertisement</p>
-          <label className="line-chart-dots line-chart-dot-odd" onClick={() =>handleBubbleClick('Advertisement')}></label>
+          <p className="prod-jour-chart-heading">Advertisement</p>
+          <label id="show" className="line-chart-dots line-chart-dot-odd" onClick={(event) =>handleBubbleClick(event, 'Advertisement')}></label>
         </div>
         <div className="line-chart-subscriptions">
-          <p>Subscriptions</p>
-          <label className="line-chart-dots line-chart-dot-even" onClick={() =>handleBubbleClick('Subscriptions')}></label>
+          <p className="prod-jour-chart-heading">Subscriptions</p>
+          <label id="show" className="line-chart-dots line-chart-dot-even" onClick={(event) =>handleBubbleClick(event, 'Subscriptions')}></label>
         </div>
         <div className="line-chart-engagement">
-          <p>Engagement</p>
-          <label className="line-chart-dots line-chart-dot-odd" onClick={() =>handleBubbleClick('Engagement')}></label>
+          <p className="prod-jour-chart-heading">Engagement</p>
+          <label id="show" className="line-chart-dots line-chart-dot-odd" onClick={(event) =>handleBubbleClick(event, 'Engagement')}></label>
         </div>
         <div className="line-chart-loyalty">
-          <p>Loyalty</p>
-          <label className="line-chart-dots line-chart-dot-even" onClick={() =>handleBubbleClick('Loyalty')}></label>
+          <p className="prod-jour-chart-heading">Loyalty</p>
+          <label id="show" className="line-chart-dots line-chart-dot-even" onClick={(event) =>handleBubbleClick(event, 'Loyalty')}></label>
         </div>
       </div>
       <div id="linkChart"></div>
