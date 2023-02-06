@@ -228,7 +228,7 @@ svg.bi.bi-plus-circle.my-button2 {
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
     .product-quality-tglcard-child {
         display: block;
         width: 91%;
