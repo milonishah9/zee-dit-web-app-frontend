@@ -9,11 +9,11 @@ import { useMediaQuery } from "@material-ui/core";
 const Links = (props) => {
   var minusWidth = 100;
   var svgHeight = 200 ;
-  const isMobile = useMediaQuery('(max-width: 767px)');
-  if(isMobile){
-    minusWidth = 150;
-    svgHeight = 150;
-  }
+  // const isMobile = useMediaQuery('(max-width: 767px)');
+  // if(isMobile){
+  //   minusWidth = 150;
+  //   svgHeight = 150;
+  // }
   
   const handleBubbleClick = (event, value) => {
     console.log(event.target.id);
