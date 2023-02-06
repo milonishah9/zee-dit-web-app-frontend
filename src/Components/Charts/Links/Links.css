@@ -3,6 +3,10 @@
     text-align: center;
 }
 
+#linkChart {
+    padding: 10px;
+}
+
 .line-chart-all-dots{
     width: 1000px;
     margin: auto;
@@ -23,17 +27,17 @@
 
 .line-chart-acquisitions{
     position: relative;
-    right: 268px;
+    right: 259px;
 }
 
 .line-chart-dot-odd{
     position: relative;
-    top: 14px;
+    top: 27px;
 }
 
 .line-chart-dot-even{
     position: relative;
-    top: 81px;
+    top: 91px;
 }
 
 .line-chart-discovery{
@@ -46,7 +50,7 @@
 
 .line-chart-advertisement{
     position: relative;
-    right: 48px;
+    right: 49px;
 }
 .line-chart-advertisement label{
     background-color: #FFC656;
@@ -62,7 +66,7 @@
 
 .line-chart-engagement{
     position: relative;
-    left: 143px;
+    left: 141px;
 }
 .line-chart-engagement label{
     background-color: #FFC656;
@@ -70,7 +74,7 @@
 
 .line-chart-loyalty{
     position: relative;
-    left: 259px;
+    left: 252px;
 }
 .line-chart-loyalty label{
     background-color: #FF647C;
@@ -82,4 +86,47 @@
 
 .line-chart-with-animation{
     overflow: auto;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 320px){
+    .line-chart-acquisitions {
+        position: relative;
+        right: 249px;
+    }
+
+    .line-chart-acquisitions p{
+        position: relative;
+        left: 5px;
+    }
+
+    .line-chart-discovery {
+        position: relative;
+        right: 145px;
+    }
+    
+    .line-chart-advertisement {
+        position: relative;
+        right: 39px;
+    }
+    
+    .line-chart-subscriptions {
+        position: relative;
+        left: 50px;
+    }
+
+    .line-chart-engagement {
+        position: relative;
+        left: 151px;
+    }
+
+    .line-chart-loyalty {
+        position: relative;
+        left: 262px;
+    }
+
+    .line-chart-loyalty p{
+        position: relative;
+        right: 5px;
+    }
+    
 }

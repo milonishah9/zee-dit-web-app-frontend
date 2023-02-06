@@ -24,8 +24,8 @@ const ProductUserJourney = (props) => {
           <div className="product-icons-logo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
+            width="20"
+            height="20"
             fill="#37b363"
             className="bi bi-android2"
             viewBox="0 0 16 16"
@@ -37,8 +37,8 @@ const ProductUserJourney = (props) => {
           <div className="product-icons-logo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="25"
-            height="25"
+            width="20"
+            height="20"
             fill="gray"
             className="bi bi-apple "
             viewBox="0 0 16 16"

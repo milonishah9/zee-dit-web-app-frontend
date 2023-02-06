@@ -129,19 +129,63 @@ div.executive-summary-content-active-tab {
   display: inline;
 }
 
+.product-icons-logo{
+  margin: 0 3px;
+}
+
+.product-icons-logo img{
+  width: 19px;
+
+}
+
 .product-icons-logo p{
   margin-bottom: 0px;
+  font-size: 14px;
   /* margin-left: 9px; */
 }
 .data-product{
-  padding-left: 20px;
-  /* margin-top: 15rem; */
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  /* grid-gap: 10px; */
-  position: relative;
-    bottom: 50px;
+  /* padding-left: 20px; */
+  display: flex
 }
+
+.product-journey-acquisitions{
+  width: 10.7%;
+  position: fixed;
+  left: 413px;
+}
+
+.product-journey-discovery{
+  width: 10.7%;
+  position: fixed;
+  left: 598px;
+}
+
+.product-journey-advertisement{
+  width: 10.7%;
+  position: fixed;
+  left: 788px;
+}
+
+.product-journey-subscriptions{
+  width: 10.7%;
+  position: fixed;
+  left: 977px;
+}
+
+.product-journey-engagement{
+  width: 10.7%;
+  position: fixed;
+  left: 1167px;
+}
+
+.product-journey-loyalty{
+  width: 10.7%;
+  position: fixed;
+  left: 1353px;
+}
+
+
+
 @media only screen and (max-width: 1023px) and (min-width: 768px){ 
   .data-product{
     padding-left: 20px;
