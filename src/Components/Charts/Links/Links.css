@@ -103,6 +103,8 @@
 
 }
 
+
+/* ---------------laptop----------------------- */
 @media only screen and (max-width: 1560px) and (min-width: 1441px){
     .line-chart-acquisitions {
         position: relative;
@@ -176,6 +178,74 @@
         position: relative;
         left: 339px;
     }
+}
+
+@media only screen and (max-width: 1365px) and (min-width: 1280px){
+    .line-chart-acquisitions {
+        position: relative;
+        right: 310px;
+    }
+
+    .line-chart-discovery {
+        position: relative;
+        right: 185px;
+    }
+    
+    .line-chart-advertisement {
+        position: relative;
+        right: 59px;
+    }
+    
+    .line-chart-subscriptions {
+        position: relative;
+        left: 49px;
+    }
+
+    .line-chart-engagement {
+        position: relative;
+        left: 168px;
+    }
+
+    .line-chart-loyalty {
+        position: relative;
+        left: 305px;
+    }
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 1024px){
+    .line-chart-acquisitions {
+        position: relative;
+        right: 268px;
+    }
+
+    .line-chart-discovery {
+        position: relative;
+        right: 158px;
+    }
+
+    .line-chart-advertisement {
+        position: relative;
+        right: 51px;
+    }
+
+    .line-chart-subscriptions {
+        position: relative;
+        left: 41px;
+    }
+
+    .line-chart-engagement {
+        position: relative;
+        left: 141px
+    }
+
+    .line-chart-loyalty {
+        position: relative;
+        left: 262px;
+    }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 769px){
+
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 320px){
