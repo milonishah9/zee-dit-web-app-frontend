@@ -148,40 +148,41 @@ div.executive-summary-content-active-tab {
   display: flex
 }
 
-.product-journey-acquisitions{
+.product-journey-acquisitions {
   width: 10.7%;
-  position: fixed;
-  left: 413px;
+  position: relative;
+  left: 35px;
 }
 
-.product-journey-discovery{
+.product-journey-discovery {
   width: 10.7%;
-  position: fixed;
-  left: 598px;
+  position: relative;
+  left: 347px;
 }
 
-.product-journey-advertisement{
+.product-journey-advertisement {
   width: 10.7%;
-  position: fixed;
-  left: 788px;
+  position: relative;
+  left: 714px;
 }
 
-.product-journey-subscriptions{
+
+.product-journey-subscriptions {
   width: 10.7%;
-  position: fixed;
-  left: 977px;
+  position: relative;
+  left: 1063px;
 }
 
-.product-journey-engagement{
+.product-journey-engagement {
   width: 10.7%;
-  position: fixed;
-  left: 1167px;
+  position: relative;
+  left: 1422px;
 }
 
-.product-journey-loyalty{
+.product-journey-loyalty {
   width: 10.7%;
-  position: fixed;
-  left: 1353px;
+  position: relative;
+  left: 1714px;
 }
 
 
