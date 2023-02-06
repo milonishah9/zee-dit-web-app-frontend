@@ -12,6 +12,7 @@ import AreaChartWithToolTips from './Components/Charts/AreaChartWithToolTips/Are
 import HSbar from './Components/Charts/HSbar/HSbar';
 import DivergingSB from './Components/Charts/DivergingSB/DivergingSB';
 import Links from './Components/Charts/Links/Links';
+import Monochrome from './Components/Charts/Monochrome/Monochrome';
 
 
 
@@ -31,6 +32,7 @@ function App() {
           <Route path='/hs-bar' element={<HSbar />} />
           <Route path='/new' element={<DivergingSB />} />
           <Route path='/links' element={<Links />} />
+          <Route path='/mono' element={<Monochrome />} />
         </Routes>
       </BrowserRouter>  
     </div>
