@@ -156,32 +156,32 @@ div.executive-summary-content-active-tab {
 
 .product-journey-discovery {
   width: 10.7%;
-  position: relative;
+  position: fixed;
   left: 347px;
 }
 
 .product-journey-advertisement {
   width: 10.7%;
-  position: relative;
+  position: fixed;
   left: 714px;
 }
 
 
 .product-journey-subscriptions {
   width: 10.7%;
-  position: relative;
+  position: fixed;
   left: 1063px;
 }
 
 .product-journey-engagement {
   width: 10.7%;
-  position: relative;
+  position: fixed;
   left: 1422px;
 }
 
 .product-journey-loyalty {
   width: 10.7%;
-  position: relative;
+  position: fixed;
   left: 1714px;
 }
 
@@ -193,6 +193,50 @@ div.executive-summary-content-active-tab {
     padding-right: 20px;
     grid-template-columns: auto auto auto auto ;
   }
+
+  .executive-summary-product-container {
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0 auto;
+  }
+
+  .product-journey-acquisitions {
+    width: 15.7%;
+    position: relative;
+    left: 35px;
+  }
+  
+  .product-journey-discovery {
+    width: 15.7%;
+    position: fixed;
+    left: 125px;
+}
+  
+.product-journey-advertisement {
+  width: 15.7%;
+  position: fixed;
+  left: 264px;
+}
+  
+  
+  .product-journey-subscriptions {
+    width: 15.7%;
+    position: fixed;
+    left: 400px;
+  }
+  
+  .product-journey-engagement {
+    width: 15.7%;
+    position: fixed;
+    left: 530px;
+  }
+  
+  .product-journey-loyalty {
+    width: 15.7%;
+    position: fixed;
+    left: 626px;
+  }
+
   /* .executive-summary-product-container{padding-left: 3rem;padding-right: 3rem;} */
  }
 
@@ -201,6 +245,43 @@ div.executive-summary-content-active-tab {
     padding-right: 0;
     padding-left: 0;
     margin: 0 auto;
+  }
+
+  .product-journey-acquisitions {
+    width: 15.7%;
+    position: relative;
+    left: 35px;
+  }
+  
+  .product-journey-discovery {
+    width: 15.7%;
+    position: fixed;
+    left: 215px;
+}
+  
+.product-journey-advertisement {
+  width: 15.7%;
+  position: fixed;
+  left: 394px;
+}
+  
+  
+  .product-journey-subscriptions {
+    width: 15.7%;
+    position: fixed;
+    left: 570px;
+  }
+  
+  .product-journey-engagement {
+    width: 15.7%;
+    position: fixed;
+    left: 740px;
+  }
+  
+  .product-journey-loyalty {
+    width: 15.7%;
+    position: fixed;
+    left: 866px;
   }
 
  } 
