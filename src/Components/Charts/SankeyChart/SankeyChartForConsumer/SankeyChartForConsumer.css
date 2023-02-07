@@ -36,21 +36,22 @@
 }
 
 .node-percentage-change-pos {
-    color: #00C48C;
+    fill: #00C48C;
     font-size: 0.6rem;
     letter-spacing: 0.3px;
     font-weight: 800;
     font-family: 'Gothamlight';
-    opacity: 0.75;
+    /* z-index: 100; */
+    /* opacity: 0.75; */
 }
 
 .node-percentage-change-neg {
-    color: #FF647C;
+    fill: #FF647C;
     font-size: 0.6rem;
     letter-spacing: 0.3px;
     font-weight: 800;
     font-family: 'Gothamlight';
-    opacity: 0.75;
+    /* opacity: 0.75; */
 }
 
 .sankey {

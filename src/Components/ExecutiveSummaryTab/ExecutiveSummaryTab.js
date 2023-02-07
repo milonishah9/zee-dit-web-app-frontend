@@ -24,7 +24,7 @@ const ExecutiveSummaryTab = () => {
             </div>
             {activeTab === 'consumer' && <ExecutiveSummaryConsumer />}
             {activeTab === 'content' && <ExecutiveSummaryContent />}
-            {/* {activeTab === 'customer' && <ContentSchedulingWithHeatMapAndDropdowns />} */}
+            {activeTab === 'customer' && <ContentSchedulingWithHeatMapAndDropdowns />}
             {activeTab === 'product' && <ExecutiveSummaryProduct />}
 
         </div>

@@ -159,7 +159,7 @@ const ExecutiveSummaryConsumer = (props) => {
           SVOD
         </button>
       </div>
-      <p className="executive-journey-note-item">All numbers in millions.</p>
+      <p className="executive-journey-note-item">All numbers in Millions</p>
       <div className="sankey-chart-parent-container">
         <div className="sankey">
           <SankeyChartForConsumer />
@@ -193,7 +193,7 @@ const ExecutiveSummaryConsumer = (props) => {
           </button>
         </div>
         <div className="kpi-cards-values">
-          {
+          {/* {
             console.log(kpiCharters.filter((item, index) => item.id === activeKPICharter)[0].kpiCards
 
               .filter((d, i) => {
@@ -203,7 +203,7 @@ const ExecutiveSummaryConsumer = (props) => {
                   return d;
                 }
               })
-            )}
+            )} */}
           {
             kpiCharters.filter((item, index) => item.id === activeKPICharter)[0].kpiCards
               .filter((d, i) => {

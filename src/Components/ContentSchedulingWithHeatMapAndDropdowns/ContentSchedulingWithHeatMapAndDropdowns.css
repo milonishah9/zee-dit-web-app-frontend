@@ -21,9 +21,10 @@
     line-height: inherit;
     outline: none;
     border: 1px solid #D8E3FF;
-    padding: 3px;
+    padding: 1.5px 3px;
     border-radius: 4px;
     color: #333333;
+    
 }
 
 
@@ -31,4 +32,28 @@
     width: 100%;
     /* opacity: 0.35;
     cursor: not-allowed; */
+}
+
+@media only screen and (max-width: 768px) {
+    .heatmap-container {
+        overflow-x: scroll;
+    }
+
+    .heatmap-child-container {
+        width: 180%;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .content-scheduling-with-heatmap-dropdowns-dropdown-filters-container {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .content-scheduling-with-heatmap-dropdowns-dropdown-filters-container select{
+        min-width: 30%;
+       margin-right: 5px;
+       font-size: 14px;
+    }
 }

@@ -57,7 +57,7 @@ const SankeyChartForConsumer = (props) => {
         var linkData = [
             { source: [xPosition - 100, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#74CDFF" }, //Organic - New
             { source: [xPosition - 100, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#74CDFF" }, //Orgainc - Returning
-            { source: [xPosition + 125, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#768CFF" }, //Paid - Returning
+            // { source: [xPosition + 125, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#768CFF" }, //Paid - Returning
             { source: [xPosition + 125, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#768CFF" }, //Paid - New
             { source: [xPosition - 100, yPosition - 185], target: [xPosition - 100, yPosition - 25], fill: "#FFB78E" },  //Returning - Anonymous
             { source: [xPosition - 100, yPosition - 185], target: [xPosition + 125, yPosition - 25], fill: "#FFB78E" }, //Returning - Sign up
@@ -95,9 +95,9 @@ const SankeyChartForConsumer = (props) => {
                 return [d.target[1], d.target[0]];
             });
 
-        // const curve = d3
-        //     .line()
-        //     .curve(d3.curveNatural)
+        const curve = d3
+            .line()
+            .curve(d3.curveNatural)
 
         const coOrdinates = [
             // Organinc - New
@@ -111,10 +111,10 @@ const SankeyChartForConsumer = (props) => {
             //     fill: "#74CDFF"
             // },
             // Paid - Returning
-            // {
-            //     point: [[35, 250], [110, 200], [130, 90], [195, 30], [178, 35], [120, 80], [90, 200], [35, 250]],
-            //     fill: "#768CFF",
-            // },
+            {
+                point: [[35, 250], [110, 200], [130, 90], [195, 30], [178, 35], [120, 80], [90, 200], [35, 250]],
+                fill: "#768CFF",
+            },
             // Paid - New
             // {
             //     point: createLineCoOrdinates([35, 250], [195, 250], -8),
@@ -178,7 +178,7 @@ const SankeyChartForConsumer = (props) => {
             .attr("fill", "#3E1F76")
             .attr("opacity", "0.8")
             .classed("circle", true)
-            .on("click", () => { console.log('Clicked') })
+        // .on("click", () => { console.log('Clicked') })
 
         //Adding the text labels
         svg
@@ -186,6 +186,7 @@ const SankeyChartForConsumer = (props) => {
             .data(nodeData)
             .join("text")
             .attr("font-size", "12px")
+            .attr("color", "#00C48C")
             .attr("text-anchor", "middle")
             .attr("x", d => d.name === "Exit" ? d.y + 3 : d.y)
             .attr("y", d => d.name === "Exit" ? d.x + 2 : d.x + 17)
@@ -201,7 +202,6 @@ const SankeyChartForConsumer = (props) => {
             .attr("y", d => d.name === "Exit" ? d.x + 22 : d.x + 34)
             .classed("node-value", true)
             .text(d => d.value)
-            // .attr("color", "#00C48C")
 
         svg
             .selectAll("p")
@@ -223,13 +223,20 @@ const SankeyChartForConsumer = (props) => {
             .text(d => `${Math.abs(d.percentageChage)}%`)
             .attr("class", d => d.percentageChage >= 0 ? "node-percentage-change-pos" : "node-percentage-change-neg")
 
-        // svg
-        //     .selectAll('.link-to-node')
-        //     .data(coOrdinates)
-        //     .join('path')
-        //     .attr('d', d => curve(d.point))
-        //     .attr("opacity", "0.5")
-        //     .attr('fill', d => d.fill);
+        svg
+            .selectAll(".node-percentage-change-pos")
+            .append("path")
+            .attr("d", "M4.35355 0.646407C4.15829 0.451145 3.84171 0.451145 3.64645 0.646407L0.464467 3.82839C0.269204 4.02365 0.269204 4.34023 0.464466 4.53549C0.659729 4.73076 0.976311 4.73076 1.17157 4.53549L4 1.70707L6.82843 4.53549C7.02369 4.73076 7.34027 4.73076 7.53553 4.53549C7.7308 4.34023 7.7308 4.02365 7.53553 3.82839L4.35355 0.646407ZM4.5 7.69043L4.5 0.99996L3.5 0.99996L3.5 7.69043L4.5 7.69043Z")
+            .attr("fill", "#00C48C")
+            // .attr("x", d => d.name === "Exit" ? d.y + 40 : d.y + 40)
+            // .attr("y", d => d.name === "Exit" ? d.x + 16 : d.x + 30)
+        svg
+            .selectAll('.link-to-node')
+            .data(coOrdinates)
+            .join('path')
+            .attr('d', d => curve(d.point))
+            .attr("opacity", "0.5")
+            .attr('fill', d => d.fill);
 
     }, []);
 

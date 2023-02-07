@@ -22,7 +22,7 @@ const HeatMap = (props) => {
 
         const svg = d3
             .select(svgRef.current)
-            .attr("viewBox", "0 20 650 140")
+            .attr("viewBox", "0 20 650 110")
             .classed("heat-map-svg", true)
             .append("g")
             .attr("transform", "translate(30,30)");
@@ -45,7 +45,7 @@ const HeatMap = (props) => {
 
         let yScale = d3
             .scaleBand()
-            .range([115, 0])
+            .range([100, 0])
             .domain(shows)
             .padding(0.1);
 
