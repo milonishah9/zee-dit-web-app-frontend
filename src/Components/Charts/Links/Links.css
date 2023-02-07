@@ -80,10 +80,10 @@
     background-color: #FF647C;
 }
 
-/* .line-chart-with-animation{
+.line-chart-with-animation{
     overflow: auto;
     box-sizing: border-box;
-} */
+}
 
 .prod-jour-chart-heading{
     font-size: 16px;

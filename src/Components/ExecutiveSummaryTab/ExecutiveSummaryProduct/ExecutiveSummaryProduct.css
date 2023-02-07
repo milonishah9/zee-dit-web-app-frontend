@@ -60,7 +60,7 @@ div.executive-summary-content-active-tab {
   font-family: "GothamBold";
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 11px;
   margin: 10px;
 }
@@ -68,7 +68,7 @@ div.executive-summary-content-active-tab {
 .product-userjourney-card-number {
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 14px;
   line-height: 15px;
   margin-left: 10px;
   display: inline;
@@ -492,34 +492,31 @@ div.executive-summary-content-active-tab {
 
  @media screen and (max-width: 544px) {
 
-  .product-journey-container{overflow: auto;}
-   .data-product{display: flex;}
-   /* .product-userjourney-card{margin-left: 20px;margin-right: 20px;} */
-  
-   
+  /* .product-journey-container{overflow: auto;} */
    .data-product{
-     display: flex;
+    display: flex;
+    overflow: auto;
    }
-
+   .product-userjourney-card{margin-left: 20px;margin-right: 20px;}
+  
    .product-journey-acquisitions {
     width: 55%;
     position: relative;
     left: -12px;
-    bottom: 64px;
+    /* bottom: 64px; */
 }
   
   .product-journey-discovery {
     width: 55%;
     position: relative;
     left: 0px;
-    bottom: 48px;
+    /* bottom: 48px; */
   }
   
 .product-journey-advertisement {
   width: 55%;
   position: relative;
-  left: -16px;
-    bottom: 64px;
+  left: 0px;
 }
   
   
@@ -527,21 +524,21 @@ div.executive-summary-content-active-tab {
     width: 55%;
     position: relative;
     left: -16px;
-    bottom: 64px;
+    /* bottom: 64px; */
   }
   
   .product-journey-engagement {
     width: 55%;
     position: relative;
     left: -16px;
-    bottom: 64px;
+    /* bottom: 64px; */
   }
   
   .product-journey-loyalty {
     width: 55%;
     position: relative;
     left: -16px;
-    bottom: 64px;
+    /* bottom: 64px; */
   }
 
  }
