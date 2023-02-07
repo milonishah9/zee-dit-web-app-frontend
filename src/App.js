@@ -12,7 +12,9 @@ import AreaChartWithToolTips from './Components/Charts/AreaChartWithToolTips/Are
 import HSbar from './Components/Charts/HSbar/HSbar';
 import DivergingSB from './Components/Charts/DivergingSB/DivergingSB';
 import Links from './Components/Charts/Links/Links';
+import Monochrome from './Components/Charts/Monochrome/Monochrome';
 import HeatMap from './Components/Charts/HeatMap/HeatMap';
+import ContentSchedulingWithHeatMapAndDropdowns from './Components/ContentSchedulingWithHeatMapAndDropdowns/ContentSchedulingWithHeatMapAndDropdowns';
 
 
 
@@ -40,7 +42,8 @@ function App() {
           <Route path='/hs-bar' element={<HSbar />} />
           <Route path='/new' element={<DivergingSB />} />
           <Route path='/links' element={<Links />} />
-          <Route path='/heatmap' element={<HeatMap />} />
+          <Route path='/mono' element={<Monochrome />} />
+          <Route path='/heatmap' element={<ContentSchedulingWithHeatMapAndDropdowns />} />
         </Routes>
       </BrowserRouter>  
     </div>
