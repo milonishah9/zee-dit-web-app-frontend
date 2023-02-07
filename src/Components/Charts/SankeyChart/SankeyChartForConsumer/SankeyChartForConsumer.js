@@ -34,23 +34,23 @@ const SankeyChartForConsumer = (props) => {
 
         var nodeData = [
             { id: "Organic", x: xPosition - 100, y: yPosition - 375, value: 70.38, name: "Organic", absoluteValue: 66.3, percentageValue: 46, percentageChage: -2 },
-            { id: "Paid", x: xPosition + 125, y: yPosition - 375, value: 79.9, name: "Paid", absoluteValue: 77.9, percentageValue: 54, percentageChage: 6 },
-            { id: "Returning", x: xPosition - 100, y: yPosition - 195, value: 122.9, name: "Returning", absoluteValue: 15, percentageValue: 25, percentageChage: 10 },
-            { id: "New", x: xPosition + 125, y: yPosition - 195, value: 122.9, name: "New", absoluteValue: 51, percentageValue: 75, percentageChage: -3 },
+            { id: "Paid", x: xPosition + 125, y: yPosition - 375, value: 79.11, name: "Paid", absoluteValue: 77.9, percentageValue: 54, percentageChage: 6 },
+            { id: "Returning", x: xPosition - 100, y: yPosition - 195, value: 12.91, name: "Returning", absoluteValue: 15, percentageValue: 25, percentageChage: 10 },
+            { id: "New", x: xPosition + 125, y: yPosition - 195, value: 12.91, name: "New", absoluteValue: 51, percentageValue: 75, percentageChage: -3 },
             { id: "Anonymous", x: xPosition - 100, y: yPosition - 15, value: 86.71, name: "Anonymous", absoluteValue: 31, percentageValue: 82, percentageChage: -12 },
             { id: "Sign up", x: xPosition + 125, y: yPosition - 15, value: 33.21, name: "Sign Up", absoluteValue: 66.3, percentageValue: 18, percentageChage: 7 },
             { id: "Explore", x: xPosition - 35, y: yPosition + 205, value: 86.71, name: "Explore", absoluteValue: 66.3, percentageValue: 50, percentageChage: 5 },
             { id: "Search", x: xPosition + 55, y: yPosition + 205, value: 33.21, name: "Search", absoluteValue: 66.3, percentageValue: 20, percentageChage: -20 },
-            { id: "Exit-signup", x: xPosition + 125, y: yPosition + 205, value: 5.55, name: "Exit", absoluteValue: 66.3, percentageValue: 27, percentageChage: 13 },
-            { id: "Exit-anonymous", x: xPosition - 100, y: yPosition + 205, value: 5.55, name: "Exit", absoluteValue: 66.3, percentageValue: 3, percentageChage: -0 },
+            { id: "Exit-signup", x: xPosition + 125, y: yPosition + 205, value: 55.55, name: "Exit", absoluteValue: 66.3, percentageValue: 27, percentageChage: 13 },
+            { id: "Exit-anonymous", x: xPosition - 100, y: yPosition + 205, value: 55.55, name: "Exit", absoluteValue: 66.3, percentageValue: 3, percentageChage: -0 },
             { id: "Subscribed", x: xPosition - 25, y: yPosition + 405, value: 86.71, name: "Subscribed", absoluteValue: 54, percentageValue: 7, percentageChage: -2 },
             { id: "Watched Ads", x: xPosition + 50, y: yPosition + 405, value: 33.21, name: "Watched Ads", absoluteValue: 66.3, percentageValue: 30, percentageChage: -2 },
             { id: "Exit-Search", x: xPosition + 125, y: yPosition + 405, value: 33.21, name: "Exit", absoluteValue: 66.3, percentageValue: 12, percentageChage: -2 },
             { id: "Exit-Explore", x: xPosition - 100, y: yPosition + 405, value: 33.21, name: "Exit", absoluteValue: 66.3, percentageValue: 51, percentageChage: -2 },
             // { id: "Watch Premium Content", x: xPosition - 25, y: yPosition + 575, value: 86.71, name: "Watch Premium Content", absoluteValue: 66.3, percentageValue: 3, percentageChage: -2 },
-            { id: "Watch Premium Content", x: xPosition - 100, y: yPosition + 575, value: 86.71, name: "Watch Premium Content", absoluteValue: 66.3, percentageValue: 3, percentageChage: -2 },
+            { id: "Watch Premium Content", x: xPosition - 65, y: yPosition + 575, value: 86.71, name: "Watch Premium Content", absoluteValue: 66.3, percentageValue: 3, percentageChage: -2 },
             // { id: "Watch Free Content", x: xPosition + 50, y: yPosition + 575, value: 86.71, name: "Watch Free Content", absoluteValue: 66.3, percentageValue: 54, percentageChage: -2 },
-            { id: "Watch Free Content", x: xPosition +5, y: yPosition + 575, value: 86.71, name: "Watch Free Content", absoluteValue: 66.3, percentageValue: 54, percentageChage: -2 },
+            { id: "Watch Free Content", x: xPosition + 5, y: yPosition + 575, value: 86.71, name: "Watch Free Content", absoluteValue: 66.3, percentageValue: 54, percentageChage: -2 },
             { id: "Exit - Watch Ads", x: xPosition + 125, y: yPosition + 575, value: 86.71, name: "Exit", absoluteValue: 66.3, percentageValue: 43, percentageChage: -2 },
         ];
 
@@ -78,7 +78,7 @@ const SankeyChartForConsumer = (props) => {
             { source: [xPosition + 55, yPosition + 215], target: [xPosition + 50, yPosition + 395], fill: "#FFB78E" }, //Search - WatchAds
             { source: [xPosition + 55, yPosition + 215], target: [xPosition + 125, yPosition + 395], fill: "#CAB6B6" }, //Explore - WatchAds
             // { source: [xPosition - 25, yPosition + 415], target: [xPosition - 25, yPosition + 565], fill: "#FFB78E" }, //Subscribed - Watch Premium Content
-            { source: [xPosition - 25, yPosition + 415], target: [xPosition - 100, yPosition + 565], fill: "#FFB78E" }, //Subscribed - Watch Premium Content
+            { source: [xPosition - 25, yPosition + 415], target: [xPosition - 65, yPosition + 565], fill: "#FFB78E" }, //Subscribed - Watch Premium Content
             // { source: [xPosition - 25, yPosition + 415], target: [xPosition + 50, yPosition + 565,], fill: "#FFB78E" }, //Subscribed - Watch Free Content
             { source: [xPosition - 25, yPosition + 415], target: [xPosition + 5, yPosition + 565,], fill: "#FFB78E" }, //Subscribed - Watch Free Content
             { source: [xPosition + 50, yPosition + 415], target: [xPosition + 5, yPosition + 565,], fill: "#768CFF" }, //Watched Ads - Watch Free Content
@@ -200,7 +200,8 @@ const SankeyChartForConsumer = (props) => {
             .attr("x", d => d.name === "Exit" ? d.y + 3 : d.y)
             .attr("y", d => d.name === "Exit" ? d.x + 22 : d.x + 34)
             .classed("node-value", true)
-            .text(d => d.value);
+            .text(d => d.value)
+            // .attr("color", "#00C48C")
 
         svg
             .selectAll("p")
@@ -217,10 +218,10 @@ const SankeyChartForConsumer = (props) => {
             .data(nodeData)
             .join("text")
             .attr("text-anchor", "middle")
-            .attr("x", d => d.name === "Exit" ? d.y + 33 : d.y + 33)
+            .attr("x", d => d.name === "Exit" ? d.y + 37 : d.y + 37)
             .attr("y", d => d.name === "Exit" ? d.x + 16 : d.x + 30)
+            .text(d => `${Math.abs(d.percentageChage)}%`)
             .attr("class", d => d.percentageChage >= 0 ? "node-percentage-change-pos" : "node-percentage-change-neg")
-            .text(d => `${Math.abs(d.percentageChage)}%`);
 
         // svg
         //     .selectAll('.link-to-node')
