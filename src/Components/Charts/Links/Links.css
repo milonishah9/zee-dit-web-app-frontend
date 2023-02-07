@@ -412,7 +412,7 @@
 
     .line-chart-acquisitions {
         position: relative;
-        right: 37px;
+        right: 24px;
         top: 39px;
     }
 
@@ -423,31 +423,31 @@
 
     .line-chart-discovery {
         position: relative;
-        right: -64px;
+        right: -74px;
         top: 39px;
     }
 
     .line-chart-advertisement {
         position: relative;
-        left: 166px;
+        left: 177px;
         top: 38px;
     }
 
     .line-chart-subscriptions {
         position: relative;
-        left: 513px;
-        bottom: 29px;
+        left: 267px;
+        bottom: -39px;
     }
 
     .line-chart-engagement {
         position: relative;
-        left: 611px;
+        left: 621px;
         bottom: 30px;
     }
 
     .line-chart-loyalty {
         position: relative;
-        left: 716px;
+        left: 728px;
         bottom: 30px;
     }
 
