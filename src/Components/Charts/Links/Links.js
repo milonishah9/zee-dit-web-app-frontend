@@ -163,7 +163,7 @@ const Links = (props) => {
         <div className="line-chart-acquisitions">
         
           <p className="prod-jour-chart-heading">Acquisitions</p>
-          <p className="all-numbers-in-mil">All numbers in Millions</p>
+          
           <label id="show" className="line-chart-dots line-chart-dot-odd" onClick={(event) =>handleBubbleClick(event, 'Acquisitions')}></label>
         </div>
         <div className="line-chart-discovery">
