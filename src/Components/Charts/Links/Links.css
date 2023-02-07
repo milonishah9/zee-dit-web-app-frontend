@@ -113,11 +113,11 @@
 
 /* ---------------laptop----------------------- */
 @media only screen and (max-width: 1560px) and (min-width: 1441px){
-    .prod-jour-chart-heading{
+    /* .prod-jour-chart-heading{
         padding: 3px 10px;
         width: auto;
         height: auto;
-    }
+    } */
     
     .line-chart-acquisitions {
         position: relative;
@@ -161,11 +161,11 @@
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1366px){
-    .prod-jour-chart-heading{
+    /* .prod-jour-chart-heading{
         padding: 3px 10px;
         width: auto;
         height: auto;
-    }
+    } */
 
     .line-chart-acquisitions {
         position: relative;
@@ -199,11 +199,11 @@
 }
 
 @media only screen and (max-width: 1365px) and (min-width: 1280px){
-    .prod-jour-chart-heading{
+    /* .prod-jour-chart-heading{
         padding: 3px 10px;
         width: auto;
         height: auto;
-    }
+    } */
     .line-chart-acquisitions {
         position: relative;
         right: 310px;
