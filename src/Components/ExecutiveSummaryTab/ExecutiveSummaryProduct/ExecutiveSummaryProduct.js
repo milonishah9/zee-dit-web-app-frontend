@@ -70,6 +70,7 @@ const ExecutiveSummaryContent = () => {
       <div className="executive-summary-product-container">
         {activeTab === "linear" && (
           <div className="product-journey-container">
+            <h4>Charters</h4>
             <Links onClick={getData}/>
             <div className="data-product">
               

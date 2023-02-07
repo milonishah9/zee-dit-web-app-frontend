@@ -152,6 +152,11 @@ div.executive-summary-content-active-tab {
   display: flex
 }
 
+.product-journey-container h4{
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
 .product-journey-acquisitions {
   width: 14%;
   position: absolute;
