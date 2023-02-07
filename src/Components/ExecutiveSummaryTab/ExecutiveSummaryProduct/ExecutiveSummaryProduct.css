@@ -236,6 +236,9 @@ div.executive-summary-content-active-tab {
   position: absolute;
   left: 1338px;
 }
+.line-chart-with-animation{
+  overflow: hidden!important;
+}
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1366px){
