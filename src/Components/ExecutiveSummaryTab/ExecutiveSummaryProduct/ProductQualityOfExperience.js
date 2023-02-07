@@ -20,10 +20,14 @@ const ProductQualityOfExperience = () => {
                     
                    
                     <div className='tglCard'>
-                        <ProductQualityExperienceCard mydata = {['Play %', 'Month - 1 to 30, Jun', '12%', 'up']}/>
-                        <ProductQualityExperienceCard mydata = {['Exit Before Video Start %', 'Month - 1 to 30, Jun', '32%', 'down']}/>
-                        <ProductQualityExperienceCard mydata = {['Video Start Failure - Tech %', 'Month - 1 to 30, Jun', '12%', 'down']}/>
-                        <ProductQualityExperienceCard mydata = {['Video Start Time %', 'Month - 1 to 30, Jun', '12%', 'up']}/>
+                        <div className='product-quality-tglcard-child'>
+                            <ProductQualityExperienceCard mydata = {['Play %', 'Month - 1 to 30, Jun', '12%', 'up']}/>
+                            <ProductQualityExperienceCard mydata = {['Exit Before Video Start %', 'Month - 1 to 30, Jun', '32%', 'down']}/>
+                        </div>
+                        <div className='product-quality-tglcard-child'>
+                            <ProductQualityExperienceCard mydata = {['Video Start Failure - Tech %', 'Month - 1 to 30, Jun', '12%', 'down']}/>
+                            <ProductQualityExperienceCard mydata = {['Video Start Time %', 'Month - 1 to 30, Jun', '12%', 'up']}/>
+                        </div>
                     </div>
 
                 
@@ -145,11 +149,15 @@ const ProductQualityOfExperience = () => {
                 <h5 className='product-qual-experience-subdiv-h5'>Player Experience</h5>
 
                 <div className='product-qual-experience-subdiv-tile-cont'> 
-                    <div className='tglCard'>
-                        <ProductQualityExperienceCard mydata = {['Rebuffering Ratio %', 'Month - 1 to 30, Jun', '12%', 'down']}/>
-                        <ProductQualityExperienceCard mydata = {['Connection Induced Rebuffering Ratio %', 'Month - 1 to 30, Jun', '12%', 'down' ]}/>
-                        <ProductQualityExperienceCard mydata = {['SPI %', 'Month - 1 to 30, Jun', '12%', 'up' ]}/>
-                        <ProductQualityExperienceCard mydata = {['Video Start Failure - Tech %', 'Month - 1 to 30, Jun', '12%', 'down']}/>
+                <div className='tglCard'>
+                        <div className='product-quality-tglcard-child'>
+                            <ProductQualityExperienceCard mydata = {['Play %', 'Month - 1 to 30, Jun', '12%', 'up']}/>
+                            <ProductQualityExperienceCard mydata = {['Exit Before Video Start %', 'Month - 1 to 30, Jun', '32%', 'down']}/>
+                        </div>
+                        <div className='product-quality-tglcard-child'>
+                            <ProductQualityExperienceCard mydata = {['Video Start Failure - Tech %', 'Month - 1 to 30, Jun', '12%', 'down']}/>
+                            <ProductQualityExperienceCard mydata = {['Video Start Time %', 'Month - 1 to 30, Jun', '12%', 'up']}/>
+                        </div>
                     </div>
                 </div>
 
