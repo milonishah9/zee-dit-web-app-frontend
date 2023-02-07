@@ -1,4 +1,4 @@
-.executive-summary-content-linear-tabs{
+.executive-summary-content-linear-tabs {
     font-size: 14px;
     font-family: GothamMedium;
     font-weight: 600;
@@ -34,7 +34,7 @@
     text-align: center;
     border: none;
     background: none;
-    background:linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%);
+    background: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%);
     color: white;
     /* width: 100px; */
     padding: 0 20px;
@@ -51,27 +51,32 @@
     border: none;
 } */
 
-.executive-summary-content-linear-filter{
+.executive-summary-content-linear-filter {
     display: grid;
     justify-items: center;
 }
 
-@media only screen and (max-width: 767px) {
-    .executive-summary-content-linear-tabs{
-        /* text-align: center; */
-        /* width: 98%;
-        padding: 0 8px; */
+@media only screen and (max-width: 767px) and (min-width:540px) {
+    .executive-summary-content-linear-tabs {
+        text-align: center;
         margin-top: 15px;
         margin-left: 0px;
-        justify-content: normal !important;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .executive-summary-content-linear-tabs {
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 0px;
     }
 
-    .executive-summary-content-linear{
-        padding: 0 5px;
+    .executive-summary-content-linear-bubblechart-parent {
+        overflow-x: scroll;
     }
 
-    .executive-summary-content-linear-actve-tab{
-        padding: 0 5px;
+    .executive-summary-content-linear-bubblechart-child{
+        width: 1300px;
     }
-   
+
 }

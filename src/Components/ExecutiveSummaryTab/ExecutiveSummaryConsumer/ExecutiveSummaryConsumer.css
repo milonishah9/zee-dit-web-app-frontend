@@ -32,10 +32,16 @@
     /* margin:0 1rem; */
 }
 
+.executive-journey-note-item {
 
+    color: #333333;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0.7rem 1.25rem 0 ;
+}
 
 .kpi-cards-container {
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .kpi-cards-buttons {
@@ -75,12 +81,13 @@
 
 .kpi-cards-values {
     display: flex;
-    margin-top: 0.5rem;
+    /* flex-wrap: wrap; */
+    margin-top: 0.3rem;
 }
 
 .kpi-card {
-    width: 15%;
-    margin: 0.5rem 1rem;
+    width: 13%;
+    margin: 0.3rem 1rem 0;
     background: #FFFFFF;
     border: 1px solid #D8E3FF;
     box-shadow: 0px 2px 5px #D6DEF8;
@@ -88,11 +95,11 @@
 }
 
 .kpi-card-title {
-    padding: 0.5rem 1rem 0;
+    padding: 0.3rem 1rem 0;
     font-family: "Gothamlight";
     font-weight: 800;
     margin: 0 !important;
-    font-size: 0.85rem;
+    font-size: 0.7rem;
 }
 
 .kpi-card-value-main {
@@ -122,69 +129,259 @@
 
 .kpi-card-perdiff-pos svg,
 .kpi-card-perdiff-neg svg {
-    margin: 0 0 5px 3px;
+    margin: 0 5px 5px 3px;
 }
 
 /* Desktop */
-@media only screen and (min-width: 1561px) {}
+@media only screen and (min-width: 1561px) {
+    .sankey {
+        margin: 0 auto;
+        width: auto !important;
+    }
+}
 
 /* Laptop and bigger screens */
 @media only screen and (max-width: 1560px) and (min-width: 1421px) {
-    .sankey-chart-for-consumer-container {
-        margin-top: 2rem;
-        width: 100%;
+    .sankey {
+        margin: 0 auto;
+        width: auto !important;
+        /* height: 100vh; */
     }
 }
 
 @media only screen and (max-width: 1420px) and (min-width: 1317px) {
-
-    .sankey-chart-for-consumer-container {
-        margin-top: 2rem;
-        width: 150%;
+    .sankey {
+        margin: 0 auto;
+        width: auto !important;
+        /* height: 100vh; */
     }
 }
 
 @media only screen and (max-width: 1317px) and (min-width: 1280px) {
-    .sankey-chart-for-consumer-container {
-        margin-top: 2rem;
-        width: 80%;
+    .sankey {
+        margin: 0 auto;
+        width: auto !important;
+    }
+
+    .kpi-cards-container {
+        margin-top: 0.5rem;
+    }
+
+    .kpi-card {
+        min-width: 15%;
     }
 
 }
 
 @media only screen and (max-width: 1279px) and (min-width: 1063px) {
 
-    .sankey-chart-for-consumer-container {
-        margin-top: 2rem;
-        width: 80%;
+    .sankey {
+        margin: 0 auto;
+        width: auto !important;
+    }
+
+    .kpi-cards-container {
+        margin-top: 0.5rem;
+    }
+
+    .kpi-card {
+        min-width: 15%;
     }
 }
 
 /* Tablets and medium screens */
 
-@media only screen and (max-width: 1063px) and (min-width: 768px) {
+@media only screen and (max-width: 1063px) and (min-width: 800px) {
+    .sankey {
+        margin: 0 auto;
+        width: auto !important;
+    }
 
-    .sankey-chart-for-consumer-container {
-        margin-top: 2rem;
-        width: 60%;
+    .kpi-card {
+        width: 20%;
+        margin: 0.3rem 0.6rem 0;
     }
 }
 
-@media only screen and (max-width: 768px) and (min-width: 540px) {
-    .sankey-chart-for-consumer-container {
-        margin-top: 2rem;
-        width: 40%;
+/* @media only screen and (max-width: 800px) and (min-width: 768px) {
+    .sankey {
+        margin: 0 auto;
+        width: auto !important;
     }
-}
 
+    .kpi-card {
+        width: 20%;
+        margin: 0.3rem 0.6rem 0;
+    }
+} */
+
+@media only screen and (max-width: 800px) and (min-width: 671px) {
+    .sankey {
+        margin: 0 auto;
+        width: auto !important;
+    }
+
+    .kpi-card {
+        width: 20%;
+        margin: 0.3rem 0.6rem 0;
+    }
+
+    .kpi-card-button-active {
+        width: 24%;
+        font-size: 12px;
+        /* padding-bottom: 10px; */
+        /* height: 2rem; */
+    }
+
+    .kpi-card-button {
+        width: 24%;
+        font-size: 12px;
+    }
+
+    .kpi-card-title {
+        padding: 0.3rem 1rem 0 0.4rem;
+    }
+
+    .kpi-card-value-main {
+        font-size: 1rem;
+        padding: 0 0.25rem 0 0.4rem;
+        margin: 0 !important;
+    }
+
+}
 
 /* Mobile and smaller screens */
 
-@media only screen and (max-width: 540px) and (min-width: 371px) {
-    .sankey-chart-for-consumer-container {
-        margin-top: 2rem;
-        width: 30%;
+@media only screen and (max-width: 671px) and (min-width: 540px) {
+    .kpi-card {
+        /* width: 20%; */
+        min-width: 30%;
+        margin: 0.7rem 0.5rem 0;
+    }
+
+    .kpi-cards-values {
+        flex-wrap: wrap;
+    }
+
+    .kpi-card-button-active {
+        font-size: 12px;
+        /* padding-bottom: 10px; */
+        height: 2.5rem;
+    }
+
+    .kpi-card-button {
+        font-size: 12px;
+        height: 2.5rem;
     }
 }
 
-@media only screen and (max-width: 371px) {}
+@media only screen and (max-width: 540px) and (min-width: 371px) {
+    /* .sankey {
+        margin: 0 auto;
+        width: auto !important;
+    } */
+
+    .executive-summary-consumer-journey-container {
+        /* overflow-x: scroll; */
+    }
+
+    .sankey-chart-parent-container {
+        overflow-x: scroll;
+    }
+
+    .sankey {
+        padding-bottom: 15px;
+    }
+
+    .consumer-journey-filters {
+        width: 75%;
+    }
+
+    .kpi-card-button-active {
+        width: 24%;
+        font-size: 12px;
+    }
+
+    .kpi-card-button {
+        width: 24%;
+        font-size: 12px;
+    }
+
+    /* .kpi-card {
+        width: 30%;
+    } */
+
+    .kpi-card {
+        min-width: 45%;
+        /* width: auto; */
+        margin: 0.7rem 0.5rem 0;
+    }
+
+    .kpi-cards-values {
+        flex-wrap: wrap;
+    }
+
+    .kpi-card-button-active {
+        font-size: 12px;
+        /* padding-bottom: 10px; */
+        height: 2.5rem;
+    }
+
+    .kpi-card-button {
+        font-size: 12px;
+        height: 2.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 371px) {
+
+    .sankey-chart-parent-container {
+        overflow-x: scroll;
+    }
+
+    .sankey {
+        /* margin: 0 auto;
+        width: auto !important; */
+        overflow-x: scroll;
+    }
+
+    .consumer-journey-filters {
+        width: 75%;
+    }
+
+    .kpi-card-button-active {
+        width: 24%;
+        font-size: 0.7rem;
+    }
+
+    .kpi-card-button {
+        width: 24%;
+        font-size: 0.7rem;
+    }
+
+    /* .kpi-card {
+        width: 30%;
+    } */
+
+    .kpi-card {
+        min-width: 40%;
+        /* width: auto; */
+        margin: 0.7rem 0.5rem 0;
+    }
+
+    .kpi-cards-values {
+        flex-wrap: wrap;
+    }
+
+    .kpi-card-button-active {
+        font-size: 12px;
+        /* padding-bottom: 10px; */
+        height: 2.5rem;
+    }
+
+    .kpi-card-button {
+        font-size: 12px;
+        height: 2.5rem;
+    }
+}

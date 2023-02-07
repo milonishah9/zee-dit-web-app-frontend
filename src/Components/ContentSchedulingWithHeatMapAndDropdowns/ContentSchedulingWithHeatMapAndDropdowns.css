@@ -1,0 +1,34 @@
+.content-scheduling-with-heatmap-dropdowns-container {
+    box-sizing: border-box;
+    margin: 0.5rem 1rem;
+
+}
+
+.content-scheduling-with-heatmap-dropdowns-dropdown-filters-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.content-scheduling-with-heatmap-dropdowns-dropdown-filters-container select {
+    width: 15%;
+    margin-top: 10px;
+    background-color: transparent;
+    /* padding: 0 1em 0 0; */
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+    border: 1px solid #D8E3FF;
+    padding: 3px;
+    border-radius: 4px;
+    color: #333333;
+}
+
+
+.heatmap-container {
+    width: 100%;
+    /* opacity: 0.35;
+    cursor: not-allowed; */
+}

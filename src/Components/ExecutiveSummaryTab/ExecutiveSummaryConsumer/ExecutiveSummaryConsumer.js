@@ -45,12 +45,12 @@ const ExecutiveSummaryConsumer = (props) => {
         },
         {
           title: "Total Watch Time (min.)",
-          mainValue: 22222,
+          mainValue: 222,
           difference: 14,
         },
         {
           title: "Watch time/Viewer (min.)",
-          mainValue: 215686,
+          mainValue: 215,
           difference: -18,
         },
       ]
@@ -65,7 +65,7 @@ const ExecutiveSummaryConsumer = (props) => {
         },
         {
           title: "AVOD Revenue",
-          mainValue: 22222,
+          mainValue: 222,
           difference: 14,
         },
         {
@@ -75,22 +75,22 @@ const ExecutiveSummaryConsumer = (props) => {
         },
         {
           title: "Subs Split",
-          mainValue: 215686,
+          mainValue: 215,
           difference: -18,
         },
         {
-          title: "New & Win",
-          mainValue: 215686,
+          title: "New & Win back Subscriptions",
+          mainValue: 215,
           difference: -18,
         },
         {
-          title: "Manual",
-          mainValue: 215686,
+          title: "Manual Subscriptions",
+          mainValue: 215,
           difference: -18,
         },
         {
-          title: "Auto & Advance Renewal",
-          mainValue: 215686,
+          title: "Auto & Advance Subscriptions",
+          mainValue: 215,
           difference: -18,
         },
       ]
@@ -99,7 +99,7 @@ const ExecutiveSummaryConsumer = (props) => {
       id: "loyaltyAndRetention",
       kpiCards: [
         {
-          title: "% Returning Users",
+          title: "% Returning Users- Overall",
           mainValue: 89,
           difference: -4,
         },
@@ -115,7 +115,7 @@ const ExecutiveSummaryConsumer = (props) => {
         },
         {
           title: "% Renewals- SVOD",
-          mainValue: 22222,
+          mainValue: 222,
           difference: 14,
         }
       ]
@@ -138,7 +138,7 @@ const ExecutiveSummaryConsumer = (props) => {
   }, []);
 
   return (
-    <div className="App">
+    <div className="executive-summary-consumer-journey-container">
       <div className="consumer-journey-filters">
         <button
           className={activeConsumerJourneyFilter === "overall" ? "consumer-journey-button-active" : "consumer-journey-button"}
@@ -159,9 +159,11 @@ const ExecutiveSummaryConsumer = (props) => {
           SVOD
         </button>
       </div>
-      <div className="sankey">
-        {/* <Sankey /> */}
-        <SankeyChartForConsumer />
+      <p className="executive-journey-note-item">All numbers in millions.</p>
+      <div className="sankey-chart-parent-container">
+        <div className="sankey">
+          <SankeyChartForConsumer />
+        </div>
       </div>
       <div className="kpi-cards-container">
         <div className="kpi-cards-buttons">
@@ -201,12 +203,6 @@ const ExecutiveSummaryConsumer = (props) => {
                   return d;
                 }
               })
-
-              // .map((item, index) => <KPICard
-              //   title={item.title}
-              //   mainValue={item.mainValue}
-              //   difference={item.difference}
-              // />)
             )}
           {
             kpiCharters.filter((item, index) => item.id === activeKPICharter)[0].kpiCards
@@ -219,7 +215,7 @@ const ExecutiveSummaryConsumer = (props) => {
                 } else if (
                   activeConsumerJourneyFilter === "svod" &&
                   (activeKPICharter === "monetizatoin" || activeKPICharter === "loyaltyAndRetention") &&
-                  (d.title === "SVOD Revenue" || d.title === "New & Win" || d.title === "Manual" || d.title === "Auto & Advance Renewal" || d.title === "% Renewals- SVOD")) {
+                  (d.title === "SVOD Revenue" || d.title === "New & Win back Subscriptions" || d.title === "Manual" || d.title === "Auto & Advance Renewal" || d.title === "% Renewals- SVOD")) {
                   return d;
                 } else if (
                   activeConsumerJourneyFilter === "avod" &&

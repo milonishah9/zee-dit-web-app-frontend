@@ -1,10 +1,11 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import HSBar from "react-horizontal-stacked-bar-chart";
 import "./HSbar.css";
 
+
 const HSbar = (props) => {
   var {data,totalValueArr} = props;
-  console.log(data);
   // let total = 0;
   // let totalValue = []
   // console.log(totalValueArr);
@@ -24,6 +25,7 @@ const HSbar = (props) => {
         <HSBar
           showTextIn
           data={data}
+          // className="hs-bar"
         />
         <span className="ttlval">{totalValueArr}</span>
       </div>

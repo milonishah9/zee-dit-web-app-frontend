@@ -13,13 +13,22 @@ import HSbar from './Components/Charts/HSbar/HSbar';
 import DivergingSB from './Components/Charts/DivergingSB/DivergingSB';
 import Links from './Components/Charts/Links/Links';
 import Monochrome from './Components/Charts/Monochrome/Monochrome';
-import ProductJourneyLineChart from './Components/Charts/LineChartWithToolTip/ProductJourneyLineChart';
+import HeatMap from './Components/Charts/HeatMap/HeatMap';
+import ContentSchedulingWithHeatMapAndDropdowns from './Components/ContentSchedulingWithHeatMapAndDropdowns/ContentSchedulingWithHeatMapAndDropdowns';
 
 
 
 
 function App() {
+  var data = [{
+    category: " ",
+    negative1: -13,
+    negative2: -23,
+    positive1: 49,
+    positive2: 25
+}];
   return (
+
     <div className="App">
       <BrowserRouter>
         <Routes>
@@ -34,7 +43,7 @@ function App() {
           <Route path='/new' element={<DivergingSB />} />
           <Route path='/links' element={<Links />} />
           <Route path='/mono' element={<Monochrome />} />
-          <Route path='/ProductJourneyLineChart' element={<ProductJourneyLineChart />} />
+          <Route path='/heatmap' element={<ContentSchedulingWithHeatMapAndDropdowns />} />
         </Routes>
       </BrowserRouter>  
     </div>

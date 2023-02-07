@@ -65,9 +65,6 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                 </div>:''
             }
 
-
-            
-            
             <table className="executive-summary-content-linear-contents-table">
                 <thead className="executive-summary-content-linear-contents-t-headers">
                     
