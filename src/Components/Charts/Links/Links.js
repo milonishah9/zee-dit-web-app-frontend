@@ -159,6 +159,7 @@ const Links = (props) => {
 
   return (
     <div className="line-chart-with-animation">
+      <p className="all-numbers-in-mil">All numbers in Millions</p>
       <div className="line-chart-all-dots">
         <div className="line-chart-acquisitions">
         

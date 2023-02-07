@@ -71,7 +71,7 @@ const ExecutiveSummaryContent = () => {
         {activeTab === "linear" && (
           <div className="product-journey-container">
             <h4>Charters</h4>
-            <p className="all-numbers-in-mil">All numbers in Millions</p>
+            
             <Links onClick={getData}/>
             <div className="data-product">
               
