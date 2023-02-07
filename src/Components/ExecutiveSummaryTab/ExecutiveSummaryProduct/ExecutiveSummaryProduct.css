@@ -149,43 +149,117 @@ div.executive-summary-content-active-tab {
 }
 
 .product-journey-acquisitions {
-  width: 10.7%;
-  position: relative;
-  left: 35px;
+  width: 14%;
+  position: absolute;
+  left: 20px;
 }
 
 .product-journey-discovery {
-  width: 10.7%;
-  position: fixed;
-  left: 347px;
+  width: 14%;
+  position: absolute;
+  left: 313px;
 }
 
 .product-journey-advertisement {
-  width: 10.7%;
-  position: fixed;
-  left: 714px;
+  width: 14%;
+  position: absolute;
+  left: 673px;
 }
 
 
 .product-journey-subscriptions {
-  width: 10.7%;
-  position: fixed;
-  left: 1063px;
+  width: 14%;
+  position: absolute;
+  left: 1032px;
 }
 
 .product-journey-engagement {
-  width: 10.7%;
-  position: fixed;
-  left: 1422px;
+  width: 14%;
+  position: absolute;
+  left: 1382px;
 }
 
 .product-journey-loyalty {
-  width: 10.7%;
-  position: fixed;
-  left: 1714px;
+  width: 14%;
+  position: absolute;
+  left: 1676px;
 }
 
+@media only screen and (max-width: 1560px) and (min-width: 1441px){
+  .product-journey-acquisitions {
+    width: 15%;
+    position: absolute;
+    left: 20px;
+}
 
+.product-journey-discovery {
+  width: 15%;
+  position: absolute;
+  left: 263px;
+}
+
+.product-journey-advertisement {
+  width: 15%;
+  position: absolute;
+  left: 546px;
+}
+
+.product-journey-subscriptions {
+  width: 15%;
+  position: absolute;
+  left: 833px;
+}
+
+.product-journey-engagement {
+  width: 15%;
+  position: absolute;
+  left: 1122px;
+}
+
+.product-journey-loyalty {
+  width: 14%;
+  position: absolute;
+  left: 1356px;
+}
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 1366px){
+  .product-journey-acquisitions {
+    width: 15%;
+    position: absolute;
+    left: 20px;
+}
+
+.product-journey-discovery {
+  width: 15%;
+  position: absolute;
+  left: 243px;
+}
+
+.product-journey-advertisement {
+  width: 15%;
+  position: absolute;
+  left: 500px;
+}
+
+.product-journey-subscriptions {
+  width: 15%;
+  position: absolute;
+  left: 768px;
+}
+
+.product-journey-engagement {
+  width: 15%;
+  position: absolute;
+  left: 1031px;
+}
+
+.product-journey-loyalty {
+  width: 14%;
+  position: absolute;
+  left: 1256px;
+}
+}
 
 @media only screen and (max-width: 1023px) and (min-width: 768px){ 
   .data-product{
@@ -202,45 +276,83 @@ div.executive-summary-content-active-tab {
 
   .product-journey-acquisitions {
     width: 15.7%;
-    position: relative;
+    position: absolute;
     left: 35px;
   }
   
   .product-journey-discovery {
     width: 15.7%;
-    position: fixed;
+    position: absolute;
     left: 125px;
 }
   
 .product-journey-advertisement {
   width: 15.7%;
-  position: fixed;
+  position: absolute;
   left: 264px;
 }
   
   
   .product-journey-subscriptions {
     width: 15.7%;
-    position: fixed;
+    position: absolute;
     left: 400px;
   }
   
   .product-journey-engagement {
     width: 15.7%;
-    position: fixed;
+    position: absolute;
     left: 530px;
   }
   
   .product-journey-loyalty {
     width: 15.7%;
-    position: fixed;
+    position: absolute;
     left: 626px;
   }
 
   /* .executive-summary-product-container{padding-left: 3rem;padding-right: 3rem;} */
  }
 
- @media only screen and (max-width: 1366px) and (min-width: 1024px){
+ /* @media only screen and (width: 1365px) {
+  .product-journey-acquisitions {
+    width: 15%;
+    position: absolute;
+    left: 20px;
+}
+
+.product-journey-discovery {
+  width: 15%;
+  position: absolute;
+  left: 243px;
+}
+
+.product-journey-advertisement {
+  width: 15%;
+  position: absolute;
+  left: 500px;
+}
+
+.product-journey-subscriptions {
+  width: 15%;
+  position: absolute;
+  left: 768px;
+}
+
+.product-journey-engagement {
+  width: 15%;
+  position: absolute;
+  left: 1031px;
+}
+
+.product-journey-loyalty {
+  width: 14%;
+  position: absolute;
+  left: 1256px;
+}
+ } */
+
+ @media only screen and (max-width: 1366px) and (min-width: 1278px){
   .executive-summary-product-container {
     padding-right: 0;
     padding-left: 0;
@@ -249,42 +361,106 @@ div.executive-summary-content-active-tab {
 
   .product-journey-acquisitions {
     width: 15.7%;
-    position: relative;
-    left: 35px;
+    position: absolute;
+    left: 13px;
   }
   
   .product-journey-discovery {
     width: 15.7%;
-    position: fixed;
-    left: 215px;
+    position: absolute;
+    left: 228px;
 }
   
 .product-journey-advertisement {
   width: 15.7%;
-  position: fixed;
-  left: 394px;
+  position: absolute;
+  left: 474px;
 }
   
   
   .product-journey-subscriptions {
     width: 15.7%;
-    position: fixed;
-    left: 570px;
+    position: absolute;
+    left: 718px;
   }
   
   .product-journey-engagement {
     width: 15.7%;
-    position: fixed;
-    left: 740px;
+    position: absolute;
+    left: 955px;
   }
   
   .product-journey-loyalty {
     width: 15.7%;
-    position: fixed;
-    left: 866px;
+    position: absolute;
+    left: 1158px;
   }
 
  } 
+
+ @media only screen and (max-width: 1279px) and (min-width: 1024px){
+  .product-journey-discovery {
+    width: 15.7%;
+    position: absolute;
+    left: 222px;
+}
+
+.product-journey-advertisement {
+  width: 15.7%;
+  position: absolute;
+  left: 440px;
+}
+
+.product-journey-subscriptions {
+  width: 15.7%;
+  position: absolute;
+  left: 670px;
+}
+
+.product-journey-engagement {
+  width: 15.7%;
+  position: absolute;
+  left: 887px;
+}
+
+.product-journey-loyalty {
+  width: 15.7%;
+  position: absolute;
+  left: 1085px;
+}
+ }
+
+ @media only screen and (width: 1024px){
+  .product-journey-discovery {
+    width: 15.7%;
+    position: absolute;
+    left: 222px;
+}
+
+.product-journey-advertisement {
+  width: 15.7%;
+  position: absolute;
+  left: 440px;
+}
+
+.product-journey-subscriptions {
+  width: 15.7%;
+  position: absolute;
+  left: 670px;
+}
+
+.product-journey-engagement {
+  width: 15.7%;
+  position: absolute;
+  left: 887px;
+}
+
+.product-journey-loyalty {
+  width: 15.7%;
+  position: absolute;
+  left: 1085px;
+}
+ }
 
  @media only screen and (max-width: 767px) {
   .data-product{margin-top: 0rem;grid-template-columns:auto!important;}
@@ -292,38 +468,38 @@ div.executive-summary-content-active-tab {
 
   .product-journey-acquisitions {
     width: 15.7%;
-    position: relative;
+    position: absolute;
     left: 35px;
   }
   
   .product-journey-discovery {
     width: 15.7%;
-    position: fixed;
+    position: absolute;
     left: 215px;
 }
   
 .product-journey-advertisement {
   width: 15.7%;
-  position: fixed;
+  position: absolute;
   left: 394px;
 }
   
   
   .product-journey-subscriptions {
     width: 15.7%;
-    position: fixed;
+    position: absolute;
     left: 570px;
   }
   
   .product-journey-engagement {
     width: 15.7%;
-    position: fixed;
+    position: absolute;
     left: 740px;
   }
   
   .product-journey-loyalty {
     width: 15.7%;
-    position: fixed;
+    position: absolute;
     left: 866px;
   }
 
@@ -342,7 +518,7 @@ div.executive-summary-content-active-tab {
 
   .product-journey-acquisitions {
     width: 100%;
-    position: relative;
+    position: absolute;
     left: 0px;
     top: 
     0px;
@@ -350,7 +526,7 @@ div.executive-summary-content-active-tab {
   
   .product-journey-discovery {
     width: 100%;
-    position: relative;
+    position: absolute;
     left: 0px;
     top: 
     0px;
@@ -358,7 +534,7 @@ div.executive-summary-content-active-tab {
   
 .product-journey-advertisement {
   width: 100%;
-  position: relative;
+  position: absolute;
   left: 0px;
   top: 
   0px;
@@ -367,7 +543,7 @@ div.executive-summary-content-active-tab {
   
   .product-journey-subscriptions {
     width: 100%;
-    position: relative;
+    position: absolute;
     left: 0px;
     top: 
     0px;
@@ -375,7 +551,7 @@ div.executive-summary-content-active-tab {
   
   .product-journey-engagement {
     width: 100%;
-    position: relative;
+    position: absolute;
     left: 0px;
     top: 
     0px;
@@ -383,7 +559,7 @@ div.executive-summary-content-active-tab {
   
   .product-journey-loyalty {
     width: 100%;
-    position: relative;
+    position: absolute;
     left: 0px;
     top: 
     0px;
