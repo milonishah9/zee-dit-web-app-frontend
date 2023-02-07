@@ -13,6 +13,7 @@ import HSbar from './Components/Charts/HSbar/HSbar';
 import DivergingSB from './Components/Charts/DivergingSB/DivergingSB';
 import Links from './Components/Charts/Links/Links';
 import Monochrome from './Components/Charts/Monochrome/Monochrome';
+import ProductJourneyLineChart from './Components/Charts/LineChartWithToolTip/ProductJourneyLineChart';
 
 
 
@@ -33,6 +34,7 @@ function App() {
           <Route path='/new' element={<DivergingSB />} />
           <Route path='/links' element={<Links />} />
           <Route path='/mono' element={<Monochrome />} />
+          <Route path='/ProductJourneyLineChart' element={<ProductJourneyLineChart />} />
         </Routes>
       </BrowserRouter>  
     </div>

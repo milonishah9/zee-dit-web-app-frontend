@@ -195,31 +195,31 @@ div.executive-summary-content-active-tab {
 .product-journey-discovery {
   width: 15%;
   position: absolute;
-  left: 263px;
+  left: 245px;
 }
 
 .product-journey-advertisement {
   width: 15%;
   position: absolute;
-  left: 546px;
+  left: 535px;
 }
 
 .product-journey-subscriptions {
   width: 15%;
   position: absolute;
-  left: 833px;
+  left: 812px;
 }
 
 .product-journey-engagement {
   width: 15%;
   position: absolute;
-  left: 1122px;
+  left: 1089px;
 }
 
 .product-journey-loyalty {
   width: 14%;
   position: absolute;
-  left: 1356px;
+  left: 1338px;
 }
 }
 
@@ -275,40 +275,40 @@ div.executive-summary-content-active-tab {
   }
 
   .product-journey-acquisitions {
-    width: 15.7%;
+    width: 15.8%;
     position: absolute;
-    left: 35px;
+    left: 31px;
   }
   
   .product-journey-discovery {
-    width: 15.7%;
+    width: 15.8%;
     position: absolute;
-    left: 125px;
+    left: 147px;
 }
   
 .product-journey-advertisement {
-  width: 15.7%;
+  width: 15.8%;
   position: absolute;
-  left: 264px;
+  left: 271px;
 }
   
   
   .product-journey-subscriptions {
-    width: 15.7%;
+    width: 15.8%;
     position: absolute;
-    left: 400px;
+    left: 402px;
   }
   
   .product-journey-engagement {
-    width: 15.7%;
+    width: 15.8%;
     position: absolute;
-    left: 530px;
+    left: 525px;
   }
   
   .product-journey-loyalty {
-    width: 15.7%;
+    width: 15.8%;
     position: absolute;
-    left: 626px;
+    left: 644px;
   }
 
   /* .executive-summary-product-container{padding-left: 3rem;padding-right: 3rem;} */
@@ -368,32 +368,32 @@ div.executive-summary-content-active-tab {
   .product-journey-discovery {
     width: 15.7%;
     position: absolute;
-    left: 228px;
+    left: 216px;
 }
   
 .product-journey-advertisement {
   width: 15.7%;
   position: absolute;
-  left: 474px;
+  left: 444px;
 }
   
   
   .product-journey-subscriptions {
     width: 15.7%;
     position: absolute;
-    left: 718px;
+    left: 672px;
   }
   
   .product-journey-engagement {
     width: 15.7%;
     position: absolute;
-    left: 955px;
+    left: 894px;
   }
   
   .product-journey-loyalty {
     width: 15.7%;
     position: absolute;
-    left: 1158px;
+    left: 1104px;
   }
 
  } 
@@ -430,7 +430,7 @@ div.executive-summary-content-active-tab {
 }
  }
 
- @media only screen and (width: 1024px){
+ /* @media only screen and (width: 1024px){
   .product-journey-discovery {
     width: 15.7%;
     position: absolute;
@@ -460,7 +460,7 @@ div.executive-summary-content-active-tab {
   position: absolute;
   left: 1085px;
 }
- }
+ } */
 
  @media only screen and (max-width: 767px) {
   .data-product{margin-top: 0rem;grid-template-columns:auto!important;}
