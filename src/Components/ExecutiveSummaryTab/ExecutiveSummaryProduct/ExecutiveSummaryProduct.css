@@ -430,37 +430,7 @@ div.executive-summary-content-active-tab {
 }
  }
 
- /* @media only screen and (width: 1024px){
-  .product-journey-discovery {
-    width: 15.7%;
-    position: absolute;
-    left: 222px;
-}
-
-.product-journey-advertisement {
-  width: 15.7%;
-  position: absolute;
-  left: 440px;
-}
-
-.product-journey-subscriptions {
-  width: 15.7%;
-  position: absolute;
-  left: 670px;
-}
-
-.product-journey-engagement {
-  width: 15.7%;
-  position: absolute;
-  left: 887px;
-}
-
-.product-journey-loyalty {
-  width: 15.7%;
-  position: absolute;
-  left: 1085px;
-}
- } */
+ 
 
  @media only screen and (max-width: 767px) {
   .data-product{margin-top: 0rem;grid-template-columns:auto!important;}
@@ -567,3 +537,41 @@ div.executive-summary-content-active-tab {
 
  }
 
+ @media only screen and (max-width: 1030px) and (min-width: 1020px){
+
+  .product-journey-acquisitions {
+    width: 19%;
+    position: absolute;
+    left: 11px;
+  }
+
+  .product-journey-discovery {
+    width: 19%;
+    position: absolute;
+    left: 177px;
+}
+
+.product-journey-advertisement {
+  width: 19%;
+  position: absolute;
+  left: 345px;
+}
+
+.product-journey-subscriptions {
+  width: 19%;
+  position: absolute;
+  left: 515px;
+}
+
+.product-journey-engagement {
+  width: 19%;
+  position: absolute;
+  left: 684px;
+}
+
+.product-journey-loyalty {
+  width: 19%;
+  position: absolute;
+  left: 855px;
+}
+ }
