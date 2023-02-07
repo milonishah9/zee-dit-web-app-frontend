@@ -60,7 +60,7 @@ div.executive-summary-content-active-tab {
   font-family: "GothamBold";
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 11px;
   margin: 10px;
 }
@@ -68,7 +68,7 @@ div.executive-summary-content-active-tab {
 .product-userjourney-card-number {
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 25px;
   line-height: 15px;
   margin-left: 10px;
   display: inline;
