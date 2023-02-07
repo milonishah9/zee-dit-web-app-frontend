@@ -60,7 +60,7 @@ div.executive-summary-content-active-tab {
   font-family: "GothamBold";
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 11px;
   margin: 10px;
 }
@@ -68,8 +68,8 @@ div.executive-summary-content-active-tab {
 .product-userjourney-card-number {
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 15px;
+  font-size: 25px;
+  line-height: 20px;
   margin-left: 10px;
   display: inline;
 }
@@ -111,7 +111,7 @@ div.executive-summary-content-active-tab {
   color: #04c704;
   font-weight: 400;
   margin-left: 8px;
-  font-size: 10px;
+  font-size: 16px;
   line-height: 11px;
   display: flex;
   align-items: center;
@@ -124,7 +124,7 @@ div.executive-summary-content-active-tab {
   color: red;
   margin-left: 8px;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 15px;
   line-height: 11px;
   display: flex;
   align-items: center;
