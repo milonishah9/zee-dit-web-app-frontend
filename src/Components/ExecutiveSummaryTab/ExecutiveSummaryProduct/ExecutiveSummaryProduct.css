@@ -161,18 +161,21 @@ div.executive-summary-content-active-tab {
   width: 14%;
   position: absolute;
   left: 20px;
+  top: 503px;
 }
 
 .product-journey-discovery {
   width: 14%;
   position: absolute;
   left: 313px;
+  top: 503px;
 }
 
 .product-journey-advertisement {
   width: 14%;
   position: absolute;
   left: 673px;
+  top: 503px;
 }
 
 
@@ -180,18 +183,21 @@ div.executive-summary-content-active-tab {
   width: 14%;
   position: absolute;
   left: 1032px;
+  top: 503px;
 }
 
 .product-journey-engagement {
   width: 14%;
   position: absolute;
   left: 1382px;
+  top: 503px;
 }
 
 .product-journey-loyalty {
   width: 14%;
   position: absolute;
   left: 1676px;
+  top: 503px;
 }
 
 @media only screen and (max-width: 1560px) and (min-width: 1441px){
