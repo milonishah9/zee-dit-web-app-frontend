@@ -9,12 +9,12 @@ import { useMediaQuery } from "@material-ui/core";
 const Links = (props) => {
   var minusWidth = 100;
   var svgHeight = 200 ;
-  // const isMobile = useMediaQuery('(max-width: 767px)');
+  const isMobile = useMediaQuery('(max-width: 767px)');
   // if(isMobile){
   //   minusWidth = 150;
   //   svgHeight = 150;
   // }
-  
+  console.log(isMobile);
   const handleBubbleClick = (event, value) => {
     console.log(event.target.id);
     let id =  event.target.id;
@@ -56,12 +56,16 @@ const Links = (props) => {
 
   useEffect(() => {
     // Create SVG and padding for the chart
-    console.log(window.innerWidth);
+    // console.log(window.innerWidth);
+    d3
+      .select(".my-line-chart-svg").remove()
+      
+
     const svg = d3
       .select("#linkChart")
-      .append("svg")
+      .append("svg").classed('my-line-chart-svg', true)
       .attr("height", svgHeight)
-      .attr("width", window.innerWidth-minusWidth);
+      .attr("width", isMobile ? (1000) : (window.innerWidth-minusWidth));
     const margin = { top: 0, bottom: 20, left: 30, right: 20 };
     const chart = svg
       .append("g")
@@ -151,7 +155,7 @@ const Links = (props) => {
       });
       updateChart(newData);
     });
-  }, [minusWidth, svgHeight]);
+  }, [minusWidth, svgHeight, isMobile]);
 
   return (
     <div className="line-chart-with-animation">
