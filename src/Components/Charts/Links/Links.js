@@ -65,7 +65,7 @@ const Links = (props) => {
       .select("#linkChart")
       .append("svg").classed('my-line-chart-svg', true)
       .attr("height", svgHeight)
-      .attr("width", isMobile ? (1000) : (window.innerWidth-minusWidth));
+      .attr("width", isMobile ? (1300) : (window.innerWidth-minusWidth));
     const margin = { top: 0, bottom: 20, left: 30, right: 20 };
     const chart = svg
       .append("g")

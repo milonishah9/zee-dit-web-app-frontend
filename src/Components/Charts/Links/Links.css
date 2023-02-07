@@ -79,15 +79,11 @@
 .line-chart-loyalty label{
     background-color: #FF647C;
 }
-/* 
-#linkChart {
-    overflow-x: scroll;
-} */
 
-.line-chart-with-animation{
+/* .line-chart-with-animation{
     overflow: auto;
     box-sizing: border-box;
-}
+} */
 
 .prod-jour-chart-heading{
     font-size: 16px;
@@ -451,7 +447,7 @@
 
     .line-chart-acquisitions {
         position: relative;
-        right: 24px;
+        right: 16px;
         top: 39px;
     }
 
@@ -462,31 +458,31 @@
 
     .line-chart-discovery {
         position: relative;
-        right: -74px;
+        right: -144px;
         top: 39px;
     }
 
     .line-chart-advertisement {
         position: relative;
-        left: 177px;
+        left: 306px;
         top: 38px;
     }
 
     .line-chart-subscriptions {
         position: relative;
-        left: 267px;
+        left: 458px;
         bottom: -39px;
     }
 
     .line-chart-engagement {
         position: relative;
-        left: 621px;
+        left: 871px;
         bottom: 30px;
     }
 
     .line-chart-loyalty {
         position: relative;
-        left: 728px;
+        left: 1035px;
         bottom: 30px;
     }
 
