@@ -37,12 +37,12 @@
 
 .line-chart-acquisitions{
     position: relative;
-    right: 588px;
+    right: 527px;
 }
 
 .line-chart-discovery{
     position: relative;
-    right: 351px;
+    right: 317px;
 }
 .line-chart-discovery label{
     background-color: #FF647C;
@@ -50,7 +50,7 @@
 
 .line-chart-advertisement{
     position: relative;
-    right: 117px;
+    right: 102px;
 }
 .line-chart-advertisement label{
     background-color: #FFC656;
@@ -58,7 +58,7 @@
 
 .line-chart-subscriptions{
     position: relative;
-    left: 105px;
+    left: 112px;
 }
 .line-chart-subscriptions label{
     background-color: #00C48C;
@@ -66,15 +66,16 @@
 
 .line-chart-engagement{
     position: relative;
-    left: 332px;
+    left: 326px;
 }
+
 .line-chart-engagement label{
     background-color: #FFC656;
 }
 
 .line-chart-loyalty{
     position: relative;
-    left: 580px;
+    left: 540px;
 }
 .line-chart-loyalty label{
     background-color: #FF647C;
@@ -92,7 +93,11 @@
     cursor: pointer;
     font-family: GothamLight;
     border: 1px solid black;
-    padding: 3px 10px;
+    /* padding: 3px 10px; */
+    width: 138px;
+    height: 36px;
+    display: grid;
+    align-content: space-around;
     background: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%);
     border-radius: 100px;
     color: #FFFFFF;
@@ -102,6 +107,12 @@
 
 /* ---------------laptop----------------------- */
 @media only screen and (max-width: 1560px) and (min-width: 1441px){
+    .prod-jour-chart-heading{
+        padding: 3px 10px;
+        width: auto;
+        height: auto;
+    }
+    
     .line-chart-acquisitions {
         position: relative;
         right: 408px;
@@ -144,6 +155,11 @@
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1366px){
+    .prod-jour-chart-heading{
+        padding: 3px 10px;
+        width: auto;
+        height: auto;
+    }
 
     .line-chart-acquisitions {
         position: relative;
@@ -177,6 +193,11 @@
 }
 
 @media only screen and (max-width: 1365px) and (min-width: 1280px){
+    .prod-jour-chart-heading{
+        padding: 3px 10px;
+        width: auto;
+        height: auto;
+    }
     .line-chart-acquisitions {
         position: relative;
         right: 310px;
@@ -209,6 +230,11 @@
 }
 
 @media only screen and (max-width: 1279px) and (min-width: 1024px){
+    .prod-jour-chart-heading{
+        padding: 3px 10px;
+        width: auto;
+        height: auto;
+    }
     .line-chart-acquisitions {
         position: relative;
         right: 268px;
@@ -241,6 +267,11 @@
 }
 
 @media only screen and (width: 1024px){
+    .prod-jour-chart-heading{
+        padding: 3px 10px;
+        width: auto;
+        height: auto;
+    }
     .line-chart-acquisitions {
         position: relative;
         right: 142px;
@@ -283,6 +314,11 @@
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 320px){
+    .prod-jour-chart-heading{
+        padding: 3px 10px;
+        width: auto;
+        height: auto;
+    }
     .line-chart-acquisitions {
         position: relative;
         right: 142px;
@@ -326,6 +362,12 @@
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 768px){
+    .prod-jour-chart-heading{
+        padding: 3px 10px;
+        width: auto;
+        height: auto;
+    }
+
     .line-chart-acquisitions {
         position: relative;
         right: 68px;
@@ -387,6 +429,12 @@
 }
 
 @media only screen and (width: 1280px){
+    .prod-jour-chart-heading{
+        padding: 3px 10px;
+        width: auto;
+        height: auto;
+    }
+
     .line-chart-acquisitions {
         position: relative;
         right: 268px;
@@ -420,6 +468,11 @@
 
 
 @media only screen and (max-width: 767px) {
+    .prod-jour-chart-heading{
+        padding: 3px 10px;
+        width: auto;
+        height: auto;
+    }
 
     /* .my-line-chart-svg{
         position: relative;
