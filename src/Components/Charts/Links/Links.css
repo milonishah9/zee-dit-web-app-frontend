@@ -236,11 +236,11 @@
 }
 
 @media only screen and (max-width: 1279px) and (min-width: 1024px){
-    .prod-jour-chart-heading{
+    /* .prod-jour-chart-heading{
         padding: 3px 10px;
         width: auto;
         height: auto;
-    }
+    } */
     .line-chart-acquisitions {
         position: relative;
         right: 268px;
@@ -435,11 +435,11 @@
 }
 
 @media only screen and (width: 1280px){
-    .prod-jour-chart-heading{
+    /* .prod-jour-chart-heading{
         padding: 3px 10px;
         width: auto;
         height: auto;
-    }
+    } */
 
     .line-chart-acquisitions {
         position: relative;
