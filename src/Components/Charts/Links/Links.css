@@ -113,6 +113,11 @@
 
 /* ---------------laptop----------------------- */
 @media only screen and (max-width: 1560px) and (min-width: 1441px){
+    .all-numbers-in-mil {
+        position: absolute;
+        top: 36%;
+        left: 36px;
+    }
     /* .prod-jour-chart-heading{
         padding: 3px 10px;
         width: auto;
@@ -121,7 +126,7 @@
     
     .line-chart-acquisitions {
         position: relative;
-        right: 408px;
+        right: 346px;
     }
 
     .line-chart-acquisitions p{
@@ -131,27 +136,27 @@
 
     .line-chart-discovery {
         position: relative;
-        right: 243px;
+        right: 209px;
     }
 
     .line-chart-advertisement {
         position: relative;
-        right: 81px;
+        right: 67px;
     }
 
     .line-chart-subscriptions {
         position: relative;
-        left: 70px;
+        left: 78px;
     }
 
     .line-chart-engagement {
         position: relative;
-        left: 226px
+        left: 220px
     }
 
     .line-chart-loyalty {
         position: relative;
-        left: 399px;
+        left: 359px;
     }
 
     .line-chart-loyalty p{
@@ -167,34 +172,40 @@
         height: auto;
     } */
 
+    .all-numbers-in-mil {
+        position: absolute;
+        top: 36%;
+        left: 28px;
+    }
+
     .line-chart-acquisitions {
         position: relative;
-        right: 348px;
+        right: 286px;
     }
 
     .line-chart-discovery {
         position: relative;
-        right: 208px;
+        right: 174px;
     }
 
     .line-chart-advertisement {
         position: relative;
-        right: 68px;
+        right: 55px;
     }
 
     .line-chart-subscriptions {
         position: relative;
-        left: 58px;
+        left: 66px;
     }
 
     .line-chart-engagement {
         position: relative;
-        left: 190px;
+        left: 183px;
     }
 
     .line-chart-loyalty {
         position: relative;
-        left: 339px;
+        left: 299px;
     }
 }
 
@@ -204,34 +215,41 @@
         width: auto;
         height: auto;
     } */
+
+    .all-numbers-in-mil {
+        position: absolute;
+        top: 36%;
+        left: 25px;
+    }
+
     .line-chart-acquisitions {
         position: relative;
-        right: 310px;
+        right: 250px;
     }
 
     .line-chart-discovery {
         position: relative;
-        right: 185px;
+        right: 153px;
     }
     
     .line-chart-advertisement {
         position: relative;
-        right: 59px;
+        right: 48px;
     }
     
     .line-chart-subscriptions {
         position: relative;
-        left: 49px;
+        left: 56px;
     }
 
     .line-chart-engagement {
         position: relative;
-        left: 168px;
+        left: 161px;
     }
 
     .line-chart-loyalty {
         position: relative;
-        left: 305px;
+        left: 259px;
     }
 }
 
@@ -241,34 +259,41 @@
         width: auto;
         height: auto;
     } */
+
+    .all-numbers-in-mil {
+        position: absolute;
+        top: 36%;
+        left: 22px;
+    }
+
     .line-chart-acquisitions {
         position: relative;
-        right: 268px;
+        right: 207px;
     }
 
     .line-chart-discovery {
         position: relative;
-        right: 158px;
+        right: 127px;
     }
 
     .line-chart-advertisement {
         position: relative;
-        right: 51px;
+        right: 38px;
     }
 
     .line-chart-subscriptions {
         position: relative;
-        left: 41px;
+        left: 50px;
     }
 
     .line-chart-engagement {
         position: relative;
-        left: 141px
+        left: 136px
     }
 
     .line-chart-loyalty {
         position: relative;
-        left: 262px;
+        left: 217px;
     }
 }
 
