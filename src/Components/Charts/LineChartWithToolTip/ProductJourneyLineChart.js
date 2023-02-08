@@ -144,21 +144,21 @@ const ProductJourneyLineChart = (props) => {
         tooltip.selectAll("*").remove();
 
         svg.on('mouseover', mouseOver);
-        svg.call(mouseMove);
+        svg.on('mousemove', mouseMove);
         svg.on('mouseout', mouseOut);
 
         function mouseOver(event) {
-            svg.selectAll('.hoverLine')
-                .style('visibility', 'visible');
+            // svg.selectAll('.hoverLine')
+                // .style('visibility', 'visible');
 
-            svg.selectAll('.hoverPoint')
-                .style('visibility', 'visible');
+            // svg.selectAll('.hoverPoint')
+                // .style('visibility', 'visible');
 
             // svg.selectAll('.hoverText')
             //     .style('visibility', 'visible');
 
-            tooltip
-                .style('visibility', 'visible');
+            // tooltip
+            //     .style('visibility', 'visible');
         }
 
         function mouseMove(event) {
@@ -218,17 +218,17 @@ const ProductJourneyLineChart = (props) => {
         }
 
         function mouseOut(event) {
-            svg.selectAll('.hoverLine')
-                .style('visibility', 'hidden');
+            // svg.selectAll('.hoverLine')
+                // .style('visibility', 'hidden');
 
-            svg.selectAll('.hoverPoint')
-                .style('visibility', 'hidden');
+            // svg.selectAll('.hoverPoint')
+                // .style('visibility', 'hidden');
 
             // svg.selectAll('.hoverText')
             //     .style('visibility', 'hidden');
 
-            tooltip
-                .style('visibility', 'hidden');
+            // tooltip
+            //     .style('visibility', 'hidden');
         }
 
     }, []);
