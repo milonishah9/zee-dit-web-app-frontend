@@ -148,14 +148,17 @@ div.executive-summary-content-active-tab {
   /* margin-left: 9px; */
 }
 .data-product{
-  /* padding-left: 20px; */
-  display: flex
+  display: flex;
+  position: relative;
+  bottom: 585px;
 }
 
 .product-journey-container h4{
-  margin-left: 30px;
-  margin-top: 10px;
-  margin-bottom: 0px;
+  position: relative;
+  top: 21px;
+  left: 29px;
+  /* margin-left: 30px;
+  margin-bottom: 0px; */
 }
 
 .product-journey-acquisitions {
