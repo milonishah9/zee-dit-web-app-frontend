@@ -22,7 +22,7 @@ const HeatMap = (props) => {
 
         const svg = d3
             .select(svgRef.current)
-            .attr("viewBox", "0 20 650 110")
+            .attr("viewBox", "0 0 650 150")
             .classed("heat-map-svg", true)
             .append("g")
             .attr("transform", "translate(30,30)");
@@ -31,7 +31,7 @@ const HeatMap = (props) => {
             .scaleBand()
             .range([0, 600])
             .domain(timeZone)
-            .padding(0.1);
+            .padding(0.08);
 
         let xAxis = d3.axisBottom(xScale)
             .tickSize(0)
@@ -39,7 +39,7 @@ const HeatMap = (props) => {
                 "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"]);
 
         svg.append("g")
-            .attr("transform", "translate(0," + 114 + ")")
+            .attr("transform", "translate(0," + -10 + ")")
             .call(xAxis);
         // .style("opacity", isAllDropdownsSelected ? 1 : 0.2);
 
@@ -47,7 +47,7 @@ const HeatMap = (props) => {
             .scaleBand()
             .range([100, 0])
             .domain(shows)
-            .padding(0.1);
+            .padding(0.08);
 
         let yAxis = d3.axisLeft(yScale)
             .tickSize(0)
@@ -55,11 +55,12 @@ const HeatMap = (props) => {
 
         svg.append("g")
             .call(yAxis)
+            .classed("y-axis-tick", true)
             .style("opacity", isAllDropdownsSelected ? 1 : 0.2);
 
         let myColor = d3
             .scaleLinear()
-            .range(["white", "#3E1F76"])
+            .range(["white", "#4F277C"])
             .domain([1, 120]);
 
         let tooltip = d3.select('.heat-map-container')
@@ -94,8 +95,8 @@ const HeatMap = (props) => {
             .append("rect")
             .attr("x", d => xScale(d.time))
             .attr("y", d => yScale(d.show))
-            .attr("rx", 1.5)
-            .attr("ry", 1.5)
+            // .attr("rx", 1.5)
+            // .attr("ry", 1.5)
             // .style("opacity", isAllDropdownsSelected ? 1 : 0.2)
             .attr("width", xScale.bandwidth())
             .attr("height", yScale.bandwidth())

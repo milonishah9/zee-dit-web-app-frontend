@@ -12,7 +12,13 @@
 
 .tick text {
     font-size: 0.3rem;
+    color: #808080;
+
 }
+
+/* .y-axis-tick{
+    min-width: 100%;
+} */
 
 .tooltip {
     position: absolute;
