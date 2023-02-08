@@ -131,12 +131,12 @@ const ExecutiveSummaryContent = () => {
               </label>
 
               <label>
-                <img src={img01}/>
+                <img src={img03}/>
                 &nbsp;connected device
               </label>
 
               <label>
-                <img src={img03}/>
+                <img src={img01}/>
                 &nbsp;others
               </label>
 
