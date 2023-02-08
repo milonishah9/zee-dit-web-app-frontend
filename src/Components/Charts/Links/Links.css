@@ -324,7 +324,7 @@
         position: relative;
         top: 75px;
     }
-    
+
     .prod-jour-chart-heading{
         padding: 3px 10px;
         width: auto;
@@ -382,9 +382,10 @@
         right: 142px;
     }
 
-    .line-chart-acquisitions p{
+    .line-chart-acquisitions .prod-jour-chart-heading{
         position: relative;
-        left: 5px;
+        left: 56px;
+        width: 100px;
     }
 
     .line-chart-discovery {
@@ -424,7 +425,7 @@
     .all-numbers-in-mil {
         position: relative;
         top: 71px;
-        /* right: 388px; */
+        right: -56px;
     }
 
     .prod-jour-chart-heading{
@@ -580,8 +581,8 @@
 
     .all-numbers-in-mil {
         position: relative;
-        top: 85px;
-        /* right: 99px; */
+        top: 76px;
+        left: 55px;
     }
 
     .prod-jour-chart-heading{
@@ -616,43 +617,44 @@
 
     .line-chart-acquisitions {
         position: relative;
-        right: 16px;
-        top: 39px;
+        right: 135px;
+        top: -28px;
     }
 
-    .line-chart-acquisitions p{
+    .line-chart-acquisitions .prod-jour-chart-heading{
         position: relative;
-        left: 13px;
+        left: 50px;
+        width: 90px;
     }
-
+    
     .line-chart-discovery {
         position: relative;
-        right: -144px;
-        top: 39px;
+        right: 12px;
+        top: -28px;
     }
 
     .line-chart-advertisement {
         position: relative;
-        left: 306px;
-        top: 38px;
+        left: 149px;
+        top: -28px;
     }
 
     .line-chart-subscriptions {
         position: relative;
-        left: 458px;
-        bottom: -39px;
+        left: 301px;
+        bottom: 30px;
     }
 
     .line-chart-engagement {
         position: relative;
-        left: 871px;
+        left: 460px;
         bottom: 30px;
     }
 
     .line-chart-loyalty {
         position: relative;
-        left: 1035px;
-        bottom: 30px;
+        left: 623px;
+        bottom: 29px;
     }
 
     .line-chart-loyalty p{
