@@ -63,6 +63,7 @@ div.executive-summary-content-active-tab {
   font-size: 14px;
   line-height: 11px;
   margin: 10px;
+  margin-bottom: 15px;
 }
 
 .product-userjourney-card-number {
@@ -149,8 +150,7 @@ div.executive-summary-content-active-tab {
 }
 .data-product{
   display: flex;
-  position: relative;
-  bottom: 585px;
+
 }
 
 .product-journey-container h4{
@@ -165,21 +165,18 @@ div.executive-summary-content-active-tab {
   width: 300px;
     position: absolute;
     left: 30px;
-    top: 487px;
 }
 
 .product-journey-discovery {
   width: 300px;
   position: absolute;
   left: 344px;
-  top: 487px;
 }
 
 .product-journey-advertisement {
   width: 300px;
   position: absolute;
   left: 656px;
-  top: 487px;
 }
 
 
@@ -187,21 +184,27 @@ div.executive-summary-content-active-tab {
   width: 300px;
   position: absolute;
   left: 970px;
-  top: 487px;
 }
 
 .product-journey-engagement {
   width: 300px;
   position: absolute;
   left: 1284px;
-  top: 487px;
 }
 
 .product-journey-loyalty {
   width: 300px;
   position: absolute;
   left: 1598px;
-  top: 487px;
+}
+
+.prod-jou-icons-indicators label{
+  margin: 0 10px;
+}
+
+.prod-jou-icons-indicators{
+  text-align: end;
+  margin-right: 10px;
 }
 
 @media only screen and (max-width: 1560px) and (min-width: 1441px){
