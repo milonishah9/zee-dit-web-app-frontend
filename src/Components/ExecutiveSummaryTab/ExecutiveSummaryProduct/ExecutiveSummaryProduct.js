@@ -82,7 +82,7 @@ const ExecutiveSummaryContent = () => {
 
               {discovery === 'Discovery' && <div className={'product-journey-discovery'}>
                 <div><ProductUserJourney data={['VTUR', 1000, 70]} /></div>
-                <div className="data-product1"><ProductUserJourney data={['Search Engagement', 1000, 90]} /></div>
+                <div className="data-product1"><ProductUserJourney data={['Search CTR', 1000, 90]} /></div>
               </div>}
 
               {advertisement === 'Advertisement' && <div className="product-journey-advertisement">
@@ -91,18 +91,18 @@ const ExecutiveSummaryContent = () => {
               </div>}
 
               {subscriptions === 'Subscriptions' && <div className="product-journey-subscriptions">
-                <div className="data-product1"><ProductUserJourney data={['No. of Subscribers', 1000, 50]} /></div>
-                <div className="data-product1"><ProductUserJourney data={['No. of Subscribers', 1000, -50]} /></div>
+                <div className="data-product1"><ProductUserJourney data={['No. of subscriptions', 1000, 50]} /></div>
+                <div className="data-product1"><ProductUserJourney data={['Active Platform Subscribers', 1000, -50]} /></div>
               </div>}
 
               {engagement === 'Engagement' && <div className="product-journey-engagement">
-                <div className="data-product1"><ProductUserJourney data={['DAV', 1000, -50]} /></div>
+                <div className="data-product1"><ProductUserJourney data={['Watch time', 1000, -50]} /></div>
                 <div className="data-product1"><ProductUserJourney data={['MAV', 1000, 50]} /></div>
               </div>}
               
               {loyalty ==='Loyalty' && <div className="product-journey-loyalty">
                 <div className="data-product1"><ProductUserJourney data={['% of Returning Users', 1000, 50]} /></div>
-                <div className="data-product1"><ProductUserJourney data={['% of Sessions from Returning Users', 1000, -50]} /></div>
+                <div className="data-product1"><ProductUserJourney data={['Avg. Active Days', 1000, -50]} /></div>
               </div>}
 
             </div>
