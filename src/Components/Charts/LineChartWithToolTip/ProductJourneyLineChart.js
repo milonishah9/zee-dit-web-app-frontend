@@ -144,7 +144,7 @@ const ProductJourneyLineChart = (props) => {
         tooltip.selectAll("*").remove();
 
         svg.on('mouseover', mouseOver);
-        svg.on('mousemove', mouseMove);
+        svg.call(mouseMove);
         svg.on('mouseout', mouseOut);
 
         function mouseOver(event) {
