@@ -106,8 +106,8 @@
 
 .all-numbers-in-mil {
     position: relative;
-    top: 88px;
-    right: 858px;
+    top: 85px;
+    /* right: 858px; */
 }
 @media only screen and (max-width: 1440px) and (min-width: 1100px){
     .line-chart-with-animation{
@@ -131,8 +131,8 @@
 @media only screen and (max-width: 1560px) and (min-width: 1441px){
     .all-numbers-in-mil {
             position: absolute;
-            top: 17.7%;
-            right: 1363px;
+            top: 83px;
+            /* right: 1363px; */
     }
     /* .prod-jour-chart-heading{
         padding: 3px 10px;
@@ -189,9 +189,11 @@
     } */
 
     .all-numbers-in-mil {
+        width: 200px;
         position: absolute;
-        top: 252px;
-        left: -369px;
+        top: 44px;
+        left: -12px;
+    
     }
 
     .line-chart-acquisitions {
@@ -234,8 +236,8 @@
 
     .all-numbers-in-mil {
         position: absolute;
-        top: 34%;
-        left: -295px;
+        width: 165px;
+        top: 46px;
     }
 
     .line-chart-acquisitions {
@@ -283,8 +285,7 @@
 
     .all-numbers-in-mil {
         position: relative;
-        top: 75px;
-        right: 294px;
+        top: 86px;
     }
 
     .line-chart-acquisitions {
@@ -319,6 +320,11 @@
 }
 
 @media only screen and (width: 1024px){
+    .all-numbers-in-mil {
+        position: relative;
+        top: 75px;
+    }
+    
     .prod-jour-chart-heading{
         padding: 3px 10px;
         width: auto;
@@ -418,7 +424,7 @@
     .all-numbers-in-mil {
         position: relative;
         top: 71px;
-        right: 388px;
+        /* right: 388px; */
     }
 
     .prod-jour-chart-heading{
@@ -496,8 +502,8 @@
 
     .all-numbers-in-mil {
         position: absolute;
-        top: 33%;
-        left: -209px;
+        top: 75px;
+        /* left: -209px; */
     }
 
     .line-chart-acquisitions {
@@ -535,8 +541,8 @@
 
     .all-numbers-in-mil {
         position: relative;
-        top: 76px;
-        right: 295px;
+        top: 75px;
+        /* right: 295px; */
     }
 
     .line-chart-acquisitions {
@@ -574,8 +580,8 @@
 
     .all-numbers-in-mil {
         position: relative;
-        top: 115px;
-        right: 99px;
+        top: 85px;
+        /* right: 99px; */
     }
 
     .prod-jour-chart-heading{

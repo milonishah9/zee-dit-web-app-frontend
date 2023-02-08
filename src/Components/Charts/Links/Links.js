@@ -159,10 +159,10 @@ const Links = (props) => {
 
   return (
     <div className="line-chart-with-animation">
-      <p className="all-numbers-in-mil">All numbers in Millions</p>
+      
       <div className="line-chart-all-dots">
         <div className="line-chart-acquisitions">
-        
+          <p className="all-numbers-in-mil">All numbers in Millions</p>
           <p className="prod-jour-chart-heading">Acquisitions</p>
           
           <label id="show" className="line-chart-dots line-chart-dot-odd" onClick={(event) =>handleBubbleClick(event, 'Acquisitions')}></label>
