@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import img01 from '../../../Components/Images/03.png'
-import img02 from '../../../Components/Images/04.png'
-import img03 from '../../../Components/Images/05.png'
+import img01 from '../../../Components/Images/06.svg'
+import img02 from '../../../Components/Images/07.svg'
+import img03 from '../../../Components/Images/08.svg'
 
 const ProductUserJourney = (props) => {
   const { data } = props;
