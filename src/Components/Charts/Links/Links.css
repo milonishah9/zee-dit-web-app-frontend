@@ -689,8 +689,13 @@
 
     .line-chart-acquisitions .prod-jour-chart-heading{
         position: relative;
-        left: 50px;
+        left: 80px;
         width: 90px;
+        width: 200px;
+    }
+
+    .prod-jour-chart-heading{
+        width: 200px;
     }
     
     .line-chart-discovery {
