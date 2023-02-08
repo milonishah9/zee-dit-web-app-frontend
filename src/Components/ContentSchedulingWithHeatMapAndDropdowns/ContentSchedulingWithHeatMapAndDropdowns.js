@@ -304,6 +304,21 @@ const HeatMapWithDropDownFilters = (props) => {
 
     const { dropdownFilters } = props;
 
+    let filerNames = dropdownFilters.map(item => item.name);
+
+    let initialStateObject = {};
+
+    filerNames.forEach(element => {
+        initialStateObject[element] = ''
+    });
+
+    console.log('stateObject', initialStateObject);
+
+    const [selectedDropDownFilters, setSelectedDropDownFilters] = useState(initialStateObject);
+
+    // console.log('filerNames', filerNames);
+
+
     // const dropdownFilterNames = Object.assign({}, dropdownFilters);
     const dropdownFilterNames = dropdownFilters.map((item) => item.name)
 
