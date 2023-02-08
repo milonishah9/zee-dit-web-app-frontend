@@ -65,7 +65,7 @@ const Links = (props) => {
       .select("#linkChart")
       .append("svg").classed('my-line-chart-svg', true)
       .attr("height", svgHeight)
-      .attr("width", isMobile ? (1000) : (window.innerWidth-minusWidth));
+      .attr("width", isMobile ? (1300) : (window.innerWidth-minusWidth));
     const margin = { top: 0, bottom: 20, left: 30, right: 20 };
     const chart = svg
       .append("g")
@@ -159,9 +159,12 @@ const Links = (props) => {
 
   return (
     <div className="line-chart-with-animation">
+      
       <div className="line-chart-all-dots">
         <div className="line-chart-acquisitions">
+          <p className="all-numbers-in-mil">All numbers in Millions</p>
           <p className="prod-jour-chart-heading">Acquisitions</p>
+          
           <label id="show" className="line-chart-dots line-chart-dot-odd" onClick={(event) =>handleBubbleClick(event, 'Acquisitions')}></label>
         </div>
         <div className="line-chart-discovery">
