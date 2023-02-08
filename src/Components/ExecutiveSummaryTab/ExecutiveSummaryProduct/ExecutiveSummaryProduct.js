@@ -95,6 +95,7 @@ const ExecutiveSummaryContent = () => {
             <h4>Charters</h4>
             <Links onClick={getData}/>
 
+            <div className="prod-jou-icons-and-cards">
             <div className="prod-jou-icons-indicators">
               <label>
                 <svg
@@ -174,6 +175,7 @@ const ExecutiveSummaryContent = () => {
                 <div className="data-product1"><ProductUserJourney data={['Avg. Active Days', 1000, -50]} /></div>
               </div>}
 
+            </div>
             </div>
           </div>
         )}

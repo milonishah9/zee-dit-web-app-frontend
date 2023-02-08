@@ -209,45 +209,54 @@ div.executive-summary-content-active-tab {
 
 @media only screen and (max-width: 1560px) and (min-width: 1441px){
 
+  .prod-jou-icons-and-cards{
+    position: relative;
+    bottom: 70px;
+  }
+
+  .product-userjourney-card-heading {
+    height: 18px;
+  }
+
   .data-product{
     position: relative;
-    bottom: 572px;
+    bottom: 5px;
   }
 
   .product-journey-acquisitions {
-    width: 15%;
+    width: 210px;
     position: absolute;
-    left: 20px;
+    left: 77px;
 }
 
 .product-journey-discovery {
-  width: 15%;
+  width: 210px;
   position: absolute;
-  left: 245px;
+  left: 313px;
 }
 
 .product-journey-advertisement {
-  width: 15%;
+  width: 210px;
   position: absolute;
-  left: 535px;
+  left: 548.5px;
 }
 
 .product-journey-subscriptions {
-  width: 15%;
+  width: 210px;
   position: absolute;
-  left: 812px;
+  left: 785px;
 }
 
 .product-journey-engagement {
-  width: 15%;
+  width: 210px;
   position: absolute;
-  left: 1089px;
+  left: 1024px;
 }
 
 .product-journey-loyalty {
-  width: 14%;
+  width: 210px;
   position: absolute;
-  left: 1338px;
+  left: 1263px;
 }
   
 .line-chart-with-animation{
