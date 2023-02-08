@@ -53,7 +53,7 @@ div.executive-summary-content-active-tab {
   box-shadow: 0px 2px 5px #d6def8;
   border-radius: 4px;
   margin-top: 20px;
-  width: 82%;
+  width: 100%;
 }
 
 .product-userjourney-card-heading {
@@ -155,48 +155,49 @@ div.executive-summary-content-active-tab {
 .product-journey-container h4{
   margin-left: 30px;
   margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .product-journey-acquisitions {
-  width: 14%;
-  position: absolute;
-  left: 20px;
-  top: 487px;
+  width: 300px;
+    position: absolute;
+    left: 30px;
+    top: 487px;
 }
 
 .product-journey-discovery {
-  width: 14%;
+  width: 300px;
   position: absolute;
-  left: 313px;
+  left: 344px;
   top: 487px;
 }
 
 .product-journey-advertisement {
-  width: 14%;
+  width: 300px;
   position: absolute;
-  left: 673px;
+  left: 656px;
   top: 487px;
 }
 
 
 .product-journey-subscriptions {
-  width: 14%;
+  width: 300px;
   position: absolute;
-  left: 1032px;
+  left: 970px;
   top: 487px;
 }
 
 .product-journey-engagement {
-  width: 14%;
+  width: 300px;
   position: absolute;
-  left: 1382px;
+  left: 1284px;
   top: 487px;
 }
 
 .product-journey-loyalty {
-  width: 14%;
+  width: 300px;
   position: absolute;
-  left: 1676px;
+  left: 1598px;
   top: 487px;
 }
 
@@ -266,25 +267,25 @@ div.executive-summary-content-active-tab {
   .product-journey-acquisitions {
     width: 15%;
     position: absolute;
-    left: 20px;
+    left: 24px;
 }
 
 .product-journey-discovery {
   width: 15%;
   position: absolute;
-  left: 243px;
+  left: 17px;
 }
 
 .product-journey-advertisement {
   width: 15%;
   position: absolute;
-  left: 500px;
+  left: 3px;
 }
 
 .product-journey-subscriptions {
   width: 15%;
   position: absolute;
-  left: 768px;
+  left: 10px;
 }
 
 .product-journey-engagement {
@@ -428,7 +429,7 @@ div.executive-summary-content-active-tab {
   .product-journey-discovery {
     width: 15.7%;
     position: absolute;
-    left: 246px;
+    left: 216px;
 }
   
 .product-journey-advertisement {

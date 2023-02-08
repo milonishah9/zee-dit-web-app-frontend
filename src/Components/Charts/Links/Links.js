@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { useMediaQuery } from "@material-ui/core";
 
 const Links = (props) => {
-  var minusWidth = 100;
+  var minusWidth = 300;
   var svgHeight = 200 ;
   const isMobile = useMediaQuery('(max-width: 767px)');
   // if(isMobile){

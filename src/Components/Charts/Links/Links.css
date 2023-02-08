@@ -1,5 +1,5 @@
 .line-chart-with-animation{
-    margin-top: 26px;
+    /* margin-top: 26px; */
     text-align: center;
 }
 
@@ -37,12 +37,12 @@
 
 .line-chart-acquisitions{
     position: relative;
-    right: 527px;
+    right: 30px;
 }
 
 .line-chart-discovery{
     position: relative;
-    right: 317px;
+    right: 17px;
 }
 .line-chart-discovery label{
     background-color: #FF647C;
@@ -50,7 +50,7 @@
 
 .line-chart-advertisement{
     position: relative;
-    right: 102px;
+    right: 3px;
 }
 .line-chart-advertisement label{
     background-color: #FFC656;
@@ -58,7 +58,7 @@
 
 .line-chart-subscriptions{
     position: relative;
-    left: 112px;
+    left: 11px;
 }
 .line-chart-subscriptions label{
     background-color: #00C48C;
@@ -66,7 +66,7 @@
 
 .line-chart-engagement{
     position: relative;
-    left: 326px;
+    left: 25px;
 }
 
 .line-chart-engagement label{
@@ -75,7 +75,7 @@
 
 .line-chart-loyalty{
     position: relative;
-    left: 540px;
+    left: 38px;
 }
 .line-chart-loyalty label{
     background-color: #FF647C;
@@ -94,9 +94,12 @@
     font-family: GothamLight;
     border: 1px solid black;
     /* padding: 3px 10px; */
-    width: 138px;
-    height: 36px;
+    width: 300px;
+    height: 42px;
     display: grid;
+    align-content: center;
+    /* justify-content: start; */
+    /* padding-left: 15px; */
     align-content: space-around;
     background: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%);
     border-radius: 100px;
