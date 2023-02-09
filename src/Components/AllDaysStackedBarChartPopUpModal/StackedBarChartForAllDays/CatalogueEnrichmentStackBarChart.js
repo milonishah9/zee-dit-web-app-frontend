@@ -165,7 +165,7 @@ const CatalogueEnrichmentStackBarChart = (props) => {
     ]
     
     const colors = {
-        matchTwo: "#945ED2",
+        matchTwo: "#C996EB",
     }
     
     // const dimensions = useResizeObserver(wrapperRef);
@@ -178,7 +178,7 @@ const CatalogueEnrichmentStackBarChart = (props) => {
         const everything = svg.selectAll("*");
         everything.remove();
         const width =200;
-        const height = 200;
+        const height = 100;
 
         // const { width, height } = wrapperRef.current.getBoundingClientRect();
 
@@ -250,35 +250,35 @@ const CatalogueEnrichmentStackBarChart = (props) => {
             .attr("opacity", ".6")
             .attr("stroke-dasharray", "2");
 
-        const yAxis = axisLeft(yScale)
-            .tickSize(0)
-            .ticks(11)
-            .tickValues([0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]);
+        // const yAxis = axisLeft(yScale)
+        //     .tickSize(0)
+        //     .ticks(11)
+        //     .tickValues([0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]);
 
-        yAxisSvg
-            .select(".y-axis")
-            .attr("height", height)
-            .call(yAxis)
-            .selectAll("text")
-            .attr("class", "stacekd-bar-chart-ticks");
+        // yAxisSvg
+        //     .select(".y-axis")
+        //     .attr("height", height)
+        //     .call(yAxis)
+        //     .selectAll("text")
+        //     .attr("class", "stacekd-bar-chart-ticks");
 
-        yAxisSvg
-            .select(".domain")
-            .attr("stroke", "#D8D8D8")
-            .attr("stroke-width", "1")
-            .attr("opacity", ".6")
-            .attr("stroke-dasharray", "2");
+        // yAxisSvg
+        //     .select(".domain")
+        //     .attr("stroke", "#D8D8D8")
+        //     .attr("stroke-width", "1")
+        //     .attr("opacity", ".6")
+        //     .attr("stroke-dasharray", "2");
 
-        yAxisSvg
-            .selectAll('tick')
-            .attr("stroke", "#D8D8D8")
-            .attr("stroke-width", "1")
-            .attr("opacity", ".6")
-            .attr("stroke-dasharray", "2");
+        // yAxisSvg
+        //     .selectAll('tick')
+        //     .attr("stroke", "#D8D8D8")
+        //     .attr("stroke-width", "1")
+        //     .attr("opacity", ".6")
+        //     .attr("stroke-dasharray", "2");
 
-        let x2 = scaleOrdinal()
-            .domain(data.map(d => d.key))
-            .range([0, width - 120]);
+        // let x2 = scaleOrdinal()
+        //     .domain(data.map(d => d.key))
+        //     .range([0, width - 120]);
 
         // const averageline = line()
         //     .x(function (d, i) {
@@ -309,8 +309,8 @@ const CatalogueEnrichmentStackBarChart = (props) => {
         var mousemove = function (event, d) {
             Tooltip
                 .html(tootTipHtml(event))
-                .style("top", event.pageY - 180 + "px")
-                .style("left", event.pageX - 400 + "px")
+                .style("top", event.pageY + "px")
+                .style("left", event.pageX  + "px")
         }
         var mouseleave = function (d) {
             Tooltip
@@ -320,10 +320,10 @@ const CatalogueEnrichmentStackBarChart = (props) => {
                 .style("opacity", 1)
         }
 
-        svg
-            .on("mousemove", mousemove)
-            .on("mouseleave", mouseleave)
-            .on("mouseover", mouseover)
+        // svg
+        //     .on("mousemove", mousemove)
+        //     .on("mouseleave", mouseleave)
+        //     .on("mouseover", mouseover)
 
     }, [colors, data, keys]);
 

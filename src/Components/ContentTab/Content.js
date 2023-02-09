@@ -4,7 +4,7 @@ import './Content.css'
 import CatalogueEnrichment from "./CatalogueEnrichment/CatalogueEnrichment";
 
 const Content = () => {
-    const [buttonTab, setButtonTab] = useState('Enrichment')
+    const [buttonTab, setButtonTab] = useState('')
     const handleButtonClick = (tabsName) => {
         setButtonTab(tabsName)
     }
@@ -24,7 +24,7 @@ const Content = () => {
             </div>
             
             <div>
-                <CatalogueEnrichment />
+            {buttonTab === 'Enrichment' && <CatalogueEnrichment />}
             </div>
             </div>
         </div>
