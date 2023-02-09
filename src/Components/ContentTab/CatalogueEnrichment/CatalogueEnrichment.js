@@ -11,7 +11,7 @@ const CatalogueEnrichment = () => {
                 <CatalogueEnrichmentKpiCard />
                 <CatalogueEnrichmentKpiCard />
             </div>
-            <div className="catalogue-enrichment-indicators">
+            <div className="catalogue-enrichment-contents">
                 <label className="catalogue-last-90day">Last 90 Days</label>
                 <div className="all-indicators-with-icons">
                     <label>New Launch</label>
@@ -20,6 +20,9 @@ const CatalogueEnrichment = () => {
                     <label>Watch time till date</label>
                     <label>Viewers till date</label>
                 </div>
+            </div>
+            <div>
+                
             </div>
         </div>
     )
