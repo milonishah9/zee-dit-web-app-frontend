@@ -318,12 +318,12 @@
 
     .line-chart-acquisitions {
         position: relative;
-        right: -105px;
+        right: -105px !important;
     }
 
     .line-chart-discovery {
         position: relative;
-        right: -98px;
+        right: -98px !important;
         top: 40px;
     }
 
@@ -335,19 +335,70 @@
 
     .line-chart-subscriptions {
         position: relative;
-        left: 117px;
+        left: 117px !important;
         top: 40px;
     }
 
     .line-chart-engagement {
         position: relative;
-        left: 127px;
+        left: 127px !important;
         top: 40px;
     }
 
     .line-chart-loyalty {
         position: relative;
-        left: 136px;
+        left: 136px !important;
+        top: 40px;
+    }
+}
+
+@media only screen and (width: 1250px){
+    .prod-jour-chart-heading{
+        width: 140px;
+        height: 42px;
+    }
+
+    .line-chart-all-dots{
+        display: flex;
+    }
+
+    .all-numbers-in-mil {
+        position: relative;
+        top: 86px;
+    }
+
+    .line-chart-acquisitions {
+        position: relative;
+        right: -92px !important;
+    }
+
+    .line-chart-discovery {
+        position: relative;
+        right: -115px !important;
+        top: 40px;
+    }
+
+    .line-chart-advertisement {
+        position: relative;
+        right: -151px;
+        top: 40px;
+    }
+
+    .line-chart-subscriptions {
+        position: relative;
+        left: 188px !important;
+        top: 40px;
+    }
+
+    .line-chart-engagement {
+        position: relative;
+        left: 224px !important;
+        top: 40px;
+    }
+
+    .line-chart-loyalty {
+        position: relative;
+        left: 255px !important;
         top: 40px;
     }
 }
@@ -651,6 +702,7 @@
     }
 }
 
+
 @media only screen and (max-width: 767px) {
 
     .line-chart-discovery p {
@@ -713,37 +765,61 @@
     
     .line-chart-discovery {
         position: relative;
-        right: 12px;
+        right: -2px;
         top: -28px;
+    }
+
+    .line-chart-discovery label{
+        position: relative;
+        top: 130px;
     }
 
     .line-chart-advertisement {
         position: relative;
-        left: 149px;
-        top: -28px;
+        left: 104px;
+        top: 11px;
     }
 
     .line-chart-subscriptions {
         position: relative;
-        left: 301px;
-        bottom: 30px;
+        left: 201px;
+    }
+
+    .line-chart-subscriptions p{
+        position: relative;
+        top: -30px;
+    }
+
+    .line-chart-subscriptions label{
+        position: relative;
+        top: 62px;
     }
 
     .line-chart-engagement {
         position: relative;
-        left: 460px;
-        bottom: 30px;
+        left: 301px;
+    }
+    .line-chart-engagement label{
+        position: relative;
+        top: -2px;
+    }
+    .line-chart-engagement p{
+        position: relative;
+        top: -30px;
     }
 
     .line-chart-loyalty {
         position: relative;
-        left: 273px;
-        bottom: 29px;
+        left: 402px;
     }
 
     .line-chart-loyalty p{
         position: relative;
-        right: 7px;
+        top: -31px !important;
+    }
+    .line-chart-loyalty label{
+        position: relative;
+        top: 63px;
     }
 
     
