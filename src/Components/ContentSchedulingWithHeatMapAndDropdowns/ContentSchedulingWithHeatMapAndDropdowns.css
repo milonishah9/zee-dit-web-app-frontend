@@ -24,18 +24,26 @@
     padding: 1.5px 3px;
     border-radius: 4px;
     color: #333333;
-
 }
 
 .content-scheduling-with-heatmap-dropdowns-dropdown option {
     background-color: #333333;
     color: #D8E3FF;
-    
 }
 
 .content-scheduling-with-heatmap-dropdowns-dropdown option:hover {
     /* background-color: sblack !important; */
     margin-top: 5rem;
+}
+
+.dropdown-filers-apply-button {
+    background: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%);
+    border-radius: 4px;
+    color: white;
+    width: 5%;
+    height: 4%;
+    margin-top: 18px;
+    outline: none;
 }
 
 .heatmap-container {
@@ -44,9 +52,197 @@
     cursor: not-allowed; */
 }
 
+.drop-down-menu-contaier {
+    display: flex;
+    flex-direction: column;
+    min-width: 12%;
+    margin: 0 1rem;
+}
+
+.drop-down-menu-label {
+    color: #808080;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+.drop-down-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.drop-down-menu-selection-box {
+    display: flex;
+    background: #FFFFFF;
+    border: 1px solid #D8E3FF;
+    border-radius: 4px;
+    padding: 0px 7px;
+    justify-content: space-between;
+}
+
+.drop-down-menu-selection-box-placeholder {
+    /* font-size: 12px; */
+    color: #808080;
+    margin: 0 !important;
+    padding: 0 4px !important;
+}
+
+.drop-down-menu-selection-box-down-arrow-icon {}
+
+.drop-down-menu-options-container {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(89, 108, 168, 0.4);
+    border-radius: 4px;
+    position: absolute;
+    /* top: 100%;   */
+    min-width: 11.8%;
+    margin-top: 2rem;
+
+    /* cursor:; */
+    padding: 5px 0px;
+}
+
+.drop-down-menu-option {
+    padding: 0px 8px;
+}
+
+.drop-down-menu-option:hover {
+    background-color: #6979F8;
+    color: #FFFFFF;
+}
+
+.empty-heatmap-container {
+    width: 95%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin: 5rem 2rem;
+    top: 25%;
+    /* border: 1px solid #D8E3FF;
+    background-color: #f4f5fb; */
+    font-size: 0.9rem;
+    color: #808080;
+    font-weight: 600;
+    font-family: 'GothamLight';
+}
+
+.dropdown-calender-container {
+    width: 65%;
+    /* outline: 2px; */
+    /* border: none; */
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+
+}
+
+.react-calendar {
+    /* width: 90%; */
+}
+
+.react-calendar__navigation {
+    border-bottom: 0.5px solid #D8D8D8;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.react-calendar__month-view__days button[disabled] {
+    color: #333333;
+    opacity: 0.2;
+}
+
+.dropdown-calender-container .react-calendar {}
+
+.dropdown-calender-container button {
+    background-color: white;
+    border: none;
+    height: 24px;
+    width: 24px;
+    margin: 0px 2px;
+    cursor: pointer;
+    outline: none !important;
+    flex-basis: inherit !important;
+}
+
+.dropdown-calender-container .react-calendar__navigation__prev2-button,
+.dropdown-calender-container .react-calendar__navigation__next2-button {
+    display: none;
+}
+
+.dropdown-calender-container .react-calendar__navigation__label {
+    color: #333333;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.dropdown-calender-container .react-calendar__navigation {
+    display: flex;
+    margin-bottom: 0 !important;
+    height: 25px;
+}
+
+.dropdown-calender-container .react-calendar__month-view__weekdays__weekday abbr {
+    font-size: 12px;
+    color: #333333;
+    font-weight: 800;
+    text-decoration: none !important;
+}
+
+.dropdown-calender-container .react-calendar__month-view__days__day--neighboringMonth {
+    /* color: rgb(124, 113, 148); */
+    /* color: rgb(124, 113, 148); */
+    color: #333333;
+    opacity: 0.2;
+    visibility: hidden;
+    /* display: none; */
+}
+
+.dropdown-calender-container .react-calendar__tile {
+    color: #333333;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0px;
+    background-color: white;
+    border-radius: 50%;
+    transition: background-color 0.1s ease-in-out 0s;
+}
+
+.dropdown-calender-container .react-calendar__tile:hover,
+.dropdown-calender-container .react-calendar__tile--active {
+    background-color: #6979F8;
+    border-radius: 50%;
+    font-size: 14px;
+    width: 24px;
+    height: 24px;
+    color: white !important;
+    font-weight: 600;
+}
+
+.react-calendar__month-view__days button[disabled]:hover {
+    cursor: not-allowed;
+    background: none;
+    color: #333333 !important;
+    opacity: 0.2;
+}
+
+.heatmap-container {
+    height: 60vh;
+    overflow-y: scroll;
+    margin-top: 3rem;
+}
+
+.heatmap-child-container {
+   
+    /* height: 120px; */
+}
+
+
 @media only screen and (max-width: 768px) {
     .heatmap-container {
         overflow-x: scroll;
+
     }
 
     .heatmap-child-container {
