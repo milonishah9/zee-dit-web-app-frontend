@@ -117,7 +117,7 @@
     .line-chart-with-animation{
         overflow: hidden!important;
     }
-    .line-chart-acquisitions{
+    /* .line-chart-acquisitions{
         right: 181px!important;
     }
     .line-chart-loyalty{
@@ -128,7 +128,7 @@
     }
     .line-chart-engagement {
         left:123px!important;
-    }
+    } */
 }
 
 /* ---------------laptop----------------------- */
