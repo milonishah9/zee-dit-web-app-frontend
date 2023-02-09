@@ -659,7 +659,7 @@
    
     .line-chart-discovery {
         position: relative;
-        right: 17px;
+        right: 3px;
         top: 40px;
     }
     .line-chart-discovery p{
@@ -669,13 +669,13 @@
 
     .line-chart-advertisement {
         position: relative;
-        right: 74px;
+        right: 42px;
         top: 40px;
     }
 
     .line-chart-subscriptions {
         position: relative;
-        left: -128px;
+        left: -82px;
         top: 40px;
     }
     .line-chart-subscriptions p{
@@ -685,13 +685,13 @@
 
     .line-chart-engagement {
         position: relative;
-        left: -184px;
+        left: -123px;
         top: 40px;
     }
 
     .line-chart-loyalty {
         position: relative;
-        left: -241px;
+        left: -168px;
         top: 40px;
     }
 
