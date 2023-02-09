@@ -22,10 +22,10 @@ const HeatMap = (props) => {
 
         const svg = d3
             .select(svgRef.current)
-            .attr("viewBox", "0 0 650 200")
+            .attr("viewBox", "0 0 650 210")
             .classed("heat-map-svg", true)
             .append("g")
-            .attr("transform", "translate(30,0)");
+            .attr("transform", "translate(30,10)");
 
         let xScale = d3
             .scaleBand()
@@ -40,6 +40,7 @@ const HeatMap = (props) => {
 
         svg.append("g")
             .attr("transform", "translate(0," + -10 + ")")
+            .attr("z-index", "1000")
             .call(xAxis);
         // .style("opacity", isAllDropdownsSelected ? 1 : 0.2);
 
