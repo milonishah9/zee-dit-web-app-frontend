@@ -6,10 +6,10 @@ const CatalogueEnrichment = () => {
     return (
         <div>
             <div className="catalogue-enrichment-kpi-cards">
-                <CatalogueEnrichmentKpiCard />
-                <CatalogueEnrichmentKpiCard />
-                <CatalogueEnrichmentKpiCard />
-                <CatalogueEnrichmentKpiCard />
+                <CatalogueEnrichmentKpiCard data = {['Total Hours of Content Published', 'XX', '8% from last period']}/>
+                <CatalogueEnrichmentKpiCard data = {['DAU', 'XX', '2% from last period']}/>
+                <CatalogueEnrichmentKpiCard data = {['Viewers', 'XX', '8% from last period']}/>
+                <CatalogueEnrichmentKpiCard data = {['Total Hours of Content Published', 'XX', '8% from last period']}/>
             </div>
             <div className="catalogue-enrichment-contents">
                 <label className="catalogue-last-90day">Last 90 Days</label>
@@ -22,7 +22,7 @@ const CatalogueEnrichment = () => {
                 </div>
             </div>
             <div>
-                
+
             </div>
         </div>
     )

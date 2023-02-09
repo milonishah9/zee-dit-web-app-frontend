@@ -22,7 +22,7 @@ const ContentHeader = (props) => {
                         <img src='/static/images/logos/ILT20-logo.png' height={40} alt='ILT20 Logo' />
                     </div> */}
                         <div className='ilt20-header-subdiv-left-3'>
-                            <p>*illustrative data</p>
+                            {/* <p>*illustrative data</p> */}
                         </div>
                 </div>
 
