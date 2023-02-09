@@ -70,3 +70,12 @@ p{
     line-height: 11px;
     margin-left: 15px;
 }
+/*Moblie Media Query */
+
+@media only screen and (max-width: 767px) {
+    .content-button-tab{
+        font-size: 10px;
+        height:40px;
+    }
+    .content-buttons-tabs{margin-top: 26px;}
+}
