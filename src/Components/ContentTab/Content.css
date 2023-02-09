@@ -1,3 +1,35 @@
-.content-tabs {
-    display: flex;
+.contents{
+    width: 96.5%;
+    margin: auto;
 }
+
+.content-buttons-tabs {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+}
+
+.content-button-tab{
+    border: none;
+    color: #212529;
+    background: #E9EFFF;
+    border-radius: 4px;
+    width: 24.4%;
+    height: 30px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 15px;
+}
+
+.content-active-button-tab{
+    background: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%);
+    border-radius: 4px;
+    color: #FFFFFF;
+    width: 24.4%;
+    height: 30px;
+    border: none;
+}
+
