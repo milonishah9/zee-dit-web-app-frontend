@@ -113,6 +113,52 @@
     color: #3e1f76;
     /* right: 858px; */
 }
+
+@media only screen and (max-width: 1799px) and (min-width: 1561px){
+
+    .prod-jour-chart-heading{
+        width: 250px;
+    }
+    .line-chart-all-dots{
+        display: flex;
+    }
+
+    .line-chart-acquisitions {
+        position: relative;
+        right: -59px;
+    }
+
+    .line-chart-discovery {
+        position: relative;
+        right: -85px;
+        top: 40px;
+    }
+
+    .line-chart-advertisement {
+        position: relative;
+        right:-114px;
+        top: 40px;
+    }
+
+    .line-chart-subscriptions {
+        position: relative;
+        left: 140px;
+        top: 40px;
+    }
+
+    .line-chart-engagement {
+        position: relative;
+        left: 170px;
+        top: 40px;
+    }
+
+    .line-chart-loyalty {
+        position: relative;
+        left: 199px;
+        top: 40px;
+    }
+}
+
 @media only screen and (max-width: 1440px) and (min-width: 1100px){
     .line-chart-with-animation{
         overflow: hidden!important;
@@ -583,6 +629,7 @@
         right: 4px;
     }
 }
+
 
 @media only screen and (width: 1280px){
     /* .prod-jour-chart-heading{
