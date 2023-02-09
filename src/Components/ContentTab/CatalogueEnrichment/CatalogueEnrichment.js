@@ -1,5 +1,6 @@
 import React from "react";
 import './CatalogueEnrichment.css'
+import CatalogueEnrichmentBottomContents from "./CatalogueEnrichmentBottomContents";
 import CatalogueEnrichmentKpiCard from "./CatalogueEnrichmentKpiCard";
 
 const CatalogueEnrichment = () => {
@@ -11,7 +12,8 @@ const CatalogueEnrichment = () => {
                 <CatalogueEnrichmentKpiCard data = {['Viewers', '90', '8% from last period']}/>
                 <CatalogueEnrichmentKpiCard data = {['Total Hours of Content Published', '34', '8% from last period']}/>
             </div>
-            <div className="catalogue-enrichment-contents">
+
+            <div className="catalogue-enrichment-indicators">
                 <label className="catalogue-last-90day">Last 90 Days</label>
                 <div className="all-indicators-with-icons">
                     <label>New Launch</label>
@@ -21,9 +23,14 @@ const CatalogueEnrichment = () => {
                     <label>Viewers till date</label>
                 </div>
             </div>
-            <div>
 
+            <div className="catalogue-enrichment-contents">
+                <CatalogueEnrichmentBottomContents data = {['Trailers', 'No. of Viewers', '1.48M', '2% from previous']}/>
+                <CatalogueEnrichmentBottomContents data = {['Trailers', 'No. of Viewers', '1.48M', '2% from previous']}/>
+                <CatalogueEnrichmentBottomContents data = {['Trailers', 'No. of Viewers', '1.48M', '2% from previous']}/>
+                <CatalogueEnrichmentBottomContents data = {['Trailers', 'No. of Viewers', '1.48M', '2% from previous']}/>
             </div>
+            
         </div>
     )
 }

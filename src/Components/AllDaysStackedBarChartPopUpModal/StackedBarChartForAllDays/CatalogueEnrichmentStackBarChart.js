@@ -147,16 +147,240 @@ const CatalogueEnrichmentStackBarChart = (props) => {
             matchTwo: 50,
         },
         {
-            key: "Feb'1",
+            key: "32",
             matchTwo: 55,
         },
         {
-            key: "2",
+            key: "33",
             matchTwo: 40,
         },
         {
-            key: "3",
+            key: "34",
             matchTwo: 50,
+        },
+        {
+            key: "35",
+            matchTwo: 55,
+        },
+        {
+            key: "36",
+            matchTwo: 40,
+        },
+        {
+            key: "37",
+            matchTwo: 50,
+        },
+        {
+            key: "38",
+            matchTwo: 55,
+        },
+        {
+            key: "39",
+            matchTwo: 70,
+        },
+        {
+            key: "40",
+            matchTwo: 60,
+        },
+        {
+            key: "41",
+            matchTwo: 50,
+        },
+        {
+            key: "42",
+            matchTwo: 55,
+        },
+        {
+            key: "43",
+            matchTwo: 40,
+        },
+        {
+            key: "44",
+            matchTwo: 50,
+        },
+        {
+            key: "45",
+            matchTwo: 70,
+        },
+        {
+            key: "46",
+            matchTwo: 60,
+        },
+        {
+            key: "47",
+            matchTwo: 50,
+        },
+        {
+            key: "48",
+            matchTwo: 55,
+        },
+        {
+            key: "49",
+            matchTwo: 40,
+        },
+        {
+            key: "50",
+            matchTwo: 50,
+        },
+        {
+            key: "51",
+            matchTwo: 55,
+        },
+        {
+            key: "52",
+            matchTwo: 70,
+        },
+        {
+            key: "53",
+            matchTwo: 60,
+        },
+        {
+            key: "54",
+            matchTwo: 50,
+        },
+        {
+            key: "55",
+            matchTwo: 55,
+        },
+        {
+            key: "56",
+            matchTwo: 40,
+        },
+        {
+            key: "57",
+            matchTwo: 50,
+        },
+        {
+            key: "58",
+            matchTwo: 55,
+        },
+        {
+            key: "59",
+            matchTwo: 70,
+        },
+        {
+            key: "60",
+            matchTwo: 60,
+        },
+        {
+            key: "61",
+            matchTwo: 50,
+        },
+        {
+            key: "62",
+            matchTwo: 55,
+        },
+        {
+            key: "63",
+            matchTwo: 40,
+        },
+        {
+            key: "64",
+            matchTwo: 50,
+        },
+        {
+            key: "65",
+            matchTwo: 55,
+        },
+        {
+            key: "66",
+            matchTwo: 40,
+        },
+        {
+            key: "67",
+            matchTwo: 50,
+        },
+        {
+            key: "68",
+            matchTwo: 55,
+        },
+        {
+            key: "69",
+            matchTwo: 70,
+        },
+        {
+            key: "70",
+            matchTwo: 60,
+        },
+        {
+            key: "71",
+            matchTwo: 50,
+        },
+        {
+            key: "72",
+            matchTwo: 55,
+        },
+        {
+            key: "73",
+            matchTwo: 40,
+        },
+        {
+            key: "74",
+            matchTwo: 50,
+        },
+        {
+            key: "75",
+            matchTwo: 55,
+        },
+        {
+            key: "76",
+            matchTwo: 40,
+        },
+        {
+            key: "77",
+            matchTwo: 50,
+        },
+        {
+            key: "78",
+            matchTwo: 55,
+        },
+        {
+            key: "79",
+            matchTwo: 70,
+        },
+        {
+            key: "80",
+            matchTwo: 60,
+        },
+        {
+            key: "81",
+            matchTwo: 50,
+        },
+        {
+            key: "82",
+            matchTwo: 55,
+        },
+        {
+            key: "83",
+            matchTwo: 40,
+        },
+        {
+            key: "84",
+            matchTwo: 50,
+        },
+        {
+            key: "85",
+            matchTwo: 55,
+        },
+        {
+            key: "86",
+            matchTwo: 40,
+        },
+        {
+            key: "87",
+            matchTwo: 50,
+        },
+        {
+            key: "88",
+            matchTwo: 55,
+        },
+        {
+            key: "89",
+            matchTwo: 70,
+        },
+        {
+            key: "90",
+            matchTwo: 60,
         },
     ]
     
@@ -177,7 +401,7 @@ const CatalogueEnrichmentStackBarChart = (props) => {
 
         const everything = svg.selectAll("*");
         everything.remove();
-        const width =200;
+        const width =280;
         const height = 100;
 
         // const { width, height } = wrapperRef.current.getBoundingClientRect();
@@ -332,7 +556,7 @@ const CatalogueEnrichmentStackBarChart = (props) => {
         <div className="stacked-bar-chart-cont">
             <div ref={wrapperRef} className="svg-wrap-all-days-stacked-bar-chart">
                 <div>
-                    <svg ref={yAxisRef} className="y-axis-svg" width="10">
+                    <svg ref={yAxisRef} className="y-axis-svg" width="1">
                         <g className="y-axis" />
                     </svg>
                 </div>

@@ -58,7 +58,7 @@ p{
     top: 7px;
 }
 
-.catalogue-enrichment-contents{
+.catalogue-enrichment-indicators{
     display: flex;
     margin: 10px 0px;
     justify-content: space-between;
@@ -69,4 +69,26 @@ p{
     font-size: 10px;
     line-height: 11px;
     margin-left: 15px;
+}
+
+.trailers-svg-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.kpi-card-value p{
+    margin-left: 10px;
+}
+
+.catalogue-enrichment-contents{
+    background: #FFFFFF;
+    border: 1px solid #D8E3FF;
+    box-shadow: 0px 2px 5px #D6DEF8;
+    border-radius: 4px;
+    display: flex;
+    padding: 10px;
+}
+
+.catalogue-enrichment-contents-div{
+    width: 100%;
 }
