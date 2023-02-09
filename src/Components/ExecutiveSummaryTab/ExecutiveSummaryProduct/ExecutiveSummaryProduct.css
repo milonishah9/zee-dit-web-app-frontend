@@ -619,6 +619,23 @@ div.executive-summary-content-active-tab {
   .data-product{margin-top: 0rem;grid-template-columns:auto!important;}
   .product-userjourney-card{margin-left: 20px;margin-right: 20px;}
 
+  .prod-jou-icons-indicators label {
+    margin: 0 4px;
+    font-size: 13px;
+}
+
+.prod-jou-icons-indicators svg{
+  width: 18px;
+}
+.prod-jou-icons-indicators img{
+  width: 18px;
+}
+
+  .prod-jou-icons-indicators {
+    text-align: end;
+    margin-right: 5px;
+}
+
   .product-journey-container h4 {
     position: relative;
     top: 9.5px;
@@ -729,6 +746,11 @@ div.executive-summary-content-active-tab {
  }
 
  @media only screen and (max-width: 1030px) and (min-width: 1020px){
+  
+.prod-jou-icons-indicators {
+  text-align: end;
+  margin-right: 74px;
+}
 
   /* .product-icons-logo svg{
     width: 20px;

@@ -593,38 +593,37 @@
 
     .all-numbers-in-mil {
         position: absolute;
-        top: 75px;
-        /* left: -209px; */
+        top: 52px;
     }
 
     .line-chart-acquisitions {
         position: relative;
-        right: 208px !important;
+        right: -96px !important;
     }
 
     .line-chart-discovery {
         position: relative;
-        right: 128px !important;
+        right: -133px !important;
     }
 
     .line-chart-advertisement {
         position: relative;
-        right: 40px;
+        right: -174px !important;
     }
 
     .line-chart-subscriptions {
         position: relative;
-        left: 49px;
+        left: 218px !important;
     }
 
     .line-chart-engagement {
         position: relative;
-        left: 136px !important;
+        left: 258px !important;
     }
 
     .line-chart-loyalty {
         position: relative;
-        left: 216px !important;
+        left: 296px !important;
     }
 }
 
