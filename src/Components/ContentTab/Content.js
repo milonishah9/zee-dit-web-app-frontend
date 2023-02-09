@@ -1,0 +1,23 @@
+import React from "react";
+import ILTTwentrySummaryHeader from "../ILTTwentrySummaryHeader/ILTTwentrySummaryHeader";
+import ContentHeader from "./ContentHeader";
+
+const Content = () => {
+    return (
+        <div className="">
+            <div>
+                <ContentHeader header= "Content"/>
+            </div>
+            
+            <div className="">
+                <h4>Catalogue Enrichment</h4>
+                <h4>Content Scheduling</h4>
+                <h4>Content Marketing</h4>
+                <h4>Content Performance</h4>
+            </div>
+            
+        </div>
+    )
+}
+
+export default Content;
