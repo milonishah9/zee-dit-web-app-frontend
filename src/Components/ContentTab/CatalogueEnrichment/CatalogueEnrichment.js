@@ -4,6 +4,13 @@ import CatalogueEnrichmentBottomContents from "./CatalogueEnrichmentBottomConten
 import CatalogueEnrichmentKpiCard from "./CatalogueEnrichmentKpiCard";
 
 const CatalogueEnrichment = () => {
+    const data = {
+        bottomContentsData: {
+            TrailersData: {
+
+            }
+        }
+    }
     return (
         <div>
             <div className="catalogue-enrichment-kpi-cards">
@@ -26,9 +33,9 @@ const CatalogueEnrichment = () => {
 
             <div className="catalogue-enrichment-contents">
                 <CatalogueEnrichmentBottomContents data = {['Trailers', 'No. of Viewers', '1.48M', '2% from previous']}/>
-                <CatalogueEnrichmentBottomContents data = {['Trailers', 'No. of Viewers', '1.48M', '2% from previous']}/>
-                <CatalogueEnrichmentBottomContents data = {['Trailers', 'No. of Viewers', '1.48M', '2% from previous']}/>
-                <CatalogueEnrichmentBottomContents data = {['Trailers', 'No. of Viewers', '1.48M', '2% from previous']}/>
+                <CatalogueEnrichmentBottomContents data = {['Originals', 'No. of Viewers', '1.48M', '2% from previous']}/>
+                <CatalogueEnrichmentBottomContents data = {['Movies', 'No. of Viewers', '1.48M', '2% from previous']}/>
+                <CatalogueEnrichmentBottomContents data = {['TV Shows', 'No. of Viewers', '1.48M', '2% from previous']}/>
             </div>
             
         </div>
