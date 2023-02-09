@@ -517,38 +517,103 @@ div.executive-summary-content-active-tab {
  } 
 
  @media only screen and (max-width: 1279px) and (min-width: 1024px){
-  .product-journey-discovery {
-    width: 15.7%;
+
+  .product-icons-logo p{
+    font-size: 11px;
+  }
+
+  /* .product-icons-logo img{
+    width: 12px;
+  } */
+
+  .product-userjourney-card-heading{
+    height: 25px;
+  }
+
+  .prod-jou-icons-and-cards{
+    position: relative;
+    bottom: 80px;
+  }
+
+  .product-journey-acquisitions{
+    width: 140px;
     position: absolute;
-    left: 222px;
+    left: 108px;
+  }
+
+  .product-journey-discovery {
+    width: 140px;
+    position: absolute;
+    left: 259.5px;
 }
 
 .product-journey-advertisement {
-  width: 15.7%;
+  width: 140px;
   position: absolute;
-  left: 440px;
+  left: 408px;
 }
 
 .product-journey-subscriptions {
-  width: 15.7%;
+  width: 140px;
   position: absolute;
-  left: 670px;
+  left: 558px;
 }
 
 .product-journey-engagement {
-  width: 15.7%;
+  width: 140px;
   position: absolute;
-  left: 887px;
+  left: 707px;
 }
 
 .product-journey-loyalty {
-  width: 15.7%;
+  width: 140px;
   position: absolute;
-  left: 1085px;
+  left: 857px;
 }
  }
 
- 
+@media only screen and (width: 1250px){
+  .prod-jou-icons-and-cards{
+    position: relative;
+    bottom: 80px;
+  }
+
+  .product-journey-acquisitions{
+    width: 140px;
+    position: absolute;
+    left: 96px;
+  }
+
+  .product-journey-discovery {
+    width: 140px;
+    position: absolute;
+    left: 280.5px;
+}
+
+.product-journey-advertisement {
+  width: 140px;
+  position: absolute;
+  left: 476px;
+}
+
+.product-journey-subscriptions {
+  width: 140px;
+  position: absolute;
+  left: 660px;
+}
+
+.product-journey-engagement {
+  width: 140px;
+  position: absolute;
+  left: 843px;
+}
+
+.product-journey-loyalty {
+  width: 140px;
+  position: absolute;
+  left: 1024px;
+}
+}
 
  @media only screen and (max-width: 767px) {
   .data-product{margin-top: 0rem;grid-template-columns:auto!important;}
