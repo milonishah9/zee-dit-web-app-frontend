@@ -38,6 +38,7 @@ p{
 }
 
 .kpi-card-value p:nth-child(2){
+    font-family: 'GothamMedium';
     font-weight: 400;
     font-size: 10px;
     line-height: 11px;
@@ -52,12 +53,25 @@ p{
 }
 
 .catalogue-last-90day{
+    font-family: 'GothamMedium';
     font-weight: 400;
     font-size: 10px;
     position: relative;
     top: 7px;
 }
-
+.all-indicators-with-icons label{
+    font-family: 'GothamMedium';
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 11px;
+}
+.all-indicators-with-icons label{
+    padding: 5px;
+}
+img.img {
+    padding-right: 2px;
+    /* padding-left: 30px; */
+}
 .catalogue-enrichment-indicators{
     display: flex;
     margin: 10px 0px;
@@ -68,7 +82,7 @@ p{
     font-weight: 400;
     font-size: 10px;
     line-height: 11px;
-    margin-left: 15px;
+  
 }
 
 .trailers-svg-div{
@@ -79,7 +93,26 @@ p{
 .kpi-card-value p{
     margin-left: 10px;
 }
-
+h6.title {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'GothamMedium';
+}
+p.descrption {
+    margin-bottom: 5px;
+    font-family: 'GothamMedium';
+    font-size: 12px;
+    font-weight: 400;
+}
+h5.Number-title {
+    color: #333333;
+    font-size: 25px;
+    font-family: 'GothamMedium';
+}
+.catalogue-enrichment-contents-div{
+    border-right: 1px  dashed #AFC5FD;
+}
+.catalogue-enrichment-contents-div:last-child {border:none;}
 .catalogue-enrichment-contents{
     background: #FFFFFF;
     border: 1px solid #D8E3FF;

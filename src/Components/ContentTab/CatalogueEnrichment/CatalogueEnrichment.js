@@ -23,11 +23,11 @@ const CatalogueEnrichment = () => {
             <div className="catalogue-enrichment-indicators">
                 <label className="catalogue-last-90day">Last 90 Days</label>
                 <div className="all-indicators-with-icons">
-                    <label>New Launch</label>
-                    <label>Launch Date</label>
-                    <label>Hours of content published</label>
-                    <label>Watch time till date</label>
-                    <label>Viewers till date</label>
+                    <label><img src='/static/images/logos/new-launch-icon.png' height={10} alt='new-launch-icon' className="img" />New Launch</label>
+                    <label><img src='/static/images/logos/date-icon.png' height={15} alt='date-icon' className="img"/>Launch Date</label>
+                    <label><img src='/static/images/logos/time-icon.png' height={15} alt='time-icon'className="img" />Hours of content published</label>
+                    <label><img src='/static/images/logos/Watch-time-icon.png' height={15} alt='Watch-time-icon' className="img"/>Watch time till date</label>
+                    <label><img src='/static/images/logos/till-time-icon.png' height={15} alt='till-time-icon'className="img" />Viewers till date</label>
                 </div>
             </div>
 
