@@ -427,37 +427,37 @@
 
     .line-chart-acquisitions {
         position: relative;
-        right: 0px;
+        right: -91px !important;
     }
 
     .line-chart-acquisitions p{
         position: relative;
-        left: 8px;
+        left: 8px ;
     }
 
     .line-chart-discovery {
         position: relative;
-        right: 12px;
+        right: -77px !important;
     }
     
     .line-chart-advertisement {
         position: relative;
-        right: -107px;
+        right: -81px;
     }
     
     .line-chart-subscriptions {
         position: relative;
-        left: -5px;
+        left: 85px !important;
     }
 
     .line-chart-engagement {
         position: relative;
-        left: -2px;
+        left: 88px !important;
     }
 
     .line-chart-loyalty {
         position: relative;
-        left: -0.2px;
+        left: 90.5px !important;
     }
 }
 
@@ -713,7 +713,7 @@
     .all-numbers-in-mil {
         position: relative;
         top: 76px;
-        left: 55px;
+        left: 62px;
     }
 
     .prod-jour-chart-heading{

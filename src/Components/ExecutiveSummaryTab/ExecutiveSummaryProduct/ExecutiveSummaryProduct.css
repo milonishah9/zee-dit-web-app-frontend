@@ -619,6 +619,13 @@ div.executive-summary-content-active-tab {
   .data-product{margin-top: 0rem;grid-template-columns:auto!important;}
   .product-userjourney-card{margin-left: 20px;margin-right: 20px;}
 
+  .product-journey-container h4 {
+    position: relative;
+    top: 9.5px;
+    left: 12px;
+    color: #3e1f76;
+}
+
   .product-journey-acquisitions {
     width: 15.7%;
     position: absolute;
