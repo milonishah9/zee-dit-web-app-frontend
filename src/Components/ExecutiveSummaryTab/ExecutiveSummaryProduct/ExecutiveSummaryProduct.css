@@ -659,10 +659,10 @@ div.executive-summary-content-active-tab {
   .data-product{margin-top: 0rem;grid-template-columns:auto!important;}
   .product-userjourney-card{margin-left: 20px;margin-right: 20px;}
 
-  .prod-jou-icons-indicators label {
+  /* .prod-jou-icons-indicators label {
     margin: 0 4px;
     font-size: 13px;
-}
+} */
 
 .prod-jou-icons-indicators svg{
   width: 18px;

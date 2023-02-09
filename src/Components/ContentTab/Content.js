@@ -1,6 +1,6 @@
 import React from "react";
-import ILTTwentrySummaryHeader from "../ILTTwentrySummaryHeader/ILTTwentrySummaryHeader";
 import ContentHeader from "./ContentHeader";
+import './Content.css'
 
 const Content = () => {
     return (
@@ -9,7 +9,7 @@ const Content = () => {
                 <ContentHeader header= "Content"/>
             </div>
             
-            <div className="">
+            <div className="content-tabs">
                 <h4>Catalogue Enrichment</h4>
                 <h4>Content Scheduling</h4>
                 <h4>Content Marketing</h4>
