@@ -97,6 +97,7 @@ const ContentSchedulingWithHeatMapAndDropdowns = (props) => {
                         // isMendatory={true}
                         handleOnDropDownMenuSelectionChange={handleOnDropDownMenuSelectionChange}
                     />
+                    {/* <MultiSelectDropDownMenu /> */}
                     <DropDownMenu
                         dropDownMenu={dropDownMenuForChannelGenre.metric}
                         // dropDownMenu={selectedDropDownFilters.channle ? dropDownMenuForChannelGenre.metric : { ...emptyOptions, label: 'Metric' }}
@@ -279,6 +280,66 @@ const DropDownMenu = (props) => {
         </div>
     )
 
+}
+
+const MultiSelectDropDownMenu = (props) => {
+
+    let initialStateObject = {};
+
+    const multiSelectDropDownOptions = [
+        "All",
+        "Channle name 1",
+        "Channle name 2",
+        "Channle name 3",
+        "Channle name 4",
+        "Channle name 5",
+    ]
+
+    multiSelectDropDownOptions.forEach(element => initialStateObject[element] = false)
+
+
+    const [selectedSelectOptions, setSelectedSelectOptions] = useState(initialStateObject);
+    console.log('selectedSelectOptions', selectedSelectOptions);
+
+    return (
+        <div className='multiselect-dropwn-menu-container'>
+
+            {multiSelectDropDownOptions.map((option, index) => {
+                return (
+                    <div className='multiselect-dropwn-menu-option-container' onClick={(event) => {
+                        setSelectedSelectOptions({
+                            ...selectedSelectOptions,
+                            [option]: !option,
+                        })
+                    }} key={index}>
+                        <div className='multiselect-dropwn-menu-option-checkbox'>
+                            {
+                                selectedSelectOptions.All ?
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="12" height="12" rx="2" fill="#6979F8" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.17695 9.10517L10.166 4.03856C10.3264 3.87573 10.3264 3.61174 10.166 3.44891L9.62018 2.89458C9.45984 2.73175 9.19988 2.73175 9.03954 2.89458L4.88663 7.11203L2.96157 5.15705C2.80123 4.99422 2.54127 4.99422 2.38094 5.15705L1.8351 5.71137C1.67476 5.8742 1.67476 6.1382 1.8351 6.30103L4.04877 8.54911C4.04933 8.54969 4.0499 8.55027 4.05047 8.55085L4.59629 9.10513L4.59631 9.10517C4.75665 9.268 5.01661 9.268 5.17695 9.10517Z" fill="white" />
+                                    </svg> :
+                                    selectedSelectOptions[option] ?
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="12" height="12" rx="2" fill="#6979F8" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.17695 9.10517L10.166 4.03856C10.3264 3.87573 10.3264 3.61174 10.166 3.44891L9.62018 2.89458C9.45984 2.73175 9.19988 2.73175 9.03954 2.89458L4.88663 7.11203L2.96157 5.15705C2.80123 4.99422 2.54127 4.99422 2.38094 5.15705L1.8351 5.71137C1.67476 5.8742 1.67476 6.1382 1.8351 6.30103L4.04877 8.54911C4.04933 8.54969 4.0499 8.55027 4.05047 8.55085L4.59629 9.10513L4.59631 9.10517C4.75665 9.268 5.01661 9.268 5.17695 9.10517Z" fill="white" />
+                                        </svg>
+                                        :
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.5" y="0.5" width="11" height="11" rx="1.5" fill="white" stroke="#D8D8D8" />
+                                        </svg>
+                            }
+                        </div>
+                        <div className='multiselect-dropwn-menu-option-option'>
+                            {option}
+                        </div>
+                    </div>
+                )
+            })
+            }
+
+        </div>
+    )
 }
 
 export default ContentSchedulingWithHeatMapAndDropdowns;

@@ -255,6 +255,16 @@
     /* height: 120px; */
 }
 
+.multiselect-dropwn-menu-option-container{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.multiselect-dropwn-menu-option-checkbox{
+    margin: 0 0.8rem 0 0;
+}
+
 
 @media only screen and (max-width: 768px) {
     .heatmap-container {
