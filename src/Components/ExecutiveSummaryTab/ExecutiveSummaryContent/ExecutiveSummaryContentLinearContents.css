@@ -2,6 +2,7 @@
   font-family: GothamLight;
   background: #ffffff;
   width: 97%;
+  margin: auto;
   display: grid;
   padding: 0.3% 1%;
   padding-top: 1.2%;
@@ -271,7 +272,7 @@ td:nth-child(6) text.amount{
 @media only screen and (max-width: 1560px) and (min-width: 1441px){
   .bi-funnel {
     position: relative;
-    left: 87%;
+    left: 90%;
 }
 .last-filter-svg{
   position: relative;
@@ -300,7 +301,7 @@ td:nth-child(6) text.amount{
 @media only screen and (max-width: 1365px) and (min-width: 320px){
   .bi-funnel {
     position: relative;
-    left: 91%;
+    left: 100%;
 }
 .last-filter-svg{
   position: relative;

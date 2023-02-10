@@ -186,7 +186,7 @@ const BubbleChart = (props) => {
             line = [word];
             tspan = text
               .append("tspan")
-              .attr("dx", "-6.5em")
+              .attr("dx", "-5.5em")
               .attr("dy", lineNumber * lineHeight + dy + "em")
               .text(word);
           }
@@ -205,7 +205,7 @@ const BubbleChart = (props) => {
       .text(function (d) {
         return d.Count > 351 ? d.Name : " ";
       })
-      .call(wrap, 60);
+      .call(wrap, 70);
 
 
       // const V = d3.map(json);
