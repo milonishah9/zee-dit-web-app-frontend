@@ -108,6 +108,8 @@
 
 .executive-summary-content-linear-contents-t-header {
   width: 17%;
+  position: relative;
+  right: 15px;
 }
 
 .executive-summary-content-linear-contents-t-headers {
@@ -200,6 +202,16 @@ input[type="checkbox"]:checked::before {
 
 input[type="checkbox"]:checked {
   /* background: black; */
+}
+
+.bi-funnel{
+  position: relative;
+  left: 71%;
+}
+
+.last-filter-svg{
+  position: relative;
+  left: 100%;
 }
 
 .ott-toggle{
