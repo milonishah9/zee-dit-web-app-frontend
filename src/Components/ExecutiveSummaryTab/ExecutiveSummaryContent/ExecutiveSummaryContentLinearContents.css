@@ -268,6 +268,17 @@ td:nth-child(6) text.amount{
   display: none;
 }
 
+@media only screen and (max-width: 1560px) and (min-width: 1441px){
+  .bi-funnel {
+    position: relative;
+    left: 87%;
+}
+.last-filter-svg{
+  position: relative;
+  left: 100%;
+}
+}
+
 @media only screen and (max-width: 1440px) and (min-width: 1366px) {
   .executive-summary-content-linear-contents-header:nth-last-child(1) {
     width: 15.8%;
@@ -276,6 +287,25 @@ td:nth-child(6) text.amount{
     margin-left: 1.1%;
     width: 32.5%;
   }
+  .bi-funnel {
+    position: relative;
+    left: 91%;
+}
+.last-filter-svg{
+  position: relative;
+  left: 100%;
+}
+}
+
+@media only screen and (max-width: 1365px) and (min-width: 320px){
+  .bi-funnel {
+    position: relative;
+    left: 91%;
+}
+.last-filter-svg{
+  position: relative;
+  left: 100%;
+}
 }
 
 @media only screen and (max-width: 1366px) {
