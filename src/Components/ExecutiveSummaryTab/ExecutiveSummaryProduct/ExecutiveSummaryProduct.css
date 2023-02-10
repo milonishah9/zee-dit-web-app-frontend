@@ -62,7 +62,7 @@ div.executive-summary-content-active-tab {
   font-weight: 500;
   font-size: 14px;
   line-height: 11px;
-  /* margin: 10px; */
+  margin: 10px;
   margin-bottom: 15px;
 }
 
@@ -161,7 +161,7 @@ div.executive-summary-content-active-tab {
 
 .product-journey-container h4{
   position: relative;
-  top: 12px;
+  top: 8px;
   left: 29px;
   color: #3e1f76;
 }
