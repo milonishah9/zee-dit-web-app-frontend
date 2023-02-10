@@ -15,7 +15,8 @@ import Links from './Components/Charts/Links/Links';
 import Monochrome from './Components/Charts/Monochrome/Monochrome';
 import HeatMap from './Components/Charts/HeatMap/HeatMap';
 import ContentSchedulingWithHeatMapAndDropdowns from './Components/ContentSchedulingWithHeatMapAndDropdowns/ContentSchedulingWithHeatMapAndDropdowns';
-import ProductJourneyLineChart from './Components/Charts/LineChartWithToolTip/ProductJourneyLineChart';
+import Content from './Components/ContentTab/Content';
+import CatalogueEnrichmentStackBarChart from './Components/AllDaysStackedBarChartPopUpModal/StackedBarChartForAllDays/CatalogueEnrichmentStackBarChart';
 
 
 
@@ -38,12 +39,12 @@ function App() {
           <Route path='/ilt20-summary' element={<ILTTwentySummary />} />
           <Route path='/product' element={<Product />} />
           <Route path='/executive-summary' element={<ExecutiveSummaryTab />} />
-          <Route path='/executive-summary-content' element={<ExecutiveSummaryContent />} />
+          <Route path='content' element = { <Content /> } />
           <Route path='/area-chart-with-tooltips' element={<AreaChartWithToolTips />} />
           <Route path='/hs-bar' element={<HSbar />} />
           <Route path='/new' element={<DivergingSB />} />
           <Route path='/links' element={<Links />} />
-          <Route path='/ProductJourneyLineChart' element={<ProductJourneyLineChart />} />
+          <Route path='/CatalogueEnrichmentStackBarChart' element={<CatalogueEnrichmentStackBarChart />} />
           <Route path='/mono' element={<Monochrome />} />
           <Route path='/heatmap' element={<ContentSchedulingWithHeatMapAndDropdowns />} />
         </Routes>

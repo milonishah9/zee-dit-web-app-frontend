@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import img01 from '../../../Components/Images/06.svg';
-import img02 from '../../../Components/Images/07.svg';
+import img02 from '../../../Components/Images/09.svg';
 import img03 from '../../../Components/Images/08.svg';
 
 const ProductQualityExperienceToggle = () =>{

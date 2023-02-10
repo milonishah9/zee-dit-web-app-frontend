@@ -53,7 +53,7 @@ div.executive-summary-content-active-tab {
   box-shadow: 0px 2px 5px #d6def8;
   border-radius: 4px;
   margin-top: 20px;
-  width: 82%;
+  width: 100%;
 }
 
 .product-userjourney-card-heading {
@@ -63,6 +63,7 @@ div.executive-summary-content-active-tab {
   font-size: 14px;
   line-height: 11px;
   margin: 10px;
+  margin-bottom: 15px;
 }
 
 .product-userjourney-card-number {
@@ -148,99 +149,155 @@ div.executive-summary-content-active-tab {
   /* margin-left: 9px; */
 }
 .data-product{
-  /* padding-left: 20px; */
-  display: flex
+  display: flex;
+
 }
 
 .product-journey-container h4{
-  margin-left: 30px;
-  margin-top: 10px;
+  position: relative;
+  top: 21px;
+  left: 29px;
+  color: #3e1f76;
+  /* margin-left: 30px;
+  margin-bottom: 0px; */
 }
 
 .product-journey-acquisitions {
-  width: 14%;
-  position: absolute;
-  left: 20px;
-  top: 487px;
+  width: 300px;
+    position: absolute;
+    left: 30px;
 }
 
 .product-journey-discovery {
-  width: 14%;
+  width: 300px;
   position: absolute;
-  left: 313px;
-  top: 487px;
+  left: 344px;
 }
 
 .product-journey-advertisement {
-  width: 14%;
+  width: 300px;
   position: absolute;
-  left: 673px;
-  top: 487px;
+  left: 656px;
 }
 
 
 .product-journey-subscriptions {
-  width: 14%;
+  width: 300px;
   position: absolute;
-  left: 1032px;
-  top: 487px;
+  left: 970px;
 }
 
 .product-journey-engagement {
-  width: 14%;
+  width: 300px;
   position: absolute;
-  left: 1382px;
-  top: 487px;
+  left: 1284px;
 }
 
 .product-journey-loyalty {
-  width: 14%;
+  width: 300px;
   position: absolute;
-  left: 1676px;
-  top: 487px;
+  left: 1598px;
+}
+
+.prod-jou-icons-indicators label{
+  margin: 0 10px;
+}
+
+.prod-jou-icons-indicators{
+  text-align: end;
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 1799px) and (min-width: 1561px){
+
+  .product-journey-acquisitions {
+    width: 250px;
+    position: absolute;
+    left: 60px;
+}
+
+.product-journey-discovery {
+  width: 250px;
+  position: absolute;
+  left: 335px;
+}
+
+.product-journey-advertisement {
+  width: 250px;
+  position: absolute;
+  left: 613px;
+}
+
+.product-journey-subscriptions {
+  width: 250px;
+  position: absolute;
+  left: 891px;
+}
+
+.product-journey-engagement {
+  width: 250px;
+  position: absolute;
+  left: 1171px;
+}
+
+.product-journey-loyalty {
+  width: 250px;
+  position: absolute;
+  left: 1452px;
+}
+
 }
 
 @media only screen and (max-width: 1560px) and (min-width: 1441px){
 
+  .prod-jou-icons-and-cards{
+    position: relative;
+    bottom: 70px;
+  }
+
+  .product-userjourney-card-heading {
+    height: 18px;
+  }
+
   .data-product{
     position: relative;
-    bottom: 572px;
+    bottom: 5px;
   }
 
   .product-journey-acquisitions {
-    width: 15%;
+    width: 210px;
     position: absolute;
-    left: 20px;
+    left: 77px;
 }
 
 .product-journey-discovery {
-  width: 15%;
+  width: 210px;
   position: absolute;
-  left: 245px;
+  left: 313px;
 }
 
 .product-journey-advertisement {
-  width: 15%;
+  width: 210px;
   position: absolute;
-  left: 535px;
+  left: 548.5px;
 }
 
 .product-journey-subscriptions {
-  width: 15%;
+  width: 210px;
   position: absolute;
-  left: 812px;
+  left: 785px;
 }
 
 .product-journey-engagement {
-  width: 15%;
+  width: 210px;
   position: absolute;
-  left: 1089px;
+  left: 1024px;
 }
 
 .product-journey-loyalty {
-  width: 14%;
+  width: 210px;
   position: absolute;
-  left: 1338px;
+  left: 1263px;
 }
   
 .line-chart-with-animation{
@@ -249,12 +306,18 @@ div.executive-summary-content-active-tab {
 }
 
 @media only screen and (max-width: 1440px) and (min-width: 1366px){
+  .prod-jou-icons-indicators {
+    text-align: end;
+    margin-right: 42px;
+}
 
-  
+  .product-userjourney-card-heading{
+    height: 12px;
+  }
 
   .data-product{
     position: relative;
-    bottom: 572px;
+    bottom: 2px;
   }
 
   .all-numbers-in-mil {
@@ -264,44 +327,57 @@ div.executive-summary-content-active-tab {
 }
 
   .product-journey-acquisitions {
-    width: 15%;
+    width: 210px;
     position: absolute;
-    left: 20px;
+    left: 63.5px;
 }
 
 .product-journey-discovery {
-  width: 15%;
+  width: 210px;
   position: absolute;
-  left: 243px;
+  left: 285.5px;
 }
 
 .product-journey-advertisement {
-  width: 15%;
+  width: 210px;
   position: absolute;
-  left: 500px;
+  left: 507px;
 }
 
 .product-journey-subscriptions {
-  width: 15%;
+  width: 210px;
   position: absolute;
-  left: 768px;
+  left: 731px;
 }
 
 .product-journey-engagement {
-  width: 15%;
+  width: 210px;
   position: absolute;
-  left: 1031px;
+  left: 955px;
 }
 
 .product-journey-loyalty {
-  width: 14%;
+  width: 210px;
   position: absolute;
-  left: 1256px;
+  left: 1179px;
 }
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 768px){
 
+  .data-product{
+    position: relative;
+    right: 9px;
+  }
+
+  .product-userjourney-card-heading {
+    height: 25px;
+  }
+
+  .data-product{
+    position: relative;
+    top: 0px;
+  }
 
   .data-product{
     position: relative;
@@ -335,43 +411,56 @@ div.executive-summary-content-active-tab {
   }
 
   .product-journey-acquisitions {
-    width: 18%;
+    width: 120px;
     position: absolute;
     left: 23px;
   }
   
   .product-journey-discovery {
-    width: 18%;
+    width: 120px;
     position: absolute;
     left: 147px;
 }
   
 .product-journey-advertisement {
-  width: 18%;
+  width: 120px;
   position: absolute;
   left: 271px;
 }
   
   
   .product-journey-subscriptions {
-    width: 18%;
+    width: 120px;
     position: absolute;
     left: 396px;
   }
   
   .product-journey-engagement {
-    width: 18%;
+    width: 120px;
     position: absolute;
     left: 521px;
   }
   
   .product-journey-loyalty {
-    width: 18%;
+    width: 120px;
     position: absolute;
     left: 644px;
   }
 
   /* .executive-summary-product-container{padding-left: 3rem;padding-right: 3rem;} */
+ }
+
+ @media only screen and (max-width: 1280px) and (min-width: 1100px){
+  .prod-jour-chart-heading{width: 150px!important;}
+  .line-chart-acquisitions{
+    right: 100px!important;
+   }
+   .line-chart-discovery{
+    right: 83px!important;
+   }
+   .line-chart-subscriptions{left: 0px !important;}
+   .line-chart-engagement{left: 50px!important;}
+   .line-chart-loyalty{left: 90px!important;}
  }
 
  /* @media only screen and (width: 1365px) {
@@ -413,6 +502,15 @@ div.executive-summary-content-active-tab {
  } */
 
  @media only screen and (max-width: 1366px) and (min-width: 1278px){
+  .prod-jou-icons-indicators {
+    text-align: end;
+    margin-right: 48px;
+}
+
+.product-userjourney-card-heading {
+  height: 14px;
+}
+
   .executive-summary-product-container {
     padding-right: 0;
     padding-left: 0;
@@ -420,81 +518,170 @@ div.executive-summary-content-active-tab {
   }
 
   .product-journey-acquisitions {
-    width: 15.7%;
+    width: 195px;
     position: absolute;
-    left: 13px;
+    left: 66px;
   }
   
   .product-journey-discovery {
-    width: 15.7%;
+    width: 195px;
     position: absolute;
-    left: 246px;
+    left: 276px;
 }
   
 .product-journey-advertisement {
-  width: 15.7%;
+  width: 195px;
   position: absolute;
-  left: 494px;
+  left: 485px;
 }
   
   
   .product-journey-subscriptions {
-    width: 15.7%;
+    width: 195px;
     position: absolute;
-    left: 722px;
+    left: 695px;
   }
   
   .product-journey-engagement {
-    width: 15.7%;
+    width: 195px;
     position: absolute;
-    left: 943px;
+    left: 904.5px;
   }
   
   .product-journey-loyalty {
-    width: 15.7%;
+    width: 195px;
     position: absolute;
-    left: 1143px;
+    left: 1113px;
   }
 
  } 
 
  @media only screen and (max-width: 1279px) and (min-width: 1024px){
-  .product-journey-discovery {
-    width: 15.7%;
+
+  .product-icons-logo p{
+    font-size: 11px;
+  }
+
+  /* .product-icons-logo img{
+    width: 12px;
+  } */
+
+  .product-userjourney-card-heading{
+    height: 25px;
+  }
+
+  .prod-jou-icons-and-cards{
+    position: relative;
+    bottom: 80px;
+  }
+
+  .product-journey-acquisitions{
+    width: 140px;
     position: absolute;
-    left: 222px;
+    left: 108px;
+  }
+
+  .product-journey-discovery {
+    width: 140px;
+    position: absolute;
+    left: 259.5px;
 }
 
 .product-journey-advertisement {
-  width: 15.7%;
+  width: 140px;
   position: absolute;
-  left: 440px;
+  left: 408px;
 }
 
 .product-journey-subscriptions {
-  width: 15.7%;
+  width: 140px;
   position: absolute;
-  left: 670px;
+  left: 558px;
 }
 
 .product-journey-engagement {
-  width: 15.7%;
+  width: 140px;
   position: absolute;
-  left: 887px;
+  left: 707px;
 }
 
 .product-journey-loyalty {
-  width: 15.7%;
+  width: 140px;
   position: absolute;
-  left: 1085px;
+  left: 857px;
 }
  }
 
- 
+@media only screen and (width: 1250px){
+  .prod-jou-icons-and-cards{
+    position: relative;
+    bottom: 80px;
+  }
+
+  .product-journey-acquisitions{
+    width: 140px;
+    position: absolute;
+    left: 96px;
+  }
+
+  .product-journey-discovery {
+    width: 140px;
+    position: absolute;
+    left: 280.5px;
+}
+
+.product-journey-advertisement {
+  width: 140px;
+  position: absolute;
+  left: 476px;
+}
+
+.product-journey-subscriptions {
+  width: 140px;
+  position: absolute;
+  left: 660px;
+}
+
+.product-journey-engagement {
+  width: 140px;
+  position: absolute;
+  left: 843px;
+}
+
+.product-journey-loyalty {
+  width: 140px;
+  position: absolute;
+  left: 1024px;
+}
+}
 
  @media only screen and (max-width: 767px) {
   .data-product{margin-top: 0rem;grid-template-columns:auto!important;}
   .product-userjourney-card{margin-left: 20px;margin-right: 20px;}
+
+  /* .prod-jou-icons-indicators label {
+    margin: 0 4px;
+    font-size: 13px;
+} */
+
+.prod-jou-icons-indicators svg{
+  width: 18px;
+}
+.prod-jou-icons-indicators img{
+  width: 18px;
+}
+
+  .prod-jou-icons-indicators {
+    text-align: end;
+    margin-right: 5px;
+}
+
+  .product-journey-container h4 {
+    position: relative;
+    top: 9.5px;
+    left: 12px;
+    color: #3e1f76;
+}
 
   .product-journey-acquisitions {
     width: 15.7%;
@@ -599,40 +786,57 @@ div.executive-summary-content-active-tab {
  }
 
  @media only screen and (max-width: 1030px) and (min-width: 1020px){
+  
+.prod-jou-icons-indicators {
+  text-align: end;
+  margin-right: 74px;
+}
+
+  /* .product-icons-logo svg{
+    width: 20px;
+  }
+
+  .product-icons-logo img{
+    width: 20px;
+  } */
+
+  .product-icons-logo p{
+    font-size: 11.5px;
+  }
 
   .product-journey-acquisitions {
-    width: 19%;
+    width: 137px;
     position: absolute;
-    left: 11px;
+    left: 96px;
   }
 
   .product-journey-discovery {
-    width: 19%;
+    width: 137px;
     position: absolute;
-    left: 177px;
+    left: 238px;
 }
 
 .product-journey-advertisement {
-  width: 19%;
+  width: 137px;
   position: absolute;
-  left: 345px;
+  left: 380px;
 }
 
 .product-journey-subscriptions {
-  width: 19%;
+  width: 137px;
   position: absolute;
-  left: 515px;
+  left: 521px;
 }
 
 .product-journey-engagement {
-  width: 19%;
+  width: 137px;
   position: absolute;
-  left: 684px;
+  left: 662px;
 }
 
 .product-journey-loyalty {
-  width: 19%;
+  width: 137px;
   position: absolute;
-  left: 855px;
+  left: 803px;
 }
  }
