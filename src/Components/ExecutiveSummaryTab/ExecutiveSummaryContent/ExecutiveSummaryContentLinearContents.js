@@ -100,11 +100,11 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
                                 <img className="bi-funnel" src={filter}/>
-                                <span className="ex-sum-cont-engagement">Reach %<span className="exe-sum-lin-con-h-lbr">(Acquisition)</span></span>
+                                <span className="ex-sum-cont-engagement">Reach %{/* <span className="exe-sum-lin-con-h-lbr">(Acquisition)</span>*/}</span> 
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
                             <img className="bi-funnel" src={filter}/>
-                                <span className="ex-sum-cont-engagement">TSV<span className="exe-sum-lin-con-h-lbr">(M min.) (Engagement)</span></span>
+                                <span className="ex-sum-cont-engagement">TSV (M min.){/*<span className="exe-sum-lin-con-h-lbr"> (Engagement)</span>*/}</span>
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
                             <img className="last-filter-svg" src={filter}/>
