@@ -194,6 +194,10 @@ input[type="checkbox"]:checked::before {
   /* background: #fff; */
 }
 
+.ex-sum-cont-engagement{
+  display: inline-block;
+}
+
 input[type="checkbox"]:checked {
   /* background: black; */
 }
