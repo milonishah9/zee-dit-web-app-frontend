@@ -16,6 +16,10 @@
 
 }
 
+.x-axis{
+    position: static;
+}
+
 /* .y-axis-tick{
     min-width: 100%;
 } */

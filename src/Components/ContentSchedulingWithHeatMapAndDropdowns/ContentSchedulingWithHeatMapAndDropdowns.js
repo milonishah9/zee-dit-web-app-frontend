@@ -12,8 +12,9 @@ const ContentSchedulingWithHeatMapAndDropdowns = (props) => {
         channelGenre: '',
         channle: '',
         metric: '',
-        tg: '',
-        market: '',
+        tg: 'Viewers',
+        market: 'Gujarat',
+        date: new Date(),
     });
 
     const [isClickOnDropDownFilterApply, setIsClickOnDropDownFilterApply] = useState(false);
@@ -22,6 +23,7 @@ const ContentSchedulingWithHeatMapAndDropdowns = (props) => {
         channelGenre: {
             id: 'channelGenre',
             label: 'Channel Genre',
+            isMendatory: true,
             options: [
                 'Kids',
                 'Drama',
@@ -31,6 +33,7 @@ const ContentSchedulingWithHeatMapAndDropdowns = (props) => {
         channle: {
             id: 'channle',
             label: 'Channel',
+            isMendatory: true,
             options: [
                 'Zee TV',
                 'Zee Cinema',
@@ -39,6 +42,7 @@ const ContentSchedulingWithHeatMapAndDropdowns = (props) => {
         metric: {
             id: 'metric',
             label: 'Metric',
+            isMendatory: true,
             options: [
                 'Viewers',
                 'Watchtime',
@@ -84,46 +88,58 @@ const ContentSchedulingWithHeatMapAndDropdowns = (props) => {
                 <div className='content-scheduling-with-heatmap-dropdowns-dropdown-filters-container'>
                     <DropDownMenu
                         dropDownMenu={dropDownMenuForChannelGenre.channelGenre}
+                        // isMendatory={true}
                         handleOnDropDownMenuSelectionChange={handleOnDropDownMenuSelectionChange}
                     />
                     <DropDownMenu
-                        dropDownMenu={selectedDropDownFilters.channelGenre ? dropDownMenuForChannelGenre.channle : { ...emptyOptions, label: 'Channel' }}
+                        dropDownMenu={dropDownMenuForChannelGenre.channle}
+                        // dropDownMenu={selectedDropDownFilters.channelGenre ? dropDownMenuForChannelGenre.channle : { ...emptyOptions, label: 'Channel' }}
+                        // isMendatory={true}
                         handleOnDropDownMenuSelectionChange={handleOnDropDownMenuSelectionChange}
                     />
                     <DropDownMenu
-                        dropDownMenu={selectedDropDownFilters.channle ? dropDownMenuForChannelGenre.metric : { ...emptyOptions, label: 'Metric' }}
+                        dropDownMenu={dropDownMenuForChannelGenre.metric}
+                        // dropDownMenu={selectedDropDownFilters.channle ? dropDownMenuForChannelGenre.metric : { ...emptyOptions, label: 'Metric' }}
+                        // isMendatory={true}
                         handleOnDropDownMenuSelectionChange={handleOnDropDownMenuSelectionChange}
                     />
                     <DropDownMenu
-                        dropDownMenu={selectedDropDownFilters.metric ? dropDownMenuForChannelGenre.tg : { ...emptyOptions, label: 'TG' }}
+                        dropDownMenu={dropDownMenuForChannelGenre.tg}
+                        // dropDownMenu={selectedDropDownFilters.metric ? dropDownMenuForChannelGenre.tg : { ...emptyOptions, label: 'TG' }}
                         handleOnDropDownMenuSelectionChange={handleOnDropDownMenuSelectionChange}
                     />
                     <DropDownMenu
-                        dropDownMenu={selectedDropDownFilters.tg ? dropDownMenuForChannelGenre.market : { ...emptyOptions, label: 'Market' }}
+                        dropDownMenu={dropDownMenuForChannelGenre.market}
+                        // dropDownMenu={selectedDropDownFilters.tg ? dropDownMenuForChannelGenre.market : { ...emptyOptions, label: 'Market' }}
                         handleOnDropDownMenuSelectionChange={handleOnDropDownMenuSelectionChange}
                     />
                     <DropDownMenu
-                        dropDownMenu={selectedDropDownFilters.market ? dropDownMenuForChannelGenre.market : { ...emptyOptions, label: 'Date' }}
+                        dropDownMenu={dropDownMenuForChannelGenre.market}
+                        // dropDownMenu={selectedDropDownFilters.market ? dropDownMenuForChannelGenre.market : { ...emptyOptions, label: 'Date' }}
                         handleOnDropDownMenuSelectionChange={handleOnDropDownMenuSelectionChange}
                         isCalendar={true}
                     />
-                    <button className='dropdown-filers-apply-button' onClick={(event) => setIsClickOnDropDownFilterApply(true)}>Apply</button>
-                </div>
-                <div className='heatmap-container'>
-                    <div className='heatmap-child-container'>
-                        {/* {selectedDropDownFilters.channelGenre &&
+                    <button className='dropdown-filers-apply-button' onClick={(event) => {
+                        selectedDropDownFilters.channelGenre &&
                             selectedDropDownFilters.channle &&
                             selectedDropDownFilters.market &&
                             selectedDropDownFilters.metric &&
-                            selectedDropDownFilters.tg &&
+                            selectedDropDownFilters.tg ?
+                            setIsClickOnDropDownFilterApply(true) :
+                            setIsClickOnDropDownFilterApply(false)
+                    }}>Apply</button>
+                </div>
+                <div className='heatmap-container'>
+                    <div className='heatmap-child-container'>
+                        {
                             isClickOnDropDownFilterApply ?
-                            < HeatMap /> :
-                            <div className='empty-heatmap-container'>
-                               Start to select the filters
-                            </div>
-                        } */}
-                        
-                        <HeatMap />
+                                < HeatMap /> :
+                                <div className='empty-heatmap-container'>
+                                    Start to select the filters
+                                </div>
+                        }
+
+                        {/* <HeatMap /> */}
                     </div>
                 </div>
             </div>
@@ -133,13 +149,14 @@ const ContentSchedulingWithHeatMapAndDropdowns = (props) => {
 
 const DropDownMenu = (props) => {
 
-    const { dropDownMenu, handleOnDropDownMenuSelectionChange, isCalendar = false } = props;
+    const { dropDownMenu, handleOnDropDownMenuSelectionChange, isCalendar = false, isMendatory = false } = props;
 
     const dropDownMenuRef = useRef(null);
 
     const [isShowDropDownMenu, setIsShowDropDownMenu] = useState(false);
-    const [selectedDropDownOption, setSelectedDropDownOption] = useState('');
-    const [selectedFilterDate, setSelectedFilterDate] = useState();
+    const [selectedDropDownOption, setSelectedDropDownOption] = useState(dropDownMenu.isMendatory ? '' : dropDownMenu.options[0]);
+    const [selectedFilterDate, setSelectedFilterDate] = useState(new Date());
+    const [previousSelectedFilterDate, setPreviousSelectedFilterDate] = useState(new Date());
 
     let date = new Date();
     date.setDate(date.getDate() - 30);
@@ -159,7 +176,7 @@ const DropDownMenu = (props) => {
     return (
         <div className='drop-down-menu-contaier' ref={dropDownMenuRef} >
             {!isCalendar ?
-                <label className='drop-down-menu-label'>{dropDownMenu.label}</label> :
+                <label className='drop-down-menu-label'>{dropDownMenu.label}{dropDownMenu.isMendatory && ' *'}</label> :
                 <label className='drop-down-menu-label'>Date</label>
             }
             <div className='drop-down-menu'>
@@ -170,12 +187,11 @@ const DropDownMenu = (props) => {
                                 setIsShowDropDownMenu(!isShowDropDownMenu);
                             }}
                         >
-                            {dropDownMenu.options.length === 0 ? 'Select' :
+                            {
                                 selectedDropDownOption ?
                                     selectedDropDownOption :
                                     <p className='drop-down-menu-selection-box-placeholder'>Select</p>
                             }
-
 
                             {/* <p className='drop-down-menu-selection-box-placeholder'>{Select}</p> */}
                             <div className='drop-down-menu-selection-box-down-arrow-icon'>
@@ -197,7 +213,7 @@ const DropDownMenu = (props) => {
                                     <p className='drop-down-menu-selection-box-placeholder'>Select</p>
                             } */}
                             {
-                                <p className='drop-down-menu-selection-box-placeholder'>Select</p>
+                                <p className='drop-down-menu-selection-box-placeholder'>{d3.timeFormat("%d/%m/%Y")(selectedFilterDate)}</p>
                             }
                             <div className='drop-down-menu-selection-box-down-arrow-icon'>
                                 <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -234,6 +250,27 @@ const DropDownMenu = (props) => {
                                     onChange={setSelectedFilterDate}
                                     value={selectedFilterDate}
                                 />
+                                {/* <div className='dropdown-calender-action-buttons'>
+                                    <button className='dropdown-calender-action-button-cancle'
+                                        onClick={(event) => {
+                                            setSelectedFilterDate(previousSelectedFilterDate);
+                                            isShowDropDownMenu(!isShowDropDownMenu);
+                                        }
+                                        }
+                                    >
+                                        Cancle
+                                    </button>
+
+                                    <button className='dropdown-calender-action-button-ok'
+                                        onClick={(event) => {
+                                            setPreviousSelectedFilterDate(setSelectedFilterDate);
+                                            isShowDropDownMenu(false);
+                                        }
+                                        }
+                                    >
+                                        OK
+                                    </button>
+                                </div> */}
                             </div>
                         }
                     </div>

@@ -40,7 +40,7 @@ const HeatMap = (props) => {
 
         svg.append("g")
             .attr("transform", "translate(0," + -10 + ")")
-            .attr("z-index", "1000")
+            .classed('x-axis',true)
             .call(xAxis);
         // .style("opacity", isAllDropdownsSelected ? 1 : 0.2);
 

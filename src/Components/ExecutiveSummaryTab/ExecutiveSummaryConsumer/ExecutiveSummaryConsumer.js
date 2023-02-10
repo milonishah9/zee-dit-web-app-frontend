@@ -215,7 +215,9 @@ const ExecutiveSummaryConsumer = (props) => {
                 } else if (
                   activeConsumerJourneyFilter === "svod" &&
                   (activeKPICharter === "monetizatoin" || activeKPICharter === "loyaltyAndRetention") &&
-                  (d.title === "SVOD Revenue" || d.title === "New & Win back Subscriptions" || d.title === "Manual" || d.title === "Auto & Advance Renewal" || d.title === "% Renewals- SVOD")) {
+                  (d.title === "SVOD Revenue" || d.title === "New & Win back Subscriptions" || d.title === "Manual" || d.title === "Auto & Advance Renewal" || d.title === "% Renewals- SVOD" ||
+                    d.title === "Manual Subscriptions" || d.title === "Auto & Advance Subscriptions")
+                ) {
                   return d;
                 } else if (
                   activeConsumerJourneyFilter === "avod" &&

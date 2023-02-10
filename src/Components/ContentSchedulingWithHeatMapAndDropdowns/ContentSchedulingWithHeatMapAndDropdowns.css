@@ -129,17 +129,16 @@
 
 .dropdown-calender-container {
     width: 65%;
-    /* outline: 2px; */
-    /* border: none; */
     display: flex;
+    flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
-
 }
 
 .react-calendar {
-    /* width: 90%; */
+    /* width: 80%; */
 }
+
 
 .react-calendar__navigation {
     border-bottom: 0.5px solid #D8D8D8;
@@ -227,6 +226,24 @@
     opacity: 0.2;
 }
 
+.dropdown-calender-action-buttons {
+    min-width: 45%;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: "GothamBold";
+}
+
+.dropdown-calender-action-button-ok {
+    color: #6979F8;
+}
+
+.dropdown-calender-action-button-cancle {
+    color: #808080;
+}
+
 .heatmap-container {
     height: 60vh;
     overflow-y: scroll;
@@ -234,7 +251,7 @@
 }
 
 .heatmap-child-container {
-   
+
     /* height: 120px; */
 }
 
