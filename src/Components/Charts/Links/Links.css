@@ -1,6 +1,8 @@
 .line-chart-with-animation{
     /* margin-top: 26px; */
     text-align: center;
+    position: relative;
+    bottom: 29px;
 }
 
 #linkChart {

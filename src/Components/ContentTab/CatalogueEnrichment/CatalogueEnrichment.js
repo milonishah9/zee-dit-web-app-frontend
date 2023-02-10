@@ -4,20 +4,14 @@ import CatalogueEnrichmentBottomContents from "./CatalogueEnrichmentBottomConten
 import CatalogueEnrichmentKpiCard from "./CatalogueEnrichmentKpiCard";
 
 const CatalogueEnrichment = () => {
-    const data = {
-        bottomContentsData: {
-            TrailersData: {
-
-            }
-        }
-    }
+   
     return (
         <div>
             <div className="catalogue-enrichment-kpi-cards">
-                <CatalogueEnrichmentKpiCard data = {['Total Hours of Content Published', '49', '8% from last period']}/>
-                <CatalogueEnrichmentKpiCard data = {['DAU', '79', '2% from last period']}/>
-                <CatalogueEnrichmentKpiCard data = {['Viewers', '90', '8% from last period']}/>
-                <CatalogueEnrichmentKpiCard data = {['Total Hours of Content Published', '34', '8% from last period']}/>
+                <CatalogueEnrichmentKpiCard data = {['Total Hours of Content Published', '49', 8]}/>
+                <CatalogueEnrichmentKpiCard data = {['DAU', '79', 2]}/>
+                <CatalogueEnrichmentKpiCard data = {['Viewers', '90', 8]}/>
+                <CatalogueEnrichmentKpiCard data = {['Total Hours of Content Published', '34', 8]}/>
             </div>
 
             <div className="catalogue-enrichment-indicators">
@@ -30,12 +24,12 @@ const CatalogueEnrichment = () => {
                     <label><img src='/static/images/logos/till-time-icon.png' height={15} alt='till-time-icon'className="img" />Viewers till date</label>
                 </div>
             </div>
-
+            
             <div className="catalogue-enrichment-contents">
-                <CatalogueEnrichmentBottomContents data = {['Trailers', 'No. of Viewers', '1.48M', '2% from previous']}/>
-                <CatalogueEnrichmentBottomContents data = {['Originals', 'No. of Viewers', '1.48M', '2% from previous']}/>
-                <CatalogueEnrichmentBottomContents data = {['Movies', 'No. of Viewers', '1.48M', '2% from previous']}/>
-                <CatalogueEnrichmentBottomContents data = {['TV Shows', 'No. of Viewers', '1.48M', '2% from previous']}/>
+                <CatalogueEnrichmentBottomContents data = {['Trailers', 'No. of Viewers', '1.48M', '2% ↑ from previous']}/>
+                <CatalogueEnrichmentBottomContents data = {['Originals', 'No. of Viewers', '1.48M', '2% ↑ from previous']}/>
+                <CatalogueEnrichmentBottomContents data = {['Movies', 'No. of Viewers', '1.48M', '2% ↑ from previous']}/>
+                <CatalogueEnrichmentBottomContents data = {['TV Shows', 'No. of Viewers', '1.48M', '2% ↑ from previous']}/>
             </div>
             
         </div>

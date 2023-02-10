@@ -7,7 +7,7 @@ const CatalogueEnrichmentKpiCard = (props) => {
             <p className="kpi-card-heading">{data[0]}</p>
             <div className="kpi-card-value">
                 <p>{data[1]}</p>
-                <p>{data[2]}</p>
+                {data[2] === 2 ? (<p className="red-color">{data[2]}% ↑ from last period</p>) : (<p className="green-color">{data[2]}% ↓ from last period</p>)}
             </div>
         </div>
     )

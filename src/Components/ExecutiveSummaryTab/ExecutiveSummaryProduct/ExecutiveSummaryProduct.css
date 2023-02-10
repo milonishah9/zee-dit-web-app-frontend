@@ -66,6 +66,12 @@ div.executive-summary-content-active-tab {
   margin-bottom: 15px;
 }
 
+.product-userjourney-card-heading-and-icon{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
 .product-userjourney-card-number {
   font-style: normal;
   font-weight: 500;
@@ -155,11 +161,9 @@ div.executive-summary-content-active-tab {
 
 .product-journey-container h4{
   position: relative;
-  top: 21px;
+  top: 8px;
   left: 29px;
   color: #3e1f76;
-  /* margin-left: 30px;
-  margin-bottom: 0px; */
 }
 
 .product-journey-acquisitions {
@@ -206,6 +210,31 @@ div.executive-summary-content-active-tab {
 .prod-jou-icons-indicators{
   text-align: end;
   margin-right: 10px;
+}
+
+/* -----------tooltip-------------------- */
+
+.tooltip-info {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-info .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip-info:hover .tooltiptext {
+  visibility: visible;
 }
 
 @media only screen and (max-width: 1799px) and (min-width: 1561px){
