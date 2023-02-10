@@ -52,8 +52,6 @@
 } */
 
 .executive-summary-content-linear-filter {
-    display: grid;
-    justify-items: center;
 }
 
 @media only screen and (max-width: 767px) and (min-width:540px) {
@@ -61,6 +59,9 @@
         text-align: center;
         margin-top: 15px;
         margin-left: 0px;
+    }
+    .executive-summary-content-linear{
+        padding: 0px 10px;
     }
 }
 
@@ -77,6 +78,9 @@
 
     .executive-summary-content-linear-bubblechart-child{
         width: 1300px;
+    }
+    .executive-summary-content-linear{
+        padding: 0px 10px;
     }
 
 }
