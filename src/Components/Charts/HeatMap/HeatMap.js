@@ -18,20 +18,20 @@ const HeatMap = (props) => {
 
         let timeZone = ["00:00", "00:30", "01:00", "01:30", "02:00", "02:30", "03:00", "03:30", "04:00", "04:30", "05:00", "05:30", "06:00", "06:30", "07:00", "07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30",
             "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00", "22:30", "23:00", "23:30"];
-        let shows = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+        let shows = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
         const svg = d3
             .select(svgRef.current)
-            .attr("viewBox", "0 20 650 110")
+            .attr("viewBox", "0 0 650 210")
             .classed("heat-map-svg", true)
             .append("g")
-            .attr("transform", "translate(30,30)");
+            .attr("transform", "translate(30,10)");
 
         let xScale = d3
             .scaleBand()
             .range([0, 600])
             .domain(timeZone)
-            .padding(0.1);
+            .padding(0.08);
 
         let xAxis = d3.axisBottom(xScale)
             .tickSize(0)
@@ -39,15 +39,16 @@ const HeatMap = (props) => {
                 "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"]);
 
         svg.append("g")
-            .attr("transform", "translate(0," + 114 + ")")
+            .attr("transform", "translate(0," + -10 + ")")
+            .classed('x-axis',true)
             .call(xAxis);
         // .style("opacity", isAllDropdownsSelected ? 1 : 0.2);
 
         let yScale = d3
             .scaleBand()
-            .range([100, 0])
+            .range([200, 0])
             .domain(shows)
-            .padding(0.1);
+            .padding(0.08);
 
         let yAxis = d3.axisLeft(yScale)
             .tickSize(0)
@@ -55,11 +56,12 @@ const HeatMap = (props) => {
 
         svg.append("g")
             .call(yAxis)
+            .classed("y-axis-tick", true)
             .style("opacity", isAllDropdownsSelected ? 1 : 0.2);
 
         let myColor = d3
             .scaleLinear()
-            .range(["white", "#3E1F76"])
+            .range(["white", "#4F277C"])
             .domain([1, 120]);
 
         let tooltip = d3.select('.heat-map-container')
@@ -94,8 +96,8 @@ const HeatMap = (props) => {
             .append("rect")
             .attr("x", d => xScale(d.time))
             .attr("y", d => yScale(d.show))
-            .attr("rx", 1.5)
-            .attr("ry", 1.5)
+            // .attr("rx", 1.5)
+            // .attr("ry", 1.5)
             // .style("opacity", isAllDropdownsSelected ? 1 : 0.2)
             .attr("width", xScale.bandwidth())
             .attr("height", yScale.bandwidth())

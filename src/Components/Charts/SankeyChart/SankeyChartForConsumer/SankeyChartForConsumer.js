@@ -47,17 +47,17 @@ const SankeyChartForConsumer = (props) => {
             { id: "Watched Ads", x: xPosition + 50, y: yPosition + 405, value: 33.21, name: "Watched Ads", absoluteValue: 66.3, percentageValue: 30, percentageChage: -2 },
             { id: "Exit-Search", x: xPosition + 125, y: yPosition + 405, value: 33.21, name: "Exit", absoluteValue: 66.3, percentageValue: 12, percentageChage: -2 },
             { id: "Exit-Explore", x: xPosition - 100, y: yPosition + 405, value: 33.21, name: "Exit", absoluteValue: 66.3, percentageValue: 51, percentageChage: -2 },
-            // { id: "Watch Premium Content", x: xPosition - 25, y: yPosition + 575, value: 86.71, name: "Watch Premium Content", absoluteValue: 66.3, percentageValue: 3, percentageChage: -2 },
-            { id: "Watch Premium Content", x: xPosition - 65, y: yPosition + 575, value: 86.71, name: "Watch Premium Content", absoluteValue: 66.3, percentageValue: 3, percentageChage: -2 },
-            // { id: "Watch Free Content", x: xPosition + 50, y: yPosition + 575, value: 86.71, name: "Watch Free Content", absoluteValue: 66.3, percentageValue: 54, percentageChage: -2 },
-            { id: "Watch Free Content", x: xPosition + 5, y: yPosition + 575, value: 86.71, name: "Watch Free Content", absoluteValue: 66.3, percentageValue: 54, percentageChage: -2 },
+            { id: "Watch Premium Content", x: xPosition - 25, y: yPosition + 575, value: 86.71, name: "Watch Premium Content", absoluteValue: 66.3, percentageValue: 3, percentageChage: -2 },
+            // { id: "Watch Premium Content", x: xPosition - 65, y: yPosition + 575, value: 86.71, name: "Watch Premium Content", absoluteValue: 66.3, percentageValue: 3, percentageChage: -2 },
+            { id: "Watch Free Content", x: xPosition + 50, y: yPosition + 575, value: 86.71, name: "Watch Free Content", absoluteValue: 66.3, percentageValue: 54, percentageChage: -2 },
+            // { id: "Watch Free Content", x: xPosition + 5, y: yPosition + 575, value: 86.71, name: "Watch Free Content", absoluteValue: 66.3, percentageValue: 54, percentageChage: -2 },
             { id: "Exit - Watch Ads", x: xPosition + 125, y: yPosition + 575, value: 86.71, name: "Exit", absoluteValue: 66.3, percentageValue: 43, percentageChage: -2 },
         ];
 
         var linkData = [
             { source: [xPosition - 100, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#74CDFF" }, //Organic - New
             { source: [xPosition - 100, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#74CDFF" }, //Orgainc - Returning
-            // { source: [xPosition + 125, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#768CFF" }, //Paid - Returning
+            { source: [xPosition + 125, yPosition - 365], target: [xPosition - 100, yPosition - 205], fill: "#768CFF" }, //Paid - Returning
             { source: [xPosition + 125, yPosition - 365], target: [xPosition + 125, yPosition - 205], fill: "#768CFF" }, //Paid - New
             { source: [xPosition - 100, yPosition - 185], target: [xPosition - 100, yPosition - 25], fill: "#FFB78E" },  //Returning - Anonymous
             { source: [xPosition - 100, yPosition - 185], target: [xPosition + 125, yPosition - 25], fill: "#FFB78E" }, //Returning - Sign up
@@ -77,11 +77,11 @@ const SankeyChartForConsumer = (props) => {
             { source: [xPosition + 55, yPosition + 215], target: [xPosition - 25, yPosition + 395], fill: "#FFB78E" }, //Search - Subscribed
             { source: [xPosition + 55, yPosition + 215], target: [xPosition + 50, yPosition + 395], fill: "#FFB78E" }, //Search - WatchAds
             { source: [xPosition + 55, yPosition + 215], target: [xPosition + 125, yPosition + 395], fill: "#CAB6B6" }, //Explore - WatchAds
-            // { source: [xPosition - 25, yPosition + 415], target: [xPosition - 25, yPosition + 565], fill: "#FFB78E" }, //Subscribed - Watch Premium Content
-            { source: [xPosition - 25, yPosition + 415], target: [xPosition - 65, yPosition + 565], fill: "#FFB78E" }, //Subscribed - Watch Premium Content
-            // { source: [xPosition - 25, yPosition + 415], target: [xPosition + 50, yPosition + 565,], fill: "#FFB78E" }, //Subscribed - Watch Free Content
-            { source: [xPosition - 25, yPosition + 415], target: [xPosition + 5, yPosition + 565,], fill: "#FFB78E" }, //Subscribed - Watch Free Content
-            { source: [xPosition + 50, yPosition + 415], target: [xPosition + 5, yPosition + 565,], fill: "#768CFF" }, //Watched Ads - Watch Free Content
+            { source: [xPosition - 25, yPosition + 415], target: [xPosition - 25, yPosition + 565], fill: "#FFB78E" }, //Subscribed - Watch Premium Content
+            // { source: [xPosition - 25, yPosition + 415], target: [xPosition - 65, yPosition + 565], fill: "#FFB78E" }, //Subscribed - Watch Premium Content
+            { source: [xPosition - 25, yPosition + 415], target: [xPosition + 50, yPosition + 565,], fill: "#FFB78E" }, //Subscribed - Watch Free Content
+            // { source: [xPosition - 25, yPosition + 415], target: [xPosition + 5, yPosition + 565,], fill: "#FFB78E" }, //Subscribed - Watch Free Content
+            { source: [xPosition + 50, yPosition + 415], target: [xPosition + 50, yPosition + 565,], fill: "#768CFF" }, //Watched Ads - Watch Free Content
             { source: [xPosition + 50, yPosition + 415], target: [xPosition + 125, yPosition + 565], fill: "#CAB6B6" }, //Watched Ads - Exit Watch Ads
         ];
 
@@ -111,10 +111,10 @@ const SankeyChartForConsumer = (props) => {
             //     fill: "#74CDFF"
             // },
             // Paid - Returning
-            {
-                point: [[35, 250], [110, 200], [130, 90], [195, 30], [178, 35], [120, 80], [90, 200], [35, 250]],
-                fill: "#768CFF",
-            },
+            // {
+            //     point: [[35, 250], [110, 200], [130, 90], [195, 30], [178, 35], [120, 80], [90, 200], [35, 250]],
+            //     fill: "#768CFF",
+            // },
             // Paid - New
             // {
             //     point: createLineCoOrdinates([35, 250], [195, 250], -8),
