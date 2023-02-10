@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectCount } from "../../../features/HoverValues";
 import HSbar from "../../Charts/HSbar/HSbar";
 import DivergingSB from "../../Charts/DivergingSB/DivergingSB";
+import filter from '../../Images/filter.png';
 
 const ExecutiveSummaryContentLinearContents = (props) => {
     const {chartData, buttonTab, tab} = props;
@@ -90,33 +91,23 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                 <span>Shows</span>
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-                                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
-                                </svg>
+                                <img className="bi-funnel" src={filter}/>
                                 <span>Reach ‘000</span>
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-                                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
-                                </svg>
+                                <img className="bi-funnel" src={filter}/>
                                 <span>GRP</span>
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-                                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
-                                </svg>
+                                <img className="bi-funnel" src={filter}/>
                                 <span className="ex-sum-cont-engagement">Reach %<span className="exe-sum-lin-con-h-lbr">(Acquisition)</span></span>
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-                                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
-                                </svg>
+                            <img className="bi-funnel" src={filter}/>
                                 <span className="ex-sum-cont-engagement">TSV<span className="exe-sum-lin-con-h-lbr">(M min.) (Engagement)</span></span>
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel last-filter-svg" viewBox="0 0 16 16">
-                                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
-                                </svg>
+                            <img className="last-filter-svg" src={filter}/>
                                 <span>GRP Adbreak</span>
                             </th>
                         </tr>
@@ -126,33 +117,23 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                 <span>Content name</span>
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-                                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
-                                </svg>    
+                            <img className="bi-funnel" src={filter}/>  
                                 <span>Viewers{toggleValue === true && <span><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</span>
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-                                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
-                                </svg>    
+                            <img className="bi-funnel" src={filter}/>    
                                 <span>Viewers(>1 min watched){toggleValue === true && <span className="chart-scale-indicators-morethan1"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</span>
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-                                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
-                                </svg>
+                            <img className="bi-funnel" src={filter}/>
                                 <span>Viewers(>75% min watched){toggleValue === true && <span className="chart-scale-indicators-morethan75"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</span>
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
-                                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
-                                </svg>
+                            <img className="bi-funnel" src={filter}/>
                                 <span>Watch Duration(M min.) {toggleValue === true && <span className="chart-scale-indicators-watch-dur"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</span>
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel last-filter-svg" viewBox="0 0 16 16">
-                                    <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
-                                </svg>
+                            <img className="last-filter-svg" src={filter}/>
                                 <span>#SAWF Subscriptions {toggleValue === true && <span className="chart-scale-indicators-sub"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</span>
                             </th>
                         </tr>
