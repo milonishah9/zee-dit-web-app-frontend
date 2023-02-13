@@ -774,7 +774,7 @@
 @media only screen and (max-width: 767px) {
 
     .line-chart-with-animation{
-        height: 192px;
+        height: 185px;
     }
 
     .line-chart-discovery p {
@@ -838,7 +838,7 @@
     
     .line-chart-discovery {
         position: relative;
-        right: -2px;
+        right: 36px;
         top: -28px;
     }
 
@@ -849,13 +849,13 @@
 
     .line-chart-advertisement {
         position: relative;
-        left: 104px;
+        left: 21px;
         top: 11px;
     }
 
     .line-chart-subscriptions {
         position: relative;
-        left: 201px;
+        left: 82px;
     }
 
     .line-chart-subscriptions p{
@@ -870,7 +870,7 @@
 
     .line-chart-engagement {
         position: relative;
-        left: 301px;
+        left: 140px ;
     }
     .line-chart-engagement label{
         position: relative;
@@ -883,7 +883,7 @@
 
     .line-chart-loyalty {
         position: relative;
-        left: 402px;
+        left: 202px;
     }
 
     .line-chart-loyalty p{

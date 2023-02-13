@@ -710,6 +710,22 @@ div.executive-summary-content-active-tab {
     height: 13px;
   }
 
+  .product-userjourney-card-heading {
+    font-size: 12px;
+  }
+
+  .product-userjourney-card-number{
+    font-size: 20px;
+  }
+
+  .pluse-value  {
+    font-size: 12px;
+  }
+
+  .minuse-value {
+    font-size: 12px;
+  }
+
   .product-userjourney-card {
     margin-top: 3px;
   }
