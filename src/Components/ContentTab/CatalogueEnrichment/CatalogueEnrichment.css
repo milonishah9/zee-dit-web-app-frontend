@@ -18,7 +18,7 @@ p{
     
 }
 
-.catalogue-enrichment-kpi-card-heading{
+.kpi-card-heading{
     margin-top: 10px;
     font-weight: 400;
     font-size: 12px;
@@ -26,18 +26,18 @@ p{
     
 }
 
-.catalogue-enrichment-kpi-card-value{
+.kpi-card-value{
     display: flex;
 }
 
-.catalogue-enrichment-kpi-card-value p:first-child{
+.kpi-card-value p:first-child{
     font-family: 'GothamMedium';
     font-weight: 500;
     font-size: 35px;
     line-height: 24px;
 }
 
-.catalogue-enrichment-kpi-card-value p:nth-child(2){
+.kpi-card-value p:nth-child(2){
     font-family: 'GothamMedium';
     font-weight: 400;
     font-size: 10px;
@@ -90,7 +90,11 @@ img.img {
     justify-content: space-between;
 }
 
-.catalogue-enrichment-kpi-card-value p{
+.bi-info-circle{
+    margin: 10px;
+}
+
+.kpi-card-value p{
     margin-left: 10px;
 }
 h6.title {
@@ -109,14 +113,10 @@ h5.Number-title {
     font-size: 25px;
     font-family: 'GothamMedium';
 }
-.catalogue-enrichment-contents-div{
-    border-right: 1px  dashed #AFC5FD;
-}
+
 .catalogue-enrichment-contents-div:last-child {border:none;}
 .catalogue-enrichment-contents{
     background: #FFFFFF;
-    border: 1px solid #D8E3FF;
-    box-shadow: 0px 2px 5px #D6DEF8;
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
@@ -124,13 +124,13 @@ h5.Number-title {
 }
 
 .catalogue-enrichment-contents-div{
-    width: 24%;
-    padding: 10px;
+    width: 24.4%;
 }
 
 .catalogue-enrichment-bottom-cards-scroll{
     height: 450px;
     overflow: auto;
+    border-radius: 4px;
 }
 
 .catalogue-enrichment-bottom-cards-scroll::-webkit-scrollbar {
@@ -151,10 +151,10 @@ h5.Number-title {
 .catalogue-enrichment-bottom-card{
     background: #FFFFFF;
     border: 1px solid #D8E3FF;
-    border-radius: 4px;
-    width: 98%;
+    /* border-radius: 4px; */
+    width: 100%;
     margin: auto;
-    margin-bottom: 10px;
+    background-color: #E9EFFF;
 }
 
 .catalogue-enrichment-heading-icons{
@@ -174,11 +174,21 @@ h5.Number-title {
 .catalogue-enrichment-bottom-icons{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 20px;
 }
 
 .catalogue-enrichment-bottom-icons label{
     text-align: center;
+}
+
+.catalogue-enrichment-bottom-icons label p:nth-child(3){
+    color:#00C48C;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.icon-text{
+    font-weight: 500;
+    line-height: 12px;
 }
 
 .red-color{
@@ -200,4 +210,17 @@ h5.Number-title {
     visibility: visible;
     z-index: 105;
     transition: all 0.2s ease-in-out 0s;
+}
+
+.bi-arrows-fullscreen{
+    margin-left: 10px;
+}
+
+.catalogue-enrichment-contents-card{
+    background: #FFFFFF;
+    border: 1px solid #D8E3FF;
+    box-shadow: 0px 2px 5px #D6DEF8;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
