@@ -52,7 +52,7 @@ div.executive-summary-content-active-tab {
   border: 1px solid #d8e3ff;
   box-shadow: 0px 2px 5px #d6def8;
   border-radius: 4px;
-  margin-top: 20px;
+  margin-top: 10px;
   width: 100%;
 }
 
@@ -62,14 +62,14 @@ div.executive-summary-content-active-tab {
   font-weight: 500;
   font-size: 14px;
   line-height: 11px;
-  margin: 10px;
+  margin-top: 5px;
   margin-bottom: 15px;
 }
 
 .product-userjourney-card-heading-and-icon{
   display: flex;
   justify-content: space-between;
-  margin: 10px;
+  margin: 5px 10px ;
 }
 
 .product-userjourney-card-number {
@@ -118,7 +118,7 @@ div.executive-summary-content-active-tab {
   color: #04c704;
   font-weight: 400;
   margin-left: 8px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 11px;
   display: flex;
   align-items: center;
@@ -131,7 +131,7 @@ div.executive-summary-content-active-tab {
   color: red;
   margin-left: 8px;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 14.5px;
   line-height: 11px;
   display: flex;
   align-items: center;
@@ -281,7 +281,7 @@ div.executive-summary-content-active-tab {
 
   .prod-jou-icons-and-cards{
     position: relative;
-    bottom: 70px;
+    bottom: 90px;
   }
 
   .product-userjourney-card-heading {
@@ -533,11 +533,24 @@ div.executive-summary-content-active-tab {
  @media only screen and (max-width: 1366px) and (min-width: 1278px){
   .prod-jou-icons-indicators {
     text-align: end;
-    margin-right: 48px;
+    margin-right: 63px;
+    position: relative;
+    top: 6px;
+}
+
+.prod-jou-icons-and-cards{
+  position: relative;
+  bottom: 107px;
 }
 
 .product-userjourney-card-heading {
   height: 14px;
+  font-size: 13px;
+}
+
+
+.product-userjourney-card-number{
+  font-size: 22px;
 }
 
   .executive-summary-product-container {
@@ -547,40 +560,40 @@ div.executive-summary-content-active-tab {
   }
 
   .product-journey-acquisitions {
-    width: 195px;
+    width: 160px;
     position: absolute;
-    left: 66px;
+    left: 90px;
   }
   
   .product-journey-discovery {
-    width: 195px;
+    width: 160px;
     position: absolute;
-    left: 276px;
+    left: 274px;
 }
   
 .product-journey-advertisement {
-  width: 195px;
+  width: 160px;
   position: absolute;
-  left: 485px;
+  left: 465px;
 }
   
   
   .product-journey-subscriptions {
-    width: 195px;
+    width: 160px;
     position: absolute;
-    left: 695px;
+    left: 660px;
   }
   
   .product-journey-engagement {
-    width: 195px;
+    width: 160px;
     position: absolute;
-    left: 904.5px;
+    left: 850.5px;
   }
   
   .product-journey-loyalty {
-    width: 195px;
+    width: 160px;
     position: absolute;
-    left: 1113px;
+    left: 1036px;
   }
 
  } 
@@ -688,10 +701,13 @@ div.executive-summary-content-active-tab {
   .data-product{margin-top: 0rem;grid-template-columns:auto!important;}
   .product-userjourney-card{margin-left: 20px;margin-right: 20px;}
 
-  /* .prod-jou-icons-indicators label {
-    margin: 0 4px;
-    font-size: 13px;
-} */
+  .product-userjourney-card {
+    margin-top: 3px;
+  }
+
+  .data-product {
+    height: 245px;
+  }
 
 .prod-jou-icons-indicators svg{
   width: 18px;
@@ -819,6 +835,11 @@ div.executive-summary-content-active-tab {
 .prod-jou-icons-indicators {
   text-align: end;
   margin-right: 74px;
+}
+
+.prod-jou-icons-and-cards{
+  position: relative;
+  bottom: 87px;
 }
 
   /* .product-icons-logo svg{

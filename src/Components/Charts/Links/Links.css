@@ -183,7 +183,7 @@
 @media only screen and (max-width: 1560px) and (min-width: 1441px){
     .prod-jour-chart-heading{
         width: 210px;
-        height: 42px;
+        height: 40px;
     }
 
     .all-numbers-in-mil {
@@ -299,12 +299,20 @@
 @media only screen and (max-width: 1366px) and (min-width: 1278px){
     .prod-jour-chart-heading{
         width: 195px;
-        height: 42px;
+        height: 38px;
     }
 
     .line-chart-with-animation{
         position: relative;
-        top: 32px;
+        top: 0px;
+    }
+
+    .product-journey-container h4 {
+        position: relative;
+        top: 3px;
+        left: 29px;
+        color: #3e1f76;
+        font-size: 1.3rem;
     }
 
     .line-chart-all-dots{
@@ -314,12 +322,12 @@
     .all-numbers-in-mil {
         position: absolute;
         width: 165px;
-        top: 46px;
+        top: 40px !important;
     }
 
     .line-chart-acquisitions {
         position: relative;
-        right: -109px !important;
+        right: -80px !important;
     }
 
     .line-chart-discovery {
@@ -606,30 +614,30 @@
         font-size: 14px;
         padding: 3px 5px;
     }
-    .line-chart-advertisement p{
+    /* .line-chart-advertisement p{
         position: relative;
         right: 5px;
-    }
+    } */
 
-    .line-chart-subscriptions p{
+    /* .line-chart-subscriptions p{
         position: relative;
         right: 0px;
-    }
+    } */
 
-    .line-chart-engagement p{
+    /* .line-chart-engagement p{
         position: relative;
         right: -3px;
-    }
+    } */
 
-    .line-chart-loyalty p{
+    /* .line-chart-loyalty p{
         position: relative;
         right: 10px;
-    }
-
+    } */
+/* 
     .line-chart-discovery p{
         position: relative;
         right: 4px;
-    }
+    } */
 }
 
 
@@ -753,6 +761,10 @@
 
 @media only screen and (max-width: 767px) {
 
+    .line-chart-with-animation{
+        height: 192px;
+    }
+
     .line-chart-discovery p {
         position: relative;
         top: 40px;
@@ -792,6 +804,7 @@
 
     .line-chart-with-animation{
         margin-top: 0px;
+        position: unset;
     }
 
     .line-chart-acquisitions {

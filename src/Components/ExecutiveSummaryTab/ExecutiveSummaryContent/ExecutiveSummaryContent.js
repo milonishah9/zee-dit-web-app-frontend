@@ -6,7 +6,7 @@ import ExecutiveSummaryContentLinear from "./ExecutiveSummaryContentLinear";
 import ExecutiveSummaryContentOtt from "./ExecutiveSummaryContentOtt";
 // import LinearBarchart from "../../Charts/BubbleChart/LinearBarchart/LinearBarchart"  
 
-const ExecutiveSummaryContent = () => {
+const   ExecutiveSummaryContent = () => {
     const [activeTab, setActiveTab] = useState('linear');
 
     return (
