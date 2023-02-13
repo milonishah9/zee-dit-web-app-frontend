@@ -160,6 +160,13 @@ table {
   margin: 15px auto 0px auto;
 }
 
+.executive-summary-content-ott-tabs{
+  width: 97.5%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
 .executive-summary-content-linear-tabs-sub-div{
   display: flex;
   justify-content: space-between;
