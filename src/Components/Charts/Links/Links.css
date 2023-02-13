@@ -327,7 +327,7 @@
 
     .line-chart-acquisitions {
         position: relative;
-        right: -109px !important;
+        right: -80px !important;
     }
 
     .line-chart-discovery {
@@ -614,30 +614,30 @@
         font-size: 14px;
         padding: 3px 5px;
     }
-    .line-chart-advertisement p{
+    /* .line-chart-advertisement p{
         position: relative;
         right: 5px;
-    }
+    } */
 
-    .line-chart-subscriptions p{
+    /* .line-chart-subscriptions p{
         position: relative;
         right: 0px;
-    }
+    } */
 
-    .line-chart-engagement p{
+    /* .line-chart-engagement p{
         position: relative;
         right: -3px;
-    }
+    } */
 
-    .line-chart-loyalty p{
+    /* .line-chart-loyalty p{
         position: relative;
         right: 10px;
-    }
-
+    } */
+/* 
     .line-chart-discovery p{
         position: relative;
         right: 4px;
-    }
+    } */
 }
 
 
@@ -761,6 +761,10 @@
 
 @media only screen and (max-width: 767px) {
 
+    .line-chart-with-animation{
+        height: 192px;
+    }
+
     .line-chart-discovery p {
         position: relative;
         top: 40px;
@@ -800,6 +804,7 @@
 
     .line-chart-with-animation{
         margin-top: 0px;
+        position: unset;
     }
 
     .line-chart-acquisitions {
