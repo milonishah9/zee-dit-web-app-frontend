@@ -237,6 +237,11 @@ div.executive-summary-content-active-tab {
   visibility: visible;
 }
 
+.prod-jou-icons-and-cards{
+  position: relative;
+  bottom: 100px;
+}
+
 @media only screen and (max-width: 1799px) and (min-width: 1561px){
 
   .product-journey-acquisitions {
