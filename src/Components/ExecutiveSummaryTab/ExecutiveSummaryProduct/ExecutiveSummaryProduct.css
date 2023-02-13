@@ -706,8 +706,17 @@ div.executive-summary-content-active-tab {
   .data-product{margin-top: 0rem;grid-template-columns:auto!important;}
   .product-userjourney-card{margin-left: 20px;margin-right: 20px;}
 
+  .product-userjourney-card-heading{
+    height: 13px;
+  }
+
   .product-userjourney-card {
     margin-top: 3px;
+  }
+
+  .prod-jou-icons-and-cards{
+    position: relative;
+    bottom: 0px !important;
   }
 
   .data-product {
@@ -776,7 +785,7 @@ div.executive-summary-content-active-tab {
  @media screen and (max-width: 544px) {
 
   .product-userjourney-card-heading{
-    height: 25px;
+    height: 10px;
   }
 
   .product-userjourney-card{
