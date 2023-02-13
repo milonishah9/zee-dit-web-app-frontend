@@ -299,12 +299,20 @@
 @media only screen and (max-width: 1366px) and (min-width: 1278px){
     .prod-jour-chart-heading{
         width: 195px;
-        height: 42px;
+        height: 38px;
     }
 
     .line-chart-with-animation{
         position: relative;
         top: 0px;
+    }
+
+    .product-journey-container h4 {
+        position: relative;
+        top: 3px;
+        left: 29px;
+        color: #3e1f76;
+        font-size: 1.3rem;
     }
 
     .line-chart-all-dots{
@@ -314,7 +322,7 @@
     .all-numbers-in-mil {
         position: absolute;
         width: 165px;
-        top: 46px;
+        top: 40px !important;
     }
 
     .line-chart-acquisitions {
