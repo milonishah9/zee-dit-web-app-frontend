@@ -237,6 +237,11 @@ div.executive-summary-content-active-tab {
   visibility: visible;
 }
 
+.prod-jou-icons-and-cards{
+  position: relative;
+  bottom: 100px;
+}
+
 @media only screen and (max-width: 1799px) and (min-width: 1561px){
 
   .product-journey-acquisitions {
@@ -540,17 +545,17 @@ div.executive-summary-content-active-tab {
 
 .prod-jou-icons-and-cards{
   position: relative;
-  bottom: 107px;
+  bottom: 135px;
 }
 
 .product-userjourney-card-heading {
-  height: 14px;
-  font-size: 13px;
+  height: 5px;
+  font-size: 12px;
 }
 
 
 .product-userjourney-card-number{
-  font-size: 22px;
+  font-size: 21px;
 }
 
   .executive-summary-product-container {
@@ -701,8 +706,33 @@ div.executive-summary-content-active-tab {
   .data-product{margin-top: 0rem;grid-template-columns:auto!important;}
   .product-userjourney-card{margin-left: 20px;margin-right: 20px;}
 
+  .product-userjourney-card-heading{
+    height: 13px;
+  }
+
+  .product-userjourney-card-heading {
+    font-size: 12px;
+  }
+
+  .product-userjourney-card-number{
+    font-size: 20px;
+  }
+
+  .pluse-value  {
+    font-size: 12px;
+  }
+
+  .minuse-value {
+    font-size: 12px;
+  }
+
   .product-userjourney-card {
     margin-top: 3px;
+  }
+
+  .prod-jou-icons-and-cards{
+    position: relative;
+    bottom: 0px !important;
   }
 
   .data-product {
@@ -771,7 +801,7 @@ div.executive-summary-content-active-tab {
  @media screen and (max-width: 544px) {
 
   .product-userjourney-card-heading{
-    height: 25px;
+    height: 10px;
   }
 
   .product-userjourney-card{
