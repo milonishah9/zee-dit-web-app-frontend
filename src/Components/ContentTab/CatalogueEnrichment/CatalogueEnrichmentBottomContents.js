@@ -70,11 +70,11 @@ const CatalogueEnrichmentBottomContents = (props) => {
             </div> */}
 
             <div className="catalogue-enrichment-bottom-cards-scroll">
-                <CatalogueEnrichmentBottomCard data = {['Blur', 200, 120, 200, 38.24]} />
-                <CatalogueEnrichmentBottomCard data = {['ATM', 1234, 5678, 12.30, 38.24]} />
-                <CatalogueEnrichmentBottomCard data = {['Uunchai', 1234, 5678, 12.30, 38.24]} />
-                <CatalogueEnrichmentBottomCard data = {['Meet', 1234, 5678, 12.30, 38.24]} />
-                <CatalogueEnrichmentBottomCard data = {['Surya', 1234, 5678, 12.30, 38.24]} />
+                <CatalogueEnrichmentBottomCard data = {['Blur', '2/10/23', 600, 200, 38.24]} />
+                <CatalogueEnrichmentBottomCard data = {['ATM', '2/10/23', 600, 12.30, 38.24]} />
+                <CatalogueEnrichmentBottomCard data = {['Uunchai', '2/10/23', 600, 12.30, 38.24]} />
+                <CatalogueEnrichmentBottomCard data = {['Meet', '2/10/23', 600, 12.30, 38.24]} />   
+                <CatalogueEnrichmentBottomCard data = {['Surya', '2/10/23', 600, 12.30, 38.24]} />
             </div>
         </div>
     )
