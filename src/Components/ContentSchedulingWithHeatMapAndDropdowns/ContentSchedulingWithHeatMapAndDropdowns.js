@@ -25,7 +25,7 @@ const ContentSchedulingWithHeatMapAndDropdowns = (props) => {
     const [previousSelectedSelectOptions, setPreviousSelectedSelectOptions] = useState(initialStateObject);
 
     const handleMultiDropDownSelectionChange = (action, state) => {
-        console.log('state', state);
+        // console.log('state', state);
         setSelectedSelectOptions(state)
         // if (action === "cancle") {
         //     setSelectedSelectOptions(state);
@@ -150,13 +150,13 @@ const ContentSchedulingWithHeatMapAndDropdowns = (props) => {
                         isCalendar={true}
                     />
                     <button className='dropdown-filers-apply-button' onClick={(event) => {
-                        // selectedDropDownFilters.channelGenre &&
-                        //     selectedDropDownFilters.channle &&
-                        //     selectedDropDownFilters.market &&
-                        //     selectedDropDownFilters.metric &&
-                        //     selectedDropDownFilters.tg ?
-                        setIsClickOnDropDownFilterApply(true)
-                        // setIsClickOnDropDownFilterApply(false)
+                        selectedDropDownFilters.channelGenre &&
+                            // selectedDropDownFilters.channle &&
+                            selectedDropDownFilters.market &&
+                            selectedDropDownFilters.metric &&
+                            selectedDropDownFilters.tg ?
+                            setIsClickOnDropDownFilterApply(true) :
+                            setIsClickOnDropDownFilterApply(false)
                     }}>Apply</button>
                 </div>
                 <div className='content-scheduling-with-heatmap-legend'>
@@ -277,7 +277,7 @@ const DropDownMenu = (props) => {
 
                 }
 
-                {
+                {/* {
                     isShowDropDownMenu &&
                     <div className='drop-down-menu-options-container'>
                         {!isCalendar ?
@@ -303,7 +303,7 @@ const DropDownMenu = (props) => {
                                     onChange={setSelectedFilterDate}
                                     value={selectedFilterDate}
                                 />
-                                {/* <div className='dropdown-calender-action-buttons'>
+                                <div className='dropdown-calender-action-buttons'>
                                     <button className='dropdown-calender-action-button-cancle'
                                         onClick={(event) => {
                                             setSelectedFilterDate(previousSelectedFilterDate);
@@ -323,10 +323,43 @@ const DropDownMenu = (props) => {
                                     >
                                         OK
                                     </button>
-                                </div> */}
+                                </div>
                             </div>
                         }
                     </div>
+                } */}
+
+                {
+                    isShowDropDownMenu && !isCalendar ?
+                        <div className='drop-down-menu-options-container'>
+                            {
+                                dropDownMenu.options.map((item, index) => {
+                                    return (
+                                        <div className='drop-down-menu-option' key={item}
+                                            onClick={(event) => {
+                                                setSelectedDropDownOption(item);
+                                                setIsShowDropDownMenu(!isShowDropDownMenu)
+                                                handleOnDropDownMenuSelectionChange(dropDownMenu.id, item)
+                                            }}
+                                        >
+                                            {item}
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div> :
+                        isShowDropDownMenu && isCalendar ?
+                            <div className='dropdown-calender-container'>
+                                <Calendar
+                                    minDate={date}
+                                    maxDate={new Date()}
+                                    calendarType="US"
+                                    locale="en"
+                                    onChange={setSelectedFilterDate}
+                                    value={selectedFilterDate}
+                                />
+                            </div>
+                            : null
                 }
             </div>
         </div>
@@ -369,7 +402,7 @@ const MultiSelectDropDownMenu = (props) => {
         return () => document.removeEventListener('click', handleOnClickOutSide, true);
     }, [isShowDropDownMenu]);
 
-    console.log('selectedSelectOptions', selectedSelectOptions, 'initialStateObject', initialStateObject);
+    // console.log('selectedSelectOptions', selectedSelectOptions, 'initialStateObject', initialStateObject);
 
     const handleSelection = (option, event) => {
 
@@ -395,7 +428,7 @@ const MultiSelectDropDownMenu = (props) => {
                 if (selectedSelectOptions[item] === false) falseCount++;
             }
 
-            console.log('falseCount', falseCount);
+            // console.log('falseCount', falseCount);
             if (falseCount == 2) {
                 setSelectedSelectOptions(previous => {
                     return {
@@ -437,7 +470,7 @@ const MultiSelectDropDownMenu = (props) => {
                     }}
                 >
                     {
-                    getPlaceholderForMultiselectMenu()
+                        getPlaceholderForMultiselectMenu()
                         // <p className='drop-down-menu-selection-box-placeholder'>All</p>
                     }
 

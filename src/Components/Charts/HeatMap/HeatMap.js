@@ -11,7 +11,7 @@ const HeatMap = (props) => {
     // const { shallDisableIfAllNotSelected = false, isAllDropdownsSelected = true } = props
     const { selectedSelectOptions, isAllDropdownsSelected = true } = props;
 
-    console.log("selectedSelectOptions in heatmap", selectedSelectOptions)
+    // console.log("selectedSelectOptions in heatmap", selectedSelectOptions)
 
     // const [shows, setShows] = useState([]);
 
@@ -31,10 +31,10 @@ const HeatMap = (props) => {
         })
     })
 
-    console.log('tempShowsArray', tempShowsArray, 'tempArray', data);
+    // console.log('tempShowsArray', tempShowsArray, 'tempArray', data);
     // console.log('data', data);
 
-    console.log('isAllDropdownsSelected', isAllDropdownsSelected);
+    // console.log('isAllDropdownsSelected', isAllDropdownsSelected);
 
     const svgRef = useRef(null);
 

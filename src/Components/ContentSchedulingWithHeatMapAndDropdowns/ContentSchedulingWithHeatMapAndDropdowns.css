@@ -104,6 +104,8 @@
     /* cursor:; */
     padding: 5px 0px;
     /* height: 10vh; */
+
+    box-shadow: 0px 2px 9px rgba(89, 108, 168, 0.4);
 }
 
 .multiselect-drop-down-menu-options-parent-container {
@@ -144,12 +146,26 @@
 }
 
 .dropdown-calender-container {
-    width: 65%;
+    /* max-width: 50%; */
     display: flex;
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
     box-shadow: 0px 2px 8px rgb(89 108 168 / 40%);
+    background: #FFFFFF;
+    border-radius: 4px;
+    position: absolute;
+    /* top: 100%;   */
+    max-width: 13%;
+    margin-top: 2rem;
+    /* height: 25vh;
+    overflow-y: scroll; */
+
+    /* cursor:; */
+    padding: 5px 0px;
+    /* height: 10vh; */
+
+    box-shadow: 0px 2px 9px rgba(89, 108, 168, 0.4);
 }
 
 .react-calendar {
@@ -298,7 +314,7 @@
     margin: 0 1rem;
 }
 
-.multiselect-drop-down-menu-options-parent-container{
+.multiselect-drop-down-menu-options-parent-container {
     margin-top: 3.3rem !important;
 }
 
@@ -335,6 +351,16 @@
     /* background: #b30000; */
 }
 
+@media only screen and (max-width: 1057px) and (min-width:768) {
+    .drop-down-menu-contaier{
+        min-width: 15%;
+    }
+
+    .dropdown-calender-container{
+        width: 25%;
+        min-width: none;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     .heatmap-container {
