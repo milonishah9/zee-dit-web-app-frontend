@@ -160,19 +160,6 @@ const ContentSchedulingWithHeatMapAndDropdowns = (props) => {
                     }}>Apply</button>
                 </div>
                 <div className='content-scheduling-with-heatmap-legend'>
-                    {/* <svg width="109" height="3" viewBox="0 0 109 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="109" height="3" fill="url(#paint0_linear_6956_19165)" />
-                        <defs>
-                            <linearGradient id="paint0_linear_6956_19165" x1="0.5" y1="3" x2="109" y2="3.00004" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#4F277C" />
-                                <stop offset="0.23435" stop-color="#7343A9" />
-                                <stop offset="0.4875" stop-color="#945ED2" />
-                                <stop offset="0.66521" stop-color="#C996EB" />
-                                <stop offset="0.827563" stop-color="#E0B7FC" />
-                                <stop offset="1" stop-color="#F4E3FF" />
-                            </linearGradient>
-                        </defs>
-                    </svg> */}
 
                     <svg width="109" height="14" viewBox="0 0 109 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.94922 6.80859L0.46875 4.71875H1.21094L2.33984 6.36719L3.46484 4.71875H4.19922L2.71875 6.80859L4.28125 9H3.53906L2.33984 7.25391L1.13281 9H0.398438L1.94922 6.80859ZM6.13672 6.80859L4.65625 4.71875H5.39844L6.52734 6.36719L7.65234 4.71875H8.38672L6.90625 6.80859L8.46875 9H7.72656L6.52734 7.25391L5.32031 9H4.58594L6.13672 6.80859Z" fill="#333333" />
@@ -190,21 +177,22 @@ const ContentSchedulingWithHeatMapAndDropdowns = (props) => {
                         </defs>
                     </svg>
 
-
                 </div>
                 <div className='heatmap-container'>
                     <div className='heatmap-child-container'>
-                        {/* {
+                        {
                             isClickOnDropDownFilterApply ?
-                                < HeatMap /> :
+                                < HeatMap
+                                    selectedSelectOptions={selectedSelectOptions}
+                                /> :
                                 <div className='empty-heatmap-container'>
                                     Start to select the filters
                                 </div>
-                        } */}
+                        }
 
-                        {console.log('selectedSelectOptions in parent component', selectedSelectOptions)}
+                        {/* {console.log('selectedSelectOptions in parent component', selectedSelectOptions)}
 
-                        <HeatMap selectedSelectOptions={selectedSelectOptions} />
+                        <HeatMap selectedSelectOptions={selectedSelectOptions} /> */}
                     </div>
                 </div>
             </div>
@@ -429,6 +417,16 @@ const MultiSelectDropDownMenu = (props) => {
 
     }
 
+    const getPlaceholderForMultiselectMenu = () => {
+        for (let item in selectedSelectOptions) {
+            if (selectedSelectOptions.All === true) {
+                return <p className='drop-down-menu-selection-box-placeholder'>All</p>
+            } else if (selectedSelectOptions[item] === true) {
+                return <p className='drop-down-menu-selection-box-placeholder'>Multiple Selected</p>
+            }
+        }
+    }
+
     return (
         <div className='multiselect-dropwn-menu-container'>
             <label className='drop-down-menu-label'>Channel *</label>
@@ -439,9 +437,8 @@ const MultiSelectDropDownMenu = (props) => {
                     }}
                 >
                     {
-
-                        <p className='drop-down-menu-selection-box-placeholder'>Select</p>
-
+                    getPlaceholderForMultiselectMenu()
+                        // <p className='drop-down-menu-selection-box-placeholder'>All</p>
                     }
 
 
