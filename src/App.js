@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import './App.css';
 import StackedBarChart from './Components/Charts/StackedBarChart/StackedBarChart';
 import ILTTwentySummary from './Pages/ILTTwentySummary/ILTTwentySummary';
@@ -18,8 +17,6 @@ import ContentSchedulingWithHeatMapAndDropdowns from './Components/ContentSchedu
 import Content from './Components/ContentTab/Content';
 import CatalogueEnrichmentStackBarChart from './Components/AllDaysStackedBarChartPopUpModal/StackedBarChartForAllDays/CatalogueEnrichmentStackBarChart';
 import ScatterplotConnected from './Components/Charts/ScatterplotConnected/ScatterplotConnected'
-
-
 
 
 
@@ -52,7 +49,7 @@ function App() {
           <Route path='/mono' element={<Monochrome />} />
           <Route path='/heatmap' element={<ContentSchedulingWithHeatMapAndDropdowns />} />
         </Routes>
-      </BrowserRouter>  
+      </BrowserRouter>
     </div>
   );
 }

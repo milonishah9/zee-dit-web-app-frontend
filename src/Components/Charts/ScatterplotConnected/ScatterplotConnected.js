@@ -1,4 +1,5 @@
 import React from "react";
+import './ScatterplotConnected.css';
 import * as d3 from 'd3';
 import { useEffect } from "react";
 
@@ -26,7 +27,7 @@ const ScatterplotConnected = () => {
         {side: "bottom",  miles: 200, gas: 40},
       ]
     useEffect(() => {
-        const chart = ConnectedScatterplot(driving, {
+        ConnectedScatterplot(driving, {
             x: d => d.miles,
             y: d => d.gas,
             title: d => d.year,
@@ -110,7 +111,7 @@ function ConnectedScatterplot(data, {
     const svg = d3.select(".scatterplot-connected")
         .attr("width", width)
         .attr("height", height)
-        .attr("viewBox", [0, 0, width, height])
+        .attr("viewBox", [-10, 0, width, height])
         .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
   
     // svg.append("g")
@@ -137,7 +138,7 @@ function ConnectedScatterplot(data, {
         .call(g => g.append("text")
             .attr("x", 5)
             .attr("y", 18)
-            .attr("fill", "currentColor").style('font-size', '10px')
+            .attr("fill", "currentColor").style('font-size', '10px').classed('text-svg', true)
             .attr("text-anchor", "start")
             .text(yLabel));
   
@@ -162,21 +163,21 @@ function ConnectedScatterplot(data, {
         .attr("cx", i => xScale(X[i]))
         .attr("cy", i => yScale(Y[i]))
         .attr("r", r)
-    .on("mouseover", I => console.log(I))
-    // .on("mousemove", function () {
-        
-    //   })
+        .on("mouseover", I => console.log(I))
+        // .on("mousemove", function () {
+            
+        //   })
 
-    //   .on("mouseout", function () {
-        
-    //   })
+        //   .on("mouseout", function () {
+            
+        //   })
       .on("click", function (I, i) {
         console.log(I, i);
       });
   
     const label = svg.append("g")
         .attr("font-family", "GothamLight")
-        .attr("font-size", 14)
+        .attr("font-size", '14px')
         .attr("stroke-linejoin", "round")
       .selectAll("g")
       .data(I.filter(i => D[i]))
