@@ -237,5 +237,12 @@ h5.Number-title {
 
 .content-catalogue-enrichment-threeChart{
     text-align: center;
-    margin-top: 40px;
+}
+
+.three-chart-container{
+    display: flex;
+    justify-content: space-between;
+    width: 67%;
+    margin: auto;
+    margin-top: 30px;
 }
