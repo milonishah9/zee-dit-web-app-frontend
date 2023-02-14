@@ -26,18 +26,18 @@ p{
     
 }
 
-.kpi-card-value{
+.catalogue-kpi-card-value{
     display: flex;
 }
 
-.kpi-card-value p:first-child{
+.catalogue-kpi-card-value p:first-child{
     font-family: 'GothamMedium';
     font-weight: 500;
     font-size: 35px;
     line-height: 24px;
 }
 
-.kpi-card-value p:nth-child(2){
+.catalogue-kpi-card-value p:nth-child(2){
     font-family: 'GothamMedium';
     font-weight: 400;
     font-size: 10px;
