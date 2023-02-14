@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState, useRef } from 'react';
 import { Calendar } from 'react-calendar';
 import * as d3 from 'd3';
 
-import HeatMap from '../Charts/HeatMap/HeatMap';
+import HeatMap from '../../Charts/HeatMap/HeatMap';
 
 import './ContentSchedulingWithHeatMapAndDropdowns.css';
 

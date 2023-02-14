@@ -3,6 +3,7 @@ import ContentHeader from "./ContentHeader";
 import './Content.css'
 import CatalogueEnrichment from "./CatalogueEnrichment/CatalogueEnrichment";
 import ContentSchedulingWithHeatMapAndDropdowns from "../ContentSchedulingWithHeatMapAndDropdowns/ContentSchedulingWithHeatMapAndDropdowns";
+import ContentMarketing from "./ContentMarketing/ContentMarketing";
 
 const Content = () => {
     const [buttonTab, setButtonTab] = useState('')
@@ -27,6 +28,7 @@ const Content = () => {
                 <div>
                     {buttonTab === 'Enrichment' && <CatalogueEnrichment />}
                     {buttonTab === 'Scheduling' && <ContentSchedulingWithHeatMapAndDropdowns />}
+                    {buttonTab === 'Marketing' && <ContentMarketing />}
                 </div>
             </div>
         </div>

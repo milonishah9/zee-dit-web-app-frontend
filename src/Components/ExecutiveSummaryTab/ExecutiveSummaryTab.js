@@ -4,7 +4,7 @@ import ILTTwentrySummaryHeader from "../ILTTwentrySummaryHeader/ILTTwentrySummar
 import ExecutiveSummaryContent from "./ExecutiveSummaryContent/ExecutiveSummaryContent";
 import ExecutiveSummaryProduct from "./ExecutiveSummaryProduct/ExecutiveSummaryProduct";
 import ExecutiveSummaryConsumer from "./ExecutiveSummaryConsumer/ExecutiveSummaryConsumer";
-import ContentSchedulingWithHeatMapAndDropdowns from "../ContentSchedulingWithHeatMapAndDropdowns/ContentSchedulingWithHeatMapAndDropdowns";
+import ContentSchedulingWithHeatMapAndDropdowns from "../ContentTab/ContentSchedulingWithHeatMapAndDropdowns/ContentSchedulingWithHeatMapAndDropdowns";
 
 
 const ExecutiveSummaryTab = () => {
