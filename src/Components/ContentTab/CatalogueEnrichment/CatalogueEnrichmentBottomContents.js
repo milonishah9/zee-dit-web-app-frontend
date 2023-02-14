@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import CatalogueEnrichmentStackBarChart from "../../AllDaysStackedBarChartPopUpModal/StackedBarChartForAllDays/CatalogueEnrichmentStackBarChart";
 import './CatalogueEnrichment.css';
 import CatalogueEnrichmentBottomCard from "./CatalogueEnrichmentBottomCard";
+import ContentCatalogueEnrichmentThreeChart from "./ContentCatalogueEnrichmentThreeChart";
 
 const CatalogueEnrichmentBottomContents = (props) => {
     const {data} = props;
@@ -14,7 +15,7 @@ const CatalogueEnrichmentBottomContents = (props) => {
     return(
         <div className="catalogue-enrichment-contents-div">
             {/* {fullscreen && <div className="catalogue-enrichment-full-screen-chart">
-                    <CatalogueEnrichmentStackBarChart width = {1500} height = {500} />
+                    <ContentCatalogueEnrichmentThreeChart />
                 </div>
             }  */}
             <div className="catalogue-enrichment-contents-card">

@@ -129,7 +129,7 @@ h5.Number-title {
 }
 
 .catalogue-enrichment-bottom-cards-scroll{
-    height: 450px;
+    height: 350px;
     overflow: auto;
     border-radius: 4px;
     width: 99.5%;
@@ -138,6 +138,7 @@ h5.Number-title {
 .overflow-automat{
     background-color: #E9EFFF;
     border: 1px solid #D8E3FF;
+    border-radius: 4px;
 }
 
 .catalogue-enrichment-bottom-cards-scroll::-webkit-scrollbar {
@@ -179,6 +180,8 @@ h5.Number-title {
 }
 
 .catalogue-enrichment-bottom-icons{
+    padding-top: 15px;
+    padding-bottom: 15px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -230,4 +233,16 @@ h5.Number-title {
     border-radius: 4px;
     padding: 10px;
     margin-bottom: 10px;
+}
+
+.content-catalogue-enrichment-threeChart{
+    text-align: center;
+}
+
+.three-chart-container{
+    display: flex;
+    justify-content: space-between;
+    width: 67%;
+    margin: auto;
+    margin-top: 30px;
 }

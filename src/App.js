@@ -16,9 +16,8 @@ import HeatMap from './Components/Charts/HeatMap/HeatMap';
 import ContentSchedulingWithHeatMapAndDropdowns from './Components/ContentSchedulingWithHeatMapAndDropdowns/ContentSchedulingWithHeatMapAndDropdowns';
 import Content from './Components/ContentTab/Content';
 import CatalogueEnrichmentStackBarChart from './Components/AllDaysStackedBarChartPopUpModal/StackedBarChartForAllDays/CatalogueEnrichmentStackBarChart';
-import ScatterplotConnected from './Components/Charts/ScatterplotConnected/ScatterplotConnected'
-
-
+import ScatterplotConnected from './Components/Charts/ScatterplotConnected/ScatterplotConnected';
+import ContentCatalogueEnrichmentThreeChart from './Components/ContentTab/CatalogueEnrichment/ContentCatalogueEnrichmentThreeChart';
 
 
 function App() {
@@ -45,7 +44,7 @@ function App() {
           <Route path='/new' element={<DivergingSB />} />
           <Route path='/links' element={<Links />} />
           <Route path='/CatalogueEnrichmentStackBarChart' element={<CatalogueEnrichmentStackBarChart />} />
-          <Route path='/ScatterplotConnected' element={<ScatterplotConnected />} />
+          <Route path='/ContentCatalogueEnrichmentThreeChart' element={<ContentCatalogueEnrichmentThreeChart />} />
           <Route path='/mono' element={<Monochrome />} />
           <Route path='/heatmap' element={<ContentSchedulingWithHeatMapAndDropdowns />} />
         </Routes>
