@@ -131,6 +131,12 @@ h5.Number-title {
     height: 450px;
     overflow: auto;
     border-radius: 4px;
+    width: 99.5%;
+}
+
+.overflow-automat{
+    background-color: #E9EFFF;
+    border: 1px solid #D8E3FF;
 }
 
 .catalogue-enrichment-bottom-cards-scroll::-webkit-scrollbar {
@@ -138,19 +144,19 @@ h5.Number-title {
   }
 
   .catalogue-enrichment-bottom-cards-scroll::-webkit-scrollbar-track {
-    background-color: #FFFFFF;
+    background-color: #E9EFFF;
     border-radius: 100px;
     max-height: 10%; height: 10%;
   }
   
   .catalogue-enrichment-bottom-cards-scroll::-webkit-scrollbar-thumb {
-    background-color:#D8E3FF;
+    background-color:#C4D2F5;
     border-radius: 100px;
   }
 
 .catalogue-enrichment-bottom-card{
     background: #FFFFFF;
-    border: 1px solid #D8E3FF;
+    border-bottom: 1px solid #D8E3FF;
     /* border-radius: 4px; */
     width: 100%;
     margin: auto;
