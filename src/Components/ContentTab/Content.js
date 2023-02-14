@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ContentHeader from "./ContentHeader";
 import './Content.css'
 import CatalogueEnrichment from "./CatalogueEnrichment/CatalogueEnrichment";
-import ContentSchedulingWithHeatMapAndDropdowns from "../ContentSchedulingWithHeatMapAndDropdowns/ContentSchedulingWithHeatMapAndDropdowns";
+import ContentSchedulingWithHeatMapAndDropdowns from "./ContentSchedulingWithHeatMapAndDropdowns/ContentSchedulingWithHeatMapAndDropdowns";
 import ContentMarketing from "./ContentMarketing/ContentMarketing";
 
 const Content = () => {

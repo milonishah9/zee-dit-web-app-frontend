@@ -1,0 +1,36 @@
+.content-marketing-ott-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0 1rem;
+}
+
+.content-marketing-ott-progresschart-container,
+.content-marketing-ott-sankey-barchart-container {
+    background: #FFFFFF;
+    border: 1px solid #D8E3FF;
+    box-shadow: 0px 2px 5px #D6DEF8;
+    border-radius: 4px;
+    padding: 0.5rem;
+    height: 70vh;
+}
+
+.content-marketing-ott-progresschart-container {
+    width: 24%;
+}
+
+.content-marketing-ott-sankey-barchart-container {
+    width: 75%;
+}
+
+.content-marketing-ott-charts-title p {
+    font-family: 'GothamBold';
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+    color: #333333;
+    margin-bottom: 0 !important;
+}
+
+.content-marketing-ott-charts-progresschart-table{
+    
+}

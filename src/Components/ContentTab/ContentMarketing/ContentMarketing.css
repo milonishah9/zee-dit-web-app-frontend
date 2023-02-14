@@ -1,0 +1,26 @@
+.content-marketing-container {}
+
+.content-marketing-navigation-tabs {
+    display: flex;
+    margin-top: 1rem;
+    border-bottom: 1px solid #D8E3FF;
+}
+
+.content-marketing-navigation-tab-active,
+.content-marketing-navigation-tab-inactive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    font-family: 'GothamBold';
+    letter-spacing: 0.3px;
+}
+
+.content-marketing-navigation-tab-active {
+    color: #402177;
+    border-bottom: 3px solid #402177;
+}
+
+.content-marketing-navigation-tab-inactive {
+    color: #808080;
+}
