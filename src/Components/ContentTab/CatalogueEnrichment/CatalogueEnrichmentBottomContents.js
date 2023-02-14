@@ -68,11 +68,12 @@ const CatalogueEnrichmentBottomContents = (props) => {
             {/* <div>
                 <CatalogueEnrichmentStackBarChart width = {510} height = {100} />
             </div> */}
-
-            <div className="catalogue-enrichment-bottom-cards-scroll">
-                {data.bottomData.map((data) => {
-                    return <CatalogueEnrichmentBottomCard data = {data} />
-                })}
+            <div className="overflow-automat">
+                <div className="catalogue-enrichment-bottom-cards-scroll">
+                    {data.bottomData.map((data) => {
+                        return <CatalogueEnrichmentBottomCard data = {data} />
+                    })}
+                </div>
             </div>
         </div>
     )
