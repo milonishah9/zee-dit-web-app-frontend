@@ -138,6 +138,7 @@ h5.Number-title {
 .overflow-automat{
     background-color: #E9EFFF;
     border: 1px solid #D8E3FF;
+    border-radius: 4px;
 }
 
 .catalogue-enrichment-bottom-cards-scroll::-webkit-scrollbar {

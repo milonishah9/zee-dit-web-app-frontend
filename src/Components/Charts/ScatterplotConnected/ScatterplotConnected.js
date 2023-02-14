@@ -173,7 +173,7 @@ function ConnectedScatterplot(data, {
         .attr("fill", color)
         .attr("stroke", color)
         .attr("stroke-width", 5)
-        var myData
+    var myData
     const circle = g.selectAll("circle")
         .data(I.filter(i => D[i]))
         .join("circle")
@@ -184,7 +184,7 @@ function ConnectedScatterplot(data, {
             myData = data.filter((data, i) => i === index)
             // select(this).append('text').html('this is d3').style("visibility", "visible")
            
-          Tooltip.html(myData[0].side +': '+ myData[0].miles).style("visibility", "visible").style("top", d4.event.pageY + 130 + "px")
+          Tooltip.html(myData[0].side +': '+ myData[0].miles).style("visibility", "visible").style("top",  130 + "px").attr("transform", i => `translate(${xScale(X[i])},${yScale(Y[i])})`);
         // Three function that change the tooltip when user hover / move / leave a cell
         // var mouseover = function (d) {
         //   Tooltip.style("opacity", 1);
@@ -209,7 +209,7 @@ function ConnectedScatterplot(data, {
     //     console.log(I, i);
     //   });
   
-    const label = svg.append("g")
+    const label = svg.append("g").attr("r", r)
         .attr("font-family", "GothamLight")
         .attr("font-size", '14px')
         .attr("stroke-linejoin", "round")
