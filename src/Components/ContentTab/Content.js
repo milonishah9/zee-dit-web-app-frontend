@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ContentHeader from "./ContentHeader";
 import './Content.css'
 import CatalogueEnrichment from "./CatalogueEnrichment/CatalogueEnrichment";
+import ContentPerformance from "./ContentPerformance/ContentPerformance";
 
 const Content = () => {
     const [buttonTab, setButtonTab] = useState('')
@@ -25,6 +26,7 @@ const Content = () => {
             
             <div>
             {buttonTab === 'Enrichment' && <CatalogueEnrichment />}
+            {buttonTab === 'Performance' && <ContentPerformance />}
             </div>
             </div>
         </div>
