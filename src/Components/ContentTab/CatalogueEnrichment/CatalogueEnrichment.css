@@ -179,6 +179,8 @@ h5.Number-title {
 }
 
 .catalogue-enrichment-bottom-icons{
+    padding-top: 15px;
+    padding-bottom: 15px;
     display: flex;
     justify-content: space-evenly;
 }
