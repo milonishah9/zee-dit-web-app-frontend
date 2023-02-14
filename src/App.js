@@ -17,7 +17,9 @@ import HeatMap from './Components/Charts/HeatMap/HeatMap';
 import ContentSchedulingWithHeatMapAndDropdowns from './Components/ContentSchedulingWithHeatMapAndDropdowns/ContentSchedulingWithHeatMapAndDropdowns';
 import Content from './Components/ContentTab/Content';
 import CatalogueEnrichmentStackBarChart from './Components/AllDaysStackedBarChartPopUpModal/StackedBarChartForAllDays/CatalogueEnrichmentStackBarChart';
-import ScatterplotConnected from './Components/Charts/ScatterplotConnected/ScatterplotConnected';
+import ScatterplotConnected from './Components/Charts/ScatterplotConnected/ScatterplotConnected'
+
+
 
 
 
