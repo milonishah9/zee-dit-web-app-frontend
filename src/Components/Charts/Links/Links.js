@@ -65,7 +65,7 @@ const Links = (props) => {
       .select("#linkChart")
       .append("svg").classed('my-line-chart-svg', true)
       .attr("height", svgHeight)
-      .attr("width", isMobile ? (1300) : (window.innerWidth-minusWidth));
+      .attr("width", isMobile ? (1100) : (window.innerWidth-minusWidth));
     const margin = { top: 0, bottom: 20, left: 30, right: 20 };
     const chart = svg
       .append("g")
@@ -163,28 +163,28 @@ const Links = (props) => {
       <div className="line-chart-all-dots">
         <div className="line-chart-acquisitions">
           <p className="all-numbers-in-mil">All numbers in Millions</p>
-          <p className="prod-jour-chart-heading">Acquisitions</p>
+          <p id="show" className="prod-jour-chart-heading" onClick={(event) =>handleBubbleClick(event, 'Acquisitions')}>Acquisitions</p>
           
           <label id="show" className="line-chart-dots line-chart-dot-odd" onClick={(event) =>handleBubbleClick(event, 'Acquisitions')}></label>
         </div>
         <div className="line-chart-discovery">
-          <p className="prod-jour-chart-heading">Discovery</p>
+          <p id="show" className="prod-jour-chart-heading" onClick={(event) =>handleBubbleClick(event, 'Discovery')}>Discovery</p>
           <label id="show" className="line-chart-dots line-chart-dot-even" onClick={(event) =>handleBubbleClick(event, 'Discovery')}></label>
         </div>
         <div className="line-chart-advertisement">
-          <p className="prod-jour-chart-heading">Advertisement</p>
+          <p id="show" className="prod-jour-chart-heading" onClick={(event) =>handleBubbleClick(event, 'Advertisement')}>Advertisement</p>
           <label id="show" className="line-chart-dots line-chart-dot-odd" onClick={(event) =>handleBubbleClick(event, 'Advertisement')}></label>
         </div>
         <div className="line-chart-subscriptions">
-          <p className="prod-jour-chart-heading">Subscriptions</p>
+          <p id="show" className="prod-jour-chart-heading" onClick={(event) =>handleBubbleClick(event, 'Subscriptions')}>Subscriptions</p>
           <label id="show" className="line-chart-dots line-chart-dot-even" onClick={(event) =>handleBubbleClick(event, 'Subscriptions')}></label>
         </div>
         <div className="line-chart-engagement">
-          <p className="prod-jour-chart-heading">Engagement</p>
+          <p id="show" className="prod-jour-chart-heading" onClick={(event) =>handleBubbleClick(event, 'Engagement')}>Engagement</p>
           <label id="show" className="line-chart-dots line-chart-dot-odd" onClick={(event) =>handleBubbleClick(event, 'Engagement')}></label>
         </div>
         <div className="line-chart-loyalty">
-          <p className="prod-jour-chart-heading">Loyalty</p>
+          <p id="show" className="prod-jour-chart-heading" onClick={(event) =>handleBubbleClick(event, 'Loyalty')}>Loyalty</p>
           <label id="show" className="line-chart-dots line-chart-dot-even" onClick={(event) =>handleBubbleClick(event, 'Loyalty')}></label>
         </div>
       </div>

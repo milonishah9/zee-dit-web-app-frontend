@@ -2,6 +2,7 @@
   font-family: GothamLight;
   background: #ffffff;
   width: 97%;
+  margin: auto;
   display: grid;
   padding: 0.3% 1%;
   padding-top: 1.2%;
@@ -108,6 +109,8 @@
 
 .executive-summary-content-linear-contents-t-header {
   width: 17%;
+  position: relative;
+  right: 18px;
 }
 
 .executive-summary-content-linear-contents-t-headers {
@@ -153,7 +156,18 @@ table {
 }
 
 .executive-summary-content-linear-tabs{
-  width: 98.7%;
+  width: 97.5%;
+  margin: 15px auto 0px auto;
+}
+
+.executive-summary-content-ott-tabs{
+  width: 97.5%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.executive-summary-content-linear-tabs-sub-div{
   display: flex;
   justify-content: space-between;
 }
@@ -190,8 +204,22 @@ input[type="checkbox"]:checked::before {
   /* background: #fff; */
 }
 
+.ex-sum-cont-engagement{
+  display: inline-block;
+}
+
 input[type="checkbox"]:checked {
   /* background: black; */
+}
+
+.bi-funnel{
+  position: relative;
+  left: 71%;
+}
+
+.last-filter-svg{
+  position: relative;
+  left: 100%;
 }
 
 .ott-toggle{
@@ -248,6 +276,17 @@ td:nth-child(6) text.amount{
   display: none;
 }
 
+@media only screen and (max-width: 1560px) and (min-width: 1441px){
+  .bi-funnel {
+    position: relative;
+    left: 90%;
+}
+.last-filter-svg{
+  position: relative;
+  left: 100%;
+}
+}
+
 @media only screen and (max-width: 1440px) and (min-width: 1366px) {
   .executive-summary-content-linear-contents-header:nth-last-child(1) {
     width: 15.8%;
@@ -256,6 +295,25 @@ td:nth-child(6) text.amount{
     margin-left: 1.1%;
     width: 32.5%;
   }
+  .bi-funnel {
+    position: relative;
+    left: 91%;
+}
+.last-filter-svg{
+  position: relative;
+  left: 100%;
+}
+}
+
+@media only screen and (max-width: 1365px) and (min-width: 320px){
+  .bi-funnel {
+    position: relative;
+    left: 100%;
+}
+.last-filter-svg{
+  position: relative;
+  left: 100%;
+}
 }
 
 @media only screen and (max-width: 1366px) {

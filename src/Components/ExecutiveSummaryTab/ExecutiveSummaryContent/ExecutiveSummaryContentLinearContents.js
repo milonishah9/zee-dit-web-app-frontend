@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectCount } from "../../../features/HoverValues";
 import HSbar from "../../Charts/HSbar/HSbar";
 import DivergingSB from "../../Charts/DivergingSB/DivergingSB";
+import filter from '../../Images/filter.png';
 
 const ExecutiveSummaryContentLinearContents = (props) => {
     const {chartData, buttonTab, tab} = props;
@@ -28,7 +29,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
 
         console.log('sdf',sortedFiles)
 
-    const handleToggleButton = (e) => {
+    const handleOttToggleButton = (e) => {
         setToggleValue(e.target.checked)
     }
 
@@ -37,7 +38,8 @@ const ExecutiveSummaryContentLinearContents = (props) => {
     return (
         <div className="executive-summary-content-linear-contents">
             
-            {buttonTab !== 'linear' &&<div> 
+            {buttonTab !== 'linear' &&
+            <div> 
                 {/* <div className="executive-summ-content-ott-indicators">
                     <p><label className="executive-summ-content-ott-blue-indicator"/>SAWF Viewers</p>
                     <p><label className="executive-summ-content-ott-yellow-indicator"/>Returning Viewers</p>
@@ -45,7 +47,22 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                 </div> */}
                 <div className="ott-toggle">
                     <label> <b className="text"> Absolute Value</b></label>
-                    <input type="checkbox" onClick={handleToggleButton}></input>
+                    <input type="checkbox" onClick={handleOttToggleButton}></input>
+                    <label> <b className="text"> % Change</b></label>
+                </div>
+            </div>
+            }
+
+            {buttonTab === 'linear' &&
+            <div> 
+                {/* <div className="executive-summ-content-ott-indicators">
+                    <p><label className="executive-summ-content-ott-blue-indicator"/>SAWF Viewers</p>
+                    <p><label className="executive-summ-content-ott-yellow-indicator"/>Returning Viewers</p>
+                    <p><label className="executive-summ-content-ott-darkblue-indicator"/>Remaining Viewers</p>
+                </div> */}
+                <div className="ott-toggle">
+                    <label> <b className="text"> Absolute Value</b></label>
+                    <input type="checkbox" ></input>
                     <label> <b className="text"> % Change</b></label>
                 </div>
             </div>
@@ -57,35 +74,69 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                 <h6 className="executive-summary-content-linear-contents-header">Impact on Monetization</h6>
             </div> */}
 
-            {
+            {/* {
                 buttonTab === 'linear' ? <div className="executive-summary-content-linear-contents-headers">
                 {<h6 className="executive-summary-content-linear-contents-header">Reach & Ratings</h6>}
                 <h6 className="executive-summary-content-linear-contents-header">Impact on Consumer Journey</h6>
                 <h6 className="executive-summary-content-linear-contents-header">Impact on Monetization</h6>
                 </div>:''
-            }
+            } */}
 
             <table className="executive-summary-content-linear-contents-table">
                 <thead className="executive-summary-content-linear-contents-t-headers">
                     
                     {buttonTab === 'linear' ?(
                         <tr>
-                        <th className="executive-summary-content-linear-contents-t-shows-header">Shows</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Reach ‘000</th>
-                        <th className="executive-summary-content-linear-contents-t-header">GRP</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Reach %<span className="exe-sum-lin-con-h-lbr">(Acquisition)</span></th>
-                        <th className="executive-summary-content-linear-contents-t-header">TSV<span className="exe-sum-lin-con-h-lbr">(M min.) (Engagement)</span></th>
-                        <th className="executive-summary-content-linear-contents-t-header">GRP Adbreak</th>
-                    </tr>
+                            <th className="executive-summary-content-linear-contents-t-shows-header">
+                                <span>Shows</span>
+                            </th>
+                            <th className="executive-summary-content-linear-contents-t-header">
+                                <img className="bi-funnel" src={filter}/>
+                                <span>Reach ‘000</span>
+                            </th>
+                            <th className="executive-summary-content-linear-contents-t-header">
+                                <img className="bi-funnel" src={filter}/>
+                                <span>GRP</span>
+                            </th>
+                            <th className="executive-summary-content-linear-contents-t-header">
+                                <img className="bi-funnel" src={filter}/>
+                                <span className="ex-sum-cont-engagement">Reach %{/* <span className="exe-sum-lin-con-h-lbr">(Acquisition)</span>*/}</span> 
+                            </th>
+                            <th className="executive-summary-content-linear-contents-t-header">
+                            <img className="bi-funnel" src={filter}/>
+                                <span className="ex-sum-cont-engagement">TSV (M min.){/*<span className="exe-sum-lin-con-h-lbr"> (Engagement)</span>*/}</span>
+                            </th>
+                            <th className="executive-summary-content-linear-contents-t-header">
+                            <img className="last-filter-svg" src={filter}/>
+                                <span>GRP Adbreak</span>
+                            </th>
+                        </tr>
                     ):(
                         <tr>
-                        <th className="executive-summary-content-linear-contents-t-shows-header">Content name</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Viewers{toggleValue === true && <span><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Viewers(>1 min watched){toggleValue === true && <span className="chart-scale-indicators-morethan1"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Viewers(>75% min watched){toggleValue === true && <span className="chart-scale-indicators-morethan75"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
-                        <th className="executive-summary-content-linear-contents-t-header">Watch Duration(M min.) {toggleValue === true && <span className="chart-scale-indicators-watch-dur"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
-                        <th className="executive-summary-content-linear-contents-t-header">#SAWF Subscriptions {toggleValue === true && <span className="chart-scale-indicators-sub"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</th>
-                    </tr>
+                            <th className="executive-summary-content-linear-contents-t-shows-header">
+                                <span>Content name</span>
+                            </th>
+                            <th className="executive-summary-content-linear-contents-t-header">
+                            <img className="bi-funnel" src={filter}/>  
+                                <span>Viewers{toggleValue === true && <span><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</span>
+                            </th>
+                            <th className="executive-summary-content-linear-contents-t-header">
+                            <img className="bi-funnel" src={filter}/>    
+                                <span>Viewers(>1 min watched){toggleValue === true && <span className="chart-scale-indicators-morethan1"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</span>
+                            </th>
+                            <th className="executive-summary-content-linear-contents-t-header">
+                            <img className="bi-funnel" src={filter}/>
+                                <span>Viewers(>75% min watched){toggleValue === true && <span className="chart-scale-indicators-morethan75"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</span>
+                            </th>
+                            <th className="executive-summary-content-linear-contents-t-header">
+                            <img className="bi-funnel" src={filter}/>
+                                <span>Watch Duration(M min.) {toggleValue === true && <span className="chart-scale-indicators-watch-dur"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</span>
+                            </th>
+                            <th className="executive-summary-content-linear-contents-t-header">
+                            <img className="last-filter-svg" src={filter}/>
+                                <span>#SAWF Subscriptions {toggleValue === true && <span className="chart-scale-indicators-sub"><span className="chart-scale-indicator-minuse">-</span><span className="chart-scale-indicator-number">0</span><span className="chart-scale-indicator-pluse">+</span></span>}</span>
+                            </th>
+                        </tr>
                     )}
                 </thead>
                 <tbody className="executive-summary-content-linear-contents-t-body">

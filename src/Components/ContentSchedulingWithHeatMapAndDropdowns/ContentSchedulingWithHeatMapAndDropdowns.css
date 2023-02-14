@@ -93,7 +93,6 @@
 .drop-down-menu-options-container,
 .multiselect-drop-down-menu-options-parent-container {
     background: #FFFFFF;
-    box-shadow: 0px 2px 8px rgba(89, 108, 168, 0.4);
     border-radius: 4px;
     position: absolute;
     /* top: 100%;   */
@@ -150,6 +149,7 @@
     flex-direction: column;
     justify-content: center !important;
     align-items: center !important;
+    box-shadow: 0px 2px 8px rgb(89 108 168 / 40%);
 }
 
 .react-calendar {

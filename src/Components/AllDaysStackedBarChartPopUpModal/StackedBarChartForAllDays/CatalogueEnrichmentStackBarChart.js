@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import './CatalogueEnrichmentStackBarChart.css'
 import {
     select,
     scaleBand,
@@ -13,10 +14,9 @@ import {
     axisTop,
     pointer,
 } from "d3";
-import './StackedBarChartForAllDays.css';
 
 const CatalogueEnrichmentStackBarChart = (props) => {
-
+    const {height, width} = props;
     const svgRef = useRef();
     const yAxisRef = useRef();
     const wrapperRef = useRef();
@@ -397,12 +397,11 @@ const CatalogueEnrichmentStackBarChart = (props) => {
     useEffect(() => {
 
         const svg = select(svgRef.current);
-        const yAxisSvg = select(yAxisRef.current);
+        // const yAxisSvg = select(yAxisRef.current);
 
         const everything = svg.selectAll("*");
         everything.remove();
-        const width =280;
-        const height = 100;
+        
 
         // const { width, height } = wrapperRef.current.getBoundingClientRect();
 
@@ -424,8 +423,8 @@ const CatalogueEnrichmentStackBarChart = (props) => {
             .range([height - 70, 0]);
 
         svg
-            .attr("width", data.length)
-            .attr("height", height)
+            .attr("width", 190)
+            .attr("height", 10) 
             .selectAll(".layer")
             .data(layers)
             .join("g")
@@ -533,8 +532,8 @@ const CatalogueEnrichmentStackBarChart = (props) => {
         var mousemove = function (event, d) {
             Tooltip
                 .html(tootTipHtml(event))
-                .style("top", event.pageY + "px")
-                .style("left", event.pageX  + "px")
+                .style("top", event.pageY - 400 + "px")
+                .style("left", event.pageX -100  + "px")
         }
         var mouseleave = function (d) {
             Tooltip
@@ -544,10 +543,10 @@ const CatalogueEnrichmentStackBarChart = (props) => {
                 .style("opacity", 1)
         }
 
-        // svg
-        //     .on("mousemove", mousemove)
-        //     .on("mouseleave", mouseleave)
-        //     .on("mouseover", mouseover)
+        svg
+            .on("mousemove", mousemove)
+            .on("mouseleave", mouseleave)
+            .on("mouseover", mouseover)
 
     }, [colors, data, keys]);
 
@@ -572,9 +571,6 @@ const CatalogueEnrichmentStackBarChart = (props) => {
                 </div>
             </div>
         </div>
-
-
-
     )
 
 
