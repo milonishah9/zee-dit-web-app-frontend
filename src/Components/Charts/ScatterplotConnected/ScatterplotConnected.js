@@ -1,7 +1,9 @@
 import React from "react";
 import './ScatterplotConnected.css';
 import * as d3 from 'd3';
+import * as d4 from "d3v4";
 import { useEffect } from "react";
+import { select } from "d3";
 
 const ScatterplotConnected = () => {
     const driving =  [
@@ -26,6 +28,7 @@ const ScatterplotConnected = () => {
         {side: "left",  miles: 190, gas: 29},
         {side: "bottom",  miles: 200, gas: 40},
       ]
+      let color = '#FF9355';
     useEffect(() => {
         ConnectedScatterplot(driving, {
             x: d => d.miles,
@@ -145,35 +148,66 @@ function ConnectedScatterplot(data, {
 // ------------line--------------
     const path = svg.append("path")
         .attr("fill", "none")
-        .attr("stroke", '#FF9355')
+        .attr("stroke", color)
         .attr("stroke-width", 1)
         .attr("stroke-linejoin", strokeLinejoin)
         .attr("stroke-linecap", strokeLinecap)
         .attr("d", line(I));
+
+
+        var Tooltip = d3
+        .select("#my_dataviz")
+        .append("div")
+        .style("position", "absolute")
+        .style("z-index", "10")
+        .style("visibility", "hidden")
+        .style("color", "black")
+        .style("padding", "8px")
+        .style("background-color", "white")
+        .style("border-radius", "4px")
+        .style("font", "12px GothamLight")
+        .text("tooltip");
     
 // ------------circles-----------
     const g = svg.append("g")
-        .attr("fill", '#FF9355')
-        .attr("stroke", '#FF9355')
+        .attr("fill", color)
+        .attr("stroke", color)
         .attr("stroke-width", 5)
-
+        var myData
     const circle = g.selectAll("circle")
         .data(I.filter(i => D[i]))
         .join("circle")
         .attr("cx", i => xScale(X[i]))
         .attr("cy", i => yScale(Y[i]))
         .attr("r", r)
-        .on("mouseover", I => console.log(I))
+        .on("mouseover", function (d, index) {
+            myData = data.filter((data, i) => i === index)
+            // select(this).append('text').html('this is d3').style("visibility", "visible")
+           
+          Tooltip.html(myData[0].side +': '+ myData[0].miles).style("visibility", "visible").style("top", d4.event.pageY + 130 + "px")
+        // Three function that change the tooltip when user hover / move / leave a cell
+        // var mouseover = function (d) {
+        //   Tooltip.style("opacity", 1);
+        // };
+        // var mousemove = function (d) {
+        //   Tooltip.html("Exact value: " + d.value)
+        //     // .style("left", d3.mouse(this)[0] + 70 + "px")
+        //     // .style("top", d3.mouse(this)[1] + "px");
+        // };
+        // var mouseleave = function (d) {
+        //   Tooltip.style("opacity", 0);
+        // };
+            // })
         // .on("mousemove", function () {
             
-        //   })
+          })
 
-        //   .on("mouseout", function () {
-            
-        //   })
-      .on("click", function (I, i) {
-        console.log(I, i);
-      });
+          .on("mouseout", function () {
+            d3.selectAll('.tooltip').style("visibility", "hidden")
+          })
+    //   .on("click", function (I, i) {
+    //     console.log(I, i);
+    //   });
   
     const label = svg.append("g")
         .attr("font-family", "GothamLight")
@@ -231,7 +265,7 @@ function ConnectedScatterplot(data, {
     return Object.assign(svg.node(), {animate});
   }
     return (
-        <div>
+        <div id="my_dataviz">
             <svg className="scatterplot-connected"></svg>
         </div>
     )
