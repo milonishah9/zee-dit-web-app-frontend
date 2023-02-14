@@ -113,7 +113,7 @@ function ConnectedScatterplot(data, {
         .attr("viewBox", [0, 0, width, height])
         .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
   
-    svg.append("g")
+    // svg.append("g")
         // .attr("transform", `translate(0,${height - marginBottom})`)
         // .call(xAxis)
         // .call(g => g.select(".domain").remove())
@@ -133,36 +133,50 @@ function ConnectedScatterplot(data, {
         .call(g => g.select(".domain").remove())
         .call(g => g.selectAll(".tick line").clone()
             .attr("x2", width - marginLeft - marginRight)
-            .attr("stroke-opacity", 0.1))
+            .attr("stroke-opacity", 0.08))
         .call(g => g.append("text")
-            .attr("x", -marginLeft)
-            .attr("y", 10)
-            .attr("fill", "currentColor")
+            .attr("x", 5)
+            .attr("y", 18)
+            .attr("fill", "currentColor").style('font-size', '10px')
             .attr("text-anchor", "start")
             .text(yLabel));
   
+// ------------line--------------
     const path = svg.append("path")
         .attr("fill", "none")
-        .attr("stroke", stroke)
-        .attr("stroke-width", strokeWidth)
+        .attr("stroke", '#FF9355')
+        .attr("stroke-width", 1)
         .attr("stroke-linejoin", strokeLinejoin)
         .attr("stroke-linecap", strokeLinecap)
         .attr("d", line(I));
     
-    svg.append("g")
-        .attr("fill", 'red')
-        .attr("stroke", 1)
-        .attr("stroke-width", strokeWidth)
-      .selectAll("circle")
-      .data(I.filter(i => D[i]))
-      .join("circle")
+// ------------circles-----------
+    const g = svg.append("g")
+        .attr("fill", '#FF9355')
+        .attr("stroke", '#FF9355')
+        .attr("stroke-width", 5)
+
+    const circle = g.selectAll("circle")
+        .data(I.filter(i => D[i]))
+        .join("circle")
         .attr("cx", i => xScale(X[i]))
         .attr("cy", i => yScale(Y[i]))
-        .attr("r", r);
+        .attr("r", r)
+    .on("mouseover", I => console.log(I))
+    // .on("mousemove", function () {
+        
+    //   })
+
+    //   .on("mouseout", function () {
+        
+    //   })
+      .on("click", function (I, i) {
+        console.log(I, i);
+      });
   
     const label = svg.append("g")
         .attr("font-family", "GothamLight")
-        .attr("font-size", 10)
+        .attr("font-size", 14)
         .attr("stroke-linejoin", "round")
       .selectAll("g")
       .data(I.filter(i => D[i]))
@@ -181,7 +195,7 @@ function ConnectedScatterplot(data, {
           }
         })
         .call(text => text.clone(true))
-        .attr("fill", "none")
+        .attr("fill", "red")
         .attr("stroke", halo)
         .attr("stroke-width", haloWidth);
   
