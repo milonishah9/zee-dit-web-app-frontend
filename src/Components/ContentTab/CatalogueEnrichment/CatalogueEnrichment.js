@@ -4,6 +4,53 @@ import CatalogueEnrichmentBottomContents from "./CatalogueEnrichmentBottomConten
 import CatalogueEnrichmentKpiCard from "./CatalogueEnrichmentKpiCard";
 
 const CatalogueEnrichment = () => {
+
+    const data = {
+        trailers : {
+            topData : ['Trailers', [200, '8% ↑'], [120, '2% ↑'], [200, '3% ↑']],
+            bottomData : [
+                ['Blur', '2/10/23', 600, 200, 120, 200],
+                ['Chup', '2/10/23', 600, 200, 120, 200],
+                ['Dil Dhak Dhak Karta Hai', '2/10/23', 600, 200, 120, 200],
+                ['Vikram', '2/10/23', 600, 200, 120, 200],
+                ['Surya', '2/10/23', 600, 200, 120, 200]
+            ]
+        },
+
+        Originals: {
+            topData: ['Originals', [200, '8% ↑'], [120, '2% ↑'], [200, '3% ↑']],
+            bottomData: [
+                ['ATM', '2/10/23', 600, 200, 120, 200],
+                ['Mithya', '2/10/23', 600, 200, 120, 200],
+                ['Love Hostel', '2/10/23', 600, 200, 120, 200],
+                ['Abhay', '2/10/23', 600, 200, 120, 200],
+                ['Surya', '2/10/23', 600, 200, 120, 200]
+            ]
+        },
+
+        Movies: {
+            topData: ['Movies', [200, '8% ↑'], [120, '2% ↑'], [200, '3% ↑']],
+            bottomData: [
+                ['Uunchai', '2/10/23', 600, 200, 120, 200],
+                ['The Kashmir File', '2/10/23', 600, 200, 120, 200],
+                ['Kartikey', '2/10/23', 600, 200, 120, 200],
+                ['Jhund', '2/10/23', 600, 200, 120, 200],
+                ['Attack Part -1 ', '2/10/23', 600, 200, 120, 200]
+            ]
+        },
+
+        tvShows: {
+            topData: ['TV Shows', [200, '8% ↑'], [120, '2% ↑'], [200, '3% ↑']],
+            bottomData: [
+                ['Meet', '2/10/23', 600, 200, 120, 200],
+                ['Kundli Bhagya', '2/10/23', 600, 200, 120, 200],
+                ['Kum Kum Bhagya', '2/10/23', 600, 200, 120, 200],
+                ['Bhagya Lakshmi', '2/10/23', 600, 200, 120, 200],
+                ['Rab Se He Dua', '2/10/23', 600, 200, 120, 200]
+            ]
+        }
+        
+    }
    
     return (
         <div>
@@ -31,10 +78,10 @@ const CatalogueEnrichment = () => {
             </div>
             {/* ↑ ↓ */}
             <div className="catalogue-enrichment-contents">
-                <CatalogueEnrichmentBottomContents data = {['Trailers', [200, '8% ↑'], [120, '2% ↑'], [200, '3% ↑']]}/>
-                <CatalogueEnrichmentBottomContents data = {['Originals', [200, '8% ↑'], [120, '2% ↑'], [200, '3% ↑']]}/>
-                <CatalogueEnrichmentBottomContents data = {['Movies', [200, '8% ↑'], [120, '2% ↑'], [200, '3% ↑']]}/>
-                <CatalogueEnrichmentBottomContents data = {['TV Shows', [200, '8% ↑'], [120, '2% ↑'], [200, '3% ↑']]}/>
+                <CatalogueEnrichmentBottomContents data = {data.trailers}/>
+                <CatalogueEnrichmentBottomContents data = {data.Originals}/>
+                <CatalogueEnrichmentBottomContents data = {data.Movies}/>
+                <CatalogueEnrichmentBottomContents data = {data.tvShows}/>
             </div>
             
         </div>
