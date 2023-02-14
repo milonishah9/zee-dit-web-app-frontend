@@ -4,8 +4,11 @@ import * as d3 from 'd3';
 import * as d4 from "d3v4";
 import { useEffect } from "react";
 import { select } from "d3";
+import { useRef } from "react";
 
-const ScatterplotConnected = () => {
+const ScatterplotConnected = (props) => {
+    const {yLabel, color} = props
+    const refSvg = useRef();
   const driving = [
     { side: "left", miles: 10, gas: 40 },
     { side: "right", miles: 20, gas: 30 },
@@ -28,7 +31,6 @@ const ScatterplotConnected = () => {
     { side: "left", miles: 190, gas: 29 },
     { side: "bottom", miles: 200, gas: 40 },
   ]
-  let color = '#FF9355';
   useEffect(() => {
     ConnectedScatterplot(driving, {
       x: d => d.miles,
@@ -37,7 +39,7 @@ const ScatterplotConnected = () => {
       orient: d => d.side,
       yFormat: ".2f",
       xLabel: "Miles driven (per capita per year) →",
-      yLabel: "Watch time till date (Mn)",
+      yLabel,
       width: 1300,
       height: 150,
       duration: 5000 // for the intro animation; 0 to disable
@@ -111,7 +113,7 @@ const ScatterplotConnected = () => {
       .x(i => xScale(X[i]))
       .y(i => yScale(Y[i]));
 
-    const svg = d3.select(".scatterplot-connected")
+    const svg = d3.select(refSvg.current)
       .attr("width", width)
       .attr("height", height)
       .attr("viewBox", [-10, 0, width, height])
@@ -269,7 +271,7 @@ const ScatterplotConnected = () => {
   }
   return (
     <div id="my_dataviz">
-      <svg className="scatterplot-connected"></svg>
+      <svg ref={refSvg} className="scatterplot-connected"></svg>
     </div>
   )
 
