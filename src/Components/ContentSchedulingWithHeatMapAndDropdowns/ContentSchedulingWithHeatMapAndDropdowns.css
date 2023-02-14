@@ -260,11 +260,11 @@
 }
 
 .multiselect-dropdown-menu-options-action-container {
-    min-width: 45%;
+    min-width: 50%;
     align-self: flex-end;
     display: flex;
     /* justify-content: space-between; */
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     font-size: 12px;
     line-height: 14px;
     font-family: "GothamBold";
@@ -287,6 +287,8 @@
     outline: none;
     background: transparent;
     border: none;
+    width: 40%;
+    z-index: 5;
 }
 
 .dropdown-calender-action-button-cancle,
@@ -294,6 +296,8 @@
     color: #808080;
     background: transparent;
     border: none;
+    width: 40%;
+    z-index: 5;
 }
 
 .heatmap-container {
@@ -352,11 +356,11 @@
 }
 
 @media only screen and (max-width: 1057px) and (min-width:768) {
-    .drop-down-menu-contaier{
+    .drop-down-menu-contaier {
         min-width: 15%;
     }
 
-    .dropdown-calender-container{
+    .dropdown-calender-container {
         width: 25%;
         min-width: none;
     }

@@ -526,6 +526,7 @@ const MultiSelectDropDownMenu = (props) => {
                         <button className='multiselect-dropdown-menu-options-action-ok-btn'
                             onClick={
                                 (event) => {
+                                    event.preventDefault();
                                     setPreviousSelectedSelectOptions(selectedSelectOptions);
                                     handleMultiDropDownSelectionChange("ok", selectedSelectOptions)
                                     setIsShowDropDownMenu(!isShowDropDownMenu);
