@@ -1,13 +1,21 @@
 .content-scheduling-with-heatmap-dropdowns-container {
     box-sizing: border-box;
     margin: 0.5rem 1rem;
-
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .content-scheduling-with-heatmap-dropdowns-dropdown-filters-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
+}
+
+.content-scheduling-with-heatmap-legend {
+    margin: 2rem 0 1rem;
+    align-self: flex-end;
+    justify-self: flex-end
 }
 
 .content-scheduling-with-heatmap-dropdowns-dropdown-filters-container select {
@@ -88,7 +96,8 @@
 
 .drop-down-menu-selection-box-down-arrow-icon {}
 
-.drop-down-menu-options-container {
+.drop-down-menu-options-container,
+.multiselect-drop-down-menu-options-parent-container {
     background: #FFFFFF;
     box-shadow: 0px 2px 8px rgba(89, 108, 168, 0.4);
     border-radius: 4px;
@@ -96,9 +105,23 @@
     /* top: 100%;   */
     min-width: 11.8%;
     margin-top: 2rem;
+    /* height: 25vh;
+    overflow-y: scroll; */
 
     /* cursor:; */
     padding: 5px 0px;
+    /* height: 10vh; */
+}
+
+.multiselect-drop-down-menu-options-parent-container {
+    height: 25vh;
+    overflow-y: scroll;
+    margin-right: 10px;
+}
+
+.multiselect-dropwn-menu-options-child-container {
+    /* height: 30vh; */
+    /* overflow-y: scroll; */
 }
 
 .drop-down-menu-option {
@@ -226,6 +249,18 @@
     opacity: 0.2;
 }
 
+.multiselect-dropdown-menu-options-action-container {
+    min-width: 45%;
+    align-self: flex-end;
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: flex-end;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: "GothamBold";
+    margin: 10px 5px 5px;
+}
+
 .dropdown-calender-action-buttons {
     min-width: 45%;
     align-self: flex-end;
@@ -236,12 +271,19 @@
     font-family: "GothamBold";
 }
 
-.dropdown-calender-action-button-ok {
+.dropdown-calender-action-button-ok,
+.multiselect-dropdown-menu-options-action-ok-btn {
     color: #6979F8;
+    outline: none;
+    background: transparent;
+    border: none;
 }
 
-.dropdown-calender-action-button-cancle {
+.dropdown-calender-action-button-cancle,
+.multiselect-dropdown-menu-options-action-cancle-btn {
     color: #808080;
+    background: transparent;
+    border: none;
 }
 
 .heatmap-container {
@@ -255,14 +297,48 @@
     /* height: 120px; */
 }
 
-.multiselect-dropwn-menu-option-container{
+.multiselect-dropwn-menu-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 12%;
+    margin: 0 1rem;
+}
+
+.multiselect-drop-down-menu-options-parent-container{
+    margin-top: 3.3rem !important;
+}
+
+.multiselect-dropwn-menu-option-container {
     display: flex;
     align-items: center;
     cursor: pointer;
+    margin-left: 1rem;
 }
 
-.multiselect-dropwn-menu-option-checkbox{
+.multiselect-dropwn-menu-option-checkbox {
     margin: 0 0.8rem 0 0;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    margin-left: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 3px grey; */
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #D8E3FF;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    /* background: #b30000; */
 }
 
 

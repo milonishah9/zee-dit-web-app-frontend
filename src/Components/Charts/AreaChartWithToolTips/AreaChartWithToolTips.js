@@ -45,7 +45,7 @@ const AreaChartWithToolTips = (props) => {
     
     useEffect(() => {
 
-        console.log(width);  
+        // console.log(width);  
 
         // const { width, height } = svgRef.current.getBoundingClientRect();
 

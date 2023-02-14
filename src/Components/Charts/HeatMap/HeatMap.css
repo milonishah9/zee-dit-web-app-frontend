@@ -16,13 +16,21 @@
 
 }
 
-.x-axis{
+.x-axis {
     position: static;
 }
 
-/* .y-axis-tick{
+.y-axis-tick {
     min-width: 100%;
-} */
+
+}
+
+.y-axis-tick .tick text {
+    fill: #808080;
+    font-size: 0.33rem;
+    /* background-color: #333333; */
+
+}
 
 .tooltip {
     position: absolute;
