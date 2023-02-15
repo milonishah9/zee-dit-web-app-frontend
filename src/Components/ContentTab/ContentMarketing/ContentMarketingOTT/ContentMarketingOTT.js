@@ -1,8 +1,9 @@
-import { progressBarChartSampleData } from './data';
+import { progressBarChartSampleData, barChartSampleData } from './data';
 
 import './ContentMarketingOTT.css';
 import { useState } from 'react';
 import HorizontalProgressBarChartForTable from '../../../Charts/HorizontalProgressBarChartForTable/HorizontalProgressBarChartForTable';
+import BarChart from '../../../Charts/BarChart/BarChart';
 
 const ContentMarketingOTT = (props) => {
     const [progressBarChartData, setProgressBarChartData] = useState(progressBarChartSampleData);
@@ -85,14 +86,32 @@ const ContentMarketingOTTSankeyAndBarChart = (props) => {
                     </div>
                 </div>
             </div>
-            <div className='content-marketing-ott-bar-chart-container'>
+            <div className='content-marketing-ott-bar-chart-and-legend-container'>
                 <div className='content-marketing-ott-charts-barchart-legend'>
                     <p>
-                        <svg width="2" height="8" viewBox="0 0 2 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="2" height="8" fill="#4F277C" />
-                        </svg> 
+                        <svg width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="2" height="10" fill="#4F277C" />
+                        </svg>
                         Launch Date
                     </p>
+                </div>
+                <div className='content-marketing-ott-bar-chart-container'>
+                    <div className='content-marketing-ott-charts-barchart-container'>
+                        <div className='content-marketing-ott-charts-subtitle'>
+                            <p>No. of Viewers ‘000 (>1 min watched)</p>
+                        </div>
+                        <BarChart 
+                        data={barChartSampleData}
+                        />
+                    </div>
+                    <div className='content-marketing-ott-charts-barchart-container'>
+                        <div className='content-marketing-ott-charts-subtitle'>
+                            <p>Watch Time per Viewer ‘000 (>1 min watched)</p>
+                        </div>
+                        {/* <BarChart 
+                        data={barChartSampleData}
+                        /> */}
+                    </div>
                 </div>
             </div>
         </div>

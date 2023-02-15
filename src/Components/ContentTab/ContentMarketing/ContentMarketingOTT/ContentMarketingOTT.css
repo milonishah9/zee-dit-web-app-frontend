@@ -41,6 +41,16 @@
     font-size: 0.75rem;
 }
 
+.content-marketing-ott-charts-barchart-legend p svg {
+    margin-right: 5px;
+}
+
+.content-marketing-ott-charts-barchart-legend {
+    align-self: flex-end;
+    /* justify-self:flex-end ; */
+    width: 20%;
+}
+
 .content-marketing-ott-charts-progresschart-table {
     width: 100%;
 }
@@ -105,6 +115,19 @@
     width: 35%;
 }
 
-.content-marketing-sakney-chart-container {
+.content-marketing-sakney-chart-container,
+.content-marketing-ott-bar-chart-container {
     margin-top: 1rem;
+}
+
+.content-marketing-ott-bar-chart-and-legend-container {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end;
+    align-items: flex-start; */
+}
+
+.content-marketing-ott-charts-barchart-container{
+    height: 28vh;
 }
