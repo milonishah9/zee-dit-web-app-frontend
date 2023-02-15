@@ -79,7 +79,7 @@ img.img {
 }
 .catalogue-enrichment-indicators{
     display: flex;
-    margin: 10px 0px;
+    margin: 10px 5px;
     justify-content: space-between;
 }
 
@@ -354,6 +354,10 @@ svg {
 
     .all-indicators-with-icons{
         text-align: end;
+    }
+
+    .catalogue-enrichment-indicators{
+        margin: 5px 5px;
     }
 
     .all-indicators-with-icons label svg{
