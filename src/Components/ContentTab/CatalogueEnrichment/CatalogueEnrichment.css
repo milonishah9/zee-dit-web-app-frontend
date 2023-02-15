@@ -308,14 +308,16 @@ h5.Number-title {
     .catalogue-enrichment-icons{
         position: relative;
         bottom: 3px;
+        text-align: right;
     }
 
     .catalogue-enrichment-icons label{
-        margin-left: 0px;
+        /* margin-left: 0px; */
     }
 
     .catalogue-enrichment-icons label svg{
-        width: 12px;
+        /* width: 12px; */
+        
     }
 
     .catalogue-green-color-syn,
