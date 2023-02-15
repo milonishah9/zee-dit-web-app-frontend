@@ -263,6 +263,10 @@ h5.Number-title {
 
 }
 
+@media only screen and (max-width: 1024px) and (min-width: 768px){
+
+}
+
 @media only screen and (max-width: 767px) {
     .catalogue-last-90day{
         width: 170px;
@@ -315,15 +319,6 @@ h5.Number-title {
         position: relative;
         bottom: 5px;
         text-align: right;
-    }
-
-    .catalogue-enrichment-single-icon-syn{
-        height: 32px;
-    }
-
-    .catalogue-enrichment-single-icon-text-syn{
-        position: relative;
-        bottom: 1.1px;
     }
 
     .catalogue-enrichment-icons label{
