@@ -4,7 +4,9 @@ import './HorizontalProgressBarChartForTable.css';
 
 const HorizontalProgressBarChartForTable = (props) => {
 
-    const { value = 50, maxValue = 50, fillColor = '#A47CD0' } = props;
+    const { value = 50, maxValue = 500, fillColor = '#A47CD0' } = props;
+
+    console.log('value', value);
     // const { value=50, maxValue=60, toggleValue, percent, fillColor } = props;
     const svgRef = useRef();
 
@@ -22,12 +24,15 @@ const HorizontalProgressBarChartForTable = (props) => {
     const barHeight = 20;
     const svgHeight = 140;
 
+    const xScale = d3.scaleLinear()
+        .domain([0, maxValue])
+        .range([0, 140])
+
     useLayoutEffect(() => {
         // const svg = svgRef.current;
 
-        const xScale = d3.scaleLinear()
-            .domain([0, maxValue])
-            .range([0, maxValue])
+
+        console.log('xScale(value)', xScale(value) + 50)
 
         const svg = d3.select(svgRef.current)
             .append('rect')
@@ -38,7 +43,7 @@ const HorizontalProgressBarChartForTable = (props) => {
             // .attr('ry', 4)
             .attr('width', xScale(value))
             .attr('fill', fillColor)
-            .attr('height', 20);
+            .attr('height', 25);
 
 
         // #C996EB
@@ -50,14 +55,28 @@ const HorizontalProgressBarChartForTable = (props) => {
         //     .text((value));
 
         svg
-            .selectAll(".remaining-amount").remove()
+            .selectAll(".viewership-number").remove()
 
-        svg
-            .append('text')
-            .attr('class', 'remaining-amount')
-            .attr('y', 14)
-            .attr('x', 60)
-            .text(value);
+        // d3.select("g")
+        //     .append('text')
+        //     .attr('class', 'viewership-number')
+        //     .attr('y', 14)
+        //     .attr('x', xScale(value) + 20)
+        //     .text(value);
+
+        // d3.selectAll('.remaining-amount').remove();
+
+        d3.selectAll('.remaining-amount')
+            .attr('x', xScale(value) + 50)
+
+        d3.selectAll('.remaining-portion')
+            .attr('width', xScale(value) + 100)
+        // svg
+        //     .append('text')
+        //     .attr('class', 'viewership-number')
+        //     .attr('y', 14)
+        //     .attr('x', xScale(value) + 10)
+        //     .text(value);
 
         // // .attr('y', barHeight)
         // .attr('dx', -10)
@@ -72,7 +91,7 @@ const HorizontalProgressBarChartForTable = (props) => {
             .transition(t)
         // .attr('x', xScale(30))
 
-        d3.selectAll('.remaining-portion').attr('fill', '#5d6dff')
+        // d3.selectAll('.remaining-portion').attr('fill', '#5d6dff')
 
     }, [])
     // ↓↓
@@ -80,22 +99,22 @@ const HorizontalProgressBarChartForTable = (props) => {
         <>
             <svg
                 id={value}
-                width={maxValue + 100}
-                height='20'
+                width={140}
+                height={25}
                 className="prograss-svg"
             >
-                <g >
-                    <g className="budget-bar-group">
-                        <rect className="remaining-portion" x="0" y="0" width={width} height={barHeight} rx="0" ry="0" opacity="0.2" />
-                        <text className="remaining-amount" x={width} y="32" dy="-18" dx="120">
-                            {value}
-                        </text>
-                    </g>
-                    <g
-                        ref={svgRef}
-                        className="expenditure-bar-group"
-                    />
+                <g className="budget-bar-group">
+                    <rect className="remaining-portion" x="0" y="0" height={25} rx="0" ry="0" opacity="0.2" fill='none' />
+                    <text className="remaining-amount" x={xScale(value)} y="32" dy="-18" dx="-30">
+                        {/* { toggleValue ===true ? (total + '%') : (total) } */}
+                        {/* {value} */}
+                    </text>
                 </g>
+                <g
+                    ref={svgRef}
+                    className="expenditure-bar-group"
+                // fill='none'
+                />
             </svg>
         </>
     )

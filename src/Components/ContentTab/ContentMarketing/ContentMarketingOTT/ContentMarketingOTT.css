@@ -23,14 +23,88 @@
     width: 75%;
 }
 
-.content-marketing-ott-charts-title p {
+.content-marketing-ott-charts-title p,
+.content-marketing-ott-charts-subtitle p,
+.content-marketing-ott-charts-barchart-legend p {
     font-family: 'GothamBold';
-    font-size: 0.8rem;
     letter-spacing: 0.3px;
     color: #333333;
     margin-bottom: 0 !important;
 }
 
-.content-marketing-ott-charts-progresschart-table{
-    
+.content-marketing-ott-charts-title p {
+    font-size: 0.85rem;
+}
+
+.content-marketing-ott-charts-subtitle p,
+.content-marketing-ott-charts-barchart-legend p {
+    font-size: 0.75rem;
+}
+
+.content-marketing-ott-charts-progresschart-table {
+    width: 100%;
+}
+
+.content-marketing-ott-charts-progresschart-table-header {}
+
+.content-marketing-ott-charts-progresschart-table-th {
+    /* width: 50%; */
+}
+
+.content-marketing-ott-charts-progresschart-table-th-right {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    width: 60%;
+}
+
+.content-marketing-ott-charts-progresschart-table-th span {
+    color: #333333;
+    font-size: 0.75rem;
+    font-family: 'GothamLight';
+    font-weight: 800;
+}
+
+.content-marketing-ott-charts-progresschart-table-th-sorting-div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    /* justify-content: space-between; */
+}
+
+.content-marketing-ott-charts-progresschart-table-th-sorting-div svg {
+    margin-bottom: 1px;
+    cursor: pointer;
+}
+
+.content-marketing-ott-charts-progresschart-table-tr-active {
+    background: #F3E7FF;
+    border: 1px solid #402177;
+    font-size: 0.8rem;
+    width: 100%;
+    /* font-family: 'GothamLight'; */
+    /* font-weight: 800; */
+}
+
+.content-marketing-ott-charts-progresschart-table-tr-trailer {
+    width: 40%;
+}
+
+
+
+
+
+
+
+
+.content-marketing-ott-sankey-barchart-container {
+    display: flex;
+}
+
+.content-marketing-ott-sankey-chart-and-title-container {
+    width: 35%;
+}
+
+.content-marketing-sakney-chart-container {
+    margin-top: 1rem;
 }
