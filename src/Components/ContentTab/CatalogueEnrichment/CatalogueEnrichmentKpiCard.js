@@ -14,7 +14,7 @@ const CatalogueEnrichmentKpiCard = (props) => {
             
             <div className="catalogue-kpi-card-value">
                 <p>{data[1]}</p>
-                {data[2] === 2 ? (<p className="red-color">{data[2]}% ↑ from last period</p>) : (<p className="green-color">{data[2]}% ↓ from last period</p>)}
+                {data[2] === 2 ? (<p className="catalogue-red-color-syn">{data[2]}% ↑ from last period</p>) : (<p className="catalogue-green-color-syn">{data[2]}% ↓ from last period</p>)}
             </div>
         </div>
     )

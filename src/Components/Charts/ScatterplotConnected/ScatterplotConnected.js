@@ -158,7 +158,7 @@ const ScatterplotConnected = (props) => {
 
 
     var Tooltip = d3
-      .select("#my_dataviz")
+      .select("#scatterplot-connected")
       .append("div")
       .style("position", "absolute")
       .style("z-index", "10")
@@ -270,7 +270,7 @@ const ScatterplotConnected = (props) => {
     return Object.assign(svg.node(), { animate });
   }
   return (
-    <div id="my_dataviz">
+    <div id="scatterplot-connected-container">
       <svg ref={refSvg} className="scatterplot-connected"></svg>
     </div>
   )
