@@ -40,7 +40,7 @@ const ScatterplotConnected = (props) => {
       yFormat: ".2f",
       xLabel: "Miles driven (per capita per year) →",
       yLabel,
-      width: 1300,
+      width: 1600,
       height: 150,
       duration: 5000 // for the intro animation; 0 to disable
     })

@@ -7,17 +7,13 @@ import ContentCatalogueEnrichmentThreeChart from "./ContentCatalogueEnrichmentTh
 
 const CatalogueEnrichmentBottomContents = (props) => {
     const {data} = props;
-    const [fullscreen, setFullScreenChart] = useState(false);
 
     const handleFullScreenClick = () => {
-        setFullScreenChart(true);
+        props.onClick(true);
     }
+
     return(
         <div className="catalogue-enrichment-contents-div">
-            {/* {fullscreen && <div className="catalogue-enrichment-full-screen-chart">
-                    <ContentCatalogueEnrichmentThreeChart />
-                </div>
-            }  */}
             <div className="catalogue-enrichment-contents-card">
                 <div className="trailers-svg-div">
                     <h6 className="title">{data.topData[0]}</h6>
