@@ -306,7 +306,9 @@ h5.Number-title {
     }
 
     .catalogue-enrichment-icons{
-        display: grid;
+        text-align: end;
+        position: relative;
+        bottom: 5px;
     }
 
     .catalogue-enrichment-top-icons-syn{
@@ -330,7 +332,6 @@ h5.Number-title {
 
     .catalogue-enrichment-icons label svg{
         /* width: 12px; */
-        
     }
 
     .catalogue-green-color-syn,
@@ -354,7 +355,7 @@ h5.Number-title {
         height: 220px;
     }
 
-    .bi-info-circle {
-        margin: 0px !important;
+    ..catalogue-enrichment-heading-icons {
+        padding: 7px;
     }
 }
