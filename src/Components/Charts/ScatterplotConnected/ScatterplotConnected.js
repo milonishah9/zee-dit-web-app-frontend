@@ -158,7 +158,7 @@ const ScatterplotConnected = (props) => {
 
 
     var Tooltip = d3
-      .select("#my_dataviz")
+      .select("#scatterplot-connected-container")
       .append("div")
       .style("position", "absolute")
       .style("z-index", "10")
@@ -184,7 +184,7 @@ const ScatterplotConnected = (props) => {
       .attr("r", r)
       .on("mouseover", function (d, index, event) {
         myData = data.filter((data, i) => i === index)
-        // console.log('event', d);
+        console.log('event', d);
         // select(this).append('text').html('this is d3').style("visibility", "visible")
 
         Tooltip.html(myData[0].side + ': ' + myData[0].miles).style("visibility", "visible")
@@ -270,7 +270,7 @@ const ScatterplotConnected = (props) => {
     return Object.assign(svg.node(), { animate });
   }
   return (
-    <div id="my_dataviz">
+    <div id="scatterplot-connected-container">
       <svg ref={refSvg} className="scatterplot-connected"></svg>
     </div>
   )

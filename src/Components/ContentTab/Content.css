@@ -33,3 +33,16 @@
     border: none;
 }
 
+@media only screen and (max-width: 767px){
+    .content-buttons-tabs{
+        margin-top: 30px;
+    }    
+
+    .content-active-button-tab,
+    .content-button-tab{
+        font-size: 10px;
+        height: 40px;
+    }
+    
+    
+}
