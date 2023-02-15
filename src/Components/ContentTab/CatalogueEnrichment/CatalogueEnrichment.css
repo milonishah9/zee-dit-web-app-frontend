@@ -135,7 +135,7 @@ h5.Number-title {
 }
 
 .catalogue-enrichment-bottom-cards-scroll{
-    height: 200px;
+    height: 290px;
     overflow: auto;
     border-radius: 4px;
     width: 99.5%;
@@ -164,8 +164,7 @@ h5.Number-title {
 
 .catalogue-enrichment-bottom-card{
     background: #FFFFFF;
-    border-bottom: 1px solid #D8E3FF;
-    /* border-radius: 4px; */
+    border-bottom: 1.5px solid #c1d0f5;
     width: 100%;
     margin: auto;
     background-color: #E9EFFF;
@@ -248,24 +247,21 @@ h5.Number-title {
 .catalogue-enrichment-three-chart{
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    margin: auto;
+    width: 83.5%;
+    margin: auto;   
     margin-top: 96px;
     padding-top: 10px;
 }
 
 .catalogue-enrichment-three-chart-container{
     background-color: #FFFFFF;;
-    width: 100%;
+    width: 95%;
     height: auto;
     margin: auto;
     border-radius: 6px;
-    
-}
-
-.catalogue-enrichment-three-chart-container{
     padding-bottom: 12px;
 }
+
 
 .catalogue-enrichment-top-icons-syn{
     position: relative;

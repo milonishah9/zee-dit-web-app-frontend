@@ -7,7 +7,7 @@ import { select } from "d3";
 import { useRef } from "react";
 
 const ScatterplotConnected = (props) => {
-    const {yLabel, color} = props
+    const {yLabel, color } = props
     const refSvg = useRef();
   const driving = [
     { side: "left", miles: 10, gas: 40 },
@@ -40,7 +40,7 @@ const ScatterplotConnected = (props) => {
       yFormat: ".2f",
       xLabel: "Miles driven (per capita per year) →",
       yLabel,
-      width: 1600,
+      width: 1700,
       height: 150,
       duration: 5000 // for the intro animation; 0 to disable
     })
@@ -183,8 +183,14 @@ const ScatterplotConnected = (props) => {
       .attr("cy", i => yScale(Y[i]))
       .attr("r", r)
       .on("mouseover", function (d, index, event) {
-        myData = data.filter((data, i) => i === index)
-        console.log('event', d);
+        
+        myData = data.filter((data, i) => {
+          
+          if(i === index){
+            return true;
+          }
+        })
+        // console.log('event', d);
         // select(this).append('text').html('this is d3').style("visibility", "visible")
 
         Tooltip.html(myData[0].side + ': ' + myData[0].miles).style("visibility", "visible")
