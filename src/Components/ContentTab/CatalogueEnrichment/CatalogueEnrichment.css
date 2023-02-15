@@ -306,9 +306,22 @@ h5.Number-title {
     }
 
     .catalogue-enrichment-icons{
+        display: grid;
+    }
+
+    .catalogue-enrichment-top-icons-syn{
         position: relative;
-        bottom: 3px;
+        bottom: 5px;
         text-align: right;
+    }
+
+    .catalogue-enrichment-single-icon-syn{
+        height: 32px;
+    }
+
+    .catalogue-enrichment-single-icon-text-syn{
+        position: relative;
+        bottom: 1.1px;
     }
 
     .catalogue-enrichment-icons label{
@@ -335,5 +348,13 @@ h5.Number-title {
     
     .icon-text-syn{
         font-size: 14px
+    }
+
+    .catalogue-enrichment-bottom-cards-scroll{
+        height: 220px;
+    }
+
+    .bi-info-circle {
+        margin: 0px !important;
     }
 }
