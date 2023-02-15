@@ -44,7 +44,8 @@ function App() {
           <Route path='/new' element={<DivergingSB />} />
           <Route path='/links' element={<Links />} />
           <Route path='/CatalogueEnrichmentStackBarChart' element={<CatalogueEnrichmentStackBarChart />} />
-          <Route path='/ContentCatalogueEnrichmentThreeChart' element={<ContentCatalogueEnrichmentThreeChart />} />
+          <Route path='/ScatterplotConnected' element={<ScatterplotConnected color={"#768CFF"}
+          yLabel={"Viewers till date (Mn)"} />} />
           <Route path='/mono' element={<Monochrome />} />
           <Route path='/heatmap' element={<ContentSchedulingWithHeatMapAndDropdowns />} />
         </Routes>

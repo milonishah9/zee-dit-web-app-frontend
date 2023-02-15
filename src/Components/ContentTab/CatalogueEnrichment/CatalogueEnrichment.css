@@ -257,10 +257,14 @@ h5.Number-title {
 .catalogue-enrichment-three-chart-container{
     background-color: #FFFFFF;;
     width: 100%;
-    height: 500px;
+    height: auto;
     margin: auto;
     border-radius: 6px;
+    
+}
 
+.catalogue-enrichment-three-chart-container{
+    padding-bottom: 12px;
 }
 
 .catalogue-enrichment-top-icons-syn{
@@ -287,7 +291,6 @@ svg {
 
     .icon-text-syn{
         font-size: 14.5px;;
-        /* width: 46px */
         font-weight: 500;
         line-height: 12px;
     }
@@ -328,7 +331,6 @@ svg {
         font-size: 8px
     }
 
-    /* .trailers-svg-div, */
     .kpi-card-heading{
         width: 90%;
         height: 27px !important;
@@ -349,14 +351,6 @@ svg {
         position: relative;
         bottom: 5px;
         text-align: right;
-    }
-
-    .catalogue-enrichment-icons label{
-        /* margin-left: 0px; */
-    }
-
-    .catalogue-enrichment-icons label svg{
-        /* width: 12px; */
     }
 
     .catalogue-green-color-syn,
@@ -380,7 +374,7 @@ svg {
         height: 220px;
     }
 
-    ..catalogue-enrichment-heading-icons {
+    .catalogue-enrichment-heading-icons {
         padding: 7px;
     }
 }
