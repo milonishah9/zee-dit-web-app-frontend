@@ -41,6 +41,8 @@
     .content-active-button-tab,
     .content-button-tab{
         font-size: 10px;
+        height: 40px;
     }
+    
     
 }
