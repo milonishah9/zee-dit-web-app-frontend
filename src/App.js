@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-// import StackedBarChart from './Components/Charts/StackedBarChart/StackedBarChart';
+import './App.css';
+import StackedBarChart from './Components/Charts/StackedBarChart/StackedBarChart';
 import ILTTwentySummary from './Pages/ILTTwentySummary/ILTTwentySummary';
 import ILTTdataTowers from './Pages/ILTTdataTowers/ILTTdataTowers';
 import ILTTloginPage from './Pages/ILTTloginPage/ILTTloginPage';
@@ -17,8 +17,7 @@ import ContentSchedulingWithHeatMapAndDropdowns from './Components/ContentTab/Co
 import Content from './Components/ContentTab/Content';
 import CatalogueEnrichmentStackBarChart from './Components/AllDaysStackedBarChartPopUpModal/StackedBarChartForAllDays/CatalogueEnrichmentStackBarChart';
 import ScatterplotConnected from './Components/Charts/ScatterplotConnected/ScatterplotConnected';
-
-import './App.css';
+import ContentCatalogueEnrichmentThreeChart from './Components/ContentTab/CatalogueEnrichment/ContentCatalogueEnrichmentThreeChart';
 
 
 function App() {
@@ -39,7 +38,7 @@ function App() {
           <Route path='/new' element={<DivergingSB />} />
           <Route path='/links' element={<Links />} />
           <Route path='/CatalogueEnrichmentStackBarChart' element={<CatalogueEnrichmentStackBarChart />} />
-          <Route path='/ScatterplotConnected' element={<ScatterplotConnected />} />
+          <Route path='/ContentCatalogueEnrichmentThreeChart' element={<ContentCatalogueEnrichmentThreeChart />} />
           <Route path='/mono' element={<Monochrome />} />
           <Route path='/heatmap' element={<ContentSchedulingWithHeatMapAndDropdowns />} />
         </Routes>
