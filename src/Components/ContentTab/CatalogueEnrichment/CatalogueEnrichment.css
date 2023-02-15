@@ -263,8 +263,38 @@ h5.Number-title {
 
 }
 
-@media only screen and (max-width: 1024px) and (min-width: 768px){
+.catalogue-enrichment-top-icons-syn{
+    position: relative;
+    bottom: 5px;
+}
 
+.catalogue-enrichment-icons{
+    text-align: end;
+}
+
+svg {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+    .all-indicators-with-icons{
+        text-align: end;
+    }
+
+    .catalogue-last-90day{
+        width: 77px;
+    }
+
+    .icon-text-syn{
+        font-size: 14.5px;;
+        /* width: 46px */
+        font-weight: 500;
+        line-height: 12px;
+    }
+
+    .trailers-svg-div{
+        height: 45px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
