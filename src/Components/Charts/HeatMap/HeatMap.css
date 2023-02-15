@@ -12,6 +12,24 @@
 
 .tick text {
     font-size: 0.3rem;
+    color: #808080;
+
+}
+
+.x-axis {
+    position: static;
+}
+
+.y-axis-tick {
+    min-width: 100%;
+
+}
+
+.y-axis-tick .tick text {
+    fill: #808080;
+    font-size: 0.33rem;
+    /* background-color: #333333; */
+
 }
 
 .tooltip {

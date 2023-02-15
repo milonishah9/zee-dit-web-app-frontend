@@ -20,9 +20,10 @@
     font-size: 1.1rem;
     letter-spacing: 0.3px;
     /* font-weight: 600; */
-    color: #333333;
+    /* color: #333333; */
     font-family: 'GothamBold';
     opacity: 0.75;
+    color: #00C48C !important;
 }
 
 .node-percentage {
@@ -35,21 +36,22 @@
 }
 
 .node-percentage-change-pos {
-    color: #00C48C;
-    font-size: 0.5rem;
+    fill: #00C48C;
+    font-size: 0.6rem;
     letter-spacing: 0.3px;
     font-weight: 800;
     font-family: 'Gothamlight';
-    opacity: 0.75;
+    /* z-index: 100; */
+    /* opacity: 0.75; */
 }
 
 .node-percentage-change-neg {
-    color: #FF647C;
-    font-size: 0.5rem;
+    fill: #FF647C;
+    font-size: 0.6rem;
     letter-spacing: 0.3px;
     font-weight: 800;
     font-family: 'Gothamlight';
-    opacity: 0.75;
+    /* opacity: 0.75; */
 }
 
 .sankey {
@@ -109,7 +111,7 @@
 /* Tablets and medium screens */
 
 @media only screen and (max-width: 1063px) and (min-width: 768px) {
-    .sankey{
+    .sankey {
         margin: 0 auto;
         width: auto !important;
     }
@@ -122,7 +124,7 @@
 }
 
 @media only screen and (max-width: 768px) and (min-width: 540px) {
-    .sankey{
+    .sankey {
         margin: 0 auto;
         width: auto !important;
     }
@@ -145,7 +147,7 @@
         overflow-x: scroll;
     }
 
-    .sankey-chart-for-consumer-svg{
+    .sankey-chart-for-consumer-svg {
         /* overflow-x: scroll; */
     }
 }

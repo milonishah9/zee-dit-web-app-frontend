@@ -159,7 +159,7 @@ const ExecutiveSummaryConsumer = (props) => {
           SVOD
         </button>
       </div>
-      <p className="executive-journey-note-item">All numbers in millions.</p>
+      <p className="executive-journey-note-item">All numbers in Millions</p>
       <div className="sankey-chart-parent-container">
         <div className="sankey">
           <SankeyChartForConsumer />
@@ -193,7 +193,7 @@ const ExecutiveSummaryConsumer = (props) => {
           </button>
         </div>
         <div className="kpi-cards-values">
-          {
+          {/* {
             console.log(kpiCharters.filter((item, index) => item.id === activeKPICharter)[0].kpiCards
 
               .filter((d, i) => {
@@ -203,7 +203,7 @@ const ExecutiveSummaryConsumer = (props) => {
                   return d;
                 }
               })
-            )}
+            )} */}
           {
             kpiCharters.filter((item, index) => item.id === activeKPICharter)[0].kpiCards
               .filter((d, i) => {
@@ -215,7 +215,9 @@ const ExecutiveSummaryConsumer = (props) => {
                 } else if (
                   activeConsumerJourneyFilter === "svod" &&
                   (activeKPICharter === "monetizatoin" || activeKPICharter === "loyaltyAndRetention") &&
-                  (d.title === "SVOD Revenue" || d.title === "New & Win back Subscriptions" || d.title === "Manual" || d.title === "Auto & Advance Renewal" || d.title === "% Renewals- SVOD")) {
+                  (d.title === "SVOD Revenue" || d.title === "New & Win back Subscriptions" || d.title === "Manual" || d.title === "Auto & Advance Renewal" || d.title === "% Renewals- SVOD" ||
+                    d.title === "Manual Subscriptions" || d.title === "Auto & Advance Subscriptions")
+                ) {
                   return d;
                 } else if (
                   activeConsumerJourneyFilter === "avod" &&

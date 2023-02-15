@@ -6,61 +6,70 @@ import './BarChart.css';
 
 const BarChart = (props) => {
 
+    const {
+        data,
+        width = 750, height, translateX, translateY, xAxisConfigs, yAxisConfigs, barFill } = props;
+
+    // console.log(data, 'data');
+
     const svgRef = useRef();
 
-    const data = [
-        {
-            Country: "United States",
-            Value: 12394
-        },
-        {
-            Country: "Russia",
-            Value: 6148
-        },
-        {
-            Country: "Germany (FRG)",
-            Value: 10653
-        },
-        {
-            Country: "France",
-            Value: 9162
-        },
-        {
-            Country: "United Kingdom",
-            Value: 10214
-        },
-        {
-            Country: "China",
-            Value: 11131
-        },
-    ]
+    // const data = [
+    //     {
+    //         key: "United States",
+    //         Value: 12394
+    //     },
+    //     {
+    //         key: "Russia",
+    //         Value: 6148
+    //     },
+    //     {
+    //         key: "Germany (FRG)",
+    //         Value: 10653
+    //     },
+    //     {
+    //         key: "France",
+    //         Value: 9162
+    //     },
+    //     {
+    //         key: "United Kingdom",
+    //         Value: 10214
+    //     },
+    //     {
+    //         key: "China",
+    //         Value: 11131
+    //     },
+    // ]
 
     useLayoutEffect(() => {
 
         var margin = { top: 30, right: 30, bottom: 70, left: 60 },
-            width = 840 - margin.left - margin.right,
-            height = 400 - margin.top - margin.bottom;
+            width = 550 - margin.left - margin.right,
+            height = 180 - margin.top - margin.bottom;
+        // var margin = { top: 30, right: 30, bottom: 70, left: 60 },
+        //     width = 840 - margin.left - margin.right,
+        //     height = 400 - margin.top - margin.bottom;
 
         const svg = d3
             .select(svgRef.current)
             .classed("barchart-svg-container", true)
-            .attr("viewBox", "0 0 750 405")
-            // .attr('preserveAspectRatio','xMinYMin')
+            .attr("viewBox", "0 0 460 90")
+            .attr('preserveAspectRatio', 'xMinYMin')
             .append("g")
-            .attr("transform",
-                "translate(" + 0 + "," + 155 + ")");
+        // .attr("transform",
+        //     "translate(" + 0 + "," + 155 + ")");
 
         // Add Y axis
         var x = d3.scaleBand()
             .range([0, width])
-            .domain(data.map(function (d) { return d.Country; }))
+            .domain(data.map(function (d) { return d.key }))
             .padding(0.35);
 
-        // let xAixs = d3.axisBottom(x)
-        // .tickSize(-height)
-        // svg.append("g")
-        //     .attr("transform", "translate(0," + height + ")")
-        // .call(xAixs)
+        let xAixs = d3.axisBottom(x)
+            .tickSize(0)
+        svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAixs)
 
         // .selectAll("text")
         // .attr("transform", "translate(-10,0)rotate(-45)")
@@ -68,26 +77,50 @@ const BarChart = (props) => {
 
         // Add Y axis
         var y = d3.scaleLinear()
-            .domain([0, 13000])
+            .domain([0, 100])
             .range([height, 0]);
-        // svg.append("g")
-        //     .call(d3.axisLeft(y));
+
+        let yAixs = d3.axisLeft(y)
+            .tickSize(-width)
+            .tickValues([0, 50, 100])
+
+        svg.append("g")
+            .call(yAixs)
+
+        svg.selectAll('.tick')
+            .select('line')
+            .attr("stroke", "#D8D8D8")
+            .attr("stroke-width", "1")
+            .attr("opacity", ".6")
+            .attr("stroke-dasharray", "0.8");
+
+        svg.selectAll('.tick')
+            .select('text')
+            .attr("fill", "#D8D8D8")
+            .attr("opacity", "1")
+            // .attr("stroke-width", "5")
+            // .attr("font-size","1rem")
+            // .attr("stroke-width", "1")
+            // .attr("opacity", ".6")
+            // .attr("stroke-dasharray", "0.8");
 
         // Bars
 
-        svg.selectAll("mybar-fill")
-            .data(data)
-            .enter()
-            .append("rect")
-            .attr("x", function (d) { return x(d.Country); })
-            .attr("y", function (d) { return y(13000) })
-            // .attr("y0", function (d) { return y(13000) - y(d.Value); })
-            .attr("width", x.bandwidth())
-            .attr("height", y(height))
-            .attr("fill", '#E5E5E5')
-            .attr("stroke", "none")
-            // .style('z-index', '-100')
-            .attr('opacity', '0.5')
+        // if (showBarBackground === true) {
+        //     svg.selectAll("mybar-fill")
+        //         .data(data)
+        //         .enter()
+        //         .append("rect")
+        //         .attr("x", function (d) { return x(d.key); })
+        //         .attr("y", function (d) { return y(13000) })
+        //         // .attr("y0", function (d) { return y(13000) - y(d.Value); })
+        //         .attr("width", x.bandwidth())
+        //         .attr("height", y(height))
+        //         .attr("fill", '#E5E5E5')
+        //         .attr("stroke", "none")
+        //         // .style('z-index', '-100')
+        //         .attr('opacity', '0.5')
+        // } else { }
         // .attr("transform", "translate(0," + -100 + ")")
 
         svg.selectAll("mybar")
@@ -95,14 +128,23 @@ const BarChart = (props) => {
             .enter()
             .append("rect")
             .classed("mybar", true)
-            .attr("x", function (d) { return x(d.Country); })
-            .attr("y", function (d) { return y(d.Value); })
+            .attr("x", function (d) { return x(d.key); })
+            .attr("y", function (d) {
+                // console.log(y(d.value))
+                // console.log(d.value)
+                return y(d.value);
+            })
             .attr("width", x.bandwidth())
-            .attr("height", function (d) { return height - y(d.Value); })
+            .attr("height", function (d) {
+                return height - y(d.value);
+                // return y(d.value);
+
+            })
             // .attr("fill", '#00C48C')
             .attr("fill", function (d) {
-                if (d.Value > 10000) return "#00C48C"
-                else return "#FF647C"
+                if (d.dateOfRelease) return "#402177"
+                else return "#C996EB"
+                // return "#C996EB"
             })
             .attr("stroke", "none")
             // .style("padding-right", "3p")
@@ -141,10 +183,10 @@ const BarChart = (props) => {
     }, [data]);
 
     return (
-        <div className='barchart-container'>
+        <div class='barchart-container'>
             <svg ref={svgRef}></svg>
         </div>
     );
 }
 
-export default BarChart
+export default BarChart;

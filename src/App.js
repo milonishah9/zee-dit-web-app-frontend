@@ -5,15 +5,15 @@ import ILTTwentySummary from './Pages/ILTTwentySummary/ILTTwentySummary';
 import ILTTdataTowers from './Pages/ILTTdataTowers/ILTTdataTowers';
 import ILTTloginPage from './Pages/ILTTloginPage/ILTTloginPage';
 import Product from './Pages/ProductPage/Product';
-import ExecutiveSummaryContent from './Components/ExecutiveSummaryTab/ExecutiveSummaryContent/ExecutiveSummaryContent';
+// import ExecutiveSummaryContent from './Components/ExecutiveSummaryTab/ExecutiveSummaryContent/ExecutiveSummaryContent';
 import ExecutiveSummaryTab from './Components/ExecutiveSummaryTab/ExecutiveSummaryTab';
 import AreaChartWithToolTips from './Components/Charts/AreaChartWithToolTips/AreaChartWithToolTips';
 import HSbar from './Components/Charts/HSbar/HSbar';
 import DivergingSB from './Components/Charts/DivergingSB/DivergingSB';
 import Links from './Components/Charts/Links/Links';
 import Monochrome from './Components/Charts/Monochrome/Monochrome';
-import HeatMap from './Components/Charts/HeatMap/HeatMap';
-import ContentSchedulingWithHeatMapAndDropdowns from './Components/ContentSchedulingWithHeatMapAndDropdowns/ContentSchedulingWithHeatMapAndDropdowns';
+// import HeatMap from './Components/Charts/HeatMap/HeatMap';
+import ContentSchedulingWithHeatMapAndDropdowns from './Components/ContentTab/ContentSchedulingWithHeatMapAndDropdowns/ContentSchedulingWithHeatMapAndDropdowns';
 import Content from './Components/ContentTab/Content';
 import CatalogueEnrichmentStackBarChart from './Components/AllDaysStackedBarChartPopUpModal/StackedBarChartForAllDays/CatalogueEnrichmentStackBarChart';
 import ScatterplotConnected from './Components/Charts/ScatterplotConnected/ScatterplotConnected';
@@ -21,13 +21,7 @@ import ContentCatalogueEnrichmentThreeChart from './Components/ContentTab/Catalo
 
 
 function App() {
-  var data = [{
-    category: " ",
-    negative1: -13,
-    negative2: -23,
-    positive1: 49,
-    positive2: 25
-}];
+
   return (
 
     <div className="App">
@@ -38,7 +32,7 @@ function App() {
           <Route path='/ilt20-summary' element={<ILTTwentySummary />} />
           <Route path='/product' element={<Product />} />
           <Route path='/executive-summary' element={<ExecutiveSummaryTab />} />
-          <Route path='content' element = { <Content /> } />
+          <Route path='content' element={<Content />} />
           <Route path='/area-chart-with-tooltips' element={<AreaChartWithToolTips />} />
           <Route path='/hs-bar' element={<HSbar />} />
           <Route path='/new' element={<DivergingSB />} />
