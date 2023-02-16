@@ -50,6 +50,7 @@ text.lessthan300 {
 
 .bubble-chart{
   overflow: auto;
+  background-color:#FBFCFE;
 }
 
 /* h2 {
