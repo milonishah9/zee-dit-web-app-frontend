@@ -37,7 +37,7 @@ const ScatterplotConnected = (props) => {
       y: d => d.gas,
       title: d => d.year,
       orient: d => d.side,
-      yFormat: ".2f",
+      yFormat: "2f",
       xLabel: "Miles driven (per capita per year) →",
       yLabel,
       width: 1700,

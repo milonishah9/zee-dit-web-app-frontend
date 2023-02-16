@@ -2,6 +2,10 @@ p{
     color: #333333;
 }
 
+.catalogue-enrichment-icons{
+    margin-top: -16px;
+}
+
 .catalogue-enrichment-kpi-card{
     background: #ffffff;
     border: 1px solid #d8e3ff;
@@ -69,10 +73,9 @@ p{
     font-weight: 400;
     font-size: 10px;
     line-height: 11px;
+    margin: 5px;
 }
-.all-indicators-with-icons label{
-    /* padding: 5px; */
-}
+
 img.img {
     padding-right: 2px;
     /* padding-left: 30px; */
@@ -148,7 +151,7 @@ h5.Number-title {
 }
 
 .catalogue-enrichment-bottom-cards-scroll::-webkit-scrollbar {
-    width: 3px;
+    width: 5px;
   }
 
   .catalogue-enrichment-bottom-cards-scroll::-webkit-scrollbar-track {
@@ -164,7 +167,7 @@ h5.Number-title {
 
 .catalogue-enrichment-bottom-card{
     background: #FFFFFF;
-    border-bottom: 1.5px solid #c1d0f5;
+    border-bottom: 2px solid #c1d0f5;
     width: 100%;
     margin: auto;
     background-color: #E9EFFF;
@@ -247,10 +250,14 @@ h5.Number-title {
 .catalogue-enrichment-three-chart{
     display: flex;
     justify-content: space-between;
-    width: 83.5%;
+    width: 98.5%;
     margin: auto;   
     margin-top: 96px;
     padding-top: 10px;
+}
+
+.catalogue-enrichment-three-chart.h4{
+    margin-left: 48px;
 }
 
 .catalogue-enrichment-three-chart-container{

@@ -1,6 +1,7 @@
 import React from "react";
 // import calander from '../../Images/calander.svg';
 // import tvuser from '../../Images/tv-user.svg';
+import './CatalogueEnrichment.css'
 
 
 const CatalogueEnrichmentBottomCard = (props) => {
