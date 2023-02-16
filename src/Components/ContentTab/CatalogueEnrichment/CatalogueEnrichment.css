@@ -3,7 +3,7 @@ p{
 }
 
 .catalogue-enrichment-icons{
-    margin-top: -16px;
+    margin-top: -12px;
 }
 
 .catalogue-enrichment-kpi-card{
@@ -53,7 +53,7 @@ p{
     display: flex;
     justify-content: space-between;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 4px;
 }
 
 .catalogue-last-90day{
