@@ -53,6 +53,24 @@ const ContentCatalogueEnrichmentThreeChart = (props) => {
           yLabel={"Watch time per viewer (Mn)"}
         />
       </div>
+
+      <div className="bottom-line-three-chart">
+              <div className="tick">
+               <text>  1 <br/> Jan '23 </text>
+              </div>
+
+              <div className="tick">
+              <text> 1 <br/> Fab '23  </text>
+              </div>
+
+              <div className="tick">
+              <text> 1 <br/> Mar '23  </text>
+              </div>
+              
+              <div className="tick">
+              <text> 31 <br/> Mar '23  </text>
+              </div>
+        </div>
     </div>
   );
 };
