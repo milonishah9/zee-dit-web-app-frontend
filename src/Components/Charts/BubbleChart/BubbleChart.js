@@ -336,31 +336,56 @@ const BubbleChart = (props) => {
       <div className="" style={{ paddingLeft: "2%", paddingRight: "2%" }}>
         Bubble size represents Reach
         <div className="indicators">
-          <img
-            src="/static/images/logos/xxk.svg"
-            className="xxk"
-            alt="Viewers Logo"
-          />
-          xxk
-          <img
-            src="/static/images/logos/xxk-2.svg"
-            className="xxk"
-            alt="Viewers Logo"
-          />
-          xxk
-          <img
-            src="/static/images/logos/xxk-3.svg"
-            className="xxk"
-            alt="Viewers Logo"
-          />
-          xxk
-          <img
-            src="/static/images/logos/xxk-4.svg"
-            className="xxk"
-            alt="Viewers Logo"
-          />
-          xxk
+          <div className="indicators-left">
+            <img
+              src="/static/images/logos/xxk.svg"
+              className="xxk"
+              alt="Viewers Logo"
+            />
+            xxk
+            <img
+              src="/static/images/logos/xxk-2.svg"
+              className="xxk"
+              alt="Viewers Logo"
+            />
+            xxk
+            <img
+              src="/static/images/logos/xxk-3.svg"
+              className="xxk"
+              alt="Viewers Logo"
+            />
+            xxk
+            <img
+              src="/static/images/logos/xxk-4.svg"
+              className="xxk"
+              alt="Viewers Logo"
+            />
+            xxk
+          </div>
+
+          <div className="indicators-right">
+            <img
+              src="/static/images/logos/EllipseB.svg"
+              className="xxk"
+              alt="Viewers Logo"
+            />
+            xxk
+            <img
+              src="/static/images/logos/EllipseP.svg"
+              className="xxk"
+              alt="Viewers Logo"
+            />
+            xxk
+            
+          </div>
+
         </div>
+
+
+
+
+
+
       </div>
       <div id="chart" className=""></div>
     </div>

@@ -18,6 +18,13 @@ text {
   top: 14rem;
 }
 
+.indicators{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
 img.xxk {
   padding-left: 5px;
   padding-right: 5px;
