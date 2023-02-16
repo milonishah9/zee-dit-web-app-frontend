@@ -256,6 +256,19 @@ h5.Number-title {
     padding-top: 10px;
 }
 
+.bottom-line-three-chart{
+    display: flex;
+    justify-content: space-between;
+    width: 98.5%;
+    padding: 0px 49px;
+    margin: auto;
+    margin-top: -27px !important;
+}
+
+.bottom-line-three-chart .tick {
+    text-align: center;
+}
+
 .catalogue-enrichment-three-chart h4{
     margin-left: 3.5%;
 }
