@@ -20,9 +20,9 @@
     /* width: 100px; */
     height: 30px;
     padding: 0 20px;
-    /* border-right: 1px solid #B4C8FF; */
+    border: 1px solid #b4c8ffb9;
     margin: 3px;
-    border-radius: 6px;
+    border-radius: 5px;
 }
 
 .executive-summary-content-linear-actve-tab {
@@ -40,7 +40,7 @@
     padding: 0 20px;
     height: 30px;
     margin: 3px;
-    border-radius: 6px;
+    border-radius: 5px;
 }
 
 /* .executive-summary-content-linear-actve-tab:nth-child(3){

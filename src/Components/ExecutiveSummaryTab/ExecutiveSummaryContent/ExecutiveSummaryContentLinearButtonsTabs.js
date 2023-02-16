@@ -16,7 +16,7 @@ const ExecutiveSummaryContentLinearButtonsTabs = (props) => {
                     setActiveTab('all-content')
                     props.TabValue('all-content')
                     props.FilterTabValue('');
-                }}>All Content</button>
+                }}>All Content</button> 
                 {tab === 'ott' && <span>
                     <button className={activeTab === 'original' ? ("executive-summary-content-linear-actve-tab") : ("executive-summary-content-linear")} onClick={() => {
                         setActiveTab('original')
