@@ -13,3 +13,10 @@
     fill: red;
     font-size: 13.5px;
 }
+
+text.amount, text.remaining-amount {
+    /* font-weight: bold; */
+    font-size: 10px;
+    font-family: "GothamMedium";
+    font-size: 12px;
+}

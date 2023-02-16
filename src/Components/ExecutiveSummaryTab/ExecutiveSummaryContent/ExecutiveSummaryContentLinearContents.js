@@ -6,6 +6,7 @@ import { selectCount } from "../../../features/HoverValues";
 import HSbar from "../../Charts/HSbar/HSbar";
 import DivergingSB from "../../Charts/DivergingSB/DivergingSB";
 import filter from '../../Images/filter.png';
+// import filterUD from '../filter-icon.svg';
 
 const ExecutiveSummaryContentLinearContents = (props) => {
     const { chartData, buttonTab, tab } = props;
@@ -46,7 +47,7 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                     <p><label className="executive-summ-content-ott-darkblue-indicator"/>Remaining Viewers</p>
                 </div> */}
                     <div className="ott-toggle">
-                        <label> <b className="text"> Absolute Value</b></label>
+                        <label> <b className="textAbsoluteValue"> Absolute Value</b></label>
                         <input type="checkbox" onClick={handleOttToggleButton}></input>
                         <label> <b className="text"> % Change</b></label>
                     </div>
@@ -91,23 +92,50 @@ const ExecutiveSummaryContentLinearContents = (props) => {
                                 <span>Shows</span>
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
-                                <img className="bi-funnel" src={filter} />
-                                <span>Reach ‘000</span>
+
+
+                                {/* <img className="bi-funnel " src={filter} /> */}
+                                
+                                <span className="reachU">Reach ‘000</span>
+
+                                <svg width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.90263 9.40234L0.523356 5.35021L7.28191 5.35021L3.90263 9.40234Z" fill="#808080"/>
+                                <path d="M3.90205 0L7.28133 4.05213L0.522776 4.05213L3.90205 0Z" fill="#808080"/>
+                                </svg>
+                            </th>
+
+                            <th className="executive-summary-content-linear-contents-t-header">
+
+                                <svg className="bi-funnel" width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.90263 9.40234L0.523356 5.35021L7.28191 5.35021L3.90263 9.40234Z" fill="#808080"/>
+                                <path d="M3.90205 0L7.28133 4.05213L0.522776 4.05213L3.90205 0Z" fill="#808080"/>
+                                </svg>
+
+                                    {/* <img className="bi-funnel" src={filter} /> */}
+                                    <span>GRP</span>
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
-                                <img className="bi-funnel" src={filter} />
-                                <span>GRP</span>
+                                <svg className="bi-funnel" width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.90263 9.40234L0.523356 5.35021L7.28191 5.35021L3.90263 9.40234Z" fill="#808080"/>
+                                <path d="M3.90205 0L7.28133 4.05213L0.522776 4.05213L3.90205 0Z" fill="#808080"/>
+                                </svg>
+                                    {/* <img className="bi-funnel" src={filter} /> */}
+                                    <span className="ex-sum-cont-engagement">Reach %{/* <span className="exe-sum-lin-con-h-lbr">(Acquisition)</span>*/}</span>
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
-                                <img className="bi-funnel" src={filter} />
-                                <span className="ex-sum-cont-engagement">Reach %{/* <span className="exe-sum-lin-con-h-lbr">(Acquisition)</span>*/}</span>
-                            </th>
-                            <th className="executive-summary-content-linear-contents-t-header">
-                                <img className="bi-funnel" src={filter} />
+                            <svg className="bi-funnel" width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.90263 9.40234L0.523356 5.35021L7.28191 5.35021L3.90263 9.40234Z" fill="#808080"/>
+                            <path d="M3.90205 0L7.28133 4.05213L0.522776 4.05213L3.90205 0Z" fill="#808080"/>
+                            </svg>
+                                {/* <img className="bi-funnel" src={filter} /> */}
                                 <span className="ex-sum-cont-engagement">TSV (M min.){/*<span className="exe-sum-lin-con-h-lbr"> (Engagement)</span>*/}</span>
                             </th>
                             <th className="executive-summary-content-linear-contents-t-header">
-                                <img className="last-filter-svg" src={filter} />
+                            <svg className="bi-funnel" width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.90263 9.40234L0.523356 5.35021L7.28191 5.35021L3.90263 9.40234Z" fill="#808080"/>
+                            <path d="M3.90205 0L7.28133 4.05213L0.522776 4.05213L3.90205 0Z" fill="#808080"/>
+                            </svg>
+                                {/* <img className="last-filter-svg" src={filter} /> */}
                                 <span>GRP Adbreak</span>
                             </th>
                         </tr>

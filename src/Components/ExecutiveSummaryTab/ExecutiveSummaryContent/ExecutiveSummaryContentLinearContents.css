@@ -13,7 +13,11 @@
   border-radius: 4px;
   position: relative;
   bottom: 60px;
-  margin-top: 30px;
+  margin-top: 70px;
+}
+
+span.reachU {
+  margin-right: 142px;
 }
 
 .executive-summ-content-ott-indicators {
@@ -103,7 +107,7 @@
   font-size: 12px;
   font-weight: 500;
   line-height: 10px;
-  padding: 15px 0px;
+  /* padding: 15px 0px; */
   padding-left: 7px;
 }
 
@@ -121,7 +125,7 @@
 }
 
 .executive-summary-content-linear-contents-t-body-rows {
-  background-color: #fff4fc;
+  background-color: #F9F6FC;
   font-family: GothamMedium;
   font-style: normal;
   font-size: 12px;
@@ -164,7 +168,7 @@ table {
   width: 97.5%;
   display: flex;
   justify-content: space-between;
-  margin: auto;
+  margin: 15px auto 0px auto;
 }
 
 .executive-summary-content-linear-tabs-sub-div{
@@ -216,6 +220,9 @@ input[type="checkbox"]:checked {
   position: relative;
   left: 71%;
 }
+
+
+
 
 .last-filter-svg{
   position: relative;
@@ -325,6 +332,17 @@ td:nth-child(6) text.amount{
     width: 37.5%;
   }
 }
+
+b.textAbsoluteValue {
+  color:#333333;
+  font-family: GothamMedium;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 10px;
+  font-weight: bold;
+}
+
+
 b.text {
   font-family: GothamMedium;
   font-style: normal;

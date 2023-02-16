@@ -34,7 +34,7 @@ const BubbleChart = (props) => {
     // fit bubble chart to the user's window
     var margin = { left: 10, right: 10, top: 10, bottom: 10 },
       width = 1500,
-      height = 350,
+      height = 300,
       svg = d3.select("#chart").append("svg");
 
     svg
