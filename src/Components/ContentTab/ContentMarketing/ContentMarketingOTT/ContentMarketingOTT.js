@@ -4,6 +4,7 @@ import './ContentMarketingOTT.css';
 import { useState } from 'react';
 import HorizontalProgressBarChartForTable from '../../../Charts/HorizontalProgressBarChartForTable/HorizontalProgressBarChartForTable';
 import BarChart from '../../../Charts/BarChart/BarChart';
+import SankeyChartForContentMarketing from '../../../Charts/SankeyChart/SankeyChartForConsumer/SankeyChartForContentMarketing/SankeyChartForContentMarketing';
 
 const ContentMarketingOTT = (props) => {
     const [progressBarChartData, setProgressBarChartData] = useState(progressBarChartSampleData);
@@ -84,6 +85,7 @@ const ContentMarketingOTTSankeyAndBarChart = (props) => {
                     <div className='content-marketing-ott-charts-subtitle'>
                         <p>Trailer Effectiveness</p>
                     </div>
+                    <SankeyChartForContentMarketing />
                 </div>
             </div>
             <div className='content-marketing-ott-bar-chart-and-legend-container'>
@@ -96,21 +98,25 @@ const ContentMarketingOTTSankeyAndBarChart = (props) => {
                     </p>
                 </div>
                 <div className='content-marketing-ott-bar-chart-container'>
-                    <div className='content-marketing-ott-charts-barchart-container'>
+                    <div className='content-marketing-ott-charts-barchart-and-title-container'>
                         <div className='content-marketing-ott-charts-subtitle'>
                             <p>No. of Viewers ‘000 (>1 min watched)</p>
                         </div>
-                        <BarChart 
-                        data={barChartSampleData}
-                        />
+                        <div className='content-marketing-ott-charts-bar-chart'>
+                            <BarChart
+                                data={barChartSampleData}
+                            />
+                        </div>
                     </div>
-                    <div className='content-marketing-ott-charts-barchart-container'>
+                    <div className='content-marketing-ott-charts-barchart-and-title-container'>
                         <div className='content-marketing-ott-charts-subtitle'>
                             <p>Watch Time per Viewer ‘000 (>1 min watched)</p>
                         </div>
-                        {/* <BarChart 
-                        data={barChartSampleData}
-                        /> */}
+                        <div className='content-marketing-ott-charts-bar-chart'>
+                            <BarChart
+                                data={barChartSampleData}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

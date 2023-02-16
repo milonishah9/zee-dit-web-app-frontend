@@ -53,7 +53,7 @@ const BarChart = (props) => {
         const svg = d3
             .select(svgRef.current)
             .classed("barchart-svg-container", true)
-            .attr("viewBox", "0 0 460 90")
+            .attr("viewBox", "0 0 470 90")
             .attr('preserveAspectRatio', 'xMinYMin')
             .append("g")
         // .attr("transform",
@@ -82,14 +82,17 @@ const BarChart = (props) => {
 
         let yAixs = d3.axisLeft(y)
             .tickSize(-width)
+            .ticks(3)
             .tickValues([0, 50, 100])
 
         svg.append("g")
+            .classed('y-axis', true)
             .call(yAixs)
 
         svg.selectAll('.tick')
             .select('line')
             .attr("stroke", "#D8D8D8")
+            // .attr('x1','-20')
             .attr("stroke-width", "1")
             .attr("opacity", ".6")
             .attr("stroke-dasharray", "0.8");
@@ -98,11 +101,11 @@ const BarChart = (props) => {
             .select('text')
             .attr("fill", "#D8D8D8")
             .attr("opacity", "1")
-            // .attr("stroke-width", "5")
-            // .attr("font-size","1rem")
-            // .attr("stroke-width", "1")
-            // .attr("opacity", ".6")
-            // .attr("stroke-dasharray", "0.8");
+        // .attr("stroke-width", "5")
+        // .attr("font-size","1rem")
+        // .attr("stroke-width", "1")
+        // .attr("opacity", ".6")
+        // .attr("stroke-dasharray", "0.8");
 
         // Bars
 

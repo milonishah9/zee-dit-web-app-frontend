@@ -14,9 +14,9 @@
     z-index: 100;
 }
 
-/* .tick text{
-    font-size: 12px;
-} */
+.tick text{
+    font-size: 6px !important;
+}
 
 .barchart-tooltip {
     z-index: 100;

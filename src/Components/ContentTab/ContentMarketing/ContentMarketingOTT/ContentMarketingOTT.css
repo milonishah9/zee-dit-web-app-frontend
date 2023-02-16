@@ -13,6 +13,7 @@
     border-radius: 4px;
     padding: 0.5rem;
     height: 70vh;
+    min-height: 450px;
 }
 
 .content-marketing-ott-progresschart-container {
@@ -116,7 +117,7 @@
 }
 
 .content-marketing-sakney-chart-container,
-.content-marketing-ott-bar-chart-container {
+.content-marketing-ott-charts-barchart-and-title-container {
     margin-top: 1rem;
 }
 
@@ -129,5 +130,10 @@
 }
 
 .content-marketing-ott-charts-barchart-container{
-    height: 28vh;
+    /* height: 28vh; */
+    min-height: auto;
+}
+
+.content-marketing-ott-charts-bar-chart{
+    margin: 1.5em 0 2rem;
 }
