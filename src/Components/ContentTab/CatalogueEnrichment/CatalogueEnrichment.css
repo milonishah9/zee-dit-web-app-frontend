@@ -56,6 +56,10 @@ p{
     margin-top: 4px;
 }
 
+.cumulative-view{
+   margin-bottom: 15px; 
+}
+
 .catalogue-last-90day{
     font-family: 'GothamMedium';
     font-weight: 400;

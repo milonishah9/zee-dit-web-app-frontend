@@ -61,7 +61,9 @@ const CatalogueEnrichment = () => {
    
     return (
         <div>
-            Last 90 Days Cumulative view
+                <label className="catalogue-last-90day cumulative-view">Last 90 Days Cumulative view</label>
+
+            
             {fullscreen && <div className="catalogue-enrichment-full-screen-chart">
                     <ContentCatalogueEnrichmentThreeChart onClick = {getData}/>
                 </div>
