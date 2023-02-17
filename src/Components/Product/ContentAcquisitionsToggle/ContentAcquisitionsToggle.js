@@ -261,6 +261,7 @@ const ContentAcquisitionsToggle = (props) => {
         
       </div>
     </div>
+    
   );
 };
 
