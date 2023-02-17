@@ -45,7 +45,7 @@ const BarChart = (props) => {
 
         var margin = { top: 30, right: 30, bottom: 70, left: 60 },
             width = 550 - margin.left - margin.right,
-            height = 180 - margin.top - margin.bottom;
+            height = 190 - margin.top - margin.bottom;
         // var margin = { top: 30, right: 30, bottom: 70, left: 60 },
         //     width = 840 - margin.left - margin.right,
         //     height = 400 - margin.top - margin.bottom;
@@ -53,11 +53,11 @@ const BarChart = (props) => {
         const svg = d3
             .select(svgRef.current)
             .classed("barchart-svg-container", true)
-            .attr("viewBox", "0 0 470 90")
+            .attr("viewBox", "0 0 490 120")
             .attr('preserveAspectRatio', 'xMinYMin')
             .append("g")
-        // .attr("transform",
-        //     "translate(" + 0 + "," + 155 + ")");
+            .attr("transform",
+                "translate(" + 20 + "," + 10 + ")");
 
         // Add Y axis
         var x = d3.scaleBand()
@@ -89,20 +89,32 @@ const BarChart = (props) => {
             .classed('y-axis', true)
             .call(yAixs)
 
-        svg.selectAll('.tick')
+        svg
+            .select('.y-axis')
+            .selectAll('.tick')
             .select('line')
             .attr("stroke", "#D8D8D8")
-            // .attr('x1','-20')
+            .attr('x1', '-18')
             .attr("stroke-width", "1")
             .attr("opacity", ".6")
             .attr("stroke-dasharray", "0.8");
 
+        svg
+            .select('.y-axis')
+            .select('g:first-child')
+            .select('line')
+            .select("stroke-dasharray", "0.8")
+
         svg.selectAll('.tick')
             .select('text')
-            .attr("fill", "#D8D8D8")
+            .attr("fill", "#808080")
             .attr("opacity", "1")
+            .attr("font-size", "12px")
+
+        svg.select('.y-axis')
+            .selectAll('text')
+            .attr('dy', -2)
         // .attr("stroke-width", "5")
-        // .attr("font-size","1rem")
         // .attr("stroke-width", "1")
         // .attr("opacity", ".6")
         // .attr("stroke-dasharray", "0.8");
@@ -153,6 +165,20 @@ const BarChart = (props) => {
             // .style("padding-right", "3p")
             // .style('z-index', '100')
             ;
+
+        svg
+            .selectAll("p")
+            .data(data)
+            .enter()
+            .append('text')
+            .classed('barchart-month-name', true)
+            .attr('x', -3)
+            .attr('y', 108)
+            .attr("fill", "#808080")
+            // .attr('dy', d => d.y + 20)
+            // .text(d => d.showText ? d.name : null)
+            .html(d => d.month ? d.month : null)
+            .attr('font-size', 12)
 
         const tooltip = d3
             .select(".barchart-container")

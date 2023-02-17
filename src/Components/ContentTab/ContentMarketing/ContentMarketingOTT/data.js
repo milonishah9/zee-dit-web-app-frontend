@@ -12,8 +12,9 @@ const progressBarChartSampleData = [
 
 const barChartSampleData = [
     {
-        key: "Jan1'23",
+        key: "1",
         value: 0,
+        month: "Jan'23"
     },
     {
         key: "2",
@@ -34,7 +35,7 @@ const barChartSampleData = [
     {
         key: "6",
         value: 0,
-        
+
     },
     {
         key: "7",

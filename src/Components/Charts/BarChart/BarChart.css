@@ -15,7 +15,8 @@
 }
 
 .tick text{
-    font-size: 6px !important;
+    font-size: 0.5rem !important;
+    color: #808080;
 }
 
 .barchart-tooltip {
