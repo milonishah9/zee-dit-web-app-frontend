@@ -463,7 +463,7 @@ const ProductAcquisitions = (props) => {
 
     return (
         <div>
-            <div style={{ "display": "flex", "flexDirection": "column" }}>
+            <diov style={{ "display": "flex", "flexDirection": "column" }}>
                 <div className='content-scheduling-with-heatmap-dropdowns-dropdown-filters-container'>
                     <DropDownMenu
                         dropDownMenu={dropDownMenuForChannelGenre.platform}
@@ -611,23 +611,27 @@ const ProductAcquisitions = (props) => {
                         </label>
                     </div>
                 </div>
+
+
+            </diov>
+
+            <div className={'product-card'}>
+                <div className="row1">
+                    <div className="column">
+                        <ContentAcquisitionsToggle  data={['Viewer to User Ratio', 1000, 70]} />
+                    </div>
+                    <div className="column">
+                        <ContentAcquisitionsToggle  data={['DAU', 1000, 70]} />
+                    </div>
+                    <div className="column">
+                        <ContentAcquisitionsToggle  data={['MAU', 1000, 70]} />
+                    </div>
+                </div>
             </div>
 
-        {/* <div className={'product-journey-discovery'}> */}
-        <div className={'product-card'}>
-            <div className="row1">
-                <div className="column">
-                    <ContentAcquisitionsToggle  data={['Viewer to User Ratio', 1000, 70]} />
-                </div>
-                <div className="column">
-                    <ContentAcquisitionsToggle  data={['DAU', 1000, 70]} />
-                </div>
-                <div className="column">
-                    <ContentAcquisitionsToggle  data={['MAU', 1000, 70]} />
-                </div>
+            <div>
+                    <label className="catalogue-last-90day">Funnel Metrics</label>
             </div>
-        </div>
-
 
 
         </div>
