@@ -2,6 +2,39 @@
   text-align: center;
 }
 
+.product-active-tab{
+  background: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%);
+  border-radius: 4px;
+  color: #FFFFFF;
+  width: 16%;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.product-tab {
+  border: none;
+  color: #212529;
+  background: #E9EFFF;
+  border-radius: 4px;
+  width: 16%;
+  height: 30px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 15px;
+  cursor: pointer;
+}
+
+.product-tabs{
+  display: flex;
+  justify-content: space-around;
+  width: 99%;
+  margin: auto;
+  margin-top: 10px;
+}
+
 a.product-engagement-anchor {
   text-decoration: none;
   color: #212529;
