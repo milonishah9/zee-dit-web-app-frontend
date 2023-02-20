@@ -33,9 +33,9 @@ const ContentAcquisitionsToggle = (props) => {
       <div className="product-card-number">{data[1]}</div>
       
       <div className="d-flax up-down-val">
-        <div className='pluse-value'>2% ↑ <br/> From D1</div>
+        <div className='pluse-value-catalogue-syn'>2% ↑ <br/> From D1</div>
         <div className='orange-value'>2% ↑ <br/> From D1</div>
-        <div className='minuse-value'>2% ↓ <br/> From D1</div>
+        <div className='minuse-value-product-syn'>2% ↓ <br/> From D1</div>
 
       </div>
       <div className={classed}>

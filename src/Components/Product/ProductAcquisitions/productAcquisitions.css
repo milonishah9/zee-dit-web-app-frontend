@@ -6,10 +6,11 @@
   flex-wrap: nowrap;
 }
 
-.content-scheduling-with-heatmap-dropdowns-dropdown-filters-container {
+.content-scheduling-with-heatmap-dropdowns-dropdown-filters-container-product-syn {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: nowrap;
+  margin-top: 15px;
 }
 
 .content-scheduling-with-heatmap-legend {
@@ -18,7 +19,7 @@
   justify-self: flex-end
 }
 
-.content-scheduling-with-heatmap-dropdowns-dropdown-filters-container select {
+.content-scheduling-with-heatmap-dropdowns-dropdown-filters-container-product-syn select {
   width: 15%;
   margin-top: 10px;
   background-color: transparent;
@@ -54,12 +55,14 @@
   outline: none;
 }
 
+.product-row1-syn{
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+.product-column-syn {
+  width: 33%;
 }
 
 /* Clear floats after the columns */
@@ -69,11 +72,11 @@
   clear: both;
 }
 
-.drop-down-menu-contaier {
+.drop-down-menu-contaier-product-syn {
   display: flex;
   flex-direction: column;
   min-width: 12%;
-  margin: 0 1rem;
+  /* margin: 0 1rem; */
 }
 
 .drop-down-menu-label {
@@ -370,8 +373,36 @@
   /* background: #b30000; */
 }
 
+.product-acquisitions-funnel-metrics{
+  margin-top: 15px;
+}
+
+.product-acquisitions-funnel-metrics-card-syn{
+  background: #FFFFFF;
+  border: 1px solid #D8E3FF;
+  box-shadow: 0px 2px 5px #D6DEF8;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.product-all-indicators-with-icons-syn{
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 11px;
+  color: #333333;
+}
+
+.funnel-metrics-product-syn{
+  font-family: "GothamBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 15px;
+  color: #333333;
+}
+
 @media only screen and (max-width: 1057px) and (min-width:768) {
-  .drop-down-menu-contaier {
+  .drop-down-menu-contaier-product-syn {
       min-width: 15%;
   }
 
@@ -394,12 +425,12 @@
 }
 
 @media only screen and (max-width: 570px) {
-  .content-scheduling-with-heatmap-dropdowns-dropdown-filters-container {
+  .content-scheduling-with-heatmap-dropdowns-dropdown-filters-container-product-syn {
       flex-wrap: wrap;
       justify-content: flex-start;
   }
 
-  .content-scheduling-with-heatmap-dropdowns-dropdown-filters-container select {
+  .content-scheduling-with-heatmap-dropdowns-dropdown-filters-container-product-syn select {
       min-width: 30%;
       margin-right: 5px;
       font-size: 14px;

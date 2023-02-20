@@ -118,7 +118,7 @@ div.executive-summary-content-active-tab {
 
 .catalogue-acquisitions-indicators{
   display: flex;
-  margin: 10px 16px;
+  margin-top: 10px;
   justify-content: space-between;
 }
 
@@ -143,7 +143,7 @@ div.executive-summary-content-active-tab {
   display: block;
 }
 
-.pluse-value {
+.pluse-value-catalogue-syn {
   color: #04c704;
   font-weight: 400;
   margin-left: 8px;
@@ -169,7 +169,7 @@ div.executive-summary-content-active-tab {
   bottom: 7px;
 }
 
-.minuse-value {
+.minuse-value-product-syn {
   color: red;
   margin-left: 8px;
   font-weight: 400;
@@ -760,11 +760,11 @@ div.executive-summary-content-active-tab {
     font-size: 20px;
   }
 
-  .pluse-value  {
+  .pluse-value-catalogue-syn  {
     font-size: 12px;
   }
 
-  .minuse-value {
+  .minuse-value-product-syn{
     font-size: 12px;
   }
 

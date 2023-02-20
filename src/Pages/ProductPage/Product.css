@@ -29,10 +29,9 @@
 
 .product-tabs{
   display: flex;
-  justify-content: space-around;
-  width: 99%;
+  justify-content: space-between;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 a.product-engagement-anchor {
