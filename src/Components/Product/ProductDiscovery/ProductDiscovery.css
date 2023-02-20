@@ -1,0 +1,24 @@
+
+.product-discovery-indicators-syn{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.product-discovery-row1-syn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-discovery-column-syn{
+    width: 24.5%;
+}
+
+.business-metrics-product-syn{
+    font-family: 'GothamBold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 15px;
+    color: #333333;
+}
