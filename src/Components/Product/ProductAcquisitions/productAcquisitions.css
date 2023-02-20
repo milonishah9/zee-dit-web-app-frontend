@@ -401,6 +401,18 @@
   color: #333333;
 }
 
+.pluse-value-product-syn{
+  font-family: 'GothamLight';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 11px;
+  display: flex;
+  align-items: center;
+  color: #00C48C;
+  margin-left: 5px;
+}
+
 @media only screen and (max-width: 1057px) and (min-width:768) {
   .drop-down-menu-contaier-product-syn {
       min-width: 15%;

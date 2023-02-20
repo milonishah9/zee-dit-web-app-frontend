@@ -156,30 +156,26 @@ div.executive-summary-content-active-tab {
   bottom: 7px;
 }
 
-.orange-value {
-  color: #ffcd29;
+.orange-value-product-syn {
+  font-family: 'GothamLight';
+  font-style: normal;
   font-weight: 400;
-  margin-left: 8px;
-  font-size: 15px;
+  font-size: 10px;
   line-height: 11px;
   display: flex;
   align-items: center;
-  display: inline;
-  position: relative;
-  bottom: 7px;
+  color: #FF9355;
 }
 
 .minuse-value-product-syn {
-  color: red;
-  margin-left: 8px;
+  font-family: 'GothamLight';
+  font-style: normal;
   font-weight: 400;
-  font-size: 14.5px;
+  font-size: 10px;
   line-height: 11px;
   display: flex;
   align-items: center;
-  display: inline;
-  position: relative;
-  bottom: 7px;
+  color: #FF647C;
 }
 
 .product-icons-logo{
