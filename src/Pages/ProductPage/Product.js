@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ProductHeader from "../../Components/Product/ProductHeader/ProductHeader";
 import ProductAcquisitions from "../../Components/Product/ProductAcquisitions/ProductAcquisitions";
 import "./Product.css";
+import ProductDiscovery from "../../Components/Product/ProductDiscovery/ProductDiscovery";
 
 
 const Product = () => {
@@ -31,8 +32,8 @@ const Product = () => {
                   <button className={activeTab === 'loyalty' ? ('product-active-tab') : ("product-tab")} onClick={() => setActiveTab('loyalty')}>Loyalty</button>
               </div>
               {activeTab === 'acquisitions' && <ProductAcquisitions />}
-              {/* {activeTab === 'discovery' && <ExecutiveSummaryContent />}
-              {activeTab === 'advertisement' && <ExecutiveSummaryProduct />}
+              {activeTab === 'discovery' &&  <ProductDiscovery />}
+              {/* {activeTab === 'advertisement' && <ExecutiveSummaryProduct />}
               {activeTab === 'subscriptions' && <ExecutiveSummaryProduct />}
               {activeTab === 'engagement' && <ExecutiveSummaryProduct />}
               {activeTab === 'loyalty' && <ExecutiveSummaryProduct />} */}

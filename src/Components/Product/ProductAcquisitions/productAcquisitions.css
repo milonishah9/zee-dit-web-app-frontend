@@ -373,8 +373,16 @@
   /* background: #b30000; */
 }
 
-.product-acquisitions-funnel-metrics{
-  margin-top: 15px;
+.product-acquisitions-funnel-metrics-first-child-syn{
+  width: 34%;
+}
+
+.product-acquisitions-funnel-metrics-second-child-syn{
+  width: 35%;
+}
+
+.product-acquisitions-funnel-metrics-third-child-syn{
+  width: 34%;
 }
 
 .product-acquisitions-funnel-metrics-card-syn{
@@ -383,6 +391,8 @@
   box-shadow: 0px 2px 5px #D6DEF8;
   border-radius: 4px;
   margin-top: 10px;
+  padding: 10px;
+  display: flex;
 }
 
 .product-all-indicators-with-icons-syn{
@@ -411,6 +421,25 @@
   align-items: center;
   color: #00C48C;
   margin-left: 5px;
+}
+
+.product-acqisitions-card-value-syn{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: #333333;
+}
+
+.product-acqui-colorspara-syn{
+  display: flex;
+  justify-content: space-between;
+  width: 68%;
+}
+
+.border-left-product-acqui{
+  border-left: 1px dashed #AFC5FD;
+  padding-left: 10px;
 }
 
 @media only screen and (max-width: 1057px) and (min-width:768) {
