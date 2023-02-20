@@ -20,7 +20,7 @@ const ProductDiscovery = (props) => {
     });
 
     const [isClickOnDropDownFilterApply, setIsClickOnDropDownFilterApply] = useState(false);
-    
+
     let dropDownMenuForChannelGenre = {
         platform: {
             id: 'platform',
@@ -408,6 +408,9 @@ const DropDownMenu = (props) => {
                     </div>
                     <div className="product-discovery-column-syn">
                         <ContentAcquisitionsToggle  data={['Search Engagement', 2000, 70]} />
+                    </div>
+                    <div className="product-discovery-column-syn">
+                        <ContentAcquisitionsToggle  data={['Search per User', 1500, 70]} />
                     </div>
                     <div className="product-discovery-column-syn">
                         <ContentAcquisitionsToggle  data={['Overall CTR', 1500, 70]} />
