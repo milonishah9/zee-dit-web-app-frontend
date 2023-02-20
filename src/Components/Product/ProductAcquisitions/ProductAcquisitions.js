@@ -465,7 +465,7 @@ const ProductAcquisitions = (props) => {
 
     return (
         <div>
-            <diov style={{ "display": "flex", "flexDirection": "column" }}>
+            <div style={{ "display": "flex", "flexDirection": "column" }}>
                 <div className='content-scheduling-with-heatmap-dropdowns-dropdown-filters-container-product-syn'>
                     <DropDownMenu
                         dropDownMenu={dropDownMenuForChannelGenre.platform}
@@ -610,7 +610,7 @@ const ProductAcquisitions = (props) => {
                 </div>
 
 
-            </diov>
+            </div>
 
             <div className={'product-card'}>
                 <div className="product-row1-syn">

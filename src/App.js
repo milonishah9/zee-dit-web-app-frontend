@@ -18,9 +18,21 @@ import Content from './Components/ContentTab/Content';
 import CatalogueEnrichmentStackBarChart from './Components/AllDaysStackedBarChartPopUpModal/StackedBarChartForAllDays/CatalogueEnrichmentStackBarChart';
 import ScatterplotConnected from './Components/Charts/ScatterplotConnected/ScatterplotConnected';
 import ContentCatalogueEnrichmentThreeChart from './Components/ContentTab/CatalogueEnrichment/ContentCatalogueEnrichmentThreeChart';
+import PiChart from './Components/Charts/PiChart/PiChart';
 
 
 function App() {
+
+  const datas = [
+    {
+        date: '0',
+        value: 10
+    },
+    {
+      date: '0',
+      value: 90
+  }
+  ]
 
   return (
 
@@ -41,6 +53,11 @@ function App() {
           <Route path='/ScatterplotConnected' element={<ScatterplotConnected color = {'red'} />} />
           <Route path='/mono' element={<Monochrome />} />
           <Route path='/heatmap' element={<ContentSchedulingWithHeatMapAndDropdowns />} />
+          <Route path='/PiChart' element={<PiChart  data={datas}
+          width={200}
+          height={200}
+          innerRadius={60}
+          outerRadius={100}  />} />
         </Routes>
       </BrowserRouter>
     </div>

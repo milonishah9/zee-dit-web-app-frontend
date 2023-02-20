@@ -33,11 +33,10 @@ const ContentAcquisitionsToggle = (props) => {
           2% ↑ <br /> From D1
         </div>
         <div className="orange-value-product-syn">
-          2% ↑ <br /> From D1
+          2% ↑ <br /> From D7
         </div>
         <div className="minuse-value-product-syn">
-          2% ↓ <br /> From D1
-        </div>
+          2% ↓ <br /> From L30</div>
       </div>
       <div className={classed}>
         <div className="card-sec">Platform Split</div>
