@@ -7,6 +7,7 @@ import * as d3 from 'd3';
 import '../../Product/ProductDiscovery/ProductDiscovery.css';
 import ContentAcquisitionsToggle from "../ContentAcquisitionsToggle/ContentAcquisitionsToggle";
 import ProductDiscoveryKpiCard from "./ProductDiscoveryKpiCard";
+import PiChart from "../../Charts/PiChart/PiChart";
 
 const ProductDiscovery = (props) => {
 
@@ -401,24 +402,81 @@ const DropDownMenu = (props) => {
                 <div>
                 <div className="product-discovery-row1-syn">
                     <div className="product-discovery-column-syn">
-                        <ContentAcquisitionsToggle  data={['VTUR', 1000, 70]} />
+                        <ContentAcquisitionsToggle tab='discovery'  data={['VTUR', 1000, 70]} />
                     </div>
                     <div className="product-discovery-column-syn">
-                        <ContentAcquisitionsToggle  data={['Search CTR', 100, 70]} />
+                        <ContentAcquisitionsToggle tab='discovery'  data={['Search CTR', 100, 70]} />
                     </div>
                     <div className="product-discovery-column-syn">
-                        <ContentAcquisitionsToggle  data={['Search Engagement', 2000, 70]} />
+                        <ContentAcquisitionsToggle tab='discovery'  data={['Search Engagement', 2000, 70]} />
                     </div>
                     <div className="product-discovery-column-syn">
-                        <ContentAcquisitionsToggle  data={['Search per User', 1500, 70]} />
+                        <ContentAcquisitionsToggle tab='discovery'  data={['Search per User', 1500, 70]} />
                     </div>
                     <div className="product-discovery-column-syn">
-                        <ContentAcquisitionsToggle  data={['Overall CTR', 1500, 70]} />
+                        <ContentAcquisitionsToggle tab='discovery'  data={['Overall CTR', 1500, 70]} />
                     </div>
                 </div>
 
                 <div className=''>
                     <ProductDiscoveryKpiCard />
+                </div>
+
+                <div>
+                    <div>
+                        <div className="product-discovery-indicators2-syn">
+                            <label className="product-disc-indicators2-impression-syn">
+                                <svg width="14" height="14" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.2266 5.5C10.2266 8.26142 7.98799 10.5 5.22656 10.5C2.46514 10.5 0.226562 8.26142 0.226562 5.5C0.226562 2.73858 2.46514 0.5 5.22656 0.5C7.98799 0.5 10.2266 2.73858 10.2266 5.5ZM2.87069 5.5C2.87069 6.80111 3.92545 7.85587 5.22656 7.85587C6.52767 7.85587 7.58243 6.80111 7.58243 5.5C7.58243 4.19889 6.52767 3.14413 5.22656 3.14413C3.92545 3.14413 2.87069 4.19889 2.87069 5.5Z" fill="#D8D8D8"/>
+                                </svg>
+                                Impression
+                            </label>
+                            <label className="product-disc-indicators2-clicks-syn">
+                                <svg width="14" height="14" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.918 5.5C10.918 8.26142 8.67939 10.5 5.91797 10.5C3.15654 10.5 0.917969 8.26142 0.917969 5.5C0.917969 2.73858 3.15654 0.5 5.91797 0.5C8.67939 0.5 10.918 2.73858 10.918 5.5ZM3.5621 5.5C3.5621 6.80111 4.61686 7.85587 5.91797 7.85587C7.21908 7.85587 8.27384 6.80111 8.27384 5.5C8.27384 4.19889 7.21908 3.14413 5.91797 3.14413C4.61686 3.14413 3.5621 4.19889 3.5621 5.5Z" fill="#4F277C"/>
+                                </svg>
+                                Clicks
+                            </label>
+                        </div>
+                        <div className="product-discovery-carousal-and-page-rails-syn">
+                            <div className="product-discovery-carousal-syn">
+                                <h6>Carousal</h6>
+                                <div className="product-discovery-carousal-two-pi-syn">
+                                    <div className="product-discovery-carousal-pi-chart-one-syn">
+                                        <h6>Home Page</h6>
+                                        <PiChart />
+                                        <ContentAcquisitionsToggle tab='discovery'  data={['VTUR', 1000, 70]} />
+                                        <ContentAcquisitionsToggle tab='discovery'  data={['VTUR', 1000, 70]} />
+                                    </div>
+                                    <div className="product-discovery-carousal-pi-chart-two-syn">
+                                        <h6>TV Show Page</h6>
+                                        <PiChart />
+                                        <ContentAcquisitionsToggle tab='discovery'  data={['VTUR', 1000, 70]} />
+                                        <ContentAcquisitionsToggle tab='discovery'  data={['VTUR', 1000, 70]} />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="product-discovery-page-rails-syn">
+                                <h6>Page Rails</h6>
+                                <div className="product-discovery-carousal-two-pi-syn">
+                                    <div className="product-discovery-carousal-pi-chart-one-syn">
+                                        <h6>Home Page</h6>
+                                        <PiChart />
+                                        <ContentAcquisitionsToggle tab='discovery'  data={['VTUR', 1000, 70]} />
+                                        <ContentAcquisitionsToggle tab='discovery'  data={['VTUR', 1000, 70]} />
+                                    </div>
+                                    <div className="product-discovery-carousal-pi-chart-one-syn">
+                                        <h6>TV Show Page</h6>
+                                        <PiChart />
+                                        <ContentAcquisitionsToggle tab='discovery'  data={['VTUR', 1000, 70]} />
+                                        <ContentAcquisitionsToggle tab='discovery'  data={['VTUR', 1000, 70]} />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
                 </div>
             </div>
         </div>

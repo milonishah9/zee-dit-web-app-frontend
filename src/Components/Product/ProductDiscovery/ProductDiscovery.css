@@ -22,3 +22,58 @@
     line-height: 15px;
     color: #333333;
 }
+
+.product-discovery-indicators2-syn{
+    font-family: 'GothamLight';
+    text-align: end;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13px;
+    color: #333333;
+    margin-top: 20px;
+}
+
+.product-disc-indicators2-impression-syn{
+    margin-right: 20px;
+}
+
+.product-disc-indicators2-impression-syn svg{
+    margin-right: 5px;
+}
+
+.product-disc-indicators2-clicks-syn svg{
+    margin-right: 5px;
+}
+
+.product-discovery-carousal-syn{
+    width: 50%;
+}
+
+.product-discovery-page-rails-syn{
+    width: 50%;
+}
+
+.product-discovery-carousal-pi-chart-one-syn h6{
+
+}
+
+.product-discovery-carousal-pi-chart-one-syn h6{
+
+}
+
+.product-discovery-carousal-and-page-rails-syn{
+    display: flex;
+    width: 100%;
+    font-family: 'GothamBold';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #333333;
+}
+
+.product-discovery-carousal-two-pi-syn{
+    display: flex;
+}

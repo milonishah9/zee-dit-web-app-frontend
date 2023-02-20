@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ContentAcquisitionsToggle.css";
 
 const ContentAcquisitionsToggle = (props) => {
-  const { data } = props;
+  const { data, tab } = props;
   const [classed, setClassed] = useState("my-minuse-button-product");
 
   const handlePluseButtonClick = () => {
@@ -29,7 +29,7 @@ const ContentAcquisitionsToggle = (props) => {
       <div>
       <div className="product-card-number">{data[1]}</div>
 
-      <div className="d-flax up-down-val">
+      <div className={tab === 'discovery' ? ("d-flax up-down-val-discovery-syn") : ('d-flax up-down-val')} >
         <div className="pluse-value-product-syn">
           2% ↑ <br /> From D1
         </div>
