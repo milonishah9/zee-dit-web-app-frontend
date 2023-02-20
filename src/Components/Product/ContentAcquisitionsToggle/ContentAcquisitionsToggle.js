@@ -26,6 +26,7 @@ const ContentAcquisitionsToggle = (props) => {
       </div>
 
       {/* minuse-value */}
+      <div>
       <div className="product-card-number">{data[1]}</div>
 
       <div className="d-flax up-down-val">
@@ -38,6 +39,8 @@ const ContentAcquisitionsToggle = (props) => {
         <div className="minuse-value-product-syn">
           2% ↓ <br /> From L30</div>
       </div>
+      </div>
+      
       <div className={classed}>
         <div className="card-sec">Platform Split</div>
         <div className="product-acquisitions-icons">

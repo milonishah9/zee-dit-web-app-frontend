@@ -375,14 +375,20 @@
 
 .product-acquisitions-funnel-metrics-first-child-syn{
   width: 34%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .product-acquisitions-funnel-metrics-second-child-syn{
   width: 35%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .product-acquisitions-funnel-metrics-third-child-syn{
   width: 34%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .product-acquisitions-funnel-metrics-card-syn{
@@ -435,7 +441,7 @@
 .product-acqui-colorspara-syn{
   display: flex;
   justify-content: space-between;
-  width: 68%;
+  width: 200%;
 }
 
 .border-left-product-acqui{
