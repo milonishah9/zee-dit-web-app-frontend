@@ -10,7 +10,9 @@ const ProductAcquisitionsFunnelMetrics = () => {
         <p>2% From D1</p>
         <p>2% From D7</p>
         <p>2% From L30</p>
+
       </div>
+      
     </div>
   );
 };
