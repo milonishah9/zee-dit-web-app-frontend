@@ -4,13 +4,9 @@ import * as d3 from "d3";
 
 const PiChart = (props) => {
 
-    const {propsWidth} = props
+    const {propsWidth, population} = props
     const piChartRef = useRef();
-    const population = [
-        {name: "5-9", value: 80},
-        {name: "<5", value: 20},
-        
-    ]
+    
     useEffect(() => {
         DonutChart(population, {
             name: d => d.name,

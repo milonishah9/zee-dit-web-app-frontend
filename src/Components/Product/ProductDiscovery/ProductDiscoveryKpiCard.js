@@ -25,7 +25,7 @@ const ProductDiscoveryKpiCard = () => {
                     </div>
                 </div>
                 <div>
-                    <PiChart propsWidth= {100}  />
+                    <PiChart propsWidth= {100} population = {[{name: "5-9", value: 60},{name: "<5", value: 40},]} />
                 </div>
             </div>
     
@@ -46,7 +46,7 @@ const ProductDiscoveryKpiCard = () => {
                     </div>
                 </div>
                 <div>
-                    <PiChart propsWidth= {100} />
+                    <PiChart propsWidth= {100} population = {[{name: "5-9", value: 70},{name: "<5", value: 30},]}/>
                 </div>
             </div>
     
@@ -67,7 +67,7 @@ const ProductDiscoveryKpiCard = () => {
                     </div>
                 </div>
               <div>
-                <PiChart propsWidth= {100} />
+                <PiChart propsWidth= {100} population = {[{name: "5-9", value: 80},{name: "<5", value: 20},]}/>
               </div>
             </div>
           </div>

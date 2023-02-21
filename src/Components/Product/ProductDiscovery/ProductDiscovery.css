@@ -76,6 +76,7 @@
 
 .product-discovery-carousal-syn h6{
     text-align: center;
+    margin-bottom: 5px;
 }
 
 .product-discovery-carousal-two-pi-syn{
@@ -109,4 +110,10 @@
     line-height: 12px;
     text-align: center;
     color: #333333;
+}
+
+.product-discovery-carousal-heading-syn,
+.product-discovery-page-rails-heading-syn{
+    padding-bottom: 5rem;
+    padding-top: 10px;
 }
