@@ -3,6 +3,8 @@ import './PiChart.css'
 import * as d3 from "d3";
 
 const PiChart = (props) => {
+
+    const {propsWidth} = props
     const piChartRef = useRef();
     const population = [
         {name: "5-9", value: 80},
@@ -13,8 +15,6 @@ const PiChart = (props) => {
         DonutChart(population, {
             name: d => d.name,
             value: d => d.value,
-            width : 500,
-            height: 500
           })
 
           // Copyright 2021 Observable, Inc.
@@ -69,8 +69,8 @@ function DonutChart(data, {
     const arcLabel = d3.arc().innerRadius(labelRadius).outerRadius(labelRadius);
     
     const svg = d3.select(piChartRef.current)
-        .attr("width", 100)
-        .attr("height", 100)
+        .attr("width", propsWidth)
+        .attr("height", propsWidth)
         .attr("viewBox", [-width / 2, -height / 2, width, height])
         .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
   
@@ -112,7 +112,7 @@ function DonutChart(data, {
   return (
     <div id="pi-chart">
         <svg ref={piChartRef} className="pi-chart-svg">
-            <text x='-60' y='10' className="pi-chart-text">{population[0].value} %</text>
+            <text x='-30' y='10' className="pi-chart-text">{population[0].value} %</text>
         </svg>
         
     </div>

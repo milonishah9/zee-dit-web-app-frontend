@@ -25,7 +25,7 @@ const ProductDiscoveryKpiCard = () => {
                     </div>
                 </div>
                 <div>
-                    <PiChart />
+                    <PiChart propsWidth= {100}  />
                 </div>
             </div>
     
@@ -46,7 +46,7 @@ const ProductDiscoveryKpiCard = () => {
                     </div>
                 </div>
                 <div>
-                    <PiChart />
+                    <PiChart propsWidth= {100} />
                 </div>
             </div>
     
@@ -67,7 +67,7 @@ const ProductDiscoveryKpiCard = () => {
                     </div>
                 </div>
               <div>
-                <PiChart />
+                <PiChart propsWidth= {100} />
               </div>
             </div>
           </div>

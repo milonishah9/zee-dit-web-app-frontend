@@ -71,8 +71,6 @@
     font-family: 'GothamBold';
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 14px;
     color: #333333;
 }
 
@@ -87,6 +85,10 @@
 
 .border-right-deshed{
     border-right: 1px dashed #AFC5FD;
+}
+
+.product-discovery-carousal-pi-chart-one-syn{
+    width: 45%;
 }
 
 .product-discovery-carousal-pi-chart-one-syn h6{
