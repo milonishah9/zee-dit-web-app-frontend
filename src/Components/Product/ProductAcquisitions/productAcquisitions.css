@@ -450,6 +450,39 @@
   padding-left: 10px;
 }
 
+.product-acqui-colorspara-syn p{
+  margin-left: 0px;
+}
+
+
+@media only screen and (max-width: 1560px) and (min-width: 1441px){
+  .product-acqui-colorspara-syn{
+    width: 132%;
+  }
+
+}
+@media only screen and (max-width: 1440px) and (min-width: 1366px){
+  .product-acqui-colorspara-syn{
+    width: 100%;
+  }
+  
+}
+@media only screen and (max-width: 1365px) and (min-width: 1280px){
+  .product-acqui-colorspara-syn{
+    width: 109%;
+  }
+}
+@media only screen and (max-width: 1279px) and (min-width: 1024px){
+  .product-acqui-colorspara-syn{
+    width: 89%;
+  }
+}
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+  .product-acqui-colorspara-syn{
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 1057px) and (min-width:768) {
   .drop-down-menu-contaier-product-syn {
       min-width: 15%;
