@@ -84,7 +84,7 @@
 .drop-down-menu-contaier-product-syn {
   display: flex;
   flex-direction: column;
-  min-width: 12%;
+  min-width: 12.8%;
   /* margin: 0 1rem; */
 }
 
@@ -409,7 +409,7 @@
   box-shadow: 0px 2px 5px #D6DEF8;
   border-radius: 4px;
   margin-top: 10px;
-  padding: 9px;
+  padding: 10px;
   display: flex;
 }
 
@@ -448,7 +448,7 @@
   font-family: 'GraphikMedium';
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 14px;
   color: #333333;
   display: block;
@@ -458,7 +458,7 @@
 .product-acqui-colorspara-syn{
   display: flex;
   justify-content: space-between;
-  width: 273.5%;
+  width: 274.5%;
 }
 
 /* .product-discovery-colorspara-syn{
@@ -501,7 +501,7 @@
 }
 @media only screen and (max-width: 1023px) and (min-width: 768px){
   .product-acqui-colorspara-syn{
-    width: 100%;
+    width: 130%;
   }
 }
 

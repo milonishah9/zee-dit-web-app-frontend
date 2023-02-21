@@ -11,7 +11,7 @@
 }
 
 .product-discovery-column-syn{
-    width: 19.45%;
+    width: 19.27%;
 }
 
 .business-metrics-product-syn{
@@ -67,6 +67,7 @@
 
 .product-discovery-carousal-and-page-rails-syn{
     display: flex;
+    justify-content: space-between;
     width: 100%;
     font-family: 'GraphikMedium';
     font-style: normal;
@@ -82,6 +83,7 @@
 .product-discovery-carousal-two-pi-syn{
     display: flex;
     justify-content: space-evenly;
+    width: 95%;
 }
 
 .border-right-deshed{
@@ -89,7 +91,7 @@
 }
 
 .product-discovery-carousal-pi-chart-one-syn{
-    width: 45%;
+    width: 100%;
 }
 
 .product-discovery-carousal-pi-chart-one-syn h6{
