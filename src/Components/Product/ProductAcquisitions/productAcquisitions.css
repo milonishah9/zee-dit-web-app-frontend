@@ -428,7 +428,8 @@
   font-size: 14px;
   line-height: 15px;
   color: #333333;
-  margin-top: 15px;
+  margin-top: 2.6rem;
+
 }
 
 .pluse-value-product-syn{
@@ -440,7 +441,7 @@
   display: flex;
   align-items: center;
   color: #00C48C;
-  margin-left: 5px;
+  margin-bottom: 0px;
 }
 
 .product-acqisitions-card-value-syn{
@@ -451,12 +452,13 @@
   line-height: 14px;
   color: #333333;
   display: block;
+  margin-bottom: 9px;
 }
 
 .product-acqui-colorspara-syn{
   display: flex;
   justify-content: space-between;
-  width: 200%;
+  width: 323%;
 }
 
 .border-left-product-acqui{

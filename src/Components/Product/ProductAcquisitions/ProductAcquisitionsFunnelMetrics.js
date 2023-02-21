@@ -24,7 +24,7 @@ const ProductAcquisitionsFunnelMetrics = () => {
             </div>
           </div>
           <div>
-            <PiChart propsWidth= {100} population = {[{name: "5-9", value: 30},{name: "<5", value: 70},]}/>
+            <PiChart propsWidth= {80} population = {[{name: "5-9", value: 30},{name: "<5", value: 70},]}/>
           </div>
         </div>
 
@@ -45,7 +45,7 @@ const ProductAcquisitionsFunnelMetrics = () => {
             </div>
           </div>
           <div>
-            <PiChart propsWidth= {100} population = {[{name: "5-9", value: 80},{name: "<5", value: 20},]}/>
+            <PiChart propsWidth= {80} population = {[{name: "5-9", value: 80},{name: "<5", value: 20},]}/>
           </div>
         </div>
 
@@ -66,7 +66,7 @@ const ProductAcquisitionsFunnelMetrics = () => {
             </div>
           </div>
           <div>
-            <PiChart propsWidth= {100} population = {[{name: "5-9", value: 50},{name: "<5", value: 50},]}/>
+            <PiChart propsWidth= {80} population = {[{name: "5-9", value: 50},{name: "<5", value: 50},]}/>
           </div>
         </div>
       </div>

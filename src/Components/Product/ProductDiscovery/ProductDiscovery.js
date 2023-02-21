@@ -444,13 +444,13 @@ const DropDownMenu = (props) => {
                                 <div className="product-discovery-carousal-two-pi-syn border-right-deshed">
                                     <div className="product-discovery-carousal-pi-chart-one-syn">
                                         <h6>Home Page</h6>
-                                        <PiChart propsWidth= {200} population = {[{name: "5-9", value: 67},{name: "<5", value: 33},]} />
+                                        <PiChart propsWidth= {150} population = {[{name: "5-9", value: 67},{name: "<5", value: 33},]} />
                                         <ContentAcquisitionsToggle tab='discovery'  data={['Overall CTR', 1500, 70]} />
                                         <ContentAcquisitionsToggle tab='discovery'  data={['Overall CTR', 1500, 70]} />
                                     </div>
                                     <div className="product-discovery-carousal-pi-chart-one-syn">
                                         <h6>TV Show Page</h6>
-                                        <PiChart propsWidth= {200} population = {[{name: "5-9", value: 41},{name: "<5", value: 59},]}/>
+                                        <PiChart propsWidth= {150} population = {[{name: "5-9", value: 41},{name: "<5", value: 59},]}/>
                                         <ContentAcquisitionsToggle tab='discovery'  data={['VTUR', 1000, 70]} />
                                         <ContentAcquisitionsToggle tab='discovery'  data={['VTUR', 1000, 70]} />
                                     </div>
@@ -461,13 +461,13 @@ const DropDownMenu = (props) => {
                                 <div className="product-discovery-carousal-two-pi-syn">
                                     <div className="product-discovery-carousal-pi-chart-one-syn">
                                         <h6>Home Page</h6>
-                                        <PiChart propsWidth= {200} population = {[{name: "5-9", value: 50},{name: "<5", value: 50},]}/>
+                                        <PiChart propsWidth= {150} population = {[{name: "5-9", value: 50},{name: "<5", value: 50},]}/>
                                         <ContentAcquisitionsToggle tab='discovery'  data={['VTUR', 1000, 70]} />
                                         <ContentAcquisitionsToggle tab='discovery'  data={['VTUR', 1000, 70]} />
                                     </div>
                                     <div className="product-discovery-carousal-pi-chart-one-syn">
                                         <h6>TV Show Page</h6>
-                                        <PiChart propsWidth= {200} population = {[{name: "5-9", value: 60},{name: "<5", value: 40},]}/>
+                                        <PiChart propsWidth= {150} population = {[{name: "5-9", value: 60},{name: "<5", value: 40},]}/>
                                         <ContentAcquisitionsToggle tab='discovery'  data={['VTUR', 1000, 70]} />
                                         <ContentAcquisitionsToggle tab='discovery'  data={['VTUR', 1000, 70]} />
                                     </div>

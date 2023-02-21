@@ -145,7 +145,7 @@ div.executive-summary-content-active-tab {
   color: #333333;
   font-style: normal;
   margin-left: 10px;
-  margin-top: 15px;
+  margin-top: 20px;
   display: block;
 }
 
@@ -171,6 +171,7 @@ div.executive-summary-content-active-tab {
   display: flex;
   align-items: center;
   color: #FF9355;
+  margin-bottom: 0px;
 }
 
 .minuse-value-product-syn {
@@ -182,6 +183,7 @@ div.executive-summary-content-active-tab {
   display: flex;
   align-items: center;
   color: #FF647C;
+  margin-bottom: 0px;
 }
 
 .product-icons-logo{
@@ -290,8 +292,8 @@ div.executive-summary-content-active-tab {
   display: flex;
   justify-content: space-between;
   width: 95%;
-  margin: 6px;
-  margin-top: 25px;
+  margin: 9px;
+  margin-top: 9px;
 }
 
 
