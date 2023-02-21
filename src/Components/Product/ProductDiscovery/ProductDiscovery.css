@@ -1,7 +1,7 @@
 
 .product-discovery-indicators-syn{
     display: flex;
-    margin-top: 10px;
+    margin-top: 20px;
     justify-content: space-between;
 }
 
@@ -53,18 +53,8 @@
 .product-discovery-page-rails-syn{
     width: 50%;
 }
-
-.product-discovery-carousal-pi-chart-one-syn h6{
-
-}
-
-.product-discovery-carousal-pi-chart-one-syn h6{
-
-}
-
-.product-discovery-carousal-and-page-rails-syn{
-    display: flex;
-    width: 100%;
+.product-discovery-page-rails-syn h6{
+    text-align: center;
     font-family: 'GothamBold';
     font-style: normal;
     font-weight: 500;
@@ -74,6 +64,47 @@
     color: #333333;
 }
 
+
+.product-discovery-carousal-and-page-rails-syn{
+    display: flex;
+    width: 100%;
+    font-family: 'GothamBold';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    color: #333333;
+}
+
+.product-discovery-carousal-syn h6{
+    text-align: center;
+}
+
 .product-discovery-carousal-two-pi-syn{
     display: flex;
+    justify-content: space-evenly;
+}
+
+.border-right-deshed{
+    border-right: 1px dashed #AFC5FD;
+}
+
+.product-discovery-carousal-pi-chart-one-syn h6{
+    font-family: 'GothamBold';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: #333333;
+}
+
+.product-discovery-carousal-pi-chart-two-syn h6{
+    font-family: 'GothamBold';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: #333333;
 }

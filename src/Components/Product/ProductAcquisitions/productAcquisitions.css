@@ -377,18 +377,21 @@
   width: 34%;
   display: flex;
   justify-content: space-between;
+  padding-right: 2rem;
 }
 
 .product-acquisitions-funnel-metrics-second-child-syn{
   width: 35%;
   display: flex;
   justify-content: space-between;
+  padding-right: 2rem;
 }
 
 .product-acquisitions-funnel-metrics-third-child-syn{
   width: 34%;
   display: flex;
   justify-content: space-between;
+  padding-right: 1.5rem;
 }
 
 .product-acquisitions-funnel-metrics-card-syn{
