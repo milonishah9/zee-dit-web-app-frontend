@@ -15,7 +15,7 @@
 }
 
 .business-metrics-product-syn{
-    font-family: 'GothamBold';
+    font-family: 'GraphikBold';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -24,7 +24,7 @@
 }
 
 .product-discovery-indicators2-syn{
-    font-family: 'GothamLight';
+    font-family: 'GraphikRegular';
     text-align: end;
     font-style: normal;
     font-weight: 400;
@@ -55,7 +55,7 @@
 }
 .product-discovery-page-rails-syn h6{
     text-align: center;
-    font-family: 'GothamBold';
+    font-family: 'GraphikMedium';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -68,7 +68,7 @@
 .product-discovery-carousal-and-page-rails-syn{
     display: flex;
     width: 100%;
-    font-family: 'GothamBold';
+    font-family: 'GraphikMedium';
     font-style: normal;
     font-weight: 500;
     color: #333333;
@@ -93,7 +93,7 @@
 }
 
 .product-discovery-carousal-pi-chart-one-syn h6{
-    font-family: 'GothamBold';
+    font-family: 'GraphikMedium';
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -103,7 +103,7 @@
 }
 
 .product-discovery-carousal-pi-chart-two-syn h6{
-    font-family: 'GothamBold';
+    font-family: 'GraphikMedium';
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
@@ -114,6 +114,17 @@
 
 .product-discovery-carousal-heading-syn,
 .product-discovery-page-rails-heading-syn{
+    font-family: 'GraphikMedium';
     padding-bottom: 5rem;
     padding-top: 10px;
+}
+
+.product-discovery-funnel-metr-heading-syn{
+    font-family: 'GraphikMedium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 11px;
+    color: #333333;
+    margin-bottom: 15px;
 }

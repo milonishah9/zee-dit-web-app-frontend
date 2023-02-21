@@ -42,7 +42,7 @@ function App() {
           <Route path='/ScatterplotConnected' element={<ScatterplotConnected color = {'red'} />} />
           <Route path='/mono' element={<Monochrome />} />
           <Route path='/heatmap' element={<ContentSchedulingWithHeatMapAndDropdowns />} />
-          {/* <Route path='/PiChart' element={<PiChart width= {100} />} /> */}
+          {/* <Route path='/PiChart' element={<PiChart width= {1} population = {[{name: "5-9", value: 50},{name: "<5", value: 50},]} />} /> */}
         </Routes>
       </BrowserRouter>
     </div>

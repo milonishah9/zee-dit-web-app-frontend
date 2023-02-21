@@ -456,7 +456,6 @@ const ProductAcquisitions = (props) => {
                                 Ok</button>
                         </div>
                     </div>
-    
                 }
     
             </div>

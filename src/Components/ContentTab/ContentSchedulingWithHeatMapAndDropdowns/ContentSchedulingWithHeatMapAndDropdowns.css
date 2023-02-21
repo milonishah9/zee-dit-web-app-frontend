@@ -45,6 +45,7 @@
 }
 
 .dropdown-filers-apply-button {
+    font-family: 'GraphikMedium';
     background: linear-gradient(180deg, #7E5AA4 0%, #3E1F76 100%);
     border-radius: 4px;
     color: white;

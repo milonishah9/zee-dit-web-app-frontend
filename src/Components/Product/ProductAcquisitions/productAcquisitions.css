@@ -7,10 +7,19 @@
 }
 
 .content-scheduling-with-heatmap-dropdowns-dropdown-filters-container-product-syn {
+  font-family: 'GraphikRegular';
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
   margin-top: 30px;
+
+}
+
+.product-discovery-pos-stickey-syn{
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
+  z-index: 22;
 }
 
 .content-scheduling-with-heatmap-legend {
@@ -405,7 +414,7 @@
 }
 
 .product-all-indicators-with-icons-syn{
-  font-family: 'GothamLight';
+  font-family: 'GraphikRegular';
   font-weight: 400;
   font-size: 10px;
   line-height: 11px;
@@ -413,7 +422,7 @@
 }
 
 .funnel-metrics-product-syn{
-  font-family: "GothamBold";
+  font-family: "GraphikBold";
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -423,11 +432,11 @@
 }
 
 .pluse-value-product-syn{
-  font-family: 'GothamLight';
+  font-family: 'GraphikRegular';
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 10px;
+  line-height: 11px;
   display: flex;
   align-items: center;
   color: #00C48C;
@@ -435,11 +444,13 @@
 }
 
 .product-acqisitions-card-value-syn{
+  font-family: 'GraphikMedium';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
   color: #333333;
+  display: block;
 }
 
 .product-acqui-colorspara-syn{

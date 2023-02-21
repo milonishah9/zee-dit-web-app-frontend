@@ -10,8 +10,8 @@ const ProductDiscoveryKpiCard = () => {
             
             <div className="product-acquisitions-funnel-metrics-first-child-syn">
                 <div>
-                    <h6>Search Button Clicks</h6>
-                    <p className="product-acqisitions-card-value-syn">XXXX</p>
+                    <h6 className="product-discovery-funnel-metr-heading-syn">Search Button Clicks</h6>
+                    <p className="product-acqisitions-card-value-syn">1000</p>
                     <div className="product-acqui-colorspara-syn">
                         <p className="pluse-value-product-syn">
                         2% ↑ <br /> From D1
@@ -31,8 +31,8 @@ const ProductDiscoveryKpiCard = () => {
     
             <div className="product-acquisitions-funnel-metrics-second-child-syn border-left-product-acqui">
                 <div>
-                    <h6>Search Executed</h6>
-                    <p className="product-acqisitions-card-value-syn">XXXX</p>
+                    <h6 className="product-discovery-funnel-metr-heading-syn">Search Executed</h6>
+                    <p className="product-acqisitions-card-value-syn">100</p>
                     <div className="product-acqui-colorspara-syn">
                         <p className="pluse-value-product-syn">
                         2% ↑ <br /> From D1
@@ -52,8 +52,8 @@ const ProductDiscoveryKpiCard = () => {
     
             <div style={{paddingLeft: '10px'}} className="product-acquisitions-funnel-metrics-third-child-syn border-left-product-acqui">
                 <div>
-                    <h6>Search Result Clicks</h6>
-                    <p className="product-acqisitions-card-value-syn">XXXX</p>
+                    <h6 className="product-discovery-funnel-metr-heading-syn">Search Result Clicks</h6>
+                    <p className="product-acqisitions-card-value-syn">700</p>
                     <div className="product-acqui-colorspara-syn">
                         <p className="pluse-value-product-syn">
                         2% ↑ <br /> From D1

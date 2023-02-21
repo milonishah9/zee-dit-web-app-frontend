@@ -4,10 +4,13 @@ import * as d3 from "d3v4";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCount, setHoverValue } from "../../../features/HoverValues";
+import { useMediaQuery } from "@material-ui/core";
 
 const BubbleChart = (props) => {
   const json = props.files;
 
+  const isMobile = useMediaQuery('(max-width: 768px)');
+  console.log(isMobile);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -40,7 +43,7 @@ const BubbleChart = (props) => {
     svg
       // .attr("preserveAspectRatio", "xMinYMin meet")
       .attr("viewBox", "0 0 850 295")
-      .attr('width', width)
+      .attr('width', isMobile ? (width):('100%'))
       .attr('height', height)
       // .attr("margin","500px")
       .classed("svg-content", true)

@@ -3,7 +3,7 @@
 }
 
 .executive-summary-content-tab {
-  font-family: "GothamBold";
+  font-family: 'GraphikBold';
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -28,7 +28,7 @@
 }
 
 div.executive-summary-content-active-tab {
-  font-family: "GothamBold";
+  font-family: 'GraphikBold';
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -57,11 +57,12 @@ div.executive-summary-content-active-tab {
 }
 
 .product-userjourney-card-heading {
-  font-family: "GothamBold";
+  font-family: 'GraphikMedium';
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 11px;
+  color: #333333;
   margin-top: 5px;
   margin-bottom: 15px;
 }
@@ -150,6 +151,12 @@ div.executive-summary-content-active-tab {
 }
 
 .product-icons-logo p{
+  font-family: 'GraphikMedium';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: #333333;
   margin-bottom: 0px;
   font-size: 14px;
   /* margin-left: 9px; */

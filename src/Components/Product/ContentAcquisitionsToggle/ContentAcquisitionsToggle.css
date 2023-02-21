@@ -73,10 +73,12 @@ div.executive-summary-content-active-tab {
 }
 
 .product-card-number {
+  font-family: 'GraphikMedium';
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #333333;
   margin-left: 9px;
   display: block;
 }
@@ -135,11 +137,15 @@ div.executive-summary-content-active-tab {
 }
 
 .card-sec {
+  font-family: 'GraphikRegular';
   font-style: normal;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 11px;
+  color: #333333;
+  font-style: normal;
   margin-left: 10px;
+  margin-top: 15px;
   display: block;
 }
 
@@ -157,22 +163,22 @@ div.executive-summary-content-active-tab {
 }
 
 .orange-value-product-syn {
-  font-family: 'GothamLight';
+  font-family: 'GraphikRegular';
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 10px;
+  line-height: 11px;
   display: flex;
   align-items: center;
   color: #FF9355;
 }
 
 .minuse-value-product-syn {
-  font-family: 'GothamLight';
+  font-family: 'GraphikRegular';
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 10px;
+  line-height: 11px;
   display: flex;
   align-items: center;
   color: #FF647C;

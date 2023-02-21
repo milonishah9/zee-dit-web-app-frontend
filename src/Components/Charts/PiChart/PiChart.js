@@ -22,7 +22,7 @@ function DonutChart(data, {
     title, // given d in data, returns the title text
     width = 250, // outer width, in pixels
     height = 250, // outer height, in pixels
-    innerRadius = Math.min(width, height) / 3, // inner radius of pie, in pixels (non-zero for donut)
+    innerRadius = Math.min(width, height) / 2.6, // inner radius of pie, in pixels (non-zero for donut)
     outerRadius = Math.min(width, height) / 2, // outer radius of pie, in pixels
     labelRadius = (innerRadius + outerRadius) / 2, // center radius of labels
     format = ",", // a format specifier for values (in the label)

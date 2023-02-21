@@ -28,10 +28,20 @@
 }
 
 .product-tabs{
+  font-family: 'GraphikBold';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 15px;
+  text-align: center;
+  color: #333333;
   display: flex;
   justify-content: space-between;
   margin: auto;
   margin-top: 15px;
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
 }
 
 a.product-engagement-anchor {

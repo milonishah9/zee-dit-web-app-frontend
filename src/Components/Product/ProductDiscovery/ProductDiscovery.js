@@ -256,7 +256,7 @@ const DropDownMenu = (props) => {
     
     return (
         <div  >
-            <div style={{ "display": "flex", "flexDirection": "column" }}>
+            <div className="product-discovery-pos-stickey-syn" style={{ "display": "flex", "flexDirection": "column" }}>
                 <div className='content-scheduling-with-heatmap-dropdowns-dropdown-filters-container-product-syn'>
                     <DropDownMenu
                         dropDownMenu={dropDownMenuForChannelGenre.platform}
