@@ -46,12 +46,13 @@ text.lessthan300 {
     .executive-summary-product-container{
       width: auto!important;
     }
+    .bubble-chart{
+      overflow: auto;
+      background-color:#FBFCFE;
+    }
 }
 
-.bubble-chart{
-  overflow: auto;
-  background-color:#FBFCFE;
-}
+
 
 /* h2 {
 	font-family: "Lato";
