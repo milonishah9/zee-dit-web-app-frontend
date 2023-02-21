@@ -409,7 +409,7 @@
   box-shadow: 0px 2px 5px #D6DEF8;
   border-radius: 4px;
   margin-top: 10px;
-  padding: 10px;
+  padding: 9px;
   display: flex;
 }
 
@@ -425,7 +425,7 @@
   font-family: "GraphikBold";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 15px;
   color: #333333;
   margin-top: 2.6rem;
@@ -436,7 +436,7 @@
   font-family: 'GraphikRegular';
   font-style: normal;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 11px;
   display: flex;
   align-items: center;
@@ -448,7 +448,7 @@
   font-family: 'GraphikMedium';
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 14px;
   color: #333333;
   display: block;
@@ -458,8 +458,14 @@
 .product-acqui-colorspara-syn{
   display: flex;
   justify-content: space-between;
-  width: 323%;
+  width: 273.5%;
 }
+
+/* .product-discovery-colorspara-syn{
+  display: flex;
+  justify-content: space-between;
+  width: 229%;
+} */
 
 .border-left-product-acqui{
   border-left: 1px dashed #AFC5FD;
@@ -473,7 +479,7 @@
 
 @media only screen and (max-width: 1560px) and (min-width: 1441px){
   .product-acqui-colorspara-syn{
-    width: 132%;
+    width: 220%;
   }
 
 }

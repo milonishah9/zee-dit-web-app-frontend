@@ -1,7 +1,7 @@
 import React from "react";
 import PiChart from "../../Charts/PiChart/PiChart";
 
-const ProductDiscoveryKpiCard = () => {
+const ProductDiscoveryKpiCard = (props) => {
 
     return (
         <div>

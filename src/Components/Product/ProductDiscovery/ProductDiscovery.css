@@ -18,7 +18,7 @@
     font-family: 'GraphikBold';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 15px;
     color: #333333;
 }
@@ -28,7 +28,7 @@
     text-align: end;
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 13px;
     color: #333333;
     margin-top: 20px;
@@ -96,8 +96,8 @@
     font-family: 'GraphikMedium';
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 14px;
+    line-height: 14px;
     text-align: center;
     color: #333333;
     margin-bottom: 10px;
@@ -107,8 +107,8 @@
     font-family: 'GraphikMedium';
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 14px;
+    line-height: 14px;
     text-align: center;
     color: #333333;
 }
@@ -116,7 +116,7 @@
 .product-discovery-carousal-heading-syn,
 .product-discovery-page-rails-heading-syn{
     font-family: 'GraphikMedium';
-    padding-bottom: 5rem;
+    padding-bottom: 4rem;
     padding-top: 10px;
 }
 
@@ -124,7 +124,7 @@
     font-family: 'GraphikMedium';
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 11px;
     color: #333333;
     margin-bottom: 15px;

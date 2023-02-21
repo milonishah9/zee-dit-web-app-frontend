@@ -108,7 +108,7 @@ function DonutChart(data, {
   return (
     <div id="pi-chart">
         <svg ref={piChartRef} className="pi-chart-svg">
-            <text x='-30' y='10' className="pi-chart-text">{population[0].value} %</text>
+            <text x='-40' y='15' className="pi-chart-text">{population[0].value} %</text>
         </svg>
         
     </div>

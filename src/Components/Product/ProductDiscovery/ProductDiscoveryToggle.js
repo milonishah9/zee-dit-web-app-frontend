@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './ProductDiscoveryToggle.css';
 
 const ProductDiscoveryToggle = (props) => {
   const { data, tab } = props;
@@ -12,7 +13,7 @@ const ProductDiscoveryToggle = (props) => {
   };
 
   return (
-    <div className="product-userjourney-card">
+    <div className="product-discovery-card-syn">
       <div className="product-userjourney-card-heading-and-icon">
         <p className="product-userjourney-card-heading">{data[0]}</p>
         <div className="tooltip-info">
@@ -27,17 +28,16 @@ const ProductDiscoveryToggle = (props) => {
       {/* minuse-value */}
       <div>
       <div className="product-card-number">{data[1]}</div>
-
-      <div className={tab === 'discovery' ? ("d-flax up-down-val-discovery-syn") : ('d-flax up-down-val')} >
-        <div className="pluse-value-product-syn">
-          2% ↑ <br /> From D1
+        <div className={tab === 'discovery' ? ("d-flax up-down-val-discovery-syn") : ('d-flax up-down-val')} >
+            <div className="pluse-value-product-syn">
+            2% ↑ <br /> From D1
+            </div>
+            <div className="orange-value-product-syn">
+            2% ↑ <br /> From D7
+            </div>
+            <div className="minuse-value-product-syn">
+            2% ↓ <br /> From L30</div>
         </div>
-        <div className="orange-value-product-syn">
-          2% ↑ <br /> From D7
-        </div>
-        <div className="minuse-value-product-syn">
-          2% ↓ <br /> From L30</div>
-      </div>
       </div>
       
       <div className={classed}>

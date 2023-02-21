@@ -76,7 +76,7 @@ div.executive-summary-content-active-tab {
   font-family: 'GraphikMedium';
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 14px;
   color: #333333;
   margin-left: 9px;
@@ -87,8 +87,8 @@ div.executive-summary-content-active-tab {
   display: flex;
   justify-content: space-between;
   width: 66%;
-  margin: 6px;
-  margin-top: 25px;
+  margin: 9px;
+  margin-top: 9px;
 }
 
 .my-minuse-button-product {
@@ -120,7 +120,7 @@ div.executive-summary-content-active-tab {
 
 .catalogue-acquisitions-indicators{
   display: flex;
-  margin-top: 20px;
+  margin-top: 2rem;
   justify-content: space-between;
 }
 
@@ -166,7 +166,7 @@ div.executive-summary-content-active-tab {
   font-family: 'GraphikRegular';
   font-style: normal;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 11px;
   display: flex;
   align-items: center;
@@ -178,7 +178,7 @@ div.executive-summary-content-active-tab {
   font-family: 'GraphikRegular';
   font-style: normal;
   font-weight: 400;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 11px;
   display: flex;
   align-items: center;
